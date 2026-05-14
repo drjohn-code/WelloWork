@@ -5,7 +5,7 @@ import { Reveal } from "./Reveal";
 import { ArrowRight, Icon, ICONS } from "./Icons";
 import { PrivacyChip } from "./Chips";
 
-type TabId = "train" | "assess" | "measure" | "workshops" | "samples";
+type TabId = "Growth" | "assessment" | "measure" | "Workshops" | "Proactive Care";
 
 type Tab = {
   id: TabId;
@@ -18,8 +18,8 @@ type Tab = {
 
 const TABS: Tab[] = [
   {
-    id: "train",
-    label: "Train",
+    id: "Growth",
+    label: "Growth",
     eyebrow: "WelloRise",
     title: "Daily cognitive training that fits in a coffee break.",
     body: "Adaptive exercises across problem solving, working memory, attention, processing speed, and cognitive flexibility. Tokens unlock courses; a task marketplace lets colleagues help each other and earn.",
@@ -30,8 +30,8 @@ const TABS: Tab[] = [
     ],
   },
   {
-    id: "assess",
-    label: "Assess",
+    id: "Assessment",
+    label: "Assessment",
     eyebrow: "Wellowize",
     title: "Hiring and internal assessments — cognitive and technical.",
     body: "One assessment framework for candidates and existing employees. Build defensible profiles before the offer letter, and keep measuring after it.",
@@ -42,7 +42,7 @@ const TABS: Tab[] = [
     ],
   },
   {
-    id: "measure",
+    id: "Measure",
     label: "Measure",
     eyebrow: "Performance trends",
     title: "Longitudinal performance — not a one-time score.",
@@ -54,7 +54,7 @@ const TABS: Tab[] = [
     ],
   },
   {
-    id: "workshops",
+    id: "Workshops",
     label: "Workshops",
     eyebrow: "Service layer",
     title: "Live health workshops, on-site or remote.",
@@ -66,8 +66,8 @@ const TABS: Tab[] = [
     ],
   },
   {
-    id: "samples",
-    label: "Samples",
+    id: "Proactive Care",
+    label: "Proactive Care",
     eyebrow: "Preventive care",
     title: "Biomarker testing for longevity, general health, and drug screening.",
     body: "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their full report. Managers only see anonymised, aggregated trends.",
@@ -80,7 +80,7 @@ const TABS: Tab[] = [
 ];
 
 export function PlatformTabs() {
-  const [active, setActive] = useState<TabId>("train");
+  const [active, setActive] = useState<TabId>("Growth");
   const cur = TABS.find((t) => t.id === active) ?? TABS[0];
 
   return (
@@ -253,11 +253,11 @@ export function PlatformTabs() {
 }
 
 function TabVisual({ id }: { id: TabId }) {
-  if (id === "train") return <TrainVisual />;
-  if (id === "assess") return <AssessVisual />;
-  if (id === "measure") return <MeasureVisual />;
-  if (id === "workshops") return <WorkshopsVisual />;
-  return <SamplesVisual />;
+  if (id === "Growth") return <GrowthVisual />;
+  if (id === "Assessment") return <AssessmentVisual />;
+  if (id === "Measure") return <MeasureVisual />;
+  if (id === "Workshops") return <WorkshopsVisual />;
+  return <ProactiveCareVisual />;
 }
 
 function PanelChrome({
@@ -320,7 +320,7 @@ function PanelChrome({
   );
 }
 
-function TrainVisual() {
+function GrowthVisual() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 380 }}>
       <PanelChrome url="app.wellowork.net / train" badge="Working memory · day 14">
@@ -430,7 +430,7 @@ function TrainVisual() {
   );
 }
 
-function AssessVisual() {
+function AssessmentVisual() {
   const scores = [
     { label: "Problem solving", val: 84 },
     { label: "Working memory", val: 91 },
@@ -682,7 +682,7 @@ function WorkshopsVisual() {
   );
 }
 
-function SamplesVisual() {
+function ProactiveCareVisual() {
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 380 }}>
       <PanelChrome url="app.wellowork.net / health / report" badge="Your view · private">

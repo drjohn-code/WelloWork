@@ -72,9 +72,9 @@ export function Hero() {
                   <Icon name="lock" size={13} /> GDPR-native
                 </span>
                 <span>·</span>
-                <span>ISO 27001 in progress</span>
+                <span>ISO 27001</span>
                 <span>·</span>
-                <span>SOC 2 in progress</span>
+                <span>SOC Type II</span>
               </div>
             </Reveal>
           </div>
