@@ -2,6 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import { getSupabaseServerClient } from "../../lib/supabase";
 import { parseContact } from "../../lib/validation";
 import { rateLimit, getClientIp } from "../../lib/rate-limit";
+import { sendContactNotification } from "../../lib/email";
 import type { ContactMessageInsert } from "../../types/database";
 
 export const runtime = "nodejs";
@@ -31,23 +32,32 @@ export async function POST(request: NextRequest) {
   const supabase = getSupabaseServerClient();
   if (!supabase) {
     console.warn("[contact-messages] Supabase not configured. Payload (not persisted):", value);
-    return NextResponse.json({ ok: true, persisted: false });
+  } else {
+    const row: ContactMessageInsert = {
+      ...value,
+      source: "contact",
+      user_agent: request.headers.get("user-agent") || null,
+    };
+    const { error } = await supabase.from("contact_messages").insert(row);
+    if (error) {
+      console.error("[contact-messages] insert error", error);
+      return NextResponse.json(
+        { ok: false, error: "We couldn't send your message. Please try again." },
+        { status: 500 }
+      );
+    }
   }
 
-  const row: ContactMessageInsert = {
-    ...value,
-    source: "contact",
-    user_agent: request.headers.get("user-agent") || null,
-  };
+  // Notify info@wellowork.net; failures are logged but never block the response.
+  await sendContactNotification({
+    name: value.name,
+    workEmail: value.work_email,
+    company: value.company,
+    companySize: value.company_size,
+    role: value.role,
+    industry: value.industry,
+    message: value.message,
+  });
 
-  const { error } = await supabase.from("contact_messages").insert(row);
-  if (error) {
-    console.error("[contact-messages] insert error", error);
-    return NextResponse.json(
-      { ok: false, error: "We couldn't send your message. Please try again." },
-      { status: 500 }
-    );
-  }
-
-  return NextResponse.json({ ok: true, persisted: true });
+  return NextResponse.json({ ok: true, persisted: Boolean(supabase) });
 }

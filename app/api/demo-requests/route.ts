@@ -2,10 +2,16 @@ import { NextResponse, type NextRequest } from "next/server";
 import { getSupabaseServerClient } from "../../lib/supabase";
 import { parseDemoRequest } from "../../lib/validation";
 import { rateLimit, getClientIp } from "../../lib/rate-limit";
-import type { DemoRequestInsert } from "../../types/database";
+import { sendDemoFallbackConfirmation } from "../../lib/email";
+import type { DemoBookingInsert } from "../../types/database";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
+
+// Fallback demo-request endpoint used when the Cal.com embed is not configured.
+// Rows land in `demo_bookings` with source='fallback_form'. The legacy
+// `demo_requests` table is no longer written to by this route — see migration
+// 20260514_000003_demo_bookings.sql for the rationale.
 
 export async function POST(request: NextRequest) {
   const ip = getClientIp(request.headers);
@@ -28,26 +34,45 @@ export async function POST(request: NextRequest) {
     return NextResponse.json({ ok: false, errors }, { status: 400 });
   }
 
+  const preferredTimeframe =
+    typeof form.get("preferred_timeframe") === "string"
+      ? String(form.get("preferred_timeframe")).trim().slice(0, 200) || null
+      : null;
+
   const supabase = getSupabaseServerClient();
   if (!supabase) {
     console.warn("[demo-requests] Supabase not configured. Payload (not persisted):", value);
-    return NextResponse.json({ ok: true, persisted: false });
+  } else {
+    const row: DemoBookingInsert = {
+      source: "fallback_form",
+      attendee_name: value.name,
+      attendee_email: value.work_email,
+      company: value.company || null,
+      company_size: value.company_size,
+      role: value.role,
+      industry: value.industry,
+      notes: value.message,
+      preferred_timeframe: preferredTimeframe,
+      consent: value.consent,
+      status: "pending",
+      user_agent: request.headers.get("user-agent") || null,
+    };
+    const { error } = await supabase.from("demo_bookings").insert(row);
+    if (error) {
+      console.error("[demo-requests] insert error", error);
+      return NextResponse.json(
+        { ok: false, error: "We couldn't record your request. Please try again." },
+        { status: 500 }
+      );
+    }
   }
 
-  const row: DemoRequestInsert = {
-    ...value,
-    source: "book-a-demo",
-    user_agent: request.headers.get("user-agent") || null,
-  };
+  // Fire-and-forget confirmation email; failures are logged but never block the response.
+  await sendDemoFallbackConfirmation({
+    to: value.work_email,
+    name: value.name,
+    preferredTimeframe,
+  });
 
-  const { error } = await supabase.from("demo_requests").insert(row);
-  if (error) {
-    console.error("[demo-requests] insert error", error);
-    return NextResponse.json(
-      { ok: false, error: "We couldn't record your request. Please try again." },
-      { status: 500 }
-    );
-  }
-
-  return NextResponse.json({ ok: true, persisted: true });
+  return NextResponse.json({ ok: true, persisted: Boolean(supabase) });
 }

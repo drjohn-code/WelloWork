@@ -390,3 +390,35 @@ section[id] { scroll-margin-top: 96px; }
 .stat-callout { padding: 22px 24px; border-radius: 18px; background: linear-gradient(160deg, color-mix(in oklch, var(--accent) 8%, white), white); border: 1px solid color-mix(in oklch, var(--accent) 22%, var(--glass-border)); }
 .stat-callout .num { font-family: var(--font-display); font-weight: 700; font-size: 32px; line-height: 1; color: var(--primary); letter-spacing: -0.02em; }
 .stat-callout .src { font-size: 12px; color: var(--ink-3); margin-top: 6px; }
+
+/* Cal.com embed frame */
+.calcom-frame {
+  position: relative;
+  min-height: 640px;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255,255,255,0.85);
+}
+.calcom-frame > div { width: 100%; height: 100%; }
+.calcom-frame iframe { border: 0; border-radius: 24px; }
+
+/* Demo page — agenda grid responsive */
+@media (max-width: 1020px) { .agenda-list { grid-template-columns: repeat(2, minmax(0,1fr)) !important; } }
+@media (max-width: 560px)  { .agenda-list { grid-template-columns: 1fr !important; } }
+
+/* Demo page — secondary CTA row stacks on small screens */
+@media (max-width: 720px) {
+  .cta-row { grid-template-columns: 1fr !important; }
+  .cta-row > div:last-child { justify-content: flex-start !important; }
+}
+
+/* <details> caret styling (FAQ) */
+details > summary::-webkit-details-marker { display: none; }
+details > summary { position: relative; padding-right: 28px; }
+details > summary::after {
+  content: ""; position: absolute; right: 4px; top: 50%;
+  width: 8px; height: 8px; margin-top: -6px;
+  border-right: 2px solid var(--ink-2); border-bottom: 2px solid var(--ink-2);
+  transform: rotate(45deg); transition: transform .2s ease;
+}
+details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
