@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ArrowRight, ArrowUpRight, Icon } from "./Icons";
 
@@ -11,7 +12,7 @@ const CONSTRUCTS = [
 
 export function ResearchSection() {
   return (
-    <section className="section">
+    <section id="research" className="section">
       <div className="container">
         <div
           className="rs-grid"
@@ -36,16 +37,20 @@ export function ResearchSection() {
                 — not an in-house metric we invented. We publish methodology as we generate pilot data.
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <a href="#" className="btn btn-secondary" style={{ padding: "12px 20px", fontSize: 14 }}>
+                <Link
+                  href="/research/methodology"
+                  className="btn btn-secondary"
+                  style={{ padding: "12px 20px", fontSize: 14 }}
+                >
                   Methodology overview <ArrowRight size={14} />
-                </a>
-                <a
-                  href="#"
+                </Link>
+                <Link
+                  href="/research"
                   className="btn btn-ghost"
                   style={{ padding: "12px 20px", fontSize: 14, color: "var(--ink-2)" }}
                 >
                   Research page <ArrowUpRight size={12} />
-                </a>
+                </Link>
               </div>
             </div>
           </Reveal>

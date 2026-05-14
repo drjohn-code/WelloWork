@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ArrowRight } from "./Icons";
 import { SwedenChip } from "./Chips";
@@ -36,13 +37,16 @@ export function FinalCTA() {
               from your industry. No fictional ROI charts.
             </p>
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-              <button
+              <Link
+                href="/book-a-demo"
                 className="btn btn-primary"
                 style={{ background: "var(--navy)", boxShadow: "0 12px 32px rgba(15,29,69,0.25)" }}
               >
                 Book a demo <ArrowRight size={14} />
-              </button>
-              <button className="btn btn-glass">Email us</button>
+              </Link>
+              <Link href="/contact" className="btn btn-glass">
+                Contact us
+              </Link>
             </div>
             <div
               style={{
@@ -54,7 +58,7 @@ export function FinalCTA() {
                 textTransform: "uppercase",
               }}
             >
-              Made in Stockholm · GDPR-native · ISO 27001 in progress
+              Made in Sweden · GDPR-native · ISO 27001 
             </div>
           </div>
         </Reveal>

@@ -13,6 +13,14 @@ const eslintConfig = defineConfig([
     "build/**",
     "next-env.d.ts",
   ]),
+  {
+    rules: {
+      // We write long-form marketing copy directly in JSX. Escaping every
+      // apostrophe/quote to HTML entities reduces readability with no real
+      // benefit, since React's JSX text rendering handles these safely.
+      "react/no-unescaped-entities": "off",
+    },
+  },
 ]);
 
 export default eslintConfig;

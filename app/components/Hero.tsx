@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { Icon, ArrowRight } from "./Icons";
 import { SwedenChip } from "./Chips";
@@ -45,10 +46,12 @@ export function Hero() {
             </Reveal>
             <Reveal delay={3}>
               <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
-                <button className="btn btn-primary">
+                <Link href="/book-a-demo" className="btn btn-primary">
                   Book a demo <ArrowRight size={14} />
-                </button>
-                <button className="btn btn-glass">See how it works</button>
+                </Link>
+                <Link href="/#platform" className="btn btn-glass">
+                  See how it works
+                </Link>
               </div>
             </Reveal>
             <Reveal delay={4}>

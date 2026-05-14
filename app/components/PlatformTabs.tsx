@@ -1,11 +1,12 @@
 "use client";
 
 import { useState } from "react";
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ArrowRight, Icon, ICONS } from "./Icons";
 import { PrivacyChip } from "./Chips";
 
-type TabId = "Growth" | "assessment" | "measure" | "Workshops" | "Proactive Care";
+type TabId = "Growth" | "Assessment" | "Measure" | "Workshops" | "Proactive Care";
 
 type Tab = {
   id: TabId;
@@ -14,6 +15,7 @@ type Tab = {
   title: string;
   body: string;
   bullets: string[];
+  href: string;
 };
 
 const TABS: Tab[] = [
@@ -28,6 +30,7 @@ const TABS: Tab[] = [
       "Tokens redeem for courses & growth tracks",
       "Team Composition engine recommends optimal teams per project",
     ],
+    href: "/platform/growth",
   },
   {
     id: "Assessment",
@@ -40,6 +43,7 @@ const TABS: Tab[] = [
       "Hiring panel results in minutes",
       "Internal benchmarks against role + tenure",
     ],
+    href: "/platform/assessment",
   },
   {
     id: "Measure",
@@ -52,6 +56,7 @@ const TABS: Tab[] = [
       "Auto-annotated against work events",
       "Promotion-readiness signals based on trend, not a single test",
     ],
+    href: "/platform/measure",
   },
   {
     id: "Workshops",
@@ -64,6 +69,7 @@ const TABS: Tab[] = [
       "Aligned with cognitive & longevity science",
       "Bookings, attendance, and follow-ups in one place",
     ],
+    href: "/platform/workshops",
   },
   {
     id: "Proactive Care",
@@ -76,6 +82,7 @@ const TABS: Tab[] = [
       "Urine: general health & drug screening",
       "Employee-private + manager-aggregated views",
     ],
+    href: "/platform/proactive-care",
   },
 ];
 
@@ -84,7 +91,7 @@ export function PlatformTabs() {
   const cur = TABS.find((t) => t.id === active) ?? TABS[0];
 
   return (
-    <section className="section">
+    <section id="platform" className="section">
       <div className="container">
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 14 }}>
@@ -229,8 +236,8 @@ export function PlatformTabs() {
                     </li>
                   ))}
                 </ul>
-                <a
-                  href="#"
+                <Link
+                  href={cur.href}
                   style={{
                     display: "inline-flex",
                     alignItems: "center",
@@ -242,7 +249,7 @@ export function PlatformTabs() {
                   }}
                 >
                   Explore {cur.label.toLowerCase()} <ArrowRight size={14} />
-                </a>
+                </Link>
               </div>
             </div>
           </div>

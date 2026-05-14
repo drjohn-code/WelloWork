@@ -36,7 +36,7 @@ const ROLES = [
 
 export function SolutionsByRole() {
   return (
-    <section className="section">
+    <section id="solutions" className="section">
       <div className="container">
         <Reveal>
           <div

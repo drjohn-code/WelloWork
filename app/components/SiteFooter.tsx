@@ -1,24 +1,54 @@
+import Link from "next/link";
 import { Logo } from "./Logo";
 
-const COLUMNS = [
+type FooterLink = { label: string; href: string };
+type FooterColumn = { h: string; items: FooterLink[] };
+
+const COLUMNS: FooterColumn[] = [
   {
     h: "Platform",
-    items: ["WelloRise [Growth]", "Wellowize [Assessment]", "Performance trends", "Workshops", "Bio Optimization"],
+    items: [
+      { label: "WelloRise [Growth]", href: "/platform/growth" },
+      { label: "Wellowize [Assessment]", href: "/platform/assessment" },
+      { label: "Performance trends", href: "/platform/measure" },
+      { label: "Workshops", href: "/platform/workshops" },
+      { label: "Proactive Care", href: "/platform/proactive-care" },
+    ],
   },
   {
     h: "Solutions",
-    items: ["HR & People", "Operations", "Learning & development", "Healthcare"],
+    items: [
+      { label: "HR & People", href: "/solutions/hr-people" },
+      { label: "Operations", href: "/solutions/operations" },
+      { label: "Learning & development", href: "/solutions/learning-development" },
+      { label: "Healthcare", href: "/solutions/healthcare" },
+    ],
   },
   {
     h: "Research",
-    items: ["Methodology", "Science & insight", "Cognitive constructs", "Privacy by design"],
+    items: [
+      { label: "Methodology", href: "/research/methodology" },
+      { label: "Science & insight", href: "/research/science-insight" },
+      { label: "Cognitive constructs", href: "/research/cognitive-constructs" },
+      { label: "Privacy by design", href: "/research/privacy-by-design" },
+    ],
   },
   {
     h: "Company",
-    items: ["About", "Careers", "Contact"],
+    items: [
+      { label: "About", href: "/about" },
+      { label: "Careers", href: "/careers" },
+      { label: "Contact", href: "/contact" },
+    ],
   },
 ];
 
+const LEGAL_LINKS: FooterLink[] = [
+  { label: "Privacy", href: "/legal/privacy" },
+  { label: "Terms", href: "/legal/terms" },
+  { label: "Cookies", href: "/legal/cookies" },
+  { label: "Data processing", href: "/legal/data-processing" },
+];
 
 const BADGES = ["GDPR-native", "ISO 27001", "SOC Type II", "HIPAA-ready"];
 
@@ -36,12 +66,10 @@ export function SiteFooter() {
           }}
         >
           <div>
-            {/* 
-                FIXED: Added the textColor="white" prop here. 
-                This tells the Logo component to ignore its dark default.
-            */}
-            <Logo textColor="white" />
-            
+            <Link href="/" aria-label="WelloWork home" style={{ display: "inline-block" }}>
+              <Logo textColor="white" />
+            </Link>
+
             <p
               style={{
                 marginTop: 16,
@@ -77,9 +105,9 @@ export function SiteFooter() {
             <div key={col.h} className="footer-col">
               <h4>{col.h}</h4>
               <ul>
-                {col.items.map((i, idx) => (
-                  <li key={`${col.h}-${idx}`}>
-                    <a href="#">{i}</a>
+                {col.items.map((i) => (
+                  <li key={i.href}>
+                    <Link href={i.href}>{i.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -100,10 +128,11 @@ export function SiteFooter() {
         >
           <span>© 2024-2026 WelloWork AB · Uppsala, Sweden</span>
           <div style={{ display: "flex", gap: 24 }}>
-            <a href="#">Privacy</a>
-            <a href="#">Terms</a>
-            <a href="#">Cookies</a>
-            <a href="#">Data processing</a>
+            {LEGAL_LINKS.map((l) => (
+              <Link key={l.href} href={l.href}>
+                {l.label}
+              </Link>
+            ))}
           </div>
         </div>
       </div>

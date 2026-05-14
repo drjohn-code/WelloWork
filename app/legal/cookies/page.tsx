@@ -1,0 +1,98 @@
+import type { Metadata } from "next";
+import { SiteShell } from "../../components/SiteShell";
+import { PageHero } from "../../components/PageHero";
+import { ProseSection } from "../../components/Prose";
+import { JsonLd } from "../../components/JsonLd";
+import { LegalNotice } from "../../components/LegalNotice";
+import { SITE_URL, buildMetadata, breadcrumbList } from "../../lib/site";
+
+export const metadata: Metadata = buildMetadata({
+  title: "Cookie policy — WelloWork (template, pre-launch review pending)",
+  description:
+    "Which cookies WelloWork uses, why, and how to control them. We default to minimal cookie use in line with our privacy-first stance. Template — counsel review pending.",
+  path: "/legal/cookies",
+});
+
+const CRUMBS = [
+  { name: "Home", href: "/" },
+  { name: "Legal", href: "/legal/cookies" },
+  { name: "Cookie policy", href: "/legal/cookies" },
+];
+
+export default function CookiePage() {
+  const schema = [
+    breadcrumbList(CRUMBS),
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      name: "Cookie policy",
+      url: `${SITE_URL}/legal/cookies`,
+    },
+  ];
+
+  return (
+    <SiteShell>
+      <JsonLd schema={schema} />
+      <PageHero
+        eyebrow="Legal"
+        title={
+          <>
+            Cookie policy{" "}
+            <span className="italic-serif" style={{ color: "var(--accent)" }}>
+              (template).
+            </span>
+          </>
+        }
+        lede="We default to minimal cookie use in line with the rest of the privacy stance. Template — counsel review pending."
+        crumbs={CRUMBS}
+      />
+
+      <ProseSection
+        answer={
+          <>
+            <strong>What cookies does the WelloWork website use?</strong> The marketing site
+            uses only essential cookies needed to keep the site working (e.g. preserving form
+            state across reload). Analytics and marketing cookies are not enabled by default;
+            if they ever are, they will be opt-in via a consent banner, and itemised below.
+          </>
+        }
+      >
+        <LegalNotice />
+
+        <h2>What is a cookie?</h2>
+        <p>
+          A cookie is a small text file stored on your device by a website. Cookies are used
+          for things like keeping you logged in, remembering preferences, and (in some cases)
+          tracking usage for analytics or advertising.
+        </p>
+
+        <h2>What cookies are used here?</h2>
+        <ul>
+          <li>
+            <strong>Essential cookies:</strong> required for the site to operate — for example
+            holding form state if you reload mid-fill. These do not require consent.
+          </li>
+          <li>
+            <strong>Analytics cookies:</strong> not enabled by default. If enabled in future,
+            they will be opt-in and listed here with provider and retention.
+          </li>
+          <li>
+            <strong>Advertising cookies:</strong> not used on this site.
+          </li>
+        </ul>
+
+        <h2>How can you control cookies?</h2>
+        <p>
+          You can clear or block cookies via your browser settings at any time. Blocking
+          essential cookies may break form submissions or other site functionality.
+        </p>
+
+        <h2>Changes</h2>
+        <p>
+          If we add any non-essential cookies, this page will be updated with a revision date
+          and the consent banner will offer an opt-in.
+        </p>
+      </ProseSection>
+    </SiteShell>
+  );
+}

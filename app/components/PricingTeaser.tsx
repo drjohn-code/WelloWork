@@ -1,11 +1,24 @@
+import Link from "next/link";
 import { Reveal } from "./Reveal";
 import { ArrowRight } from "./Icons";
 
-const PLANS = [
+type Plan = {
+  name: string;
+  desc: string;
+  price: string;
+  unit: string;
+  features: readonly string[];
+  cta: string;
+  ctaHref: string;
+  featured: boolean;
+  note?: string;
+};
+
+const PLANS: readonly Plan[] = [
   {
     name: "Platform",
     desc: "Per-employee SaaS access to WelloRise and Wellowize.",
-    price: "[PRICING TBD]",
+    price: "€12",
     unit: "per employee · per month",
     features: [
       "Daily cognitive training (WelloRise)",
@@ -14,13 +27,14 @@ const PLANS = [
       "GDPR-native data residency",
     ],
     cta: "Talk to sales",
+    ctaHref: "/contact",
     featured: false,
   },
   {
     name: "Platform + Services",
     desc: "Adds workshops and biomarker testing on a per-engagement basis.",
-    price: "[PRICING TBD]",
-    unit: "platform + per-engagement services",
+    price: "from €28",
+    unit: "per employee · per month · platform + per-engagement services",
     features: [
       "Everything in Platform",
       "Live health workshops, on-site or remote",
@@ -28,13 +42,15 @@ const PLANS = [
       "Dedicated CSM and report templates",
     ],
     cta: "Book a scoping call",
+    ctaHref: "/book-a-demo",
     featured: true,
+    note: "Workshop and biomarker testing volumes are scoped per engagement and confirmed in the call.",
   },
 ] as const;
 
 export function PricingTeaser() {
   return (
-    <section className="section">
+    <section id="pricing" className="section">
       <div className="container">
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 44 }}>
@@ -146,12 +162,25 @@ export function PricingTeaser() {
                     </li>
                   ))}
                 </ul>
-                <button
+                {p.note && (
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: 12.5,
+                      lineHeight: 1.5,
+                      color: "var(--ink-3)",
+                    }}
+                  >
+                    {p.note}
+                  </p>
+                )}
+                <Link
+                  href={p.ctaHref}
                   className={`btn ${p.featured ? "btn-primary" : "btn-secondary"}`}
                   style={{ marginTop: "auto" }}
                 >
                   {p.cta} <ArrowRight size={14} />
-                </button>
+                </Link>
               </article>
             </Reveal>
           ))}
