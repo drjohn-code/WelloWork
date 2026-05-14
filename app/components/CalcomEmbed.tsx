@@ -1,23 +1,23 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import dynamic from "next/dynamic";
-import { getCalApi } from "@calcom/embed-react";
 
-const Cal = dynamic(() => import("@calcom/embed-react"), {
-  ssr: false,
-  loading: () => <CalSkeleton label="Loading calendar…" />,
-});
-
-const NAMESPACE = "wellowork-demo";
+const CAL_BASE_URL = "https://cal.eu";
 
 type CalcomEmbedProps = {
   calLink: string;
 };
 
+function buildSrc(calLink: string): string {
+  const trimmed = calLink.trim();
+  if (/^https?:\/\//i.test(trimmed)) return trimmed;
+  return `${CAL_BASE_URL}/${trimmed.replace(/^\/+/, "")}`;
+}
+
 export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
+  const [loaded, setLoaded] = useState(false);
 
   useEffect(() => {
     const el = wrapperRef.current;
@@ -41,52 +41,7 @@ export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
     return () => io.disconnect();
   }, []);
 
-  useEffect(() => {
-    if (!inView) return;
-    let cancelled = false;
-    (async () => {
-      try {
-        const cal = await getCalApi({ namespace: NAMESPACE });
-        if (cancelled) return;
-        cal("ui", {
-          hideEventTypeDetails: false,
-          theme: "light",
-          cssVarsPerTheme: {
-            light: {
-              "cal-brand": "#162B5C",
-              "cal-bg": "#ffffff",
-              "cal-bg-emphasis": "#E3EEF9",
-              "cal-bg-muted": "#F4F7FE",
-              "cal-bg-info": "#E3EEF9",
-              "cal-text": "#1a1024",
-              "cal-text-emphasis": "#162B5C",
-              "cal-text-muted": "#6a5d77",
-              "cal-border-emphasis": "#162B5C",
-              "cal-border": "rgba(15,29,69,0.14)",
-              "cal-border-subtle": "rgba(15,29,69,0.08)",
-              "cal-border-booker": "rgba(15,29,69,0.08)",
-            },
-            dark: {
-              "cal-brand": "#5C73FB",
-              "cal-bg": "#0E1D45",
-              "cal-bg-emphasis": "#162B5C",
-              "cal-text": "#ffffff",
-              "cal-text-emphasis": "#ffffff",
-            },
-          },
-          styles: {
-            branding: { brandColor: "#162B5C" },
-          },
-        });
-      } catch (err) {
-        // Surface to console only — page still works via the fallback render.
-        console.warn("[calcom-embed] init failed", err);
-      }
-    })();
-    return () => {
-      cancelled = true;
-    };
-  }, [inView]);
+  const src = buildSrc(calLink);
 
   return (
     <div
@@ -95,42 +50,52 @@ export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
       role="region"
       aria-label="Demo scheduler"
     >
-      {inView ? (
-        <Cal
-          namespace={NAMESPACE}
-          calLink={calLink}
-          style={{ width: "100%", height: "100%", overflow: "scroll" }}
-          config={{
-            layout: "month_view",
-            theme: "light",
+      {inView && (
+        <iframe
+          src={src}
+          title="Schedule a WelloWork demo"
+          loading="lazy"
+          onLoad={() => setLoaded(true)}
+          allow="camera; microphone; autoplay; encrypted-media; fullscreen; clipboard-write"
+          style={{
+            display: "block",
+            width: "100%",
+            minHeight: 600,
+            height: 760,
+            border: 0,
+            background: "transparent",
+            opacity: loaded ? 1 : 0,
+            transition: "opacity .25s ease",
           }}
         />
-      ) : (
-        <CalSkeleton label="Loading scheduler…" />
       )}
+      {!loaded && <CalSkeleton />}
     </div>
   );
 }
 
-function CalSkeleton({ label }: { label: string }) {
+function CalSkeleton() {
   return (
     <div
       aria-busy="true"
       aria-live="polite"
-      style={{
-        minHeight: 620,
-        display: "flex",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: 32,
-        background: "rgba(255,255,255,0.7)",
-        borderRadius: 24,
-        border: "1px solid rgba(15,29,69,0.08)",
-        color: "var(--ink-3)",
-        fontSize: 14,
-      }}
+      className="cal-skeleton"
     >
-      {label}
+      <div className="cal-skeleton-head">
+        <div className="cal-skeleton-bar" style={{ width: "45%" }} />
+        <div className="cal-skeleton-bar" style={{ width: "30%", opacity: 0.7 }} />
+      </div>
+      <div className="cal-skeleton-grid" aria-hidden="true">
+        {Array.from({ length: 35 }).map((_, i) => (
+          <div key={i} className="cal-skeleton-cell" />
+        ))}
+      </div>
+      <div className="cal-skeleton-slots" aria-hidden="true">
+        {Array.from({ length: 6 }).map((_, i) => (
+          <div key={i} className="cal-skeleton-slot" />
+        ))}
+      </div>
+      <span className="sr-only">Loading scheduler…</span>
     </div>
   );
 }

@@ -394,13 +394,57 @@ section[id] { scroll-margin-top: 96px; }
 /* Cal.com embed frame */
 .calcom-frame {
   position: relative;
-  min-height: 640px;
+  min-height: 600px;
   border-radius: 24px;
   overflow: hidden;
   background: rgba(255,255,255,0.85);
 }
-.calcom-frame > div { width: 100%; height: 100%; }
 .calcom-frame iframe { border: 0; border-radius: 24px; }
+
+/* Loading skeleton shown while the Cal.eu iframe boots */
+.cal-skeleton {
+  position: absolute; inset: 0;
+  padding: 28px;
+  display: flex; flex-direction: column; gap: 18px;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92), rgba(255,255,255,0.78));
+  pointer-events: none;
+}
+.cal-skeleton-head { display: flex; flex-direction: column; gap: 10px; }
+.cal-skeleton-bar {
+  height: 14px; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(15,29,69,0.06), rgba(15,29,69,0.12), rgba(15,29,69,0.06));
+  background-size: 200% 100%;
+  animation: cal-skel-shimmer 1.4s ease-in-out infinite;
+}
+.cal-skeleton-grid {
+  display: grid; grid-template-columns: repeat(7, 1fr); gap: 8px;
+  margin-top: 6px;
+}
+.cal-skeleton-cell {
+  aspect-ratio: 1 / 1; border-radius: 8px;
+  background: linear-gradient(90deg, rgba(15,29,69,0.04), rgba(15,29,69,0.10), rgba(15,29,69,0.04));
+  background-size: 200% 100%;
+  animation: cal-skel-shimmer 1.6s ease-in-out infinite;
+}
+.cal-skeleton-slots {
+  display: grid; grid-template-columns: repeat(2, 1fr); gap: 10px; margin-top: 4px;
+}
+.cal-skeleton-slot {
+  height: 36px; border-radius: 10px;
+  background: linear-gradient(90deg, rgba(15,29,69,0.06), rgba(15,29,69,0.12), rgba(15,29,69,0.06));
+  background-size: 200% 100%;
+  animation: cal-skel-shimmer 1.5s ease-in-out infinite;
+}
+@keyframes cal-skel-shimmer {
+  0% { background-position: 100% 0; }
+  100% { background-position: -100% 0; }
+}
+
+/* Screen-reader-only utility */
+.sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px;
+  overflow: hidden; clip: rect(0,0,0,0); white-space: nowrap; border: 0;
+}
 
 /* Demo page — agenda grid responsive */
 @media (max-width: 1020px) { .agenda-list { grid-template-columns: repeat(2, minmax(0,1fr)) !important; } }
