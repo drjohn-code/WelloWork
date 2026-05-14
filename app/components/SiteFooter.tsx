@@ -3,7 +3,7 @@ import { Logo } from "./Logo";
 const COLUMNS = [
   {
     h: "Platform",
-    items: ["WelloRise [Education & Growth]]", "Wellowize [Assessment]", "Performance trends", "Workshops", "Bio Optimization"],
+    items: ["WelloRise [Growth]", "Wellowize [Assessment]", "Performance trends", "Workshops", "Bio Optimization"],
   },
   {
     h: "Solutions",
@@ -18,6 +18,7 @@ const COLUMNS = [
     items: ["About", "Careers", "Contact"],
   },
 ];
+
 
 const BADGES = ["GDPR-native", "ISO 27001", "SOC Type II", "HIPAA-ready"];
 
@@ -35,9 +36,12 @@ export function SiteFooter() {
           }}
         >
           <div>
-            <span style={{ color: "#ffffff" }}>
-              <Logo />
-            </span>
+            {/* 
+                FIXED: Added the textColor="white" prop here. 
+                This tells the Logo component to ignore its dark default.
+            */}
+            <Logo textColor="white" />
+            
             <p
               style={{
                 marginTop: 16,
