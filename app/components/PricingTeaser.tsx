@@ -17,12 +17,12 @@ type Plan = {
 const PLANS: readonly Plan[] = [
   {
     name: "Platform",
-    desc: "Per-employee SaaS access to WelloRise and Wellowize.",
+    desc: "Per-employee SaaS access to WelloRise and WelloWize.",
     price: "€12",
     unit: "per employee · per month",
     features: [
       "Daily cognitive training (WelloRise)",
-      "Hiring & internal assessments (Wellowize)",
+      "Hiring & internal assessments (WelloWize)",
       "Manager dashboards & trend analytics",
       "GDPR-native data residency",
     ],

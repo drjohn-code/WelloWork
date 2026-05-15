@@ -54,7 +54,7 @@ export default function AboutPage() {
             <div className="answer-block" style={{ maxWidth: "70ch" }}>
               <strong>What does WelloWork do?</strong> WelloWork is a workplace performance
               platform that combines daily cognitive training (WelloRise), hiring and internal
-              assessments (Wellowize), longitudinal performance trends, live health workshops,
+              assessments (WelloWize), longitudinal performance trends, live health workshops,
               and biomarker sample testing. Employees own their data; managers see anonymised,
               aggregated insights only.
             </div>

@@ -8,16 +8,16 @@ import { JsonLd } from "../../components/JsonLd";
 import { SITE_URL, SITE_NAME, buildMetadata, breadcrumbList } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Wellowize — cognitive & technical assessments | WelloWork",
+  title: "WelloWize — cognitive & technical assessments | WelloWork",
   description:
-    "Wellowize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after.",
+    "WelloWize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after.",
   path: "/platform/assessment",
 });
 
 const CRUMBS = [
   { name: "Home", href: "/" },
   { name: "Platform", href: "/#platform" },
-  { name: "Assessment — Wellowize", href: "/platform/assessment" },
+  { name: "Assessment — WelloWize", href: "/platform/assessment" },
 ];
 
 export default function AssessmentPage() {
@@ -26,7 +26,7 @@ export default function AssessmentPage() {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "Wellowize — Cognitive & technical assessments",
+      name: "WelloWize — Cognitive & technical assessments",
       provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
       serviceType: "Hiring and internal assessment",
       areaServed: ["EU", "UK"],
@@ -40,7 +40,7 @@ export default function AssessmentPage() {
     <SiteShell>
       <JsonLd schema={schema} />
       <PageHero
-        eyebrow="Wellowize — Assessment"
+        eyebrow="WelloWize — Assessment"
         title={
           <>
             One assessment framework — hiring{" "}
@@ -49,24 +49,24 @@ export default function AssessmentPage() {
             </span>
           </>
         }
-        lede="Wellowize gives hiring panels and people-leaders the same assessment vocabulary, so the work doesn't stop at the offer letter. Cognitive and technical, scored against role and tenure."
+        lede="WelloWize gives hiring panels and people-leaders the same assessment vocabulary, so the work doesn't stop at the offer letter. Cognitive and technical, scored against role and tenure."
         crumbs={CRUMBS}
       />
 
       <ProseSection
         answer={
           <>
-            <strong>What is Wellowize?</strong> Wellowize is WelloWork's assessment product. It
+            <strong>What is WelloWize?</strong> WelloWize is WelloWork's assessment product. It
             evaluates candidates and existing employees across the same cognitive and technical
             framework, returns hiring-panel-ready results in minutes, and produces internal
             benchmarks against role and tenure that can be re-run quarterly.
           </>
         }
       >
-        <h2>How does Wellowize differ from a hiring assessment tool?</h2>
+        <h2>How does WelloWize differ from a hiring assessment tool?</h2>
         <p>
           Most assessment tools are scoped to the hiring funnel — they end the moment a
-          candidate signs. Wellowize uses the same framework before and after the offer letter,
+          candidate signs. WelloWize uses the same framework before and after the offer letter,
           which means an "above benchmark" candidate today is comparable to that same person
           twelve months in, and to their peers.
         </p>
@@ -87,7 +87,7 @@ export default function AssessmentPage() {
 
         <h2>Internal benchmarks against role + tenure</h2>
         <p>
-          Internally, Wellowize can be re-run on a schedule. Results feed the longitudinal trend
+          Internally, WelloWize can be re-run on a schedule. Results feed the longitudinal trend
           that the Measure product surfaces — so promotion-readiness decisions are grounded in a
           trend across the year rather than the score someone happened to post on assessment day.
         </p>
@@ -95,7 +95,7 @@ export default function AssessmentPage() {
 
       <FeatureGrid
         eyebrow="What's included"
-        title="What does Wellowize ship with?"
+        title="What does WelloWize ship with?"
         items={[
           {
             icon: "target",
@@ -131,7 +131,7 @@ export default function AssessmentPage() {
       />
 
       <CTASection
-        title="See Wellowize on real hiring panels."
+        title="See WelloWize on real hiring panels."
         body="A 30-minute walkthrough with sample candidate profiles and a candid pilot conversation."
         primary={{ label: "Book a demo", href: "/book-a-demo" }}
         secondary={{ label: "Read the research", href: "/research" }}

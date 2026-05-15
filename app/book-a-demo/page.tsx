@@ -476,7 +476,7 @@ export default function BookADemoPage() {
                 <Link href="/contact" className="btn btn-primary" style={{ background: "var(--navy)" }}>
                   Contact us <ArrowRight size={14} />
                 </Link>
-                <Link href="/platform" className="btn btn-glass">
+                <Link href="/#platform" className="btn btn-glass">
                   Explore the platform
                 </Link>
               </div>

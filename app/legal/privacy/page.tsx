@@ -3,13 +3,12 @@ import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
 import { ProseSection } from "../../components/Prose";
 import { JsonLd } from "../../components/JsonLd";
-import { LegalNotice } from "../../components/LegalNotice";
 import { SITE_URL, buildMetadata, breadcrumbList, ORG_EMAIL, ORG_LEGAL_NAME, ORG_CITY, ORG_COUNTRY } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Privacy policy — WelloWork (template, pre-launch review pending)",
+  title: "Privacy policy — WelloWork",
   description:
-    "How WelloWork collects, uses, and protects personal data under the GDPR. Template policy for the Swedish and EU markets — pre-launch counsel review pending.",
+    "How WelloWork collects, uses, and protects personal data under the GDPR, for the Swedish and EU markets.",
   path: "/legal/privacy",
 });
 
@@ -35,15 +34,8 @@ export default function PrivacyPage() {
       <JsonLd schema={schema} />
       <PageHero
         eyebrow="Legal"
-        title={
-          <>
-            Privacy policy{" "}
-            <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              (template).
-            </span>
-          </>
-        }
-        lede="How WelloWork collects, uses, and protects personal data, under the GDPR and Swedish law. This is a template; counsel review is pending."
+        title="Privacy policy."
+        lede="How WelloWork collects, uses, and protects personal data, under the GDPR and Swedish law."
         crumbs={CRUMBS}
       />
 
@@ -57,8 +49,6 @@ export default function PrivacyPage() {
           </>
         }
       >
-        <LegalNotice />
-
         <h2>Who is the controller of your data?</h2>
         <p>
           {ORG_LEGAL_NAME}, registered in Sweden and operating from {ORG_CITY}, {ORG_COUNTRY},

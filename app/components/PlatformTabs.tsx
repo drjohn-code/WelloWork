@@ -35,7 +35,7 @@ const TABS: Tab[] = [
   {
     id: "Assessment",
     label: "Assessment",
-    eyebrow: "Wellowize",
+    eyebrow: "WelloWize",
     title: "Hiring and internal assessments — cognitive and technical.",
     body: "One assessment framework for candidates and existing employees. Build defensible profiles before the offer letter, and keep measuring after it.",
     bullets: [

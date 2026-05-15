@@ -6,7 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # WelloWork marketing site
 
-Single-page marketing site for **WelloWork** — a Swedish B2B workplace performance platform combining cognitive training (WelloRise), assessments (Wellowize), longitudinal trend monitoring, live health workshops, and biomarker sample testing.
+Single-page marketing site for **WelloWork** — a Swedish B2B workplace performance platform combining cognitive training (WelloRise), assessments (WelloWize), longitudinal trend monitoring, live health workshops, and biomarker sample testing.
 
 ## Stack
 

@@ -45,7 +45,7 @@ export default function ConstructsPage() {
             </span>
           </>
         }
-        lede="The constructs behind WelloRise and Wellowize — each with the paradigm we use, what the literature establishes, and the operational caveats we hold ourselves to."
+        lede="The constructs behind WelloRise and WelloWize — each with the paradigm we use, what the literature establishes, and the operational caveats we hold ourselves to."
         crumbs={CRUMBS}
       />
 
@@ -91,7 +91,7 @@ export default function ConstructsPage() {
           Non-verbal reasoning under constraints. We use Raven-style progressive matrices and
           tower-of-Hanoi-style problems, with explicit time-on-task tracking. Problem solving
           is the construct most influenced by domain knowledge, which is why we report it
-          alongside the role-specific technical screens in Wellowize.
+          alongside the role-specific technical screens in WelloWize.
         </p>
 
         <h2>What is cognitive flexibility and how do we measure it?</h2>

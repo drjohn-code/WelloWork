@@ -3,13 +3,12 @@ import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
 import { ProseSection } from "../../components/Prose";
 import { JsonLd } from "../../components/JsonLd";
-import { LegalNotice } from "../../components/LegalNotice";
 import { SITE_URL, buildMetadata, breadcrumbList, ORG_LEGAL_NAME } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Terms of service — WelloWork (template, pre-launch review pending)",
+  title: "Terms of service — WelloWork",
   description:
-    "Terms of service for the WelloWork website and platform. Standard B2B SaaS template for Sweden and the EU — pre-launch counsel review pending.",
+    "Terms of service for the WelloWork website and platform — Sweden and the EU.",
   path: "/legal/terms",
 });
 
@@ -35,15 +34,8 @@ export default function TermsPage() {
       <JsonLd schema={schema} />
       <PageHero
         eyebrow="Legal"
-        title={
-          <>
-            Terms of service{" "}
-            <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              (template).
-            </span>
-          </>
-        }
-        lede="The terms under which you use this website and the WelloWork platform. This page is a starting template; counsel review is pending and customer agreements will supersede it where applicable."
+        title="Terms of service."
+        lede="The terms under which you use this website and the WelloWork platform. Customer agreements supersede this page where applicable."
         crumbs={CRUMBS}
       />
 
@@ -57,8 +49,6 @@ export default function TermsPage() {
           </>
         }
       >
-        <LegalNotice />
-
         <h2>Who are you contracting with?</h2>
         <p>
           {ORG_LEGAL_NAME}, a Swedish company. These terms govern use of the website at this

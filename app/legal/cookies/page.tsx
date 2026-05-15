@@ -3,13 +3,12 @@ import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
 import { ProseSection } from "../../components/Prose";
 import { JsonLd } from "../../components/JsonLd";
-import { LegalNotice } from "../../components/LegalNotice";
 import { SITE_URL, buildMetadata, breadcrumbList } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Cookie policy — WelloWork (template, pre-launch review pending)",
+  title: "Cookie policy — WelloWork",
   description:
-    "Which cookies WelloWork uses, why, and how to control them. We default to minimal cookie use in line with our privacy-first stance. Template — counsel review pending.",
+    "Which cookies WelloWork uses, why, and how to control them. We default to minimal cookie use in line with our privacy-first stance.",
   path: "/legal/cookies",
 });
 
@@ -35,15 +34,8 @@ export default function CookiePage() {
       <JsonLd schema={schema} />
       <PageHero
         eyebrow="Legal"
-        title={
-          <>
-            Cookie policy{" "}
-            <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              (template).
-            </span>
-          </>
-        }
-        lede="We default to minimal cookie use in line with the rest of the privacy stance. Template — counsel review pending."
+        title="Cookie policy."
+        lede="We default to minimal cookie use in line with the rest of the privacy stance."
         crumbs={CRUMBS}
       />
 
@@ -57,8 +49,6 @@ export default function CookiePage() {
           </>
         }
       >
-        <LegalNotice />
-
         <h2>What is a cookie?</h2>
         <p>
           A cookie is a small text file stored on your device by a website. Cookies are used

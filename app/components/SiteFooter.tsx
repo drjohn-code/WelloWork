@@ -9,7 +9,7 @@ const COLUMNS: FooterColumn[] = [
     h: "Platform",
     items: [
       { label: "WelloRise [Growth]", href: "/platform/growth" },
-      { label: "Wellowize [Assessment]", href: "/platform/assessment" },
+      { label: "WelloWize [Assessment]", href: "/platform/assessment" },
       { label: "Performance trends", href: "/platform/measure" },
       { label: "Workshops", href: "/platform/workshops" },
       { label: "Proactive Care", href: "/platform/proactive-care" },

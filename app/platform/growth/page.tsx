@@ -83,7 +83,7 @@ export default function GrowthPage() {
         <p>
           Consumer brain-training apps optimise for engagement and retention. WelloRise is a
           B2B layer of a workplace performance platform: sessions feed the same data model that
-          drives manager dashboards, hiring assessments (Wellowize), workshops, and biomarker
+          drives manager dashboards, hiring assessments (WelloWize), workshops, and biomarker
           reports. The point is not to maximise a score in the app — it is to keep a stable,
           comparable signal across the people you work with.
         </p>

@@ -55,7 +55,7 @@ export default function LDPage() {
             <strong>How does WelloWork help L&D leaders?</strong> Daily cognitive training
             earns employees tokens that fund courses inside a managed marketplace.
             Recommendations are rooted in their measured cognitive profile from WelloRise and
-            Wellowize, and uptake plus completion show up alongside performance trends in the
+            WelloWize, and uptake plus completion show up alongside performance trends in the
             same dashboards.
           </>
         }

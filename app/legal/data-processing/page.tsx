@@ -3,13 +3,12 @@ import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
 import { ProseSection } from "../../components/Prose";
 import { JsonLd } from "../../components/JsonLd";
-import { LegalNotice } from "../../components/LegalNotice";
 import { SITE_URL, buildMetadata, breadcrumbList, ORG_EMAIL, ORG_LEGAL_NAME } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
-  title: "Data processing — WelloWork (DPA template, counsel review pending)",
+  title: "Data processing — WelloWork",
   description:
-    "How WelloWork processes personal data on behalf of customer organisations under the GDPR. DPA-style information page — template, counsel review pending.",
+    "How WelloWork processes personal data on behalf of customer organisations under the GDPR.",
   path: "/legal/data-processing",
 });
 
@@ -35,15 +34,8 @@ export default function DataProcessingPage() {
       <JsonLd schema={schema} />
       <PageHero
         eyebrow="Legal"
-        title={
-          <>
-            Data processing{" "}
-            <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              (template).
-            </span>
-          </>
-        }
-        lede="A summary of how WelloWork acts as processor for customer organisations under the GDPR. Template — the executed DPA for a given customer takes precedence."
+        title="Data processing."
+        lede="A summary of how WelloWork acts as processor for customer organisations under the GDPR. The executed DPA for a given customer takes precedence."
         crumbs={CRUMBS}
       />
 
@@ -58,8 +50,6 @@ export default function DataProcessingPage() {
           </>
         }
       >
-        <LegalNotice />
-
         <h2>Subject matter and duration</h2>
         <p>
           We process personal data of the customer's end users (typically the customer's

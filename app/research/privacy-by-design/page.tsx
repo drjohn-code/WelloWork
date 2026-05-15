@@ -64,7 +64,7 @@ export default function PrivacyDesignPage() {
         <h2>What can an employee see?</h2>
         <ul>
           <li>Every cognitive training session they have completed, with per-domain detail.</li>
-          <li>Their own assessment results from Wellowize, including hiring-stage and any internal re-runs.</li>
+          <li>Their own assessment results from WelloWize, including hiring-stage and any internal re-runs.</li>
           <li>Their own biomarker reports, with the option to share them with their physician.</li>
           <li>Their own longitudinal trend across all the above.</li>
           <li>Export and erasure of all of the above on request, under the GDPR.</li>
