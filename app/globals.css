@@ -456,6 +456,16 @@ section[id] { scroll-margin-top: 96px; }
   .cta-row > div:last-child { justify-content: flex-start !important; }
 }
 
+/* WelloRise page — 5-construct grid + 2-col comparison responsive */
+@media (max-width: 1020px) {
+  .construct-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
+}
+@media (max-width: 640px) {
+  .construct-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
+  [data-compare] { grid-template-columns: 1fr !important; }
+  [data-compare] .cmp-col-consumer { border-right: none !important; border-bottom: 1px solid rgba(15,29,69,0.08) !important; }
+}
+
 /* <details> caret styling (FAQ) */
 details > summary::-webkit-details-marker { display: none; }
 details > summary { position: relative; padding-right: 28px; }

@@ -1,10 +1,11 @@
 import type { Metadata } from "next";
 import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
-import { ProseSection } from "../../components/Prose";
 import { FeatureGrid } from "../../components/FeatureGrid";
 import { CTASection } from "../../components/CTASection";
 import { JsonLd } from "../../components/JsonLd";
+import { Reveal } from "../../components/Reveal";
+import { Icon } from "../../components/Icons";
 import { SITE_URL, SITE_NAME, buildMetadata, breadcrumbList } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
@@ -19,6 +20,63 @@ const CRUMBS = [
   { name: "Platform", href: "/#platform" },
   { name: "Growth — WelloRise", href: "/platform/growth" },
 ];
+
+const CONSTRUCTS = [
+  { icon: "brain", label: "Working memory" },
+  { icon: "bolt", label: "Processing speed" },
+  { icon: "target", label: "Attention" },
+  { icon: "cube", label: "Problem solving" },
+  { icon: "swap", label: "Cognitive flexibility" },
+] as const;
+
+const CONSUMER_POINTS = [
+  "Optimised for engagement",
+  "Standalone score",
+  "Personal entertainment",
+  "Single-user data",
+  "No work context",
+] as const;
+
+const WELLORISE_POINTS = [
+  "Optimised for stable signal",
+  "Longitudinal trend",
+  "Workplace performance layer",
+  "Feeds team dashboard",
+  "Annotated to work events",
+] as const;
+
+const EMPLOYEE_CARDS = [
+  { icon: "spark", title: "Adaptive to you", sub: "Calibrated per domain" },
+  { icon: "star", title: "Tokens fund learning", sub: "Redeem for courses & growth" },
+  { icon: "users", title: "Help peers, earn more", sub: "A token-paid task marketplace" },
+  { icon: "lock", title: "Your data, private", sub: "Managers see aggregates only" },
+] as const;
+
+const MANAGER_CARDS = [
+  { icon: "chart", title: "Trends across the year", sub: "90-day, 6-month, 12-month views" },
+  { icon: "layers", title: "Team composition fit", sub: "Rooted in cognitive strengths" },
+  { icon: "pulse", title: "Variability where it matters", sub: "For operations-critical roles" },
+  { icon: "calendar", title: "Annotated to work events", sub: "Sprints, releases, on-call" },
+] as const;
+
+const SECTION_HEADING: React.CSSProperties = {
+  fontFamily: "var(--font-display)",
+  fontWeight: 700,
+  fontSize: "clamp(24px, 2.8vw, 34px)",
+  lineHeight: 1.2,
+  letterSpacing: "-0.015em",
+  color: "var(--ink-1)",
+  margin: 0,
+  textWrap: "balance",
+};
+
+const SECTION_INTRO: React.CSSProperties = {
+  fontSize: 16,
+  lineHeight: 1.6,
+  color: "var(--ink-2)",
+  margin: "12px 0 0",
+  maxWidth: "60ch",
+};
 
 export default function GrowthPage() {
   const schema = [
@@ -53,57 +111,315 @@ export default function GrowthPage() {
         crumbs={CRUMBS}
       />
 
-      <ProseSection
-        answer={
-          <>
-            <strong>What is WelloRise?</strong> WelloRise is the daily cognitive-training layer
-            of the WelloWork platform. It runs adaptive exercises across working memory,
-            processing speed, attention, problem solving, and cognitive flexibility, awards
-            tokens that unlock courses or peer help, and feeds every session into the same
-            longitudinal performance trend that managers see in aggregate.
-          </>
-        }
-      >
-        <h2>What does daily cognitive training actually do?</h2>
-        <p>
-          Cognitive training is well-studied as a category, with substantial heterogeneity in
-          how much it transfers to broader work performance. WelloRise is built on the
-          constructs the field already validates (working memory tasks such as N-back, classic
-          processing-speed paradigms, sustained-attention designs, Raven-style reasoning, and
-          task-switching) rather than novel metrics we invented.
-        </p>
-        <p>
-          What we make defensible is the operational claim: regular short sessions produce a
-          measurable, longitudinal signal at the team level — useful for fatigue patterns,
-          variability, and trend-based promotion-readiness, not as a single-point employee
-          score.
-        </p>
+      {/* Short answer block */}
+      <section style={{ paddingTop: 32, paddingBottom: 24 }}>
+        <div className="container">
+          <Reveal>
+            <div className="answer-block" style={{ maxWidth: "70ch" }}>
+              <strong>What is WelloRise?</strong> The daily cognitive-training layer of the
+              WelloWork platform — adaptive sessions across five validated constructs, paid in
+              tokens, feeding the same longitudinal trend that managers see in aggregate.
+            </div>
+          </Reveal>
+        </div>
+      </section>
 
-        <h2>How is it different from a brain-training app?</h2>
-        <p>
-          Consumer brain-training apps optimise for engagement and retention. WelloRise is a
-          B2B layer of a workplace performance platform: sessions feed the same data model that
-          drives manager dashboards, hiring assessments (WelloWize), workshops, and biomarker
-          reports. The point is not to maximise a score in the app — it is to keep a stable,
-          comparable signal across the people you work with.
-        </p>
+      {/* 1. Cognitive constructs grid */}
+      <section style={{ padding: "48px 0" }}>
+        <div className="container">
+          <Reveal>
+            <div style={{ maxWidth: 720, marginBottom: 32 }}>
+              <h2 style={SECTION_HEADING}>
+                What does daily cognitive training{" "}
+                <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                  actually do?
+                </span>
+              </h2>
+              <p style={SECTION_INTRO}>
+                Five validated constructs, trained in short adaptive sessions.
+              </p>
+            </div>
+          </Reveal>
 
-        <h2>What's in it for the employee?</h2>
-        <ul>
-          <li>Adaptive difficulty per cognitive domain, calibrated to the individual.</li>
-          <li>Tokens earned per session redeem for courses, growth tracks, or peer help.</li>
-          <li>A task marketplace where colleagues can answer one another's questions and earn tokens.</li>
-          <li>Full visibility on their own data — and a guarantee that managers see only aggregates.</li>
-        </ul>
+          <div
+            style={{
+              display: "grid",
+              gridTemplateColumns: "repeat(5, minmax(0, 1fr))",
+              gap: 16,
+            }}
+            className="construct-grid"
+          >
+            {CONSTRUCTS.map((c, i) => (
+              <Reveal key={c.label} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <article
+                  className="glass lift"
+                  style={{
+                    padding: 22,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    alignItems: "flex-start",
+                    gap: 14,
+                    minHeight: 150,
+                  }}
+                >
+                  <div
+                    style={{
+                      width: 44,
+                      height: 44,
+                      borderRadius: 12,
+                      background:
+                        "linear-gradient(135deg, color-mix(in oklch, var(--accent) 18%, white), color-mix(in oklch, var(--secondary) 60%, white))",
+                      display: "flex",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      border: "1px solid rgba(255,255,255,0.7)",
+                    }}
+                  >
+                    <Icon name={c.icon} size={22} />
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 600,
+                      fontSize: 16,
+                      lineHeight: 1.3,
+                      letterSpacing: "-0.01em",
+                      margin: 0,
+                      color: "var(--ink-1)",
+                    }}
+                  >
+                    {c.label}
+                  </h3>
+                </article>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
-        <h2>What's in it for managers?</h2>
-        <ul>
-          <li>90-day, 6-month, and 12-month trend views across teams.</li>
-          <li>Team-composition recommendations rooted in cognitive strengths, not gut feel.</li>
-          <li>Variability and consistency metrics where they matter most — operations-critical roles.</li>
-          <li>Auto-annotation against work events (sprint reviews, releases, on-call rotations).</li>
-        </ul>
-      </ProseSection>
+      {/* 2. Comparison */}
+      <section style={{ padding: "48px 0" }}>
+        <div className="container">
+          <Reveal>
+            <div style={{ maxWidth: 720, marginBottom: 32 }}>
+              <h2 style={SECTION_HEADING}>
+                How is it different from a{" "}
+                <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                  brain-training app?
+                </span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <Reveal delay={1}>
+            <div
+              className="glass"
+              style={{
+                padding: 0,
+                overflow: "hidden",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+              }}
+              data-compare
+            >
+              {/* Consumer side */}
+              <div
+                style={{
+                  padding: "32px 32px",
+                  background: "rgba(15,29,69,0.03)",
+                  borderRight: "1px solid rgba(15,29,69,0.08)",
+                }}
+                className="cmp-col cmp-col-consumer"
+              >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "6px 12px",
+                    borderRadius: 100,
+                    background: "rgba(15,29,69,0.06)",
+                    border: "1px solid rgba(15,29,69,0.10)",
+                    color: "var(--ink-3)",
+                    fontFamily: "var(--font-body)",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    marginBottom: 20,
+                  }}
+                >
+                  Consumer app
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+                  {CONSUMER_POINTS.map((p) => (
+                    <li
+                      key={p}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 12,
+                        fontFamily: "var(--font-body)",
+                        fontSize: 15,
+                        color: "var(--ink-3)",
+                      }}
+                    >
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: 22,
+                          height: 22,
+                          borderRadius: 999,
+                          background: "rgba(15,29,69,0.06)",
+                          border: "1px solid rgba(15,29,69,0.10)",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" aria-hidden="true">
+                          <path
+                            d="M2 5h6"
+                            stroke="var(--ink-3)"
+                            strokeWidth="1.6"
+                            strokeLinecap="round"
+                          />
+                        </svg>
+                      </span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+
+              {/* WelloRise side */}
+              <div
+                style={{
+                  padding: "32px 32px",
+                  background:
+                    "linear-gradient(160deg, color-mix(in oklch, var(--accent) 10%, white), white)",
+                }}
+                className="cmp-col cmp-col-wellorise"
+              >
+                <div
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: 8,
+                    padding: "6px 12px",
+                    borderRadius: 100,
+                    background: "color-mix(in oklch, var(--accent) 14%, white)",
+                    border: "1px solid color-mix(in oklch, var(--accent) 28%, transparent)",
+                    color: "var(--primary)",
+                    fontFamily: "var(--font-body)",
+                    fontSize: 12,
+                    fontWeight: 600,
+                    letterSpacing: "0.06em",
+                    textTransform: "uppercase",
+                    marginBottom: 20,
+                  }}
+                >
+                  <span className="italic-serif" style={{ textTransform: "none", letterSpacing: 0, fontSize: 14 }}>
+                    WelloRise
+                  </span>
+                </div>
+                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+                  {WELLORISE_POINTS.map((p) => (
+                    <li
+                      key={p}
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: 12,
+                        fontFamily: "var(--font-body)",
+                        fontSize: 15,
+                        color: "var(--ink-1)",
+                        fontWeight: 500,
+                      }}
+                    >
+                      <span
+                        aria-hidden="true"
+                        style={{
+                          display: "inline-flex",
+                          alignItems: "center",
+                          justifyContent: "center",
+                          width: 22,
+                          height: 22,
+                          borderRadius: 999,
+                          background: "color-mix(in oklch, var(--accent) 18%, white)",
+                          border: "1px solid color-mix(in oklch, var(--accent) 35%, transparent)",
+                          flexShrink: 0,
+                        }}
+                      >
+                        <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+                          <path
+                            d="M4 12l5 5L20 6"
+                            stroke="var(--primary)"
+                            strokeWidth="2.4"
+                            strokeLinecap="round"
+                            strokeLinejoin="round"
+                          />
+                        </svg>
+                      </span>
+                      {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* 3. Employee */}
+      <section style={{ padding: "48px 0" }}>
+        <div className="container">
+          <Reveal>
+            <div style={{ maxWidth: 720, marginBottom: 32 }}>
+              <h2 style={SECTION_HEADING}>
+                What's in it for the{" "}
+                <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                  employee?
+                </span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-2">
+            {EMPLOYEE_CARDS.map((c, i) => (
+              <Reveal key={c.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <BenefitCard icon={c.icon} title={c.title} sub={c.sub} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      {/* 4. Manager */}
+      <section style={{ padding: "48px 0" }}>
+        <div className="container">
+          <Reveal>
+            <div style={{ maxWidth: 720, marginBottom: 32 }}>
+              <h2 style={SECTION_HEADING}>
+                What's in it for the{" "}
+                <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                  manager?
+                </span>
+              </h2>
+            </div>
+          </Reveal>
+
+          <div className="grid grid-2">
+            {MANAGER_CARDS.map((c, i) => (
+              <Reveal key={c.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <BenefitCard icon={c.icon} title={c.title} sub={c.sub} />
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
 
       <FeatureGrid
         eyebrow="What's included"
@@ -160,5 +476,53 @@ export default function GrowthPage() {
         secondary={{ label: "Compare platform tiers", href: "/#pricing" }}
       />
     </SiteShell>
+  );
+}
+
+function BenefitCard({ icon, title, sub }: { icon: string; title: string; sub?: string }) {
+  return (
+    <article
+      className="glass lift"
+      style={{
+        padding: 26,
+        height: "100%",
+        display: "flex",
+        flexDirection: "column",
+        gap: 14,
+        minHeight: 160,
+      }}
+    >
+      <div
+        style={{
+          width: 44,
+          height: 44,
+          borderRadius: 12,
+          background:
+            "linear-gradient(135deg, color-mix(in oklch, var(--accent) 18%, white), color-mix(in oklch, var(--secondary) 60%, white))",
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "center",
+          border: "1px solid rgba(255,255,255,0.7)",
+        }}
+      >
+        <Icon name={icon} size={22} />
+      </div>
+      <h3
+        style={{
+          fontFamily: "var(--font-display)",
+          fontWeight: 600,
+          fontSize: 19,
+          lineHeight: 1.3,
+          letterSpacing: "-0.01em",
+          margin: 0,
+          color: "var(--ink-1)",
+        }}
+      >
+        {title}
+      </h3>
+      {sub && (
+        <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "var(--ink-3)" }}>{sub}</p>
+      )}
+    </article>
   );
 }
