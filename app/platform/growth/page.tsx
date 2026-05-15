@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 import { SiteShell } from "../../components/SiteShell";
-import { PageHero } from "../../components/PageHero";
+import { Breadcrumbs } from "../../components/Breadcrumbs";
 import { FeatureGrid } from "../../components/FeatureGrid";
 import { CTASection } from "../../components/CTASection";
 import { JsonLd } from "../../components/JsonLd";
@@ -21,13 +21,81 @@ const CRUMBS = [
   { name: "Growth — WelloRise", href: "/platform/growth" },
 ];
 
-const CONSTRUCTS = [
-  { icon: "brain", label: "Working memory" },
-  { icon: "bolt", label: "Processing speed" },
-  { icon: "target", label: "Attention" },
-  { icon: "cube", label: "Problem solving" },
-  { icon: "swap", label: "Cognitive flexibility" },
-] as const;
+type ConstructTint = {
+  bg: string;
+  border: string;
+  iconBg: string;
+  spark: string;
+};
+
+const CONSTRUCTS: ReadonlyArray<{
+  icon: string;
+  label: string;
+  desc: string;
+  tint: ConstructTint;
+  spark: string;
+}> = [
+  {
+    icon: "brain",
+    label: "Working memory",
+    desc: "Hold and update information in mind — the cognitive workbench for complex work.",
+    tint: {
+      bg: "linear-gradient(160deg, rgba(92,115,251,0.10), rgba(255,255,255,0.6))",
+      border: "rgba(92,115,251,0.22)",
+      iconBg: "linear-gradient(135deg, rgba(92,115,251,0.28), rgba(227,238,249,0.7))",
+      spark: "rgba(92,115,251,0.55)",
+    },
+    spark: "M2 22 L10 16 L18 19 L28 10 L38 12 L48 6",
+  },
+  {
+    icon: "bolt",
+    label: "Processing speed",
+    desc: "How quickly you take in, evaluate, and respond to new information under pressure.",
+    tint: {
+      bg: "linear-gradient(160deg, rgba(245,200,130,0.18), rgba(255,255,255,0.6))",
+      border: "rgba(220,170,90,0.28)",
+      iconBg: "linear-gradient(135deg, rgba(245,200,130,0.40), rgba(255,247,232,0.85))",
+      spark: "rgba(202,143,52,0.65)",
+    },
+    spark: "M2 18 L9 14 L16 17 L24 9 L32 12 L40 5 L48 8",
+  },
+  {
+    icon: "target",
+    label: "Attention",
+    desc: "Sustain focus on what matters and filter out what doesn't.",
+    tint: {
+      bg: "linear-gradient(160deg, rgba(140,220,200,0.20), rgba(255,255,255,0.6))",
+      border: "rgba(80,180,150,0.28)",
+      iconBg: "linear-gradient(135deg, rgba(140,220,200,0.40), rgba(232,250,244,0.85))",
+      spark: "rgba(60,160,130,0.65)",
+    },
+    spark: "M2 14 L10 16 L18 10 L26 12 L34 6 L42 9 L48 4",
+  },
+  {
+    icon: "cube",
+    label: "Problem solving",
+    desc: "Reason through novel situations and adapt to unfamiliar constraints.",
+    tint: {
+      bg: "linear-gradient(160deg, rgba(167,139,250,0.16), rgba(255,255,255,0.6))",
+      border: "rgba(139,107,217,0.26)",
+      iconBg: "linear-gradient(135deg, rgba(167,139,250,0.36), rgba(244,239,254,0.85))",
+      spark: "rgba(124,90,200,0.65)",
+    },
+    spark: "M2 20 L10 18 L18 14 L26 16 L34 8 L42 10 L48 6",
+  },
+  {
+    icon: "swap",
+    label: "Cognitive flexibility",
+    desc: "Switch between tasks, perspectives, and mental models on the fly.",
+    tint: {
+      bg: "linear-gradient(160deg, rgba(244,168,184,0.16), rgba(255,255,255,0.6))",
+      border: "rgba(220,130,150,0.26)",
+      iconBg: "linear-gradient(135deg, rgba(244,168,184,0.36), rgba(254,238,242,0.85))",
+      spark: "rgba(200,90,120,0.6)",
+    },
+    spark: "M2 12 L10 18 L18 10 L26 16 L34 8 L42 14 L48 6",
+  },
+];
 
 const CONSUMER_POINTS = [
   "Optimised for engagement",
@@ -37,27 +105,116 @@ const CONSUMER_POINTS = [
   "No work context",
 ] as const;
 
-const WELLORISE_POINTS = [
-  "Optimised for stable signal",
-  "Longitudinal trend",
-  "Workplace performance layer",
-  "Feeds team dashboard",
-  "Annotated to work events",
-] as const;
+const WELLORISE_POINTS: ReadonlyArray<{ label: string; why: string }> = [
+  {
+    label: "Optimised for stable signal",
+    why: "Same task design and difficulty curve — so a score this month is comparable to one next quarter.",
+  },
+  {
+    label: "Longitudinal trend",
+    why: "We watch how each domain moves over weeks, not the score on any single day.",
+  },
+  {
+    label: "Workplace performance layer",
+    why: "Sits inside the same platform as assessment, workshops, and team composition.",
+  },
+  {
+    label: "Feeds team dashboard",
+    why: "Aggregated, anonymised signal flows to managers — never individual results.",
+  },
+  {
+    label: "Annotated to work events",
+    why: "Sprints, releases, and on-call shifts get tagged on the trend line.",
+  },
+];
 
-const EMPLOYEE_CARDS = [
-  { icon: "spark", title: "Adaptive to you", sub: "Calibrated per domain" },
-  { icon: "star", title: "Tokens fund learning", sub: "Redeem for courses & growth" },
-  { icon: "users", title: "Help peers, earn more", sub: "A token-paid task marketplace" },
-  { icon: "lock", title: "Your data, private", sub: "Managers see aggregates only" },
-] as const;
+type BenefitCardData = {
+  icon: string;
+  title: string;
+  sub: string;
+  body: string;
+  accent: string;
+  tintBg: string;
+  tintBorder: string;
+};
 
-const MANAGER_CARDS = [
-  { icon: "chart", title: "Trends across the year", sub: "90-day, 6-month, 12-month views" },
-  { icon: "layers", title: "Team composition fit", sub: "Rooted in cognitive strengths" },
-  { icon: "pulse", title: "Variability where it matters", sub: "For operations-critical roles" },
-  { icon: "calendar", title: "Annotated to work events", sub: "Sprints, releases, on-call" },
-] as const;
+const EMPLOYEE_CARDS: ReadonlyArray<BenefitCardData> = [
+  {
+    icon: "spark",
+    title: "Adaptive to you",
+    sub: "Calibrated per domain",
+    body: "Every session adjusts to your current level across all five constructs. You're stretched, not overwhelmed — and never bored.",
+    accent: "var(--accent)",
+    tintBg: "linear-gradient(155deg, rgba(92,115,251,0.10), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(92,115,251,0.22)",
+  },
+  {
+    icon: "star",
+    title: "Tokens fund learning",
+    sub: "Redeem for courses & growth",
+    body: "Daily sessions earn tokens. Spend them on books, courses, or growth tracks — funded by a budget the team already has.",
+    accent: "#C99043",
+    tintBg: "linear-gradient(155deg, rgba(245,200,130,0.18), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(220,170,90,0.26)",
+  },
+  {
+    icon: "users",
+    title: "Help peers, earn more",
+    sub: "A token-paid task marketplace",
+    body: "Mentor a teammate, run a lunchtime workshop, or pick up a stretch task from the marketplace — peers pay you in tokens.",
+    accent: "#3FA084",
+    tintBg: "linear-gradient(155deg, rgba(140,220,200,0.20), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(80,180,150,0.26)",
+  },
+  {
+    icon: "lock",
+    title: "Your data, private",
+    sub: "Managers see aggregates only",
+    body: "Individual session results stay with you. Managers only see anonymised, aggregated trends — never single-person scores.",
+    accent: "#7A5BC9",
+    tintBg: "linear-gradient(155deg, rgba(167,139,250,0.16), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(139,107,217,0.24)",
+  },
+];
+
+const MANAGER_CARDS: ReadonlyArray<BenefitCardData> = [
+  {
+    icon: "chart",
+    title: "Trends across the year",
+    sub: "90-day, 6-month, 12-month views",
+    body: "Rolling longitudinal views show whether the team is improving or drifting — long before a single survey could surface it.",
+    accent: "var(--accent)",
+    tintBg: "linear-gradient(155deg, rgba(92,115,251,0.10), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(92,115,251,0.22)",
+  },
+  {
+    icon: "layers",
+    title: "Team composition fit",
+    sub: "Rooted in cognitive strengths",
+    body: "Recommend the right blend of cognitive strengths for a project, sprint, or task force — based on aggregated profiles, not guesses.",
+    accent: "#7A5BC9",
+    tintBg: "linear-gradient(155deg, rgba(167,139,250,0.16), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(139,107,217,0.24)",
+  },
+  {
+    icon: "pulse",
+    title: "Variability where it matters",
+    sub: "For operations-critical roles",
+    body: "For operations-critical roles, watch for variability spikes in attention and processing speed that often precede error windows.",
+    accent: "#3FA084",
+    tintBg: "linear-gradient(155deg, rgba(140,220,200,0.20), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(80,180,150,0.26)",
+  },
+  {
+    icon: "calendar",
+    title: "Annotated to work events",
+    sub: "Sprints, releases, on-call",
+    body: "Sprint cuts, releases, and on-call rotations are tagged on the trend line — so you can see which work patterns cost the team.",
+    accent: "#C99043",
+    tintBg: "linear-gradient(155deg, rgba(245,200,130,0.18), rgba(255,255,255,0.55))",
+    tintBorder: "rgba(220,170,90,0.26)",
+  },
+];
 
 const SECTION_HEADING: React.CSSProperties = {
   fontFamily: "var(--font-display)",
@@ -97,19 +254,56 @@ export default function GrowthPage() {
   return (
     <SiteShell>
       <JsonLd schema={schema} />
-      <PageHero
-        eyebrow="WelloRise — Growth"
-        title={
-          <>
-            Daily cognitive training that fits in a{" "}
-            <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              coffee break.
-            </span>
-          </>
-        }
-        lede="WelloRise is a daily cognitive training product designed for working weeks, not lab conditions. Five to ten minutes a day across five validated cognitive constructs — with a token economy that funds learning."
-        crumbs={CRUMBS}
-      />
+
+      {/* Hero — two-column with daily session mock */}
+      <section style={{ paddingTop: 48, paddingBottom: 24 }}>
+        <div className="container">
+          <Reveal>
+            <Breadcrumbs items={CRUMBS} />
+          </Reveal>
+          <div
+            className="hero-grid"
+            style={{
+              marginTop: 18,
+              display: "grid",
+              gridTemplateColumns: "1.05fr 0.95fr",
+              gap: 56,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <Reveal delay={1}>
+                <span className="eyebrow">WelloRise — Growth</span>
+              </Reveal>
+              <Reveal delay={1}>
+                <h1
+                  className="h-section"
+                  style={{
+                    margin: "10px 0 18px",
+                    maxWidth: "22ch",
+                    fontSize: "clamp(34px, 5vw, 58px)",
+                  }}
+                >
+                  Daily cognitive training that fits in a{" "}
+                  <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                    coffee break.
+                  </span>
+                </h1>
+              </Reveal>
+              <Reveal delay={2}>
+                <p className="lede" style={{ margin: 0 }}>
+                  WelloRise is a daily cognitive training product designed for working weeks, not
+                  lab conditions. Five to ten minutes a day across five validated cognitive
+                  constructs — with a token economy that funds learning.
+                </p>
+              </Reveal>
+            </div>
+            <Reveal delay={3}>
+              <DailySessionCard />
+            </Reveal>
+          </div>
+        </div>
+      </section>
 
       {/* Short answer block */}
       <section style={{ paddingTop: 32, paddingBottom: 24 }}>
@@ -152,15 +346,22 @@ export default function GrowthPage() {
             {CONSTRUCTS.map((c, i) => (
               <Reveal key={c.label} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
                 <article
-                  className="glass lift"
+                  className="lift"
                   style={{
+                    position: "relative",
                     padding: 22,
+                    paddingBottom: 26,
                     height: "100%",
                     display: "flex",
                     flexDirection: "column",
                     alignItems: "flex-start",
-                    gap: 14,
-                    minHeight: 150,
+                    gap: 12,
+                    minHeight: 200,
+                    background: c.tint.bg,
+                    border: `1px solid ${c.tint.border}`,
+                    borderRadius: "var(--r-card)",
+                    boxShadow: "var(--glass-shadow)",
+                    overflow: "hidden",
                   }}
                 >
                   <div
@@ -168,8 +369,7 @@ export default function GrowthPage() {
                       width: 44,
                       height: 44,
                       borderRadius: 12,
-                      background:
-                        "linear-gradient(135deg, color-mix(in oklch, var(--accent) 18%, white), color-mix(in oklch, var(--secondary) 60%, white))",
+                      background: c.tint.iconBg,
                       display: "flex",
                       alignItems: "center",
                       justifyContent: "center",
@@ -191,6 +391,38 @@ export default function GrowthPage() {
                   >
                     {c.label}
                   </h3>
+                  <p
+                    style={{
+                      margin: 0,
+                      fontSize: 13,
+                      lineHeight: 1.5,
+                      color: "var(--ink-2)",
+                    }}
+                  >
+                    {c.desc}
+                  </p>
+                  <svg
+                    width="60"
+                    height="26"
+                    viewBox="0 0 50 26"
+                    fill="none"
+                    aria-hidden="true"
+                    style={{
+                      position: "absolute",
+                      right: 18,
+                      bottom: 14,
+                      opacity: 0.75,
+                    }}
+                  >
+                    <path
+                      d={c.spark}
+                      stroke={c.tint.spark}
+                      strokeWidth="1.6"
+                      strokeLinecap="round"
+                      strokeLinejoin="round"
+                      fill="none"
+                    />
+                  </svg>
                 </article>
               </Reveal>
             ))}
@@ -252,7 +484,16 @@ export default function GrowthPage() {
                 >
                   Consumer app
                 </div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 18,
+                  }}
+                >
                   {CONSUMER_POINTS.map((p) => (
                     <li
                       key={p}
@@ -263,6 +504,9 @@ export default function GrowthPage() {
                         fontFamily: "var(--font-body)",
                         fontSize: 15,
                         color: "var(--ink-3)",
+                        textDecoration: "line-through",
+                        textDecorationColor: "rgba(15,29,69,0.25)",
+                        textDecorationThickness: "1px",
                       }}
                     >
                       <span
@@ -321,22 +565,31 @@ export default function GrowthPage() {
                     marginBottom: 20,
                   }}
                 >
-                  <span className="italic-serif" style={{ textTransform: "none", letterSpacing: 0, fontSize: 14 }}>
+                  <span
+                    className="italic-serif"
+                    style={{ textTransform: "none", letterSpacing: 0, fontSize: 14 }}
+                  >
                     WelloRise
                   </span>
                 </div>
-                <ul style={{ listStyle: "none", padding: 0, margin: 0, display: "flex", flexDirection: "column", gap: 14 }}>
+                <ul
+                  style={{
+                    listStyle: "none",
+                    padding: 0,
+                    margin: 0,
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 18,
+                  }}
+                >
                   {WELLORISE_POINTS.map((p) => (
                     <li
-                      key={p}
+                      key={p.label}
                       style={{
                         display: "flex",
-                        alignItems: "center",
+                        alignItems: "flex-start",
                         gap: 12,
                         fontFamily: "var(--font-body)",
-                        fontSize: 15,
-                        color: "var(--ink-1)",
-                        fontWeight: 500,
                       }}
                     >
                       <span
@@ -351,6 +604,7 @@ export default function GrowthPage() {
                           background: "color-mix(in oklch, var(--accent) 18%, white)",
                           border: "1px solid color-mix(in oklch, var(--accent) 35%, transparent)",
                           flexShrink: 0,
+                          marginTop: 2,
                         }}
                       >
                         <svg width="12" height="12" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -363,7 +617,27 @@ export default function GrowthPage() {
                           />
                         </svg>
                       </span>
-                      {p}
+                      <span style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+                        <span
+                          style={{
+                            fontSize: 15,
+                            color: "var(--ink-1)",
+                            fontWeight: 600,
+                            lineHeight: 1.35,
+                          }}
+                        >
+                          {p.label}
+                        </span>
+                        <span
+                          style={{
+                            fontSize: 13.5,
+                            color: "var(--ink-2)",
+                            lineHeight: 1.5,
+                          }}
+                        >
+                          {p.why}
+                        </span>
+                      </span>
                     </li>
                   ))}
                 </ul>
@@ -390,7 +664,7 @@ export default function GrowthPage() {
           <div className="grid grid-2">
             {EMPLOYEE_CARDS.map((c, i) => (
               <Reveal key={c.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
-                <BenefitCard icon={c.icon} title={c.title} sub={c.sub} />
+                <BenefitCard {...c} />
               </Reveal>
             ))}
           </div>
@@ -414,7 +688,7 @@ export default function GrowthPage() {
           <div className="grid grid-2">
             {MANAGER_CARDS.map((c, i) => (
               <Reveal key={c.title} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
-                <BenefitCard icon={c.icon} title={c.title} sub={c.sub} />
+                <BenefitCard {...c} />
               </Reveal>
             ))}
           </div>
@@ -479,19 +753,45 @@ export default function GrowthPage() {
   );
 }
 
-function BenefitCard({ icon, title, sub }: { icon: string; title: string; sub?: string }) {
+function BenefitCard({
+  icon,
+  title,
+  sub,
+  body,
+  accent,
+  tintBg,
+  tintBorder,
+}: BenefitCardData) {
   return (
     <article
-      className="glass lift"
+      className="lift"
       style={{
+        position: "relative",
         padding: 26,
         height: "100%",
         display: "flex",
         flexDirection: "column",
         gap: 14,
-        minHeight: 160,
+        minHeight: 200,
+        background: tintBg,
+        border: `1px solid ${tintBorder}`,
+        borderRadius: "var(--r-card)",
+        boxShadow: "var(--glass-shadow)",
+        overflow: "hidden",
       }}
     >
+      <span
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: 0,
+          left: 0,
+          width: 4,
+          height: 48,
+          background: accent,
+          borderRadius: "0 4px 4px 0",
+        }}
+      />
       <div
         style={{
           width: 44,
@@ -507,22 +807,406 @@ function BenefitCard({ icon, title, sub }: { icon: string; title: string; sub?: 
       >
         <Icon name={icon} size={22} />
       </div>
-      <h3
+      <div style={{ display: "flex", flexDirection: "column", gap: 4 }}>
+        <h3
+          style={{
+            fontFamily: "var(--font-display)",
+            fontWeight: 600,
+            fontSize: 19,
+            lineHeight: 1.3,
+            letterSpacing: "-0.01em",
+            margin: 0,
+            color: "var(--ink-1)",
+          }}
+        >
+          {title}
+        </h3>
+        <span
+          style={{
+            fontSize: 13,
+            fontWeight: 600,
+            letterSpacing: "0.02em",
+            color: accent,
+          }}
+        >
+          {sub}
+        </span>
+      </div>
+      <p
         style={{
-          fontFamily: "var(--font-display)",
-          fontWeight: 600,
-          fontSize: 19,
-          lineHeight: 1.3,
-          letterSpacing: "-0.01em",
           margin: 0,
-          color: "var(--ink-1)",
+          fontSize: 14.5,
+          lineHeight: 1.55,
+          color: "var(--ink-2)",
         }}
       >
-        {title}
-      </h3>
-      {sub && (
-        <p style={{ margin: 0, fontSize: 14, lineHeight: 1.5, color: "var(--ink-3)" }}>{sub}</p>
-      )}
+        {body}
+      </p>
     </article>
+  );
+}
+
+function DailySessionCard() {
+  // Progress ring: 3 of 5 constructs complete = 60%
+  const radius = 54;
+  const circumference = 2 * Math.PI * radius;
+  const progress = 0.6;
+  const dashOffset = circumference * (1 - progress);
+
+  return (
+    <div
+      className="glass-strong"
+      style={{
+        position: "relative",
+        padding: 28,
+        borderRadius: 28,
+        overflow: "hidden",
+      }}
+    >
+      {/* Decorative ambient orb */}
+      <span
+        aria-hidden="true"
+        style={{
+          position: "absolute",
+          top: -60,
+          right: -40,
+          width: 180,
+          height: 180,
+          borderRadius: "50%",
+          background:
+            "radial-gradient(circle at 30% 30%, color-mix(in oklch, var(--accent) 30%, transparent), transparent 70%)",
+          filter: "blur(20px)",
+          pointerEvents: "none",
+        }}
+      />
+
+      {/* Header */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          justifyContent: "space-between",
+          gap: 12,
+          marginBottom: 18,
+          position: "relative",
+        }}
+      >
+        <div style={{ display: "flex", flexDirection: "column", gap: 2 }}>
+          <span
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.10em",
+              textTransform: "uppercase",
+              color: "var(--ink-3)",
+            }}
+          >
+            Today's session
+          </span>
+          <span
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 700,
+              fontSize: 18,
+              color: "var(--ink-1)",
+              letterSpacing: "-0.01em",
+            }}
+          >
+            5 minutes to keep your trend
+          </span>
+        </div>
+        <span
+          style={{
+            display: "inline-flex",
+            alignItems: "center",
+            gap: 6,
+            padding: "5px 10px",
+            borderRadius: 100,
+            background: "color-mix(in oklch, var(--accent) 14%, white)",
+            border: "1px solid color-mix(in oklch, var(--accent) 28%, transparent)",
+            color: "var(--primary)",
+            fontSize: 11,
+            fontWeight: 600,
+            letterSpacing: "0.04em",
+            textTransform: "uppercase",
+            whiteSpace: "nowrap",
+          }}
+        >
+          <span
+            style={{
+              width: 6,
+              height: 6,
+              borderRadius: 999,
+              background: "var(--accent)",
+              boxShadow: "0 0 0 3px color-mix(in oklch, var(--accent) 25%, transparent)",
+            }}
+          />
+          Live
+        </span>
+      </div>
+
+      {/* Progress ring + current task */}
+      <div
+        style={{
+          display: "flex",
+          alignItems: "center",
+          gap: 22,
+          position: "relative",
+        }}
+      >
+        <div
+          style={{
+            position: "relative",
+            width: 132,
+            height: 132,
+            flexShrink: 0,
+          }}
+        >
+          <svg
+            width="132"
+            height="132"
+            viewBox="0 0 132 132"
+            aria-hidden="true"
+          >
+            <defs>
+              <linearGradient id="ringGrad" x1="0" y1="0" x2="1" y2="1">
+                <stop offset="0%" stopColor="var(--accent)" />
+                <stop offset="100%" stopColor="var(--primary)" />
+              </linearGradient>
+            </defs>
+            <circle
+              cx="66"
+              cy="66"
+              r={radius}
+              stroke="rgba(22,43,92,0.10)"
+              strokeWidth="10"
+              fill="none"
+            />
+            <circle
+              cx="66"
+              cy="66"
+              r={radius}
+              stroke="url(#ringGrad)"
+              strokeWidth="10"
+              fill="none"
+              strokeDasharray={circumference}
+              strokeDashoffset={dashOffset}
+              strokeLinecap="round"
+              transform="rotate(-90 66 66)"
+            />
+          </svg>
+          <div
+            style={{
+              position: "absolute",
+              inset: 0,
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "center",
+            }}
+          >
+            <span
+              style={{
+                fontFamily: "var(--font-display)",
+                fontWeight: 700,
+                fontSize: 30,
+                lineHeight: 1,
+                color: "var(--ink-1)",
+                letterSpacing: "-0.02em",
+              }}
+            >
+              3
+              <span style={{ color: "var(--ink-3)", fontWeight: 500, fontSize: 18 }}>
+                {" "}
+                / 5
+              </span>
+            </span>
+            <span
+              style={{
+                fontSize: 10.5,
+                fontWeight: 600,
+                color: "var(--ink-3)",
+                letterSpacing: "0.10em",
+                textTransform: "uppercase",
+                marginTop: 6,
+              }}
+            >
+              constructs
+            </span>
+          </div>
+        </div>
+
+        <div style={{ flex: 1, minWidth: 0 }}>
+          <span
+            style={{
+              fontFamily: "var(--font-body)",
+              fontSize: 11,
+              fontWeight: 600,
+              letterSpacing: "0.08em",
+              textTransform: "uppercase",
+              color: "var(--accent)",
+            }}
+          >
+            In progress
+          </span>
+          <div
+            style={{
+              marginTop: 6,
+              fontFamily: "var(--font-display)",
+              fontWeight: 600,
+              fontSize: 17,
+              color: "var(--ink-1)",
+              letterSpacing: "-0.01em",
+            }}
+          >
+            Working memory
+          </div>
+          <div
+            style={{
+              marginTop: 2,
+              fontSize: 13,
+              color: "var(--ink-3)",
+            }}
+          >
+            Task 2 of 3
+          </div>
+          <div
+            className="mini-bar"
+            style={{ marginTop: 14, height: 6 }}
+            aria-label="Task progress"
+          >
+            <div style={{ width: "66%" }} />
+          </div>
+          <div
+            style={{
+              marginTop: 6,
+              display: "flex",
+              justifyContent: "space-between",
+              fontSize: 11,
+              color: "var(--ink-3)",
+            }}
+          >
+            <span>2:14 elapsed</span>
+            <span>~3 min left</span>
+          </div>
+        </div>
+      </div>
+
+      {/* Completed constructs row */}
+      <div
+        style={{
+          marginTop: 22,
+          display: "flex",
+          gap: 6,
+          flexWrap: "wrap",
+        }}
+      >
+        {[
+          { label: "Attention", done: true },
+          { label: "Flexibility", done: true },
+          { label: "Processing", done: true },
+          { label: "Memory", done: false, active: true },
+          { label: "Problem solving", done: false },
+        ].map((d) => (
+          <span
+            key={d.label}
+            style={{
+              display: "inline-flex",
+              alignItems: "center",
+              gap: 6,
+              padding: "5px 10px",
+              borderRadius: 100,
+              fontSize: 11.5,
+              fontWeight: 600,
+              background: d.done
+                ? "color-mix(in oklch, var(--accent) 16%, white)"
+                : d.active
+                  ? "white"
+                  : "rgba(15,29,69,0.04)",
+              border: d.done
+                ? "1px solid color-mix(in oklch, var(--accent) 35%, transparent)"
+                : d.active
+                  ? "1px solid var(--accent)"
+                  : "1px solid rgba(15,29,69,0.10)",
+              color: d.done
+                ? "var(--primary)"
+                : d.active
+                  ? "var(--primary)"
+                  : "var(--ink-3)",
+            }}
+          >
+            <span
+              style={{
+                width: 8,
+                height: 8,
+                borderRadius: 999,
+                background: d.done
+                  ? "var(--accent)"
+                  : d.active
+                    ? "var(--accent)"
+                    : "rgba(15,29,69,0.15)",
+                boxShadow: d.active
+                  ? "0 0 0 3px color-mix(in oklch, var(--accent) 25%, transparent)"
+                  : "none",
+              }}
+            />
+            {d.label}
+          </span>
+        ))}
+      </div>
+
+      {/* Token reward callout */}
+      <div
+        style={{
+          marginTop: 20,
+          padding: "12px 14px",
+          borderRadius: 16,
+          background:
+            "linear-gradient(135deg, color-mix(in oklch, var(--accent) 12%, white), white)",
+          border: "1px solid color-mix(in oklch, var(--accent) 28%, transparent)",
+          display: "flex",
+          alignItems: "center",
+          gap: 12,
+        }}
+      >
+        <div
+          style={{
+            width: 36,
+            height: 36,
+            borderRadius: 999,
+            background: "var(--primary)",
+            color: "white",
+            display: "flex",
+            alignItems: "center",
+            justifyContent: "center",
+            fontFamily: "var(--font-display)",
+            fontWeight: 700,
+            fontSize: 13,
+            letterSpacing: "-0.01em",
+            boxShadow: "0 6px 18px color-mix(in oklch, var(--primary) 35%, transparent)",
+            flexShrink: 0,
+          }}
+        >
+          +12
+        </div>
+        <div style={{ display: "flex", flexDirection: "column", minWidth: 0 }}>
+          <span
+            style={{
+              fontFamily: "var(--font-display)",
+              fontWeight: 600,
+              fontSize: 14.5,
+              color: "var(--ink-1)",
+              letterSpacing: "-0.005em",
+            }}
+          >
+            +12 tokens earned today
+          </span>
+          <span style={{ fontSize: 12, color: "var(--ink-3)" }}>
+            Redeem for courses, books, or peer help
+          </span>
+        </div>
+      </div>
+    </div>
   );
 }
