@@ -472,6 +472,12 @@ section[id] { scroll-margin-top: 96px; }
   .scoping-flow { grid-template-columns: 1fr !important; gap: 14px !important; }
   .scoping-flow > div[aria-hidden="true"] { transform: rotate(90deg); margin: -2px auto; }
 }
+
+/* Proactive Care — logistics flow stacks on smaller screens */
+@media (max-width: 880px) {
+  .logistics-flow { grid-template-columns: 1fr !important; gap: 12px !important; }
+  .logistics-flow .logistics-arrow { transform: rotate(90deg); margin: -2px auto; }
+}
 @media (max-width: 640px) {
   .topic-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; }
   .cadence-row { grid-template-columns: 1fr !important; gap: 10px !important; }
