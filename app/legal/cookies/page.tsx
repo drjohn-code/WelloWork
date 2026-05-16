@@ -3,6 +3,12 @@ import { SiteShell } from "../../components/SiteShell";
 import { PageHero } from "../../components/PageHero";
 import { ProseSection } from "../../components/Prose";
 import { JsonLd } from "../../components/JsonLd";
+import {
+  CookieTrustBadge,
+  CookieTable,
+  CookieControlSteps,
+  CookieChangesCallout,
+} from "../../components/LegalVisuals";
 import { SITE_URL, buildMetadata, breadcrumbList } from "../../lib/site";
 
 export const metadata: Metadata = buildMetadata({
@@ -37,7 +43,9 @@ export default function CookiePage() {
         title="Cookie policy."
         lede="We default to minimal cookie use in line with the rest of the privacy stance."
         crumbs={CRUMBS}
-      />
+      >
+        <CookieTrustBadge />
+      </PageHero>
 
       <ProseSection
         answer={
@@ -57,31 +65,17 @@ export default function CookiePage() {
         </p>
 
         <h2>What cookies are used here?</h2>
-        <ul>
-          <li>
-            <strong>Essential cookies:</strong> required for the site to operate — for example
-            holding form state if you reload mid-fill. These do not require consent.
-          </li>
-          <li>
-            <strong>Analytics cookies:</strong> not enabled by default. If enabled in future,
-            they will be opt-in and listed here with provider and retention.
-          </li>
-          <li>
-            <strong>Advertising cookies:</strong> not used on this site.
-          </li>
-        </ul>
+        <CookieTable />
 
         <h2>How can you control cookies?</h2>
-        <p>
-          You can clear or block cookies via your browser settings at any time. Blocking
-          essential cookies may break form submissions or other site functionality.
-        </p>
+        <CookieControlSteps />
 
         <h2>Changes</h2>
         <p>
           If we add any non-essential cookies, this page will be updated with a revision date
           and the consent banner will offer an opt-in.
         </p>
+        <CookieChangesCallout />
       </ProseSection>
     </SiteShell>
   );
