@@ -2118,3 +2118,498 @@ details > summary::after {
   transform: rotate(45deg); transition: transform .2s ease;
 }
 details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
+
+/* =========================================================
+   Cognitive Constructs page — visuals
+   ========================================================= */
+
+/* Hero: 2×3 domain grid */
+.cc-domain-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+.cc-domain-card {
+  position: relative;
+  background: linear-gradient(160deg, var(--primary) 0%, var(--primary-deep) 100%);
+  color: var(--ink-on-dark);
+  border: 1px solid rgba(255,255,255,0.06);
+  border-radius: 16px;
+  padding: 16px 16px 14px;
+  box-shadow: 0 8px 22px rgba(15,29,69,0.18);
+  min-height: 124px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+.cc-domain-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(120% 80% at 100% 0%, rgba(92,115,251,0.20) 0%, transparent 55%);
+  pointer-events: none;
+}
+.cc-domain-card-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 18px;
+}
+.cc-domain-icon {
+  width: 38px; height: 38px;
+  border-radius: 10px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: rgba(92,115,251,0.14);
+  border: 1px solid rgba(138,156,253,0.30);
+}
+.cc-domain-readout {
+  display: inline-flex; gap: 4px; align-items: center;
+}
+.cc-domain-readout > span {
+  width: 5px; height: 5px; border-radius: 50%;
+  background: rgba(138,156,253,0.45);
+}
+.cc-domain-readout > span:nth-child(2) { background: rgba(138,156,253,0.75); }
+.cc-domain-readout > span:nth-child(3) { background: var(--accent-soft); box-shadow: 0 0 6px var(--accent-soft); }
+.cc-domain-label {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14.5px;
+  letter-spacing: -0.005em;
+  line-height: 1.25;
+  color: #fff;
+  position: relative;
+}
+.cc-domain-descriptor {
+  margin-top: 4px;
+  font-size: 11.5px;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent-soft);
+  position: relative;
+}
+@media (max-width: 760px) {
+  .cc-domain-grid { grid-template-columns: repeat(2, minmax(0,1fr)); }
+}
+@media (max-width: 420px) {
+  .cc-domain-grid { grid-template-columns: 1fr; }
+}
+
+/* Pill strip on answer block */
+.cc-pill-strip {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 0 0 16px;
+}
+.cc-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 12px 6px 8px;
+  border-radius: 999px;
+  background: color-mix(in oklch, var(--accent) 14%, white);
+  border: 1px solid color-mix(in oklch, var(--accent) 28%, transparent);
+  color: var(--primary);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: -0.005em;
+  white-space: nowrap;
+}
+.cc-pill-icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 22px; height: 22px;
+  border-radius: 50%;
+  background: white;
+  border: 1px solid color-mix(in oklch, var(--accent) 24%, transparent);
+}
+.cc-pill-icon svg { width: 16px; height: 16px; }
+
+/* Per-domain scenario card */
+.cc-scenario-card {
+  position: relative;
+  padding: 20px 20px 18px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(15,29,69,0.08);
+  border-radius: 18px;
+}
+.cc-paradigm-badge {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+.cc-scenario-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  margin-bottom: 6px;
+}
+.cc-scenario-text {
+  margin: 0 0 14px;
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-1);
+  max-width: 44ch;
+}
+.cc-scenario-trace {
+  border-top: 1px dashed rgba(15,29,69,0.10);
+  padding-top: 12px;
+}
+.cc-scenario-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 10px;
+  font-size: 12px;
+  color: var(--ink-3);
+  letter-spacing: 0.01em;
+}
+.cc-scenario-dot {
+  width: 6px; height: 6px;
+  border-radius: 50%;
+  background: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in oklch, var(--accent) 22%, transparent);
+}
+
+/* "Why not just use cognitive games?" comparison */
+.cc-compare-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+@media (max-width: 880px) {
+  .cc-compare-grid { grid-template-columns: 1fr; }
+}
+.cc-compare-card {
+  border-radius: 20px;
+  padding: 20px;
+  border: 1px solid rgba(15,29,69,0.08);
+  display: flex;
+  flex-direction: column;
+}
+.cc-compare-card-muted {
+  background: rgba(15,29,69,0.03);
+  color: var(--ink-3);
+}
+.cc-compare-card-real {
+  background: linear-gradient(160deg, rgba(92,115,251,0.10), rgba(255,255,255,0.92));
+  border-color: color-mix(in oklch, var(--accent) 22%, transparent);
+}
+.cc-compare-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 14px;
+}
+.cc-compare-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 14px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--ink-1);
+}
+.cc-compare-card-muted .cc-compare-title { color: var(--ink-3); }
+.cc-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 3px 9px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+.cc-badge-warn {
+  background: #FEEAE0;
+  color: #B43F1A;
+  border: 1px solid #F5B79A;
+}
+.cc-badge-good {
+  background: #D7F5E2;
+  color: #1F7A45;
+  border: 1px solid #98E0B5;
+}
+.cc-compare-note {
+  margin: 14px 0 0;
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+}
+.cc-compare-card-muted .cc-compare-note { color: var(--ink-3); }
+
+/* Cognitive-game mock UI */
+.cc-game-mock {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid rgba(15,29,69,0.10);
+  padding: 12px;
+  filter: grayscale(0.55);
+}
+.cc-game-mock-header {
+  display: flex; justify-content: space-between;
+  font-size: 11px; color: var(--ink-3);
+  margin-bottom: 8px;
+  letter-spacing: 0.04em;
+}
+.cc-game-mock-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 6px;
+  margin-bottom: 10px;
+}
+.cc-game-tile {
+  aspect-ratio: 1 / 1;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 8px;
+  background: #eef0f4;
+  color: #98a0ad;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 18px;
+}
+.cc-game-tile-on {
+  background: #c9cfdb;
+  color: #4b5366;
+  box-shadow: inset 0 0 0 2px #aab2c4;
+}
+.cc-game-mock-cta {
+  display: flex; align-items: center; justify-content: space-between;
+  background: #f3f4f7;
+  border-radius: 8px;
+  padding: 8px 10px;
+  font-size: 12px;
+  color: var(--ink-3);
+}
+.cc-game-btn {
+  background: #d0d4dd;
+  color: #4b5366;
+  border-radius: 6px;
+  padding: 4px 10px;
+  font-size: 11.5px;
+  font-weight: 700;
+}
+
+/* WelloWork scenario mock UI */
+.cc-scenario-mock {
+  background: #fff;
+  border-radius: 12px;
+  border: 1px solid color-mix(in oklch, var(--accent) 18%, transparent);
+  padding: 14px;
+  box-shadow: 0 6px 18px rgba(15,29,69,0.06);
+}
+.cc-scenario-mock-header {
+  display: flex; align-items: center; justify-content: space-between;
+  margin-bottom: 10px;
+}
+.cc-scenario-mock-step {
+  font-size: 11px; font-weight: 700; letter-spacing: 0.08em;
+  text-transform: uppercase; color: var(--ink-3);
+}
+.cc-scenario-mock-tag {
+  font-size: 11px; font-weight: 600;
+  padding: 3px 8px; border-radius: 999px;
+  background: color-mix(in oklch, var(--accent) 14%, white);
+  color: var(--primary);
+}
+.cc-scenario-mock-prompt {
+  font-size: 13.5px; line-height: 1.5; color: var(--ink-1);
+  margin: 0 0 12px;
+}
+.cc-scenario-mock-options {
+  display: flex; flex-direction: column; gap: 6px;
+}
+.cc-option {
+  display: flex; align-items: flex-start; gap: 10px;
+  padding: 9px 11px;
+  border-radius: 10px;
+  border: 1px solid rgba(15,29,69,0.10);
+  background: rgba(255,255,255,0.9);
+  font-size: 12.5px;
+  color: var(--ink-2);
+  line-height: 1.4;
+}
+.cc-option-focus {
+  background: color-mix(in oklch, var(--accent) 10%, white);
+  border-color: color-mix(in oklch, var(--accent) 38%, transparent);
+  color: var(--ink-1);
+  font-weight: 500;
+}
+.cc-option-key {
+  flex-shrink: 0;
+  width: 20px; height: 20px;
+  border-radius: 6px;
+  display: inline-flex; align-items: center; justify-content: center;
+  background: var(--primary);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 700;
+}
+.cc-option-focus .cc-option-key {
+  background: var(--accent);
+}
+
+/* Compare-section bridging line */
+.cc-compare-bridge {
+  margin: 0 0 18px;
+  max-width: 64ch;
+  font-size: 15.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+}
+.cc-compare-bridge em {
+  font-style: normal;
+  color: var(--primary);
+  font-weight: 600;
+}
+
+/* What we exclude / Why panel */
+.cc-exclude-card {
+  border-radius: 18px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(15,29,69,0.08);
+  overflow: hidden;
+  margin-top: 18px;
+}
+.cc-exclude-row {
+  display: grid;
+  grid-template-columns: 0.9fr 1.4fr;
+  gap: 24px;
+  padding: 14px 20px;
+  border-bottom: 1px dashed rgba(15,29,69,0.10);
+}
+.cc-exclude-row:last-child { border-bottom: 0; }
+.cc-exclude-row-head {
+  background: rgba(15,29,69,0.04);
+}
+.cc-exclude-head-left,
+.cc-exclude-head-right {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.10em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+}
+.cc-exclude-head-right { color: var(--primary); }
+.cc-exclude-left {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--ink-3);
+  font-size: 14.5px;
+  font-weight: 500;
+}
+.cc-exclude-x {
+  width: 22px; height: 22px;
+  display: inline-flex; align-items: center; justify-content: center;
+  border-radius: 6px;
+  background: rgba(15,29,69,0.06);
+  color: var(--ink-3);
+  flex-shrink: 0;
+}
+.cc-exclude-right {
+  font-size: 14.5px;
+  line-height: 1.5;
+  color: var(--ink-1);
+}
+@media (max-width: 720px) {
+  .cc-exclude-row { grid-template-columns: 1fr; gap: 4px; }
+  .cc-exclude-row-head { display: none; }
+  .cc-exclude-right { padding-left: 32px; color: var(--ink-2); }
+}
+
+/* Methodology banner */
+.cc-method-banner {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0;
+  padding: 28px 28px;
+  border-radius: 22px;
+  background: linear-gradient(135deg, color-mix(in oklch, var(--accent) 18%, white) 0%, color-mix(in oklch, var(--secondary) 80%, white) 100%);
+  border: 1px solid color-mix(in oklch, var(--accent) 18%, transparent);
+}
+.cc-method-col {
+  padding: 4px 22px;
+  border-left: 1px solid rgba(15,29,69,0.10);
+}
+.cc-method-col:first-child {
+  border-left: 0;
+  padding-left: 4px;
+}
+.cc-method-icon {
+  width: 40px; height: 40px;
+  border-radius: 10px;
+  background: white;
+  border: 1px solid color-mix(in oklch, var(--accent) 22%, transparent);
+  display: inline-flex; align-items: center; justify-content: center;
+  margin-bottom: 12px;
+  box-shadow: 0 4px 12px rgba(15,29,69,0.06);
+}
+.cc-method-title {
+  font-family: var(--font-display);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--ink-1);
+  margin-bottom: 6px;
+  letter-spacing: -0.01em;
+}
+.cc-method-body {
+  font-size: 13.5px;
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 32ch;
+}
+@media (max-width: 880px) {
+  .cc-method-banner { grid-template-columns: 1fr; gap: 18px; padding: 22px; }
+  .cc-method-col { border-left: 0; padding: 0; }
+}
+
+/* Per-domain row layout (text left, scenario card right) */
+.cc-domain-row {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+  gap: 40px;
+  align-items: center;
+  margin-top: 28px;
+}
+.cc-domain-row .prose h2 { margin-top: 0; }
+.cc-domain-row .prose p { margin-bottom: 0; }
+@media (max-width: 880px) {
+  .cc-domain-row { grid-template-columns: 1fr; gap: 24px; }
+}
+
+/* Hero two-column wrapper */
+.cc-hero-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 1fr;
+  gap: 56px;
+  align-items: center;
+  margin-top: 18px;
+}
+@media (max-width: 980px) {
+  .cc-hero-grid { grid-template-columns: 1fr; gap: 40px; }
+}
+
+/* Answer block override — pull layout flexible */
+.cc-answer-block {
+  padding: 22px 24px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.78);
+  border: 1px solid rgba(15,29,69,0.08);
+  max-width: 880px;
+}
+.cc-answer-text {
+  font-size: 16px;
+  line-height: 1.6;
+  color: var(--ink-2);
+  margin: 0;
+}
+.cc-answer-text strong { color: var(--ink-1); }
