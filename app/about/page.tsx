@@ -8,7 +8,6 @@ import {
   UppsalaCard,
   FeatureIconGrid,
   GapDiagram,
-  AtAGlanceCard,
   PersonaCards,
   PrivacyDiagram,
   SwedenMap,
@@ -246,17 +245,6 @@ export default function AboutPage() {
               <SwedenMap />
             </Reveal>
           </div>
-        </div>
-      </section>
-
-      {/* At a glance — upgraded fact card */}
-      <section style={{ paddingTop: 32, paddingBottom: 48 }}>
-        <div className="container">
-          <Reveal>
-            <div style={{ maxWidth: 720, marginInline: "auto" }}>
-              <AtAGlanceCard />
-            </div>
-          </Reveal>
         </div>
       </section>
 
