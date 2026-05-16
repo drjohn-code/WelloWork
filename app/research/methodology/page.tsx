@@ -112,8 +112,7 @@ export default function MethodologyPage() {
         <p>
           Methodology and privacy are linked. The platform's choice to normalise within an
           employee, not against a population, is also what makes it harder to "de-anonymise" an
-          aggregate. See <a href="/research/privacy-by-design">privacy by design</a> for the
-          architectural detail.
+          aggregate.
         </p>
       </ProseSection>
 

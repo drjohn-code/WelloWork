@@ -23,7 +23,6 @@ const STATIC_PATHS: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap
   { path: "/research/methodology", changeFrequency: "monthly", priority: 0.6 },
   { path: "/research/science-insight", changeFrequency: "monthly", priority: 0.5 },
   { path: "/research/cognitive-constructs", changeFrequency: "monthly", priority: 0.6 },
-  { path: "/research/privacy-by-design", changeFrequency: "monthly", priority: 0.6 },
 
   { path: "/legal/privacy", changeFrequency: "yearly", priority: 0.3 },
   { path: "/legal/terms", changeFrequency: "yearly", priority: 0.3 },

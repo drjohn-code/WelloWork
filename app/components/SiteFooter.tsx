@@ -30,7 +30,6 @@ const COLUMNS: FooterColumn[] = [
       { label: "Methodology", href: "/research/methodology" },
       { label: "Science & insight", href: "/research/science-insight" },
       { label: "Cognitive constructs", href: "/research/cognitive-constructs" },
-      { label: "Privacy by design", href: "/research/privacy-by-design" },
     ],
   },
   {

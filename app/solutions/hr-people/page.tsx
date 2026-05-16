@@ -126,7 +126,7 @@ export default function HRPeoplePage() {
         title="See the HR view."
         body="Aggregated team trends, anonymised wellness ROI, and a defensible promotion-readiness signal — live in 30 minutes."
         primary={{ label: "Book a demo", href: "/book-a-demo" }}
-        secondary={{ label: "Privacy by design", href: "/research/privacy-by-design" }}
+        secondary={{ label: "Privacy & data handling", href: "/legal/privacy" }}
       />
     </SiteShell>
   );

@@ -80,7 +80,7 @@ export default function AboutPage() {
                     fontSize: "clamp(34px, 5vw, 58px)",
                   }}
                 >
-                  A small Swedish team building a different kind of{" "}
+                  A Swedish team building a different kind of{" "}
                   <span
                     className="italic-serif"
                     style={{ color: "var(--accent)" }}

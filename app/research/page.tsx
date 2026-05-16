@@ -67,12 +67,6 @@ const SUBPAGES = [
     title: "Science & insight",
     body: "Notes, write-ups, and methodology observations from the WelloWork research team.",
   },
-  {
-    href: "/research/privacy-by-design",
-    icon: "lock",
-    title: "Privacy by design",
-    body: "How the platform separates individual employee data from manager-aggregated views — architecturally.",
-  },
 ];
 
 export default function ResearchPage() {
