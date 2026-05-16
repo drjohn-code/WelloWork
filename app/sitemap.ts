@@ -14,20 +14,12 @@ const STATIC_PATHS: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap
   { path: "/platform/workshops", changeFrequency: "monthly", priority: 0.7 },
   { path: "/platform/proactive-care", changeFrequency: "monthly", priority: 0.7 },
 
-  { path: "/solutions/hr-people", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/solutions/operations", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/solutions/learning-development", changeFrequency: "monthly", priority: 0.7 },
-  { path: "/solutions/healthcare", changeFrequency: "monthly", priority: 0.6 },
-
   { path: "/research", changeFrequency: "monthly", priority: 0.7 },
   { path: "/research/methodology", changeFrequency: "monthly", priority: 0.6 },
   { path: "/research/science-insight", changeFrequency: "monthly", priority: 0.5 },
   { path: "/research/cognitive-constructs", changeFrequency: "monthly", priority: 0.6 },
 
-  { path: "/legal/privacy", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/legal/terms", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/legal/cookies", changeFrequency: "yearly", priority: 0.3 },
-  { path: "/legal/data-processing", changeFrequency: "yearly", priority: 0.3 },
+  { path: "/legal", changeFrequency: "yearly", priority: 0.3 },
 ];
 
 export default function sitemap(): MetadataRoute.Sitemap {

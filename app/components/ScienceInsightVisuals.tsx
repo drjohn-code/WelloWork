@@ -261,53 +261,59 @@ export function NoteAnatomyCard() {
   return (
     <div className="si-anatomy" aria-label="Anatomy of a research note">
       <div className="si-anatomy-card">
-        <div className="si-anatomy-head">
-          <span className="si-anatomy-title">Within-employee normalisation</span>
-          <span className="si-anatomy-statusbadge" data-callout="status">
-            Working hypothesis
+        <div className="si-anatomy-section">
+          <span className="si-anatomy-anno">
+            <span className="si-anatomy-anno-arrow">↳</span>
+            Working hypothesis vs. established finding
           </span>
+          <div className="si-anatomy-head">
+            <span className="si-anatomy-title">Within-employee normalisation</span>
+            <span className="si-anatomy-statusbadge">Working hypothesis</span>
+          </div>
+          <div className="si-anatomy-meta">
+            <span>Note · 2026-Q2</span>
+            <span className="si-anatomy-dot" />
+            <span>Pilot cohort 2</span>
+          </div>
         </div>
-        <div className="si-anatomy-meta">
-          <span>Note · 2026-Q2</span>
-          <span className="si-anatomy-dot" />
-          <span>Pilot cohort 2</span>
-        </div>
+
         <p className="si-anatomy-body">
           Per-employee z-scoring removes inter-individual noise that population-relative
           scoring inherits. The transfer cost is measurable but small in pilot data.
         </p>
-        <div className="si-anatomy-ref" data-callout="ref">
-          <span className="si-anatomy-ref-mark">[1]</span>
-          Owen et al. (2010); Melby-Lervåg &amp; Hulme (2013); Soveri et al. (2017).
-        </div>
-        <div className="si-anatomy-confidence" data-callout="conf">
-          <span className="si-anatomy-conf-label">Confidence</span>
-          <div className="si-anatomy-conf-track">
-            <div className="si-anatomy-conf-fill" style={{ width: "55%" }} />
-          </div>
-          <span className="si-anatomy-conf-value">Medium</span>
-        </div>
-        <a className="si-anatomy-footlink" data-callout="link">
-          ↳ Linked from methodology overview
-        </a>
 
-        {/* Annotation callouts */}
-        <span className="si-anatomy-tag si-anatomy-tag-status">
-          <span className="si-anatomy-tag-line" />
-          Working hypothesis vs. established finding
-        </span>
-        <span className="si-anatomy-tag si-anatomy-tag-ref">
-          <span className="si-anatomy-tag-line" />
-          Primary sources cited
-        </span>
-        <span className="si-anatomy-tag si-anatomy-tag-conf">
-          <span className="si-anatomy-tag-line" />
-          Confidence level indicated
-        </span>
-        <span className="si-anatomy-tag si-anatomy-tag-link">
-          <span className="si-anatomy-tag-line" />
-          Links back to methodology
-        </span>
+        <div className="si-anatomy-section">
+          <span className="si-anatomy-anno">
+            <span className="si-anatomy-anno-arrow">↳</span>
+            Primary sources cited
+          </span>
+          <div className="si-anatomy-ref">
+            <span className="si-anatomy-ref-mark">[1]</span>
+            Owen et al. (2010); Melby-Lervåg &amp; Hulme (2013); Soveri et al. (2017).
+          </div>
+        </div>
+
+        <div className="si-anatomy-section">
+          <span className="si-anatomy-anno">
+            <span className="si-anatomy-anno-arrow">↳</span>
+            Confidence level indicated
+          </span>
+          <div className="si-anatomy-confidence">
+            <span className="si-anatomy-conf-label">Confidence</span>
+            <div className="si-anatomy-conf-track">
+              <div className="si-anatomy-conf-fill" style={{ width: "55%" }} />
+            </div>
+            <span className="si-anatomy-conf-value">Medium</span>
+          </div>
+        </div>
+
+        <div className="si-anatomy-section">
+          <span className="si-anatomy-anno">
+            <span className="si-anatomy-anno-arrow">↳</span>
+            Links back to methodology
+          </span>
+          <a className="si-anatomy-footlink">Linked from methodology overview →</a>
+        </div>
       </div>
     </div>
   );

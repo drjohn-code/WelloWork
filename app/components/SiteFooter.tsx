@@ -16,15 +16,6 @@ const COLUMNS: FooterColumn[] = [
     ],
   },
   {
-    h: "Solutions",
-    items: [
-      { label: "HR & People", href: "/solutions/hr-people" },
-      { label: "Operations", href: "/solutions/operations" },
-      { label: "Learning & development", href: "/solutions/learning-development" },
-      { label: "Healthcare", href: "/solutions/healthcare" },
-    ],
-  },
-  {
     h: "Research",
     items: [
       { label: "Methodology", href: "/research/methodology" },
@@ -43,10 +34,10 @@ const COLUMNS: FooterColumn[] = [
 ];
 
 const LEGAL_LINKS: FooterLink[] = [
-  { label: "Privacy", href: "/legal/privacy" },
-  { label: "Terms", href: "/legal/terms" },
-  { label: "Cookies", href: "/legal/cookies" },
-  { label: "Data processing", href: "/legal/data-processing" },
+  { label: "Privacy", href: "/legal#privacy" },
+  { label: "Terms", href: "/legal#terms" },
+  { label: "Cookies", href: "/legal#cookies" },
+  { label: "Data processing", href: "/legal#data-processing" },
 ];
 
 const BADGES = ["GDPR-native", "ISO 27001", "SOC Type II", "HIPAA-ready"];
@@ -59,7 +50,7 @@ export function SiteFooter() {
           className="ft-cols"
           style={{
             display: "grid",
-            gridTemplateColumns: "1.6fr 1fr 1fr 1fr 1fr",
+            gridTemplateColumns: "1.6fr 1fr 1fr 1fr",
             gap: 48,
             marginBottom: 48,
           }}

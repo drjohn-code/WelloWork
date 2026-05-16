@@ -3395,25 +3395,50 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   color: var(--ink-2);
 }
 
-/* ---------- 3) Note anatomy card with annotation callouts ---------- */
+/* ---------- 3) Note anatomy card with inline annotation labels ---------- */
 .si-anatomy {
   position: relative;
-  padding: 18px 18px 20px;
 }
 .si-anatomy-card {
   position: relative;
   background: #fff;
   border-radius: 14px;
   border: 1.5px dashed color-mix(in oklch, var(--accent) 30%, transparent);
-  padding: 16px 16px 14px;
+  padding: 16px 18px 16px;
   box-shadow: 0 8px 22px rgba(15,29,69,0.06);
 }
+.si-anatomy-section {
+  margin-bottom: 14px;
+}
+.si-anatomy-section:last-child { margin-bottom: 0; }
+
+.si-anatomy-anno {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: var(--font-display);
+  font-size: 10.5px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 6px;
+}
+.si-anatomy-anno-arrow {
+  display: inline-block;
+  color: color-mix(in oklch, var(--accent) 60%, transparent);
+  font-weight: 400;
+  font-size: 13px;
+  transform: translateY(-1px);
+}
+
 .si-anatomy-head {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 12px;
-  margin-bottom: 8px;
+  gap: 10px;
+  margin-bottom: 4px;
+  flex-wrap: wrap;
 }
 .si-anatomy-title {
   font-family: var(--font-display);
@@ -3432,7 +3457,7 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   background: color-mix(in oklch, var(--accent) 14%, white);
   color: var(--primary);
   border: 1px solid color-mix(in oklch, var(--accent) 28%, transparent);
-  position: relative;
+  white-space: nowrap;
 }
 .si-anatomy-meta {
   display: flex;
@@ -3440,7 +3465,6 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   gap: 8px;
   font-size: 11.5px;
   color: var(--ink-3);
-  margin-bottom: 10px;
 }
 .si-anatomy-dot {
   width: 3px;
@@ -3452,10 +3476,12 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   font-size: 13px;
   line-height: 1.55;
   color: var(--ink-2);
-  margin: 0 0 12px;
+  margin: 0 0 14px;
+  padding: 10px 12px;
+  border-radius: 10px;
+  background: rgba(15,29,69,0.02);
 }
 .si-anatomy-ref {
-  position: relative;
   font-size: 12px;
   line-height: 1.5;
   color: var(--ink-3);
@@ -3463,7 +3489,6 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   border-radius: 10px;
   background: rgba(15,29,69,0.03);
   border-left: 2px solid var(--accent);
-  margin-bottom: 10px;
 }
 .si-anatomy-ref-mark {
   font-weight: 700;
@@ -3471,12 +3496,10 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   margin-right: 6px;
 }
 .si-anatomy-confidence {
-  position: relative;
   display: grid;
   grid-template-columns: auto 1fr auto;
   gap: 10px;
   align-items: center;
-  margin-bottom: 10px;
 }
 .si-anatomy-conf-label,
 .si-anatomy-conf-value {
@@ -3498,84 +3521,10 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   background: linear-gradient(90deg, var(--accent) 0%, var(--accent-soft) 100%);
 }
 .si-anatomy-footlink {
-  position: relative;
   display: inline-block;
-  font-size: 12px;
+  font-size: 12.5px;
   color: var(--primary);
   font-weight: 600;
-  padding-top: 8px;
-  border-top: 1px dashed rgba(15,29,69,0.10);
-  width: 100%;
-}
-
-/* Annotation tags around the card */
-.si-anatomy-tag {
-  position: absolute;
-  font-family: var(--font-display);
-  font-size: 11px;
-  font-weight: 600;
-  letter-spacing: 0.02em;
-  color: var(--primary);
-  background: rgba(255,255,255,0.85);
-  padding: 4px 9px;
-  border-radius: 999px;
-  border: 1px solid color-mix(in oklch, var(--accent) 22%, transparent);
-  white-space: nowrap;
-  pointer-events: none;
-}
-.si-anatomy-tag-line {
-  position: absolute;
-  background: color-mix(in oklch, var(--accent) 38%, transparent);
-}
-.si-anatomy-tag-status {
-  top: -8px;
-  right: -10px;
-  transform: translate(0, 0);
-}
-.si-anatomy-tag-status .si-anatomy-tag-line {
-  bottom: -18px;
-  right: 18px;
-  width: 1.5px;
-  height: 18px;
-}
-.si-anatomy-tag-ref {
-  left: -14px;
-  top: 48%;
-  transform: translate(-100%, -50%);
-}
-.si-anatomy-tag-ref .si-anatomy-tag-line {
-  right: -20px;
-  top: 50%;
-  width: 20px;
-  height: 1.5px;
-  transform: translateY(-50%);
-}
-.si-anatomy-tag-conf {
-  right: -14px;
-  bottom: 64px;
-  transform: translateX(100%);
-}
-.si-anatomy-tag-conf .si-anatomy-tag-line {
-  left: -20px;
-  top: 50%;
-  width: 20px;
-  height: 1.5px;
-  transform: translateY(-50%);
-}
-.si-anatomy-tag-link {
-  bottom: -8px;
-  left: 14px;
-}
-.si-anatomy-tag-link .si-anatomy-tag-line {
-  top: -18px;
-  left: 24px;
-  width: 1.5px;
-  height: 18px;
-}
-
-@media (max-width: 1100px) {
-  .si-anatomy { padding: 8px; }
-  .si-anatomy-tag { display: none; }
 }
 
 /* ---------- 4) Note pipeline preview strip ---------- */
@@ -3972,4 +3921,254 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   line-height: 1.45;
   color: var(--ink-2);
   margin-top: 2px;
+}
+
+/* =========================================================================
+   Unified Legal Page (/legal)
+   ========================================================================= */
+.legal-wrap {
+  padding: 16px 0 80px;
+}
+.legal-layout {
+  display: grid;
+  grid-template-columns: 240px minmax(0, 1fr);
+  gap: 56px;
+  align-items: start;
+}
+.legal-sidebar {
+  position: sticky;
+  top: 96px;
+  align-self: start;
+}
+.legal-side-nav {
+  display: block;
+}
+.legal-side-nav-label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--ink-3);
+  padding: 0 12px 10px;
+}
+.legal-side-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  border-left: 1px solid rgba(15, 29, 69, 0.10);
+  padding-left: 0;
+}
+.legal-side-nav-link {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 14px;
+  margin-left: -1px;
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--ink-3);
+  border-left: 2px solid transparent;
+  text-decoration: none;
+  transition: color .2s ease, border-color .2s ease, background .2s ease;
+  border-radius: 0 8px 8px 0;
+}
+.legal-side-nav-link:hover {
+  color: var(--ink-1);
+  background: rgba(15, 29, 69, 0.04);
+}
+.legal-side-nav-link.is-active {
+  color: var(--primary);
+  font-weight: 600;
+  border-left-color: var(--accent);
+  background: color-mix(in oklch, var(--accent) 8%, transparent);
+}
+.legal-side-nav-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: currentColor;
+  opacity: .35;
+  flex-shrink: 0;
+}
+.legal-side-nav-link.is-active .legal-side-nav-dot {
+  opacity: 1;
+  background: var(--accent);
+}
+
+.legal-mobile-tabs {
+  display: none;
+  position: sticky;
+  top: 80px;
+  z-index: 10;
+  margin: 0 -32px 24px;
+  padding: 10px 0;
+  background: linear-gradient(180deg, rgba(255,255,255,0.92) 70%, rgba(255,255,255,0));
+  -webkit-backdrop-filter: blur(14px) saturate(160%);
+  backdrop-filter: blur(14px) saturate(160%);
+}
+.legal-mobile-tabs-track {
+  display: flex;
+  gap: 8px;
+  padding: 0 32px;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.legal-mobile-tabs-track::-webkit-scrollbar { display: none; }
+.legal-mobile-tab {
+  flex-shrink: 0;
+  padding: 8px 16px;
+  border-radius: 100px;
+  background: rgba(255,255,255,0.7);
+  border: 1px solid rgba(15, 29, 69, 0.10);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--ink-2);
+  text-decoration: none;
+  white-space: nowrap;
+  transition: all .2s ease;
+}
+.legal-mobile-tab:hover {
+  background: white;
+  color: var(--ink-1);
+}
+.legal-mobile-tab.is-active {
+  background: var(--primary);
+  border-color: var(--primary);
+  color: white;
+}
+
+.legal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 48px;
+  min-width: 0;
+}
+.legal-section {
+  padding: 36px 36px 40px;
+  border-radius: 22px;
+  background: rgba(255,255,255,0.78);
+  scroll-margin-top: 100px;
+}
+.legal-section-head {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 14px;
+  padding-bottom: 18px;
+  border-bottom: 1px solid rgba(15, 29, 69, 0.08);
+}
+.legal-section-icon {
+  flex-shrink: 0;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg,
+    color-mix(in oklch, var(--accent) 16%, white),
+    color-mix(in oklch, var(--secondary) 60%, white));
+  border: 1px solid rgba(255,255,255,0.7);
+}
+.legal-section-eyebrow {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--accent);
+  margin-bottom: 2px;
+}
+.legal-section-title {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(26px, 3vw, 34px);
+  line-height: 1.1;
+  letter-spacing: -0.02em;
+  color: var(--ink-1);
+  margin: 0;
+}
+.legal-section-lede {
+  font-size: 16.5px;
+  line-height: 1.55;
+  color: var(--ink-2);
+  margin: 0 0 22px;
+  max-width: 68ch;
+}
+.legal-section-visual {
+  margin-top: 6px;
+}
+.legal-prose {
+  margin-top: 12px;
+}
+.legal-prose h3 {
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: clamp(20px, 2.1vw, 26px);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink-1);
+  margin: 36px 0 12px;
+  text-wrap: balance;
+}
+.legal-prose p {
+  margin: 0 0 16px;
+  max-width: 68ch;
+}
+.legal-prose ul {
+  margin: 0 0 16px;
+  padding-left: 22px;
+}
+.legal-prose li {
+  margin-bottom: 6px;
+}
+.legal-prose a {
+  color: var(--primary);
+  text-decoration: underline;
+  text-underline-offset: 2px;
+}
+.legal-prose a:hover {
+  color: var(--accent);
+}
+.legal-prose strong {
+  color: var(--ink-1);
+  font-weight: 600;
+}
+
+@media (max-width: 1020px) {
+  .legal-layout {
+    grid-template-columns: 1fr;
+    gap: 0;
+  }
+  .legal-sidebar {
+    position: static;
+  }
+  .legal-side-nav {
+    display: none;
+  }
+  .legal-mobile-tabs {
+    display: block;
+  }
+  .legal-section {
+    padding: 28px 24px 32px;
+  }
+}
+@media (max-width: 720px) {
+  .legal-mobile-tabs {
+    margin: 0 -20px 20px;
+  }
+  .legal-mobile-tabs-track {
+    padding: 0 20px;
+  }
+  .legal-section {
+    padding: 24px 18px 28px;
+    border-radius: 18px;
+  }
+  .legal-section-icon {
+    width: 42px;
+    height: 42px;
+  }
 }

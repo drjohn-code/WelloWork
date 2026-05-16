@@ -188,7 +188,7 @@ export function DemoFallbackForm() {
             <span style={{ fontSize: 13.5, color: "var(--ink-2)", lineHeight: 1.5 }}>
               I agree that WelloWork may contact me to schedule this demo and store these details
               under its{" "}
-              <a href="/legal/privacy" style={{ color: "var(--primary)", textDecoration: "underline" }}>
+              <a href="/legal#privacy" style={{ color: "var(--primary)", textDecoration: "underline" }}>
                 privacy policy
               </a>
               . (GDPR)
