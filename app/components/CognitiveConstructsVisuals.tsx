@@ -1,3 +1,5 @@
+import { useTranslations } from "next-intl";
+
 /* ---------- Domain icons (periwinkle, abstract, instrument-like) ---------- */
 
 type DomainKey =
@@ -117,33 +119,23 @@ function DomainIcon({ name, tone = "accent" }: { name: DomainKey; tone?: "accent
 /* ---------- Hero: 2×3 grid of domain indicators ---------- */
 
 export function DomainCardGrid() {
-  const cards: Array<{
-    key: DomainKey;
-    label: string;
-    descriptor: string;
-  }> = [
-    { key: "wm", label: "Working Memory", descriptor: "Holds context under load" },
-    { key: "ps", label: "Processing Speed", descriptor: "Reacts without fatigue" },
-    { key: "att", label: "Attention", descriptor: "Filters noise" },
-    { key: "prob", label: "Problem Solving", descriptor: "Reasons under constraint" },
-    { key: "flex", label: "Cognitive Flexibility", descriptor: "Adapts rule sets" },
-    { key: "long", label: "Longitudinal Index", descriptor: "Patterns over weeks" },
-  ];
+  const t = useTranslations("researchCognitiveConstructs");
+  const cards: DomainKey[] = ["wm", "ps", "att", "prob", "flex", "long"];
 
   return (
-    <div className="cc-domain-grid" role="list" aria-label="Cognitive domains measured">
-      {cards.map((c) => (
-        <div key={c.key} className="cc-domain-card" role="listitem">
+    <div className="cc-domain-grid" role="list" aria-label={t("domainGrid.aria")}>
+      {cards.map((key) => (
+        <div key={key} className="cc-domain-card" role="listitem">
           <div className="cc-domain-card-top">
             <div className="cc-domain-icon">
-              <DomainIcon name={c.key} />
+              <DomainIcon name={key} />
             </div>
             <span className="cc-domain-readout" aria-hidden="true">
               <span /> <span /> <span />
             </span>
           </div>
-          <div className="cc-domain-label">{c.label}</div>
-          <div className="cc-domain-descriptor">{c.descriptor}</div>
+          <div className="cc-domain-label">{t(`domainGrid.${key}.label`)}</div>
+          <div className="cc-domain-descriptor">{t(`domainGrid.${key}.descriptor`)}</div>
         </div>
       ))}
     </div>
@@ -153,21 +145,22 @@ export function DomainCardGrid() {
 /* ---------- Answer pill strip ---------- */
 
 export function DomainPillStrip() {
-  const pills: Array<{ key: DomainKey; label: string }> = [
-    { key: "wm", label: "Working Memory" },
-    { key: "ps", label: "Processing Speed" },
-    { key: "att", label: "Attention" },
-    { key: "prob", label: "Problem Solving" },
-    { key: "flex", label: "Cognitive Flexibility" },
+  const t = useTranslations("researchCognitiveConstructs");
+  const pills: Array<Exclude<DomainKey, "long">> = [
+    "wm",
+    "ps",
+    "att",
+    "prob",
+    "flex",
   ];
   return (
-    <div className="cc-pill-strip" aria-label="Five cognitive domains">
-      {pills.map((p) => (
-        <span key={p.key} className="cc-pill">
+    <div className="cc-pill-strip" aria-label={t("pillStrip.aria")}>
+      {pills.map((key) => (
+        <span key={key} className="cc-pill">
           <span className="cc-pill-icon">
-            <DomainIcon name={p.key} tone="primary" />
+            <DomainIcon name={key} tone="primary" />
           </span>
-          {p.label}
+          {t(`pillStrip.${key}`)}
         </span>
       ))}
     </div>
@@ -177,6 +170,7 @@ export function DomainPillStrip() {
 /* ---------- Per-domain scenario card with sparkline + paradigm badge ---------- */
 
 function SignalTrace({ kind }: { kind: DomainKey }) {
+  const t = useTranslations("researchCognitiveConstructs");
   const common = { width: "100%", height: 92, viewBox: "0 0 240 92", preserveAspectRatio: "none" as const };
   const axis = "rgba(15,29,69,0.18)";
   const accent = "var(--accent)";
@@ -207,8 +201,8 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
           .map((p, i) => (
             <circle key={i} cx={p[0]} cy={p[1]} r="2.4" fill={primary} />
           ))}
-        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">accuracy</text>
-        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">difficulty →</text>
+        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">{t("signalTrace.wm.accuracy")}</text>
+        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">{t("signalTrace.wm.difficulty")}</text>
       </svg>
     );
   }
@@ -236,8 +230,8 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
             />
           );
         })}
-        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">freq</text>
-        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">reaction time →</text>
+        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">{t("signalTrace.ps.freq")}</text>
+        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">{t("signalTrace.ps.reactionTime")}</text>
       </svg>
     );
   }
@@ -250,8 +244,8 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
         <line x1="6" y1="8" x2="6" y2="84" stroke={axis} strokeWidth="1" />
         <rect x="50" y="22" width="50" height="62" rx="2" fill={accent} opacity="0.85" />
         <rect x="140" y="58" width="50" height="26" rx="2" fill={primary} opacity="0.65" />
-        <text x="55" y="18" fontSize="9" fill="var(--ink-2)">Hits</text>
-        <text x="142" y="54" fontSize="9" fill="var(--ink-2)">False alarms</text>
+        <text x="55" y="18" fontSize="9" fill="var(--ink-2)">{t("signalTrace.att.hits")}</text>
+        <text x="142" y="54" fontSize="9" fill="var(--ink-2)">{t("signalTrace.att.falseAlarms")}</text>
       </svg>
     );
   }
@@ -281,8 +275,8 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
         {pts.map((p, i) => (
           <circle key={i} cx={p[0]} cy={p[1]} r="2.2" fill={primary} />
         ))}
-        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">time on task</text>
-        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">trials →</text>
+        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">{t("signalTrace.prob.timeOnTask")}</text>
+        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">{t("signalTrace.prob.trials")}</text>
       </svg>
     );
   }
@@ -310,8 +304,8 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
         {pts.map((p, i) => (
           <circle key={i} cx={p[0]} cy={p[1]} r="2.2" fill={primary} />
         ))}
-        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">switch cost</text>
-        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">sessions →</text>
+        <text x="10" y="20" fontSize="9" fill="var(--ink-3)">{t("signalTrace.flex.switchCost")}</text>
+        <text x="200" y="92" fontSize="9" fill="var(--ink-3)" textAnchor="end">{t("signalTrace.flex.sessions")}</text>
       </svg>
     );
   }
@@ -319,50 +313,19 @@ function SignalTrace({ kind }: { kind: DomainKey }) {
   return null;
 }
 
-const DOMAIN_CONTENT: Record<
-  Exclude<DomainKey, "long">,
-  { paradigm: string; scenario: string }
-> = {
-  wm: {
-    paradigm: "N-back",
-    scenario:
-      "Review six supplier proposals. Recall key figures while comparing the last two against the first.",
-  },
-  ps: {
-    paradigm: "Symbol substitution",
-    scenario:
-      "Flag anomalies in a live operations feed before the next status report goes out.",
-  },
-  att: {
-    paradigm: "Posner cueing",
-    scenario:
-      "Monitor a six-channel ops dashboard for twenty minutes. Surface genuine drift; ignore routine noise.",
-  },
-  prob: {
-    paradigm: "Raven matrices",
-    scenario:
-      "A recurring scheduling conflict spans three teams and two constraints. Identify the resolvable axis first.",
-  },
-  flex: {
-    paradigm: "Task-switching",
-    scenario:
-      "Switch between three escalation queues with different rules. Apply the right rule before the wrong reflex.",
-  },
-};
-
 export function ScenarioCard({ domain }: { domain: Exclude<DomainKey, "long"> }) {
-  const { paradigm, scenario } = DOMAIN_CONTENT[domain];
+  const t = useTranslations("researchCognitiveConstructs");
   return (
     <div className="cc-scenario-card glass">
-      <span className="cc-paradigm-badge">{paradigm}</span>
-      <div className="cc-scenario-label">Example scenario</div>
-      <p className="cc-scenario-text">{scenario}</p>
+      <span className="cc-paradigm-badge">{t(`scenarioCard.${domain}.paradigm`)}</span>
+      <div className="cc-scenario-label">{t("scenarioCard.exampleLabel")}</div>
+      <p className="cc-scenario-text">{t(`scenarioCard.${domain}.scenario`)}</p>
       <div className="cc-scenario-trace">
         <SignalTrace kind={domain} />
       </div>
       <div className="cc-scenario-footer">
         <span className="cc-scenario-dot" aria-hidden="true" />
-        Signal pattern captured per session
+        {t("scenarioCard.footer")}
       </div>
     </div>
   );
@@ -371,17 +334,18 @@ export function ScenarioCard({ domain }: { domain: Exclude<DomainKey, "long"> })
 /* ---------- "Why not just use cognitive games?" comparison panel ---------- */
 
 export function GamesVsScenarioPanel() {
+  const t = useTranslations("researchCognitiveConstructs");
   return (
     <div className="cc-compare-grid">
       <div className="cc-compare-card cc-compare-card-muted">
         <div className="cc-compare-head">
-          <span className="cc-compare-title">Standard cognitive game</span>
-          <span className="cc-badge cc-badge-warn">Limitation</span>
+          <span className="cc-compare-title">{t("gamesPanel.gameTitle")}</span>
+          <span className="cc-badge cc-badge-warn">{t("gamesPanel.gameBadge")}</span>
         </div>
         <div className="cc-game-mock" aria-hidden="true">
           <div className="cc-game-mock-header">
-            <span>Round 4</span>
-            <span>Score 1,240</span>
+            <span>{t("gamesPanel.gameRound")}</span>
+            <span>{t("gamesPanel.gameScore")}</span>
           </div>
           <div className="cc-game-mock-grid">
             {[7, 2, 9, 4, 5, 1, 8, 3, 6].map((n, i) => (
@@ -391,47 +355,45 @@ export function GamesVsScenarioPanel() {
             ))}
           </div>
           <div className="cc-game-mock-cta">
-            <span>Match the pattern</span>
-            <button type="button" className="cc-game-btn" tabIndex={-1}>Tap</button>
+            <span>{t("gamesPanel.gameMatch")}</span>
+            <button type="button" className="cc-game-btn" tabIndex={-1}>{t("gamesPanel.gameTap")}</button>
           </div>
         </div>
         <p className="cc-compare-note">
-          Improves at the game. Transfer to real work: limited.
+          {t("gamesPanel.gameNote")}
         </p>
       </div>
 
       <div className="cc-compare-card cc-compare-card-real">
         <div className="cc-compare-head">
-          <span className="cc-compare-title">WelloWork scenario</span>
-          <span className="cc-badge cc-badge-good">Ecologically valid</span>
+          <span className="cc-compare-title">{t("gamesPanel.scenarioTitle")}</span>
+          <span className="cc-badge cc-badge-good">{t("gamesPanel.scenarioBadge")}</span>
         </div>
         <div className="cc-scenario-mock" aria-hidden="true">
           <div className="cc-scenario-mock-header">
-            <span className="cc-scenario-mock-step">Step 2 of 3</span>
-            <span className="cc-scenario-mock-tag">Ops · escalation</span>
+            <span className="cc-scenario-mock-step">{t("gamesPanel.scenarioStep")}</span>
+            <span className="cc-scenario-mock-tag">{t("gamesPanel.scenarioTag")}</span>
           </div>
           <p className="cc-scenario-mock-prompt">
-            Two incident queues just changed priority rules. The next ticket
-            you accept will set your queue for the rest of the shift.
+            {t("gamesPanel.scenarioPrompt")}
           </p>
           <div className="cc-scenario-mock-options">
             <div className="cc-option">
               <span className="cc-option-key">A</span>
-              Take the first ticket and re-route the rest later.
+              {t("gamesPanel.optionA")}
             </div>
             <div className="cc-option cc-option-focus">
               <span className="cc-option-key">B</span>
-              Re-read the rules; choose the queue that fits today's load.
+              {t("gamesPanel.optionB")}
             </div>
             <div className="cc-option">
               <span className="cc-option-key">C</span>
-              Escalate to the lead and wait.
+              {t("gamesPanel.optionC")}
             </div>
           </div>
         </div>
         <p className="cc-compare-note">
-          Captures how you actually reason and decide. Built from field
-          observations.
+          {t("gamesPanel.scenarioNote")}
         </p>
       </div>
     </div>
@@ -441,28 +403,20 @@ export function GamesVsScenarioPanel() {
 /* ---------- "What we exclude / Why" two-column panel ---------- */
 
 export function ExcludePanel() {
-  const rows: Array<{ exclude: string; why: string }> = [
-    {
-      exclude: "Personality traits",
-      why: "Personality assessment is a separate discipline with its own rigour requirements — and uneasy at work.",
-    },
-    {
-      exclude: "Mood and emotion",
-      why: "Held privately by the employee as optional context. Managers never see it.",
-    },
-    {
-      exclude: "Gamified performance scores",
-      why: "Improvement at games rarely transfers. We measure behaviour, not points.",
-    },
+  const t = useTranslations("researchCognitiveConstructs");
+  const rows: Array<"personality" | "mood" | "gamified"> = [
+    "personality",
+    "mood",
+    "gamified",
   ];
   return (
     <div className="cc-exclude-card">
       <div className="cc-exclude-row cc-exclude-row-head">
-        <div className="cc-exclude-head-left">What we exclude</div>
-        <div className="cc-exclude-head-right">Why</div>
+        <div className="cc-exclude-head-left">{t("exclude.headLeft")}</div>
+        <div className="cc-exclude-head-right">{t("exclude.headRight")}</div>
       </div>
-      {rows.map((r) => (
-        <div key={r.exclude} className="cc-exclude-row">
+      {rows.map((key) => (
+        <div key={key} className="cc-exclude-row">
           <div className="cc-exclude-left">
             <span className="cc-exclude-x" aria-hidden="true">
               <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
@@ -474,9 +428,9 @@ export function ExcludePanel() {
                 />
               </svg>
             </span>
-            {r.exclude}
+            {t(`exclude.${key}.label`)}
           </div>
-          <div className="cc-exclude-right">{r.why}</div>
+          <div className="cc-exclude-right">{t(`exclude.${key}.why`)}</div>
         </div>
       ))}
     </div>
@@ -529,32 +483,17 @@ function MethodIcon({ name }: { name: "adaptive" | "daily" | "long" }) {
 }
 
 export function MethodologyBanner() {
-  const items: Array<{ icon: "adaptive" | "daily" | "long"; title: string; body: string }> = [
-    {
-      icon: "adaptive",
-      title: "Adaptive difficulty",
-      body: "Each session adjusts in real time to your current performance level.",
-    },
-    {
-      icon: "daily",
-      title: "Short daily sessions",
-      body: "Designed for workplace rhythms — not lab conditions.",
-    },
-    {
-      icon: "long",
-      title: "Longitudinal signal",
-      body: "Patterns over time matter more than any single score.",
-    },
-  ];
+  const t = useTranslations("researchCognitiveConstructs");
+  const items: Array<"adaptive" | "daily" | "long"> = ["adaptive", "daily", "long"];
   return (
     <div className="cc-method-banner">
-      {items.map((it) => (
-        <div key={it.title} className="cc-method-col">
+      {items.map((icon) => (
+        <div key={icon} className="cc-method-col">
           <div className="cc-method-icon">
-            <MethodIcon name={it.icon} />
+            <MethodIcon name={icon} />
           </div>
-          <div className="cc-method-title">{it.title}</div>
-          <div className="cc-method-body">{it.body}</div>
+          <div className="cc-method-title">{t(`methodBanner.${icon}.title`)}</div>
+          <div className="cc-method-body">{t(`methodBanner.${icon}.body`)}</div>
         </div>
       ))}
     </div>

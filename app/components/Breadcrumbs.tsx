@@ -1,9 +1,11 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import type { Crumb } from "../lib/site";
 
 export function Breadcrumbs({ items }: { items: Crumb[] }) {
+  const t = useTranslations("common");
   return (
-    <nav aria-label="Breadcrumb" className="crumbs">
+    <nav aria-label={t("breadcrumb.aria")} className="crumbs">
       {items.map((c, i) => {
         const last = i === items.length - 1;
         return (

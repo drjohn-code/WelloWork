@@ -1,29 +1,9 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 
-const POINTS = [
-  {
-    label: "01",
-    title: "The only platform combining cognitive training, biomarker testing, and team intelligence.",
-    body: "Most tools cover one of these. We connect all three so signals from one inform decisions in the others.",
-  },
-  {
-    label: "02",
-    title: "Built in Sweden under GDPR by default — employees own their data.",
-    body: "Privacy is the architecture, not a compliance footnote. Managers only see anonymised, aggregated trends.",
-  },
-  {
-    label: "03",
-    title: "Longitudinal trends, not one-time scores.",
-    body: "Performance changes through sprints, shifts, and seasons. We measure across the year, not on assessment day.",
-  },
-  {
-    label: "04",
-    title: "Designed for daily use — measured in minutes, not hours.",
-    body: "Cognitive training runs in a coffee break. Workshops fit lunch. Sample testing happens on-site.",
-  },
-] as const;
-
 export function AdvantageSection() {
+  const t = useTranslations("advantage");
+  const POINTS = t.raw("points") as { label: string; title: string; body: string }[];
   return (
     <section style={{ padding: "64px 0" }}>
       <div className="container">
@@ -57,17 +37,16 @@ export function AdvantageSection() {
           <Reveal>
             <div style={{ position: "relative", maxWidth: 560, marginBottom: 44 }}>
               <span className="eyebrow" style={{ color: "var(--secondary-deep)" }}>
-                The WelloWork advantage
+                {t("eyebrow")}
               </span>
               <h2 className="h-section" style={{ color: "white", margin: "8px 0 16px" }}>
-                Four claims we will{" "}
+                {t("heading.lead")}
                 <span className="italic-serif" style={{ color: "var(--secondary)" }}>
-                  defend in a sales call.
+                  {t("heading.accent")}
                 </span>
               </h2>
               <p className="body" style={{ color: "rgba(255,255,255,0.78)", margin: 0 }}>
-                No invented numbers. No fake validations. Category-level claims rooted in what the platform
-                actually does and how it’s built.
+                {t("intro")}
               </p>
             </div>
           </Reveal>

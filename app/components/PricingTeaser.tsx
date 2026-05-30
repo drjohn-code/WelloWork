@@ -1,4 +1,5 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { ArrowRight } from "./Icons";
 
@@ -14,55 +15,38 @@ type Plan = {
   note?: string;
 };
 
-const PLANS: readonly Plan[] = [
-  {
-    name: "Platform",
-    desc: "Per-employee SaaS access to WelloRise and WelloWize.",
-    price: "€12",
-    unit: "per employee · per month",
-    features: [
-      "Daily cognitive training (WelloRise)",
-      "Hiring & internal assessments (WelloWize)",
-      "Manager dashboards & trend analytics",
-      "GDPR-native data residency",
-    ],
-    cta: "Talk to sales",
-    ctaHref: "/contact",
-    featured: false,
-  },
-  {
-    name: "Platform + Services",
-    desc: "Adds workshops and biomarker testing on a per-engagement basis.",
-    price: "from €28",
-    unit: "per employee · per month · platform + per-engagement services",
-    features: [
-      "Everything in Platform",
-      "Live health workshops, on-site or remote",
-      "Blood (longevity) & urine sample testing",
-      "Dedicated CSM and report templates",
-    ],
-    cta: "Book a scoping call",
-    ctaHref: "/book-a-demo",
-    featured: true,
-    note: "Workshop and biomarker testing volumes are scoped per engagement and confirmed in the call.",
-  },
+const PLAN_META = [
+  { key: "platform", ctaHref: "/contact", featured: false },
+  { key: "platformServices", ctaHref: "/book-a-demo", featured: true },
 ] as const;
 
 export function PricingTeaser() {
+  const t = useTranslations("pricing");
+  const PLANS: readonly Plan[] = PLAN_META.map((m) => ({
+    name: t(`plans.${m.key}.name`),
+    desc: t(`plans.${m.key}.desc`),
+    price: t(`plans.${m.key}.price`),
+    unit: t(`plans.${m.key}.unit`),
+    features: t.raw(`plans.${m.key}.features`) as string[],
+    cta: t(`plans.${m.key}.cta`),
+    ctaHref: m.ctaHref,
+    featured: m.featured,
+    note: m.key === "platformServices" ? t(`plans.${m.key}.note`) : undefined,
+  }));
   return (
     <section id="pricing" className="section">
       <div className="container">
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 44 }}>
-            <span className="eyebrow">Pricing</span>
+            <span className="eyebrow">{t("eyebrow")}</span>
             <h2 className="h-section" style={{ margin: "8px 0 12px" }}>
-              Two ways to start.{" "}
+              {t("heading.lead")}
               <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                Both shaped to your pilot.
+                {t("heading.accent")}
               </span>
             </h2>
             <p className="lede" style={{ margin: "0 auto", maxWidth: "52ch" }}>
-              We price against the size and stage of your pilot — full numbers in the call.
+              {t("lede")}
             </p>
           </div>
         </Reveal>
@@ -92,7 +76,7 @@ export function PricingTeaser() {
                   </h3>
                   {p.featured && (
                     <span className="chip" style={{ fontSize: 11, padding: "4px 10px" }}>
-                      Most teams start here
+                      {t("featuredBadge")}
                     </span>
                   )}
                 </div>

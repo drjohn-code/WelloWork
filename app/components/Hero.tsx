@@ -1,13 +1,12 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { Icon, ArrowRight } from "./Icons";
 import { SwedenChip } from "./Chips";
 import { HeroDashboard } from "./HeroDashboard";
 
-const HEADLINE_LEAD = "Train cognitive performance.";
-const HEADLINE_ACCENT = "Measure what matters.";
-
 export function Hero() {
+  const t = useTranslations("hero");
   return (
     <section style={{ position: "relative", paddingTop: 56, paddingBottom: 64 }}>
       <div className="container">
@@ -25,32 +24,31 @@ export function Hero() {
             <Reveal>
               <div style={{ display: "flex", gap: 8, flexWrap: "wrap", marginBottom: 24 }}>
                 <span className="chip" style={{ borderRadius: 100 }}>
-                  <Icon name="cube" size={13} /> Workplace performance platform
+                  <Icon name="cube" size={13} /> {t("badge.platform")}
                 </span>
                 <SwedenChip />
               </div>
             </Reveal>
             <Reveal delay={1}>
               <h1 className="h-display" style={{ margin: "0 0 22px" }}>
-                <span>{HEADLINE_LEAD} </span>
+                <span>{t("headline.lead")} </span>
                 <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                  {HEADLINE_ACCENT}
+                  {t("headline.accent")}
                 </span>
               </h1>
             </Reveal>
             <Reveal delay={2}>
               <p className="lede" style={{ margin: "0 0 30px" }}>
-                Daily cognitive training, longitudinal performance trends, and biomarker-based health
-                insights — in one platform that managers and employees actually use.
+                {t("lede")}
               </p>
             </Reveal>
             <Reveal delay={3}>
               <div style={{ display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>
                 <Link href="/book-a-demo" className="btn btn-primary">
-                  Book a demo <ArrowRight size={14} />
+                  {t("cta.bookDemo")} <ArrowRight size={14} />
                 </Link>
                 <Link href="/#platform" className="btn btn-glass">
-                  See how it works
+                  {t("cta.seeHow")}
                 </Link>
               </div>
             </Reveal>
@@ -72,12 +70,12 @@ export function Hero() {
                 }}
               >
                 <span style={{ display: "inline-flex", alignItems: "center", gap: 6 }}>
-                  <Icon name="lock" size={13} /> GDPR-native
+                  <Icon name="lock" size={13} /> {t("trust.gdpr")}
                 </span>
                 <span>·</span>
-                <span>ISO 27001</span>
+                <span>{t("trust.iso")}</span>
                 <span>·</span>
-                <span>SOC Type II</span>
+                <span>{t("trust.soc")}</span>
               </div>
             </Reveal>
           </div>
@@ -134,10 +132,10 @@ export function Hero() {
                       textTransform: "uppercase",
                     }}
                   >
-                    Today · 7 min
+                    {t("floatBadge.today")}
                   </div>
                   <div style={{ fontSize: 14, fontWeight: 600, color: "var(--ink-1)" }}>
-                    Working memory · session 4
+                    {t("floatBadge.session")}
                   </div>
                 </div>
               </div>

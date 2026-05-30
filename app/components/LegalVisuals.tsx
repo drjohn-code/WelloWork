@@ -1,3 +1,4 @@
+import { useTranslations } from "next-intl";
 import { ORG_EMAIL } from "../lib/site";
 
 /* ============================================================
@@ -58,12 +59,14 @@ function EuMap({ size = 120 }: { size?: number }) {
 }
 
 export function EuDataCard({
-  label = "EU/EEA infrastructure only",
+  label,
   note,
 }: {
   label?: string;
   note?: string;
 }) {
+  const t = useTranslations("legal");
+  const resolvedLabel = label ?? t("visual.euCard.defaultLabel");
   return (
     <div className="lv-eu-card glass">
       <EuMap size={150} />
@@ -84,7 +87,7 @@ export function EuDataCard({
               strokeLinejoin="round"
             />
           </svg>
-          {label}
+          {resolvedLabel}
         </div>
         {note && <div className="lv-eu-note">{note}</div>}
       </div>
@@ -146,11 +149,12 @@ function SecIcon({ name }: { name: "lock-arrow" | "lock-disk" | "key" | "audit" 
 }
 
 export function SecurityStrip() {
+  const t = useTranslations("legal");
   const items: Array<{ icon: "lock-arrow" | "lock-disk" | "key" | "audit"; label: string }> = [
-    { icon: "lock-arrow", label: "Encryption in transit" },
-    { icon: "lock-disk", label: "Encryption at rest" },
-    { icon: "key", label: "Role-based access" },
-    { icon: "audit", label: "Audit logging" },
+    { icon: "lock-arrow", label: t("visual.security.transit") },
+    { icon: "lock-disk", label: t("visual.security.rest") },
+    { icon: "key", label: t("visual.security.rbac") },
+    { icon: "audit", label: t("visual.security.audit") },
   ];
   return (
     <div className="lv-sec-wrap">
@@ -173,7 +177,7 @@ export function SecurityStrip() {
             strokeLinejoin="round"
           />
         </svg>
-        ISO 27001 in progress
+        {t("visual.security.isoBadge")}
       </div>
     </div>
   );
@@ -184,10 +188,11 @@ export function SecurityStrip() {
    ============================================================ */
 
 export function PrivacyTrustBar() {
+  const t = useTranslations("legal");
   const items = [
-    { flag: "🇪🇺", label: "GDPR compliant" },
-    { flag: "🇸🇪", label: "Swedish law" },
-    { flag: "", label: "EU/EEA data only" },
+    { flag: "🇪🇺", label: t("visual.trustBar.gdpr") },
+    { flag: "🇸🇪", label: t("visual.trustBar.swedishLaw") },
+    { flag: "", label: t("visual.trustBar.euData") },
   ];
   return (
     <div className="lv-trust-bar">
@@ -219,23 +224,24 @@ export function PrivacyTrustBar() {
 }
 
 export function ControllerDiagram() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-ctrl-card glass">
-      <div className="lv-ctrl-title">Who controls your data?</div>
+      <div className="lv-ctrl-title">{t("visual.controller.title")}</div>
 
       <div className="lv-ctrl-row">
         <div className="lv-ctrl-node">
-          <div className="lv-ctrl-role">WelloWork AB</div>
-          <div className="lv-ctrl-sub">Controller</div>
+          <div className="lv-ctrl-role">{t("visual.controller.welloWork")}</div>
+          <div className="lv-ctrl-sub">{t("visual.controller.roleController")}</div>
         </div>
         <div className="lv-ctrl-edge">
           <span className="lv-ctrl-line" />
-          <span className="lv-ctrl-edge-label">Direct relationship</span>
+          <span className="lv-ctrl-edge-label">{t("visual.controller.directRel")}</span>
           <span className="lv-ctrl-line" />
         </div>
         <div className="lv-ctrl-node">
-          <div className="lv-ctrl-role">You</div>
-          <div className="lv-ctrl-sub">Website visitor</div>
+          <div className="lv-ctrl-role">{t("visual.controller.you")}</div>
+          <div className="lv-ctrl-sub">{t("visual.controller.websiteVisitor")}</div>
         </div>
       </div>
 
@@ -243,21 +249,21 @@ export function ControllerDiagram() {
 
       <div className="lv-ctrl-row">
         <div className="lv-ctrl-node lv-ctrl-node-sm">
-          <div className="lv-ctrl-role">Customer Org</div>
-          <div className="lv-ctrl-sub">Controller</div>
+          <div className="lv-ctrl-role">{t("visual.controller.customerOrg")}</div>
+          <div className="lv-ctrl-sub">{t("visual.controller.roleController")}</div>
         </div>
         <div className="lv-ctrl-arrow" aria-hidden="true">→</div>
         <div className="lv-ctrl-node lv-ctrl-node-sm">
-          <div className="lv-ctrl-role">WelloWork AB</div>
-          <div className="lv-ctrl-sub">Processor</div>
+          <div className="lv-ctrl-role">{t("visual.controller.welloWork")}</div>
+          <div className="lv-ctrl-sub">{t("visual.controller.roleProcessor")}</div>
         </div>
         <div className="lv-ctrl-arrow" aria-hidden="true">→</div>
         <div className="lv-ctrl-node lv-ctrl-node-sm">
-          <div className="lv-ctrl-role">You</div>
-          <div className="lv-ctrl-sub">Platform user</div>
+          <div className="lv-ctrl-role">{t("visual.controller.you")}</div>
+          <div className="lv-ctrl-sub">{t("visual.controller.platformUser")}</div>
         </div>
       </div>
-      <div className="lv-ctrl-edge-label lv-ctrl-edge-label-bottom">Via DPA</div>
+      <div className="lv-ctrl-edge-label lv-ctrl-edge-label-bottom">{t("visual.controller.viaDpa")}</div>
     </div>
   );
 }
@@ -306,6 +312,7 @@ function DataIcon({ name }: { name: "form" | "shield" | "chart" }) {
 }
 
 export function DataCollectedGrid() {
+  const t = useTranslations("legal");
   const items: Array<{
     icon: "form" | "shield" | "chart";
     label: string;
@@ -314,19 +321,19 @@ export function DataCollectedGrid() {
   }> = [
     {
       icon: "form",
-      label: "Contact data",
-      desc: "From forms — name, work email, company, role, optional message.",
+      label: t("visual.dataGrid.contact.label"),
+      desc: t("visual.dataGrid.contact.desc"),
     },
     {
       icon: "shield",
-      label: "Technical data",
-      desc: "IP and user-agent at form submission, for spam control and security.",
+      label: t("visual.dataGrid.technical.label"),
+      desc: t("visual.dataGrid.technical.desc"),
     },
     {
       icon: "chart",
-      label: "Platform data",
-      desc: "Training, assessment, and biomarker records.",
-      badge: "Only if you're a platform end user",
+      label: t("visual.dataGrid.platform.label"),
+      desc: t("visual.dataGrid.platform.desc"),
+      badge: t("visual.dataGrid.platform.badge"),
     },
   ];
   return (
@@ -378,15 +385,16 @@ function BasisIcon({ name }: { name: "consent" | "interest" | "contract" | "law"
 }
 
 export function LegalBasisStrip() {
+  const t = useTranslations("legal");
   const items: Array<{
     icon: "consent" | "interest" | "contract" | "law";
     label: string;
     note: string;
   }> = [
-    { icon: "consent", label: "Consent", note: "Marketing follow-up after a demo or contact request." },
-    { icon: "interest", label: "Legitimate Interests", note: "Responding to enquiries, security logging, abuse protection." },
-    { icon: "contract", label: "Contract", note: "Delivering the contracted platform to your employer." },
-    { icon: "law", label: "Legal Obligation", note: "Retention periods imposed by Swedish or EU law." },
+    { icon: "consent", label: t("visual.basis.consent.label"), note: t("visual.basis.consent.note") },
+    { icon: "interest", label: t("visual.basis.interest.label"), note: t("visual.basis.interest.note") },
+    { icon: "contract", label: t("visual.basis.contract.label"), note: t("visual.basis.contract.note") },
+    { icon: "law", label: t("visual.basis.law.label"), note: t("visual.basis.law.note") },
   ];
   return (
     <div className="lv-basis-strip">
@@ -406,10 +414,11 @@ export function LegalBasisStrip() {
 }
 
 export function RetentionTimeline() {
+  const t = useTranslations("legal");
   const items = [
-    { label: "Enquiry data", duration: "24 months", widthPct: 70, tone: "primary" },
-    { label: "Platform records", duration: "per DPA", widthPct: 100, tone: "accent" },
-    { label: "Backups", duration: "90 days", widthPct: 22, tone: "muted" },
+    { label: t("visual.retention.enquiry.label"), duration: t("visual.retention.enquiry.duration"), widthPct: 70, tone: "primary" },
+    { label: t("visual.retention.platform.label"), duration: t("visual.retention.platform.duration"), widthPct: 100, tone: "accent" },
+    { label: t("visual.retention.backups.label"), duration: t("visual.retention.backups.duration"), widthPct: 22, tone: "muted" },
   ];
   return (
     <div className="lv-retention">
@@ -474,13 +483,14 @@ function RightIcon({ name }: { name: string }) {
 }
 
 export function GdprRightsGrid() {
+  const t = useTranslations("legal");
   const items: Array<{ icon: string; name: string; desc: string }> = [
-    { icon: "access", name: "Access", desc: "Get a copy of the data we hold about you." },
-    { icon: "rectify", name: "Rectification", desc: "Ask us to correct inaccurate data." },
-    { icon: "erase", name: "Erasure", desc: "Ask us to delete your data." },
-    { icon: "restrict", name: "Restriction", desc: "Limit how we process your data." },
-    { icon: "portability", name: "Portability", desc: "Receive your data in a portable format." },
-    { icon: "object", name: "Object", desc: "Object to processing based on legitimate interests." },
+    { icon: "access", name: t("visual.rights.access.name"), desc: t("visual.rights.access.desc") },
+    { icon: "rectify", name: t("visual.rights.rectify.name"), desc: t("visual.rights.rectify.desc") },
+    { icon: "erase", name: t("visual.rights.erase.name"), desc: t("visual.rights.erase.desc") },
+    { icon: "restrict", name: t("visual.rights.restrict.name"), desc: t("visual.rights.restrict.desc") },
+    { icon: "portability", name: t("visual.rights.portability.name"), desc: t("visual.rights.portability.desc") },
+    { icon: "object", name: t("visual.rights.object.name"), desc: t("visual.rights.object.desc") },
   ];
   return (
     <div>
@@ -499,7 +509,7 @@ export function GdprRightsGrid() {
         href={`mailto:${ORG_EMAIL}?subject=privacy%20request`}
         className="btn btn-primary lv-rights-cta"
       >
-        Email {ORG_EMAIL} with 'privacy request'
+        {t("visual.rights.cta", { email: ORG_EMAIL })}
       </a>
     </div>
   );
@@ -558,13 +568,14 @@ function TermsAnchorIcon({ name }: { name: string }) {
 }
 
 export function TermsAnchorStrip() {
+  const t = useTranslations("legal");
   const items: Array<{ icon: string; label: string; href: string }> = [
-    { icon: "use", label: "Acceptable use", href: "#acceptable-use" },
-    { icon: "ip", label: "Intellectual property", href: "#ip" },
-    { icon: "warranty", label: "Warranties", href: "#warranties" },
-    { icon: "liability", label: "Liability", href: "#warranties" },
-    { icon: "law", label: "Governing law", href: "#law" },
-    { icon: "changes", label: "Changes", href: "#changes" },
+    { icon: "use", label: t("visual.anchor.use"), href: "#acceptable-use" },
+    { icon: "ip", label: t("visual.anchor.ip"), href: "#ip" },
+    { icon: "warranty", label: t("visual.anchor.warranties"), href: "#warranties" },
+    { icon: "liability", label: t("visual.anchor.liability"), href: "#warranties" },
+    { icon: "law", label: t("visual.anchor.law"), href: "#law" },
+    { icon: "changes", label: t("visual.anchor.changes"), href: "#changes" },
   ];
   return (
     <div className="lv-anchor-strip">
@@ -581,30 +592,32 @@ export function TermsAnchorStrip() {
 }
 
 export function EntityCard() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-entity-card glass">
       <div className="lv-entity-head">
         <span className="lv-entity-flag" aria-hidden="true">🇸🇪</span>
-        <span className="lv-entity-tag">Contracting entity</span>
+        <span className="lv-entity-tag">{t("visual.entity.tag")}</span>
       </div>
-      <div className="lv-entity-name">WelloWork AB</div>
-      <div className="lv-entity-meta">Registered in Sweden</div>
+      <div className="lv-entity-name">{t("visual.entity.name")}</div>
+      <div className="lv-entity-meta">{t("visual.entity.meta")}</div>
       <div className="lv-entity-divider" />
-      <div className="lv-entity-note">Swedish law governs.</div>
+      <div className="lv-entity-note">{t("visual.entity.note")}</div>
     </div>
   );
 }
 
 export function AcceptableUseSplit() {
+  const t = useTranslations("legal");
   const may = [
-    "Use this website to learn about WelloWork and request a demo.",
-    "Browse our published content for personal or business research.",
-    "Contact us through the forms provided on this site.",
+    t("visual.use.may1"),
+    t("visual.use.may2"),
+    t("visual.use.may3"),
   ];
   const mayNot = [
-    "Attempt to gain unauthorised access or interfere with the service.",
-    "Exfiltrate, copy, or scrape data beyond normal browsing.",
-    "Use the site for competitive intelligence at abnormal volumes.",
+    t("visual.use.mayNot1"),
+    t("visual.use.mayNot2"),
+    t("visual.use.mayNot3"),
   ];
   return (
     <div className="lv-use-split">
@@ -615,7 +628,7 @@ export function AcceptableUseSplit() {
               <path d="M4 12l5 5L20 6" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" strokeLinejoin="round" />
             </svg>
           </span>
-          You may
+          {t("visual.use.mayHead")}
         </div>
         <ul className="lv-use-list">
           {may.map((m) => (
@@ -633,7 +646,7 @@ export function AcceptableUseSplit() {
               <path d="M6 12h12" stroke="currentColor" strokeWidth="2.4" strokeLinecap="round" />
             </svg>
           </span>
-          You may not
+          {t("visual.use.mayNotHead")}
         </div>
         <ul className="lv-use-list">
           {mayNot.map((m) => (
@@ -649,13 +662,18 @@ export function AcceptableUseSplit() {
 }
 
 export function IpOwnershipDiagram() {
-  const branches = ["Content", "Branding", "Source code"];
+  const t = useTranslations("legal");
+  const branches = [
+    t("visual.ip.branchContent"),
+    t("visual.ip.branchBranding"),
+    t("visual.ip.branchSource"),
+  ];
   return (
     <div className="lv-ip-card glass">
       <div className="lv-ip-root">
         <div className="lv-ip-node lv-ip-node-root">
-          <div className="lv-ip-role">WelloWork AB</div>
-          <div className="lv-ip-sub">Owner</div>
+          <div className="lv-ip-role">{t("visual.ip.owner")}</div>
+          <div className="lv-ip-sub">{t("visual.ip.ownerLabel")}</div>
         </div>
       </div>
       <div className="lv-ip-trunk" aria-hidden="true" />
@@ -665,19 +683,20 @@ export function IpOwnershipDiagram() {
             <div className="lv-ip-stem" aria-hidden="true" />
             <div className="lv-ip-leaf">
               <div className="lv-ip-leaf-label">{b}</div>
-              <div className="lv-ip-leaf-badge">© owned</div>
+              <div className="lv-ip-leaf-badge">{t("visual.ip.ownedBadge")}</div>
             </div>
           </div>
         ))}
       </div>
       <div className="lv-ip-foot">
-        No licence is granted unless explicitly stated.
+        {t("visual.ip.foot")}
       </div>
     </div>
   );
 }
 
 export function WarrantyCallout() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-callout lv-callout-warn">
       <span className="lv-callout-icon" aria-hidden="true">
@@ -687,9 +706,9 @@ export function WarrantyCallout() {
         </svg>
       </span>
       <div>
-        <div className="lv-callout-title">As-is, no guarantees</div>
+        <div className="lv-callout-title">{t("visual.warranty.title")}</div>
         <div className="lv-callout-body">
-          This website is provided as-is. We don't guarantee uptime, accuracy, or fitness for a particular purpose.
+          {t("visual.warranty.body")}
         </div>
       </div>
     </div>
@@ -697,11 +716,14 @@ export function WarrantyCallout() {
 }
 
 export function GoverningLawLine() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-law-line">
       <span className="lv-law-flag" aria-hidden="true">🇸🇪</span>
       <span className="lv-law-text">
-        <strong>Swedish courts</strong> · Swedish law
+        {t.rich("visual.law.text", {
+          strong: (chunks) => <strong>{chunks}</strong>,
+        })}
       </span>
     </div>
   );
@@ -712,6 +734,7 @@ export function GoverningLawLine() {
    ============================================================ */
 
 export function CookieTrustBadge() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-cookie-trust">
       <span className="lv-cookie-trust-pill">
@@ -730,13 +753,14 @@ export function CookieTrustBadge() {
             strokeLinejoin="round"
           />
         </svg>
-        Essential cookies only — no tracking by default
+        {t("visual.cookieBadge")}
       </span>
     </div>
   );
 }
 
 export function CookieTable() {
+  const t = useTranslations("legal");
   const rows: Array<{
     type: string;
     status: string;
@@ -744,30 +768,30 @@ export function CookieTable() {
     purpose: string;
   }> = [
     {
-      type: "Essential",
-      status: "Active by default",
+      type: t("visual.cookieTable.essential.type"),
+      status: t("visual.cookieTable.essential.status"),
       statusTone: "ok",
-      purpose: "Required for site operation — e.g. form state on reload.",
+      purpose: t("visual.cookieTable.essential.purpose"),
     },
     {
-      type: "Analytics",
-      status: "Off by default",
+      type: t("visual.cookieTable.analytics.type"),
+      status: t("visual.cookieTable.analytics.status"),
       statusTone: "warn",
-      purpose: "Would measure aggregate usage. Opt-in via a future consent banner.",
+      purpose: t("visual.cookieTable.analytics.purpose"),
     },
     {
-      type: "Advertising",
-      status: "Not used",
+      type: t("visual.cookieTable.advertising.type"),
+      status: t("visual.cookieTable.advertising.status"),
       statusTone: "muted",
-      purpose: "No advertising cookies on this site.",
+      purpose: t("visual.cookieTable.advertising.purpose"),
     },
   ];
   return (
     <div className="lv-ck-table" role="table">
       <div className="lv-ck-head" role="row">
-        <div role="columnheader">Type</div>
-        <div role="columnheader">Status</div>
-        <div role="columnheader">Purpose</div>
+        <div role="columnheader">{t("visual.cookieTable.headType")}</div>
+        <div role="columnheader">{t("visual.cookieTable.headStatus")}</div>
+        <div role="columnheader">{t("visual.cookieTable.headPurpose")}</div>
       </div>
       {rows.map((r) => (
         <div key={r.type} className="lv-ck-row" role="row">
@@ -821,10 +845,11 @@ function CkStepIcon({ name }: { name: "settings" | "x" | "alert" }) {
 }
 
 export function CookieControlSteps() {
+  const t = useTranslations("legal");
   const steps: Array<{ icon: "settings" | "x" | "alert"; title: string; note: string }> = [
-    { icon: "settings", title: "Browser settings", note: "Open your browser's privacy or cookie controls." },
-    { icon: "x", title: "Clear or block", note: "Remove existing cookies or block new ones." },
-    { icon: "alert", title: "Heads up", note: "Blocking essentials may break form submissions." },
+    { icon: "settings", title: t("visual.cookieSteps.settings.title"), note: t("visual.cookieSteps.settings.note") },
+    { icon: "x", title: t("visual.cookieSteps.clear.title"), note: t("visual.cookieSteps.clear.note") },
+    { icon: "alert", title: t("visual.cookieSteps.heads.title"), note: t("visual.cookieSteps.heads.note") },
   ];
   return (
     <div className="lv-ck-steps">
@@ -843,6 +868,7 @@ export function CookieControlSteps() {
 }
 
 export function CookieChangesCallout() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-callout lv-callout-info">
       <span className="lv-callout-icon" aria-hidden="true">
@@ -852,7 +878,7 @@ export function CookieChangesCallout() {
         </svg>
       </span>
       <div className="lv-callout-body">
-        We'll add a consent banner and update this page before enabling any non-essential cookies.
+        {t("visual.cookieChanges")}
       </div>
     </div>
   );
@@ -898,14 +924,15 @@ function DpaNodeIcon({ name }: { name: "building" | "server" | "user" }) {
 }
 
 export function DpaRelationshipDiagram() {
+  const t = useTranslations("legal");
   const nodes: Array<{
     icon: "building" | "server" | "user";
     role: string;
     detail: string;
   }> = [
-    { icon: "building", role: "Customer Org", detail: "Controller" },
-    { icon: "server", role: "WelloWork AB", detail: "Processor" },
-    { icon: "user", role: "End users", detail: "Data subjects" },
+    { icon: "building", role: t("visual.dpaRel.customerOrg.role"), detail: t("visual.dpaRel.customerOrg.detail") },
+    { icon: "server", role: t("visual.dpaRel.welloWork.role"), detail: t("visual.dpaRel.welloWork.detail") },
+    { icon: "user", role: t("visual.dpaRel.endUsers.role"), detail: t("visual.dpaRel.endUsers.detail") },
   ];
   return (
     <div className="lv-dpa-rel glass">
@@ -922,7 +949,9 @@ export function DpaRelationshipDiagram() {
             {i < nodes.length - 1 && (
               <div className="lv-dpa-arrow-wrap" aria-hidden="true">
                 <span className="lv-dpa-edge-label">
-                  {i === 0 ? "documented instructions" : "service delivery"}
+                  {i === 0
+                    ? t("visual.dpaRel.edgeInstructions")
+                    : t("visual.dpaRel.edgeDelivery")}
                 </span>
                 <span className="lv-dpa-arrow">→</span>
               </div>
@@ -935,15 +964,16 @@ export function DpaRelationshipDiagram() {
 }
 
 export function DpaSubjectStrip() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-dpa-keyvals">
       <div className="lv-dpa-kv">
-        <div className="lv-dpa-kv-label">Scope</div>
-        <div className="lv-dpa-kv-value">End users of the WelloWork platform (typically employees).</div>
+        <div className="lv-dpa-kv-label">{t("visual.dpaSubject.scopeLabel")}</div>
+        <div className="lv-dpa-kv-value">{t("visual.dpaSubject.scopeValue")}</div>
       </div>
       <div className="lv-dpa-kv">
-        <div className="lv-dpa-kv-label">Duration</div>
-        <div className="lv-dpa-kv-value">Length of customer agreement + DPA retention period.</div>
+        <div className="lv-dpa-kv-label">{t("visual.dpaSubject.durationLabel")}</div>
+        <div className="lv-dpa-kv-value">{t("visual.dpaSubject.durationValue")}</div>
       </div>
     </div>
   );
@@ -994,22 +1024,23 @@ function PurposeIcon({ name }: { name: string }) {
 }
 
 export function DpaProcessingSplit() {
+  const t = useTranslations("legal");
   const purposes = [
-    { icon: "brain", label: "Cognitive training" },
-    { icon: "calendar", label: "Workshop scheduling" },
-    { icon: "drop", label: "Biomarker reporting" },
-    { icon: "chart", label: "Anonymised reporting" },
+    { icon: "brain", label: t("visual.dpaSplit.purpose.cognitive") },
+    { icon: "calendar", label: t("visual.dpaSplit.purpose.workshop") },
+    { icon: "drop", label: t("visual.dpaSplit.purpose.biomarker") },
+    { icon: "chart", label: t("visual.dpaSplit.purpose.anonymised") },
   ];
   const categories = [
-    "Identification & contact",
-    "Cognitive performance",
-    "Biomarker reports",
-    "Operational metadata",
+    t("visual.dpaSplit.cat.identification"),
+    t("visual.dpaSplit.cat.cognitive"),
+    t("visual.dpaSplit.cat.biomarker"),
+    t("visual.dpaSplit.cat.metadata"),
   ];
   return (
     <div className="lv-dpa-split">
       <div className="lv-dpa-split-col">
-        <div className="lv-dpa-split-head">What we do</div>
+        <div className="lv-dpa-split-head">{t("visual.dpaSplit.whatWeDo")}</div>
         <div className="lv-dpa-purpose-list">
           {purposes.map((p) => (
             <div key={p.label} className="lv-dpa-purpose">
@@ -1022,7 +1053,7 @@ export function DpaProcessingSplit() {
         </div>
       </div>
       <div className="lv-dpa-split-col">
-        <div className="lv-dpa-split-head">Data we process</div>
+        <div className="lv-dpa-split-head">{t("visual.dpaSplit.dataWeProcess")}</div>
         <div className="lv-dpa-pill-stack">
           {categories.map((c) => (
             <span key={c} className="lv-dpa-pill">{c}</span>
@@ -1034,6 +1065,7 @@ export function DpaProcessingSplit() {
 }
 
 export function SubProcessorCallout() {
+  const t = useTranslations("legal");
   return (
     <div className="lv-callout lv-callout-info lv-callout-block">
       <div className="lv-callout-head">
@@ -1043,11 +1075,11 @@ export function SubProcessorCallout() {
           </svg>
         </span>
         <div className="lv-callout-title">
-          Sub-processors are GDPR-compliant, EU-resident where relevant, and listed in your DPA.
+          {t("visual.subprocessor.title")}
         </div>
       </div>
       <div className="lv-callout-body" style={{ marginTop: 8 }}>
-        Current list provided to customers on request.
+        {t("visual.subprocessor.body")}
       </div>
       <div className="lv-sub-row">
         <div className="lv-sub-cell">
@@ -1055,14 +1087,14 @@ export function SubProcessorCallout() {
             <rect x="3" y="4" width="18" height="6" rx="1.5" stroke="var(--accent)" strokeWidth="1.6" />
             <rect x="3" y="14" width="18" height="6" rx="1.5" stroke="var(--accent)" strokeWidth="1.6" />
           </svg>
-          Hosting
+          {t("visual.subprocessor.hosting")}
         </div>
         <div className="lv-sub-cell">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
             <rect x="3" y="5" width="18" height="14" rx="2" stroke="var(--accent)" strokeWidth="1.6" />
             <path d="M3 7l9 7 9-7" stroke="var(--accent)" strokeWidth="1.6" strokeLinejoin="round" />
           </svg>
-          Email
+          {t("visual.subprocessor.email")}
         </div>
         <div className="lv-sub-cell">
           <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -1073,7 +1105,7 @@ export function SubProcessorCallout() {
               strokeLinejoin="round"
             />
           </svg>
-          Lab partners
+          {t("visual.subprocessor.labPartners")}
         </div>
       </div>
     </div>
@@ -1081,6 +1113,7 @@ export function SubProcessorCallout() {
 }
 
 export function DpaContactCta() {
+  const t = useTranslations("legal");
   return (
     <a
       href={`mailto:${ORG_EMAIL}?subject=DPA%20request`}
@@ -1093,9 +1126,9 @@ export function DpaContactCta() {
         </svg>
       </span>
       <div className="lv-dpa-cta-body">
-        <div className="lv-dpa-cta-title">Email {ORG_EMAIL}</div>
+        <div className="lv-dpa-cta-title">{t("visual.dpaCta.title", { email: ORG_EMAIL })}</div>
         <div className="lv-dpa-cta-note">
-          Subject: 'DPA request' — we'll route you to the right person.
+          {t("visual.dpaCta.note")}
         </div>
       </div>
       <span className="lv-dpa-cta-arrow" aria-hidden="true">→</span>

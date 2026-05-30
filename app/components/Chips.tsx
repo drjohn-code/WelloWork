@@ -1,10 +1,10 @@
+import { useTranslations } from "next-intl";
 import { ICONS } from "./Icons";
 
 type PrivacyChipProps = { children?: React.ReactNode };
 
-export function PrivacyChip({
-  children = "Aggregated, anonymised — manager view",
-}: PrivacyChipProps) {
+export function PrivacyChip({ children }: PrivacyChipProps) {
+  const t = useTranslations("chips");
   return (
     <span
       style={{
@@ -30,12 +30,13 @@ export function PrivacyChip({
           strokeLinejoin="round"
         />
       </svg>
-      {children}
+      {children ?? t("privacy.default")}
     </span>
   );
 }
 
 export function SwedenChip() {
+  const t = useTranslations("chips");
   return (
     <span
       className="chip"
@@ -57,7 +58,7 @@ export function SwedenChip() {
           background: "linear-gradient(135deg, #FFCE3A 0%, #5C73FB 100%)",
         }}
       />
-      Driven by Science, Built with Care
+      {t("sweden")}
     </span>
   );
 }

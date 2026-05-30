@@ -1,8 +1,23 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "./Icons";
 import { COMPANY_SIZES, INDUSTRIES } from "../lib/validation";
+
+const INDUSTRY_KEYS = {
+  "Software & Technology": "softwareTech",
+  "Financial services": "financial",
+  Healthcare: "healthcare",
+  Manufacturing: "manufacturing",
+  "Retail & E-commerce": "retail",
+  "Professional services": "professional",
+  "Public sector": "publicSector",
+  Education: "education",
+  "Energy & Utilities": "energy",
+  Other: "other",
+} as const satisfies Record<(typeof INDUSTRIES)[number], string>;
 
 type LeadFormProps = {
   endpoint: "/api/demo-requests" | "/api/contact-messages";
@@ -23,6 +38,7 @@ export function LeadForm({
   messageRequired = false,
   companyRequired = true,
 }: LeadFormProps) {
+  const t = useTranslations("forms");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<ServerErrors>({});
   const [globalError, setGlobalError] = useState<string | null>(null);
@@ -51,7 +67,7 @@ export function LeadForm({
       if (data.error) setGlobalError(data.error);
       setStatus("error");
     } catch {
-      setGlobalError("Network error. Please try again.");
+      setGlobalError(t("error.network"));
       setStatus("error");
     }
   };
@@ -82,12 +98,12 @@ export function LeadForm({
     >
       <div className="form-grid">
         <div className="field">
-          <label htmlFor="name">Full name</label>
+          <label htmlFor="name">{t("label.fullName")}</label>
           <input id="name" name="name" type="text" required autoComplete="name" />
           {errors.name && <span className="err">{errors.name}</span>}
         </div>
         <div className="field">
-          <label htmlFor="work_email">Work email</label>
+          <label htmlFor="work_email">{t("label.workEmail")}</label>
           <input
             id="work_email"
             name="work_email"
@@ -98,7 +114,9 @@ export function LeadForm({
           {errors.work_email && <span className="err">{errors.work_email}</span>}
         </div>
         <div className="field">
-          <label htmlFor="company">Company {companyRequired ? "" : "(optional)"}</label>
+          <label htmlFor="company">
+            {t("label.company")} {companyRequired ? "" : t("label.optionalSuffix")}
+          </label>
           <input
             id="company"
             name="company"
@@ -109,57 +127,57 @@ export function LeadForm({
           {errors.company && <span className="err">{errors.company}</span>}
         </div>
         <div className="field">
-          <label htmlFor="company_size">Company size</label>
+          <label htmlFor="company_size">{t("label.companySize")}</label>
           <select id="company_size" name="company_size" defaultValue="">
             <option value="" disabled>
-              Select team size
+              {t("select.teamSizePlaceholder")}
             </option>
             {COMPANY_SIZES.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t("option.companySize", { size: s })}
               </option>
             ))}
           </select>
         </div>
         <div className="field">
-          <label htmlFor="role">Your role</label>
+          <label htmlFor="role">{t("label.role")}</label>
           <input
             id="role"
             name="role"
             type="text"
-            placeholder="HR, Operations, L&D, Founder…"
+            placeholder={t("placeholder.role")}
             autoComplete="organization-title"
           />
         </div>
         <div className="field">
-          <label htmlFor="industry">Industry</label>
+          <label htmlFor="industry">{t("label.industry")}</label>
           <select id="industry" name="industry" defaultValue="">
             <option value="" disabled>
-              Select industry
+              {t("select.industryPlaceholder")}
             </option>
             {INDUSTRIES.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t(`option.industry.${INDUSTRY_KEYS[s]}`)}
               </option>
             ))}
           </select>
         </div>
         <div className="field col-2">
           <label htmlFor="message">
-            Message {messageRequired ? "" : "(optional)"}
+            {t("label.message")} {messageRequired ? "" : t("label.optionalSuffix")}
           </label>
           <textarea
             id="message"
             name="message"
             required={messageRequired}
-            placeholder="Tell us about your pilot plans, headcount, and what you'd like to see in the demo."
+            placeholder={t("placeholder.leadMessage")}
           />
           {errors.message && <span className="err">{errors.message}</span>}
         </div>
 
         {/* Honeypot — must remain empty */}
         <div className="hp-field" aria-hidden="true">
-          <label htmlFor="website">Website</label>
+          <label htmlFor="website">{t("label.websiteHoneypot")}</label>
           <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
         </div>
 
@@ -167,12 +185,16 @@ export function LeadForm({
           <label className="checkbox-row" htmlFor="consent">
             <input id="consent" name="consent" type="checkbox" required />
             <span style={{ fontSize: 13.5, color: "var(--ink-2)", lineHeight: 1.5 }}>
-              I agree that WelloWork may contact me about this enquiry and store these
-              details under its{" "}
-              <a href="/legal#privacy" style={{ color: "var(--primary)", textDecoration: "underline" }}>
-                privacy policy
-              </a>
-              .
+              {t.rich("consent.leadForm", {
+                privacyLink: (chunks) => (
+                  <Link
+                    href="/legal#privacy"
+                    style={{ color: "var(--primary)", textDecoration: "underline" }}
+                  >
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </span>
           </label>
           {errors.consent && <span className="err">{errors.consent}</span>}
@@ -190,10 +212,10 @@ export function LeadForm({
           disabled={status === "submitting"}
           style={{ opacity: status === "submitting" ? 0.7 : 1, cursor: "pointer" }}
         >
-          {status === "submitting" ? "Sending…" : submitLabel} <ArrowRight size={14} />
+          {status === "submitting" ? t("submit.sending") : submitLabel} <ArrowRight size={14} />
         </button>
         <span style={{ fontSize: 12, color: "var(--ink-3)" }}>
-          Your details are stored in the EU. No marketing without opt-in.
+          {t("footnote.dataStored")}
         </span>
       </div>
     </form>

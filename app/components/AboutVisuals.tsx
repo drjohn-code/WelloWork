@@ -1,8 +1,10 @@
+import { useTranslations } from "next-intl";
 import { Icon } from "./Icons";
 
 /* ---------- Hero: Uppsala location card ---------- */
 
 export function UppsalaCard() {
+  const t = useTranslations("about");
   return (
     <div
       className="glass uppsala-card"
@@ -31,7 +33,7 @@ export function UppsalaCard() {
           boxShadow: "0 4px 12px rgba(15,29,69,0.06)",
         }}
       >
-        Founded 2024
+        {t("uppsalaCard.badge")}
       </span>
 
       <svg
@@ -146,7 +148,7 @@ export function UppsalaCard() {
             letterSpacing: "0.02em",
           }}
         >
-          Uppsala, Sweden · 59°51′N
+          {t("uppsalaCard.location")}
         </span>
       </div>
     </div>
@@ -156,21 +158,18 @@ export function UppsalaCard() {
 /* ---------- "What does WelloWork do?" — feature icon grid ---------- */
 
 export function FeatureIconGrid() {
-  const items: Array<{
-    icon: string;
-    label: string;
-    desc: string;
-  }> = [
-    { icon: "chart", label: "WelloRise", desc: "Cognitive training" },
-    { icon: "brain", label: "WelloWize", desc: "Hiring & assessments" },
-    { icon: "pulse", label: "Longitudinal trends", desc: "Performance over time" },
-    { icon: "spark", label: "Health workshops", desc: "Live group sessions" },
-    { icon: "drop", label: "Biomarker testing", desc: "At-home samples" },
-  ];
+  const t = useTranslations("about");
+  const items = [
+    { icon: "chart", key: "welloRise" },
+    { icon: "brain", key: "welloWize" },
+    { icon: "pulse", key: "trends" },
+    { icon: "spark", key: "workshops" },
+    { icon: "drop", key: "biomarker" },
+  ] as const;
   return (
     <div className="about-feature-grid">
       {items.map((it) => (
-        <div key={it.label} className="about-feature-cell">
+        <div key={it.key} className="about-feature-cell">
           <div className="about-feature-icon">
             <Icon name={it.icon} size={22} />
           </div>
@@ -184,7 +183,7 @@ export function FeatureIconGrid() {
                 lineHeight: 1.2,
               }}
             >
-              {it.label}
+              {t(`featureGrid.${it.key}.label`)}
             </div>
             <div
               style={{
@@ -194,7 +193,7 @@ export function FeatureIconGrid() {
                 letterSpacing: "0.01em",
               }}
             >
-              {it.desc}
+              {t(`featureGrid.${it.key}.desc`)}
             </div>
           </div>
         </div>
@@ -206,15 +205,16 @@ export function FeatureIconGrid() {
 /* ---------- "Why did we build this?" — gap diagram ---------- */
 
 export function GapDiagram() {
+  const t = useTranslations("about");
   return (
     <div className="glass gap-card" style={{ padding: 24 }}>
       <div className="gap-row">
-        <div className="gap-row-label">What most platforms measure</div>
+        <div className="gap-row-label">{t("gap.measuredLabel")}</div>
         <div className="gap-row-items">
-          {["Engagement", "Pulse", "Satisfaction"].map((x) => (
-            <div key={x} className="gap-pill gap-pill-muted">
+          {(["itemEngagement", "itemPulse", "itemSatisfaction"] as const).map((k) => (
+            <div key={k} className="gap-pill gap-pill-muted">
               <span className="gap-dash" aria-hidden="true" />
-              {x}
+              {t(`gap.${k}`)}
             </div>
           ))}
         </div>
@@ -222,7 +222,7 @@ export function GapDiagram() {
 
       <div className="gap-divider" aria-hidden="true">
         <span className="gap-divider-line" />
-        <span className="gap-divider-label">the gap</span>
+        <span className="gap-divider-label">{t("gap.dividerLabel")}</span>
         <svg width="12" height="14" viewBox="0 0 24 24" fill="none">
           <path
             d="M12 4v14M6 13l6 6 6-6"
@@ -236,12 +236,12 @@ export function GapDiagram() {
 
       <div className="gap-row">
         <div className="gap-row-label gap-row-label-accent">
-          What WelloWork measures
+          {t("gap.welloLabel")}
         </div>
         <div className="gap-row-items">
-          {["Cognitive Performance", "Longitudinal Trends", "Actual Output"].map(
-            (x) => (
-              <div key={x} className="gap-pill gap-pill-accent">
+          {(["itemCognitive", "itemLongitudinal", "itemOutput"] as const).map(
+            (k) => (
+              <div key={k} className="gap-pill gap-pill-accent">
                 <svg width="12" height="12" viewBox="0 0 24 24" fill="none">
                   <path
                     d="M4 16L10 10L14 14L20 7"
@@ -258,7 +258,7 @@ export function GapDiagram() {
                     strokeLinejoin="round"
                   />
                 </svg>
-                {x}
+                {t(`gap.${k}`)}
               </div>
             )
           )}
@@ -486,23 +486,18 @@ function PersonaIcon({ name }: { name: "hr" | "ops" | "ld" }) {
 }
 
 export function PersonaCards() {
+  const t = useTranslations("about");
   const cards: Array<{
     icon: "hr" | "ops" | "ld";
-    title: string;
-    tag: string;
   }> = [
-    { icon: "hr", title: "HR & People Leaders", tag: "Spot burnout signals early" },
-    { icon: "ops", title: "Operations Leaders", tag: "Schedule around actual performance" },
-    {
-      icon: "ld",
-      title: "L&D Leaders",
-      tag: "Growth tracks tied to cognitive profiles",
-    },
+    { icon: "hr" },
+    { icon: "ops" },
+    { icon: "ld" },
   ];
   return (
     <div className="persona-grid">
       {cards.map((c) => (
-        <div key={c.title} className="persona-card lift">
+        <div key={c.icon} className="persona-card lift">
           <div className="persona-icon">
             <PersonaIcon name={c.icon} />
           </div>
@@ -515,10 +510,10 @@ export function PersonaCards() {
               letterSpacing: "-0.01em",
             }}
           >
-            {c.title}
+            {t(`persona.${c.icon}.title`)}
           </div>
           <div style={{ fontSize: 13.5, color: "var(--ink-3)", marginTop: 4 }}>
-            {c.tag}
+            {t(`persona.${c.icon}.tag`)}
           </div>
         </div>
       ))}
@@ -529,34 +524,35 @@ export function PersonaCards() {
 /* ---------- Privacy architecture diagram ---------- */
 
 export function PrivacyDiagram() {
+  const t = useTranslations("about");
   return (
     <div className="glass" style={{ padding: 24 }}>
       <div className="privacy-stack">
         {/* Outer: Admin */}
         <div className="privacy-ring privacy-ring-admin">
           <span className="privacy-ring-label">
-            <span className="privacy-ring-role">Admin</span>
-            <span className="privacy-ring-detail">Aggregated org view</span>
+            <span className="privacy-ring-role">{t("privacyDiagram.admin.role")}</span>
+            <span className="privacy-ring-detail">{t("privacyDiagram.admin.detail")}</span>
           </span>
 
           {/* Middle: Manager */}
           <div className="privacy-ring privacy-ring-manager">
             <span className="privacy-ring-label">
-              <span className="privacy-ring-role">Manager</span>
-              <span className="privacy-ring-detail">Anonymised trends</span>
+              <span className="privacy-ring-role">{t("privacyDiagram.manager.role")}</span>
+              <span className="privacy-ring-detail">{t("privacyDiagram.manager.detail")}</span>
             </span>
 
             {/* Inner: Employee */}
             <div className="privacy-ring privacy-ring-employee">
               <span className="privacy-ring-label">
                 <span className="privacy-ring-role" style={{ color: "white" }}>
-                  Employee
+                  {t("privacyDiagram.employee.role")}
                 </span>
                 <span
                   className="privacy-ring-detail"
                   style={{ color: "rgba(255,255,255,0.85)" }}
                 >
-                  Owns their data
+                  {t("privacyDiagram.employee.detail")}
                 </span>
               </span>
             </div>
@@ -575,7 +571,7 @@ export function PrivacyDiagram() {
               return <circle key={i} cx={x} cy={y} r="0.7" fill="var(--accent)" />;
             })}
           </svg>
-          <span>Stored in EU</span>
+          <span>{t("privacyDiagram.badgeEu")}</span>
         </div>
         <div className="privacy-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -586,7 +582,7 @@ export function PrivacyDiagram() {
               strokeLinejoin="round"
             />
           </svg>
-          <span>GDPR compliant</span>
+          <span>{t("privacyDiagram.badgeGdpr")}</span>
         </div>
         <div className="privacy-badge">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" aria-hidden="true">
@@ -594,7 +590,7 @@ export function PrivacyDiagram() {
             <path d="M8 11V8a4 4 0 018 0v3" stroke="var(--accent)" strokeWidth="1.6" />
             <circle cx="12" cy="16" r="1.2" fill="var(--accent)" />
           </svg>
-          <span>ISO 27001 in progress</span>
+          <span>{t("privacyDiagram.badgeIso")}</span>
         </div>
       </div>
     </div>
@@ -604,6 +600,7 @@ export function PrivacyDiagram() {
 /* ---------- "Where is WelloWork based?" — Sweden map + Uppsala pin ---------- */
 
 export function SwedenMap() {
+  const t = useTranslations("about");
   // Simplified Sweden silhouette. North is up. ViewBox 100x240.
   // Uppsala dot at approximately (68, 142) — east-central, just north of Stockholm.
   const swedenPath =
@@ -643,13 +640,10 @@ export function SwedenMap() {
         <div className="sweden-map-meta">
           <div className="sweden-map-label">
             <span className="sweden-map-dot" aria-hidden="true" />
-            Uppsala HQ
+            {t("swedenMap.label")}
           </div>
-          <div className="sweden-map-coord">59°51′N · 17°38′E</div>
-          <div className="sweden-map-note">
-            Operating from Uppsala. Serving customers across the EU, UK, and the
-            Nordics.
-          </div>
+          <div className="sweden-map-coord">{t("swedenMap.coord")}</div>
+          <div className="sweden-map-note">{t("swedenMap.note")}</div>
         </div>
       </div>
     </div>

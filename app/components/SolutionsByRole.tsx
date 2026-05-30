@@ -1,40 +1,21 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icons";
 
-const ROLES = [
-  {
-    label: "For HR & People leaders",
-    icon: "users",
-    title: "See burnout signals before they become exits.",
-    bullets: [
-      "Aggregate cognitive trend deltas across teams",
-      "Defensible wellness ROI rooted in performance data",
-      "Promotion-readiness signals that don’t rely on annual reviews",
-    ],
-  },
-  {
-    label: "For Operations leaders",
-    icon: "layers",
-    title: "Schedule shifts around how people actually perform.",
-    bullets: [
-      "Spot fatigue patterns by shift pattern and role",
-      "Optimise team composition for operations-critical projects",
-      "Reduce variability where variability hurts safety",
-    ],
-  },
-  {
-    label: "For L&D leaders",
-    icon: "target",
-    title: "Build growth tracks tied to a measured cognitive profile.",
-    bullets: [
-      "Personalised recommendations from cognitive strengths",
-      "Token-funded course marketplace, fully bookable in-app",
-      "Skill development tracked alongside performance trends",
-    ],
-  },
+const ROLE_META = [
+  { key: "hr", icon: "users" },
+  { key: "operations", icon: "layers" },
+  { key: "ld", icon: "target" },
 ] as const;
 
 export function SolutionsByRole() {
+  const t = useTranslations("solutions");
+  const ROLES = ROLE_META.map((m) => ({
+    label: t(`roles.${m.key}.label`),
+    icon: m.icon,
+    title: t(`roles.${m.key}.title`),
+    bullets: t.raw(`roles.${m.key}.bullets`) as string[],
+  }));
   return (
     <section id="solutions" className="section">
       <div className="container">
@@ -50,18 +31,17 @@ export function SolutionsByRole() {
             }}
           >
             <div>
-              <span className="eyebrow">Solutions by role</span>
+              <span className="eyebrow">{t("eyebrow")}</span>
               <h2 className="h-section" style={{ margin: "8px 0 0" }}>
-                Three views.
+                {t("heading.lead")}
                 <br />
                 <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                  One source of truth.
+                  {t("heading.accent")}
                 </span>
               </h2>
             </div>
             <p className="lede" style={{ margin: 0 }}>
-              HR, Operations, and L&D each see the slice of the platform that matters to their
-              decisions — backed by the same underlying performance data.
+              {t("lede")}
             </p>
           </div>
         </Reveal>

@@ -1,45 +1,35 @@
+import { useTranslations } from "next-intl";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icons";
 
-const ITEMS = [
-  {
-    icon: "chart",
-    title: "Engagement scores don’t predict who’s about to burn out.",
-    body: "Satisfaction surveys measure how people feel about work. They don’t measure how work is changing them.",
-  },
-  {
-    icon: "drop",
-    title: "Annual physicals miss the biomarkers that drive cognitive performance.",
-    body: "Sleep architecture, glucose variability, inflammation — the things that quietly bend the cognitive curve never make it into HR data.",
-  },
-  {
-    icon: "flow",
-    title: "Hiring assessments end at the offer letter — and HR surveys end with morale.",
-    body: "Between those two extremes, there is no longitudinal view of how the people you hired are actually performing.",
-  },
-] as const;
+const ICONS = ["chart", "drop", "flow"] as const;
 
 export function ProblemSection() {
+  const t = useTranslations("problem");
+  const items = (t.raw("items") as { title: string; body: string }[]).map((it, i) => ({
+    ...it,
+    icon: ICONS[i],
+  }));
   return (
     <section className="section">
       <div className="container">
         <Reveal>
           <div style={{ maxWidth: 720, marginBottom: 48 }}>
-            <span className="eyebrow">The gap</span>
+            <span className="eyebrow">{t("eyebrow")}</span>
             <h2 className="h-section" style={{ margin: "8px 0 16px" }}>
-              Wellness platforms measure engagement.{" "}
+              {t("heading.lead")}
               <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                We measure performance.
+                {t("heading.accent")}
               </span>
             </h2>
             <p className="lede" style={{ margin: 0 }}>
-              Three things every operator already knows about their people data — but no tool actually fixes.
+              {t("lede")}
             </p>
           </div>
         </Reveal>
 
         <div className="grid grid-3">
-          {ITEMS.map((it, i) => (
+          {items.map((it, i) => (
             <Reveal key={it.title} delay={((i % 3) + 1) as 1 | 2 | 3}>
               <article
                 className="glass lift"

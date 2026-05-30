@@ -1,19 +1,35 @@
 "use client";
 
 import { useState, type FormEvent } from "react";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "./Icons";
 import { COMPANY_SIZES, INDUSTRIES } from "../lib/validation";
 
 type ServerErrors = Record<string, string>;
 
-const TIMEFRAMES = [
-  "This week",
-  "Next week",
-  "In the next 2–4 weeks",
-  "Just exploring",
-] as const;
+const INDUSTRY_KEYS = {
+  "Software & Technology": "softwareTech",
+  "Financial services": "financial",
+  Healthcare: "healthcare",
+  Manufacturing: "manufacturing",
+  "Retail & E-commerce": "retail",
+  "Professional services": "professional",
+  "Public sector": "publicSector",
+  Education: "education",
+  "Energy & Utilities": "energy",
+  Other: "other",
+} as const satisfies Record<(typeof INDUSTRIES)[number], string>;
+
+const TIMEFRAMES: { value: string; key: "thisWeek" | "nextWeek" | "twoToFourWeeks" | "exploring" }[] = [
+  { value: "This week", key: "thisWeek" },
+  { value: "Next week", key: "nextWeek" },
+  { value: "In the next 2–4 weeks", key: "twoToFourWeeks" },
+  { value: "Just exploring", key: "exploring" },
+];
 
 export function DemoFallbackForm() {
+  const t = useTranslations("forms");
   const [status, setStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
   const [errors, setErrors] = useState<ServerErrors>({});
   const [globalError, setGlobalError] = useState<string | null>(null);
@@ -42,7 +58,7 @@ export function DemoFallbackForm() {
       if (data.error) setGlobalError(data.error);
       setStatus("error");
     } catch {
-      setGlobalError("Network error. Please try again.");
+      setGlobalError(t("error.network"));
       setStatus("error");
     }
   };
@@ -56,11 +72,10 @@ export function DemoFallbackForm() {
         style={{ padding: "28px 28px", background: "rgba(255,255,255,0.85)" }}
       >
         <h2 className="h-card" style={{ fontSize: 22, margin: "0 0 8px", color: "var(--ink-1)" }}>
-          Thanks — request received.
+          {t("demo.successTitle")}
         </h2>
         <p className="body" style={{ margin: 0 }}>
-          A product specialist will reach out within one working day to confirm a demo time. Check
-          your work inbox (and spam, just in case) for a confirmation email.
+          {t("demo.successBody")}
         </p>
       </div>
     );
@@ -70,26 +85,25 @@ export function DemoFallbackForm() {
     <form
       onSubmit={onSubmit}
       noValidate
-      aria-label="Request a demo time"
+      aria-label={t("demo.formAria")}
       className="glass-strong"
       style={{ padding: "28px 28px", background: "rgba(255,255,255,0.78)" }}
     >
       <h2 className="h-card" style={{ fontSize: 22, margin: "0 0 6px" }}>
-        Request a demo time
+        {t("demo.formTitle")}
       </h2>
       <p className="small" style={{ margin: "0 0 18px" }}>
-        Scheduling isn’t live in this environment — leave your details and we’ll confirm a slot by
-        email within one working day.
+        {t("demo.formIntro")}
       </p>
 
       <div className="form-grid">
         <div className="field">
-          <label htmlFor="name">Full name</label>
+          <label htmlFor="name">{t("label.fullName")}</label>
           <input id="name" name="name" type="text" required autoComplete="name" aria-required="true" />
           {errors.name && <span className="err" role="alert">{errors.name}</span>}
         </div>
         <div className="field">
-          <label htmlFor="work_email">Work email</label>
+          <label htmlFor="work_email">{t("label.workEmail")}</label>
           <input
             id="work_email"
             name="work_email"
@@ -101,7 +115,7 @@ export function DemoFallbackForm() {
           {errors.work_email && <span className="err" role="alert">{errors.work_email}</span>}
         </div>
         <div className="field">
-          <label htmlFor="company">Company</label>
+          <label htmlFor="company">{t("label.company")}</label>
           <input
             id="company"
             name="company"
@@ -113,72 +127,72 @@ export function DemoFallbackForm() {
           {errors.company && <span className="err" role="alert">{errors.company}</span>}
         </div>
         <div className="field">
-          <label htmlFor="company_size">Company size</label>
-          <select id="company_size" name="company_size" defaultValue="" aria-label="Company size">
+          <label htmlFor="company_size">{t("label.companySize")}</label>
+          <select id="company_size" name="company_size" defaultValue="" aria-label={t("label.companySize")}>
             <option value="" disabled>
-              Select team size
+              {t("select.teamSizePlaceholder")}
             </option>
             {COMPANY_SIZES.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t("option.companySize", { size: s })}
               </option>
             ))}
           </select>
         </div>
         <div className="field">
-          <label htmlFor="role">Your role / title</label>
+          <label htmlFor="role">{t("label.roleTitle")}</label>
           <input
             id="role"
             name="role"
             type="text"
-            placeholder="HR, Operations, L&D, Founder…"
+            placeholder={t("placeholder.role")}
             autoComplete="organization-title"
           />
         </div>
         <div className="field">
-          <label htmlFor="industry">Industry</label>
-          <select id="industry" name="industry" defaultValue="" aria-label="Industry">
+          <label htmlFor="industry">{t("label.industry")}</label>
+          <select id="industry" name="industry" defaultValue="" aria-label={t("label.industry")}>
             <option value="" disabled>
-              Select industry
+              {t("select.industryPlaceholder")}
             </option>
             {INDUSTRIES.map((s) => (
               <option key={s} value={s}>
-                {s}
+                {t(`option.industry.${INDUSTRY_KEYS[s]}`)}
               </option>
             ))}
           </select>
         </div>
         <div className="field col-2">
-          <label htmlFor="preferred_timeframe">Preferred timeframe</label>
+          <label htmlFor="preferred_timeframe">{t("label.preferredTimeframe")}</label>
           <select
             id="preferred_timeframe"
             name="preferred_timeframe"
             defaultValue=""
-            aria-label="Preferred timeframe"
+            aria-label={t("label.preferredTimeframe")}
           >
             <option value="" disabled>
-              When would you like to meet?
+              {t("select.timeframePlaceholder")}
             </option>
-            {TIMEFRAMES.map((t) => (
-              <option key={t} value={t}>
-                {t}
+            {TIMEFRAMES.map((tf) => (
+              <option key={tf.value} value={tf.value}>
+                {t(`timeframe.${tf.key}`)}
               </option>
             ))}
           </select>
         </div>
         <div className="field col-2">
-          <label htmlFor="message">What you’d like to see (optional)</label>
+          <label htmlFor="message">{t("label.demoMessage")}</label>
           <textarea
             id="message"
             name="message"
-            placeholder="Team size, what you’d like the demo to focus on, any pilot timing."
+            placeholder={t("placeholder.demoMessage")}
           />
           {errors.message && <span className="err" role="alert">{errors.message}</span>}
         </div>
 
         {/* Honeypot — must remain empty */}
         <div className="hp-field" aria-hidden="true">
-          <label htmlFor="website">Website</label>
+          <label htmlFor="website">{t("label.websiteHoneypot")}</label>
           <input id="website" name="website" type="text" tabIndex={-1} autoComplete="off" />
         </div>
 
@@ -186,12 +200,16 @@ export function DemoFallbackForm() {
           <label className="checkbox-row" htmlFor="consent">
             <input id="consent" name="consent" type="checkbox" required aria-required="true" />
             <span style={{ fontSize: 13.5, color: "var(--ink-2)", lineHeight: 1.5 }}>
-              I agree that WelloWork may contact me to schedule this demo and store these details
-              under its{" "}
-              <a href="/legal#privacy" style={{ color: "var(--primary)", textDecoration: "underline" }}>
-                privacy policy
-              </a>
-              . (GDPR)
+              {t.rich("consent.demoForm", {
+                privacyLink: (chunks) => (
+                  <Link
+                    href="/legal#privacy"
+                    style={{ color: "var(--primary)", textDecoration: "underline" }}
+                  >
+                    {chunks}
+                  </Link>
+                ),
+              })}
             </span>
           </label>
           {errors.consent && <span className="err" role="alert">{errors.consent}</span>}
@@ -212,10 +230,10 @@ export function DemoFallbackForm() {
           aria-disabled={status === "submitting"}
           style={{ opacity: status === "submitting" ? 0.7 : 1, cursor: "pointer" }}
         >
-          {status === "submitting" ? "Sending…" : "Request a demo time"} <ArrowRight size={14} />
+          {status === "submitting" ? t("submit.sending") : t("submit.demo")} <ArrowRight size={14} />
         </button>
         <span style={{ fontSize: 12, color: "var(--ink-3)" }}>
-          Your details are stored in the EU. No marketing without opt-in.
+          {t("footnote.dataStored")}
         </span>
       </div>
     </form>

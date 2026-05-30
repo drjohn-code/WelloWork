@@ -2,6 +2,7 @@
    Style language mirrors CognitiveConstructsVisuals — periwinkle accent,
    dark navy on light lavender, rounded cards, no decorative kitsch. */
 
+import { useTranslations } from "next-intl";
 import { DomainPillStrip } from "./CognitiveConstructsVisuals";
 export { DomainPillStrip };
 
@@ -320,6 +321,7 @@ function MIcon({
    =========================================================== */
 
 export function MeasurementPipeline() {
+  const t = useTranslations("researchMethodology");
   const nodes: Array<{
     icon: IconName;
     label: string;
@@ -329,31 +331,31 @@ export function MeasurementPipeline() {
     {
       n: "01",
       icon: "branching",
-      label: "Adaptive task",
-      subtitle: "Difficulty calibrates per session",
+      label: t("pipeline.adaptive.label"),
+      subtitle: t("pipeline.adaptive.subtitle"),
     },
     {
       n: "02",
       icon: "tag",
-      label: "Construct mapping",
-      subtitle: "One primary cognitive construct",
+      label: t("pipeline.mapping.label"),
+      subtitle: t("pipeline.mapping.subtitle"),
     },
     {
       n: "03",
       icon: "personTrend",
-      label: "Per-employee baseline normalisation",
-      subtitle: "Compared to your own trend",
+      label: t("pipeline.baseline.label"),
+      subtitle: t("pipeline.baseline.subtitle"),
     },
     {
       n: "04",
       icon: "groupCurve",
-      label: "Team-level aggregate",
-      subtitle: "Threshold-gated, weekly smoothed",
+      label: t("pipeline.aggregate.label"),
+      subtitle: t("pipeline.aggregate.subtitle"),
     },
   ];
 
   return (
-    <div className="mp-pipeline" aria-label="WelloWork measurement pipeline">
+    <div className="mp-pipeline" aria-label={t("pipeline.aria")}>
       <ol className="mp-pipeline-list">
         {nodes.map((node, i) => (
           <li key={node.n} className="mp-pipeline-node">
@@ -374,7 +376,7 @@ export function MeasurementPipeline() {
         ))}
       </ol>
       <div className="mp-pipeline-badge" role="note">
-        No clinical claims. No population ranking.
+        {t("pipeline.badge")}
       </div>
     </div>
   );
@@ -385,18 +387,28 @@ export function MeasurementPipeline() {
    =========================================================== */
 
 export function ConstructMappingCard() {
+  const t = useTranslations("researchMethodology");
   const rows: Array<{ task: string; construct: string }> = [
-    { task: "Sequence recall", construct: "Working Memory" },
-    { task: "Symbol substitution", construct: "Processing Speed" },
-    { task: "Target detection", construct: "Attention" },
+    {
+      task: t("mappingCard.rows.sequenceRecall.task"),
+      construct: t("mappingCard.rows.sequenceRecall.construct"),
+    },
+    {
+      task: t("mappingCard.rows.symbolSubstitution.task"),
+      construct: t("mappingCard.rows.symbolSubstitution.construct"),
+    },
+    {
+      task: t("mappingCard.rows.targetDetection.task"),
+      construct: t("mappingCard.rows.targetDetection.construct"),
+    },
   ];
 
   return (
     <div className="mp-mapping-card">
       <div className="mp-mapping-head">
-        <span className="mp-mapping-col-head">Task</span>
+        <span className="mp-mapping-col-head">{t("mappingCard.colTask")}</span>
         <span className="mp-mapping-col-head mp-mapping-col-head-right">
-          Primary construct
+          {t("mappingCard.colConstruct")}
         </span>
       </div>
       <ul className="mp-mapping-rows">
@@ -418,10 +430,7 @@ export function ConstructMappingCard() {
           </li>
         ))}
       </ul>
-      <p className="mp-mapping-footnote">
-        Each task maps to one primary construct. Secondary signals are captured
-        but do not drive the score.
-      </p>
+      <p className="mp-mapping-footnote">{t("mappingCard.footnote")}</p>
     </div>
   );
 }
@@ -431,6 +440,7 @@ export function ConstructMappingCard() {
    =========================================================== */
 
 function BellCurveSilhouette() {
+  const t = useTranslations("researchMethodology");
   return (
     <svg
       width="100%"
@@ -476,16 +486,17 @@ function BellCurveSilhouette() {
         fill="#7a3217"
         fontFamily="var(--font-body)"
       >
-        you vs. others
+        {t("bellCurve.youVsOthers")}
       </text>
       <text x="10" y="18" fontSize="9.5" fill="var(--ink-3)">
-        population
+        {t("bellCurve.population")}
       </text>
     </svg>
   );
 }
 
 function WithinPersonTrend() {
+  const t = useTranslations("researchMethodology");
   return (
     <svg
       width="100%"
@@ -518,7 +529,7 @@ function WithinPersonTrend() {
         strokeDasharray="3 3"
       />
       <text x="10" y="60" fontSize="9.5" fill="var(--ink-3)">
-        your baseline
+        {t("withinPerson.yourBaseline")}
       </text>
       <path
         d="M10 66 L40 64 L70 65 L100 63 L130 50 L160 44 L190 46 L210 48"
@@ -544,47 +555,45 @@ function WithinPersonTrend() {
       ))}
       <circle cx="160" cy="44" r="4.6" fill="none" stroke="#1F7A45" strokeWidth="1.6" />
       <text x="148" y="36" fontSize="9.5" fill="#1F7A45">
-        your gain
+        {t("withinPerson.yourGain")}
       </text>
     </svg>
   );
 }
 
 export function NormalisationCompareCard() {
+  const t = useTranslations("researchMethodology");
   return (
     <div className="mp-norm-card">
       <div className="mp-norm-grid">
         <div className="mp-norm-col mp-norm-col-muted">
           <div className="mp-norm-head">
-            <span className="mp-norm-title">Population ranking</span>
-            <span className="cc-badge cc-badge-warn">Not used</span>
+            <span className="mp-norm-title">{t("normCard.populationTitle")}</span>
+            <span className="cc-badge cc-badge-warn">
+              {t("normCard.populationBadge")}
+            </span>
           </div>
           <div className="mp-norm-figure">
             <BellCurveSilhouette />
           </div>
-          <p className="mp-norm-note">
-            Comparing an employee against a peer distribution. Noisy at the
-            individual level — and uneasy at work.
-          </p>
+          <p className="mp-norm-note">{t("normCard.populationNote")}</p>
         </div>
         <div className="mp-norm-col mp-norm-col-real">
           <div className="mp-norm-head">
-            <span className="mp-norm-title">Within-person baseline</span>
-            <span className="cc-badge cc-badge-good">WelloWork approach</span>
+            <span className="mp-norm-title">
+              {t("normCard.withinPersonTitle")}
+            </span>
+            <span className="cc-badge cc-badge-good">
+              {t("normCard.withinPersonBadge")}
+            </span>
           </div>
           <div className="mp-norm-figure">
             <WithinPersonTrend />
           </div>
-          <p className="mp-norm-note">
-            Each session is scored against the employee's own running baseline
-            from the last 90 days.
-          </p>
+          <p className="mp-norm-note">{t("normCard.withinPersonNote")}</p>
         </div>
       </div>
-      <p className="mp-norm-caption">
-        We don't compare employees to each other. We track each person against
-        their own established baseline.
-      </p>
+      <p className="mp-norm-caption">{t("normCard.caption")}</p>
     </div>
   );
 }
@@ -594,37 +603,43 @@ export function NormalisationCompareCard() {
    =========================================================== */
 
 export function AggregationGrid() {
+  const t = useTranslations("researchMethodology");
   const cards: Array<{
+    key: string;
     icon: IconName;
     title: string;
     body: string;
   }> = [
     {
+      key: "minTeamSize",
       icon: "groupMin",
-      title: "Minimum team size enforced",
-      body: "Aggregates only appear when the team threshold is met.",
+      title: t("aggrGrid.minTeamSize.title"),
+      body: t("aggrGrid.minTeamSize.body"),
     },
     {
+      key: "weeklySmoothing",
       icon: "calendarWave",
-      title: "Weekly smoothing",
-      body: "Single-day spikes don't drive manager attention.",
+      title: t("aggrGrid.weeklySmoothing.title"),
+      body: t("aggrGrid.weeklySmoothing.body"),
     },
     {
+      key: "workEvents",
       icon: "annotation",
-      title: "Work event annotations",
-      body: "Sprint reviews, releases, and on-call periods are tagged automatically.",
+      title: t("aggrGrid.workEvents.title"),
+      body: t("aggrGrid.workEvents.body"),
     },
     {
+      key: "levelVariability",
       icon: "diverge",
-      title: "Level vs. variability",
-      body: "Reported separately — they answer different questions.",
+      title: t("aggrGrid.levelVariability.title"),
+      body: t("aggrGrid.levelVariability.body"),
     },
   ];
 
   return (
     <div className="mp-aggr-grid">
       {cards.map((c) => (
-        <div key={c.title} className="mp-aggr-card">
+        <div key={c.key} className="mp-aggr-card">
           <div className="mp-aggr-icon">
             <MIcon name={c.icon} tone="light" />
           </div>
@@ -641,29 +656,32 @@ export function AggregationGrid() {
    =========================================================== */
 
 export function ClaimsContrastPanel() {
-  const supported = [
-    "Cognitive trends over time",
-    "Team-level patterns",
-    "Construct-mapped behavioral signals",
-    "Within-person variance",
+  const t = useTranslations("researchMethodology");
+  const supported: Array<{ key: string; label: string }> = [
+    { key: "trends", label: t("claims.supported.trends") },
+    { key: "teamPatterns", label: t("claims.supported.teamPatterns") },
+    { key: "signals", label: t("claims.supported.signals") },
+    { key: "variance", label: t("claims.supported.variance") },
   ];
-  const outOfScope = [
-    "Transfer to specific business outcomes",
-    "Clinical or diagnostic value",
-    "Reliable individual ranking from short tasks",
-    "Self-invented metrics",
+  const outOfScope: Array<{ key: string; label: string }> = [
+    { key: "businessOutcomes", label: t("claims.outOfScope.businessOutcomes") },
+    { key: "clinical", label: t("claims.outOfScope.clinical") },
+    { key: "ranking", label: t("claims.outOfScope.ranking") },
+    { key: "selfInvented", label: t("claims.outOfScope.selfInvented") },
   ];
 
   return (
     <div className="mp-claims-grid">
       <div className="mp-claims-col mp-claims-col-good">
         <div className="mp-claims-head">
-          <span className="mp-claims-title">What we measure</span>
-          <span className="cc-badge cc-badge-good">Supported</span>
+          <span className="mp-claims-title">{t("claims.supportedTitle")}</span>
+          <span className="cc-badge cc-badge-good">
+            {t("claims.supportedBadge")}
+          </span>
         </div>
         <ul className="mp-claims-list">
           {supported.map((item) => (
-            <li key={item} className="mp-claims-item mp-claims-item-good">
+            <li key={item.key} className="mp-claims-item mp-claims-item-good">
               <span className="mp-claims-mark" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                   <path
@@ -675,7 +693,7 @@ export function ClaimsContrastPanel() {
                   />
                 </svg>
               </span>
-              <span>{item}</span>
+              <span>{item.label}</span>
             </li>
           ))}
         </ul>
@@ -683,12 +701,14 @@ export function ClaimsContrastPanel() {
 
       <div className="mp-claims-col mp-claims-col-warn">
         <div className="mp-claims-head">
-          <span className="mp-claims-title">What we do not claim</span>
-          <span className="cc-badge cc-badge-warn">Out of scope</span>
+          <span className="mp-claims-title">{t("claims.outOfScopeTitle")}</span>
+          <span className="cc-badge cc-badge-warn">
+            {t("claims.outOfScopeBadge")}
+          </span>
         </div>
         <ul className="mp-claims-list">
           {outOfScope.map((item) => (
-            <li key={item} className="mp-claims-item mp-claims-item-warn">
+            <li key={item.key} className="mp-claims-item mp-claims-item-warn">
               <span className="mp-claims-mark" aria-hidden="true">
                 <svg width="14" height="14" viewBox="0 0 24 24" fill="none">
                   <path
@@ -699,7 +719,7 @@ export function ClaimsContrastPanel() {
                   />
                 </svg>
               </span>
-              <span>{item}</span>
+              <span>{item.label}</span>
             </li>
           ))}
         </ul>
@@ -713,17 +733,21 @@ export function ClaimsContrastPanel() {
    =========================================================== */
 
 export function PublishTimeline() {
-  const stops: Array<{ title: string; state: "muted" | "muted2" | "active" }> = [
-    { title: "Pilot cohort data collected", state: "muted" },
-    { title: "Methodology note drafted + reviewed", state: "muted2" },
-    { title: "Published under /research/science-insight", state: "active" },
+  const t = useTranslations("researchMethodology");
+  const stops: Array<{
+    title: string;
+    state: "muted" | "muted2" | "active";
+  }> = [
+    { title: t("timeline.stop1"), state: "muted" },
+    { title: t("timeline.stop2"), state: "muted2" },
+    { title: t("timeline.stop3"), state: "active" },
   ];
 
   return (
     <div className="mp-timeline-wrap">
-      <ol className="mp-timeline" aria-label="Methodology publication milestones">
+      <ol className="mp-timeline" aria-label={t("timeline.aria")}>
         {stops.map((s, i) => (
-          <li key={s.title} className={`mp-timeline-stop mp-timeline-${s.state}`}>
+          <li key={s.state} className={`mp-timeline-stop mp-timeline-${s.state}`}>
             <span className="mp-timeline-dot" aria-hidden="true">
               <span className="mp-timeline-dot-inner" />
             </span>
@@ -732,9 +756,7 @@ export function PublishTimeline() {
           </li>
         ))}
       </ol>
-      <p className="mp-timeline-note">
-        We publish when the data is defensible. Not before.
-      </p>
+      <p className="mp-timeline-note">{t("timeline.note")}</p>
     </div>
   );
 }
@@ -744,6 +766,7 @@ export function PublishTimeline() {
    =========================================================== */
 
 export function PrivacyExplainerGrid() {
+  const t = useTranslations("researchMethodology");
   return (
     <div className="mp-privacy-wrap">
       <div className="mp-privacy-grid">
@@ -752,11 +775,10 @@ export function PrivacyExplainerGrid() {
             <MIcon name="baselineIsolated" tone="light" />
           </div>
           <div className="mp-privacy-title">
-            Why within-person normalisation protects privacy
+            {t("privacyGrid.withinPerson.title")}
           </div>
           <p className="mp-privacy-body">
-            An individual baseline carries no information about peers — there is
-            no peer distribution to back-solve against.
+            {t("privacyGrid.withinPerson.body")}
           </p>
         </div>
         <div className="mp-privacy-col">
@@ -764,18 +786,14 @@ export function PrivacyExplainerGrid() {
             <MIcon name="lockBar" tone="light" />
           </div>
           <div className="mp-privacy-title">
-            Why we don't publish sub-threshold aggregates
+            {t("privacyGrid.subThreshold.title")}
           </div>
           <p className="mp-privacy-body">
-            Small-cohort aggregates can be reverse-engineered to a single
-            employee. We suppress them at the source.
+            {t("privacyGrid.subThreshold.body")}
           </p>
         </div>
       </div>
-      <p className="mp-privacy-caption">
-        The same methodological choices that make our measurement accurate also
-        make de-anonymisation structurally harder.
-      </p>
+      <p className="mp-privacy-caption">{t("privacyGrid.caption")}</p>
     </div>
   );
 }
@@ -785,17 +803,22 @@ export function PrivacyExplainerGrid() {
    =========================================================== */
 
 export function ScenariosVsGamesPanel() {
+  const t = useTranslations("researchMethodology");
   return (
     <div className="cc-compare-grid">
       <div className="cc-compare-card cc-compare-card-muted">
         <div className="cc-compare-head">
-          <span className="cc-compare-title">Standard cognitive game</span>
-          <span className="cc-badge cc-badge-warn">Game-transfer problem</span>
+          <span className="cc-compare-title">
+            {t("scenariosPanel.gameTitle")}
+          </span>
+          <span className="cc-badge cc-badge-warn">
+            {t("scenariosPanel.gameBadge")}
+          </span>
         </div>
         <div className="cc-game-mock" aria-hidden="true">
           <div className="cc-game-mock-header">
-            <span>Level 6</span>
-            <span>Streak ×4</span>
+            <span>{t("scenariosPanel.gameLevel")}</span>
+            <span>{t("scenariosPanel.gameStreak")}</span>
           </div>
           <div className="cc-game-mock-grid">
             {[3, 7, 2, 8, 5, 9, 1, 4, 6].map((n, i) => (
@@ -808,51 +831,52 @@ export function ScenariosVsGamesPanel() {
             ))}
           </div>
           <div className="cc-game-mock-cta">
-            <span>Match the sequence</span>
+            <span>{t("scenariosPanel.gameMatch")}</span>
             <button type="button" className="cc-game-btn" tabIndex={-1}>
-              Tap
+              {t("scenariosPanel.gameTap")}
             </button>
           </div>
         </div>
-        <p className="cc-compare-note">
-          Meta-analyses consistently show people improve at the game. Transfer
-          to real workplace complexity: minimal.
-        </p>
+        <p className="cc-compare-note">{t("scenariosPanel.gameNote")}</p>
       </div>
 
       <div className="cc-compare-card cc-compare-card-real">
         <div className="cc-compare-head">
-          <span className="cc-compare-title">WelloWork behavioral scenario</span>
-          <span className="cc-badge cc-badge-good">Ecologically valid</span>
+          <span className="cc-compare-title">
+            {t("scenariosPanel.scenarioTitle")}
+          </span>
+          <span className="cc-badge cc-badge-good">
+            {t("scenariosPanel.scenarioBadge")}
+          </span>
         </div>
         <div className="cc-scenario-mock" aria-hidden="true">
           <div className="cc-scenario-mock-header">
-            <span className="cc-scenario-mock-step">Step 1 of 2</span>
-            <span className="cc-scenario-mock-tag">Procurement · review</span>
+            <span className="cc-scenario-mock-step">
+              {t("scenariosPanel.scenarioStep")}
+            </span>
+            <span className="cc-scenario-mock-tag">
+              {t("scenariosPanel.scenarioTag")}
+            </span>
           </div>
           <p className="cc-scenario-mock-prompt">
-            You're reviewing three vendor proposals submitted twenty minutes
-            apart. Which two conflict on delivery timeline?
+            {t("scenariosPanel.scenarioPrompt")}
           </p>
           <div className="cc-scenario-mock-options">
             <div className="cc-option">
               <span className="cc-option-key">A</span>
-              Proposals 1 and 2 — both reference the Q3 cut-off date.
+              {t("scenariosPanel.optionA")}
             </div>
             <div className="cc-option cc-option-focus">
               <span className="cc-option-key">B</span>
-              Proposals 1 and 3 — overlapping delivery windows and shared depot.
+              {t("scenariosPanel.optionB")}
             </div>
             <div className="cc-option">
               <span className="cc-option-key">C</span>
-              Proposals 2 and 3 — different regions, no overlap.
+              {t("scenariosPanel.optionC")}
             </div>
           </div>
         </div>
-        <p className="cc-compare-note">
-          Built from field observations of how people actually reason at work.
-          Not a proxy. Not a game.
-        </p>
+        <p className="cc-compare-note">{t("scenariosPanel.scenarioNote")}</p>
       </div>
     </div>
   );
@@ -863,27 +887,36 @@ export function ScenariosVsGamesPanel() {
    =========================================================== */
 
 export function ClosingMethodologyBanner() {
-  const items: Array<{ icon: IconName; title: string; body: string }> = [
+  const t = useTranslations("researchMethodology");
+  const items: Array<{
+    key: string;
+    icon: IconName;
+    title: string;
+    body: string;
+  }> = [
     {
+      key: "adaptive",
       icon: "adaptive",
-      title: "Adaptive difficulty",
-      body: "Each session calibrates in real time to your current performance level.",
+      title: t("closingBanner.adaptive.title"),
+      body: t("closingBanner.adaptive.body"),
     },
     {
+      key: "workplace",
       icon: "clock",
-      title: "Designed for workplace rhythms",
-      body: "Short daily sessions. No lab conditions required.",
+      title: t("closingBanner.workplace.title"),
+      body: t("closingBanner.workplace.body"),
     },
     {
+      key: "signal",
       icon: "longTrend",
-      title: "Signal over time",
-      body: "Patterns across weeks matter more than any single session score.",
+      title: t("closingBanner.signal.title"),
+      body: t("closingBanner.signal.body"),
     },
   ];
   return (
     <div className="cc-method-banner">
       {items.map((it) => (
-        <div key={it.title} className="cc-method-col">
+        <div key={it.key} className="cc-method-col">
           <div className="cc-method-icon">
             <MIcon name={it.icon} />
           </div>

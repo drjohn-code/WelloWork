@@ -2,6 +2,8 @@
    Style language mirrors CognitiveConstructsVisuals / MethodologyVisuals:
    periwinkle accent, dark navy on light lavender, rounded cards, no kitsch. */
 
+import { useTranslations } from "next-intl";
+
 /* ===========================================================
    Shared icon set
    =========================================================== */
@@ -167,36 +169,37 @@ function SiIcon({
    =========================================================== */
 
 export function ResearchNotebookCard() {
+  const t = useTranslations("researchScienceInsight");
   return (
-    <div className="si-notebook" aria-label="Sample research note in progress">
+    <div className="si-notebook" aria-label={t("notebook.aria")}>
       <div className="si-notebook-paper" aria-hidden="true" />
       <div className="si-notebook-inner">
         <div className="si-notebook-head">
           <span className="si-notebook-eyebrow">
-            <span className="si-notebook-dot" /> Research note
+            <span className="si-notebook-dot" /> {t("notebook.eyebrow")}
           </span>
-          <span className="si-notebook-status">Work in progress</span>
+          <span className="si-notebook-status">{t("notebook.status")}</span>
         </div>
 
         <div className="si-notebook-entry">
           <div className="si-notebook-row">
-            <span className="si-notebook-key">Construct</span>
-            <span className="si-notebook-val">N-back transfer</span>
+            <span className="si-notebook-key">{t("notebook.constructKey")}</span>
+            <span className="si-notebook-val">{t("notebook.constructVal")}</span>
           </div>
           <div className="si-notebook-row">
-            <span className="si-notebook-key">Status</span>
-            <span className="si-notebook-val">Hypothesis</span>
+            <span className="si-notebook-key">{t("notebook.statusKey")}</span>
+            <span className="si-notebook-val">{t("notebook.statusVal")}</span>
           </div>
           <div className="si-notebook-row">
-            <span className="si-notebook-key">Confidence</span>
-            <span className="si-notebook-val">Low–Medium</span>
+            <span className="si-notebook-key">{t("notebook.confidenceKey")}</span>
+            <span className="si-notebook-val">{t("notebook.confidenceVal")}</span>
           </div>
         </div>
 
-        <div className="si-notebook-meter" aria-label="Confidence ~35%">
+        <div className="si-notebook-meter" aria-label={t("notebook.meterAria")}>
           <div className="si-notebook-meter-label">
-            <span>Confidence</span>
-            <span>35%</span>
+            <span>{t("notebook.meterLabel")}</span>
+            <span>{t("notebook.meterValue")}</span>
           </div>
           <div className="si-notebook-meter-track">
             <div className="si-notebook-meter-fill" style={{ width: "35%" }} />
@@ -204,8 +207,8 @@ export function ResearchNotebookCard() {
         </div>
 
         <div className="si-notebook-foot">
-          <span className="si-notebook-stamp">Last updated</span>
-          <span>Pilot cohort 2 · Pending replication</span>
+          <span className="si-notebook-stamp">{t("notebook.lastUpdated")}</span>
+          <span>{t("notebook.lastUpdatedVal")}</span>
         </div>
       </div>
     </div>
@@ -217,36 +220,24 @@ export function ResearchNotebookCard() {
    =========================================================== */
 
 export function ContentScopeStrip() {
+  const t = useTranslations("researchScienceInsight");
   const cols: Array<{
     icon: IconName;
-    label: string;
-    body: string;
+    key: "methodology" | "litReviews" | "pilot";
   }> = [
-    {
-      icon: "doc",
-      label: "Methodology notes",
-      body: "How we designed each construct and why.",
-    },
-    {
-      icon: "book",
-      label: "Mini literature reviews",
-      body: "What the research actually says — including the weak spots.",
-    },
-    {
-      icon: "flask",
-      label: "Pilot observations",
-      body: "Early cohort data and what it changed in our design.",
-    },
+    { icon: "doc", key: "methodology" },
+    { icon: "book", key: "litReviews" },
+    { icon: "flask", key: "pilot" },
   ];
   return (
-    <div className="si-scope-grid" role="list" aria-label="What this section contains">
+    <div className="si-scope-grid" role="list" aria-label={t("scopeStrip.aria")}>
       {cols.map((c) => (
-        <div key={c.label} className="si-scope-col" role="listitem">
+        <div key={c.key} className="si-scope-col" role="listitem">
           <div className="si-scope-icon">
             <SiIcon name={c.icon} />
           </div>
-          <div className="si-scope-label">{c.label}</div>
-          <div className="si-scope-body">{c.body}</div>
+          <div className="si-scope-label">{t(`scopeStrip.${c.key}.label`)}</div>
+          <div className="si-scope-body">{t(`scopeStrip.${c.key}.body`)}</div>
         </div>
       ))}
     </div>
@@ -258,61 +249,59 @@ export function ContentScopeStrip() {
    =========================================================== */
 
 export function NoteAnatomyCard() {
+  const t = useTranslations("researchScienceInsight");
   return (
-    <div className="si-anatomy" aria-label="Anatomy of a research note">
+    <div className="si-anatomy" aria-label={t("anatomy.aria")}>
       <div className="si-anatomy-card">
         <div className="si-anatomy-section">
           <span className="si-anatomy-anno">
             <span className="si-anatomy-anno-arrow">↳</span>
-            Working hypothesis vs. established finding
+            {t("anatomy.anno1")}
           </span>
           <div className="si-anatomy-head">
-            <span className="si-anatomy-title">Within-employee normalisation</span>
-            <span className="si-anatomy-statusbadge">Working hypothesis</span>
+            <span className="si-anatomy-title">{t("anatomy.title")}</span>
+            <span className="si-anatomy-statusbadge">{t("anatomy.statusBadge")}</span>
           </div>
           <div className="si-anatomy-meta">
-            <span>Note · 2026-Q2</span>
+            <span>{t("anatomy.metaNote")}</span>
             <span className="si-anatomy-dot" />
-            <span>Pilot cohort 2</span>
+            <span>{t("anatomy.metaPilot")}</span>
           </div>
         </div>
 
-        <p className="si-anatomy-body">
-          Per-employee z-scoring removes inter-individual noise that population-relative
-          scoring inherits. The transfer cost is measurable but small in pilot data.
-        </p>
+        <p className="si-anatomy-body">{t("anatomy.body")}</p>
 
         <div className="si-anatomy-section">
           <span className="si-anatomy-anno">
             <span className="si-anatomy-anno-arrow">↳</span>
-            Primary sources cited
+            {t("anatomy.anno2")}
           </span>
           <div className="si-anatomy-ref">
             <span className="si-anatomy-ref-mark">[1]</span>
-            Owen et al. (2010); Melby-Lervåg &amp; Hulme (2013); Soveri et al. (2017).
+            {t("anatomy.ref")}
           </div>
         </div>
 
         <div className="si-anatomy-section">
           <span className="si-anatomy-anno">
             <span className="si-anatomy-anno-arrow">↳</span>
-            Confidence level indicated
+            {t("anatomy.anno3")}
           </span>
           <div className="si-anatomy-confidence">
-            <span className="si-anatomy-conf-label">Confidence</span>
+            <span className="si-anatomy-conf-label">{t("anatomy.confLabel")}</span>
             <div className="si-anatomy-conf-track">
               <div className="si-anatomy-conf-fill" style={{ width: "55%" }} />
             </div>
-            <span className="si-anatomy-conf-value">Medium</span>
+            <span className="si-anatomy-conf-value">{t("anatomy.confValue")}</span>
           </div>
         </div>
 
         <div className="si-anatomy-section">
           <span className="si-anatomy-anno">
             <span className="si-anatomy-anno-arrow">↳</span>
-            Links back to methodology
+            {t("anatomy.anno4")}
           </span>
-          <a className="si-anatomy-footlink">Linked from methodology overview →</a>
+          <a className="si-anatomy-footlink">{t("anatomy.footlink")}</a>
         </div>
       </div>
     </div>
@@ -326,53 +315,32 @@ export function NoteAnatomyCard() {
 type PipelineTone = "first" | "null" | "applied" | "pilot";
 
 export function NotePipelineStrip() {
+  const t = useTranslations("researchScienceInsight");
   const cards: Array<{
-    title: string;
-    tag: string;
-    status: string;
+    note: "note1" | "note2" | "note3" | "note4";
     tone: PipelineTone;
   }> = [
-    {
-      title: "Within-employee normalisation",
-      tag: "Scoring methodology",
-      status: "Coming first",
-      tone: "first",
-    },
-    {
-      title: "N-back transfer effects",
-      tag: "Construct validity",
-      status: "Includes null results",
-      tone: "null",
-    },
-    {
-      title: "Minimum team-size thresholds",
-      tag: "Aggregation design",
-      status: "Applied",
-      tone: "applied",
-    },
-    {
-      title: "Session-cadence drop-off",
-      tag: "Pilot observation",
-      status: "Design response included",
-      tone: "pilot",
-    },
+    { note: "note1", tone: "first" },
+    { note: "note2", tone: "null" },
+    { note: "note3", tone: "applied" },
+    { note: "note4", tone: "pilot" },
   ];
   return (
-    <div className="si-pipeline" role="list" aria-label="Upcoming research notes">
+    <div className="si-pipeline" role="list" aria-label={t("pipelineStrip.aria")}>
       {cards.map((c, i) => (
         <div
-          key={c.title}
+          key={c.note}
           className={`si-pipeline-card si-pipeline-card-${c.tone}`}
           role="listitem"
         >
           <div className="si-pipeline-stripe" />
           <div className="si-pipeline-body">
             <div className="si-pipeline-index">N{String(i + 1).padStart(2, "0")}</div>
-            <div className="si-pipeline-title">{c.title}</div>
-            <span className="si-pipeline-tag">{c.tag}</span>
+            <div className="si-pipeline-title">{t(`pipelineStrip.${c.note}.title`)}</div>
+            <span className="si-pipeline-tag">{t(`pipelineStrip.${c.note}.tag`)}</span>
             <div className="si-pipeline-status">
               <span className="si-pipeline-status-dot" />
-              {c.status}
+              {t(`pipelineStrip.${c.note}.status`)}
             </div>
           </div>
         </div>
@@ -386,12 +354,13 @@ export function NotePipelineStrip() {
    =========================================================== */
 
 export function PositioningSpectrum() {
+  const t = useTranslations("researchScienceInsight");
   return (
-    <div className="si-spectrum" aria-label="WelloWork research positioning">
+    <div className="si-spectrum" aria-label={t("spectrum.aria")}>
       <div className="si-spectrum-bar">
         <div className="si-spectrum-zone si-spectrum-zone-mute">
-          <span className="si-spectrum-zone-title">Marketing blog</span>
-          <span className="si-spectrum-zone-sub">Claims without uncertainty</span>
+          <span className="si-spectrum-zone-title">{t("spectrum.marketingTitle")}</span>
+          <span className="si-spectrum-zone-sub">{t("spectrum.marketingSub")}</span>
         </div>
         <div className="si-spectrum-zone si-spectrum-zone-mid">
           <div className="si-spectrum-zone-mid-head">
@@ -401,11 +370,9 @@ export function PositioningSpectrum() {
                 <rect x="11" y="11" width="10" height="10" rx="2" fill="#fff" opacity="0.85" />
               </svg>
             </span>
-            <span className="si-spectrum-zone-title">Science &amp; Insight</span>
+            <span className="si-spectrum-zone-title">{t("spectrum.midTitle")}</span>
           </div>
-          <span className="si-spectrum-zone-sub">
-            Working notes · caveats visible · honest about gaps
-          </span>
+          <span className="si-spectrum-zone-sub">{t("spectrum.midSub")}</span>
           <span className="si-spectrum-arrow" aria-hidden="true">
             <svg width="20" height="14" viewBox="0 0 20 14" fill="none">
               <path
@@ -419,13 +386,11 @@ export function PositioningSpectrum() {
           </span>
         </div>
         <div className="si-spectrum-zone si-spectrum-zone-mute">
-          <span className="si-spectrum-zone-title">Peer-reviewed journal</span>
-          <span className="si-spectrum-zone-sub">Finished claims · full peer review</span>
+          <span className="si-spectrum-zone-title">{t("spectrum.journalTitle")}</span>
+          <span className="si-spectrum-zone-sub">{t("spectrum.journalSub")}</span>
         </div>
       </div>
-      <p className="si-spectrum-note">
-        Anything that reaches publication standard will be linked from here.
-      </p>
+      <p className="si-spectrum-note">{t("spectrum.note")}</p>
     </div>
   );
 }
@@ -435,17 +400,18 @@ export function PositioningSpectrum() {
    =========================================================== */
 
 export function FieldVsGamesPanel() {
+  const t = useTranslations("researchScienceInsight");
   return (
     <div className="si-field-grid">
       <div className="si-field-card si-field-card-muted">
         <div className="si-field-head">
-          <span className="si-field-title">How cognitive games measure performance</span>
-          <span className="cc-badge cc-badge-warn">Limitation</span>
+          <span className="si-field-title">{t("fieldPanel.gameTitle")}</span>
+          <span className="cc-badge cc-badge-warn">{t("fieldPanel.gameBadge")}</span>
         </div>
         <div className="si-game-mock" aria-hidden="true">
           <div className="si-game-mock-head">
-            <span>Level 3</span>
-            <span>Score 820</span>
+            <span>{t("fieldPanel.gameLevel")}</span>
+            <span>{t("fieldPanel.gameScore")}</span>
           </div>
           <div className="si-game-mock-grid">
             {[
@@ -488,49 +454,40 @@ export function FieldVsGamesPanel() {
             ))}
           </div>
           <div className="si-game-mock-cta">
-            <span>Match the shape</span>
-            <span className="si-game-mock-btn">Tap</span>
+            <span>{t("fieldPanel.gameMatch")}</span>
+            <span className="si-game-mock-btn">{t("fieldPanel.gameTap")}</span>
           </div>
         </div>
-        <p className="si-field-note">
-          Participants improve at the game. Transfer to actual workplace complexity:
-          limited. Dozens of meta-analyses confirm this.
-        </p>
+        <p className="si-field-note">{t("fieldPanel.gameNote")}</p>
       </div>
 
       <div className="si-field-card si-field-card-real">
         <div className="si-field-head">
-          <span className="si-field-title">How WelloWork measures performance</span>
-          <span className="cc-badge cc-badge-good">Field-grounded</span>
+          <span className="si-field-title">{t("fieldPanel.scenarioTitle")}</span>
+          <span className="cc-badge cc-badge-good">{t("fieldPanel.scenarioBadge")}</span>
         </div>
         <div className="si-scenario-mock" aria-hidden="true">
           <div className="si-scenario-mock-head">
-            <span className="si-scenario-mock-step">Step 2 of 3</span>
-            <span className="si-scenario-mock-tag">Procurement · shortlist</span>
+            <span className="si-scenario-mock-step">{t("fieldPanel.scenarioStep")}</span>
+            <span className="si-scenario-mock-tag">{t("fieldPanel.scenarioTag")}</span>
           </div>
-          <p className="si-scenario-mock-prompt">
-            You&rsquo;ve reviewed 5 supplier proposals. Two new constraints just
-            arrived. Which original shortlist still holds?
-          </p>
+          <p className="si-scenario-mock-prompt">{t("fieldPanel.scenarioPrompt")}</p>
           <div className="si-scenario-mock-options">
             <div className="si-option">
               <span className="si-option-key">A</span>
-              Shortlist A — drop suppliers 2 and 4.
+              {t("fieldPanel.optionA")}
             </div>
             <div className="si-option si-option-focus">
               <span className="si-option-key">B</span>
-              Shortlist B — keep 1, 3, 5; re-score against new constraints.
+              {t("fieldPanel.optionB")}
             </div>
             <div className="si-option">
               <span className="si-option-key">C</span>
-              Restart the review with the new constraints applied first.
+              {t("fieldPanel.optionC")}
             </div>
           </div>
         </div>
-        <p className="si-field-note">
-          Designed from field observations of real workplace decisions. Measures
-          behavioral patterns, not game skill.
-        </p>
+        <p className="si-field-note">{t("fieldPanel.scenarioNote")}</p>
       </div>
     </div>
   );
@@ -541,33 +498,25 @@ export function FieldVsGamesPanel() {
    =========================================================== */
 
 export function TrustSignalStrip() {
-  const items: Array<{ icon: IconName; title: string; body: string }> = [
-    {
-      icon: "checkCaveat",
-      title: "No finished claims",
-      body: "We publish before we're certain. We say so.",
-    },
-    {
-      icon: "quote",
-      title: "Sources named",
-      body: "Every note identifies primary literature.",
-    },
-    {
-      icon: "envelope",
-      title: "Opt-in only",
-      body: "No list adds. Unsubscribe any time.",
-    },
+  const t = useTranslations("researchScienceInsight");
+  const items: Array<{
+    icon: IconName;
+    key: "noClaims" | "sources" | "optIn";
+  }> = [
+    { icon: "checkCaveat", key: "noClaims" },
+    { icon: "quote", key: "sources" },
+    { icon: "envelope", key: "optIn" },
   ];
   return (
-    <div className="si-trust-strip" role="list" aria-label="Editorial commitments">
+    <div className="si-trust-strip" role="list" aria-label={t("trustStrip.aria")}>
       {items.map((it) => (
-        <div key={it.title} className="si-trust-col" role="listitem">
+        <div key={it.key} className="si-trust-col" role="listitem">
           <div className="si-trust-icon">
             <SiIcon name={it.icon} tone="primary" />
           </div>
           <div className="si-trust-text">
-            <div className="si-trust-title">{it.title}</div>
-            <div className="si-trust-body">{it.body}</div>
+            <div className="si-trust-title">{t(`trustStrip.${it.key}.title`)}</div>
+            <div className="si-trust-body">{t(`trustStrip.${it.key}.body`)}</div>
           </div>
         </div>
       ))}

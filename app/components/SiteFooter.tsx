@@ -1,48 +1,45 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 
-type FooterLink = { label: string; href: string };
-type FooterColumn = { h: string; items: FooterLink[] };
+type FooterColumn = { key: "platform" | "research" | "company"; hrefs: string[] };
 
 const COLUMNS: FooterColumn[] = [
   {
-    h: "Platform",
-    items: [
-      { label: "WelloRise [Growth]", href: "/platform/growth" },
-      { label: "WelloWize [Assessment]", href: "/platform/assessment" },
-      { label: "Performance trends", href: "/platform/measure" },
-      { label: "Workshops", href: "/platform/workshops" },
-      { label: "Proactive Care", href: "/platform/proactive-care" },
+    key: "platform",
+    hrefs: [
+      "/platform/growth",
+      "/platform/assessment",
+      "/platform/measure",
+      "/platform/workshops",
+      "/platform/proactive-care",
     ],
   },
   {
-    h: "Research",
-    items: [
-      { label: "Methodology", href: "/research/methodology" },
-      { label: "Science & insight", href: "/research/science-insight" },
-      { label: "Cognitive constructs", href: "/research/cognitive-constructs" },
+    key: "research",
+    hrefs: [
+      "/research/methodology",
+      "/research/science-insight",
+      "/research/cognitive-constructs",
     ],
   },
   {
-    h: "Company",
-    items: [
-      { label: "About", href: "/about" },
-      { label: "Careers", href: "/careers" },
-      { label: "Contact", href: "/contact" },
-    ],
+    key: "company",
+    hrefs: ["/about", "/careers", "/contact"],
   },
 ];
 
-const LEGAL_LINKS: FooterLink[] = [
-  { label: "Privacy", href: "/legal#privacy" },
-  { label: "Terms", href: "/legal#terms" },
-  { label: "Cookies", href: "/legal#cookies" },
-  { label: "Data processing", href: "/legal#data-processing" },
+const LEGAL_LINKS: { key: "privacy" | "terms" | "cookies" | "dataProcessing"; href: string }[] = [
+  { key: "privacy", href: "/legal#privacy" },
+  { key: "terms", href: "/legal#terms" },
+  { key: "cookies", href: "/legal#cookies" },
+  { key: "dataProcessing", href: "/legal#data-processing" },
 ];
 
-const BADGES = ["GDPR-native", "ISO 27001", "SOC Type II", "HIPAA-ready"];
+const BADGES: ("gdpr" | "iso" | "soc" | "hipaa")[] = ["gdpr", "iso", "soc", "hipaa"];
 
 export function SiteFooter() {
+  const t = useTranslations("footer");
   return (
     <footer className="footer-wrap">
       <div className="container" style={{ position: "relative", padding: "64px 32px 32px" }}>
@@ -56,7 +53,7 @@ export function SiteFooter() {
           }}
         >
           <div>
-            <Link href="/" aria-label="WelloWork home" style={{ display: "inline-block" }}>
+            <Link href="/" aria-label={t("aria.home")} style={{ display: "inline-block" }}>
               <Logo textColor="white" />
             </Link>
 
@@ -69,8 +66,7 @@ export function SiteFooter() {
                 lineHeight: 1.55,
               }}
             >
-              The workplace performance platform. Daily cognitive training, longitudinal trends, and
-              biomarker-based health insights, built in Sweden.
+              {t("tagline")}
             </p>
             <div style={{ marginTop: 20, display: "flex", gap: 8, flexWrap: "wrap" }}>
               {BADGES.map((b) => (
@@ -86,23 +82,26 @@ export function SiteFooter() {
                     color: "rgba(255,255,255,0.75)",
                   }}
                 >
-                  {b}
+                  {t(`badges.${b}`)}
                 </span>
               ))}
             </div>
           </div>
-          {COLUMNS.map((col) => (
-            <div key={col.h} className="footer-col">
-              <h4>{col.h}</h4>
-              <ul>
-                {col.items.map((i) => (
-                  <li key={i.href}>
-                    <Link href={i.href}>{i.label}</Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-          ))}
+          {COLUMNS.map((col) => {
+            const labels = t.raw(`columns.${col.key}.items`) as string[];
+            return (
+              <div key={col.key} className="footer-col">
+                <h4>{t(`columns.${col.key}.h`)}</h4>
+                <ul>
+                  {col.hrefs.map((href, idx) => (
+                    <li key={href}>
+                      <Link href={href}>{labels[idx]}</Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            );
+          })}
         </div>
 
         <div style={{ height: 1, background: "rgba(255,255,255,0.10)", marginBottom: 24 }} />
@@ -116,11 +115,11 @@ export function SiteFooter() {
             fontSize: 13,
           }}
         >
-          <span>© 2024-2026 WelloWork AB · Uppsala, Sweden</span>
+          <span>{t("copyright")}</span>
           <div style={{ display: "flex", gap: 24 }}>
             {LEGAL_LINKS.map((l) => (
               <Link key={l.href} href={l.href}>
-                {l.label}
+                {t(`legal.${l.key}`)}
               </Link>
             ))}
           </div>

@@ -1,119 +1,61 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { ArrowRight, Icon, ICONS } from "./Icons";
 import { PrivacyChip } from "./Chips";
 
 type TabId = "Growth" | "Assessment" | "Measure" | "Workshops" | "Proactive Care";
 
+type TabKey = "growth" | "assessment" | "measure" | "workshops" | "proactiveCare";
+
 type Tab = {
   id: TabId;
-  label: string;
-  eyebrow: string;
-  title: string;
-  body: string;
-  bullets: string[];
+  key: TabKey;
   href: string;
 };
 
 const TABS: Tab[] = [
-  {
-    id: "Growth",
-    label: "Growth",
-    eyebrow: "WelloRise",
-    title: "Daily cognitive training that fits in a coffee break.",
-    body: "Adaptive exercises across problem solving, working memory, attention, processing speed, and cognitive flexibility. Tokens unlock courses; a task marketplace lets colleagues help each other and earn.",
-    bullets: [
-      "Adaptive difficulty per cognitive domain",
-      "Tokens redeem for courses & growth tracks",
-      "Team Composition engine recommends optimal teams per project",
-    ],
-    href: "/platform/growth",
-  },
-  {
-    id: "Assessment",
-    label: "Assessment",
-    eyebrow: "WelloWize",
-    title: "Hiring and internal assessments — cognitive and technical.",
-    body: "One assessment framework for candidates and existing employees. Build defensible profiles before the offer letter, and keep measuring after it.",
-    bullets: [
-      "Cognitive + technical, one framework",
-      "Hiring panel results in minutes",
-      "Internal benchmarks against role + tenure",
-    ],
-    href: "/platform/assessment",
-  },
-  {
-    id: "Measure",
-    label: "Measure",
-    eyebrow: "Performance trends",
-    title: "Longitudinal performance — not a one-time score.",
-    body: "Every session, every assessment, every workshop is a data point. See how cognitive performance changes through sprints, shifts, and seasons — for individuals and aggregated for managers.",
-    bullets: [
-      "90-day, 6-month, and 12-month views",
-      "Auto-annotated against work events",
-      "Promotion-readiness signals based on trend, not a single test",
-    ],
-    href: "/platform/measure",
-  },
-  {
-    id: "Workshops",
-    label: "Workshops",
-    eyebrow: "Service layer",
-    title: "Live health workshops, on-site or remote.",
-    body: "Facilitator-led sessions designed around the cognitive performance and longevity themes that compound. Booked through the same platform — outcomes flow back into the trend data.",
-    bullets: [
-      "Facilitator-led, on-site or remote",
-      "Aligned with cognitive & longevity science",
-      "Bookings, attendance, and follow-ups in one place",
-    ],
-    href: "/platform/workshops",
-  },
-  {
-    id: "Proactive Care",
-    label: "Proactive Care",
-    eyebrow: "Preventive care",
-    title: "Biomarker testing for longevity, general health, and drug screening.",
-    body: "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their full report. Managers only see anonymised, aggregated trends.",
-    bullets: [
-      "Blood: longevity biomarkers",
-      "Urine: general health & drug screening",
-      "Employee-private + manager-aggregated views",
-    ],
-    href: "/platform/proactive-care",
-  },
+  { id: "Growth", key: "growth", href: "/platform/growth" },
+  { id: "Assessment", key: "assessment", href: "/platform/assessment" },
+  { id: "Measure", key: "measure", href: "/platform/measure" },
+  { id: "Workshops", key: "workshops", href: "/platform/workshops" },
+  { id: "Proactive Care", key: "proactiveCare", href: "/platform/proactive-care" },
 ];
 
 export function PlatformTabs() {
+  const t = useTranslations("platformTabs");
   const [active, setActive] = useState<TabId>("Growth");
-  const cur = TABS.find((t) => t.id === active) ?? TABS[0];
+  const cur = TABS.find((tab) => tab.id === active) ?? TABS[0];
+  const curLabel = t(`tabs.${cur.key}.label`);
+  const curBullets = t.raw(`tabs.${cur.key}.bullets`) as string[];
 
   return (
     <section id="platform" className="section">
       <div className="container">
         <Reveal>
           <div style={{ textAlign: "center", marginBottom: 14 }}>
-            <span className="eyebrow">The platform</span>
+            <span className="eyebrow">{t("section.eyebrow")}</span>
           </div>
           <h2 className="h-section" style={{ textAlign: "center", margin: "0 auto 40px", maxWidth: "20ch" }}>
-            One operating system for{" "}
+            {t("section.heading.lead")}
             <span className="italic-serif" style={{ color: "var(--accent)" }}>
-              human capital.
+              {t("section.heading.accent")}
             </span>
           </h2>
         </Reveal>
 
         <Reveal delay={1}>
           <div style={{ display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap", marginBottom: 32 }}>
-            {TABS.map((t) => (
+            {TABS.map((tab) => (
               <button
-                key={t.id}
-                className={`tab-btn ${active === t.id ? "active" : ""}`}
-                onClick={() => setActive(t.id)}
+                key={tab.id}
+                className={`tab-btn ${active === tab.id ? "active" : ""}`}
+                onClick={() => setActive(tab.id)}
               >
-                {t.label}
+                {t(`tabs.${tab.key}.label`)}
               </button>
             ))}
           </div>
@@ -180,12 +122,12 @@ export function PlatformTabs() {
                   animation: "fadeInUp .4s ease",
                 }}
               >
-                <span className="eyebrow">{cur.eyebrow}</span>
+                <span className="eyebrow">{t(`tabs.${cur.key}.eyebrow`)}</span>
                 <h3 className="h-section" style={{ fontSize: "clamp(26px,3vw,36px)", margin: 0 }}>
-                  {cur.title}
+                  {t(`tabs.${cur.key}.title`)}
                 </h3>
                 <p className="body" style={{ margin: 0, maxWidth: "42ch" }}>
-                  {cur.body}
+                  {t(`tabs.${cur.key}.body`)}
                 </p>
                 <ul
                   style={{
@@ -197,7 +139,7 @@ export function PlatformTabs() {
                     gap: 10,
                   }}
                 >
-                  {cur.bullets.map((b) => (
+                  {curBullets.map((b) => (
                     <li
                       key={b}
                       style={{
@@ -248,7 +190,7 @@ export function PlatformTabs() {
                     marginTop: 10,
                   }}
                 >
-                  Explore {cur.label.toLowerCase()} <ArrowRight size={14} />
+                  {t("cta.explore", { tab: curLabel.toLowerCase() })} <ArrowRight size={14} />
                 </Link>
               </div>
             </div>
@@ -328,9 +270,10 @@ function PanelChrome({
 }
 
 function GrowthVisual() {
+  const t = useTranslations("platformTabsMock");
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 380 }}>
-      <PanelChrome url="app.wellowork.net / train" badge="Working memory · day 14">
+      <PanelChrome url={t("growth.url")} badge={t("growth.badge")}>
         <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 12 }}>
           <span
             className="small"
@@ -342,9 +285,9 @@ function GrowthVisual() {
               textTransform: "uppercase",
             }}
           >
-            N-back · level 4
+            {t("growth.exercise")}
           </span>
-          <span style={{ fontSize: 12, fontWeight: 600, color: "var(--primary)" }}>00:24</span>
+          <span style={{ fontSize: 12, fontWeight: 600, color: "var(--primary)" }}>{t("growth.timer")}</span>
         </div>
         <div
           style={{
@@ -383,7 +326,7 @@ function GrowthVisual() {
               color: "var(--ink-2)",
             }}
           >
-            Match (M)
+            {t("growth.btnMatch")}
           </button>
           <button
             style={{
@@ -397,7 +340,7 @@ function GrowthVisual() {
               fontSize: 13,
             }}
           >
-            Skip (Space)
+            {t("growth.btnSkip")}
           </button>
         </div>
       </PanelChrome>
@@ -429,8 +372,8 @@ function GrowthVisual() {
           <Icon name="star" size={16} />
         </div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 13, fontWeight: 600 }}>+12 tokens earned</div>
-          <div style={{ fontSize: 11, opacity: 0.8 }}>Streak: 14 days · Marketplace balance: 248</div>
+          <div style={{ fontSize: 13, fontWeight: 600 }}>{t("growth.tokens")}</div>
+          <div style={{ fontSize: 11, opacity: 0.8 }}>{t("growth.streak")}</div>
         </div>
       </div>
     </div>
@@ -438,15 +381,16 @@ function GrowthVisual() {
 }
 
 function AssessmentVisual() {
+  const t = useTranslations("platformTabsMock");
   const scores = [
-    { label: "Problem solving", val: 84 },
-    { label: "Working memory", val: 91 },
-    { label: "Processing speed", val: 78 },
-    { label: "Attention", val: 86 },
-    { label: "Technical · TS", val: 73 },
+    { label: t("assessment.score.problemSolving"), val: 84 },
+    { label: t("assessment.score.workingMemory"), val: 91 },
+    { label: t("assessment.score.processingSpeed"), val: 78 },
+    { label: t("assessment.score.attention"), val: 86 },
+    { label: t("assessment.score.technical"), val: 73 },
   ];
   return (
-    <PanelChrome url="app.wellowork.net / assess / candidate" badge="Sample candidate">
+    <PanelChrome url={t("assessment.url")} badge={t("assessment.badge")}>
       <div style={{ display: "flex", alignItems: "center", gap: 12, marginBottom: 14 }}>
         <div
           style={{
@@ -466,8 +410,8 @@ function AssessmentVisual() {
           JK
         </div>
         <div style={{ flex: 1 }}>
-          <div style={{ fontSize: 14, fontWeight: 600 }}>J. Karlsson</div>
-          <div style={{ fontSize: 11, color: "var(--ink-3)" }}>Backend Engineer · Stockholm</div>
+          <div style={{ fontSize: 14, fontWeight: 600 }}>{t("assessment.name")}</div>
+          <div style={{ fontSize: 11, color: "var(--ink-3)" }}>{t("assessment.role")}</div>
         </div>
         <span
           style={{
@@ -479,7 +423,7 @@ function AssessmentVisual() {
             color: "var(--success)",
           }}
         >
-          Strong match
+          {t("assessment.match")}
         </span>
       </div>
 
@@ -519,15 +463,24 @@ function AssessmentVisual() {
           gap: 8,
         }}
       >
-        <Icon name="check" size={14} /> Above role benchmark in 4 of 5 cognitive domains.
+        <Icon name="check" size={14} /> {t("assessment.note")}
       </div>
     </PanelChrome>
   );
 }
 
 function MeasureVisual() {
+  const t = useTranslations("platformTabsMock");
+  const months = [
+    t("measure.axis.dec"),
+    t("measure.axis.jan"),
+    t("measure.axis.feb"),
+    t("measure.axis.mar"),
+    t("measure.axis.apr"),
+    t("measure.axis.may"),
+  ];
   return (
-    <PanelChrome url="app.wellowork.net / trends" badge="Eng team · 6 months">
+    <PanelChrome url={t("measure.url")} badge={t("measure.badge")}>
       <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: 10 }}>
         <span
           style={{
@@ -538,9 +491,9 @@ function MeasureVisual() {
             textTransform: "uppercase",
           }}
         >
-          Cognitive performance
+          {t("measure.title")}
         </span>
-        <span style={{ fontSize: 11, color: "var(--ink-3)" }}>Smoothed weekly · sample data</span>
+        <span style={{ fontSize: 11, color: "var(--ink-3)" }}>{t("measure.subtitle")}</span>
       </div>
       <svg viewBox="0 0 340 150" style={{ width: "100%", height: 150, display: "block" }}>
         <defs>
@@ -552,7 +505,7 @@ function MeasureVisual() {
         {[40, 70, 100, 130].map((y) => (
           <line key={y} x1="20" x2="330" y1={y} y2={y} stroke="rgba(15,29,69,0.06)" />
         ))}
-        {["Dec", "Jan", "Feb", "Mar", "Apr", "May"].map((m, i) => (
+        {months.map((m, i) => (
           <text key={m} x={20 + i * 62} y="148" fontSize="9" fill="rgba(15,29,69,0.45)">
             {m}
           </text>
@@ -573,7 +526,7 @@ function MeasureVisual() {
           <line x1="200" y1="95" x2="200" y2="118" stroke="rgba(15,29,69,0.25)" strokeWidth="1" strokeDasharray="2 3" />
           <rect x="148" y="120" width="104" height="18" rx="9" fill="white" stroke="rgba(15,29,69,0.12)" />
           <text x="200" y="132" fontSize="9" textAnchor="middle" fill="rgba(15,29,69,0.7)">
-            Sprint review · focus −8%
+            {t("measure.annotation")}
           </text>
         </g>
         <circle cx="200" cy="95" r="3.5" fill="white" stroke="var(--accent)" strokeWidth="2" />
@@ -581,9 +534,13 @@ function MeasureVisual() {
       </svg>
       <div style={{ display: "grid", gridTemplateColumns: "repeat(3,1fr)", gap: 8, marginTop: 12 }}>
         {[
-          { l: "Avg focus", v: "+11%", cap: "vs. last quarter" },
-          { l: "Memory", v: "+6%", cap: "rolling 30-day" },
-          { l: "Variability", v: "−14%", cap: "team-level" },
+          { l: t("measure.stat.focus.label"), v: t("measure.stat.focus.value"), cap: t("measure.stat.focus.cap") },
+          { l: t("measure.stat.memory.label"), v: t("measure.stat.memory.value"), cap: t("measure.stat.memory.cap") },
+          {
+            l: t("measure.stat.variability.label"),
+            v: t("measure.stat.variability.value"),
+            cap: t("measure.stat.variability.cap"),
+          },
         ].map((m) => (
           <div key={m.l} style={{ padding: 10, borderRadius: 10, background: "rgba(15,29,69,0.04)" }}>
             <div
@@ -616,14 +573,13 @@ function MeasureVisual() {
 }
 
 function WorkshopsVisual() {
-  const workshops = [
-    { day: "TUE", date: "21", title: "Sleep architecture & recovery", when: "10:00 · Remote · 60 min" },
-    { day: "WED", date: "22", title: "Nutrition for cognitive performance", when: "13:00 · On-site · 90 min" },
-    { day: "THU", date: "23", title: "Stress, focus, and cognitive load", when: "15:30 · Remote · 60 min" },
-    { day: "FRI", date: "24", title: "Longevity & metabolic health basics", when: "11:00 · On-site · 90 min" },
-  ];
+  const t = useTranslations("platformTabsMock");
+  const tv = useTranslations("platformTabs.visual.workshops");
+  const items = t.raw("workshops") as Array<{ day: string; title: string; when: string }>;
+  const dates = ["21", "22", "23", "24"];
+  const workshops = items.map((w, i) => ({ ...w, date: dates[i] }));
   return (
-    <PanelChrome url="app.wellowork.net / workshops" badge="May · upcoming">
+    <PanelChrome url={tv("url")} badge={tv("badge")}>
       <div style={{ display: "flex", flexDirection: "column", gap: 8 }}>
         {workshops.map((w, i) => (
           <div
@@ -679,7 +635,7 @@ function WorkshopsVisual() {
                   letterSpacing: "0.06em",
                 }}
               >
-                14 booked
+                {tv("booked")}
               </span>
             )}
           </div>
@@ -690,22 +646,24 @@ function WorkshopsVisual() {
 }
 
 function ProactiveCareVisual() {
+  const t = useTranslations("platformTabsMock");
+  const tv = useTranslations("platformTabs.visual.proactiveCare.marker");
   return (
     <div style={{ display: "flex", flexDirection: "column", gap: 12, maxWidth: 380 }}>
-      <PanelChrome url="app.wellowork.net / health / report" badge="Your view · private">
+      <PanelChrome url={t("proactiveCare.url")} badge={t("proactiveCare.badge")}>
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 10 }}>
           <div>
-            <div style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-1)" }}>Blood panel · longevity</div>
-            <div style={{ fontSize: 11, color: "var(--ink-3)" }}>Drawn 12 May · 11 markers</div>
+            <div style={{ fontSize: 13, fontWeight: 600, color: "var(--ink-1)" }}>{t("proactiveCare.panelTitle")}</div>
+            <div style={{ fontSize: 11, color: "var(--ink-3)" }}>{t("proactiveCare.panelSub")}</div>
           </div>
-          <PrivacyChip>Only you can see this</PrivacyChip>
+          <PrivacyChip>{t("proactiveCare.privacyChip")}</PrivacyChip>
         </div>
         <div style={{ display: "grid", gridTemplateColumns: "repeat(2,1fr)", gap: 6 }}>
           {[
-            { l: "HbA1c", v: "5.2", tag: "optimal", c: "var(--success)" },
-            { l: "hs-CRP", v: "0.8", tag: "good", c: "var(--success)" },
-            { l: "ApoB", v: "88", tag: "monitor", c: "#D97706" },
-            { l: "Vitamin D", v: "54", tag: "optimal", c: "var(--success)" },
+            { l: tv("hba1c.l"), v: "5.2", tag: t("proactiveCare.marker.hba1c.tag"), c: "var(--success)" },
+            { l: tv("hscrp.l"), v: "0.8", tag: t("proactiveCare.marker.hscrp.tag"), c: "var(--success)" },
+            { l: tv("apob.l"), v: "88", tag: t("proactiveCare.marker.apob.tag"), c: "#D97706" },
+            { l: tv("vitaminD.l"), v: "54", tag: t("proactiveCare.marker.vitd.tag"), c: "var(--success)" },
           ].map((m) => (
             <div key={m.l} style={{ padding: 8, borderRadius: 8, background: "rgba(15,29,69,0.04)" }}>
               <div
@@ -758,7 +716,7 @@ function ProactiveCareVisual() {
         }}
       >
         <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", marginBottom: 8 }}>
-          <div style={{ fontSize: 12, fontWeight: 600 }}>Manager view · aggregated</div>
+          <div style={{ fontSize: 12, fontWeight: 600 }}>{t("proactiveCare.managerView")}</div>
           <span
             style={{
               fontSize: 10,
@@ -786,18 +744,18 @@ function ProactiveCareVisual() {
                 strokeLinejoin="round"
               />
             </svg>
-            Anonymised
+            {t("proactiveCare.anonymised")}
           </span>
         </div>
-        <div style={{ fontSize: 11, opacity: 0.8 }}>Engineering · 14 members</div>
+        <div style={{ fontSize: 11, opacity: 0.8 }}>{t("proactiveCare.team")}</div>
         <div style={{ marginTop: 10, display: "flex", alignItems: "baseline", gap: 8 }}>
           <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 24 }}>
             12<span style={{ fontSize: 14, opacity: 0.7 }}> / 14</span>
           </span>
-          <span style={{ fontSize: 11, opacity: 0.8 }}>reports completed this cycle</span>
+          <span style={{ fontSize: 11, opacity: 0.8 }}>{t("proactiveCare.reports")}</span>
         </div>
         <div style={{ marginTop: 8, fontSize: 11, opacity: 0.8 }}>
-          Individual values are never shown — only trends.
+          {t("proactiveCare.footnote")}
         </div>
       </div>
     </div>

@@ -1,17 +1,17 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useTranslations } from "next-intl";
 
-type NavItem = { id: string; label: string };
-
-const ITEMS: NavItem[] = [
-  { id: "privacy", label: "Privacy Policy" },
-  { id: "terms", label: "Terms of Service" },
-  { id: "cookies", label: "Cookie Policy" },
-  { id: "data-processing", label: "Data Processing" },
-];
+const ITEMS = [
+  { id: "privacy", labelKey: "nav.privacy" },
+  { id: "terms", labelKey: "nav.terms" },
+  { id: "cookies", labelKey: "nav.cookies" },
+  { id: "data-processing", labelKey: "nav.dataProcessing" },
+] as const;
 
 export function LegalNav() {
+  const t = useTranslations("legal");
   const [active, setActive] = useState<string>("privacy");
 
   useEffect(() => {
@@ -56,8 +56,8 @@ export function LegalNav() {
 
   return (
     <>
-      <nav className="legal-side-nav" aria-label="Legal sections (desktop)">
-        <div className="legal-side-nav-label">On this page</div>
+      <nav className="legal-side-nav" aria-label={t("nav.desktopAria")}>
+        <div className="legal-side-nav-label">{t("nav.onThisPage")}</div>
         <ul>
           {ITEMS.map((it) => (
             <li key={it.id}>
@@ -67,14 +67,14 @@ export function LegalNav() {
                 className={`legal-side-nav-link ${active === it.id ? "is-active" : ""}`}
               >
                 <span className="legal-side-nav-dot" aria-hidden="true" />
-                {it.label}
+                {t(it.labelKey)}
               </a>
             </li>
           ))}
         </ul>
       </nav>
 
-      <nav className="legal-mobile-tabs" aria-label="Legal sections (mobile)">
+      <nav className="legal-mobile-tabs" aria-label={t("nav.mobileAria")}>
         <div className="legal-mobile-tabs-track">
           {ITEMS.map((it) => (
             <a
@@ -83,7 +83,7 @@ export function LegalNav() {
               onClick={(e) => onClick(e, it.id)}
               className={`legal-mobile-tab ${active === it.id ? "is-active" : ""}`}
             >
-              {it.label}
+              {t(it.labelKey)}
             </a>
           ))}
         </div>

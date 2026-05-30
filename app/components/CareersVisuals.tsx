@@ -1,9 +1,11 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { ORG_EMAIL } from "../lib/site";
 
 /* ---------- Hero: floating "intro email" card mock-up ---------- */
 
 export function IntroCard() {
+  const t = useTranslations("careers");
   return (
     <div className="careers-intro-card glass">
       <span className="careers-intro-read" aria-hidden="true">
@@ -16,7 +18,7 @@ export function IntroCard() {
             strokeLinejoin="round"
           />
         </svg>
-        Read
+        {t("introCard.readBadge")}
       </span>
 
       <div className="careers-intro-header">
@@ -32,41 +34,34 @@ export function IntroCard() {
           </svg>
         </div>
         <div style={{ minWidth: 0 }}>
-          <div className="careers-intro-name">Lena K.</div>
-          <div className="careers-intro-role">Product Designer</div>
+          <div className="careers-intro-name">{t("introCard.name")}</div>
+          <div className="careers-intro-role">{t("introCard.role")}</div>
         </div>
       </div>
 
       <div className="careers-intro-meta" aria-hidden="true">
-        <span className="careers-intro-meta-key">Subject</span>
-        <span className="careers-intro-meta-val">Hello from Berlin — would love to introduce myself</span>
+        <span className="careers-intro-meta-key">{t("introCard.subjectKey")}</span>
+        <span className="careers-intro-meta-val">{t("introCard.subjectVal")}</span>
       </div>
 
       <div className="careers-intro-body">
         <p>
-          <em>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. I've been
-            following WelloWork's methodology notes for a while and wanted to
-            send a short hello.
-          </em>
+          <em>{t("introCard.bodyP1")}</em>
         </p>
         <p>
-          <em>
-            Sed do eiusmod tempor incididunt ut labore — happy to share work
-            samples and walk through how I'd approach a pilot onboarding flow.
-          </em>
+          <em>{t("introCard.bodyP2")}</em>
         </p>
       </div>
 
       <div className="careers-intro-tags">
         <span className="careers-intro-tag">
-          Portfolio <span aria-hidden="true">↗</span>
+          {t("introCard.tagPortfolio")} <span aria-hidden="true">↗</span>
         </span>
         <span className="careers-intro-tag">
-          GitHub <span aria-hidden="true">↗</span>
+          {t("introCard.tagGithub")} <span aria-hidden="true">↗</span>
         </span>
         <span className="careers-intro-tag">
-          Case study <span aria-hidden="true">↗</span>
+          {t("introCard.tagCaseStudy")} <span aria-hidden="true">↗</span>
         </span>
       </div>
     </div>
@@ -154,41 +149,25 @@ function RoleIcon({ name }: { name: "engineer" | "designer" | "researcher" | "sa
 }
 
 export function RoleCards() {
+  const t = useTranslations("careers");
   const cards: Array<{
     icon: "engineer" | "designer" | "researcher" | "sales";
-    label: string;
-    desc: string;
+    key: "engineers" | "designers" | "researchers" | "salesCs";
   }> = [
-    {
-      icon: "engineer",
-      label: "Engineers",
-      desc: "Shipped product, not only frameworks.",
-    },
-    {
-      icon: "designer",
-      label: "Designers",
-      desc: "Evidence-based product with opinions on type and motion.",
-    },
-    {
-      icon: "researcher",
-      label: "Researchers",
-      desc: "Cognitive science or quantitative psychology — methodology notes that hold up.",
-    },
-    {
-      icon: "sales",
-      label: "Sales & CS",
-      desc: "Ran pilots end-to-end at small, careful B2B companies.",
-    },
+    { icon: "engineer", key: "engineers" },
+    { icon: "designer", key: "designers" },
+    { icon: "researcher", key: "researchers" },
+    { icon: "sales", key: "salesCs" },
   ];
   return (
     <div className="careers-role-grid">
       {cards.map((c) => (
-        <div key={c.label} className="careers-role-card">
+        <div key={c.key} className="careers-role-card">
           <div className="careers-role-icon">
             <RoleIcon name={c.icon} />
           </div>
-          <div className="careers-role-label">{c.label}</div>
-          <div className="careers-role-desc">{c.desc}</div>
+          <div className="careers-role-label">{t(`roleCards.${c.key}.label`)}</div>
+          <div className="careers-role-desc">{t(`roleCards.${c.key}.desc`)}</div>
         </div>
       ))}
     </div>
@@ -253,28 +232,34 @@ function StepIcon({ name }: { name: "mail" | "chat" | "clipboard" | "team" }) {
 }
 
 export function HiringFlow() {
+  const t = useTranslations("careers");
   const steps: Array<{
     icon: "mail" | "chat" | "clipboard" | "team";
-    label: string;
-    note: string;
+    key: "intro" | "conversation" | "workSample" | "trialDay";
   }> = [
-    { icon: "mail", label: "Intro email", note: "Low bar — no CV needed" },
-    { icon: "chat", label: "Conversation", note: "~30 min, no prep" },
-    { icon: "clipboard", label: "Work sample", note: "Tied to the actual role" },
-    { icon: "team", label: "Paid trial day", note: "You meet the whole team" },
+    { icon: "mail", key: "intro" },
+    { icon: "chat", key: "conversation" },
+    { icon: "clipboard", key: "workSample" },
+    { icon: "team", key: "trialDay" },
   ];
   return (
     <div className="careers-flow">
       <div className="careers-flow-line" aria-hidden="true" />
       <ol className="careers-flow-steps">
         {steps.map((s, i) => (
-          <li key={s.label} className="careers-flow-step">
+          <li key={s.key} className="careers-flow-step">
             <div className="careers-flow-dot">
               <StepIcon name={s.icon} />
             </div>
-            <div className="careers-flow-stage">Stage {i + 1}</div>
-            <div className="careers-flow-label">{s.label}</div>
-            <div className="careers-flow-note">{s.note}</div>
+            <div className="careers-flow-stage">
+              {t("hiringFlow.stagePrefix", { n: i + 1 })}
+            </div>
+            <div className="careers-flow-label">
+              {t(`hiringFlow.${s.key}.label`)}
+            </div>
+            <div className="careers-flow-note">
+              {t(`hiringFlow.${s.key}.note`)}
+            </div>
           </li>
         ))}
       </ol>
@@ -331,36 +316,24 @@ function NormIcon({ name }: { name: "write" | "remote" | "public" }) {
 }
 
 export function WorkingNorms() {
+  const t = useTranslations("careers");
   const items: Array<{
     icon: "write" | "remote" | "public";
-    label: string;
-    note: string;
+    key: "written" | "remote" | "public";
   }> = [
-    {
-      icon: "write",
-      label: "Written-first",
-      note: "We default to writing things down before we talk them out.",
-    },
-    {
-      icon: "remote",
-      label: "Remote-friendly EU/UK",
-      note: "Uppsala-anchored, distributed across the EU and UK.",
-    },
-    {
-      icon: "public",
-      label: "Public methodology",
-      note: "We publish our methods — which keeps us honest.",
-    },
+    { icon: "write", key: "written" },
+    { icon: "remote", key: "remote" },
+    { icon: "public", key: "public" },
   ];
   return (
     <div className="careers-norms-grid">
       {items.map((n) => (
-        <div key={n.label} className="careers-norm-card">
+        <div key={n.key} className="careers-norm-card">
           <div className="careers-norm-icon">
             <NormIcon name={n.icon} />
           </div>
-          <div className="careers-norm-label">{n.label}</div>
-          <div className="careers-norm-note">{n.note}</div>
+          <div className="careers-norm-label">{t(`norms.${n.key}.label`)}</div>
+          <div className="careers-norm-note">{t(`norms.${n.key}.note`)}</div>
         </div>
       ))}
     </div>
@@ -370,6 +343,7 @@ export function WorkingNorms() {
 /* ---------- Reach-out CTA tiles ---------- */
 
 export function ReachOutTiles() {
+  const t = useTranslations("careers");
   return (
     <div className="careers-reach-grid">
       <a className="careers-reach-tile" href={`mailto:${ORG_EMAIL}`}>
@@ -379,7 +353,7 @@ export function ReachOutTiles() {
             <path d="M4 7l8 6 8-6" stroke="var(--accent)" strokeWidth="1.7" strokeLinejoin="round" />
           </svg>
         </div>
-        <div className="careers-reach-label">Email us</div>
+        <div className="careers-reach-label">{t("reachTiles.emailLabel")}</div>
         <div className="careers-reach-chip">
           <span>{ORG_EMAIL}</span>
           <span className="careers-reach-chip-copy" aria-hidden="true">
@@ -404,11 +378,11 @@ export function ReachOutTiles() {
           </svg>
         </div>
         <div className="careers-reach-label">
-          Use the contact form{" "}
+          {t("reachTiles.contactLabel")}{" "}
           <span aria-hidden="true" className="careers-reach-arrow">→</span>
         </div>
         <div className="careers-reach-sub">
-          No CV needed — a paragraph is enough at the intro stage.
+          {t("reachTiles.contactSub")}
         </div>
       </Link>
     </div>

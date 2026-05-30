@@ -1,0 +1,2963 @@
+{
+  "_draft": {
+    "status": "DRAFT — NOT human-reviewed",
+    "locale": "fr",
+    "language": "French",
+    "seededFrom": "en",
+    "instructions": "MACHINE/PLACEHOLDER DRAFT. Values are English placeholders awaiting professional translation. Replace each value with a reviewed translation, then enable this locale by adding its code to ENABLED_LOCALES in i18n/locales.ts. Until then it is NOT routed, switchable, or in hreflang/sitemap.",
+    "doNotTranslate": [
+      "WelloWork",
+      "WelloRise",
+      "WelloWize"
+    ]
+  },
+  "about": {
+    "based": {
+      "body": "WelloWork AB is registered in Sweden and operates out of Uppsala. We serve customers across the EU, the United Kingdom, and the Nordics, and run the platform on EU-resident infrastructure.",
+      "title": "Where is WelloWork based?"
+    },
+    "cta": {
+      "body": "Thirty minutes, realistic sample data, and a candid conversation about scope and price.",
+      "primary": "Book a demo",
+      "secondary": "Contact us",
+      "title": "Want to see what a pilot <italic>looks like?</italic>"
+    },
+    "featureGrid": {
+      "biomarker": {
+        "desc": "At-home samples",
+        "label": "Biomarker testing"
+      },
+      "trends": {
+        "desc": "Performance over time",
+        "label": "Longitudinal trends"
+      },
+      "welloRise": {
+        "desc": "Cognitive training",
+        "label": "WelloRise"
+      },
+      "welloWize": {
+        "desc": "Hiring & assessments",
+        "label": "WelloWize"
+      },
+      "workshops": {
+        "desc": "Live group sessions",
+        "label": "Health workshops"
+      }
+    },
+    "gap": {
+      "dividerLabel": "the gap",
+      "itemCognitive": "Cognitive Performance",
+      "itemEngagement": "Engagement",
+      "itemLongitudinal": "Longitudinal Trends",
+      "itemOutput": "Actual Output",
+      "itemPulse": "Pulse",
+      "itemSatisfaction": "Satisfaction",
+      "measuredLabel": "What most platforms measure",
+      "welloLabel": "What WelloWork measures"
+    },
+    "hero": {
+      "eyebrow": "About WelloWork",
+      "lede": "We started WelloWork in 2024 in Uppsala, Sweden. We build for HR, Operations, and L&D teams that already know engagement scores aren't the same thing as performance — and want one platform that actually measures the second.",
+      "title": "A Swedish team building a different kind of <italic>workplace platform.</italic>"
+    },
+    "meta": {
+      "description": "WelloWork AB is a Swedish workplace performance platform founded in 2024. We combine cognitive training, longitudinal performance, biomarker testing, and live workshops.",
+      "title": "About WelloWork — workplace performance, built in Sweden"
+    },
+    "persona": {
+      "hr": {
+        "tag": "Spot burnout signals early",
+        "title": "HR & People Leaders"
+      },
+      "ld": {
+        "tag": "Growth tracks tied to cognitive profiles",
+        "title": "L&D Leaders"
+      },
+      "ops": {
+        "tag": "Schedule around actual performance",
+        "title": "Operations Leaders"
+      }
+    },
+    "privacy": {
+      "body": "Privacy is the architecture, not a compliance afterthought. Employee-level cognitive scores, biomarker reports, and assessment results stay with the employee. Managers and admins only see anonymised, aggregated trends. All employee data is stored inside the EU under the GDPR, and we are working towards ISO 27001 certification.",
+      "title": "What is the privacy stance?"
+    },
+    "privacyDiagram": {
+      "admin": {
+        "detail": "Aggregated org view",
+        "role": "Admin"
+      },
+      "badgeEu": "Stored in EU",
+      "badgeGdpr": "GDPR compliant",
+      "badgeIso": "ISO 27001 in progress",
+      "employee": {
+        "detail": "Owns their data",
+        "role": "Employee"
+      },
+      "manager": {
+        "detail": "Anonymised trends",
+        "role": "Manager"
+      }
+    },
+    "schema": {
+      "aboutPageName": "About WelloWork"
+    },
+    "swedenMap": {
+      "coord": "59°51′N · 17°38′E",
+      "label": "Uppsala HQ",
+      "note": "Operating from Uppsala. Serving customers across the EU, UK, and the Nordics."
+    },
+    "uppsalaCard": {
+      "badge": "Founded 2024",
+      "location": "Uppsala, Sweden · 59°51′N"
+    },
+    "whatWeDo": {
+      "body": "WelloWork is a workplace performance platform that combines daily cognitive training (WelloRise), hiring and internal assessments (WelloWize), longitudinal performance trends, live health workshops, and biomarker sample testing. Employees own their data; managers see anonymised, aggregated insights only.",
+      "title": "What does WelloWork do?"
+    },
+    "who": {
+      "body": "We work with organisations between 50 and 5,000 employees in the EU, UK, and the Nordics — typically those that already collect engagement data and want a defensible performance signal alongside it. HR and People leaders use us to spot burnout signals early; Operations leaders use us to schedule around how teams actually perform; L&D leaders use us to build growth tracks tied to measured cognitive profiles.",
+      "title": "Who is WelloWork for?"
+    },
+    "why": {
+      "body": "Most workplace platforms either measure how people <em>feel</em> about work — engagement, pulse, satisfaction — or sit at the hiring funnel and stop after the offer letter. What's missing is a longitudinal view of cognitive performance once people are inside the organisation. WelloWork is built specifically for that gap, with the same data model running through training, assessments, workshops, and biomarker reports.",
+      "title": "Why did we build this?"
+    }
+  },
+  "advantage": {
+    "eyebrow": "The WelloWork advantage",
+    "heading": {
+      "accent": "defend in a sales call.",
+      "lead": "Four claims we will "
+    },
+    "intro": "No invented numbers. No fake validations. Category-level claims rooted in what the platform actually does and how it’s built.",
+    "points": [
+      {
+        "body": "Most tools cover one of these. We connect all three so signals from one inform decisions in the others.",
+        "label": "01",
+        "title": "The only platform combining cognitive training, biomarker testing, and team intelligence."
+      },
+      {
+        "body": "Privacy is the architecture, not a compliance footnote. Managers only see anonymised, aggregated trends.",
+        "label": "02",
+        "title": "Built in Sweden under GDPR by default — employees own their data."
+      },
+      {
+        "body": "Performance changes through sprints, shifts, and seasons. We measure across the year, not on assessment day.",
+        "label": "03",
+        "title": "Longitudinal trends, not one-time scores."
+      },
+      {
+        "body": "Cognitive training runs in a coffee break. Workshops fit lunch. Sample testing happens on-site.",
+        "label": "04",
+        "title": "Designed for daily use — measured in minutes, not hours."
+      }
+    ]
+  },
+  "bookDemo": {
+    "agenda": {
+      "dashboard": {
+        "body": "Aggregated team trends, biomarker completion, composition signals — using sample data from your industry.",
+        "minutes": "5–20 min",
+        "title": "Manager dashboard"
+      },
+      "intro": {
+        "body": "Quick intros, current rituals you run, what you're trying to learn from this call.",
+        "minutes": "0–5 min",
+        "title": "Intro & context"
+      },
+      "lede": "The agenda is the same every time, so you know what you're committing 30 minutes to.",
+      "list": {
+        "aria": "Demo call agenda"
+      },
+      "pilot": {
+        "body": "Headcount, rollout pace, whether workshops or biomarker sampling are in scope, and pricing.",
+        "minutes": "25–30 min",
+        "title": "Pilot scoping"
+      },
+      "privacy": {
+        "body": "What employees see in their own app, and what the manager view does — and does not — surface.",
+        "minutes": "20–25 min",
+        "title": "Employee privacy"
+      },
+      "title": "What happens on the call"
+    },
+    "audience": {
+      "hr": {
+        "body": "Pair your existing surveys with daily cognitive metrics and biomarker trends — without surfacing individual employee data to managers.",
+        "eyebrow": "HR & People",
+        "title": "Build a longitudinal signal beyond engagement"
+      },
+      "ld": {
+        "body": "Connect L&D programmes to longitudinal trend data, then layer in live workshops where they'll move the needle.",
+        "eyebrow": "Learning & Development",
+        "title": "Show training impact on real performance metrics"
+      },
+      "lede": "The demo is built for the team that will own the rollout. Pick the framing that matches your role.",
+      "ops": {
+        "body": "Anonymised composition signals and capacity trends, scoped to teams rather than individuals.",
+        "eyebrow": "Operations",
+        "title": "See team composition and load before output drops"
+      },
+      "title": "Who should book?"
+    },
+    "calcom": {
+      "iframeTitle": "Schedule a WelloWork demo",
+      "loading": "Loading scheduler…",
+      "regionAria": "Demo scheduler"
+    },
+    "expect": {
+      "cantFind": "Can't find a slot that works? <emailLink>Email the team</emailLink> and we'll find one.",
+      "eyebrow": "What to expect",
+      "leaveWith": {
+        "body": "A short written summary, pilot pricing relevant to your headcount, and a no-pressure next step.",
+        "title": "What you leave with"
+      },
+      "long": {
+        "body": "30 minutes — 20 minutes guided, 10 minutes questions and pilot scoping.",
+        "title": "How long"
+      },
+      "noPressure": {
+        "body": "No follow-up cadence unless you ask. We treat employee data — and your time — the same way.",
+        "title": "No pressure"
+      },
+      "show": {
+        "body": "Manager dashboard with sample data from your industry, employee app, and the privacy architecture.",
+        "title": "What we show"
+      },
+      "title": "A focused 30 minutes — no fluff",
+      "who": {
+        "body": "A WelloWork product specialist — usually one person, never a sales team.",
+        "title": "Who joins"
+      }
+    },
+    "faq": {
+      "attend": {
+        "a": "An HR, People, L&D, or Operations decision-maker is ideal. Inviting a colleague who will own roll-out works well; we do not need finance or procurement in the first call.",
+        "q": "Who from our side should attend?"
+      },
+      "length": {
+        "a": "Thirty minutes end to end. The first 20 minutes are a guided walkthrough of the manager dashboard and the employee app; the final 10 are reserved for your questions and pilot scoping.",
+        "q": "How long is a WelloWork demo?"
+      },
+      "pitch": {
+        "a": "It is a product walkthrough on a real dashboard with sample data from your industry. No fictional ROI charts and no high-pressure close — we leave you with the information to decide on your own timeline.",
+        "q": "Is the demo a sales pitch or a product walkthrough?"
+      },
+      "prep": {
+        "a": "No prep work. Bring your team size, the industry you operate in, and a rough sense of when you might pilot — that is enough to make the demo concrete.",
+        "q": "Do we need to prepare anything before the call?"
+      },
+      "reschedule": {
+        "a": "Yes. Every confirmation email includes reschedule and cancel links from the calendar — no email back-and-forth required.",
+        "q": "Can we reschedule or cancel?"
+      },
+      "title": "Frequently asked questions"
+    },
+    "hero": {
+      "answerBody": "of the manager dashboard with realistic sample data from your industry. You see daily cognitive training, longitudinal trend monitoring, team composition signals, and biomarker completion — and we close with a short pilot-scoping chat. No fictional ROI charts.",
+      "answerLead": "A WelloWork demo is a 30-minute live walkthrough",
+      "badgeGdpr": "GDPR-native",
+      "badgeIso": "ISO 27001 in progress",
+      "badgeMadeInSweden": "Made in Sweden",
+      "eyebrow": "Book a demo",
+      "title": "See your team's cognitive performance — <italic>in one demo.</italic>"
+    },
+    "meta": {
+      "description": "Pick a time on the live calendar and meet a WelloWork product specialist for a 30-minute walkthrough of the manager dashboard. Made in Sweden · GDPR-native.",
+      "title": "Book a WelloWork demo — pick a 30-minute slot"
+    },
+    "scheduler": {
+      "body": "Your timezone is detected automatically. Choose a day, then a slot — you'll confirm details in the next step and receive a calendar invite immediately.",
+      "title": "Pick a time that works for you"
+    },
+    "schema": {
+      "reservationName": "WelloWork product demo",
+      "webPageDescription": "Schedule a 30-minute live demo of the WelloWork manager dashboard with realistic sample data from your industry.",
+      "webPageName": "Book a WelloWork demo"
+    },
+    "secondaryCta": {
+      "body": "Prefer to talk first, or want to dig into the product on your own? We get it — there's no pressure to book today.",
+      "primary": "Contact us",
+      "secondary": "Explore the platform",
+      "title": "Not ready to pick a time?"
+    }
+  },
+  "breadcrumbs": {
+    "about": "About",
+    "ariaLabel": "Breadcrumb",
+    "bookDemo": "Book a demo",
+    "careers": "Careers",
+    "contact": "Contact",
+    "home": "Home",
+    "legal": "Legal"
+  },
+  "careers": {
+    "anchor": {
+      "body": "Not at the moment. We hire slowly and deliberately while we are running pilots. If you would like to be on the short list for the next round of roles, email <email></email> with a one-paragraph intro and relevant links — we read every one.",
+      "q": "Are there open roles at WelloWork?"
+    },
+    "cta": {
+      "body": "If WelloWork sounds like a place you'd want to spend a few years building, write us a paragraph. Even when we don't have roles open, we keep notes.",
+      "primary": "Contact us",
+      "secondary": "About WelloWork",
+      "title": "Send us an intro."
+    },
+    "hero": {
+      "eyebrow": "Careers",
+      "lede": "WelloWork is a small Swedish team early in our pilot phase. When we open roles, they'll be posted here. Until then, the bar to start a conversation is low if your story fits ours.",
+      "title": "We don't have open roles right now — <italic>but we read every intro.</italic>"
+    },
+    "hireFirst": {
+      "li1": "Engineers who have shipped product, not only frameworks.",
+      "li2": "Designers who care about evidence-based product and have opinions on type and motion.",
+      "li3": "Researchers with a cognitive-science or quantitative-psychology background who can write methodology notes that hold up.",
+      "li4": "Sales and customer-success people who have run pilots end-to-end at small, careful B2B companies.",
+      "title": "What kind of people are we likely to hire first?"
+    },
+    "hiringFlow": {
+      "conversation": {
+        "label": "Conversation",
+        "note": "~30 min, no prep"
+      },
+      "intro": {
+        "label": "Intro email",
+        "note": "Low bar — no CV needed"
+      },
+      "stagePrefix": "Stage {n}",
+      "trialDay": {
+        "label": "Paid trial day",
+        "note": "You meet the whole team"
+      },
+      "workSample": {
+        "label": "Work sample",
+        "note": "Tied to the actual role"
+      }
+    },
+    "introCard": {
+      "bodyP1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. I've been following WelloWork's methodology notes for a while and wanted to send a short hello.",
+      "bodyP2": "Sed do eiusmod tempor incididunt ut labore — happy to share work samples and walk through how I'd approach a pilot onboarding flow.",
+      "name": "Lena K.",
+      "readBadge": "Read",
+      "role": "Product Designer",
+      "subjectKey": "Subject",
+      "subjectVal": "Hello from Berlin — would love to introduce myself",
+      "tagCaseStudy": "Case study",
+      "tagGithub": "GitHub",
+      "tagPortfolio": "Portfolio"
+    },
+    "life": {
+      "body": "Small team, Uppsala-anchored, remote-friendly across the EU and UK. We work in English. We default to writing things down rather than talking them out, and we publish our methodology in public — which makes the rest of the work easier to defend.",
+      "title": "What is it like to work at WelloWork?"
+    },
+    "meta": {
+      "description": "We don't have open roles right now, but we read every introduction. Here's how WelloWork thinks about hiring, who we're likely to add first, and how to get in touch.",
+      "title": "Careers at WelloWork — how we hire & how to reach us"
+    },
+    "norms": {
+      "public": {
+        "label": "Public methodology",
+        "note": "We publish our methods — which keeps us honest."
+      },
+      "remote": {
+        "label": "Remote-friendly EU/UK",
+        "note": "Uppsala-anchored, distributed across the EU and UK."
+      },
+      "written": {
+        "label": "Written-first",
+        "note": "We default to writing things down before we talk them out."
+      }
+    },
+    "process": {
+      "body": "Short, transparent stages — usually a conversation, a focused work sample tied to the role, and a paid trial day with the team. We share the assessment criteria up-front, and we use our own platform internally so we can dogfood the candidate experience.",
+      "title": "How do we run a hiring process?"
+    },
+    "reach": {
+      "body": "Email <email></email> or use the form on the <contactLink>contact</contactLink> page. Include a one-paragraph intro and what you'd want to work on first — no full CV needed at the intro stage.",
+      "title": "How can I reach you about a role?"
+    },
+    "reachTiles": {
+      "contactLabel": "Use the contact form",
+      "contactSub": "No CV needed — a paragraph is enough at the intro stage.",
+      "emailLabel": "Email us"
+    },
+    "roleCards": {
+      "designers": {
+        "desc": "Evidence-based product with opinions on type and motion.",
+        "label": "Designers"
+      },
+      "engineers": {
+        "desc": "Shipped product, not only frameworks.",
+        "label": "Engineers"
+      },
+      "researchers": {
+        "desc": "Cognitive science or quantitative psychology — methodology notes that hold up.",
+        "label": "Researchers"
+      },
+      "salesCs": {
+        "desc": "Ran pilots end-to-end at small, careful B2B companies.",
+        "label": "Sales & CS"
+      }
+    },
+    "schema": {
+      "webPageName": "Careers at WelloWork"
+    }
+  },
+  "chips": {
+    "privacy": {
+      "default": "Aggregated, anonymised — manager view"
+    },
+    "sweden": "Driven by Science, Built with Care"
+  },
+  "common": {
+    "advantage": {
+      "body": "No invented numbers. No fake validations. Category-level claims rooted in what the platform actually does and how it's built.",
+      "eyebrow": "The WelloWork advantage",
+      "point1": {
+        "body": "Most tools cover one of these. We connect all three so signals from one inform decisions in the others.",
+        "title": "The only platform combining cognitive training, biomarker testing, and team intelligence."
+      },
+      "point2": {
+        "body": "Privacy is the architecture, not a compliance footnote. Managers only see anonymised, aggregated trends.",
+        "title": "Built in Sweden under GDPR by default — employees own their data."
+      },
+      "point3": {
+        "body": "Performance changes through sprints, shifts, and seasons. We measure across the year, not on assessment day.",
+        "title": "Longitudinal trends, not one-time scores."
+      },
+      "point4": {
+        "body": "Cognitive training runs in a coffee break. Workshops fit lunch. Sample testing happens on-site.",
+        "title": "Designed for daily use — measured in minutes, not hours."
+      },
+      "titleAccent": "defend in a sales call.",
+      "titleLead": "Four claims we will"
+    },
+    "breadcrumb": {
+      "aria": "Breadcrumb"
+    },
+    "privacyChip": {
+      "default": "Aggregated, anonymised — manager view"
+    },
+    "swedenChip": "Driven by Science, Built with Care"
+  },
+  "contact": {
+    "based": {
+      "body": "WelloWork AB is registered in Sweden and operates out of Uppsala. All employee data is stored inside the EU on infrastructure that complies with the GDPR. We serve customers across the EU, the United Kingdom, and the Nordics.",
+      "title": "Where is WelloWork based?"
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "lede": "Sales, partnerships, support, careers — every message reaches a small team in Sweden. Most enquiries get a reply within one working day.",
+      "title": "Talk to a real person — <italic>in Uppsala.</italic>"
+    },
+    "meta": {
+      "description": "Get in touch with the WelloWork team in Uppsala, Sweden. Email info@wellowork.net or call +46 760 28 1272 for sales, partnerships, or general enquiries.",
+      "title": "Contact WelloWork — talk to sales, support, or partnerships"
+    },
+    "reach": {
+      "answerBody": "For demo requests, use the form on this page or <demoLink>/book-a-demo</demoLink>. For everything else — partnerships, press, careers, support — write to {email} or call {phone} during EU business hours.",
+      "answerLead": "Email or phone is fastest.",
+      "title": "How can I reach WelloWork?"
+    },
+    "row": {
+      "area": {
+        "label": "Office & service area",
+        "value": "{city}, {country} · serving the EU, UK, and Nordics"
+      },
+      "email": {
+        "label": "Email"
+      },
+      "hours": {
+        "label": "Hours",
+        "value": "Mon–Fri · 09:00–17:00 CET"
+      },
+      "phone": {
+        "label": "Phone"
+      }
+    }
+  },
+  "featureGrid": {
+    "_note": "FeatureGrid has NO hardcoded user-facing strings. All text (eyebrow, title, item.title, item.body) is passed in as props by callers. It is NOT used anywhere in the Home page tree (page.tsx does not render it). Translate at the call sites that supply props, not here."
+  },
+  "finalCta": {
+    "cta": {
+      "bookDemo": "Book a demo",
+      "contact": "Contact us"
+    },
+    "footnote": "Made in Sweden · GDPR-native · ISO 27001",
+    "heading": {
+      "accent": "in one demo.",
+      "lead": "See your team’s cognitive performance — "
+    },
+    "lede": "A 30-minute walkthrough of the manager dashboard with realistic sample data from your industry. No fictional ROI charts."
+  },
+  "footer": {
+    "aria": {
+      "home": "WelloWork home"
+    },
+    "badges": {
+      "gdpr": "GDPR-native",
+      "hipaa": "HIPAA-ready",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    },
+    "columns": {
+      "company": {
+        "h": "Company",
+        "items": [
+          "About",
+          "Careers",
+          "Contact"
+        ]
+      },
+      "platform": {
+        "h": "Platform",
+        "items": [
+          "WelloRise [Growth]",
+          "WelloWize [Assessment]",
+          "Performance trends",
+          "Workshops",
+          "Proactive Care"
+        ]
+      },
+      "research": {
+        "h": "Research",
+        "items": [
+          "Methodology",
+          "Science & insight",
+          "Cognitive constructs"
+        ]
+      }
+    },
+    "copyright": "© 2024-2026 WelloWork AB · Uppsala, Sweden",
+    "legal": {
+      "cookies": "Cookies",
+      "dataProcessing": "Data processing",
+      "privacy": "Privacy",
+      "terms": "Terms"
+    },
+    "tagline": "The workplace performance platform. Daily cognitive training, longitudinal trends, and biomarker-based health insights, built in Sweden."
+  },
+  "forms": {
+    "consent": {
+      "demoForm": "I agree that WelloWork may contact me to schedule this demo and store these details under its <privacyLink>privacy policy</privacyLink>. (GDPR)",
+      "leadForm": "I agree that WelloWork may contact me about this enquiry and store these details under its <privacyLink>privacy policy</privacyLink>."
+    },
+    "contact": {
+      "submitLabel": "Send message",
+      "successBody": "We'll reply within one working day. For urgent matters please call the number on this page.",
+      "successTitle": "Message received."
+    },
+    "demo": {
+      "formAria": "Request a demo time",
+      "formIntro": "Scheduling isn't live in this environment — leave your details and we'll confirm a slot by email within one working day.",
+      "formTitle": "Request a demo time",
+      "successBody": "A product specialist will reach out within one working day to confirm a demo time. Check your work inbox (and spam, just in case) for a confirmation email.",
+      "successTitle": "Thanks — request received."
+    },
+    "error": {
+      "company": "Please enter your company.",
+      "consent": "Please confirm consent to be contacted.",
+      "message": "Please add a short message.",
+      "name": "Please enter your full name.",
+      "network": "Network error. Please try again.",
+      "workEmail": "Please enter a valid email."
+    },
+    "footnote": {
+      "dataStored": "Your details are stored in the EU. No marketing without opt-in."
+    },
+    "label": {
+      "company": "Company",
+      "companySize": "Company size",
+      "demoMessage": "What you'd like to see (optional)",
+      "fullName": "Full name",
+      "industry": "Industry",
+      "message": "Message",
+      "optionalSuffix": "(optional)",
+      "preferredTimeframe": "Preferred timeframe",
+      "role": "Your role",
+      "roleTitle": "Your role / title",
+      "websiteHoneypot": "Website",
+      "workEmail": "Work email"
+    },
+    "option": {
+      "companySize": "{size}",
+      "industry": {
+        "education": "Education",
+        "energy": "Energy & Utilities",
+        "financial": "Financial services",
+        "healthcare": "Healthcare",
+        "manufacturing": "Manufacturing",
+        "other": "Other",
+        "professional": "Professional services",
+        "publicSector": "Public sector",
+        "retail": "Retail & E-commerce",
+        "softwareTech": "Software & Technology"
+      }
+    },
+    "placeholder": {
+      "demoMessage": "Team size, what you'd like the demo to focus on, any pilot timing.",
+      "leadMessage": "Tell us about your pilot plans, headcount, and what you'd like to see in the demo.",
+      "role": "HR, Operations, L&D, Founder…"
+    },
+    "select": {
+      "industryPlaceholder": "Select industry",
+      "teamSizePlaceholder": "Select team size",
+      "timeframePlaceholder": "When would you like to meet?"
+    },
+    "submit": {
+      "demo": "Request a demo time",
+      "lead": "Send message",
+      "sending": "Sending…"
+    },
+    "timeframe": {
+      "exploring": "Just exploring",
+      "nextWeek": "Next week",
+      "thisWeek": "This week",
+      "twoToFourWeeks": "In the next 2–4 weeks"
+    }
+  },
+  "hero": {
+    "badge": {
+      "platform": "Workplace performance platform"
+    },
+    "cta": {
+      "bookDemo": "Book a demo",
+      "seeHow": "See how it works"
+    },
+    "floatBadge": {
+      "session": "Working memory · session 4",
+      "today": "Today · 7 min"
+    },
+    "headline": {
+      "accent": "Measure what matters.",
+      "lead": "Train cognitive performance."
+    },
+    "lede": "Daily cognitive training, longitudinal performance trends, and biomarker-based health insights — in one platform that managers and employees actually use.",
+    "trust": {
+      "gdpr": "GDPR-native",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    }
+  },
+  "heroDashboard": {
+    "biomarker": {
+      "caption": "Completed this cycle",
+      "count": "{completed} / {total}",
+      "label": "Biomarker reports"
+    },
+    "browser": {
+      "url": "app.wellowork.net / team"
+    },
+    "chart": {
+      "annotation": "Sprint review week",
+      "axis": {
+        "wk1": "Wk 1",
+        "wk12": "Wk 12",
+        "wk4": "Wk 4",
+        "wk8": "Wk 8"
+      },
+      "legend": {
+        "focus": "Focus",
+        "memory": "Memory"
+      },
+      "range": "Last 90 days"
+    },
+    "composition": {
+      "fit": "{value}% fit",
+      "member1": {
+        "name": "Anna L.",
+        "role": "Problem solving · 92"
+      },
+      "member2": {
+        "name": "Erik S.",
+        "role": "Processing speed · 88"
+      },
+      "member3": {
+        "name": "Maja J.",
+        "role": "Working memory · 89"
+      },
+      "project": "Project: Q3 platform refresh",
+      "title": "Team composition"
+    },
+    "privacyChip": "Anonymised aggregate",
+    "sampleData": "Sample data",
+    "team": {
+      "label": "Engineering · 14 members",
+      "title": "Team cognitive performance"
+    }
+  },
+  "legal": {
+    "cookies": {
+      "changesBody": "If we add any non-essential cookies, this page will be updated with a revision date and the consent banner will offer an opt-in.",
+      "changesQ": "Changes",
+      "controlQ": "How can you control cookies?",
+      "coverA": "The marketing site uses only essential cookies needed to keep the site working (e.g. preserving form state across reload). Analytics and marketing cookies are not enabled by default; if they ever are, they will be opt-in via a consent banner, and itemised below.",
+      "coverQ": "What cookies does the WelloWork website use?",
+      "lede": "We default to minimal cookie use in line with the rest of the privacy stance.",
+      "title": "Cookie Policy",
+      "usedHereQ": "What cookies are used here?",
+      "whatBody": "A cookie is a small text file stored on your device by a website. Cookies are used for things like keeping you logged in, remembering preferences, and (in some cases) tracking usage for analytics or advertising.",
+      "whatQ": "What is a cookie?"
+    },
+    "dpa": {
+      "contactQ": "Sub-processor or DPA questions",
+      "coverA": "When you use the WelloWork platform as an employee of a customer organisation, your employer is the controller of your data and {legalName} is the processor acting on documented instructions. The terms of that processing are set out in a Data Processing Agreement (DPA) executed between WelloWork and your employer.",
+      "coverQ": "What is the data processing relationship?",
+      "lede": "A summary of how WelloWork acts as processor for customer organisations under the GDPR. The executed DPA for a given customer takes precedence.",
+      "natureBody": "We process personal data of the customer's end users to deliver the WelloWork platform and produce aggregated, anonymised reporting to authorised admins.",
+      "natureQ": "Nature, purpose, and categories of data",
+      "securityBody": "Encryption in transit and at rest, role-based access, audit logging, minimum-team-size enforcement on manager-visible aggregates, periodic security review.",
+      "securityQ": "Security",
+      "subjectQ": "Subject matter and duration",
+      "subjectsBody": "End users of the WelloWork platform — typically employees of the customer.",
+      "subjectsQ": "Categories of data subjects",
+      "subprocessorsQ": "Sub-processors",
+      "title": "Data Processing",
+      "transfersBody": "We do not transfer personal data outside the EU/EEA without an appropriate transfer mechanism. Where a transfer is required (e.g. operational support tooling), it is documented in the DPA.",
+      "transfersQ": "International transfers"
+    },
+    "hero": {
+      "eyebrow": "Legal",
+      "lede": "Privacy policy, terms of service, cookie policy, and a data processing summary — all in one place, governed by Swedish law and the GDPR.",
+      "title": "Legal."
+    },
+    "meta": {
+      "description": "Privacy policy, terms of service, cookie policy, and data processing summary for WelloWork — Swedish and EU markets, GDPR-native.",
+      "title": "Legal — WelloWork"
+    },
+    "nav": {
+      "cookies": "Cookie Policy",
+      "dataProcessing": "Data Processing",
+      "desktopAria": "Legal sections (desktop)",
+      "mobileAria": "Legal sections (mobile)",
+      "onThisPage": "On this page",
+      "privacy": "Privacy Policy",
+      "terms": "Terms of Service"
+    },
+    "privacy": {
+      "basisQ": "What is the legal basis for processing?",
+      "changesBody": "Material changes will be posted here with a revision date. Last revision date: this page is dated by its current deploy and will be updated when counsel-reviewed.",
+      "changesQ": "Changes to this policy",
+      "controllerBody": "{legalName}, registered in Sweden and operating from {city}, {country}, is the controller for personal data collected on this website and through enquiries. For data processed inside the WelloWork platform on behalf of a customer organisation, {legalName} acts as processor and the customer organisation is the controller — that relationship is governed by a separate Data Processing Agreement.",
+      "controllerQ": "Who is the controller of your data?",
+      "coverA": "It explains what personal data WelloWork collects when you use this website or the WelloWork platform, what we do with it, the legal bases we rely on under the GDPR, your rights, and how to reach us about them.",
+      "coverQ": "What does this privacy policy cover?",
+      "dataQ": "What personal data do we collect?",
+      "exerciseNote": "To exercise any right, email {email} with \"privacy request\" in the subject.",
+      "lede": "How WelloWork collects, uses, and protects personal data, under the GDPR and Swedish law.",
+      "retentionQ": "How long do we keep it?",
+      "rightsBody": "Under the GDPR you can request access, rectification, erasure, restriction, portability, and the right to object. You can also lodge a complaint with the Swedish data protection authority (IMY).",
+      "rightsQ": "What rights do you have?",
+      "securityBody": "Transport encryption, encryption at rest, role-based access, audit logging, and a minimum-team-size threshold for all manager-visible aggregates.",
+      "securityQ": "How do we secure data?",
+      "storedBody": "All personal data is stored on infrastructure resident in the European Union. WelloWork does not transfer personal data outside the EU/EEA without an appropriate transfer mechanism in place.",
+      "storedQ": "Where is your data stored?",
+      "title": "Privacy Policy"
+    },
+    "schema": {
+      "webPageName": "Legal"
+    },
+    "section": {
+      "label": "Section {n}"
+    },
+    "terms": {
+      "changesBody": "We may update these terms over time. Material changes will be posted here with a revision date.",
+      "changesQ": "Changes",
+      "coverA": "Acceptable use of the WelloWork website, the legal entity behind the service, intellectual property, warranties and disclaimers, limitation of liability, and the governing law. Where you are a paying customer, the order form and master services agreement take precedence.",
+      "coverQ": "What do these terms cover?",
+      "entityBody": "{legalName}, a Swedish company. These terms govern use of the website at this domain and any demo/trial environments we make available. Use of the production platform under a paid contract is governed by the order form and accompanying agreement.",
+      "entityQ": "Who are you contracting with?",
+      "ipBody": "All content, branding, source code, design, and other materials on this site are owned by {legalName} or its licensors. Nothing on the site grants you a licence to those materials except as explicitly stated.",
+      "ipQ": "What about intellectual property?",
+      "lawBody": "These terms are governed by Swedish law. Disputes arising from the use of this website fall under the exclusive jurisdiction of the Swedish courts unless mandatory law in your jurisdiction provides otherwise.",
+      "lawQ": "Governing law",
+      "lede": "The terms under which you use this website and the WelloWork platform. Customer agreements supersede this page where applicable.",
+      "title": "Terms of Service",
+      "useQ": "What is acceptable use?",
+      "warrantiesBody": "The website is provided on an \"as is\" basis. We make no warranty as to availability, fitness for a particular purpose, or accuracy of any third-party information linked from the site. Liability for use of the website is limited to the maximum extent allowed by Swedish and applicable EU law.",
+      "warrantiesQ": "Warranties and limitations"
+    },
+    "visual": {
+      "anchor": {
+        "changes": "Changes",
+        "ip": "Intellectual property",
+        "law": "Governing law",
+        "liability": "Liability",
+        "use": "Acceptable use",
+        "warranties": "Warranties"
+      },
+      "basis": {
+        "consent": {
+          "label": "Consent",
+          "note": "Marketing follow-up after a demo or contact request."
+        },
+        "contract": {
+          "label": "Contract",
+          "note": "Delivering the contracted platform to your employer."
+        },
+        "interest": {
+          "label": "Legitimate Interests",
+          "note": "Responding to enquiries, security logging, abuse protection."
+        },
+        "law": {
+          "label": "Legal Obligation",
+          "note": "Retention periods imposed by Swedish or EU law."
+        }
+      },
+      "controller": {
+        "customerOrg": "Customer Org",
+        "directRel": "Direct relationship",
+        "platformUser": "Platform user",
+        "roleController": "Controller",
+        "roleProcessor": "Processor",
+        "title": "Who controls your data?",
+        "viaDpa": "Via DPA",
+        "websiteVisitor": "Website visitor",
+        "welloWork": "WelloWork AB",
+        "you": "You"
+      },
+      "cookieBadge": "Essential cookies only — no tracking by default",
+      "cookieChanges": "We'll add a consent banner and update this page before enabling any non-essential cookies.",
+      "cookieSteps": {
+        "clear": {
+          "note": "Remove existing cookies or block new ones.",
+          "title": "Clear or block"
+        },
+        "heads": {
+          "note": "Blocking essentials may break form submissions.",
+          "title": "Heads up"
+        },
+        "settings": {
+          "note": "Open your browser's privacy or cookie controls.",
+          "title": "Browser settings"
+        }
+      },
+      "cookieTable": {
+        "advertising": {
+          "purpose": "No advertising cookies on this site.",
+          "status": "Not used",
+          "type": "Advertising"
+        },
+        "analytics": {
+          "purpose": "Would measure aggregate usage. Opt-in via a future consent banner.",
+          "status": "Off by default",
+          "type": "Analytics"
+        },
+        "essential": {
+          "purpose": "Required for site operation — e.g. form state on reload.",
+          "status": "Active by default",
+          "type": "Essential"
+        },
+        "headPurpose": "Purpose",
+        "headStatus": "Status",
+        "headType": "Type"
+      },
+      "dataGrid": {
+        "contact": {
+          "desc": "From forms — name, work email, company, role, optional message.",
+          "label": "Contact data"
+        },
+        "platform": {
+          "badge": "Only if you're a platform end user",
+          "desc": "Training, assessment, and biomarker records.",
+          "label": "Platform data"
+        },
+        "technical": {
+          "desc": "IP and user-agent at form submission, for spam control and security.",
+          "label": "Technical data"
+        }
+      },
+      "dpaCta": {
+        "note": "Subject: 'DPA request' — we'll route you to the right person.",
+        "title": "Email {email}"
+      },
+      "dpaRel": {
+        "customerOrg": {
+          "detail": "Controller",
+          "role": "Customer Org"
+        },
+        "edgeDelivery": "service delivery",
+        "edgeInstructions": "documented instructions",
+        "endUsers": {
+          "detail": "Data subjects",
+          "role": "End users"
+        },
+        "welloWork": {
+          "detail": "Processor",
+          "role": "WelloWork AB"
+        }
+      },
+      "dpaSplit": {
+        "cat": {
+          "biomarker": "Biomarker reports",
+          "cognitive": "Cognitive performance",
+          "identification": "Identification & contact",
+          "metadata": "Operational metadata"
+        },
+        "dataWeProcess": "Data we process",
+        "purpose": {
+          "anonymised": "Anonymised reporting",
+          "biomarker": "Biomarker reporting",
+          "cognitive": "Cognitive training",
+          "workshop": "Workshop scheduling"
+        },
+        "whatWeDo": "What we do"
+      },
+      "dpaSubject": {
+        "durationLabel": "Duration",
+        "durationValue": "Length of customer agreement + DPA retention period.",
+        "scopeLabel": "Scope",
+        "scopeValue": "End users of the WelloWork platform (typically employees)."
+      },
+      "entity": {
+        "meta": "Registered in Sweden",
+        "name": "WelloWork AB",
+        "note": "Swedish law governs.",
+        "tag": "Contracting entity"
+      },
+      "euCard": {
+        "defaultLabel": "EU/EEA infrastructure only",
+        "dpaLabel": "No transfers outside the EU/EEA",
+        "dpaNote": "Without an appropriate transfer mechanism in place.",
+        "privacyNote": "No transfers outside the EU/EEA without an appropriate mechanism."
+      },
+      "ip": {
+        "branchBranding": "Branding",
+        "branchContent": "Content",
+        "branchSource": "Source code",
+        "foot": "No licence is granted unless explicitly stated.",
+        "ownedBadge": "© owned",
+        "owner": "WelloWork AB",
+        "ownerLabel": "Owner"
+      },
+      "law": {
+        "text": "<strong>Swedish courts</strong> · Swedish law"
+      },
+      "retention": {
+        "backups": {
+          "duration": "90 days",
+          "label": "Backups"
+        },
+        "enquiry": {
+          "duration": "24 months",
+          "label": "Enquiry data"
+        },
+        "platform": {
+          "duration": "per DPA",
+          "label": "Platform records"
+        }
+      },
+      "rights": {
+        "access": {
+          "desc": "Get a copy of the data we hold about you.",
+          "name": "Access"
+        },
+        "cta": "Email {email} with 'privacy request'",
+        "erase": {
+          "desc": "Ask us to delete your data.",
+          "name": "Erasure"
+        },
+        "object": {
+          "desc": "Object to processing based on legitimate interests.",
+          "name": "Object"
+        },
+        "portability": {
+          "desc": "Receive your data in a portable format.",
+          "name": "Portability"
+        },
+        "rectify": {
+          "desc": "Ask us to correct inaccurate data.",
+          "name": "Rectification"
+        },
+        "restrict": {
+          "desc": "Limit how we process your data.",
+          "name": "Restriction"
+        }
+      },
+      "security": {
+        "audit": "Audit logging",
+        "isoBadge": "ISO 27001 in progress",
+        "rbac": "Role-based access",
+        "rest": "Encryption at rest",
+        "transit": "Encryption in transit"
+      },
+      "subprocessor": {
+        "body": "Current list provided to customers on request.",
+        "email": "Email",
+        "hosting": "Hosting",
+        "labPartners": "Lab partners",
+        "title": "Sub-processors are GDPR-compliant, EU-resident where relevant, and listed in your DPA."
+      },
+      "trustBar": {
+        "euData": "EU/EEA data only",
+        "gdpr": "GDPR compliant",
+        "swedishLaw": "Swedish law"
+      },
+      "use": {
+        "may1": "Use this website to learn about WelloWork and request a demo.",
+        "may2": "Browse our published content for personal or business research.",
+        "may3": "Contact us through the forms provided on this site.",
+        "mayHead": "You may",
+        "mayNot1": "Attempt to gain unauthorised access or interfere with the service.",
+        "mayNot2": "Exfiltrate, copy, or scrape data beyond normal browsing.",
+        "mayNot3": "Use the site for competitive intelligence at abnormal volumes.",
+        "mayNotHead": "You may not"
+      },
+      "warranty": {
+        "body": "This website is provided as-is. We don't guarantee uptime, accuracy, or fitness for a particular purpose.",
+        "title": "As-is, no guarantees"
+      }
+    }
+  },
+  "localeSwitcher": {
+    "label": "Language",
+    "change": "Change language",
+    "current": "Current language: {language}",
+    "menu": "Select language",
+    "banner": {
+      "region": "Language suggestion",
+      "question": "View this site in {language}?",
+      "switch": "Switch to {language}",
+      "dismiss": "Not now"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "WelloWork — Train cognitive performance. Measure what matters.",
+      "description": "Daily cognitive training, longitudinal performance trends, and biomarker-based health insights — in one platform that managers and employees actually use. Built in Sweden."
+    },
+    "about": {
+      "title": "About WelloWork — workplace performance, built in Sweden",
+      "description": "WelloWork AB is a Swedish workplace performance platform founded in 2024. We combine cognitive training, longitudinal performance, biomarker testing, and live workshops."
+    },
+    "careers": {
+      "title": "Careers at WelloWork — how we hire & how to reach us",
+      "description": "We don't have open roles right now, but we read every introduction. Here's how WelloWork thinks about hiring, who we're likely to add first, and how to get in touch."
+    },
+    "contact": {
+      "title": "Contact WelloWork — talk to sales, support, or partnerships",
+      "description": "Get in touch with the WelloWork team in Uppsala, Sweden. Email info@wellowork.net or call +46 760 28 1272 for sales, partnerships, or general enquiries."
+    },
+    "bookDemo": {
+      "title": "Book a WelloWork demo — pick a 30-minute slot",
+      "description": "Pick a time on the live calendar and meet a WelloWork product specialist for a 30-minute walkthrough of the manager dashboard. Made in Sweden · GDPR-native."
+    },
+    "legal": {
+      "title": "Legal — WelloWork",
+      "description": "Privacy policy, terms of service, cookie policy, and data processing summary for WelloWork — Swedish and EU markets, GDPR-native."
+    },
+    "platformGrowth": {
+      "title": "WelloRise — daily cognitive training for teams | WelloWork",
+      "description": "WelloRise is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks."
+    },
+    "platformAssessment": {
+      "title": "WelloWize — cognitive & technical assessments | WelloWork",
+      "description": "WelloWize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after."
+    },
+    "platformMeasure": {
+      "title": "Measure — longitudinal cognitive performance trends | WelloWork",
+      "description": "WelloWork Measure turns every training session, assessment, and workshop into a longitudinal performance trend — 90-day, 6-month, and 12-month views for managers."
+    },
+    "platformWorkshops": {
+      "title": "Workshops — live health workshops, on-site or remote | WelloWork",
+      "description": "Facilitator-led workshops on sleep, recovery, nutrition, focus, and longevity. On-site or remote, bookable in WelloWork, with outcomes feeding back into performance trends."
+    },
+    "platformProactiveCare": {
+      "title": "Proactive Care — biomarker testing for longevity & health | WelloWork",
+      "description": "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their report; managers only see anonymised, aggregated trends."
+    },
+    "research": {
+      "title": "Research & methodology — cognitive constructs behind WelloWork",
+      "description": "WelloWork's cognitive training and assessments are built on validated constructs: working memory, processing speed, attention, problem solving, and cognitive flexibility."
+    },
+    "researchMethodology": {
+      "title": "Methodology overview — how WelloWork measures cognitive performance",
+      "description": "How WelloWork maps exercises to validated cognitive constructs, scores them, and aggregates results into longitudinal performance trends — with privacy by design."
+    },
+    "researchScienceInsight": {
+      "title": "Science & insight — methodology notes from WelloWork research",
+      "description": "Working notes from the WelloWork research team on cognitive constructs, biomarker methodology, workplace performance signals, and where the literature is and isn't."
+    },
+    "researchCognitiveConstructs": {
+      "title": "Cognitive constructs — the five domains WelloWork measures",
+      "description": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — each domain, the literature behind it, and how WelloWork operationalises it."
+    }
+  },
+  "nav": {
+    "aria": {
+      "logoHome": "WelloWork home",
+      "primary": "Primary"
+    },
+    "cta": {
+      "bookDemo": "Book a demo",
+      "contact": "Contact"
+    },
+    "items": {
+      "about": "About",
+      "platform": "Platform",
+      "pricing": "Pricing",
+      "research": "Research",
+      "solutions": "Solutions"
+    }
+  },
+  "platformAssessment": {
+    "answer": {
+      "body": "WelloWork's assessment product. It evaluates candidates and existing employees across the same cognitive and technical framework, returns hiring-panel-ready results in minutes, and produces internal benchmarks against role and tenure that can be re-run quarterly.",
+      "label": "What is WelloWize?"
+    },
+    "benchmarkChart": {
+      "eyebrow": "Quarterly re-runs",
+      "legend": {
+        "benchmark": "Role benchmark",
+        "employee": "Employee trajectory"
+      },
+      "sampleData": "Sample data",
+      "title": "Trajectory vs role benchmark"
+    },
+    "benchmarkSection": {
+      "body": "Internally, WelloWize can be re-run on a schedule. Results feed the longitudinal trend the Measure product surfaces — so promotion-readiness decisions are grounded in a trend across the year, rather than the score someone happened to post on assessment day.",
+      "headingAccent": "role + tenure.",
+      "headingLead": "Internal benchmarks against"
+    },
+    "crumbs": {
+      "current": "Assessment — WelloWize",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "A 30-minute walkthrough with sample candidate profiles and a candid pilot conversation.",
+      "primary": "Book a demo",
+      "secondary": "Read the research",
+      "title": "See WelloWize on real hiring panels."
+    },
+    "differSection": {
+      "headingAccent": "hiring assessment tool?",
+      "headingLead": "How does WelloWize differ from a",
+      "intro": "Most tools end the moment a candidate signs. WelloWize uses the same framework before and after the offer letter.",
+      "standardLabel": "Standard tool"
+    },
+    "features": {
+      "auditable": {
+        "body": "Every score is traceable to its underlying tasks and time-on-task — defensible if a hiring decision is challenged.",
+        "title": "Auditable scoring"
+      },
+      "benchmarks": {
+        "body": "Internal scores are comparable across hires and tenures, not against a generic population.",
+        "title": "Role + tenure benchmarks"
+      },
+      "eyebrow": "What's included",
+      "feedsTrends": {
+        "body": "Re-runs flow into the Measure product, so promotion decisions ride on trends rather than a single test.",
+        "title": "Feeds longitudinal trends"
+      },
+      "gdpr": {
+        "body": "Candidate and employee assessment data is stored in the EU. Retention and deletion are configurable.",
+        "title": "GDPR-native"
+      },
+      "oneFramework": {
+        "body": "Five cognitive domains plus role-specific technical screens — no separate vendor for each piece.",
+        "title": "Cognitive + technical, one framework"
+      },
+      "panelReports": {
+        "body": "Normalised profile against the role benchmark, ready to discuss against the job spec.",
+        "title": "Hiring panel reports in minutes"
+      },
+      "title": "What does WelloWize ship with?"
+    },
+    "hero": {
+      "eyebrow": "WelloWize — Assessment",
+      "lede": "WelloWize gives hiring panels and people-leaders the same assessment vocabulary, so the work doesn't stop at the offer letter. Cognitive and technical, scored against role and tenure.",
+      "titleAccent": "and after.",
+      "titleLead": "One assessment framework — hiring"
+    },
+    "measureCards": {
+      "cognitive": {
+        "body": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — aligned with the platform's literature-backed constructs.",
+        "title": "Five cognitive domains"
+      },
+      "technical": {
+        "body": "SQL, TypeScript, statistics, and other role-relevant skills — added per role, scored alongside the cognitive profile.",
+        "title": "Role-specific technical screens"
+      },
+      "timeOnTask": {
+        "body": "Self-pacing and fatigue signals are read into context — used to interpret a score, not to penalise the candidate.",
+        "title": "Time-on-task patterns"
+      }
+    },
+    "measureSection": {
+      "headingAccent": "actually measure?",
+      "headingLead": "What does it",
+      "intro": "Three layers of signal, returned together as a single profile."
+    },
+    "meta": {
+      "description": "WelloWize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after.",
+      "title": "WelloWize — cognitive & technical assessments | WelloWork"
+    },
+    "panelSection": {
+      "body": "Once a candidate completes the assessment, the hiring panel sees a normalised profile against the role benchmark. This is intentionally a profile, not a single number — defensible at the offer stage and easier to discuss against the job spec.",
+      "headingAccent": "minutes.",
+      "headingLead": "Hiring panel results in"
+    },
+    "resultsCard": {
+      "above": "Above",
+      "aboveBenchmark": "Above benchmark on 3 of 5",
+      "below": "Below",
+      "candidateName": "Alex M.",
+      "candidateRole": "Senior Engineer — candidate",
+      "domains": {
+        "attention": "Attention",
+        "cognitiveFlexibility": "Cognitive Flexibility",
+        "problemSolving": "Problem Solving",
+        "processingSpeed": "Processing Speed",
+        "workingMemory": "Working Memory"
+      },
+      "normalisedProfile": "Normalised profile",
+      "sampleData": "Sample data",
+      "scaleBenchmark": "· · · role benchmark",
+      "scaleHigh": "High",
+      "scaleLow": "Low",
+      "windowLabel": "wellowize · candidate profile"
+    },
+    "standardPoints": {
+      "endsAtOffer": "Ends at offer signing",
+      "scopedHiring": "Scoped to hiring only",
+      "singleScore": "Single composite score"
+    },
+    "timeline": {
+      "candidateCompletes": {
+        "label": "Candidate completes",
+        "time": "~45 min"
+      },
+      "panelNotified": {
+        "label": "Panel notified",
+        "time": "Instant"
+      },
+      "resultsProcessed": {
+        "label": "Results processed",
+        "time": "~2 min"
+      }
+    },
+    "timelineCard": {
+      "endToEnd": "~50 min end-to-end",
+      "eyebrow": "Time to panel",
+      "footnote": "Panel gets a normalised profile, not a raw transcript. Sample timings."
+    },
+    "welloWizePoints": {
+      "continuous": {
+        "label": "Continuous, re-runnable",
+        "why": "Quarterly re-runs feed a longitudinal trend the Measure product surfaces."
+      },
+      "prePost": {
+        "label": "Pre and post hire",
+        "why": "Same framework for the candidate and for the same person twelve months in — directly comparable."
+      },
+      "profile": {
+        "label": "Normalised profile, not a number",
+        "why": "A shape against the role benchmark — defensible at offer stage and easier to discuss against the job spec."
+      }
+    }
+  },
+  "platformGrowth": {
+    "answer": {
+      "body": "The daily cognitive-training layer of the WelloWork platform — adaptive sessions across five validated constructs, paid in tokens, feeding the same longitudinal trend that managers see in aggregate.",
+      "label": "What is WelloRise?"
+    },
+    "comparison": {
+      "consumerLabel": "Consumer app",
+      "headingAccent": "brain-training app?",
+      "headingLead": "How is it different from a"
+    },
+    "constructs": {
+      "attention": {
+        "desc": "Sustain focus on what matters and filter out what doesn't.",
+        "label": "Attention"
+      },
+      "cognitiveFlexibility": {
+        "desc": "Switch between tasks, perspectives, and mental models on the fly.",
+        "label": "Cognitive flexibility"
+      },
+      "problemSolving": {
+        "desc": "Reason through novel situations and adapt to unfamiliar constraints.",
+        "label": "Problem solving"
+      },
+      "processingSpeed": {
+        "desc": "How quickly you take in, evaluate, and respond to new information under pressure.",
+        "label": "Processing speed"
+      },
+      "workingMemory": {
+        "desc": "Hold and update information in mind — the cognitive workbench for complex work.",
+        "label": "Working memory"
+      }
+    },
+    "constructsSection": {
+      "headingAccent": "actually do?",
+      "headingLead": "What does daily cognitive training",
+      "intro": "Five validated constructs, trained in short adaptive sessions."
+    },
+    "consumerPoints": {
+      "noWorkContext": "No work context",
+      "optimisedEngagement": "Optimised for engagement",
+      "personalEntertainment": "Personal entertainment",
+      "singleUserData": "Single-user data",
+      "standaloneScore": "Standalone score"
+    },
+    "crumbs": {
+      "current": "Growth — WelloRise",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "A 30-minute walkthrough with sample data from your industry — and a candid pilot conversation.",
+      "primary": "Book a demo",
+      "secondary": "Compare platform tiers",
+      "titleAccent": "manager dashboard.",
+      "titleLead": "See WelloRise inside the"
+    },
+    "employeeCards": {
+      "adaptive": {
+        "body": "Every session adjusts to your current level across all five constructs. You're stretched, not overwhelmed — and never bored.",
+        "sub": "Calibrated per domain",
+        "title": "Adaptive to you"
+      },
+      "peers": {
+        "body": "Mentor a teammate, run a lunchtime workshop, or pick up a stretch task from the marketplace — peers pay you in tokens.",
+        "sub": "A token-paid task marketplace",
+        "title": "Help peers, earn more"
+      },
+      "privacy": {
+        "body": "Individual session results stay with you. Managers only see anonymised, aggregated trends — never single-person scores.",
+        "sub": "Managers see aggregates only",
+        "title": "Your data, private"
+      },
+      "tokens": {
+        "body": "Daily sessions earn tokens. Spend them on books, courses, or growth tracks — funded by a budget the team already has.",
+        "sub": "Redeem for courses & growth",
+        "title": "Tokens fund learning"
+      }
+    },
+    "employeeSection": {
+      "headingAccent": "employee?",
+      "headingLead": "What's in it for the"
+    },
+    "features": {
+      "adaptive": {
+        "body": "Each session calibrates per domain. Underchallenged employees don't plateau; overstretched ones don't burn out.",
+        "title": "Adaptive difficulty"
+      },
+      "domains": {
+        "body": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — mapped to construct-level literature.",
+        "title": "Five validated cognitive domains"
+      },
+      "eyebrow": "What's included",
+      "longitudinal": {
+        "body": "Every session is a data point. Trends, not single scores, drive the manager view and promotion-readiness signals.",
+        "title": "Longitudinal trends"
+      },
+      "privacy": {
+        "body": "Individual session results are private to the employee. Managers see anonymised, aggregated trends only.",
+        "title": "Employee-first privacy"
+      },
+      "teamComposition": {
+        "body": "Recommends optimal team blends per project, based on aggregated cognitive profiles and prior performance.",
+        "title": "Team Composition engine"
+      },
+      "titleAccent": "WelloRise",
+      "titleLead": "What does",
+      "titleTrail": "ship with?",
+      "tokens": {
+        "body": "Sessions earn tokens that redeem for courses, growth tracks, or peer help — funding learning the team already wants.",
+        "title": "Token economy"
+      }
+    },
+    "hero": {
+      "eyebrow": "WelloRise — Growth",
+      "lede": "WelloRise is a daily cognitive training product designed for working weeks, not lab conditions. Five to ten minutes a day across five validated cognitive constructs — with a token economy that funds learning.",
+      "titleAccent": "coffee break.",
+      "titleLead": "Daily cognitive training that fits in a"
+    },
+    "managerCards": {
+      "annotated": {
+        "body": "Sprint cuts, releases, and on-call rotations are tagged on the trend line — so you can see which work patterns cost the team.",
+        "sub": "Sprints, releases, on-call",
+        "title": "Annotated to work events"
+      },
+      "composition": {
+        "body": "Recommend the right blend of cognitive strengths for a project, sprint, or task force — based on aggregated profiles, not guesses.",
+        "sub": "Rooted in cognitive strengths",
+        "title": "Team composition fit"
+      },
+      "trends": {
+        "body": "Rolling longitudinal views show whether the team is improving or drifting — long before a single survey could surface it.",
+        "sub": "90-day, 6-month, 12-month views",
+        "title": "Trends across the year"
+      },
+      "variability": {
+        "body": "For operations-critical roles, watch for variability spikes in attention and processing speed that often precede error windows.",
+        "sub": "For operations-critical roles",
+        "title": "Variability where it matters"
+      }
+    },
+    "managerSection": {
+      "headingAccent": "manager?",
+      "headingLead": "What's in it for the"
+    },
+    "meta": {
+      "description": "WelloRise is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks.",
+      "title": "WelloRise — daily cognitive training for teams | WelloWork"
+    },
+    "sessionCard": {
+      "chip": {
+        "attention": "Attention",
+        "flexibility": "Flexibility",
+        "memory": "Memory",
+        "problemSolving": "Problem solving",
+        "processing": "Processing"
+      },
+      "constructs": "constructs",
+      "currentTask": "Working memory",
+      "elapsed": "2:14 elapsed",
+      "eyebrow": "Today's session",
+      "inProgress": "In progress",
+      "left": "~3 min left",
+      "live": "Live",
+      "taskOf": "Task 2 of 3",
+      "taskProgressAria": "Task progress",
+      "title": "5 minutes to keep your trend",
+      "tokensEarned": "+12 tokens earned today",
+      "tokensRedeem": "Redeem for courses, books, or peer help"
+    },
+    "welloRisePoints": {
+      "annotated": {
+        "label": "Annotated to work events",
+        "why": "Sprints, releases, and on-call shifts get tagged on the trend line."
+      },
+      "feedsDashboard": {
+        "label": "Feeds team dashboard",
+        "why": "Aggregated, anonymised signal flows to managers — never individual results."
+      },
+      "longitudinal": {
+        "label": "Longitudinal trend",
+        "why": "We watch how each domain moves over weeks, not the score on any single day."
+      },
+      "stableSignal": {
+        "label": "Optimised for stable signal",
+        "why": "Same task design and difficulty curve — so a score this month is comparable to one next quarter."
+      },
+      "workplaceLayer": {
+        "label": "Workplace performance layer",
+        "why": "Sits inside the same platform as assessment, workshops, and team composition."
+      }
+    }
+  },
+  "platformMeasure": {
+    "answer": {
+      "body": "Measure turns every training session, assessment, and workshop interaction into a longitudinal performance signal. Managers see 90-day, 6-month, and 12-month aggregated trends, auto-annotated against work events such as sprint reviews, on-call rotations, and shift changes.",
+      "label": "What is WelloWork Measure?"
+    },
+    "crumbs": {
+      "current": "Measure — Performance trends",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Realistic sample data from your industry, with the privacy model wired up live.",
+      "primary": "Book a demo",
+      "secondary": "How we measure it",
+      "titleAccent": "one screen.",
+      "titleLead": "See six months of trend in"
+    },
+    "employeeCard": {
+      "anonymised": "Anonymised",
+      "appUrl": "app.wellowork.net / me",
+      "gdprNote": "GDPR · export or delete",
+      "ownNote": "Employees own this data — managers see only smoothed aggregates above a minimum team size.",
+      "perSession": "Per-session",
+      "sampleData": "Sample data",
+      "teamAggregateLead": "Team aggregate",
+      "teamAggregateQualifier": "(what your manager sees)",
+      "yourTrendLead": "Your trend",
+      "yourTrendQualifier": "(visible to you)"
+    },
+    "employeeSection": {
+      "body": "Employees see their own data — their per-session results plus the same trend a manager sees in aggregate. They control what their manager and HR can see at the team level and can request export or deletion under the GDPR at any time.",
+      "heading": "What does it look like for the employee?"
+    },
+    "features": {
+      "aggregated": {
+        "body": "Managers and HR see anonymised trends per team and per cohort — never individual employees.",
+        "title": "Aggregated team views"
+      },
+      "annotated": {
+        "body": "Sprint reviews, releases, shift changes, and on-call rotations are overlaid on the trend so dips don't read as mysteries.",
+        "title": "Auto-annotated against work events"
+      },
+      "eyebrow": "What's included",
+      "privacy": {
+        "body": "Aggregations enforce a minimum team size before any number is shown. Employees retain export and erasure rights.",
+        "title": "Privacy-by-design"
+      },
+      "promotion": {
+        "body": "Trend slope, role benchmark, and tenure-relative performance combine into a single, defensible signal.",
+        "title": "Promotion-readiness signal"
+      },
+      "title": "What does Measure ship with?",
+      "variability": {
+        "body": "Where variability hurts (safety, ops), Measure exposes it. Where it's healthy (creative work), it's not punished.",
+        "title": "Variability metrics"
+      },
+      "views": {
+        "body": "Three trend horizons — sprint-cadence, half-year, and full-year. Reads stay stable when one bad week happens.",
+        "title": "90 / 180 / 365-day views"
+      }
+    },
+    "hero": {
+      "eyebrow": "Measure — Performance trends",
+      "lede": "Measure is the trend layer of the WelloWork platform. Every session, every assessment, and every workshop is a data point — aggregated for managers and itemised for the employee who owns it.",
+      "titleAccent": "not a one-time score.",
+      "titleLead": "Longitudinal performance —"
+    },
+    "meta": {
+      "description": "WelloWork Measure turns every training session, assessment, and workshop into a longitudinal performance trend — 90-day, 6-month, and 12-month views for managers.",
+      "title": "Measure — longitudinal cognitive performance trends | WelloWork"
+    },
+    "promotionCard": {
+      "last6mo": "Last 6 months · Sample data",
+      "roleEmployee": "Employee",
+      "roleHR": "HR",
+      "roleManager": "Manager",
+      "signalStrong": "Strong",
+      "signalStrongLead": "Promotion-readiness signal:",
+      "threeWay": "Starts a three-way conversation",
+      "trendSlope": "Trend slope ↑"
+    },
+    "promotionSection": {
+      "body": "We're deliberate that promotion-readiness is a signal, not a verdict. It's a starting point for a conversation between a manager, HR, and the employee — one that they can run with months of comparable data behind them rather than a single assessment day.",
+      "heading": "Promotion-readiness based on trend, not one test"
+    },
+    "scoreVsTrend": {
+      "body": "A single cognitive score on a given day reflects sleep, caffeine, stress, and noise as much as it does the underlying domain. A trend across weeks and months filters that noise and shows direction — which is the only thing a manager can act on without unfair single-point decisions.",
+      "heading": "Why is a trend better than a score?"
+    },
+    "scoreVsTrendCompare": {
+      "oneTimeAffected": "Affected by: sleep, caffeine, stress, noise, time of day.",
+      "oneTimeScore": "One-time score",
+      "trendDirection": "Shows direction — not a snapshot.",
+      "trendView": "Trend view",
+      "vs": "VS"
+    },
+    "seeCards": {
+      "annotation": {
+        "body": "Sprint reviews, on-call rotations, releases, and shift changes overlaid on the trend.",
+        "title": "Auto-annotation"
+      },
+      "promotion": {
+        "body": "Grounded in trend slope across months, not a single assessment day.",
+        "title": "Promotion-readiness signal"
+      },
+      "teamTrend": {
+        "body": "Across the five cognitive domains — anonymised, never per-person.",
+        "title": "Aggregated team trend"
+      },
+      "variability": {
+        "body": "Useful for safety-critical and operations-critical roles where spread matters.",
+        "title": "Variability within the team"
+      }
+    },
+    "seeSection": {
+      "heading": "What can you actually see?"
+    },
+    "trendCard": {
+      "annotationShift": "Shift change",
+      "annotationSprint": "Sprint review",
+      "chartTitle": "12-month cognitive trend",
+      "monthApr": "Apr",
+      "monthJan": "Jan",
+      "monthJul": "Jul",
+      "monthOct": "Oct",
+      "personName": "Jordan K.",
+      "personRole": "Staff Engineer",
+      "privacyChip": "Employee owns this view · GDPR export available",
+      "sampleData": "Sample data",
+      "tab12mo": "12 months",
+      "tab6mo": "6 months",
+      "tab90": "90 days",
+      "trendingUp": "↑ Trending up"
+    }
+  },
+  "platformProactiveCare": {
+    "answer": {
+      "body": "Proactive Care is WelloWork's biomarker sample-testing service. Pilot engagements run on-site or via partnered labs, with blood panels focused on longevity-relevant markers (HbA1c, ApoB, hs-CRP, lipids, vitamin D, etc.) and urine panels for general health and substance screening. Employees own their report; managers see participation rates and high-level trends only.",
+      "label": "What is Proactive Care?"
+    },
+    "crumbs": {
+      "current": "Proactive Care",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Panels, geographies, and screening scope are confirmed in a scoping call. Pilots typically combine biomarker testing with Workshops in the Platform + Services tier.",
+      "primary": "Book a scoping call",
+      "secondary": "Talk to sales",
+      "title": "Scope a Proactive Care engagement."
+    },
+    "features": {
+      "aggregated": {
+        "body": "Managers see participation rates and anonymised, aggregated trends — never an individual value.",
+        "title": "Aggregated manager view"
+      },
+      "bloodPanel": {
+        "body": "A configurable panel of longevity-relevant markers, drawn on-site or via partnered labs.",
+        "title": "Longevity blood panel"
+      },
+      "chainOfCustody": {
+        "body": "Sample handling and chain-of-custody follow the accredited lab partner's standard practice in each geography.",
+        "title": "Lab-grade chain of custody"
+      },
+      "employeeOwned": {
+        "body": "Only the employee sees their results. They can share with their physician, export, or request deletion.",
+        "title": "Employee-owned reports"
+      },
+      "eyebrow": "What's included",
+      "linked": {
+        "body": "Where the employee consents, biomarker data is annotated on their own cognitive trend view.",
+        "title": "Linked to performance trends"
+      },
+      "title": "What does a Proactive Care engagement ship with?",
+      "urinePanel": {
+        "body": "General-health markers plus, where scoped, drug screening configured per customer policy.",
+        "title": "Urine health & screening"
+      }
+    },
+    "hero": {
+      "eyebrow": "Proactive Care",
+      "lede": "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their full report. Managers only see anonymised, aggregated trends.",
+      "titleAccent": "drug screening.",
+      "titleLead": "Biomarker testing for longevity, health, and"
+    },
+    "logistics": {
+      "step1": {
+        "body": "On-site for pilots, or via a partnered lab near the employee.",
+        "note": "Per-employee consent before any sample is taken.",
+        "title": "Sample collected"
+      },
+      "step2": {
+        "body": "Accredited lab partner handles sample, processing, and reporting in their standard practice.",
+        "title": "Chain-of-custody processing"
+      },
+      "step3": {
+        "body": "Only the employee. They can share with their physician, export, or request deletion.",
+        "title": "Employee receives report"
+      },
+      "stepLabel": "STEP {index}"
+    },
+    "logisticsSection": {
+      "body": "Sample collection runs on-site for larger pilots, or via partnered labs near the employee. Sample chain-of-custody and lab handling follow the standard practice of the accredited lab partner used in that geography. Drug-screening scope is configured per customer policy and consented to per-employee before the sample is taken.",
+      "heading": "How is it run logistically?"
+    },
+    "meta": {
+      "description": "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their report; managers only see anonymised, aggregated trends.",
+      "title": "Proactive Care — biomarker testing for longevity & health | WelloWork"
+    },
+    "panels": {
+      "blood": {
+        "body": "Metabolic, inflammatory, and cardiovascular markers commonly used in longevity-oriented preventive care.",
+        "eyebrow": "Blood",
+        "markers": {
+          "apob": "ApoB",
+          "cbc": "CBC",
+          "hba1c": "HbA1c",
+          "hscrp": "hs-CRP",
+          "lipidSubFractions": "Lipid sub-fractions",
+          "vitaminD": "Vitamin D"
+        },
+        "title": "Longevity panel"
+      },
+      "urine": {
+        "body": "Standard general-health markers plus, where scoped, substance-use screening configured to the customer's policy.",
+        "eyebrow": "Urine",
+        "markers": {
+          "drugScreen": "Drug screen (optional)",
+          "glucose": "Glucose",
+          "hydration": "Hydration",
+          "kidney": "Kidney function",
+          "protein": "Protein"
+        },
+        "title": "General health & screening"
+      }
+    },
+    "reportCard": {
+      "colHealthy": "Healthy range",
+      "colHigh": "High",
+      "colLow": "Low",
+      "colMarker": "Marker",
+      "markers": {
+        "apob": "ApoB",
+        "hba1c": "HbA1c",
+        "hscrp": "hs-CRP",
+        "lipids": "Lipids",
+        "vitaminD": "Vitamin D"
+      },
+      "markersAttention": "2 markers need attention",
+      "personName": "Jordan K.",
+      "personRole": "Marketing Lead",
+      "privacyChip": "Employee owns this report · GDPR export available",
+      "reportQ2": "Biomarker report · Q2",
+      "sampleData": "Sample data"
+    },
+    "roleAccess": {
+      "aria": {
+        "aggregated": "Aggregated",
+        "cohortTrend": "Anonymised cohort trend",
+        "hidden": "Hidden",
+        "visibleMarker": "Visible marker"
+      },
+      "cellAggLabel": "AGG",
+      "employee": {
+        "detail": "Full report — every marker visible",
+        "role": "Employee"
+      },
+      "heading": "What each role sees",
+      "legend": {
+        "aggregated": "Aggregated",
+        "cohortTrend": "Cohort trend",
+        "hidden": "Hidden",
+        "visible": "Marker visible"
+      },
+      "managerHR": {
+        "detail": "Aggregated trends across a minimum team size",
+        "role": "Manager / HR"
+      },
+      "privacyChip": "Architectural — not a policy override",
+      "wellowork": {
+        "detail": "Anonymised, cohort-level trend only",
+        "role": "WelloWork"
+      }
+    },
+    "siloVsLongitudinal": {
+      "annualLabel": "Annual physical",
+      "annualNote1": "Once a year, no longitudinal context.",
+      "annualNote2": "Discovered too late.",
+      "monthApr": "Apr",
+      "monthDec": "Dec",
+      "monthJan": "Jan",
+      "monthJul": "Jul",
+      "monthOct": "Oct",
+      "oneReading": "One reading",
+      "vs": "VS",
+      "welloWorkNote1": "Biomarkers + cognitive data — continuous, actionable.",
+      "welloWorkNote2": "Act on it now.",
+      "welloWorkView": "WelloWork view"
+    },
+    "testSection": {
+      "body": "Two panels, configured per engagement. Blood for longevity-relevant markers, urine for general-health and (where scoped) substance screening.",
+      "heading": "What does Proactive Care test?",
+      "note": "Note: WelloWork is not a clinical diagnostic service. Reports identify out-of-range markers and recommend follow-up with the employee's own physician. We do not diagnose conditions, and we do not provide medical advice."
+    },
+    "whoSeesSection": {
+      "body": "The employee is the only person who sees their full biomarker report. Managers and HR see aggregated, anonymised trends across a minimum team size — never an individual's values. This is a hard architectural rule of the platform, not a policy someone can override.",
+      "heading": "Who sees the results?"
+    },
+    "whySection": {
+      "body": "A small number of biomarkers materially bend cognitive performance over time — sleep architecture (proxied via metabolic markers), glucose variability, inflammation, and basic micronutrient status. Treating biomarker data as part of the same longitudinal view as cognitive training and assessments lets employees and their physicians act on it, rather than discovering it once a year at a physical.",
+      "heading": "Why testing as part of a performance platform?"
+    }
+  },
+  "platformTabs": {
+    "cta": {
+      "explore": "Explore {tab}"
+    },
+    "explore": "Explore {section}",
+    "section": {
+      "eyebrow": "The platform",
+      "heading": {
+        "accent": "human capital.",
+        "lead": "One operating system for "
+      },
+      "titleAccent": "human capital.",
+      "titleLead": "One operating system for"
+    },
+    "tabs": {
+      "assessment": {
+        "body": "One assessment framework for candidates and existing employees. Build defensible profiles before the offer letter, and keep measuring after it.",
+        "bullet1": "Cognitive + technical, one framework",
+        "bullet2": "Hiring panel results in minutes",
+        "bullet3": "Internal benchmarks against role + tenure",
+        "bullets": [
+          "Cognitive + technical, one framework",
+          "Hiring panel results in minutes",
+          "Internal benchmarks against role + tenure"
+        ],
+        "eyebrow": "WelloWize",
+        "label": "Assessment",
+        "title": "Hiring and internal assessments — cognitive and technical."
+      },
+      "growth": {
+        "body": "Adaptive exercises across problem solving, working memory, attention, processing speed, and cognitive flexibility. Tokens unlock courses; a task marketplace lets colleagues help each other and earn.",
+        "bullet1": "Adaptive difficulty per cognitive domain",
+        "bullet2": "Tokens redeem for courses & growth tracks",
+        "bullet3": "Team Composition engine recommends optimal teams per project",
+        "bullets": [
+          "Adaptive difficulty per cognitive domain",
+          "Tokens redeem for courses & growth tracks",
+          "Team Composition engine recommends optimal teams per project"
+        ],
+        "eyebrow": "WelloRise",
+        "label": "Growth",
+        "title": "Daily cognitive training that fits in a coffee break."
+      },
+      "measure": {
+        "body": "Every session, every assessment, every workshop is a data point. See how cognitive performance changes through sprints, shifts, and seasons — for individuals and aggregated for managers.",
+        "bullet1": "90-day, 6-month, and 12-month views",
+        "bullet2": "Auto-annotated against work events",
+        "bullet3": "Promotion-readiness signals based on trend, not a single test",
+        "bullets": [
+          "90-day, 6-month, and 12-month views",
+          "Auto-annotated against work events",
+          "Promotion-readiness signals based on trend, not a single test"
+        ],
+        "eyebrow": "Performance trends",
+        "label": "Measure",
+        "title": "Longitudinal performance — not a one-time score."
+      },
+      "proactiveCare": {
+        "body": "Blood panels for longevity markers and urine panels for general health and drug screening. Employees see their full report. Managers only see anonymised, aggregated trends.",
+        "bullet1": "Blood: longevity biomarkers",
+        "bullet2": "Urine: general health & drug screening",
+        "bullet3": "Employee-private + manager-aggregated views",
+        "bullets": [
+          "Blood: longevity biomarkers",
+          "Urine: general health & drug screening",
+          "Employee-private + manager-aggregated views"
+        ],
+        "eyebrow": "Preventive care",
+        "label": "Proactive Care",
+        "title": "Biomarker testing for longevity, general health, and drug screening."
+      },
+      "workshops": {
+        "body": "Facilitator-led sessions designed around the cognitive performance and longevity themes that compound. Booked through the same platform — outcomes flow back into the trend data.",
+        "bullet1": "Facilitator-led, on-site or remote",
+        "bullet2": "Aligned with cognitive & longevity science",
+        "bullet3": "Bookings, attendance, and follow-ups in one place",
+        "bullets": [
+          "Facilitator-led, on-site or remote",
+          "Aligned with cognitive & longevity science",
+          "Bookings, attendance, and follow-ups in one place"
+        ],
+        "eyebrow": "Service layer",
+        "label": "Workshops",
+        "title": "Live health workshops, on-site or remote."
+      }
+    },
+    "visual": {
+      "assessment": {
+        "badge": "Sample candidate",
+        "benchmarkNote": "Above role benchmark in 4 of 5 cognitive domains.",
+        "candidateName": "J. Karlsson",
+        "candidateRole": "Backend Engineer · Stockholm",
+        "score": {
+          "attention": "Attention",
+          "problemSolving": "Problem solving",
+          "processingSpeed": "Processing speed",
+          "technicalTs": "Technical · TS",
+          "workingMemory": "Working memory"
+        },
+        "strongMatch": "Strong match",
+        "url": "app.wellowork.net / assess / candidate"
+      },
+      "growth": {
+        "badge": "Working memory · day 14",
+        "matchBtn": "Match (M)",
+        "nbackLevel": "N-back · level 4",
+        "skipBtn": "Skip (Space)",
+        "streak": "Streak: 14 days · Marketplace balance: 248",
+        "timer": "00:24",
+        "tokensEarned": "+12 tokens earned",
+        "url": "app.wellowork.net / train"
+      },
+      "measure": {
+        "badge": "Eng team · 6 months",
+        "cognitivePerformance": "Cognitive performance",
+        "metric": {
+          "avgFocus": {
+            "cap": "vs. last quarter",
+            "l": "Avg focus",
+            "v": "+11%"
+          },
+          "memory": {
+            "cap": "rolling 30-day",
+            "l": "Memory",
+            "v": "+6%"
+          },
+          "variability": {
+            "cap": "team-level",
+            "l": "Variability",
+            "v": "−14%"
+          }
+        },
+        "monthApr": "Apr",
+        "monthDec": "Dec",
+        "monthFeb": "Feb",
+        "monthJan": "Jan",
+        "monthMar": "Mar",
+        "monthMay": "May",
+        "smoothed": "Smoothed weekly · sample data",
+        "sprintAnnotation": "Sprint review · focus −8%",
+        "url": "app.wellowork.net / trends"
+      },
+      "proactiveCare": {
+        "anonymised": "Anonymised",
+        "badge": "Your view · private",
+        "managerView": "Manager view · aggregated",
+        "marker": {
+          "apob": {
+            "l": "ApoB",
+            "tag": "monitor"
+          },
+          "hba1c": {
+            "l": "HbA1c",
+            "tag": "optimal"
+          },
+          "hscrp": {
+            "l": "hs-CRP",
+            "tag": "good"
+          },
+          "vitaminD": {
+            "l": "Vitamin D",
+            "tag": "optimal"
+          }
+        },
+        "panelMeta": "Drawn 12 May · 11 markers",
+        "panelTitle": "Blood panel · longevity",
+        "privacyChip": "Only you can see this",
+        "reportsCompleted": "reports completed this cycle",
+        "team": "Engineering · 14 members",
+        "trendsNote": "Individual values are never shown — only trends.",
+        "url": "app.wellowork.net / health / report"
+      },
+      "workshops": {
+        "badge": "May · upcoming",
+        "booked": "14 booked",
+        "day": {
+          "fri": "FRI",
+          "thu": "THU",
+          "tue": "TUE",
+          "wed": "WED"
+        },
+        "url": "app.wellowork.net / workshops",
+        "w1": {
+          "title": "Sleep architecture & recovery",
+          "when": "10:00 · Remote · 60 min"
+        },
+        "w2": {
+          "title": "Nutrition for cognitive performance",
+          "when": "13:00 · On-site · 90 min"
+        },
+        "w3": {
+          "title": "Stress, focus, and cognitive load",
+          "when": "15:30 · Remote · 60 min"
+        },
+        "w4": {
+          "title": "Longevity & metabolic health basics",
+          "when": "11:00 · On-site · 90 min"
+        }
+      }
+    }
+  },
+  "platformTabsMock": {
+    "assessment": {
+      "badge": "Sample candidate",
+      "match": "Strong match",
+      "name": "J. Karlsson",
+      "note": "Above role benchmark in 4 of 5 cognitive domains.",
+      "role": "Backend Engineer · Stockholm",
+      "score": {
+        "attention": "Attention",
+        "problemSolving": "Problem solving",
+        "processingSpeed": "Processing speed",
+        "technical": "Technical · TS",
+        "workingMemory": "Working memory"
+      },
+      "url": "app.wellowork.net / assess / candidate"
+    },
+    "growth": {
+      "badge": "Working memory · day 14",
+      "btnMatch": "Match (M)",
+      "btnSkip": "Skip (Space)",
+      "exercise": "N-back · level 4",
+      "streak": "Streak: 14 days · Marketplace balance: 248",
+      "timer": "00:24",
+      "tokens": "+12 tokens earned",
+      "url": "app.wellowork.net / train"
+    },
+    "measure": {
+      "annotation": "Sprint review · focus −8%",
+      "axis": {
+        "apr": "Apr",
+        "dec": "Dec",
+        "feb": "Feb",
+        "jan": "Jan",
+        "mar": "Mar",
+        "may": "May"
+      },
+      "badge": "Eng team · 6 months",
+      "stat": {
+        "focus": {
+          "cap": "vs. last quarter",
+          "label": "Avg focus",
+          "value": "+11%"
+        },
+        "memory": {
+          "cap": "rolling 30-day",
+          "label": "Memory",
+          "value": "+6%"
+        },
+        "variability": {
+          "cap": "team-level",
+          "label": "Variability",
+          "value": "−14%"
+        }
+      },
+      "subtitle": "Smoothed weekly · sample data",
+      "title": "Cognitive performance",
+      "url": "app.wellowork.net / trends"
+    },
+    "proactiveCare": {
+      "anonymised": "Anonymised",
+      "badge": "Your view · private",
+      "footnote": "Individual values are never shown — only trends.",
+      "managerView": "Manager view · aggregated",
+      "marker": {
+        "apob": {
+          "tag": "monitor"
+        },
+        "hba1c": {
+          "tag": "optimal"
+        },
+        "hscrp": {
+          "tag": "good"
+        },
+        "vitd": {
+          "tag": "optimal"
+        }
+      },
+      "panelSub": "Drawn 12 May · 11 markers",
+      "panelTitle": "Blood panel · longevity",
+      "privacyChip": "Only you can see this",
+      "reports": "reports completed this cycle",
+      "team": "Engineering · 14 members",
+      "url": "app.wellowork.net / health / report"
+    },
+    "workshops": [
+      {
+        "day": "TUE",
+        "title": "Sleep architecture & recovery",
+        "when": "10:00 · Remote · 60 min"
+      },
+      {
+        "day": "WED",
+        "title": "Nutrition for cognitive performance",
+        "when": "13:00 · On-site · 90 min"
+      },
+      {
+        "day": "THU",
+        "title": "Stress, focus, and cognitive load",
+        "when": "15:30 · Remote · 60 min"
+      },
+      {
+        "day": "FRI",
+        "title": "Longevity & metabolic health basics",
+        "when": "11:00 · On-site · 90 min"
+      }
+    ]
+  },
+  "platformWorkshops": {
+    "answer": {
+      "body": "They're live, facilitator-led sessions for employees — on-site or remote — covering sleep architecture, nutrition for cognitive performance, stress and focus, and longevity basics. Bookings, attendance, and follow-ups happen inside the same platform that runs daily training and performance trends.",
+      "label": "What are WelloWork workshops?"
+    },
+    "bookingCard": {
+      "bookButton": "Book session",
+      "enrolled": "+12 enrolled",
+      "eyebrow": "Workshop",
+      "pickSession": "Pick a session",
+      "sample": "Sample",
+      "slot1": {
+        "date": "Thu · 4 Jun",
+        "tag": "On-site · Stockholm",
+        "time": "09:30 CET"
+      },
+      "slot2": {
+        "date": "Tue · 9 Jun",
+        "tag": "Remote · Zoom",
+        "time": "14:00 CET"
+      },
+      "slotOpen": "Open",
+      "slotSelected": "Selected",
+      "title": "Sleep Architecture & Recovery"
+    },
+    "cadenceCompare": {
+      "monthJul": "Jul",
+      "monthMay": "May",
+      "monthNov": "Nov",
+      "monthSep": "Sep",
+      "oneOffLabel": "One-off speaker",
+      "oneOffSub": "Forgotten by Tuesday",
+      "welloWorkLabel": "WelloWork workshop",
+      "welloWorkSub": "Compounds over time"
+    },
+    "cadenceSection": {
+      "body": "The content of a one-off speaker doesn't compound. Workshops here are scheduled in a cadence that matches each customer's pilot, with attendance and follow-up actions captured back in the platform. A workshop on sleep in May links forward into a recovery-flagged dip in July — not a vague memory from a Tuesday afternoon.",
+      "heading": "How is this different from a one-off speaker?"
+    },
+    "crumbs": {
+      "current": "Workshops",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Workshop and biomarker testing volumes are confirmed in a scoping call. Bring your headcount and constraints — we'll bring options.",
+      "primary": "Book a scoping call",
+      "secondary": "Talk to sales",
+      "title": "Scope a workshop engagement."
+    },
+    "deliverySection": {
+      "body": "Both. Most pilots run a mix — on-site for the Nordics, remote for distributed teams elsewhere. Facilitators are reviewed annually and aligned with the platform's broader methodology.",
+      "heading": "On-site or remote?"
+    },
+    "deliveryToggle": {
+      "onSite": "On-site",
+      "remote": "Remote",
+      "whereWeRun": "Where we run"
+    },
+    "features": {
+      "aligned": {
+        "body": "Curriculum aligned with the same construct framework that drives WelloRise and Measure — not a separate worldview.",
+        "title": "Cognitive- and longevity-aligned"
+      },
+      "bookings": {
+        "body": "Employees book through the same WelloWork app that runs training and trends — no separate vendor portal.",
+        "title": "Bookings inside the platform"
+      },
+      "eyebrow": "What's included",
+      "facilitator": {
+        "body": "Live sessions led by trained facilitators, with structured Q&A and short follow-up workflows.",
+        "title": "Facilitator-led"
+      },
+      "outcomes": {
+        "body": "Workshop attendance and follow-ups are annotated on the performance trend, so dips and bumps don't read as noise.",
+        "title": "Outcomes feed trends"
+      },
+      "privacy": {
+        "body": "Individual employee attendance is never surfaced to managers — only aggregated and anonymised rates per team.",
+        "title": "Privacy-respecting"
+      },
+      "title": "What does a workshop engagement ship with?",
+      "tracking": {
+        "body": "Aggregated attendance and follow-up rates feed the Service Engagement reporting for HR and Operations.",
+        "title": "Attendance & follow-up tracking"
+      }
+    },
+    "hero": {
+      "eyebrow": "Workshops",
+      "lede": "Facilitator-led sessions on the cognitive performance and longevity themes that compound — sleep, nutrition, recovery, focus. Booked in the platform; outcomes flow back into performance trends.",
+      "titleAccent": "remote.",
+      "titleLead": "Live health workshops, on-site or"
+    },
+    "mapBlob": {
+      "distributed": "DISTRIBUTED",
+      "nordics": "NORDICS"
+    },
+    "meta": {
+      "description": "Facilitator-led workshops on sleep, recovery, nutrition, focus, and longevity. On-site or remote, bookable in WelloWork, with outcomes feeding back into performance trends.",
+      "title": "Workshops — live health workshops, on-site or remote | WelloWork"
+    },
+    "scoping": {
+      "step1": {
+        "body": "Headcount, locations, languages, constraints.",
+        "title": "Scoping call"
+      },
+      "step2": {
+        "body": "Topic and cadence aligned with the right lead.",
+        "title": "Facilitator matched"
+      },
+      "step3": {
+        "body": "Bookable in-platform; follow-ups wired to trends.",
+        "title": "Sessions scheduled"
+      }
+    },
+    "scopingSection": {
+      "body": "Workshops are scoped per engagement — facilitator availability, location, language, and follow-up cadence are confirmed in a scoping call. They're included in the Platform + Services tier alongside biomarker testing.",
+      "heading": "Scoping"
+    },
+    "topics": {
+      "cognitiveLoad": {
+        "body": "Stress, attention, and the limits of working memory.",
+        "title": "Cognitive load"
+      },
+      "longevity": {
+        "body": "Metabolic health for the long arc, not the quarter.",
+        "title": "Longevity basics"
+      },
+      "movement": {
+        "body": "Recovery routines for screen-heavy roles.",
+        "title": "Desk-bound movement"
+      },
+      "nutrition": {
+        "body": "Fuelling cognitive performance through the day.",
+        "title": "Nutrition for focus"
+      },
+      "sleep": {
+        "body": "Stages, recovery, and how to protect deep sleep.",
+        "title": "Sleep architecture"
+      }
+    },
+    "topicsSection": {
+      "heading": "Which workshops are available?"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Pricing",
+    "featuredBadge": "Most teams start here",
+    "heading": {
+      "accent": "Both shaped to your pilot.",
+      "lead": "Two ways to start. "
+    },
+    "lede": "We price against the size and stage of your pilot — full numbers in the call.",
+    "plans": {
+      "platform": {
+        "cta": "Talk to sales",
+        "desc": "Per-employee SaaS access to WelloRise and WelloWize.",
+        "features": [
+          "Daily cognitive training (WelloRise)",
+          "Hiring & internal assessments (WelloWize)",
+          "Manager dashboards & trend analytics",
+          "GDPR-native data residency"
+        ],
+        "name": "Platform",
+        "price": "€12",
+        "unit": "per employee · per month"
+      },
+      "platformServices": {
+        "cta": "Book a scoping call",
+        "desc": "Adds workshops and biomarker testing on a per-engagement basis.",
+        "features": [
+          "Everything in Platform",
+          "Live health workshops, on-site or remote",
+          "Blood (longevity) & urine sample testing",
+          "Dedicated CSM and report templates"
+        ],
+        "name": "Platform + Services",
+        "note": "Workshop and biomarker testing volumes are scoped per engagement and confirmed in the call.",
+        "price": "from €28",
+        "unit": "per employee · per month · platform + per-engagement services"
+      }
+    }
+  },
+  "problem": {
+    "eyebrow": "The gap",
+    "heading": {
+      "accent": "We measure performance.",
+      "lead": "Wellness platforms measure engagement. "
+    },
+    "items": [
+      {
+        "body": "Satisfaction surveys measure how people feel about work. They don’t measure how work is changing them.",
+        "title": "Engagement scores don’t predict who’s about to burn out."
+      },
+      {
+        "body": "Sleep architecture, glucose variability, inflammation — the things that quietly bend the cognitive curve never make it into HR data.",
+        "title": "Annual physicals miss the biomarkers that drive cognitive performance."
+      },
+      {
+        "body": "Between those two extremes, there is no longitudinal view of how the people you hired are actually performing.",
+        "title": "Hiring assessments end at the offer letter — and HR surveys end with morale."
+      }
+    ],
+    "lede": "Three things every operator already knows about their people data — but no tool actually fixes."
+  },
+  "researchCognitiveConstructs": {
+    "answer": {
+      "body": "Five: working memory, processing speed, attention, problem solving, and cognitive flexibility. Each one maps to an established cognitive-science paradigm — N-back, symbol substitution, Posner-style attention, Raven reasoning, and task-switching — adapted for short, daily sessions inside a workplace platform.",
+      "label": "Which cognitive constructs does WelloWork measure?"
+    },
+    "att": {
+      "body": "Attention spans multiple sub-constructs: sustained, selective, alerting, orienting, executive. We focus on sustained attention (vigilance under a continuous task) and selective attention (filtering distractors) via Posner-style cueing paradigms, adapted for in-platform sessions.",
+      "heading": "What is attention and how do we measure it?"
+    },
+    "crumbs": {
+      "current": "Cognitive constructs",
+      "home": "Home",
+      "research": "Research"
+    },
+    "cta": {
+      "body": "The demo includes a side-by-side of a sample employee's adaptive session and where that result lands in the team aggregate.",
+      "primary": "Book a demo",
+      "secondary": "Methodology overview",
+      "title": "See the constructs in the dashboard."
+    },
+    "domainGrid": {
+      "aria": "Cognitive domains measured",
+      "att": {
+        "descriptor": "Filters noise",
+        "label": "Attention"
+      },
+      "flex": {
+        "descriptor": "Adapts rule sets",
+        "label": "Cognitive Flexibility"
+      },
+      "long": {
+        "descriptor": "Patterns over weeks",
+        "label": "Longitudinal Index"
+      },
+      "prob": {
+        "descriptor": "Reasons under constraint",
+        "label": "Problem Solving"
+      },
+      "ps": {
+        "descriptor": "Reacts without fatigue",
+        "label": "Processing Speed"
+      },
+      "wm": {
+        "descriptor": "Holds context under load",
+        "label": "Working Memory"
+      }
+    },
+    "exclude": {
+      "gamified": {
+        "label": "Gamified performance scores",
+        "why": "Improvement at games rarely transfers. We measure behaviour, not points."
+      },
+      "headLeft": "What we exclude",
+      "headRight": "Why",
+      "mood": {
+        "label": "Mood and emotion",
+        "why": "Held privately by the employee as optional context. Managers never see it."
+      },
+      "personality": {
+        "label": "Personality traits",
+        "why": "Personality assessment is a separate discipline with its own rigour requirements — and uneasy at work."
+      }
+    },
+    "excludeSection": {
+      "body": "We deliberately do not score personality, mood, or emotion via the cognitive battery. Personality assessment is its own discipline with its own rigour requirements; we have nothing useful to add there and we're cautious about its workplace use in any case. Mood is captured by employees themselves as optional context for their own trend view; managers don't see it.",
+      "heading": "What about constructs we don't measure?"
+    },
+    "flex": {
+      "body": "The ability to shift between rule sets and contexts. Operationalised through task-switching designs (after Monsell, 2003 and the broader executive-function literature), with switch-cost reduction tracked over time as a signal of flexibility under low-stakes conditions.",
+      "heading": "What is cognitive flexibility and how do we measure it?"
+    },
+    "gamesPanel": {
+      "gameBadge": "Limitation",
+      "gameMatch": "Match the pattern",
+      "gameNote": "Improves at the game. Transfer to real work: limited.",
+      "gameRound": "Round 4",
+      "gameScore": "Score 1,240",
+      "gameTap": "Tap",
+      "gameTitle": "Standard cognitive game",
+      "optionA": "Take the first ticket and re-route the rest later.",
+      "optionB": "Re-read the rules; choose the queue that fits today's load.",
+      "optionC": "Escalate to the lead and wait.",
+      "scenarioBadge": "Ecologically valid",
+      "scenarioNote": "Captures how you actually reason and decide. Built from field observations.",
+      "scenarioPrompt": "Two incident queues just changed priority rules. The next ticket you accept will set your queue for the rest of the shift.",
+      "scenarioStep": "Step 2 of 3",
+      "scenarioTag": "Ops · escalation",
+      "scenarioTitle": "WelloWork scenario"
+    },
+    "gamesSection": {
+      "bridge": "Research consistently shows people get better at cognitive games — not at complex real-world tasks. WelloWork scenarios are grounded in behavioral field work, not gamified proxies.",
+      "heading": "Why not just use cognitive games?"
+    },
+    "hero": {
+      "eyebrow": "Cognitive constructs",
+      "lede": "The constructs behind WelloRise and WelloWize — each with the paradigm we use, what the literature establishes, and the operational caveats we hold ourselves to.",
+      "titleAccent": "long literature.",
+      "titleLead": "Five domains, each with a"
+    },
+    "meta": {
+      "description": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — each domain, the literature behind it, and how WelloWork operationalises it.",
+      "title": "Cognitive constructs — the five domains WelloWork measures"
+    },
+    "methodBanner": {
+      "adaptive": {
+        "body": "Each session adjusts in real time to your current performance level.",
+        "title": "Adaptive difficulty"
+      },
+      "daily": {
+        "body": "Designed for workplace rhythms — not lab conditions.",
+        "title": "Short daily sessions"
+      },
+      "long": {
+        "body": "Patterns over time matter more than any single score.",
+        "title": "Longitudinal signal"
+      }
+    },
+    "pillStrip": {
+      "aria": "Five cognitive domains",
+      "att": "Attention",
+      "flex": "Cognitive Flexibility",
+      "prob": "Problem Solving",
+      "ps": "Processing Speed",
+      "wm": "Working Memory"
+    },
+    "prob": {
+      "body": "Non-verbal reasoning under constraints. We use Raven-style progressive matrices and tower-of-Hanoi-style problems, with explicit time-on-task tracking. Problem solving is the construct most influenced by domain knowledge, which is why we report it alongside the role-specific technical screens in WelloWize.",
+      "heading": "What is problem solving and how do we measure it?"
+    },
+    "ps": {
+      "body": "Processing speed measures how fast simple cognitive operations can be performed. We use symbol-substitution-style tasks (a paradigm with a long history in cognitive assessment) and short choice-reaction designs. Processing speed is notably sensitive to sleep deprivation and acute fatigue, which is part of why it's useful in a workplace context.",
+      "heading": "What is processing speed and how do we measure it?"
+    },
+    "scenarioCard": {
+      "att": {
+        "paradigm": "Posner cueing",
+        "scenario": "Monitor a six-channel ops dashboard for twenty minutes. Surface genuine drift; ignore routine noise."
+      },
+      "exampleLabel": "Example scenario",
+      "flex": {
+        "paradigm": "Task-switching",
+        "scenario": "Switch between three escalation queues with different rules. Apply the right rule before the wrong reflex."
+      },
+      "footer": "Signal pattern captured per session",
+      "prob": {
+        "paradigm": "Raven matrices",
+        "scenario": "A recurring scheduling conflict spans three teams and two constraints. Identify the resolvable axis first."
+      },
+      "ps": {
+        "paradigm": "Symbol substitution",
+        "scenario": "Flag anomalies in a live operations feed before the next status report goes out."
+      },
+      "wm": {
+        "paradigm": "N-back",
+        "scenario": "Review six supplier proposals. Recall key figures while comparing the last two against the first."
+      }
+    },
+    "signalTrace": {
+      "att": {
+        "falseAlarms": "False alarms",
+        "hits": "Hits"
+      },
+      "flex": {
+        "sessions": "sessions →",
+        "switchCost": "switch cost"
+      },
+      "prob": {
+        "timeOnTask": "time on task",
+        "trials": "trials →"
+      },
+      "ps": {
+        "freq": "freq",
+        "reactionTime": "reaction time →"
+      },
+      "wm": {
+        "accuracy": "accuracy",
+        "difficulty": "difficulty →"
+      }
+    },
+    "wm": {
+      "body": "Working memory is the capacity to hold and manipulate information in mind. We operationalise it through N-back tasks (after Baddeley and the broader span literature) with adaptive difficulty per session. Working memory is one of the most predictive cognitive constructs for academic and complex-task performance in the published literature, though transfer to job-level outcomes is more domain-specific.",
+      "heading": "What is working memory and how do we measure it?"
+    }
+  },
+  "researchIndex": {
+    "answer": {
+      "body": "WelloWork's training and assessments are built on five long-validated cognitive constructs — working memory, processing speed, attention, problem solving, and cognitive flexibility. We commit to publishing our methodology and pilot results, and we make no clinical or diagnostic claims about the biomarker side of the platform.",
+      "label": "What is the WelloWork research approach?"
+    },
+    "constructs": {
+      "attention": {
+        "body": "Sustaining focus on a task and filtering distractors. Cued attention designs based on Posner-style paradigms.",
+        "cap": "Sustained & selective · Posner paradigms",
+        "name": "Attention"
+      },
+      "cognitiveFlexibility": {
+        "body": "The ability to shift between rule sets. Task-switching designs, with switch-cost reduction tracked over time.",
+        "cap": "Task-switching costs · Monsell, 2003",
+        "name": "Cognitive flexibility"
+      },
+      "problemSolving": {
+        "body": "Non-verbal reasoning under constraints. Adapted Raven progressive matrices and Tower problems.",
+        "cap": "Tower & Raven-style reasoning",
+        "name": "Problem solving"
+      },
+      "processingSpeed": {
+        "body": "How fast simple cognitive operations can be performed. Symbol-substitution paradigms; sensitive to sleep and fatigue.",
+        "cap": "Symbol substitution · Wechsler, classic",
+        "name": "Processing speed"
+      },
+      "workingMemory": {
+        "body": "The capacity to hold and manipulate information in mind. Operationalised via N-back and span tasks with adaptive difficulty.",
+        "cap": "N-back, span tasks · Baddeley, 1992",
+        "name": "Working memory"
+      }
+    },
+    "constructsSection": {
+      "heading": "Which cognitive constructs does WelloWork measure?"
+    },
+    "crumbs": {
+      "current": "Research",
+      "home": "Home"
+    },
+    "cta": {
+      "body": "Bring your headcount and constraints — we'll walk you through methodology and the privacy model in the same call.",
+      "primary": "Book a demo",
+      "secondary": "Methodology overview",
+      "title": "Want to see this on real pilot data?"
+    },
+    "hero": {
+      "eyebrow": "Research & evidence",
+      "lede": "Every cognitive exercise on the platform maps to a construct with a long literature — not an in-house metric we invented. We publish methodology as we generate pilot data.",
+      "titleAccent": "field already validates.",
+      "titleLead": "Built on constructs the"
+    },
+    "meta": {
+      "description": "WelloWork's cognitive training and assessments are built on validated constructs: working memory, processing speed, attention, problem solving, and cognitive flexibility.",
+      "title": "Research & methodology — cognitive constructs behind WelloWork"
+    },
+    "subpages": {
+      "constructs": {
+        "body": "Each of the five domains in detail — what they measure, what the literature says, and how WelloWork operationalises them.",
+        "title": "Cognitive constructs"
+      },
+      "methodology": {
+        "body": "How exercises map to constructs, and our commitment to publishing methodology as pilot data is generated.",
+        "title": "Methodology overview"
+      },
+      "scienceInsight": {
+        "body": "Notes, write-ups, and methodology observations from the WelloWork research team.",
+        "title": "Science & insight"
+      }
+    },
+    "subpagesSection": {
+      "heading": "Where can I read more?"
+    }
+  },
+  "researchMethodology": {
+    "aggregations": {
+      "heading": "How are aggregations done?"
+    },
+    "aggrGrid": {
+      "levelVariability": {
+        "body": "Reported separately — they answer different questions.",
+        "title": "Level vs. variability"
+      },
+      "minTeamSize": {
+        "body": "Aggregates only appear when the team threshold is met.",
+        "title": "Minimum team size enforced"
+      },
+      "weeklySmoothing": {
+        "body": "Single-day spikes don't drive manager attention.",
+        "title": "Weekly smoothing"
+      },
+      "workEvents": {
+        "body": "Sprint reviews, releases, and on-call periods are tagged automatically.",
+        "title": "Work event annotations"
+      }
+    },
+    "answer": {
+      "body": "WelloWork measures cognitive performance via short adaptive tasks mapped to five validated constructs — working memory, processing speed, attention, problem solving, and cognitive flexibility. Per-session scores are normalised against a per-employee baseline and aggregated into team-level trends with minimum-team-size enforcement. We make no clinical or diagnostic claims about biomarker reports.",
+      "label": "What is the WelloWork methodology, in one paragraph?"
+    },
+    "bellCurve": {
+      "population": "population",
+      "youVsOthers": "you vs. others"
+    },
+    "claims": {
+      "outOfScope": {
+        "businessOutcomes": "Transfer to specific business outcomes",
+        "clinical": "Clinical or diagnostic value",
+        "ranking": "Reliable individual ranking from short tasks",
+        "selfInvented": "Self-invented metrics"
+      },
+      "outOfScopeBadge": "Out of scope",
+      "outOfScopeTitle": "What we do not claim",
+      "supported": {
+        "signals": "Construct-mapped behavioral signals",
+        "teamPatterns": "Team-level patterns",
+        "trends": "Cognitive trends over time",
+        "variance": "Within-person variance"
+      },
+      "supportedBadge": "Supported",
+      "supportedTitle": "What we measure"
+    },
+    "closingBanner": {
+      "adaptive": {
+        "body": "Each session calibrates in real time to your current performance level.",
+        "title": "Adaptive difficulty"
+      },
+      "signal": {
+        "body": "Patterns across weeks matter more than any single session score.",
+        "title": "Signal over time"
+      },
+      "workplace": {
+        "body": "Short daily sessions. No lab conditions required.",
+        "title": "Designed for workplace rhythms"
+      }
+    },
+    "crumbs": {
+      "current": "Methodology",
+      "home": "Home",
+      "research": "Research"
+    },
+    "cta": {
+      "body": "A demo includes a 5–10 minute slot to dig into how a specific exercise maps to a construct, and how the score lands in the manager view.",
+      "primary": "Book a demo",
+      "secondary": "Back to research",
+      "title": "Want the methodology walked through live?"
+    },
+    "hero": {
+      "eyebrow": "Methodology",
+      "lede": "A short walk through the construct mapping, scoring, aggregation, and privacy posture behind the WelloWork platform. We publish methodology as we generate pilot data.",
+      "titleAccent": "and what we don't claim.",
+      "titleLead": "How we measure cognitive performance —"
+    },
+    "mapping": {
+      "body": "Each task on the platform maps to one primary construct and at most one secondary construct. The primary mapping drives scoring; the secondary mapping is captured for methodology audit but does not contribute to the headline metric. We use established paradigms — N-back, span tasks, symbol-substitution, Posner cueing, Raven-style reasoning, task-switching — adapted for short on-platform sessions.",
+      "heading": "How are exercises mapped to constructs?"
+    },
+    "mappingCard": {
+      "colConstruct": "Primary construct",
+      "colTask": "Task",
+      "footnote": "Each task maps to one primary construct. Secondary signals are captured but do not drive the score.",
+      "rows": {
+        "sequenceRecall": {
+          "construct": "Working Memory",
+          "task": "Sequence recall"
+        },
+        "symbolSubstitution": {
+          "construct": "Processing Speed",
+          "task": "Symbol substitution"
+        },
+        "targetDetection": {
+          "construct": "Attention",
+          "task": "Target detection"
+        }
+      }
+    },
+    "meta": {
+      "description": "How WelloWork maps exercises to validated cognitive constructs, scores them, and aggregates results into longitudinal performance trends — with privacy by design.",
+      "title": "Methodology overview — how WelloWork measures cognitive performance"
+    },
+    "normCard": {
+      "caption": "We don't compare employees to each other. We track each person against their own established baseline.",
+      "populationBadge": "Not used",
+      "populationNote": "Comparing an employee against a peer distribution. Noisy at the individual level — and uneasy at work.",
+      "populationTitle": "Population ranking",
+      "withinPersonBadge": "WelloWork approach",
+      "withinPersonNote": "Each session is scored against the employee's own running baseline from the last 90 days.",
+      "withinPersonTitle": "Within-person baseline"
+    },
+    "notClaim": {
+      "body": "We do not claim transfer of cognitive training to specific business outcomes (revenue, productivity). We do not claim clinical or diagnostic value for biomarker reports. We do not claim individual employee ranking is reliable from short adaptive tasks — only that trends are. And we do not invent metrics: every claim ties back to a published construct or to a methodology note we will publish under /research.",
+      "heading": "What do we deliberately not claim?"
+    },
+    "pipeline": {
+      "adaptive": {
+        "label": "Adaptive task",
+        "subtitle": "Difficulty calibrates per session"
+      },
+      "aggregate": {
+        "label": "Team-level aggregate",
+        "subtitle": "Threshold-gated, weekly smoothed"
+      },
+      "aria": "WelloWork measurement pipeline",
+      "badge": "No clinical claims. No population ranking.",
+      "baseline": {
+        "label": "Per-employee baseline normalisation",
+        "subtitle": "Compared to your own trend"
+      },
+      "mapping": {
+        "label": "Construct mapping",
+        "subtitle": "One primary cognitive construct"
+      }
+    },
+    "privacy": {
+      "body": "Methodology and privacy are linked. The platform's choice to normalise within an employee, not against a population, is also what makes it harder to \"de-anonymise\" an aggregate.",
+      "heading": "Privacy in the methodology"
+    },
+    "privacyGrid": {
+      "caption": "The same methodological choices that make our measurement accurate also make de-anonymisation structurally harder.",
+      "subThreshold": {
+        "body": "Small-cohort aggregates can be reverse-engineered to a single employee. We suppress them at the source.",
+        "title": "Why we don't publish sub-threshold aggregates"
+      },
+      "withinPerson": {
+        "body": "An individual baseline carries no information about peers — there is no peer distribution to back-solve against.",
+        "title": "Why within-person normalisation protects privacy"
+      }
+    },
+    "publish": {
+      "body": "Methodology notes will be posted under /research/science-insight as pilot cohorts produce enough data to write something defensible. We will not publish individual customer data, and we will not publish aggregates that don't meet our minimum-team threshold.",
+      "heading": "How do we publish updates?"
+    },
+    "scenariosPanel": {
+      "gameBadge": "Game-transfer problem",
+      "gameLevel": "Level 6",
+      "gameMatch": "Match the sequence",
+      "gameNote": "Meta-analyses consistently show people improve at the game. Transfer to real workplace complexity: minimal.",
+      "gameStreak": "Streak ×4",
+      "gameTap": "Tap",
+      "gameTitle": "Standard cognitive game",
+      "optionA": "Proposals 1 and 2 — both reference the Q3 cut-off date.",
+      "optionB": "Proposals 1 and 3 — overlapping delivery windows and shared depot.",
+      "optionC": "Proposals 2 and 3 — different regions, no overlap.",
+      "scenarioBadge": "Ecologically valid",
+      "scenarioNote": "Built from field observations of how people actually reason at work. Not a proxy. Not a game.",
+      "scenarioPrompt": "You're reviewing three vendor proposals submitted twenty minutes apart. Which two conflict on delivery timeline?",
+      "scenarioStep": "Step 1 of 2",
+      "scenarioTag": "Procurement · review",
+      "scenarioTitle": "WelloWork behavioral scenario"
+    },
+    "scenariosSection": {
+      "bridge": "Research consistently shows people get better at cognitive games — not at the complex decisions their jobs actually require. WelloWork scenarios are grounded in behavioral field work.",
+      "heading": "Why WelloWork scenarios — not cognitive games?"
+    },
+    "scoring": {
+      "body": "Per-session performance is normalised against the employee's own running baseline (z-scored within the last 90 days). This deliberately avoids comparing one employee against another at the individual level, since population-relative scoring is sensitive to noise that doesn't matter in a workplace context.",
+      "heading": "How are scores computed?"
+    },
+    "timeline": {
+      "aria": "Methodology publication milestones",
+      "note": "We publish when the data is defensible. Not before.",
+      "stop1": "Pilot cohort data collected",
+      "stop2": "Methodology note drafted + reviewed",
+      "stop3": "Published under /research/science-insight"
+    },
+    "withinPerson": {
+      "yourBaseline": "your baseline",
+      "yourGain": "your gain"
+    }
+  },
+  "researchScienceInsight": {
+    "anatomy": {
+      "anno1": "Working hypothesis vs. established finding",
+      "anno2": "Primary sources cited",
+      "anno3": "Confidence level indicated",
+      "anno4": "Links back to methodology",
+      "aria": "Anatomy of a research note",
+      "body": "Per-employee z-scoring removes inter-individual noise that population-relative scoring inherits. The transfer cost is measurable but small in pilot data.",
+      "confLabel": "Confidence",
+      "confValue": "Medium",
+      "footlink": "Linked from methodology overview →",
+      "metaNote": "Note · 2026-Q2",
+      "metaPilot": "Pilot cohort 2",
+      "ref": "Owen et al. (2010); Melby-Lervåg & Hulme (2013); Soveri et al. (2017).",
+      "statusBadge": "Working hypothesis",
+      "title": "Within-employee normalisation"
+    },
+    "crumbs": {
+      "current": "Science & insight",
+      "home": "Home",
+      "research": "Research"
+    },
+    "cta": {
+      "body": "If you'd like a specific question on the literature or our approach addressed in a note here, tell us via the contact form — we read everything.",
+      "primary": "Contact research",
+      "secondary": "Back to research",
+      "title": "Want a methodology question answered?"
+    },
+    "expect": {
+      "body": "Short, dated notes on a specific construct or design decision. Each note will name its primary sources, identify where it's a working hypothesis versus an established finding, and link back to the methodology overview for context.",
+      "heading": "What can readers expect here?"
+    },
+    "fieldPanel": {
+      "gameBadge": "Limitation",
+      "gameLevel": "Level 3",
+      "gameMatch": "Match the shape",
+      "gameNote": "Participants improve at the game. Transfer to actual workplace complexity: limited. Dozens of meta-analyses confirm this.",
+      "gameScore": "Score 820",
+      "gameTap": "Tap",
+      "gameTitle": "How cognitive games measure performance",
+      "optionA": "Shortlist A — drop suppliers 2 and 4.",
+      "optionB": "Shortlist B — keep 1, 3, 5; re-score against new constraints.",
+      "optionC": "Restart the review with the new constraints applied first.",
+      "scenarioBadge": "Field-grounded",
+      "scenarioNote": "Designed from field observations of real workplace decisions. Measures behavioral patterns, not game skill.",
+      "scenarioPrompt": "You've reviewed 5 supplier proposals. Two new constraints just arrived. Which original shortlist still holds?",
+      "scenarioStep": "Step 2 of 3",
+      "scenarioTag": "Procurement · shortlist",
+      "scenarioTitle": "How WelloWork measures performance"
+    },
+    "fieldSection": {
+      "bridge": "Standard cognitive batteries make people better at cognitive batteries. Our scenarios are built from how work actually happens — so what we measure transfers.",
+      "heading": "Why field-based research changes what we measure"
+    },
+    "follow": {
+      "body": "For now, the easiest way to follow updates is to subscribe via contact — we will not add anyone to any list without explicit opt-in, and you can unsubscribe at any time.",
+      "heading": "How to follow updates"
+    },
+    "hero": {
+      "eyebrow": "Science & insight",
+      "lede": "A working space for methodology notes, literature reviews, and observations from pilot cohorts. We publish work-in-progress with caveats, not finished claims.",
+      "titleAccent": "research team.",
+      "titleLead": "Notes from the WelloWork"
+    },
+    "meta": {
+      "description": "Working notes from the WelloWork research team on cognitive constructs, biomarker methodology, workplace performance signals, and where the literature is and isn't.",
+      "title": "Science & insight — methodology notes from WelloWork research"
+    },
+    "notebook": {
+      "aria": "Sample research note in progress",
+      "confidenceKey": "Confidence",
+      "confidenceVal": "Low–Medium",
+      "constructKey": "Construct",
+      "constructVal": "N-back transfer",
+      "eyebrow": "Research note",
+      "lastUpdated": "Last updated",
+      "lastUpdatedVal": "Pilot cohort 2 · Pending replication",
+      "meterAria": "Confidence ~35%",
+      "meterLabel": "Confidence",
+      "meterValue": "35%",
+      "status": "Work in progress",
+      "statusKey": "Status",
+      "statusVal": "Hypothesis"
+    },
+    "notThis": {
+      "body": "This is not a marketing blog and not a peer-reviewed publication. It's the in-between layer where we keep ourselves honest in public.",
+      "heading": "What this is not"
+    },
+    "pipelineStrip": {
+      "aria": "Upcoming research notes",
+      "note1": {
+        "status": "Coming first",
+        "tag": "Scoring methodology",
+        "title": "Within-employee normalisation"
+      },
+      "note2": {
+        "status": "Includes null results",
+        "tag": "Construct validity",
+        "title": "N-back transfer effects"
+      },
+      "note3": {
+        "status": "Applied",
+        "tag": "Aggregation design",
+        "title": "Minimum team-size thresholds"
+      },
+      "note4": {
+        "status": "Design response included",
+        "tag": "Pilot observation",
+        "title": "Session-cadence drop-off"
+      }
+    },
+    "publishedFirst": {
+      "body": "A small set of notes already in draft. Each will land with the caveats baked in — including null results and design changes we made in response to early data.",
+      "heading": "What will be published first?"
+    },
+    "scope": {
+      "body": "Methodology notes, mini-literature reviews, and observations from early pilot cohorts. The goal is to show our working — including the places where the literature does not yet support the kind of claim a marketing page would want to make.",
+      "label": "What lives under Science & insight?"
+    },
+    "scopeStrip": {
+      "aria": "What this section contains",
+      "litReviews": {
+        "body": "What the research actually says — including the weak spots.",
+        "label": "Mini literature reviews"
+      },
+      "methodology": {
+        "body": "How we designed each construct and why.",
+        "label": "Methodology notes"
+      },
+      "pilot": {
+        "body": "Early cohort data and what it changed in our design.",
+        "label": "Pilot observations"
+      }
+    },
+    "spectrum": {
+      "aria": "WelloWork research positioning",
+      "journalSub": "Finished claims · full peer review",
+      "journalTitle": "Peer-reviewed journal",
+      "marketingSub": "Claims without uncertainty",
+      "marketingTitle": "Marketing blog",
+      "midSub": "Working notes · caveats visible · honest about gaps",
+      "midTitle": "Science & Insight",
+      "note": "Anything that reaches publication standard will be linked from here."
+    },
+    "trustStrip": {
+      "aria": "Editorial commitments",
+      "noClaims": {
+        "body": "We publish before we're certain. We say so.",
+        "title": "No finished claims"
+      },
+      "optIn": {
+        "body": "No list adds. Unsubscribe any time.",
+        "title": "Opt-in only"
+      },
+      "sources": {
+        "body": "Every note identifies primary literature.",
+        "title": "Sources named"
+      }
+    }
+  },
+  "researchTeaser": {
+    "constructs": [
+      {
+        "cap": "N-back, span tasks · Baddeley, 1992",
+        "name": "Working memory"
+      },
+      {
+        "cap": "Symbol substitution · Wechsler, classic",
+        "name": "Processing speed"
+      },
+      {
+        "cap": "Sustained & selective · Posner paradigms",
+        "name": "Attention"
+      },
+      {
+        "cap": "Tower & Raven-style reasoning",
+        "name": "Problem solving"
+      },
+      {
+        "cap": "Task-switching costs · Monsell, 2003",
+        "name": "Cognitive flexibility"
+      }
+    ],
+    "cta": {
+      "methodology": "Methodology overview",
+      "research": "Research page"
+    },
+    "eyebrow": "Research & evidence",
+    "heading": {
+      "accent": "field already validates.",
+      "lead": "Built on constructs the "
+    },
+    "lede": "Every cognitive exercise on the platform maps to a construct with a long literature — not an in-house metric we invented. We publish methodology as we generate pilot data."
+  },
+  "solutions": {
+    "eyebrow": "Solutions by role",
+    "heading": {
+      "accent": "One source of truth.",
+      "lead": "Three views."
+    },
+    "lede": "HR, Operations, and L&D each see the slice of the platform that matters to their decisions — backed by the same underlying performance data.",
+    "roles": {
+      "hr": {
+        "bullets": [
+          "Aggregate cognitive trend deltas across teams",
+          "Defensible wellness ROI rooted in performance data",
+          "Promotion-readiness signals that don’t rely on annual reviews"
+        ],
+        "label": "For HR & People leaders",
+        "title": "See burnout signals before they become exits."
+      },
+      "ld": {
+        "bullets": [
+          "Personalised recommendations from cognitive strengths",
+          "Token-funded course marketplace, fully bookable in-app",
+          "Skill development tracked alongside performance trends"
+        ],
+        "label": "For L&D leaders",
+        "title": "Build growth tracks tied to a measured cognitive profile."
+      },
+      "operations": {
+        "bullets": [
+          "Spot fatigue patterns by shift pattern and role",
+          "Optimise team composition for operations-critical projects",
+          "Reduce variability where variability hurts safety"
+        ],
+        "label": "For Operations leaders",
+        "title": "Schedule shifts around how people actually perform."
+      }
+    }
+  }
+}

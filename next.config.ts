@@ -1,4 +1,5 @@
 import type { NextConfig } from "next";
+import createNextIntlPlugin from "next-intl/plugin";
 
 const nextConfig: NextConfig = {
   async redirects() {
@@ -15,4 +16,7 @@ const nextConfig: NextConfig = {
   },
 };
 
-export default nextConfig;
+// Defaults to ./i18n/request.ts — no explicit path argument needed.
+const withNextIntl = createNextIntlPlugin();
+
+export default withNextIntl(nextConfig);

@@ -1,16 +1,11 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { ArrowRight, ArrowUpRight, Icon } from "./Icons";
 
-const CONSTRUCTS = [
-  { name: "Working memory", cap: "N-back, span tasks · Baddeley, 1992" },
-  { name: "Processing speed", cap: "Symbol substitution · Wechsler, classic" },
-  { name: "Attention", cap: "Sustained & selective · Posner paradigms" },
-  { name: "Problem solving", cap: "Tower & Raven-style reasoning" },
-  { name: "Cognitive flexibility", cap: "Task-switching costs · Monsell, 2003" },
-];
-
 export function ResearchSection() {
+  const t = useTranslations("researchTeaser");
+  const CONSTRUCTS = t.raw("constructs") as { name: string; cap: string }[];
   return (
     <section id="research" className="section">
       <div className="container">
@@ -25,16 +20,15 @@ export function ResearchSection() {
         >
           <Reveal>
             <div>
-              <span className="eyebrow">Research & evidence</span>
+              <span className="eyebrow">{t("eyebrow")}</span>
               <h2 className="h-section" style={{ margin: "8px 0 18px" }}>
-                Built on constructs the{" "}
+                {t("heading.lead")}
                 <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                  field already validates.
+                  {t("heading.accent")}
                 </span>
               </h2>
               <p className="lede" style={{ margin: "0 0 24px" }}>
-                Every cognitive exercise on the platform maps to a construct with a long literature
-                — not an in-house metric we invented. We publish methodology as we generate pilot data.
+                {t("lede")}
               </p>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
                 <Link
@@ -42,14 +36,14 @@ export function ResearchSection() {
                   className="btn btn-secondary"
                   style={{ padding: "12px 20px", fontSize: 14 }}
                 >
-                  Methodology overview <ArrowRight size={14} />
+                  {t("cta.methodology")} <ArrowRight size={14} />
                 </Link>
                 <Link
                   href="/research"
                   className="btn btn-ghost"
                   style={{ padding: "12px 20px", fontSize: 14, color: "var(--ink-2)" }}
                 >
-                  Research page <ArrowUpRight size={12} />
+                  {t("cta.research")} <ArrowUpRight size={12} />
                 </Link>
               </div>
             </div>

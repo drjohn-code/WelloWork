@@ -1,9 +1,11 @@
-import Link from "next/link";
+import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { ArrowRight } from "./Icons";
 import { SwedenChip } from "./Chips";
 
 export function FinalCTA() {
+  const t = useTranslations("finalCta");
   return (
     <section style={{ padding: "40px 0 96px" }}>
       <div className="container">
@@ -27,14 +29,13 @@ export function FinalCTA() {
           >
             <SwedenChip />
             <h2 className="h-section" style={{ margin: "20px auto 16px", maxWidth: "22ch" }}>
-              See your team’s cognitive performance —{" "}
+              {t("heading.lead")}
               <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                in one demo.
+                {t("heading.accent")}
               </span>
             </h2>
             <p className="lede" style={{ margin: "0 auto 32px", maxWidth: "56ch" }}>
-              A 30-minute walkthrough of the manager dashboard with realistic sample data
-              from your industry. No fictional ROI charts.
+              {t("lede")}
             </p>
             <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
               <Link
@@ -42,10 +43,10 @@ export function FinalCTA() {
                 className="btn btn-primary"
                 style={{ background: "var(--navy)", boxShadow: "0 12px 32px rgba(15,29,69,0.25)" }}
               >
-                Book a demo <ArrowRight size={14} />
+                {t("cta.bookDemo")} <ArrowRight size={14} />
               </Link>
               <Link href="/contact" className="btn btn-glass">
-                Contact us
+                {t("cta.contact")}
               </Link>
             </div>
             <div
@@ -58,7 +59,7 @@ export function FinalCTA() {
                 textTransform: "uppercase",
               }}
             >
-              Made in Sweden · GDPR-native · ISO 27001 
+              {t("footnote")}
             </div>
           </div>
         </Reveal>

@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
+import { useTranslations } from "next-intl";
 
 const CAL_BASE_URL = "https://cal.eu";
 
@@ -15,6 +16,7 @@ function buildSrc(calLink: string): string {
 }
 
 export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
+  const t = useTranslations("bookDemo.calcom");
   const wrapperRef = useRef<HTMLDivElement>(null);
   const [inView, setInView] = useState(false);
   const [loaded, setLoaded] = useState(false);
@@ -48,12 +50,12 @@ export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
       ref={wrapperRef}
       className="calcom-frame"
       role="region"
-      aria-label="Demo scheduler"
+      aria-label={t("regionAria")}
     >
       {inView && (
         <iframe
           src={src}
-          title="Schedule a WelloWork demo"
+          title={t("iframeTitle")}
           loading="lazy"
           onLoad={() => setLoaded(true)}
           allow="camera; microphone; autoplay; encrypted-media; fullscreen; clipboard-write"
@@ -69,12 +71,12 @@ export function CalcomEmbed({ calLink }: CalcomEmbedProps) {
           }}
         />
       )}
-      {!loaded && <CalSkeleton />}
+      {!loaded && <CalSkeleton loadingLabel={t("loading")} />}
     </div>
   );
 }
 
-function CalSkeleton() {
+function CalSkeleton({ loadingLabel }: { loadingLabel: string }) {
   return (
     <div
       aria-busy="true"
@@ -95,7 +97,7 @@ function CalSkeleton() {
           <div key={i} className="cal-skeleton-slot" />
         ))}
       </div>
-      <span className="sr-only">Loading scheduler…</span>
+      <span className="sr-only">{loadingLabel}</span>
     </div>
   );
 }

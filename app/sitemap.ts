@@ -1,5 +1,6 @@
 import type { MetadataRoute } from "next";
-import { SITE_URL } from "./lib/site";
+import { localizedUrl, languageAlternates } from "./lib/site";
+import { ENABLED_LOCALES } from "@/i18n/locales";
 
 const STATIC_PATHS: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap[number]["changeFrequency"]; priority: number }> = [
   { path: "/", changeFrequency: "weekly", priority: 1 },
@@ -22,12 +23,26 @@ const STATIC_PATHS: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap
   { path: "/legal", changeFrequency: "yearly", priority: 0.3 },
 ];
 
+// One <url> entry per ENABLED locale per path, each carrying hreflang
+// alternates (incl. x-default). Disabled locales never appear (SEO_GUIDELINES
+// §9 hreflang coverage, §6 config-driven enablement). Adding a locale to
+// ENABLED_LOCALES automatically expands the sitemap.
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();
-  return STATIC_PATHS.map(({ path, changeFrequency, priority }) => ({
-    url: `${SITE_URL}${path === "/" ? "" : path}`,
-    lastModified,
-    changeFrequency,
-    priority,
-  }));
+  const entries: MetadataRoute.Sitemap = [];
+
+  for (const { path, changeFrequency, priority } of STATIC_PATHS) {
+    const languages = languageAlternates(path);
+    for (const locale of ENABLED_LOCALES) {
+      entries.push({
+        url: localizedUrl(path, locale),
+        lastModified,
+        changeFrequency,
+        priority,
+        alternates: { languages },
+      });
+    }
+  }
+
+  return entries;
 }
