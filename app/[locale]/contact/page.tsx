@@ -126,9 +126,9 @@ export default async function ContactPage({ params }: PageProps) {
             <Reveal delay={1}>
               <LeadForm
                 endpoint="/api/contact-messages"
-                submitLabel="Send message"
-                successTitle="Message received."
-                successBody="We’ll reply within one working day. For urgent matters please call the number on this page."
+                submitLabel={t("form.submitLabel")}
+                successTitle={t("form.successTitle")}
+                successBody={t("form.successBody")}
                 messageRequired
                 companyRequired={false}
               />

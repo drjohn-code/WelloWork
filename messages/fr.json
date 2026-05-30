@@ -438,7 +438,8 @@
     "privacyChip": {
       "default": "Aggregated, anonymised — manager view"
     },
-    "swedenChip": "Driven by Science, Built with Care"
+    "swedenChip": "Driven by Science, Built with Care",
+    "logoAlt": "WelloWork Logo"
   },
   "contact": {
     "based": {
@@ -474,6 +475,11 @@
       "phone": {
         "label": "Phone"
       }
+    },
+    "form": {
+      "submitLabel": "Send message",
+      "successTitle": "Message received.",
+      "successBody": "We’ll reply within one working day. For urgent matters please call the number on this page."
     }
   },
   "featureGrid": {
