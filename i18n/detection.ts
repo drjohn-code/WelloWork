@@ -5,19 +5,20 @@ import {
 } from './locales';
 
 /**
- * Maps an IP-derived ISO-3166 country to a likely locale. IP only ever yields a
- * COUNTRY (a region signal), so this is a TIEBREAKER — `Accept-Language` (an
- * explicit language signal) is checked first in `resolveLocale`.
+ * Maps an IP-derived ISO-3166 country (Vercel `x-vercel-ip-country`) to a locale.
+ * This is the PRIMARY signal for the default locale (see `resolveLocale`): a
+ * visitor from a Lithuanian IP defaults to Lithuanian even if their browser is
+ * set to English.
  *
- * Multilingual countries default to one language here; `Accept-Language` will
- * override it when the browser expresses a clearer preference. Values may point
- * at locales that aren't enabled yet — the resolver CLAMPS to `enabled` so a
- * disabled mapping can never become a redirect target.
+ * Multilingual countries default to one language here; visitors can switch from
+ * the toolbar (their choice is then remembered via the NEXT_LOCALE cookie).
+ * Values may point at locales that aren't enabled yet — the resolver CLAMPS to
+ * ENABLED_LOCALES, so a disabled mapping can never become a redirect target.
  */
 export const COUNTRY_TO_LOCALE: Record<string, AppLocale> = {
   // English
   GB: 'en', IE: 'en', US: 'en', MT: 'en', CY: 'el', AU: 'en', NZ: 'en', CA: 'en',
-  // German (AT/CH multilingual -> de default, Accept-Language overrides)
+  // German (AT/CH multilingual -> de default)
   DE: 'de', AT: 'de', CH: 'de', LI: 'de',
   // French (BE/LU multilingual -> fr default)
   FR: 'fr', BE: 'fr', LU: 'fr', MC: 'fr',
@@ -58,18 +59,17 @@ type ResolveInput = {
 };
 
 /**
- * The single deterministic resolver used to SEED the initial locale choice at
- * the x-default root (SEO_GUIDELINES §9, §14). Resolution order:
+ * Seed the initial locale choice at the x-default root. Resolution order:
  *
- *   1. NEXT_LOCALE cookie   — handled by proxy.ts (an existing cookie skips the
- *                             redirect entirely; the user already chose).
- *   2. Accept-Language      — strongest explicit language signal.
- *   3. COUNTRY_TO_LOCALE    — region tiebreaker from IP geolocation.
- *   4. fallback (default)   — guaranteed enabled.
+ *   1. COUNTRY (IP geolocation)  — the PRIMARY signal. "Default by IP": a
+ *      Lithuanian IP -> Lithuanian, a Swedish IP -> Swedish, etc., regardless of
+ *      the browser's Accept-Language.
+ *   2. Accept-Language           — FALLBACK, used only when there is no usable
+ *      country (e.g. local dev, or a country not in COUNTRY_TO_LOCALE).
+ *   3. fallback (default)        — guaranteed enabled.
  *
  * GUARANTEE: the return value is ALWAYS a member of `enabled`. A signal that
- * resolves to a disabled locale is discarded and falls through to `fallback`,
- * so we can never 307 a visitor to an unrouted locale (which would 404).
+ * resolves to a disabled locale is discarded, so we never 307 to an unrouted URL.
  */
 export function resolveLocale({
   acceptLanguage,
@@ -80,58 +80,63 @@ export function resolveLocale({
   const isEnabled = (value: string): value is AppLocale =>
     (enabled as readonly string[]).includes(value);
 
-  let candidate: AppLocale | null = null;
-
-  // 1. Accept-Language — first ranked tag (exact, then base subtag) that is enabled.
-  for (const tag of rankAcceptLanguage(acceptLanguage)) {
-    if (isEnabled(tag)) {
-      candidate = tag;
-      break;
-    }
-    const base = tag.split('-')[0];
-    if (isEnabled(base)) {
-      candidate = base;
-      break;
-    }
-  }
-
-  // 2. Country — region tiebreaker, only if it maps to an enabled locale.
-  if (!candidate && country) {
+  // 1. Country (IP) — primary.
+  if (country) {
     const mapped = COUNTRY_TO_LOCALE[country.toUpperCase()];
-    if (mapped && isEnabled(mapped)) candidate = mapped;
+    if (mapped && isEnabled(mapped)) return mapped;
   }
 
-  // 3. Final clamp — only ever return an enabled locale.
-  return candidate && isEnabled(candidate) ? candidate : fallback;
+  // 2. Accept-Language — fallback when there's no usable country signal.
+  for (const tag of rankAcceptLanguage(acceptLanguage)) {
+    if (isEnabled(tag)) return tag;
+    const base = tag.split('-')[0];
+    if (isEnabled(base)) return base;
+  }
+
+  // 3. Default.
+  return fallback;
 }
 
 type RedirectInput = ResolveInput & {
   pathname: string;
   isBot: boolean;
-  hasCookie: boolean;
+  /** Value of the NEXT_LOCALE cookie, if present (a returning visitor's choice). */
+  cookieLocale?: string | null;
 };
 
 /**
- * Pure decision for the root seeding redirect (kept separate from proxy.ts so it
- * is unit-testable without Next internals). Returns the enabled locale to 307 to,
- * or `null` when no redirect should happen.
+ * Pure decision for the root redirect (unit-testable without Next internals).
+ * Returns the enabled locale to 307 to, or `null` when no redirect should happen.
  *
- * Redirect ONLY when ALL hold (SEO_GUIDELINES §9, §14):
- *   • pathname is exactly "/" (the x-default root) — deep URLs never redirect,
- *   • the visitor is NOT a bot — every locale URL stays crawlable,
- *   • there is NO NEXT_LOCALE cookie — the user hasn't already chosen,
- *   • the resolved (enabled) locale differs from the default.
+ * Redirect ONLY at the x-default root ("/") and ONLY for non-bots (SEO_GUIDELINES
+ * §9, §14: deep URLs never redirect; bots never redirect, so every locale URL
+ * stays crawlable). Then:
+ *   • a returning visitor's NEXT_LOCALE cookie (their explicit toolbar choice) is
+ *     honored over geolocation;
+ *   • otherwise resolve by IP country (primary) -> Accept-Language (fallback).
+ * In both cases, a result equal to the default means "stay on the prefix-free
+ * default", i.e. no redirect.
  */
 export function shouldRedirect({
   pathname,
   isBot,
-  hasCookie,
+  cookieLocale,
   acceptLanguage,
   country,
   enabled = ENABLED_LOCALES,
   fallback = defaultLocale,
 }: RedirectInput): AppLocale | null {
-  if (pathname !== '/' || isBot || hasCookie) return null;
+  if (pathname !== '/' || isBot) return null;
+
+  const isEnabled = (value: string): value is AppLocale =>
+    (enabled as readonly string[]).includes(value);
+
+  // Returning visitor: honor their explicit choice (the toolbar sets this cookie).
+  if (cookieLocale && isEnabled(cookieLocale)) {
+    return cookieLocale !== fallback ? cookieLocale : null;
+  }
+
+  // Fresh visitor: IP country (primary) -> Accept-Language (fallback) -> default.
   const locale = resolveLocale({ acceptLanguage, country, enabled, fallback });
   return locale !== fallback ? locale : null;
 }

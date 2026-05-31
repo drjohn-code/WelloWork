@@ -7,19 +7,18 @@ import { shouldRedirect } from './i18n/detection';
 
 /*
  * Next.js 16 renamed the `middleware` file convention to `proxy` (this file must
- * be `proxy.ts` at the repo root — `middleware.ts` is deprecated). It runs on the
- * Node.js runtime.
+ * be `proxy.ts` at the repo root — `middleware.ts` is deprecated). Node.js runtime.
  *
- * This is the SINGLE redirect authority for locale (next-intl's built-in
- * localeDetection is disabled in routing.ts). It implements the SEO-safe rules
- * from SEO_GUIDELINES §9 / §14:
- *
- *   • Bots are NEVER redirected — every locale URL stays directly crawlable and
- *     indexable (Googlebot crawls from US IPs).
- *   • Auto-redirect happens ONLY at the x-default root ("/"), ONLY for non-bots,
- *     ONLY when no NEXT_LOCALE cookie is set. Deep URLs (/about, /platform/...)
- *     are never auto-redirected — a visitor who lands on a specific URL stays.
- *   • The redirect is personalized, so it is marked no-store.
+ * SINGLE redirect authority for locale (next-intl's built-in localeDetection is
+ * disabled in routing.ts). SEO-safe rules (SEO_GUIDELINES §9 / §14):
+ *   • Bots are NEVER redirected — every locale URL stays crawlable.
+ *   • Auto-redirect ONLY at the x-default root ("/"); deep URLs never redirect.
+ *   • Default-by-IP: a fresh visitor is routed by their COUNTRY first
+ *     (Vercel x-vercel-ip-country), Accept-Language only as a fallback — so a
+ *     Lithuanian IP -> /lt even with an English-language browser.
+ *   • A returning visitor's NEXT_LOCALE cookie (their toolbar choice) is honored
+ *     over geolocation.
+ *   • The redirect is personalized -> no-store.
  */
 
 const COOKIE = 'NEXT_LOCALE';
@@ -28,17 +27,16 @@ const handleI18nRouting = createMiddleware(routing);
 export default function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl;
   const isBot = isbot(request.headers.get('user-agent') ?? '');
-  const hasCookie = request.cookies.has(COOKIE);
+  const eligible = pathname === '/' && !isBot;
 
-  // Only read geolocation when a redirect is even possible (root, non-bot,
-  // no cookie). geolocation() returns {} off-Vercel (e.g. local dev).
-  const eligible = pathname === '/' && !isBot && !hasCookie;
+  // geolocation() reads Vercel's x-vercel-ip-country header ({} off-Vercel / local dev).
   const country = eligible ? geolocation(request).country : undefined;
+  const cookieLocale = request.cookies.get(COOKIE)?.value;
 
   const target = shouldRedirect({
     pathname,
     isBot,
-    hasCookie,
+    cookieLocale,
     acceptLanguage: request.headers.get('accept-language'),
     country,
   });
@@ -50,16 +48,19 @@ export default function proxy(request: NextRequest) {
       maxAge: 60 * 60 * 24 * 365,
       sameSite: 'lax',
     });
-    // Personalized redirect — do not cache.
-    response.headers.set('Cache-Control', 'no-store');
+    response.headers.set('Cache-Control', 'no-store'); // personalized redirect
+    // Temporary diagnostic header (safe to remove): detected country + chosen target.
+    response.headers.set('x-ww-geo', `country=${country ?? 'none'};target=${target}`);
     return response;
   }
 
-  return handleI18nRouting(request);
+  const response = handleI18nRouting(request);
+  if (eligible) response.headers.set('x-ww-geo', `country=${country ?? 'none'};target=none`);
+  return response;
 }
 
 export const config = {
-  // Run on everything EXCEPT /api, /trpc, Next & Vercel internals, and any path
-  // containing a dot (favicon.ico, robots.txt, sitemap.xml, static assets).
+  // Everything EXCEPT /api, /trpc, Next & Vercel internals, and dotted paths
+  // (favicon.ico, robots.txt, sitemap.xml, static assets).
   matcher: '/((?!api|trpc|_next|_vercel|.*\\..*).*)',
 };
