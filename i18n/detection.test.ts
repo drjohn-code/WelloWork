@@ -40,8 +40,12 @@ test('(b) a DISABLED locale (via Accept-Language or country) clamps to default',
     resolveLocale({ acceptLanguage: 'de;q=0.9, en;q=0.8', enabled: EN_ONLY, fallback: 'en' }),
     'en'
   );
-  // GUARANTEE: the production config (en-only) NEVER yields a non-en locale.
-  assert.equal(resolveLocale({ acceptLanguage: 'de', country: 'DE' }), 'en');
+  // GUARANTEE (against the LIVE config): a DISABLED locale (pt is not in
+  // PUBLISHED_LOCALES) is clamped to the default, never returned.
+  assert.equal(resolveLocale({ acceptLanguage: 'pt', country: 'PT' }), 'en');
+  // ENABLED locales in the live config resolve normally.
+  assert.equal(resolveLocale({ acceptLanguage: 'de', country: 'DE' }), 'de');
+  assert.equal(resolveLocale({ country: 'SE' }), 'sv'); // Swedish IP -> sv
 });
 
 test('(c) bot-skip, cookie, and deep-URL paths never redirect', () => {
@@ -70,10 +74,16 @@ test('redirect fires only at the root for a fresh non-bot whose locale != defaul
     shouldRedirect({ pathname: '/', isBot: false, hasCookie: false, acceptLanguage: 'en', enabled: EN_DE, fallback: 'en' }),
     null
   );
-  // Production (en-only): a German visitor clamps to en -> NEVER redirected to an
-  // unrouted /de. This is the core SEO/crawlability guarantee.
+  // Live config: a DISABLED locale (pt) clamps to en -> NEVER redirected to an
+  // unrouted /pt. The core SEO/crawlability guarantee.
   assert.equal(
-    shouldRedirect({ pathname: '/', isBot: false, hasCookie: false, acceptLanguage: 'de', country: 'DE' }),
+    shouldRedirect({ pathname: '/', isBot: false, hasCookie: false, acceptLanguage: 'pt', country: 'PT' }),
     null
+  );
+  // Live config: a Swedish visitor (IP) -> 307 to /sv (sv is published). This is
+  // the IP-based default-language requirement.
+  assert.equal(
+    shouldRedirect({ pathname: '/', isBot: false, hasCookie: false, country: 'SE' }),
+    'sv'
   );
 });

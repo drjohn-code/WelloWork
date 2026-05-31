@@ -1,0 +1,2968 @@
+{
+  "_draft": {
+    "status": "MACHINE DRAFT — NOT human-reviewed",
+    "locale": "sv",
+    "language": "Swedish",
+    "method": "LLM machine translation of en.json",
+    "instructions": "Unreviewed machine translation. Have a native Swedish speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize kept verbatim."
+  },
+  "about": {
+    "based": {
+      "body": "WelloWork AB är registrerat i Sverige och utgår från Uppsala. Vi betjänar kunder i hela EU, Storbritannien och Norden, och driver plattformen på EU-baserad infrastruktur.",
+      "title": "Var har WelloWork sitt säte?"
+    },
+    "cta": {
+      "body": "Trettio minuter, realistiska exempeldata och ett uppriktigt samtal om omfattning och pris.",
+      "primary": "Boka en demo",
+      "secondary": "Kontakta oss",
+      "title": "Vill du se hur en pilot <italic>ser ut?</italic>"
+    },
+    "featureGrid": {
+      "biomarker": {
+        "desc": "Provtagning hemma",
+        "label": "Biomarkörtestning"
+      },
+      "trends": {
+        "desc": "Prestation över tid",
+        "label": "Longitudinella trender"
+      },
+      "welloRise": {
+        "desc": "Kognitiv träning",
+        "label": "WelloRise"
+      },
+      "welloWize": {
+        "desc": "Rekrytering och bedömningar",
+        "label": "WelloWize"
+      },
+      "workshops": {
+        "desc": "Live-gruppsessioner",
+        "label": "Hälsoworkshops"
+      }
+    },
+    "gap": {
+      "dividerLabel": "gapet",
+      "itemCognitive": "Kognitiv prestation",
+      "itemEngagement": "Engagemang",
+      "itemLongitudinal": "Longitudinella trender",
+      "itemOutput": "Faktiskt resultat",
+      "itemPulse": "Puls",
+      "itemSatisfaction": "Nöjdhet",
+      "measuredLabel": "Vad de flesta plattformar mäter",
+      "welloLabel": "Vad WelloWork mäter"
+    },
+    "hero": {
+      "eyebrow": "Om WelloWork",
+      "lede": "Vi startade WelloWork 2024 i Uppsala, Sverige. Vi bygger för team inom HR, drift och L&D som redan vet att engagemangsmätningar inte är samma sak som prestation — och som vill ha en plattform som faktiskt mäter det senare.",
+      "title": "Ett svenskt team som bygger en annan sorts <italic>arbetsplatsplattform.</italic>"
+    },
+    "meta": {
+      "description": "WelloWork AB är en svensk plattform för arbetsplatsprestation, grundad 2024. Vi kombinerar kognitiv träning, longitudinell prestation, biomarkörtestning och liveworkshops.",
+      "title": "Om WelloWork — arbetsplatsprestation, byggd i Sverige"
+    },
+    "persona": {
+      "hr": {
+        "tag": "Upptäck signaler på utbrändhet tidigt",
+        "title": "HR- och personalansvariga"
+      },
+      "ld": {
+        "tag": "Utvecklingsspår kopplade till kognitiva profiler",
+        "title": "L&D-ansvariga"
+      },
+      "ops": {
+        "tag": "Planera utifrån faktisk prestation",
+        "title": "Driftansvariga"
+      }
+    },
+    "privacy": {
+      "body": "Integritet är arkitekturen, inte en eftertanke för efterlevnad. Kognitiva resultat på individnivå, biomarkörrapporter och bedömningsresultat stannar hos medarbetaren. Chefer och administratörer ser endast anonymiserade, aggregerade trender. All medarbetardata lagras inom EU enligt GDPR, och vi arbetar mot ISO 27001-certifiering.",
+      "title": "Hur ser hållningen till integritet ut?"
+    },
+    "privacyDiagram": {
+      "admin": {
+        "detail": "Aggregerad organisationsvy",
+        "role": "Administratör"
+      },
+      "badgeEu": "Lagras i EU",
+      "badgeGdpr": "GDPR-kompatibel",
+      "badgeIso": "ISO 27001 pågår",
+      "employee": {
+        "detail": "Äger sin data",
+        "role": "Medarbetare"
+      },
+      "manager": {
+        "detail": "Anonymiserade trender",
+        "role": "Chef"
+      }
+    },
+    "schema": {
+      "aboutPageName": "Om WelloWork"
+    },
+    "swedenMap": {
+      "coord": "59°51′N · 17°38′E",
+      "label": "Huvudkontor i Uppsala",
+      "note": "Verksamma från Uppsala. Betjänar kunder i hela EU, Storbritannien och Norden."
+    },
+    "uppsalaCard": {
+      "badge": "Grundat 2024",
+      "location": "Uppsala, Sverige · 59°51′N"
+    },
+    "whatWeDo": {
+      "body": "WelloWork är en plattform för arbetsplatsprestation som kombinerar daglig kognitiv träning (WelloRise), rekrytering och interna bedömningar (WelloWize), longitudinella prestationstrender, liveworkshops om hälsa och biomarkörtestning. Medarbetarna äger sin data; chefer ser endast anonymiserade, aggregerade insikter.",
+      "title": "Vad gör WelloWork?"
+    },
+    "who": {
+      "body": "Vi arbetar med organisationer mellan 50 och 5 000 medarbetare i EU, Storbritannien och Norden — vanligtvis sådana som redan samlar in engagemangsdata och vill ha en hållbar prestationssignal vid sidan av den. HR- och personalansvariga använder oss för att upptäcka signaler på utbrändhet tidigt; driftansvariga använder oss för att planera utifrån hur teamen faktiskt presterar; L&D-ansvariga använder oss för att bygga utvecklingsspår kopplade till uppmätta kognitiva profiler.",
+      "title": "Vem är WelloWork till för?"
+    },
+    "why": {
+      "body": "De flesta arbetsplatsplattformar mäter antingen hur människor <em>känner</em> inför arbetet — engagemang, puls, nöjdhet — eller befinner sig i rekryteringstratten och slutar efter anställningserbjudandet. Det som saknas är en longitudinell bild av kognitiv prestation när människor väl är inne i organisationen. WelloWork är byggt specifikt för det gapet, med samma datamodell genomgående i träning, bedömningar, workshops och biomarkörrapporter.",
+      "title": "Varför byggde vi detta?"
+    }
+  },
+  "advantage": {
+    "eyebrow": "WelloWork-fördelen",
+    "heading": {
+      "accent": "försvara i ett säljsamtal.",
+      "lead": "Fyra påståenden vi kan "
+    },
+    "intro": "Inga påhittade siffror. Inga falska valideringar. Påståenden på kategorinivå, grundade i vad plattformen faktiskt gör och hur den är byggd.",
+    "points": [
+      {
+        "body": "De flesta verktyg täcker en av dessa. Vi kopplar samman alla tre så att signaler från ett område informerar besluten i de andra.",
+        "label": "01",
+        "title": "Den enda plattformen som kombinerar kognitiv träning, biomarkörtestning och teamintelligens."
+      },
+      {
+        "body": "Integritet är själva arkitekturen, inte en fotnot om efterlevnad. Chefer ser bara anonymiserade, aggregerade trender.",
+        "label": "02",
+        "title": "Byggd i Sverige med GDPR som standard – medarbetarna äger sina data."
+      },
+      {
+        "body": "Prestationen förändras genom sprintar, skift och årstider. Vi mäter över hela året, inte på bedömningsdagen.",
+        "label": "03",
+        "title": "Longitudinella trender, inte engångsresultat."
+      },
+      {
+        "body": "Kognitiv träning ryms i en kaffepaus. Workshops passar lunchen. Provtagning sker på plats.",
+        "label": "04",
+        "title": "Utformad för daglig användning – mätt i minuter, inte timmar."
+      }
+    ]
+  },
+  "bookDemo": {
+    "agenda": {
+      "dashboard": {
+        "body": "Aggregerade teamtrender, biomarkörgenomförande, sammansättningssignaler — med exempeldata från din bransch.",
+        "minutes": "5–20 min",
+        "title": "Chefsdashboard"
+      },
+      "intro": {
+        "body": "Snabb presentation, vilka rutiner ni har idag och vad ni vill få ut av det här samtalet.",
+        "minutes": "0–5 min",
+        "title": "Introduktion & sammanhang"
+      },
+      "lede": "Agendan är densamma varje gång, så du vet vad du avsätter 30 minuter till.",
+      "list": {
+        "aria": "Agenda för demosamtalet"
+      },
+      "pilot": {
+        "body": "Antal anställda, utrullningstakt, om workshops eller biomarkörprovtagning ingår, samt prissättning.",
+        "minutes": "25–30 min",
+        "title": "Pilotavgränsning"
+      },
+      "privacy": {
+        "body": "Vad anställda ser i sin egen app, och vad chefsvyn visar — och inte visar.",
+        "minutes": "20–25 min",
+        "title": "Anställdas integritet"
+      },
+      "title": "Vad som händer under samtalet"
+    },
+    "audience": {
+      "hr": {
+        "body": "Komplettera era befintliga undersökningar med dagliga kognitiva mätvärden och biomarkörtrender — utan att enskilda anställdas data visas för chefer.",
+        "eyebrow": "HR & People",
+        "title": "Bygg en longitudinell signal bortom engagemang"
+      },
+      "ld": {
+        "body": "Koppla era L&D-program till longitudinella trenddata och lägg sedan till live-workshops där de gör störst skillnad.",
+        "eyebrow": "Learning & Development",
+        "title": "Visa utbildningens effekt på faktiska prestationsmått"
+      },
+      "lede": "Demon är byggd för teamet som ska äga utrullningen. Välj den infallsvinkel som matchar din roll.",
+      "ops": {
+        "body": "Anonymiserade sammansättningssignaler och kapacitetstrender, avgränsade till team i stället för enskilda individer.",
+        "eyebrow": "Operations",
+        "title": "Se teamsammansättning och belastning innan resultaten sjunker"
+      },
+      "title": "Vem bör boka?"
+    },
+    "calcom": {
+      "iframeTitle": "Boka en WelloWork-demo",
+      "loading": "Laddar bokningsverktyg…",
+      "regionAria": "Bokningsverktyg för demo"
+    },
+    "expect": {
+      "cantFind": "Hittar du ingen tid som passar? <emailLink>Mejla teamet</emailLink> så hittar vi en.",
+      "eyebrow": "Vad du kan förvänta dig",
+      "leaveWith": {
+        "body": "En kort skriftlig sammanfattning, pilotpriser anpassade efter ert antal anställda och ett nästa steg utan press.",
+        "title": "Vad du tar med dig"
+      },
+      "long": {
+        "body": "30 minuter — 20 minuter guidat, 10 minuter frågor och pilotavgränsning.",
+        "title": "Hur länge"
+      },
+      "noPressure": {
+        "body": "Ingen uppföljningskadens om du inte ber om det. Vi behandlar anställdas data — och din tid — på samma sätt.",
+        "title": "Ingen press"
+      },
+      "show": {
+        "body": "Chefsdashboard med exempeldata från din bransch, anställdas app och integritetsarkitekturen.",
+        "title": "Vad vi visar"
+      },
+      "title": "Fokuserade 30 minuter — inget fluff",
+      "who": {
+        "body": "En produktspecialist från WelloWork — oftast en person, aldrig ett säljteam.",
+        "title": "Vem deltar"
+      }
+    },
+    "faq": {
+      "attend": {
+        "a": "En beslutsfattare inom HR, People, L&D eller Operations är idealisk. Att bjuda in en kollega som ska äga utrullningen fungerar bra; vi behöver inte ekonomi eller inköp med på det första samtalet.",
+        "q": "Vem från vår sida bör delta?"
+      },
+      "length": {
+        "a": "Trettio minuter från början till slut. De första 20 minuterna är en guidad genomgång av chefsdashboarden och de anställdas app; de sista 10 är reserverade för era frågor och pilotavgränsning.",
+        "q": "Hur lång är en WelloWork-demo?"
+      },
+      "pitch": {
+        "a": "Det är en produktgenomgång på en riktig dashboard med exempeldata från din bransch. Inga fiktiva ROI-diagram och ingen påträngande avslutning — vi lämnar dig med informationen för att kunna besluta i din egen takt.",
+        "q": "Är demon en säljpitch eller en produktgenomgång?"
+      },
+      "prep": {
+        "a": "Inget förberedelsearbete. Ta med ert antal anställda, vilken bransch ni är verksamma i och en ungefärlig uppfattning om när ni skulle kunna pilotera — det räcker för att göra demon konkret.",
+        "q": "Behöver vi förbereda något inför samtalet?"
+      },
+      "reschedule": {
+        "a": "Ja. Varje bekräftelsemejl innehåller länkar för att boka om och avboka direkt från kalendern — ingen mejlväxling krävs.",
+        "q": "Kan vi boka om eller avboka?"
+      },
+      "title": "Vanliga frågor"
+    },
+    "hero": {
+      "answerBody": "av chefsdashboarden med realistisk exempeldata från din bransch. Du ser daglig kognitiv träning, longitudinell trendövervakning, signaler om teamsammansättning och biomarkörgenomförande — och vi avslutar med ett kort samtal om pilotavgränsning. Inga fiktiva ROI-diagram.",
+      "answerLead": "En WelloWork-demo är en 30-minuters live-genomgång",
+      "badgeGdpr": "GDPR-native",
+      "badgeIso": "ISO 27001 pågår",
+      "badgeMadeInSweden": "Tillverkad i Sverige",
+      "eyebrow": "Boka en demo",
+      "title": "Se ditt teams kognitiva prestation — <italic>i en enda demo.</italic>"
+    },
+    "meta": {
+      "description": "Välj en tid i livekalendern och träffa en produktspecialist från WelloWork för en 30-minuters genomgång av chefsdashboarden. Tillverkad i Sverige · GDPR-native.",
+      "title": "Boka en WelloWork-demo — välj en 30-minuters tid"
+    },
+    "scheduler": {
+      "body": "Din tidszon identifieras automatiskt. Välj en dag och sedan en tid — du bekräftar detaljerna i nästa steg och får en kalenderinbjudan direkt.",
+      "title": "Välj en tid som passar dig"
+    },
+    "schema": {
+      "reservationName": "WelloWork produktdemo",
+      "webPageDescription": "Boka en 30-minuters live-demo av WelloWork-chefsdashboarden med realistisk exempeldata från din bransch.",
+      "webPageName": "Boka en WelloWork-demo"
+    },
+    "secondaryCta": {
+      "body": "Vill du hellre prata först, eller utforska produkten på egen hand? Vi förstår — det finns ingen press att boka idag.",
+      "primary": "Kontakta oss",
+      "secondary": "Utforska plattformen",
+      "title": "Inte redo att välja en tid?"
+    }
+  },
+  "breadcrumbs": {
+    "about": "Om oss",
+    "ariaLabel": "Brödsmulor",
+    "bookDemo": "Boka en demo",
+    "careers": "Karriär",
+    "contact": "Kontakt",
+    "home": "Hem",
+    "legal": "Juridik"
+  },
+  "careers": {
+    "anchor": {
+      "body": "Inte just nu. Vi rekryterar långsamt och medvetet medan vi kör piloter. Om du vill stå på korta listan inför nästa rekryteringsomgång, mejla <email></email> med en kort presentation på ett stycke och relevanta länkar — vi läser varenda en.",
+      "q": "Finns det lediga tjänster på WelloWork?"
+    },
+    "cta": {
+      "body": "Om WelloWork låter som en plats där du skulle vilja bygga i några år, skriv ett stycke till oss. Även när vi inte har några tjänster lediga sparar vi anteckningar.",
+      "primary": "Kontakta oss",
+      "secondary": "Om WelloWork",
+      "title": "Skicka oss en presentation."
+    },
+    "hero": {
+      "eyebrow": "Karriär",
+      "lede": "WelloWork är ett litet svenskt team tidigt i vår pilotfas. När vi öppnar tjänster läggs de ut här. Fram till dess är tröskeln för att inleda ett samtal låg om din berättelse passar vår.",
+      "title": "Vi har inga lediga tjänster just nu — <italic>men vi läser varje presentation.</italic>"
+    },
+    "hireFirst": {
+      "li1": "Ingenjörer som har levererat produkt, inte bara ramverk.",
+      "li2": "Designers som bryr sig om evidensbaserad produkt och har åsikter om typografi och rörelse.",
+      "li3": "Forskare med bakgrund inom kognitionsvetenskap eller kvantitativ psykologi som kan skriva metodikanteckningar som håller.",
+      "li4": "Sälj- och kundframgångsmänniskor som har drivit piloter från början till slut på små, omsorgsfulla B2B-företag.",
+      "title": "Vilken typ av människor är vi troligen att anställa först?"
+    },
+    "hiringFlow": {
+      "conversation": {
+        "label": "Samtal",
+        "note": "~30 min, ingen förberedelse"
+      },
+      "intro": {
+        "label": "Presentationsmejl",
+        "note": "Låg tröskel — inget CV behövs"
+      },
+      "stagePrefix": "Steg {n}",
+      "trialDay": {
+        "label": "Betald provdag",
+        "note": "Du träffar hela teamet"
+      },
+      "workSample": {
+        "label": "Arbetsprov",
+        "note": "Kopplat till den faktiska rollen"
+      }
+    },
+    "introCard": {
+      "bodyP1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Jag har följt WelloWorks metodikanteckningar ett tag och ville skicka ett kort hej.",
+      "bodyP2": "Sed do eiusmod tempor incididunt ut labore — delar gärna arbetsprover och går igenom hur jag skulle angripa ett onboarding-flöde för en pilot.",
+      "name": "Lena K.",
+      "readBadge": "Läst",
+      "role": "Produktdesigner",
+      "subjectKey": "Ämne",
+      "subjectVal": "Hej från Berlin — skulle gärna vilja presentera mig",
+      "tagCaseStudy": "Fallstudie",
+      "tagGithub": "GitHub",
+      "tagPortfolio": "Portfolio"
+    },
+    "life": {
+      "body": "Litet team, förankrat i Uppsala, distansvänligt i hela EU och Storbritannien. Vi arbetar på engelska. Vi utgår från att skriva ner saker snarare än att prata oss fram till dem, och vi publicerar vår metodik öppet — vilket gör resten av arbetet lättare att försvara.",
+      "title": "Hur är det att arbeta på WelloWork?"
+    },
+    "meta": {
+      "description": "Vi har inga lediga tjänster just nu, men vi läser varje presentation. Här är hur WelloWork tänker kring rekrytering, vilka vi troligen anställer först och hur du kommer i kontakt med oss.",
+      "title": "Karriär på WelloWork — hur vi rekryterar och hur du når oss"
+    },
+    "norms": {
+      "public": {
+        "label": "Öppen metodik",
+        "note": "Vi publicerar våra metoder — vilket håller oss ärliga."
+      },
+      "remote": {
+        "label": "Distansvänligt EU/UK",
+        "note": "Förankrat i Uppsala, distribuerat över EU och Storbritannien."
+      },
+      "written": {
+        "label": "Skriftligt först",
+        "note": "Vi utgår från att skriva ner saker innan vi pratar oss fram till dem."
+      }
+    },
+    "process": {
+      "body": "Korta, transparenta steg — vanligtvis ett samtal, ett fokuserat arbetsprov kopplat till rollen och en betald provdag med teamet. Vi delar bedömningskriterierna i förväg, och vi använder vår egen plattform internt så att vi kan testa kandidatupplevelsen själva.",
+      "title": "Hur driver vi en rekryteringsprocess?"
+    },
+    "reach": {
+      "body": "Mejla <email></email> eller använd formuläret på <contactLink>kontaktsidan</contactLink>. Inkludera en kort presentation på ett stycke och vad du skulle vilja arbeta med först — inget fullständigt CV behövs i presentationsskedet.",
+      "title": "Hur kontaktar jag er om en tjänst?"
+    },
+    "reachTiles": {
+      "contactLabel": "Använd kontaktformuläret",
+      "contactSub": "Inget CV behövs — ett stycke räcker i presentationsskedet.",
+      "emailLabel": "Mejla oss"
+    },
+    "roleCards": {
+      "designers": {
+        "desc": "Evidensbaserad produkt med åsikter om typografi och rörelse.",
+        "label": "Designers"
+      },
+      "engineers": {
+        "desc": "Levererat produkt, inte bara ramverk.",
+        "label": "Ingenjörer"
+      },
+      "researchers": {
+        "desc": "Kognitionsvetenskap eller kvantitativ psykologi — metodikanteckningar som håller.",
+        "label": "Forskare"
+      },
+      "salesCs": {
+        "desc": "Drivit piloter från början till slut på små, omsorgsfulla B2B-företag.",
+        "label": "Sälj & CS"
+      }
+    },
+    "schema": {
+      "webPageName": "Karriär på WelloWork"
+    }
+  },
+  "chips": {
+    "privacy": {
+      "default": "Aggregerad, anonymiserad – chefsvy"
+    },
+    "sweden": "Drivet av vetenskap, byggt med omsorg"
+  },
+  "common": {
+    "advantage": {
+      "body": "Inga påhittade siffror. Inga falska valideringar. Påståenden på kategorinivå som bottnar i vad plattformen faktiskt gör och hur den är byggd.",
+      "eyebrow": "WelloWork-fördelen",
+      "point1": {
+        "body": "De flesta verktyg täcker ett av dessa. Vi kopplar samman alla tre så att signaler från det ena ger underlag för beslut i de andra.",
+        "title": "Den enda plattformen som kombinerar kognitiv träning, biomarkörtester och teaminsikter."
+      },
+      "point2": {
+        "body": "Integritet är arkitekturen, inte en fotnot om regelefterlevnad. Chefer ser endast anonymiserade, aggregerade trender.",
+        "title": "Byggd i Sverige enligt GDPR som standard — medarbetarna äger sina data."
+      },
+      "point3": {
+        "body": "Prestation förändras genom sprintar, skift och säsonger. Vi mäter över hela året, inte bara på testdagen.",
+        "title": "Longitudinella trender, inte enstaka mätvärden."
+      },
+      "point4": {
+        "body": "Kognitiv träning ryms i en kafferast. Workshops får plats på lunchen. Provtagning sker på plats.",
+        "title": "Utformad för daglig användning — mätt i minuter, inte timmar."
+      },
+      "titleAccent": "försvara i ett säljsamtal.",
+      "titleLead": "Fyra påståenden vi kan"
+    },
+    "breadcrumb": {
+      "aria": "Brödsmulor"
+    },
+    "privacyChip": {
+      "default": "Aggregerat, anonymiserat — chefsvy"
+    },
+    "swedenChip": "Driven av vetenskap, byggd med omsorg",
+    "logoAlt": "WelloWork-logotyp"
+  },
+  "contact": {
+    "based": {
+      "body": "WelloWork AB är registrerat i Sverige och har sin verksamhet i Uppsala. All medarbetardata lagras inom EU på infrastruktur som följer GDPR. Vi har kunder i hela EU, Storbritannien och Norden.",
+      "title": "Var finns WelloWork?"
+    },
+    "hero": {
+      "eyebrow": "Kontakt",
+      "lede": "Försäljning, partnerskap, support, karriär – alla meddelanden når ett litet team i Sverige. De flesta förfrågningar får svar inom en arbetsdag.",
+      "title": "Prata med en riktig person – <italic>i Uppsala.</italic>"
+    },
+    "meta": {
+      "description": "Kom i kontakt med WelloWork-teamet i Uppsala, Sverige. Mejla info@wellowork.net eller ring +46 760 28 1272 för försäljning, partnerskap eller allmänna förfrågningar.",
+      "title": "Kontakta WelloWork – prata med försäljning, support eller partnerskap"
+    },
+    "reach": {
+      "answerBody": "För demoförfrågningar, använd formuläret på den här sidan eller <demoLink>/book-a-demo</demoLink>. För allt annat – partnerskap, press, karriär, support – skriv till {email} eller ring {phone} under EU:s kontorstid.",
+      "answerLead": "Mejl eller telefon går snabbast.",
+      "title": "Hur når jag WelloWork?"
+    },
+    "row": {
+      "area": {
+        "label": "Kontor och serviceområde",
+        "value": "{city}, {country} · betjänar EU, Storbritannien och Norden"
+      },
+      "email": {
+        "label": "E-post"
+      },
+      "hours": {
+        "label": "Öppettider",
+        "value": "Mån–fre · 09:00–17:00 CET"
+      },
+      "phone": {
+        "label": "Telefon"
+      }
+    },
+    "form": {
+      "submitLabel": "Skicka meddelande",
+      "successTitle": "Meddelandet har tagits emot.",
+      "successBody": "Vi svarar inom en arbetsdag. För brådskande ärenden, ring numret på den här sidan."
+    }
+  },
+  "featureGrid": {
+    "_note": "FeatureGrid har INGA hårdkodade strängar som visas för användaren. All text (eyebrow, title, item.title, item.body) skickas in som props av anroparna. Den används INTE någonstans i trädet för startsidan (page.tsx renderar den inte). Översätt vid de anropsställen som tillhandahåller props, inte här."
+  },
+  "finalCta": {
+    "cta": {
+      "bookDemo": "Boka en demo",
+      "contact": "Kontakta oss"
+    },
+    "footnote": "Tillverkad i Sverige · GDPR-anpassad · ISO 27001",
+    "heading": {
+      "accent": "i en enda demo.",
+      "lead": "Se ert teams kognitiva prestation — "
+    },
+    "lede": "En 30 minuters genomgång av chefsdashboarden med realistiska exempeldata från er bransch. Inga påhittade ROI-diagram."
+  },
+  "footer": {
+    "aria": {
+      "home": "WelloWork startsida"
+    },
+    "badges": {
+      "gdpr": "GDPR-baserad",
+      "hipaa": "HIPAA-redo",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    },
+    "columns": {
+      "company": {
+        "h": "Företag",
+        "items": [
+          "Om oss",
+          "Karriär",
+          "Kontakt"
+        ]
+      },
+      "platform": {
+        "h": "Plattform",
+        "items": [
+          "WelloRise [Utveckling]",
+          "WelloWize [Bedömning]",
+          "Prestationstrender",
+          "Workshops",
+          "Proaktiv hälsa"
+        ]
+      },
+      "research": {
+        "h": "Forskning",
+        "items": [
+          "Metodik",
+          "Vetenskap & insikt",
+          "Kognitiva konstrukt"
+        ]
+      }
+    },
+    "copyright": "© 2024-2026 WelloWork AB · Uppsala, Sverige",
+    "legal": {
+      "cookies": "Cookies",
+      "dataProcessing": "Databehandling",
+      "privacy": "Integritet",
+      "terms": "Villkor"
+    },
+    "tagline": "Plattformen för prestation på arbetsplatsen. Daglig kognitiv träning, longitudinella trender och biomarkörbaserade hälsoinsikter, byggd i Sverige."
+  },
+  "forms": {
+    "consent": {
+      "demoForm": "Jag godkänner att WelloWork får kontakta mig för att boka in denna demo och lagra dessa uppgifter enligt sin <privacyLink>integritetspolicy</privacyLink>. (GDPR)",
+      "leadForm": "Jag godkänner att WelloWork får kontakta mig angående denna förfrågan och lagra dessa uppgifter enligt sin <privacyLink>integritetspolicy</privacyLink>."
+    },
+    "contact": {
+      "submitLabel": "Skicka meddelande",
+      "successBody": "Vi svarar inom en arbetsdag. Vid brådskande ärenden, ring numret på denna sida.",
+      "successTitle": "Meddelandet mottaget."
+    },
+    "demo": {
+      "formAria": "Boka en demotid",
+      "formIntro": "Bokning är inte aktiverad i den här miljön — lämna dina uppgifter så bekräftar vi en tid via e-post inom en arbetsdag.",
+      "formTitle": "Boka en demotid",
+      "successBody": "En produktspecialist hör av sig inom en arbetsdag för att bekräfta en demotid. Håll utkik i din arbetsinkorg (och skräpposten, för säkerhets skull) efter ett bekräftelsemejl.",
+      "successTitle": "Tack — förfrågan mottagen."
+    },
+    "error": {
+      "company": "Ange ditt företag.",
+      "consent": "Bekräfta samtycke till att bli kontaktad.",
+      "generic": "Något gick fel. Försök igen.",
+      "message": "Lägg till ett kort meddelande.",
+      "name": "Ange ditt fullständiga namn.",
+      "network": "Nätverksfel. Försök igen.",
+      "rateLimited": "För många förfrågningar. Försök igen om en minut.",
+      "requestFailed": "Vi kunde inte registrera din förfrågan. Försök igen.",
+      "submitFailed": "Vi kunde inte skicka ditt meddelande. Försök igen.",
+      "workEmail": "Ange en giltig e-postadress."
+    },
+    "footnote": {
+      "dataStored": "Dina uppgifter lagras inom EU. Ingen marknadsföring utan samtycke."
+    },
+    "label": {
+      "company": "Företag",
+      "companySize": "Företagsstorlek",
+      "demoMessage": "Vad du vill se (valfritt)",
+      "fullName": "Fullständigt namn",
+      "industry": "Bransch",
+      "message": "Meddelande",
+      "optionalSuffix": "(valfritt)",
+      "preferredTimeframe": "Önskad tidsram",
+      "role": "Din roll",
+      "roleTitle": "Din roll / titel",
+      "websiteHoneypot": "Webbplats",
+      "workEmail": "E-post på jobbet"
+    },
+    "option": {
+      "companySize": "{size}",
+      "industry": {
+        "education": "Utbildning",
+        "energy": "Energi & försörjning",
+        "financial": "Finansiella tjänster",
+        "healthcare": "Hälso- och sjukvård",
+        "manufacturing": "Tillverkning",
+        "other": "Annat",
+        "professional": "Konsulttjänster",
+        "publicSector": "Offentlig sektor",
+        "retail": "Detaljhandel & e-handel",
+        "softwareTech": "Mjukvara & teknik"
+      }
+    },
+    "placeholder": {
+      "demoMessage": "Teamstorlek, vad du vill att demon ska fokusera på, eventuell tidpunkt för pilot.",
+      "leadMessage": "Berätta om era pilotplaner, antal anställda och vad ni vill se under demon.",
+      "role": "HR, Operations, L&D, grundare…"
+    },
+    "select": {
+      "industryPlaceholder": "Välj bransch",
+      "teamSizePlaceholder": "Välj teamstorlek",
+      "timeframePlaceholder": "När vill ni träffas?"
+    },
+    "submit": {
+      "demo": "Boka en demotid",
+      "lead": "Skicka meddelande",
+      "sending": "Skickar…"
+    },
+    "timeframe": {
+      "exploring": "Bara orienterar mig",
+      "nextWeek": "Nästa vecka",
+      "thisWeek": "Denna vecka",
+      "twoToFourWeeks": "Inom 2–4 veckor"
+    }
+  },
+  "hero": {
+    "badge": {
+      "platform": "Plattform för prestation på arbetsplatsen"
+    },
+    "cta": {
+      "bookDemo": "Boka en demo",
+      "seeHow": "Se hur det fungerar"
+    },
+    "floatBadge": {
+      "session": "Arbetsminne · session 4",
+      "today": "Idag · 7 min"
+    },
+    "headline": {
+      "accent": "Mät det som spelar roll.",
+      "lead": "Träna kognitiv prestation."
+    },
+    "lede": "Daglig kognitiv träning, longitudinella prestationstrender och biomarkörbaserade hälsoinsikter — i en plattform som chefer och medarbetare faktiskt använder.",
+    "trust": {
+      "gdpr": "GDPR-baserad",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    }
+  },
+  "heroDashboard": {
+    "biomarker": {
+      "caption": "Genomförda denna cykel",
+      "count": "{completed} / {total}",
+      "label": "Biomarkörrapporter"
+    },
+    "browser": {
+      "url": "app.wellowork.net / team"
+    },
+    "chart": {
+      "annotation": "Vecka för sprintgenomgång",
+      "axis": {
+        "wk1": "V. 1",
+        "wk12": "V. 12",
+        "wk4": "V. 4",
+        "wk8": "V. 8"
+      },
+      "legend": {
+        "focus": "Fokus",
+        "memory": "Minne"
+      },
+      "range": "Senaste 90 dagarna"
+    },
+    "composition": {
+      "fit": "{value}% matchning",
+      "member1": {
+        "name": "Anna L.",
+        "role": "Problemlösning · 92"
+      },
+      "member2": {
+        "name": "Erik S.",
+        "role": "Bearbetningshastighet · 88"
+      },
+      "member3": {
+        "name": "Maja J.",
+        "role": "Arbetsminne · 89"
+      },
+      "project": "Projekt: Q3-plattformsuppdatering",
+      "title": "Teamsammansättning"
+    },
+    "privacyChip": "Anonymiserat aggregat",
+    "sampleData": "Exempeldata",
+    "team": {
+      "label": "Ingenjör · 14 medlemmar",
+      "title": "Teamets kognitiva prestation"
+    }
+  },
+  "legal": {
+    "cookies": {
+      "changesBody": "Om vi lägger till några icke-nödvändiga cookies kommer denna sida att uppdateras med ett revisionsdatum och samtyckesbannern att erbjuda ett aktivt val (opt-in).",
+      "changesQ": "Ändringar",
+      "controlQ": "Hur kan du kontrollera cookies?",
+      "coverA": "Marknadsföringswebbplatsen använder endast nödvändiga cookies som krävs för att webbplatsen ska fungera (t.ex. för att bevara formulärstatus vid omladdning). Cookies för analys och marknadsföring är inte aktiverade som standard; om de någonsin blir det kommer de att kräva aktivt val (opt-in) via en samtyckesbanner och specificeras nedan.",
+      "coverQ": "Vilka cookies använder WelloWorks webbplats?",
+      "lede": "Vi utgår från minimal användning av cookies, i linje med vår övriga inställning till integritet.",
+      "title": "Cookiepolicy",
+      "usedHereQ": "Vilka cookies används här?",
+      "whatBody": "En cookie är en liten textfil som lagras på din enhet av en webbplats. Cookies används för sådant som att hålla dig inloggad, komma ihåg inställningar och (i vissa fall) följa användning för analys eller annonsering.",
+      "whatQ": "Vad är en cookie?"
+    },
+    "dpa": {
+      "contactQ": "Frågor om underbiträden eller personuppgiftsbiträdesavtal",
+      "coverA": "När du använder WelloWork-plattformen som anställd i en kundorganisation är din arbetsgivare personuppgiftsansvarig för dina uppgifter och {legalName} är personuppgiftsbiträde som agerar på dokumenterade instruktioner. Villkoren för denna behandling fastställs i ett personuppgiftsbiträdesavtal (DPA) som ingåtts mellan WelloWork och din arbetsgivare.",
+      "coverQ": "Vad innebär förhållandet kring personuppgiftsbehandling?",
+      "lede": "En sammanfattning av hur WelloWork agerar som personuppgiftsbiträde för kundorganisationer enligt GDPR. Det ingångna DPA-avtalet för en viss kund har företräde.",
+      "natureBody": "Vi behandlar personuppgifter om kundens slutanvändare för att leverera WelloWork-plattformen och ta fram aggregerad, anonymiserad rapportering till behöriga administratörer.",
+      "natureQ": "Behandlingens art, syfte och kategorier av uppgifter",
+      "securityBody": "Kryptering under överföring och i vila, behörighetsstyrd åtkomst, säkerhetsloggning, krav på minsta teamstorlek för chefssynliga aggregat samt regelbunden säkerhetsgranskning.",
+      "securityQ": "Säkerhet",
+      "subjectQ": "Föremål och varaktighet",
+      "subjectsBody": "Slutanvändare av WelloWork-plattformen — vanligtvis kundens anställda.",
+      "subjectsQ": "Kategorier av registrerade",
+      "subprocessorsQ": "Underbiträden",
+      "title": "Personuppgiftsbehandling",
+      "transfersBody": "Vi överför inte personuppgifter utanför EU/EES utan en lämplig överföringsmekanism. När en överföring krävs (t.ex. verktyg för driftstöd) dokumenteras den i DPA-avtalet.",
+      "transfersQ": "Internationella överföringar"
+    },
+    "hero": {
+      "eyebrow": "Juridik",
+      "lede": "Integritetspolicy, användarvillkor, cookiepolicy och en sammanfattning av personuppgiftsbehandlingen — allt på ett ställe, reglerat av svensk lag och GDPR.",
+      "title": "Juridik."
+    },
+    "meta": {
+      "description": "Integritetspolicy, användarvillkor, cookiepolicy och sammanfattning av personuppgiftsbehandling för WelloWork — svenska marknaden och EU, GDPR-anpassat.",
+      "title": "Juridik — WelloWork"
+    },
+    "nav": {
+      "cookies": "Cookiepolicy",
+      "dataProcessing": "Personuppgiftsbehandling",
+      "desktopAria": "Juridiska avsnitt (dator)",
+      "mobileAria": "Juridiska avsnitt (mobil)",
+      "onThisPage": "På denna sida",
+      "privacy": "Integritetspolicy",
+      "terms": "Användarvillkor"
+    },
+    "privacy": {
+      "basisQ": "Vilken är den rättsliga grunden för behandlingen?",
+      "changesBody": "Väsentliga ändringar publiceras här med ett revisionsdatum. Senaste revisionsdatum: denna sida dateras av sin aktuella publicering och uppdateras efter juridisk granskning.",
+      "changesQ": "Ändringar i denna policy",
+      "controllerBody": "{legalName}, registrerat i Sverige och med verksamhet från {city}, {country}, är personuppgiftsansvarig för personuppgifter som samlas in på denna webbplats och via förfrågningar. För uppgifter som behandlas inom WelloWork-plattformen på uppdrag av en kundorganisation agerar {legalName} som personuppgiftsbiträde och kundorganisationen är personuppgiftsansvarig — det förhållandet regleras av ett separat personuppgiftsbiträdesavtal.",
+      "controllerQ": "Vem är personuppgiftsansvarig för dina uppgifter?",
+      "coverA": "Den förklarar vilka personuppgifter WelloWork samlar in när du använder denna webbplats eller WelloWork-plattformen, vad vi gör med dem, vilka rättsliga grunder vi stödjer oss på enligt GDPR, dina rättigheter och hur du når oss om dem.",
+      "coverQ": "Vad omfattar denna integritetspolicy?",
+      "dataQ": "Vilka personuppgifter samlar vi in?",
+      "exerciseNote": "För att utöva någon rättighet, mejla {email} med \"integritetsförfrågan\" i ämnesraden.",
+      "lede": "Hur WelloWork samlar in, använder och skyddar personuppgifter enligt GDPR och svensk lag.",
+      "retentionQ": "Hur länge sparar vi dem?",
+      "rightsBody": "Enligt GDPR kan du begära tillgång, rättelse, radering, begränsning, dataportabilitet och rätten att invända. Du kan också lämna in ett klagomål till den svenska tillsynsmyndigheten för dataskydd (IMY).",
+      "rightsQ": "Vilka rättigheter har du?",
+      "securityBody": "Transportkryptering, kryptering i vila, behörighetsstyrd åtkomst, säkerhetsloggning och ett tröskelvärde för minsta teamstorlek för alla chefssynliga aggregat.",
+      "securityQ": "Hur skyddar vi uppgifter?",
+      "storedBody": "Alla personuppgifter lagras på infrastruktur belägen inom Europeiska unionen. WelloWork överför inte personuppgifter utanför EU/EES utan att en lämplig överföringsmekanism finns på plats.",
+      "storedQ": "Var lagras dina uppgifter?",
+      "title": "Integritetspolicy"
+    },
+    "schema": {
+      "webPageName": "Juridik"
+    },
+    "section": {
+      "label": "Avsnitt {n}"
+    },
+    "terms": {
+      "changesBody": "Vi kan komma att uppdatera dessa villkor över tid. Väsentliga ändringar publiceras här med ett revisionsdatum.",
+      "changesQ": "Ändringar",
+      "coverA": "Tillåten användning av WelloWorks webbplats, den juridiska enheten bakom tjänsten, immateriella rättigheter, garantier och friskrivningar, ansvarsbegränsning samt tillämplig lag. Om du är betalande kund har orderformuläret och huvudtjänsteavtalet företräde.",
+      "coverQ": "Vad omfattar dessa villkor?",
+      "entityBody": "{legalName}, ett svenskt bolag. Dessa villkor reglerar användningen av webbplatsen på denna domän och eventuella demo-/testmiljöer som vi tillhandahåller. Användning av produktionsplattformen enligt ett betalavtal regleras av orderformuläret och tillhörande avtal.",
+      "entityQ": "Vem ingår du avtal med?",
+      "ipBody": "Allt innehåll, all varumärkesprofilering, källkod, design och övrigt material på denna webbplats ägs av {legalName} eller dess licensgivare. Inget på webbplatsen ger dig en licens till detta material annat än vad som uttryckligen anges.",
+      "ipQ": "Vad gäller för immateriella rättigheter?",
+      "lawBody": "Dessa villkor regleras av svensk lag. Tvister som uppstår vid användning av denna webbplats omfattas av svenska domstolars exklusiva behörighet, om inte tvingande lag i din jurisdiktion föreskriver annat.",
+      "lawQ": "Tillämplig lag",
+      "lede": "Villkoren för din användning av denna webbplats och WelloWork-plattformen. Kundavtal har företräde framför denna sida där så är tillämpligt.",
+      "title": "Användarvillkor",
+      "useQ": "Vad är tillåten användning?",
+      "warrantiesBody": "Webbplatsen tillhandahålls i befintligt skick. Vi lämnar ingen garanti avseende tillgänglighet, lämplighet för ett visst ändamål eller riktigheten i tredjepartsinformation som länkas från webbplatsen. Ansvar för användning av webbplatsen är begränsat i största möjliga utsträckning som tillåts enligt svensk och tillämplig EU-rätt.",
+      "warrantiesQ": "Garantier och begränsningar"
+    },
+    "visual": {
+      "anchor": {
+        "changes": "Ändringar",
+        "ip": "Immateriella rättigheter",
+        "law": "Tillämplig lag",
+        "liability": "Ansvar",
+        "use": "Tillåten användning",
+        "warranties": "Garantier"
+      },
+      "basis": {
+        "consent": {
+          "label": "Samtycke",
+          "note": "Marknadsföringsuppföljning efter en demo eller kontaktförfrågan."
+        },
+        "contract": {
+          "label": "Avtal",
+          "note": "Leverans av den avtalade plattformen till din arbetsgivare."
+        },
+        "interest": {
+          "label": "Berättigat intresse",
+          "note": "Besvara förfrågningar, säkerhetsloggning, skydd mot missbruk."
+        },
+        "law": {
+          "label": "Rättslig förpliktelse",
+          "note": "Lagringsperioder som följer av svensk lag eller EU-rätt."
+        }
+      },
+      "controller": {
+        "customerOrg": "Kundorganisation",
+        "directRel": "Direkt relation",
+        "platformUser": "Plattformsanvändare",
+        "roleController": "Personuppgiftsansvarig",
+        "roleProcessor": "Personuppgiftsbiträde",
+        "title": "Vem kontrollerar dina uppgifter?",
+        "viaDpa": "Via DPA",
+        "websiteVisitor": "Webbplatsbesökare",
+        "welloWork": "WelloWork AB",
+        "you": "Du"
+      },
+      "cookieBadge": "Endast nödvändiga cookies — ingen spårning som standard",
+      "cookieChanges": "Vi lägger till en samtyckesbanner och uppdaterar denna sida innan vi aktiverar några icke-nödvändiga cookies.",
+      "cookieSteps": {
+        "clear": {
+          "note": "Ta bort befintliga cookies eller blockera nya.",
+          "title": "Rensa eller blockera"
+        },
+        "heads": {
+          "note": "Att blockera nödvändiga cookies kan göra att formulärinskick inte fungerar.",
+          "title": "Tänk på"
+        },
+        "settings": {
+          "note": "Öppna din webbläsares integritets- eller cookieinställningar.",
+          "title": "Webbläsarinställningar"
+        }
+      },
+      "cookieTable": {
+        "advertising": {
+          "purpose": "Inga annonscookies på denna webbplats.",
+          "status": "Används inte",
+          "type": "Annonsering"
+        },
+        "analytics": {
+          "purpose": "Skulle mäta aggregerad användning. Aktivt val (opt-in) via en framtida samtyckesbanner.",
+          "status": "Av som standard",
+          "type": "Analys"
+        },
+        "essential": {
+          "purpose": "Krävs för att webbplatsen ska fungera — t.ex. formulärstatus vid omladdning.",
+          "status": "Aktiva som standard",
+          "type": "Nödvändiga"
+        },
+        "headPurpose": "Syfte",
+        "headStatus": "Status",
+        "headType": "Typ"
+      },
+      "dataGrid": {
+        "contact": {
+          "desc": "Från formulär — namn, jobbmejl, företag, roll, valfritt meddelande.",
+          "label": "Kontaktuppgifter"
+        },
+        "platform": {
+          "badge": "Endast om du är slutanvändare av plattformen",
+          "desc": "Tränings-, bedömnings- och biomarkörsdata.",
+          "label": "Plattformsdata"
+        },
+        "technical": {
+          "desc": "IP-adress och user-agent vid formulärinskick, för spamkontroll och säkerhet.",
+          "label": "Tekniska data"
+        }
+      },
+      "dpaCta": {
+        "note": "Ämne: 'DPA-förfrågan' — vi vidarebefordrar dig till rätt person.",
+        "title": "Mejla {email}"
+      },
+      "dpaRel": {
+        "customerOrg": {
+          "detail": "Personuppgiftsansvarig",
+          "role": "Kundorganisation"
+        },
+        "edgeDelivery": "tjänsteleverans",
+        "edgeInstructions": "dokumenterade instruktioner",
+        "endUsers": {
+          "detail": "Registrerade",
+          "role": "Slutanvändare"
+        },
+        "welloWork": {
+          "detail": "Personuppgiftsbiträde",
+          "role": "WelloWork AB"
+        }
+      },
+      "dpaSplit": {
+        "cat": {
+          "biomarker": "Biomarkörsrapporter",
+          "cognitive": "Kognitiv prestation",
+          "identification": "Identifiering & kontakt",
+          "metadata": "Operativ metadata"
+        },
+        "dataWeProcess": "Data vi behandlar",
+        "purpose": {
+          "anonymised": "Anonymiserad rapportering",
+          "biomarker": "Biomarkörsrapportering",
+          "cognitive": "Kognitiv träning",
+          "workshop": "Workshopplanering"
+        },
+        "whatWeDo": "Vad vi gör"
+      },
+      "dpaSubject": {
+        "durationLabel": "Varaktighet",
+        "durationValue": "Kundavtalets löptid + lagringsperiod enligt DPA.",
+        "scopeLabel": "Omfattning",
+        "scopeValue": "Slutanvändare av WelloWork-plattformen (vanligtvis anställda)."
+      },
+      "entity": {
+        "meta": "Registrerat i Sverige",
+        "name": "WelloWork AB",
+        "note": "Svensk lag gäller.",
+        "tag": "Avtalsslutande enhet"
+      },
+      "euCard": {
+        "defaultLabel": "Endast infrastruktur inom EU/EES",
+        "dpaLabel": "Inga överföringar utanför EU/EES",
+        "dpaNote": "Utan en lämplig överföringsmekanism på plats.",
+        "privacyNote": "Inga överföringar utanför EU/EES utan en lämplig mekanism."
+      },
+      "ip": {
+        "branchBranding": "Varumärke",
+        "branchContent": "Innehåll",
+        "branchSource": "Källkod",
+        "foot": "Ingen licens beviljas om det inte uttryckligen anges.",
+        "ownedBadge": "© ägs",
+        "owner": "WelloWork AB",
+        "ownerLabel": "Ägare"
+      },
+      "law": {
+        "text": "<strong>Svenska domstolar</strong> · svensk lag"
+      },
+      "retention": {
+        "backups": {
+          "duration": "90 dagar",
+          "label": "Säkerhetskopior"
+        },
+        "enquiry": {
+          "duration": "24 månader",
+          "label": "Förfrågningsdata"
+        },
+        "platform": {
+          "duration": "enligt DPA",
+          "label": "Plattformsdata"
+        }
+      },
+      "rights": {
+        "access": {
+          "desc": "Få en kopia av de uppgifter vi har om dig.",
+          "name": "Tillgång"
+        },
+        "cta": "Mejla {email} med 'integritetsförfrågan'",
+        "erase": {
+          "desc": "Be oss att radera dina uppgifter.",
+          "name": "Radering"
+        },
+        "object": {
+          "desc": "Invänd mot behandling som grundar sig på berättigat intresse.",
+          "name": "Invända"
+        },
+        "portability": {
+          "desc": "Ta emot dina uppgifter i ett portabelt format.",
+          "name": "Dataportabilitet"
+        },
+        "rectify": {
+          "desc": "Be oss att korrigera felaktiga uppgifter.",
+          "name": "Rättelse"
+        },
+        "restrict": {
+          "desc": "Begränsa hur vi behandlar dina uppgifter.",
+          "name": "Begränsning"
+        }
+      },
+      "security": {
+        "audit": "Säkerhetsloggning",
+        "isoBadge": "ISO 27001 pågår",
+        "rbac": "Behörighetsstyrd åtkomst",
+        "rest": "Kryptering i vila",
+        "transit": "Kryptering under överföring"
+      },
+      "subprocessor": {
+        "body": "Aktuell lista tillhandahålls till kunder på begäran.",
+        "email": "Mejl",
+        "hosting": "Hosting",
+        "labPartners": "Labbpartner",
+        "title": "Underbiträden är GDPR-kompatibla, EU-baserade där så är relevant, och listade i ditt DPA."
+      },
+      "trustBar": {
+        "euData": "Endast data inom EU/EES",
+        "gdpr": "GDPR-kompatibel",
+        "swedishLaw": "Svensk lag"
+      },
+      "use": {
+        "may1": "Använda denna webbplats för att lära dig om WelloWork och begära en demo.",
+        "may2": "Bläddra i vårt publicerade innehåll för personlig eller affärsmässig research.",
+        "may3": "Kontakta oss via de formulär som tillhandahålls på denna webbplats.",
+        "mayHead": "Du får",
+        "mayNot1": "Försöka få obehörig åtkomst eller störa tjänsten.",
+        "mayNot2": "Exfiltrera, kopiera eller skrapa data utöver normal surfning.",
+        "mayNot3": "Använda webbplatsen för konkurrensbevakning i onormal omfattning.",
+        "mayNotHead": "Du får inte"
+      },
+      "warranty": {
+        "body": "Denna webbplats tillhandahålls i befintligt skick. Vi garanterar inte drifttid, riktighet eller lämplighet för ett visst ändamål.",
+        "title": "I befintligt skick, inga garantier"
+      }
+    }
+  },
+  "localeSwitcher": {
+    "label": "Språk",
+    "change": "Byt språk",
+    "current": "Aktuellt språk: {language}",
+    "menu": "Välj språk",
+    "banner": {
+      "region": "Språkförslag",
+      "question": "Visa den här webbplatsen på {language}?",
+      "switch": "Byt till {language}",
+      "dismiss": "Inte nu"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "WelloWork — Träna kognitiv prestation. Mät det som spelar roll.",
+      "description": "Daglig kognitiv träning, longitudinella prestationstrender och biomarkörbaserade hälsoinsikter — i en plattform som chefer och medarbetare faktiskt använder. Byggd i Sverige."
+    },
+    "about": {
+      "title": "Om WelloWork — prestation på arbetsplatsen, byggd i Sverige",
+      "description": "WelloWork AB är en svensk plattform för prestation på arbetsplatsen, grundad 2024. Vi kombinerar kognitiv träning, longitudinell prestation, biomarkörtester och liveworkshops."
+    },
+    "careers": {
+      "title": "Karriär på WelloWork — så rekryterar vi och så når du oss",
+      "description": "Vi har inga lediga roller just nu, men vi läser varje presentation. Här är hur WelloWork tänker kring rekrytering, vilka vi sannolikt anställer först och hur du kommer i kontakt."
+    },
+    "contact": {
+      "title": "Kontakta WelloWork — prata med sälj, support eller partnerskap",
+      "description": "Kom i kontakt med WelloWork-teamet i Uppsala, Sverige. Mejla info@wellowork.net eller ring +46 760 28 1272 för sälj, partnerskap eller allmänna förfrågningar."
+    },
+    "bookDemo": {
+      "title": "Boka en WelloWork-demo — välj en 30-minuterstid",
+      "description": "Välj en tid i livekalendern och träffa en WelloWork-produktspecialist för en 30-minuters genomgång av chefsdashboarden. Tillverkad i Sverige · GDPR-anpassad."
+    },
+    "legal": {
+      "title": "Juridik — WelloWork",
+      "description": "Integritetspolicy, användarvillkor, cookiepolicy och sammanfattning av personuppgiftsbehandling för WelloWork — svenska och europeiska marknader, GDPR-anpassad."
+    },
+    "platformGrowth": {
+      "title": "WelloRise — daglig kognitiv träning för team | WelloWork",
+      "description": "WelloRise är daglig kognitiv träning inom arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för hektiska arbetsveckor."
+    },
+    "platformAssessment": {
+      "title": "WelloWize — kognitiva och tekniska bedömningar | WelloWork",
+      "description": "WelloWize är ett bedömningsramverk för rekryteringspaneler och intern benchmarking. Kognitivt och tekniskt, poängsatt mot roll och tjänstetid — hållbart vid erbjudandestadiet och därefter."
+    },
+    "platformMeasure": {
+      "title": "Mät — longitudinella trender för kognitiv prestation | WelloWork",
+      "description": "WelloWork Mät förvandlar varje träningspass, bedömning och workshop till en longitudinell prestationstrend — vyer för 90 dagar, 6 månader och 12 månader för chefer."
+    },
+    "platformWorkshops": {
+      "title": "Workshops — liveworkshops om hälsa, på plats eller på distans | WelloWork",
+      "description": "Facilitatorledda workshops om sömn, återhämtning, kost, fokus och livslängd. På plats eller på distans, bokningsbara i WelloWork, med resultat som matas tillbaka till prestationstrender."
+    },
+    "platformProactiveCare": {
+      "title": "Proaktiv vård — biomarkörtester för livslängd och hälsa | WelloWork",
+      "description": "Blodpaneler för livslängdsmarkörer och urinpaneler för allmän hälsa och drogtestning. Medarbetare ser sin rapport; chefer ser bara anonymiserade, aggregerade trender."
+    },
+    "research": {
+      "title": "Forskning och metodik — de kognitiva konstrukten bakom WelloWork",
+      "description": "WelloWorks kognitiva träning och bedömningar bygger på validerade konstrukt: arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet."
+    },
+    "researchMethodology": {
+      "title": "Översikt över metodiken — så mäter WelloWork kognitiv prestation",
+      "description": "Hur WelloWork kopplar övningar till validerade kognitiva konstrukt, poängsätter dem och aggregerar resultaten till longitudinella prestationstrender — med inbyggt integritetsskydd."
+    },
+    "researchScienceInsight": {
+      "title": "Vetenskap och insikt — metodikanteckningar från WelloWorks forskning",
+      "description": "Arbetsanteckningar från WelloWorks forskningsteam om kognitiva konstrukt, biomarkörmetodik, prestationssignaler på arbetsplatsen och var litteraturen står och inte står."
+    },
+    "researchCognitiveConstructs": {
+      "title": "Kognitiva konstrukt — de fem domäner WelloWork mäter",
+      "description": "Arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — varje domän, litteraturen bakom den och hur WelloWork operationaliserar den."
+    }
+  },
+  "nav": {
+    "aria": {
+      "logoHome": "WelloWork startsida",
+      "primary": "Primär"
+    },
+    "cta": {
+      "bookDemo": "Boka en demo",
+      "contact": "Kontakt"
+    },
+    "items": {
+      "about": "Om oss",
+      "platform": "Plattform",
+      "pricing": "Priser",
+      "research": "Forskning",
+      "solutions": "Lösningar"
+    }
+  },
+  "platformAssessment": {
+    "answer": {
+      "body": "WelloWorks bedömningsprodukt. Den utvärderar kandidater och befintliga medarbetare utifrån samma kognitiva och tekniska ramverk, levererar resultat redo för rekryteringspanelen på några minuter och tar fram interna jämförelsetal mot roll och anställningstid som kan köras om varje kvartal.",
+      "label": "Vad är WelloWize?"
+    },
+    "benchmarkChart": {
+      "eyebrow": "Kvartalsvisa omkörningar",
+      "legend": {
+        "benchmark": "Rolljämförelse",
+        "employee": "Medarbetarens utveckling"
+      },
+      "sampleData": "Exempeldata",
+      "title": "Utveckling mot rolljämförelse"
+    },
+    "benchmarkSection": {
+      "body": "Internt kan WelloWize köras om enligt ett schema. Resultaten matar den longitudinella trend som Measure-produkten synliggör – så att beslut om befordringsmognad grundas i en trend över hela året, snarare än det resultat någon råkade prestera på bedömningsdagen.",
+      "headingAccent": "roll + anställningstid.",
+      "headingLead": "Interna jämförelsetal mot"
+    },
+    "crumbs": {
+      "current": "Bedömning — WelloWize",
+      "home": "Hem",
+      "platform": "Plattform"
+    },
+    "cta": {
+      "body": "En 30-minuters genomgång med exempel på kandidatprofiler och ett uppriktigt samtal om ett pilotprojekt.",
+      "primary": "Boka en demo",
+      "secondary": "Läs forskningen",
+      "title": "Se WelloWize i verkliga rekryteringspaneler."
+    },
+    "differSection": {
+      "headingAccent": "rekryteringsverktyg för bedömning?",
+      "headingLead": "Hur skiljer sig WelloWize från ett",
+      "intro": "De flesta verktyg slutar i samma ögonblick som en kandidat skriver på. WelloWize använder samma ramverk före och efter erbjudandebrevet.",
+      "standardLabel": "Standardverktyg"
+    },
+    "features": {
+      "auditable": {
+        "body": "Varje resultat går att spåra till de underliggande uppgifterna och tiden per uppgift – försvarbart om ett rekryteringsbeslut ifrågasätts.",
+        "title": "Granskningsbar poängsättning"
+      },
+      "benchmarks": {
+        "body": "Interna resultat är jämförbara mellan anställda och anställningstider, inte mot en generisk population.",
+        "title": "Jämförelsetal för roll + anställningstid"
+      },
+      "eyebrow": "Vad som ingår",
+      "feedsTrends": {
+        "body": "Omkörningar flödar in i Measure-produkten, så att befordringsbeslut vilar på trender snarare än ett enda test.",
+        "title": "Matar longitudinella trender"
+      },
+      "gdpr": {
+        "body": "Bedömningsdata för kandidater och medarbetare lagras i EU. Lagring och radering är konfigurerbara.",
+        "title": "GDPR-anpassad"
+      },
+      "oneFramework": {
+        "body": "Fem kognitiva domäner plus rollspecifika tekniska tester – ingen separat leverantör för varje del.",
+        "title": "Kognitivt + tekniskt, ett ramverk"
+      },
+      "panelReports": {
+        "body": "Normaliserad profil mot rolljämförelsen, redo att diskuteras mot kravprofilen.",
+        "title": "Rapporter för rekryteringspanelen på några minuter"
+      },
+      "title": "Vad levereras med WelloWize?"
+    },
+    "hero": {
+      "eyebrow": "WelloWize — Bedömning",
+      "lede": "WelloWize ger rekryteringspaneler och personalledare samma bedömningsvokabulär, så att arbetet inte slutar vid erbjudandebrevet. Kognitivt och tekniskt, poängsatt mot roll och anställningstid.",
+      "titleAccent": "och efter.",
+      "titleLead": "Ett bedömningsramverk — rekrytering"
+    },
+    "measureCards": {
+      "cognitive": {
+        "body": "Arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet – i linje med plattformens litteraturförankrade konstrukt.",
+        "title": "Fem kognitiva domäner"
+      },
+      "technical": {
+        "body": "SQL, TypeScript, statistik och andra rollrelevanta färdigheter – tillagda per roll, poängsatta tillsammans med den kognitiva profilen.",
+        "title": "Rollspecifika tekniska tester"
+      },
+      "timeOnTask": {
+        "body": "Signaler om självpacing och trötthet vägs in i sammanhanget – används för att tolka ett resultat, inte för att straffa kandidaten.",
+        "title": "Mönster i tid per uppgift"
+      }
+    },
+    "measureSection": {
+      "headingAccent": "faktiskt?",
+      "headingLead": "Vad mäter det",
+      "intro": "Tre lager av signaler, levererade tillsammans som en enda profil."
+    },
+    "meta": {
+      "description": "WelloWize är ett bedömningsramverk för rekryteringspaneler och interna jämförelsetal. Kognitivt och tekniskt, poängsatt mot roll och anställningstid – försvarbart i erbjudandeskedet och efteråt.",
+      "title": "WelloWize — kognitiva och tekniska bedömningar | WelloWork"
+    },
+    "panelSection": {
+      "body": "När en kandidat har slutfört bedömningen ser rekryteringspanelen en normaliserad profil mot rolljämförelsen. Detta är medvetet en profil, inte en enda siffra – försvarbar i erbjudandeskedet och lättare att diskutera mot kravprofilen.",
+      "headingAccent": "minuter.",
+      "headingLead": "Resultat till rekryteringspanelen på"
+    },
+    "resultsCard": {
+      "above": "Över",
+      "aboveBenchmark": "Över jämförelsetal på 3 av 5",
+      "below": "Under",
+      "candidateName": "Alex M.",
+      "candidateRole": "Senior ingenjör — kandidat",
+      "domains": {
+        "attention": "Uppmärksamhet",
+        "cognitiveFlexibility": "Kognitiv flexibilitet",
+        "problemSolving": "Problemlösning",
+        "processingSpeed": "Bearbetningshastighet",
+        "workingMemory": "Arbetsminne"
+      },
+      "normalisedProfile": "Normaliserad profil",
+      "sampleData": "Exempeldata",
+      "scaleBenchmark": "· · · rolljämförelse",
+      "scaleHigh": "Hög",
+      "scaleLow": "Låg",
+      "windowLabel": "wellowize · kandidatprofil"
+    },
+    "standardPoints": {
+      "endsAtOffer": "Slutar vid påskrift av erbjudande",
+      "scopedHiring": "Begränsat till enbart rekrytering",
+      "singleScore": "Enda sammansatt poäng"
+    },
+    "timeline": {
+      "candidateCompletes": {
+        "label": "Kandidaten slutför",
+        "time": "~45 min"
+      },
+      "panelNotified": {
+        "label": "Panelen meddelas",
+        "time": "Omedelbart"
+      },
+      "resultsProcessed": {
+        "label": "Resultaten bearbetas",
+        "time": "~2 min"
+      }
+    },
+    "timelineCard": {
+      "endToEnd": "~50 min från start till mål",
+      "eyebrow": "Tid till panelen",
+      "footnote": "Panelen får en normaliserad profil, inte ett rått protokoll. Exempeltider."
+    },
+    "welloWizePoints": {
+      "continuous": {
+        "label": "Kontinuerlig, går att köra om",
+        "why": "Kvartalsvisa omkörningar matar en longitudinell trend som Measure-produkten synliggör."
+      },
+      "prePost": {
+        "label": "Före och efter anställning",
+        "why": "Samma ramverk för kandidaten och för samma person tolv månader senare – direkt jämförbart."
+      },
+      "profile": {
+        "label": "Normaliserad profil, inte en siffra",
+        "why": "En form mot rolljämförelsen – försvarbar i erbjudandeskedet och lättare att diskutera mot kravprofilen."
+      }
+    }
+  },
+  "platformGrowth": {
+    "answer": {
+      "body": "Det dagliga kognitiva träningslagret i WelloWork-plattformen — adaptiva pass över fem validerade konstrukt, betalda i tokens, som matar samma longitudinella trend som chefer ser i aggregerad form.",
+      "label": "Vad är WelloRise?"
+    },
+    "comparison": {
+      "consumerLabel": "Konsumentapp",
+      "headingAccent": "hjärnträningsapp?",
+      "headingLead": "Hur skiljer det sig från en"
+    },
+    "constructs": {
+      "attention": {
+        "desc": "Behåll fokus på det som spelar roll och filtrera bort det som inte gör det.",
+        "label": "Uppmärksamhet"
+      },
+      "cognitiveFlexibility": {
+        "desc": "Växla mellan uppgifter, perspektiv och mentala modeller i farten.",
+        "label": "Kognitiv flexibilitet"
+      },
+      "problemSolving": {
+        "desc": "Resonera dig igenom nya situationer och anpassa dig till obekanta begränsningar.",
+        "label": "Problemlösning"
+      },
+      "processingSpeed": {
+        "desc": "Hur snabbt du tar in, utvärderar och svarar på ny information under press.",
+        "label": "Bearbetningshastighet"
+      },
+      "workingMemory": {
+        "desc": "Håll och uppdatera information i minnet — den kognitiva arbetsbänken för komplext arbete.",
+        "label": "Arbetsminne"
+      }
+    },
+    "constructsSection": {
+      "headingAccent": "egentligen?",
+      "headingLead": "Vad gör daglig kognitiv träning",
+      "intro": "Fem validerade konstrukt, tränade i korta adaptiva pass."
+    },
+    "consumerPoints": {
+      "noWorkContext": "Ingen arbetskontext",
+      "optimisedEngagement": "Optimerad för engagemang",
+      "personalEntertainment": "Personlig underhållning",
+      "singleUserData": "Data för en enskild användare",
+      "standaloneScore": "Fristående poäng"
+    },
+    "crumbs": {
+      "current": "Tillväxt — WelloRise",
+      "home": "Hem",
+      "platform": "Plattform"
+    },
+    "cta": {
+      "body": "En genomgång på 30 minuter med exempeldata från din bransch — och ett ärligt samtal om en pilot.",
+      "primary": "Boka en demo",
+      "secondary": "Jämför plattformsnivåer",
+      "titleAccent": "i chefsdashboarden.",
+      "titleLead": "Se WelloRise"
+    },
+    "employeeCards": {
+      "adaptive": {
+        "body": "Varje pass anpassas till din aktuella nivå över alla fem konstrukt. Du utmanas, men överväldigas inte — och har aldrig tråkigt.",
+        "sub": "Kalibrerad per domän",
+        "title": "Anpassad efter dig"
+      },
+      "peers": {
+        "body": "Mentorera en kollega, håll en lunchworkshop eller plocka upp en utmanande uppgift från marknadsplatsen — kollegor betalar dig i tokens.",
+        "sub": "En tokenbetald uppgiftsmarknadsplats",
+        "title": "Hjälp kollegor, tjäna mer"
+      },
+      "privacy": {
+        "body": "Individuella passresultat stannar hos dig. Chefer ser bara anonymiserade, aggregerade trender — aldrig poäng för enskilda personer.",
+        "sub": "Chefer ser endast aggregat",
+        "title": "Din data, privat"
+      },
+      "tokens": {
+        "body": "Dagliga pass ger tokens. Använd dem till böcker, kurser eller utvecklingsspår — finansierat av en budget teamet redan har.",
+        "sub": "Lös in mot kurser och utveckling",
+        "title": "Tokens finansierar lärande"
+      }
+    },
+    "employeeSection": {
+      "headingAccent": "medarbetaren?",
+      "headingLead": "Vad får"
+    },
+    "features": {
+      "adaptive": {
+        "body": "Varje pass kalibreras per domän. Underutmanade medarbetare planar inte ut; de som tänjs för mycket bränner inte ut sig.",
+        "title": "Adaptiv svårighetsgrad"
+      },
+      "domains": {
+        "body": "Arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — kopplade till litteraturen på konstruktnivå.",
+        "title": "Fem validerade kognitiva domäner"
+      },
+      "eyebrow": "Det här ingår",
+      "longitudinal": {
+        "body": "Varje pass är en datapunkt. Trender, inte enskilda poäng, driver chefsvyn och signaler om befordringsmognad.",
+        "title": "Longitudinella trender"
+      },
+      "privacy": {
+        "body": "Individuella passresultat är privata för medarbetaren. Chefer ser endast anonymiserade, aggregerade trender.",
+        "title": "Integritet med medarbetaren först"
+      },
+      "teamComposition": {
+        "body": "Rekommenderar optimala teamsammansättningar per projekt, baserat på aggregerade kognitiva profiler och tidigare prestation.",
+        "title": "Motor för teamsammansättning"
+      },
+      "titleAccent": "WelloRise",
+      "titleLead": "Vad ingår i",
+      "titleTrail": "?",
+      "tokens": {
+        "body": "Pass ger tokens som kan lösas in mot kurser, utvecklingsspår eller kollegahjälp — finansierar lärande som teamet redan vill ha.",
+        "title": "Tokenekonomi"
+      }
+    },
+    "hero": {
+      "eyebrow": "WelloRise — Tillväxt",
+      "lede": "WelloRise är en daglig kognitiv träningsprodukt utformad för arbetsveckor, inte för laboratorieförhållanden. Fem till tio minuter om dagen över fem validerade kognitiva konstrukt — med en tokenekonomi som finansierar lärande.",
+      "titleAccent": "en kafferast.",
+      "titleLead": "Daglig kognitiv träning som ryms på"
+    },
+    "managerCards": {
+      "annotated": {
+        "body": "Sprintnedskärningar, releaser och jourrotationer taggas på trendlinjen — så att du ser vilka arbetsmönster som kostar teamet.",
+        "sub": "Sprintar, releaser, jour",
+        "title": "Kopplad till arbetshändelser"
+      },
+      "composition": {
+        "body": "Rekommendera rätt blandning av kognitiva styrkor för ett projekt, en sprint eller en arbetsgrupp — baserat på aggregerade profiler, inte gissningar.",
+        "sub": "Grundat i kognitiva styrkor",
+        "title": "Passform för teamsammansättning"
+      },
+      "trends": {
+        "body": "Rullande longitudinella vyer visar om teamet förbättras eller driver iväg — långt innan en enskild enkät kan fånga det.",
+        "sub": "Vyer för 90 dagar, 6 månader, 12 månader",
+        "title": "Trender över året"
+      },
+      "variability": {
+        "body": "För driftskritiska roller, håll utkik efter toppar i variabilitet i uppmärksamhet och bearbetningshastighet som ofta föregår felfönster.",
+        "sub": "För driftskritiska roller",
+        "title": "Variabilitet där det räknas"
+      }
+    },
+    "managerSection": {
+      "headingAccent": "chefen?",
+      "headingLead": "Vad får"
+    },
+    "meta": {
+      "description": "WelloRise är daglig kognitiv träning över arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för pressade arbetsveckor.",
+      "title": "WelloRise — daglig kognitiv träning för team | WelloWork"
+    },
+    "sessionCard": {
+      "chip": {
+        "attention": "Uppmärksamhet",
+        "flexibility": "Flexibilitet",
+        "memory": "Minne",
+        "problemSolving": "Problemlösning",
+        "processing": "Bearbetning"
+      },
+      "constructs": "konstrukt",
+      "currentTask": "Arbetsminne",
+      "elapsed": "2:14 förflutet",
+      "eyebrow": "Dagens pass",
+      "inProgress": "Pågår",
+      "left": "~3 min kvar",
+      "live": "Live",
+      "taskOf": "Uppgift 2 av 3",
+      "taskProgressAria": "Uppgiftsförlopp",
+      "title": "5 minuter för att hålla din trend",
+      "tokensEarned": "+12 tokens intjänade idag",
+      "tokensRedeem": "Lös in mot kurser, böcker eller kollegahjälp"
+    },
+    "welloRisePoints": {
+      "annotated": {
+        "label": "Kopplad till arbetshändelser",
+        "why": "Sprintar, releaser och jourpass taggas på trendlinjen."
+      },
+      "feedsDashboard": {
+        "label": "Matar teamets dashboard",
+        "why": "Aggregerad, anonymiserad signal flödar till chefer — aldrig individuella resultat."
+      },
+      "longitudinal": {
+        "label": "Longitudinell trend",
+        "why": "Vi följer hur varje domän rör sig över veckor, inte poängen någon enskild dag."
+      },
+      "stableSignal": {
+        "label": "Optimerad för stabil signal",
+        "why": "Samma uppgiftsdesign och svårighetskurva — så att en poäng den här månaden är jämförbar med en nästa kvartal."
+      },
+      "workplaceLayer": {
+        "label": "Lager för arbetsplatsprestation",
+        "why": "Ligger i samma plattform som bedömning, workshops och teamsammansättning."
+      }
+    }
+  },
+  "platformMeasure": {
+    "answer": {
+      "body": "Measure förvandlar varje träningspass, bedömning och workshopinteraktion till en longitudinell prestationssignal. Chefer ser aggregerade trender över 90 dagar, 6 månader och 12 månader, automatiskt annoterade mot arbetshändelser som sprintgranskningar, jourrotationer och skiftbyten.",
+      "label": "Vad är WelloWork Measure?"
+    },
+    "crumbs": {
+      "current": "Measure — Prestationstrender",
+      "home": "Hem",
+      "platform": "Plattform"
+    },
+    "cta": {
+      "body": "Realistiska exempeldata från din bransch, med integritetsmodellen aktiverad live.",
+      "primary": "Boka en demo",
+      "secondary": "Så mäter vi det",
+      "titleAccent": "en skärm.",
+      "titleLead": "Se sex månaders trend på"
+    },
+    "employeeCard": {
+      "anonymised": "Anonymiserat",
+      "appUrl": "app.wellowork.net / me",
+      "gdprNote": "GDPR · exportera eller radera",
+      "ownNote": "Medarbetarna äger dessa data — chefer ser endast utjämnade aggregat ovanför en lägsta teamstorlek.",
+      "perSession": "Per pass",
+      "sampleData": "Exempeldata",
+      "teamAggregateLead": "Teamaggregat",
+      "teamAggregateQualifier": "(det som din chef ser)",
+      "yourTrendLead": "Din trend",
+      "yourTrendQualifier": "(synligt för dig)"
+    },
+    "employeeSection": {
+      "body": "Medarbetarna ser sina egna data — sina resultat per pass plus samma trend som en chef ser i aggregerad form. De styr vad deras chef och HR kan se på teamnivå och kan begära export eller radering enligt GDPR när som helst.",
+      "heading": "Hur ser det ut för medarbetaren?"
+    },
+    "features": {
+      "aggregated": {
+        "body": "Chefer och HR ser anonymiserade trender per team och per kohort — aldrig enskilda medarbetare.",
+        "title": "Aggregerade teamvyer"
+      },
+      "annotated": {
+        "body": "Sprintgranskningar, releaser, skiftbyten och jourrotationer läggs över trenden så att nedgångar inte framstår som gåtor.",
+        "title": "Automatiskt annoterad mot arbetshändelser"
+      },
+      "eyebrow": "Vad som ingår",
+      "privacy": {
+        "body": "Aggregeringar kräver en lägsta teamstorlek innan något tal visas. Medarbetarna behåller sin rätt till export och radering.",
+        "title": "Inbyggd integritet"
+      },
+      "promotion": {
+        "body": "Trendlutning, rollbenchmark och tjänsteårsrelaterad prestation kombineras till en enda, försvarbar signal.",
+        "title": "Signal för befordringsmognad"
+      },
+      "title": "Vad levereras med Measure?",
+      "variability": {
+        "body": "Där variabilitet skadar (säkerhet, drift) lyfter Measure fram den. Där den är sund (kreativt arbete) bestraffas den inte.",
+        "title": "Variabilitetsmått"
+      },
+      "views": {
+        "body": "Tre trendhorisonter — sprinttakt, halvår och helår. Avläsningarna förblir stabila när en dålig vecka inträffar.",
+        "title": "Vyer för 90 / 180 / 365 dagar"
+      }
+    },
+    "hero": {
+      "eyebrow": "Measure — Prestationstrender",
+      "lede": "Measure är trendlagret i WelloWork-plattformen. Varje pass, varje bedömning och varje workshop är en datapunkt — aggregerad för chefer och specificerad för medarbetaren som äger den.",
+      "titleAccent": "inte ett engångsresultat.",
+      "titleLead": "Longitudinell prestation —"
+    },
+    "meta": {
+      "description": "WelloWork Measure förvandlar varje träningspass, bedömning och workshop till en longitudinell prestationstrend — vyer över 90 dagar, 6 månader och 12 månader för chefer.",
+      "title": "Measure — longitudinella trender för kognitiv prestation | WelloWork"
+    },
+    "promotionCard": {
+      "last6mo": "Senaste 6 månaderna · Exempeldata",
+      "roleEmployee": "Medarbetare",
+      "roleHR": "HR",
+      "roleManager": "Chef",
+      "signalStrong": "Stark",
+      "signalStrongLead": "Signal för befordringsmognad:",
+      "threeWay": "Inleder ett trepartssamtal",
+      "trendSlope": "Trendlutning ↑"
+    },
+    "promotionSection": {
+      "body": "Vi är tydliga med att befordringsmognad är en signal, inte en dom. Det är en utgångspunkt för ett samtal mellan en chef, HR och medarbetaren — ett samtal som de kan föra med månaders jämförbara data i ryggen snarare än en enda bedömningsdag.",
+      "heading": "Befordringsmognad baserad på trend, inte ett enda test"
+    },
+    "scoreVsTrend": {
+      "body": "Ett enskilt kognitivt resultat en given dag speglar sömn, koffein, stress och brus lika mycket som den underliggande förmågan. En trend över veckor och månader filtrerar bort det bruset och visar riktning — vilket är det enda en chef kan agera på utan orättvisa beslut baserade på en enda mätpunkt.",
+      "heading": "Varför är en trend bättre än ett resultat?"
+    },
+    "scoreVsTrendCompare": {
+      "oneTimeAffected": "Påverkas av: sömn, koffein, stress, brus, tid på dygnet.",
+      "oneTimeScore": "Engångsresultat",
+      "trendDirection": "Visar riktning — inte en ögonblicksbild.",
+      "trendView": "Trendvy",
+      "vs": "VS"
+    },
+    "seeCards": {
+      "annotation": {
+        "body": "Sprintgranskningar, jourrotationer, releaser och skiftbyten lagda över trenden.",
+        "title": "Automatisk annotering"
+      },
+      "promotion": {
+        "body": "Grundad i trendlutning över månader, inte en enda bedömningsdag.",
+        "title": "Signal för befordringsmognad"
+      },
+      "teamTrend": {
+        "body": "Över de fem kognitiva domänerna — anonymiserat, aldrig per person.",
+        "title": "Aggregerad teamtrend"
+      },
+      "variability": {
+        "body": "Användbart för säkerhetskritiska och driftkritiska roller där spridning spelar roll.",
+        "title": "Variabilitet inom teamet"
+      }
+    },
+    "seeSection": {
+      "heading": "Vad kan du faktiskt se?"
+    },
+    "trendCard": {
+      "annotationShift": "Skiftbyte",
+      "annotationSprint": "Sprintgranskning",
+      "chartTitle": "12-månaders kognitiv trend",
+      "monthApr": "Apr",
+      "monthJan": "Jan",
+      "monthJul": "Jul",
+      "monthOct": "Okt",
+      "personName": "Jordan K.",
+      "personRole": "Staff Engineer",
+      "privacyChip": "Medarbetaren äger denna vy · GDPR-export tillgänglig",
+      "sampleData": "Exempeldata",
+      "tab12mo": "12 månader",
+      "tab6mo": "6 månader",
+      "tab90": "90 dagar",
+      "trendingUp": "↑ Stigande trend"
+    }
+  },
+  "platformProactiveCare": {
+    "answer": {
+      "body": "Proactive Care är WelloWorks tjänst för biomarkörtestning med prover. Pilotuppdrag genomförs på plats eller via samarbetande laboratorier, med blodpaneler inriktade på markörer relevanta för livslängd (HbA1c, ApoB, hs-CRP, lipider, vitamin D m.m.) och urinpaneler för allmän hälsa och substansscreening. Medarbetaren äger sin rapport; chefer ser endast deltagandegrad och övergripande trender.",
+      "label": "Vad är Proactive Care?"
+    },
+    "crumbs": {
+      "current": "Proactive Care",
+      "home": "Hem",
+      "platform": "Plattform"
+    },
+    "cta": {
+      "body": "Paneler, geografier och screeningomfattning bekräftas i ett avgränsningssamtal. Piloter kombinerar vanligtvis biomarkörtestning med Workshops i nivån Platform + Services.",
+      "primary": "Boka ett avgränsningssamtal",
+      "secondary": "Prata med säljteamet",
+      "title": "Avgränsa ett Proactive Care-uppdrag."
+    },
+    "features": {
+      "aggregated": {
+        "body": "Chefer ser deltagandegrad och anonymiserade, aggregerade trender — aldrig ett enskilt värde.",
+        "title": "Aggregerad chefsvy"
+      },
+      "bloodPanel": {
+        "body": "En konfigurerbar panel med markörer relevanta för livslängd, tagen på plats eller via samarbetande laboratorier.",
+        "title": "Blodpanel för livslängd"
+      },
+      "chainOfCustody": {
+        "body": "Provhantering och spårbarhetskedja följer det ackrediterade laboratoriepartnerns standardrutiner i varje geografi.",
+        "title": "Spårbarhetskedja av labbkvalitet"
+      },
+      "employeeOwned": {
+        "body": "Endast medarbetaren ser sina resultat. Hen kan dela dem med sin läkare, exportera eller begära radering.",
+        "title": "Medarbetarägda rapporter"
+      },
+      "eyebrow": "Vad som ingår",
+      "linked": {
+        "body": "Där medarbetaren samtycker annoteras biomarkördata i hens egen vy för kognitiva trender.",
+        "title": "Kopplad till prestationstrender"
+      },
+      "title": "Vad ingår i ett Proactive Care-uppdrag?",
+      "urinePanel": {
+        "body": "Markörer för allmän hälsa plus, där det är i omfattning, drogscreening konfigurerad enligt kundens policy.",
+        "title": "Urin – hälsa och screening"
+      }
+    },
+    "hero": {
+      "eyebrow": "Proactive Care",
+      "lede": "Blodpaneler för markörer relevanta för livslängd och urinpaneler för allmän hälsa och drogscreening. Medarbetaren ser hela sin rapport. Chefer ser endast anonymiserade, aggregerade trender.",
+      "titleAccent": "drogscreening.",
+      "titleLead": "Biomarkörtestning för livslängd, hälsa och"
+    },
+    "logistics": {
+      "step1": {
+        "body": "På plats för piloter, eller via ett samarbetande laboratorium nära medarbetaren.",
+        "note": "Samtycke per medarbetare innan något prov tas.",
+        "title": "Prov insamlat"
+      },
+      "step2": {
+        "body": "Ackrediterad laboratoriepartner hanterar prov, bearbetning och rapportering enligt sina standardrutiner.",
+        "title": "Bearbetning med spårbarhetskedja"
+      },
+      "step3": {
+        "body": "Endast medarbetaren. Hen kan dela med sin läkare, exportera eller begära radering.",
+        "title": "Medarbetaren får rapporten"
+      },
+      "stepLabel": "STEG {index}"
+    },
+    "logisticsSection": {
+      "body": "Provinsamling sker på plats för större piloter, eller via samarbetande laboratorier nära medarbetaren. Provets spårbarhetskedja och labbhantering följer standardrutinerna hos den ackrediterade laboratoriepartner som används i den geografin. Drogscreeningens omfattning konfigureras enligt kundens policy och samtycks till per medarbetare innan provet tas.",
+      "heading": "Hur genomförs det logistiskt?"
+    },
+    "meta": {
+      "description": "Blodpaneler för markörer relevanta för livslängd och urinpaneler för allmän hälsa och drogscreening. Medarbetaren ser sin rapport; chefer ser endast anonymiserade, aggregerade trender.",
+      "title": "Proactive Care — biomarkörtestning för livslängd och hälsa | WelloWork"
+    },
+    "panels": {
+      "blood": {
+        "body": "Metabola, inflammatoriska och kardiovaskulära markörer som ofta används inom livslängdsinriktad preventiv vård.",
+        "eyebrow": "Blod",
+        "markers": {
+          "apob": "ApoB",
+          "cbc": "CBC",
+          "hba1c": "HbA1c",
+          "hscrp": "hs-CRP",
+          "lipidSubFractions": "Lipidsubfraktioner",
+          "vitaminD": "Vitamin D"
+        },
+        "title": "Livslängdspanel"
+      },
+      "urine": {
+        "body": "Standardmarkörer för allmän hälsa plus, där det är i omfattning, substansscreening konfigurerad enligt kundens policy.",
+        "eyebrow": "Urin",
+        "markers": {
+          "drugScreen": "Drogscreening (valfritt)",
+          "glucose": "Glukos",
+          "hydration": "Vätskebalans",
+          "kidney": "Njurfunktion",
+          "protein": "Protein"
+        },
+        "title": "Allmän hälsa och screening"
+      }
+    },
+    "reportCard": {
+      "colHealthy": "Friskt intervall",
+      "colHigh": "Högt",
+      "colLow": "Lågt",
+      "colMarker": "Markör",
+      "markers": {
+        "apob": "ApoB",
+        "hba1c": "HbA1c",
+        "hscrp": "hs-CRP",
+        "lipids": "Lipider",
+        "vitaminD": "Vitamin D"
+      },
+      "markersAttention": "2 markörer behöver uppmärksammas",
+      "personName": "Jordan K.",
+      "personRole": "Marketing Lead",
+      "privacyChip": "Medarbetaren äger denna rapport · GDPR-export tillgänglig",
+      "reportQ2": "Biomarkörrapport · Q2",
+      "sampleData": "Exempeldata"
+    },
+    "roleAccess": {
+      "aria": {
+        "aggregated": "Aggregerad",
+        "cohortTrend": "Anonymiserad kohorttrend",
+        "hidden": "Dold",
+        "visibleMarker": "Synlig markör"
+      },
+      "cellAggLabel": "AGG",
+      "employee": {
+        "detail": "Hela rapporten — varje markör synlig",
+        "role": "Medarbetare"
+      },
+      "heading": "Vad varje roll ser",
+      "legend": {
+        "aggregated": "Aggregerad",
+        "cohortTrend": "Kohorttrend",
+        "hidden": "Dold",
+        "visible": "Markör synlig"
+      },
+      "managerHR": {
+        "detail": "Aggregerade trender över en minsta teamstorlek",
+        "role": "Chef / HR"
+      },
+      "privacyChip": "Arkitektoniskt — inte en policy som kan åsidosättas",
+      "wellowork": {
+        "detail": "Endast anonymiserad trend på kohortnivå",
+        "role": "WelloWork"
+      }
+    },
+    "siloVsLongitudinal": {
+      "annualLabel": "Årlig hälsoundersökning",
+      "annualNote1": "En gång om året, utan longitudinellt sammanhang.",
+      "annualNote2": "Upptäckt för sent.",
+      "monthApr": "Apr",
+      "monthDec": "Dec",
+      "monthJan": "Jan",
+      "monthJul": "Jul",
+      "monthOct": "Okt",
+      "oneReading": "En mätning",
+      "vs": "VS",
+      "welloWorkNote1": "Biomarkörer + kognitiva data — kontinuerligt, handlingsbart.",
+      "welloWorkNote2": "Agera på det nu.",
+      "welloWorkView": "WelloWork-vy"
+    },
+    "testSection": {
+      "body": "Två paneler, konfigurerade per uppdrag. Blod för markörer relevanta för livslängd, urin för allmän hälsa och (där det är i omfattning) substansscreening.",
+      "heading": "Vad testar Proactive Care?",
+      "note": "Obs: WelloWork är inte en klinisk diagnostiktjänst. Rapporter identifierar markörer utanför intervallet och rekommenderar uppföljning med medarbetarens egen läkare. Vi ställer inga diagnoser och vi ger ingen medicinsk rådgivning."
+    },
+    "whoSeesSection": {
+      "body": "Medarbetaren är den enda person som ser hela sin biomarkörrapport. Chefer och HR ser aggregerade, anonymiserade trender över en minsta teamstorlek — aldrig en enskild persons värden. Detta är en strikt arkitektonisk regel i plattformen, inte en policy som någon kan åsidosätta.",
+      "heading": "Vem ser resultaten?"
+    },
+    "whySection": {
+      "body": "Ett litet antal biomarkörer påverkar kognitiv prestation påtagligt över tid — sömnarkitektur (uppskattad via metabola markörer), glukosvariabilitet, inflammation och grundläggande mikronäringsstatus. Att behandla biomarkördata som en del av samma longitudinella vy som kognitiv träning och bedömningar gör att medarbetare och deras läkare kan agera på den, i stället för att upptäcka den en gång om året vid en hälsoundersökning.",
+      "heading": "Varför testning som en del av en prestationsplattform?"
+    }
+  },
+  "platformTabs": {
+    "cta": {
+      "explore": "Utforska {tab}"
+    },
+    "explore": "Utforska {section}",
+    "section": {
+      "eyebrow": "Plattformen",
+      "heading": {
+        "accent": "humankapital.",
+        "lead": "Ett operativsystem för "
+      },
+      "titleAccent": "humankapital.",
+      "titleLead": "Ett operativsystem för"
+    },
+    "tabs": {
+      "assessment": {
+        "body": "Ett gemensamt bedömningsramverk för kandidater och befintliga medarbetare. Bygg väl underbyggda profiler innan erbjudandet skickas ut – och fortsätt mäta efteråt.",
+        "bullet1": "Kognitivt + tekniskt i ett ramverk",
+        "bullet2": "Resultat till rekryteringspanelen på minuter",
+        "bullet3": "Interna jämförelser mot roll + anställningstid",
+        "bullets": [
+          "Kognitivt + tekniskt i ett ramverk",
+          "Resultat till rekryteringspanelen på minuter",
+          "Interna jämförelser mot roll + anställningstid"
+        ],
+        "eyebrow": "WelloWize",
+        "label": "Bedömning",
+        "title": "Rekrytering och interna bedömningar – kognitivt och tekniskt."
+      },
+      "growth": {
+        "body": "Adaptiva övningar inom problemlösning, arbetsminne, uppmärksamhet, bearbetningshastighet och kognitiv flexibilitet. Tokens låser upp kurser; en uppgiftsmarknad låter kollegor hjälpa varandra och tjäna in.",
+        "bullet1": "Adaptiv svårighetsgrad per kognitiv domän",
+        "bullet2": "Tokens växlas in mot kurser och utvecklingsspår",
+        "bullet3": "Team Composition-motorn rekommenderar optimala team per projekt",
+        "bullets": [
+          "Adaptiv svårighetsgrad per kognitiv domän",
+          "Tokens växlas in mot kurser och utvecklingsspår",
+          "Team Composition-motorn rekommenderar optimala team per projekt"
+        ],
+        "eyebrow": "WelloRise",
+        "label": "Utveckling",
+        "title": "Daglig kognitiv träning som ryms på en kaffepaus."
+      },
+      "measure": {
+        "body": "Varje pass, varje bedömning, varje workshop är en datapunkt. Se hur den kognitiva prestationen förändras genom sprintar, skift och säsonger – för individer och aggregerat för chefer.",
+        "bullet1": "Vyer för 90 dagar, 6 månader och 12 månader",
+        "bullet2": "Automatiskt kommenterade mot arbetshändelser",
+        "bullet3": "Signaler om befordringsmognad baserade på trend, inte på ett enskilt test",
+        "bullets": [
+          "Vyer för 90 dagar, 6 månader och 12 månader",
+          "Automatiskt kommenterade mot arbetshändelser",
+          "Signaler om befordringsmognad baserade på trend, inte på ett enskilt test"
+        ],
+        "eyebrow": "Prestationstrender",
+        "label": "Mät",
+        "title": "Longitudinell prestation – inte en engångspoäng."
+      },
+      "proactiveCare": {
+        "body": "Blodpaneler för longevitetsmarkörer och urinpaneler för allmän hälsa och drogtest. Medarbetarna ser hela sin rapport. Chefer ser bara anonymiserade, aggregerade trender.",
+        "bullet1": "Blod: longevitetsbiomarkörer",
+        "bullet2": "Urin: allmän hälsa och drogtest",
+        "bullet3": "Medarbetarprivata + chefsaggregerade vyer",
+        "bullets": [
+          "Blod: longevitetsbiomarkörer",
+          "Urin: allmän hälsa och drogtest",
+          "Medarbetarprivata + chefsaggregerade vyer"
+        ],
+        "eyebrow": "Förebyggande hälsa",
+        "label": "Proaktiv hälsa",
+        "title": "Biomarkörtester för longevitet, allmän hälsa och drogtest."
+      },
+      "workshops": {
+        "body": "Ledarledda sessioner utformade kring de teman inom kognitiv prestation och longevitet som ger sammansatt effekt. Bokas via samma plattform – resultaten flödar tillbaka in i trenddatan.",
+        "bullet1": "Ledarledda, på plats eller på distans",
+        "bullet2": "Anpassade efter kognitiv vetenskap och longevitetsforskning",
+        "bullet3": "Bokningar, närvaro och uppföljningar på ett ställe",
+        "bullets": [
+          "Ledarledda, på plats eller på distans",
+          "Anpassade efter kognitiv vetenskap och longevitetsforskning",
+          "Bokningar, närvaro och uppföljningar på ett ställe"
+        ],
+        "eyebrow": "Tjänstelager",
+        "label": "Workshops",
+        "title": "Live-hälsoworkshops, på plats eller på distans."
+      }
+    },
+    "visual": {
+      "assessment": {
+        "badge": "Exempelkandidat",
+        "benchmarkNote": "Över rollens benchmark i 4 av 5 kognitiva domäner.",
+        "candidateName": "J. Karlsson",
+        "candidateRole": "Backendutvecklare · Stockholm",
+        "score": {
+          "attention": "Uppmärksamhet",
+          "problemSolving": "Problemlösning",
+          "processingSpeed": "Bearbetningshastighet",
+          "technicalTs": "Tekniskt · TS",
+          "workingMemory": "Arbetsminne"
+        },
+        "strongMatch": "Stark matchning",
+        "url": "app.wellowork.net / assess / candidate"
+      },
+      "growth": {
+        "badge": "Arbetsminne · dag 14",
+        "matchBtn": "Matcha (M)",
+        "nbackLevel": "N-back · nivå 4",
+        "skipBtn": "Hoppa över (Mellanslag)",
+        "streak": "Svit: 14 dagar · Marknadssaldo: 248",
+        "timer": "00:24",
+        "tokensEarned": "+12 tokens intjänade",
+        "url": "app.wellowork.net / train"
+      },
+      "measure": {
+        "badge": "Utvecklingsteam · 6 månader",
+        "cognitivePerformance": "Kognitiv prestation",
+        "metric": {
+          "avgFocus": {
+            "cap": "jämfört med förra kvartalet",
+            "l": "Snittfokus",
+            "v": "+11%"
+          },
+          "memory": {
+            "cap": "rullande 30 dagar",
+            "l": "Minne",
+            "v": "+6%"
+          },
+          "variability": {
+            "cap": "teamnivå",
+            "l": "Variabilitet",
+            "v": "−14%"
+          }
+        },
+        "monthApr": "Apr",
+        "monthDec": "Dec",
+        "monthFeb": "Feb",
+        "monthJan": "Jan",
+        "monthMar": "Mar",
+        "monthMay": "Maj",
+        "smoothed": "Utjämnat veckovis · exempeldata",
+        "sprintAnnotation": "Sprintgenomgång · fokus −8%",
+        "url": "app.wellowork.net / trends"
+      },
+      "proactiveCare": {
+        "anonymised": "Anonymiserat",
+        "badge": "Din vy · privat",
+        "managerView": "Chefsvy · aggregerat",
+        "marker": {
+          "apob": {
+            "l": "ApoB",
+            "tag": "bevaka"
+          },
+          "hba1c": {
+            "l": "HbA1c",
+            "tag": "optimal"
+          },
+          "hscrp": {
+            "l": "hs-CRP",
+            "tag": "bra"
+          },
+          "vitaminD": {
+            "l": "D-vitamin",
+            "tag": "optimal"
+          }
+        },
+        "panelMeta": "Provtagen 12 maj · 11 markörer",
+        "panelTitle": "Blodpanel · longevitet",
+        "privacyChip": "Bara du kan se detta",
+        "reportsCompleted": "rapporter slutförda denna cykel",
+        "team": "Utveckling · 14 medlemmar",
+        "trendsNote": "Individuella värden visas aldrig – endast trender.",
+        "url": "app.wellowork.net / health / report"
+      },
+      "workshops": {
+        "badge": "Maj · kommande",
+        "booked": "14 bokade",
+        "day": {
+          "fri": "FRE",
+          "thu": "TOR",
+          "tue": "TIS",
+          "wed": "ONS"
+        },
+        "url": "app.wellowork.net / workshops",
+        "w1": {
+          "title": "Sömnarkitektur och återhämtning",
+          "when": "10:00 · Distans · 60 min"
+        },
+        "w2": {
+          "title": "Kost för kognitiv prestation",
+          "when": "13:00 · På plats · 90 min"
+        },
+        "w3": {
+          "title": "Stress, fokus och kognitiv belastning",
+          "when": "15:30 · Distans · 60 min"
+        },
+        "w4": {
+          "title": "Longevitet och metabol hälsa – grunderna",
+          "when": "11:00 · På plats · 90 min"
+        }
+      }
+    }
+  },
+  "platformTabsMock": {
+    "assessment": {
+      "badge": "Exempelkandidat",
+      "match": "Stark matchning",
+      "name": "J. Karlsson",
+      "note": "Över rollens riktmärke i 4 av 5 kognitiva domäner.",
+      "role": "Backend-utvecklare · Stockholm",
+      "score": {
+        "attention": "Uppmärksamhet",
+        "problemSolving": "Problemlösning",
+        "processingSpeed": "Bearbetningshastighet",
+        "technical": "Teknik · TS",
+        "workingMemory": "Arbetsminne"
+      },
+      "url": "app.wellowork.net / assess / candidate"
+    },
+    "growth": {
+      "badge": "Arbetsminne · dag 14",
+      "btnMatch": "Matcha (M)",
+      "btnSkip": "Hoppa över (mellanslag)",
+      "exercise": "N-back · nivå 4",
+      "streak": "Svit: 14 dagar · Marknadssaldo: 248",
+      "timer": "00:24",
+      "tokens": "+12 tokens intjänade",
+      "url": "app.wellowork.net / train"
+    },
+    "measure": {
+      "annotation": "Sprintgenomgång · fokus −8 %",
+      "axis": {
+        "apr": "Apr",
+        "dec": "Dec",
+        "feb": "Feb",
+        "jan": "Jan",
+        "mar": "Mar",
+        "may": "Maj"
+      },
+      "badge": "Utvecklingsteam · 6 månader",
+      "stat": {
+        "focus": {
+          "cap": "jämfört med förra kvartalet",
+          "label": "Snittfokus",
+          "value": "+11 %"
+        },
+        "memory": {
+          "cap": "rullande 30 dagar",
+          "label": "Minne",
+          "value": "+6 %"
+        },
+        "variability": {
+          "cap": "på teamnivå",
+          "label": "Variation",
+          "value": "−14 %"
+        }
+      },
+      "subtitle": "Utjämnat per vecka · exempeldata",
+      "title": "Kognitiv prestation",
+      "url": "app.wellowork.net / trends"
+    },
+    "proactiveCare": {
+      "anonymised": "Anonymiserad",
+      "badge": "Din vy · privat",
+      "footnote": "Individuella värden visas aldrig — bara trender.",
+      "managerView": "Chefsvy · aggregerad",
+      "marker": {
+        "apob": {
+          "tag": "övervaka"
+        },
+        "hba1c": {
+          "tag": "optimalt"
+        },
+        "hscrp": {
+          "tag": "bra"
+        },
+        "vitd": {
+          "tag": "optimalt"
+        }
+      },
+      "panelSub": "Taget 12 maj · 11 markörer",
+      "panelTitle": "Blodpanel · livslängd",
+      "privacyChip": "Bara du kan se detta",
+      "reports": "rapporter slutförda denna cykel",
+      "team": "Utveckling · 14 medlemmar",
+      "url": "app.wellowork.net / health / report"
+    },
+    "workshops": [
+      {
+        "day": "TIS",
+        "title": "Sömnarkitektur och återhämtning",
+        "when": "10:00 · På distans · 60 min"
+      },
+      {
+        "day": "ONS",
+        "title": "Kost för kognitiv prestation",
+        "when": "13:00 · På plats · 90 min"
+      },
+      {
+        "day": "TOR",
+        "title": "Stress, fokus och kognitiv belastning",
+        "when": "15:30 · På distans · 60 min"
+      },
+      {
+        "day": "FRE",
+        "title": "Grunderna i livslängd och metabol hälsa",
+        "when": "11:00 · På plats · 90 min"
+      }
+    ]
+  },
+  "platformWorkshops": {
+    "answer": {
+      "body": "Det är livesessioner ledda av en facilitator för medarbetare – på plats eller på distans – som tar upp sömnens arkitektur, kost för kognitiv prestation, stress och fokus samt grunderna i livslängd. Bokningar, närvaro och uppföljningar sker i samma plattform som driver den dagliga träningen och prestationstrenderna.",
+      "label": "Vad är WelloWork-workshops?"
+    },
+    "bookingCard": {
+      "bookButton": "Boka session",
+      "enrolled": "+12 anmälda",
+      "eyebrow": "Workshop",
+      "pickSession": "Välj en session",
+      "sample": "Exempel",
+      "slot1": {
+        "date": "Tors · 4 jun",
+        "tag": "På plats · Stockholm",
+        "time": "09:30 CET"
+      },
+      "slot2": {
+        "date": "Tis · 9 jun",
+        "tag": "Distans · Zoom",
+        "time": "14:00 CET"
+      },
+      "slotOpen": "Öppen",
+      "slotSelected": "Vald",
+      "title": "Sömnens arkitektur och återhämtning"
+    },
+    "cadenceCompare": {
+      "monthJul": "Jul",
+      "monthMay": "Maj",
+      "monthNov": "Nov",
+      "monthSep": "Sep",
+      "oneOffLabel": "Engångsföreläsare",
+      "oneOffSub": "Bortglömt till på tisdag",
+      "welloWorkLabel": "WelloWork-workshop",
+      "welloWorkSub": "Bygger på över tid"
+    },
+    "cadenceSection": {
+      "body": "Innehållet från en engångsföreläsare bygger inte vidare. Workshops här schemaläggs i en kadens som matchar varje kunds pilot, med närvaro och uppföljningsåtgärder fångade tillbaka i plattformen. En workshop om sömn i maj kopplar framåt till en återhämtningsflaggad svacka i juli – inte ett vagt minne från en tisdagseftermiddag.",
+      "heading": "Hur skiljer sig detta från en engångsföreläsare?"
+    },
+    "crumbs": {
+      "current": "Workshops",
+      "home": "Hem",
+      "platform": "Plattform"
+    },
+    "cta": {
+      "body": "Volymerna för workshops och biomarkörtester bekräftas i ett avgränsningssamtal. Ta med ditt antal anställda och era förutsättningar – vi tar med alternativen.",
+      "primary": "Boka ett avgränsningssamtal",
+      "secondary": "Prata med försäljning",
+      "title": "Avgränsa ett workshopsuppdrag."
+    },
+    "deliverySection": {
+      "body": "Båda. De flesta piloter kör en mix – på plats för Norden, på distans för utspridda team på annat håll. Facilitatorer granskas årligen och är i linje med plattformens bredare metodik.",
+      "heading": "På plats eller på distans?"
+    },
+    "deliveryToggle": {
+      "onSite": "På plats",
+      "remote": "Distans",
+      "whereWeRun": "Där vi genomför"
+    },
+    "features": {
+      "aligned": {
+        "body": "Läroplanen är i linje med samma konstruktramverk som driver WelloRise och Mät – inte en separat världsbild.",
+        "title": "Kognitivt och livslängdsanpassat"
+      },
+      "bookings": {
+        "body": "Medarbetare bokar via samma WelloWork-app som driver träning och trender – ingen separat leverantörsportal.",
+        "title": "Bokningar i plattformen"
+      },
+      "eyebrow": "Vad som ingår",
+      "facilitator": {
+        "body": "Livesessioner ledda av utbildade facilitatorer, med strukturerad frågestund och korta uppföljningsflöden.",
+        "title": "Faciliterat"
+      },
+      "outcomes": {
+        "body": "Närvaro och uppföljningar från workshops annoteras på prestationstrenden, så att svackor och uppgångar inte läses som brus.",
+        "title": "Resultat matar trenderna"
+      },
+      "privacy": {
+        "body": "Enskilda medarbetares närvaro visas aldrig för chefer – endast aggregerad och anonymiserad andel per team.",
+        "title": "Integritetsrespekterande"
+      },
+      "title": "Vad ingår i ett workshopsuppdrag?",
+      "tracking": {
+        "body": "Aggregerad närvaro och uppföljningsgrad matar rapporteringen Service Engagement för HR och Operations.",
+        "title": "Spårning av närvaro och uppföljning"
+      }
+    },
+    "hero": {
+      "eyebrow": "Workshops",
+      "lede": "Faciliterade sessioner om de teman inom kognitiv prestation och livslängd som bygger på över tid – sömn, kost, återhämtning, fokus. Bokade i plattformen; resultaten flödar tillbaka in i prestationstrenderna.",
+      "titleAccent": "distans.",
+      "titleLead": "Live-hälsoworkshops, på plats eller på"
+    },
+    "mapBlob": {
+      "distributed": "UTSPRIDDA",
+      "nordics": "NORDEN"
+    },
+    "meta": {
+      "description": "Faciliterade workshops om sömn, återhämtning, kost, fokus och livslängd. På plats eller på distans, bokningsbara i WelloWork, med resultat som matas tillbaka in i prestationstrenderna.",
+      "title": "Workshops — live-hälsoworkshops, på plats eller på distans | WelloWork"
+    },
+    "scoping": {
+      "step1": {
+        "body": "Antal anställda, platser, språk, förutsättningar.",
+        "title": "Avgränsningssamtal"
+      },
+      "step2": {
+        "body": "Ämne och kadens i linje med rätt ledare.",
+        "title": "Facilitator matchad"
+      },
+      "step3": {
+        "body": "Bokningsbar i plattformen; uppföljningar kopplade till trender.",
+        "title": "Sessioner schemalagda"
+      }
+    },
+    "scopingSection": {
+      "body": "Workshops avgränsas per uppdrag – facilitatorns tillgänglighet, plats, språk och uppföljningskadens bekräftas i ett avgränsningssamtal. De ingår i nivån Platform + Services tillsammans med biomarkörtester.",
+      "heading": "Avgränsning"
+    },
+    "topics": {
+      "cognitiveLoad": {
+        "body": "Stress, uppmärksamhet och arbetsminnets gränser.",
+        "title": "Kognitiv belastning"
+      },
+      "longevity": {
+        "body": "Metabol hälsa för den långa bågen, inte kvartalet.",
+        "title": "Grunder i livslängd"
+      },
+      "movement": {
+        "body": "Återhämtningsrutiner för skärmtunga roller.",
+        "title": "Rörelse för stillasittande"
+      },
+      "nutrition": {
+        "body": "Bränsle för kognitiv prestation genom hela dagen.",
+        "title": "Kost för fokus"
+      },
+      "sleep": {
+        "body": "Stadier, återhämtning och hur du skyddar djupsömnen.",
+        "title": "Sömnens arkitektur"
+      }
+    },
+    "topicsSection": {
+      "heading": "Vilka workshops finns tillgängliga?"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Priser",
+    "featuredBadge": "De flesta team börjar här",
+    "heading": {
+      "accent": "Båda anpassade till er pilot.",
+      "lead": "Två sätt att börja. "
+    },
+    "lede": "Vi prissätter utifrån pilotens storlek och fas — fullständiga siffror får ni i samtalet.",
+    "plans": {
+      "platform": {
+        "cta": "Prata med säljteamet",
+        "desc": "SaaS-åtkomst per anställd till WelloRise och WelloWize.",
+        "features": [
+          "Daglig kognitiv träning (WelloRise)",
+          "Rekryterings- och internbedömningar (WelloWize)",
+          "Chefsdashboards och trendanalys",
+          "GDPR-anpassad datalagring"
+        ],
+        "name": "Plattform",
+        "price": "€12",
+        "unit": "per anställd · per månad"
+      },
+      "platformServices": {
+        "cta": "Boka ett kartläggningssamtal",
+        "desc": "Lägger till workshops och biomarkörtester per uppdrag.",
+        "features": [
+          "Allt i Plattform",
+          "Live-hälsoworkshops, på plats eller på distans",
+          "Blod- (longevity) och urinprovstester",
+          "Dedikerad CSM och rapportmallar"
+        ],
+        "name": "Plattform + Tjänster",
+        "note": "Volymerna för workshops och biomarkörtester kartläggs per uppdrag och bekräftas i samtalet.",
+        "price": "från €28",
+        "unit": "per anställd · per månad · plattform + tjänster per uppdrag"
+      }
+    }
+  },
+  "problem": {
+    "eyebrow": "Glappet",
+    "heading": {
+      "accent": "Vi mäter prestation.",
+      "lead": "Wellnessplattformar mäter engagemang. "
+    },
+    "items": [
+      {
+        "body": "Nöjdhetsundersökningar mäter hur människor känner inför arbetet. De mäter inte hur arbetet förändrar dem.",
+        "title": "Engagemangspoäng förutsäger inte vem som är på väg att bränna ut sig."
+      },
+      {
+        "body": "Sömnarkitektur, glukosvariabilitet, inflammation — det som i det tysta böjer den kognitiva kurvan når aldrig fram till HR-datan.",
+        "title": "Årliga hälsokontroller missar de biomarkörer som driver kognitiv prestation."
+      },
+      {
+        "body": "Mellan dessa två ytterligheter finns ingen longitudinell bild av hur de människor ni anställt faktiskt presterar.",
+        "title": "Rekryteringsbedömningar slutar vid anställningsavtalet — och HR-undersökningar slutar vid arbetsmoralen."
+      }
+    ],
+    "lede": "Tre saker som varje operativ ledare redan vet om sin persondata — men som inget verktyg faktiskt åtgärdar."
+  },
+  "researchCognitiveConstructs": {
+    "answer": {
+      "body": "Fem: arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet. Var och en knyts till ett etablerat kognitionsvetenskapligt paradigm — N-back, symbolsubstitution, Posner-baserad uppmärksamhet, Raven-resonemang och uppgiftsväxling — anpassat för korta, dagliga pass i en arbetsplatsplattform.",
+      "label": "Vilka kognitiva konstrukt mäter WelloWork?"
+    },
+    "att": {
+      "body": "Uppmärksamhet spänner över flera delkonstrukt: ihållande, selektiv, alerting, orienterande, exekutiv. Vi fokuserar på ihållande uppmärksamhet (vaksamhet under en kontinuerlig uppgift) och selektiv uppmärksamhet (att filtrera bort distraktorer) via Posner-baserade cueing-paradigm, anpassade för pass inom plattformen.",
+      "heading": "Vad är uppmärksamhet och hur mäter vi den?"
+    },
+    "crumbs": {
+      "current": "Kognitiva konstrukt",
+      "home": "Hem",
+      "research": "Forskning"
+    },
+    "cta": {
+      "body": "Demon innehåller en jämförelse sida vid sida av en exempelmedarbetares adaptiva pass och var det resultatet hamnar i teamets aggregat.",
+      "primary": "Boka en demo",
+      "secondary": "Översikt av metodiken",
+      "title": "Se konstrukten i dashboarden."
+    },
+    "domainGrid": {
+      "aria": "Kognitiva domäner som mäts",
+      "att": {
+        "descriptor": "Filtrerar brus",
+        "label": "Uppmärksamhet"
+      },
+      "flex": {
+        "descriptor": "Anpassar regeluppsättningar",
+        "label": "Kognitiv flexibilitet"
+      },
+      "long": {
+        "descriptor": "Mönster över veckor",
+        "label": "Longitudinellt index"
+      },
+      "prob": {
+        "descriptor": "Resonerar under begränsning",
+        "label": "Problemlösning"
+      },
+      "ps": {
+        "descriptor": "Reagerar utan trötthet",
+        "label": "Bearbetningshastighet"
+      },
+      "wm": {
+        "descriptor": "Håller kontext under belastning",
+        "label": "Arbetsminne"
+      }
+    },
+    "exclude": {
+      "gamified": {
+        "label": "Spelifierade prestationspoäng",
+        "why": "Förbättringar i spel överförs sällan. Vi mäter beteende, inte poäng."
+      },
+      "headLeft": "Vad vi utesluter",
+      "headRight": "Varför",
+      "mood": {
+        "label": "Sinnesstämning och känslor",
+        "why": "Hålls privat av medarbetaren som valfri kontext. Chefer ser den aldrig."
+      },
+      "personality": {
+        "label": "Personlighetsdrag",
+        "why": "Personlighetsbedömning är en egen disciplin med egna krav på stringens — och obekväm på jobbet."
+      }
+    },
+    "excludeSection": {
+      "body": "Vi väljer medvetet att inte bedöma personlighet, sinnesstämning eller känslor via det kognitiva testbatteriet. Personlighetsbedömning är en egen disciplin med egna krav på stringens; vi har inget användbart att tillföra där och är under alla omständigheter försiktiga med dess användning på arbetsplatsen. Sinnesstämning fångas av medarbetarna själva som valfri kontext för deras egen trendvy; chefer ser den inte.",
+      "heading": "Hur är det med konstrukt vi inte mäter?"
+    },
+    "flex": {
+      "body": "Förmågan att växla mellan regeluppsättningar och kontexter. Operationaliseras genom uppgiftsväxlingsdesigner (efter Monsell, 2003 och den bredare litteraturen om exekutiva funktioner), där minskningen av växlingskostnad följs över tid som en signal på flexibilitet under lågriskförhållanden.",
+      "heading": "Vad är kognitiv flexibilitet och hur mäter vi den?"
+    },
+    "gamesPanel": {
+      "gameBadge": "Begränsning",
+      "gameMatch": "Matcha mönstret",
+      "gameNote": "Blir bättre på spelet. Överföring till verkligt arbete: begränsad.",
+      "gameRound": "Runda 4",
+      "gameScore": "Poäng 1 240",
+      "gameTap": "Tryck",
+      "gameTitle": "Standardspel för kognition",
+      "optionA": "Ta den första biljetten och dirigera om resten senare.",
+      "optionB": "Läs reglerna igen; välj den kö som passar dagens belastning.",
+      "optionC": "Eskalera till teamledaren och vänta.",
+      "scenarioBadge": "Ekologiskt valid",
+      "scenarioNote": "Fångar hur du faktiskt resonerar och beslutar. Byggd utifrån fältobservationer.",
+      "scenarioPrompt": "Två incidentköer har just ändrat prioriteringsregler. Nästa ärende du tar emot avgör din kö resten av passet.",
+      "scenarioStep": "Steg 2 av 3",
+      "scenarioTag": "Drift · eskalering",
+      "scenarioTitle": "WelloWork-scenario"
+    },
+    "gamesSection": {
+      "bridge": "Forskning visar konsekvent att människor blir bättre på kognitiva spel — inte på komplexa uppgifter i verkligheten. WelloWork-scenarier är grundade i beteendebaserat fältarbete, inte spelifierade proxyer.",
+      "heading": "Varför inte bara använda kognitiva spel?"
+    },
+    "hero": {
+      "eyebrow": "Kognitiva konstrukt",
+      "lede": "Konstrukten bakom WelloRise och WelloWize — var och en med det paradigm vi använder, vad litteraturen fastställer och de operationella förbehåll vi håller oss till.",
+      "titleAccent": "lång litteratur.",
+      "titleLead": "Fem domäner, var och en med en"
+    },
+    "meta": {
+      "description": "Arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — varje domän, litteraturen bakom den och hur WelloWork operationaliserar den.",
+      "title": "Kognitiva konstrukt — de fem domäner WelloWork mäter"
+    },
+    "methodBanner": {
+      "adaptive": {
+        "body": "Varje pass justeras i realtid efter din aktuella prestationsnivå.",
+        "title": "Adaptiv svårighetsgrad"
+      },
+      "daily": {
+        "body": "Utformade för arbetsplatsens rytm — inte laboratorieförhållanden.",
+        "title": "Korta dagliga pass"
+      },
+      "long": {
+        "body": "Mönster över tid betyder mer än något enskilt resultat.",
+        "title": "Longitudinell signal"
+      }
+    },
+    "pillStrip": {
+      "aria": "Fem kognitiva domäner",
+      "att": "Uppmärksamhet",
+      "flex": "Kognitiv flexibilitet",
+      "prob": "Problemlösning",
+      "ps": "Bearbetningshastighet",
+      "wm": "Arbetsminne"
+    },
+    "prob": {
+      "body": "Icke-verbalt resonemang under begränsningar. Vi använder Raven-liknande progressiva matriser och problem av Tower of Hanoi-typ, med explicit registrering av tid på uppgift. Problemlösning är det konstrukt som mest påverkas av domänkunskap, vilket är skälet till att vi redovisar det tillsammans med de rollspecifika tekniska screeningarna i WelloWize.",
+      "heading": "Vad är problemlösning och hur mäter vi den?"
+    },
+    "ps": {
+      "body": "Bearbetningshastighet mäter hur snabbt enkla kognitiva operationer kan utföras. Vi använder uppgifter av symbolsubstitutionstyp (ett paradigm med lång historia inom kognitiv bedömning) och korta valreaktionsdesigner. Bearbetningshastighet är märkbart känslig för sömnbrist och akut trötthet, vilket är en del av varför den är användbar i ett arbetsplatssammanhang.",
+      "heading": "Vad är bearbetningshastighet och hur mäter vi den?"
+    },
+    "scenarioCard": {
+      "att": {
+        "paradigm": "Posner-cueing",
+        "scenario": "Övervaka en driftdashboard med sex kanaler i tjugo minuter. Lyft fram genuin avvikelse; ignorera rutinmässigt brus."
+      },
+      "exampleLabel": "Exempelscenario",
+      "flex": {
+        "paradigm": "Uppgiftsväxling",
+        "scenario": "Växla mellan tre eskaleringsköer med olika regler. Tillämpa rätt regel före fel reflex."
+      },
+      "footer": "Signalmönster fångas per pass",
+      "prob": {
+        "paradigm": "Raven-matriser",
+        "scenario": "En återkommande schemakonflikt spänner över tre team och två begränsningar. Identifiera den lösbara axeln först."
+      },
+      "ps": {
+        "paradigm": "Symbolsubstitution",
+        "scenario": "Flagga avvikelser i ett liveflöde från driften innan nästa statusrapport går ut."
+      },
+      "wm": {
+        "paradigm": "N-back",
+        "scenario": "Granska sex leverantörsofferter. Återkalla nyckeltal medan du jämför de två sista mot den första."
+      }
+    },
+    "signalTrace": {
+      "att": {
+        "falseAlarms": "Falska larm",
+        "hits": "Träffar"
+      },
+      "flex": {
+        "sessions": "pass →",
+        "switchCost": "växlingskostnad"
+      },
+      "prob": {
+        "timeOnTask": "tid på uppgift",
+        "trials": "försök →"
+      },
+      "ps": {
+        "freq": "frekvens",
+        "reactionTime": "reaktionstid →"
+      },
+      "wm": {
+        "accuracy": "träffsäkerhet",
+        "difficulty": "svårighetsgrad →"
+      }
+    },
+    "wm": {
+      "body": "Arbetsminne är förmågan att hålla och bearbeta information i medvetandet. Vi operationaliserar det genom N-back-uppgifter (efter Baddeley och den bredare span-litteraturen) med adaptiv svårighetsgrad per pass. Arbetsminne är ett av de mest prediktiva kognitiva konstrukten för akademisk prestation och prestation i komplexa uppgifter i den publicerade litteraturen, även om överföringen till utfall på jobbnivå är mer domänspecifik.",
+      "heading": "Vad är arbetsminne och hur mäter vi det?"
+    }
+  },
+  "researchIndex": {
+    "answer": {
+      "body": "WelloWorks träning och bedömningar bygger på fem sedan länge validerade kognitiva konstrukt — arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet. Vi förbinder oss att publicera vår metodik och våra pilotresultat, och vi gör inga kliniska eller diagnostiska påståenden om plattformens biomarkördel.",
+      "label": "Vad är WelloWorks forskningsansats?"
+    },
+    "constructs": {
+      "attention": {
+        "body": "Att upprätthålla fokus på en uppgift och filtrera bort distraktioner. Designer för cuead uppmärksamhet baserade på Posner-liknande paradigm.",
+        "cap": "Uthållig & selektiv · Posner-paradigm",
+        "name": "Uppmärksamhet"
+      },
+      "cognitiveFlexibility": {
+        "body": "Förmågan att växla mellan regeluppsättningar. Uppgiftsväxlingsdesigner, där minskningen av växlingskostnaden följs över tid.",
+        "cap": "Uppgiftsväxlingskostnader · Monsell, 2003",
+        "name": "Kognitiv flexibilitet"
+      },
+      "problemSolving": {
+        "body": "Icke-verbalt resonemang under begränsningar. Anpassade Ravens progressiva matriser och Tower-problem.",
+        "cap": "Tower- & Raven-liknande resonemang",
+        "name": "Problemlösning"
+      },
+      "processingSpeed": {
+        "body": "Hur snabbt enkla kognitiva operationer kan utföras. Symbolsubstitutionsparadigm; känsliga för sömn och trötthet.",
+        "cap": "Symbolsubstitution · Wechsler, klassisk",
+        "name": "Bearbetningshastighet"
+      },
+      "workingMemory": {
+        "body": "Förmågan att hålla kvar och bearbeta information i minnet. Operationaliseras via N-back- och spannuppgifter med adaptiv svårighetsgrad.",
+        "cap": "N-back, spannuppgifter · Baddeley, 1992",
+        "name": "Arbetsminne"
+      }
+    },
+    "constructsSection": {
+      "heading": "Vilka kognitiva konstrukt mäter WelloWork?"
+    },
+    "crumbs": {
+      "current": "Forskning",
+      "home": "Hem"
+    },
+    "cta": {
+      "body": "Ta med ert antal anställda och era förutsättningar — vi går igenom metodiken och integritetsmodellen i samma samtal.",
+      "primary": "Boka en demo",
+      "secondary": "Översikt av metodiken",
+      "title": "Vill du se detta på verklig pilotdata?"
+    },
+    "hero": {
+      "eyebrow": "Forskning & evidens",
+      "lede": "Varje kognitiv övning på plattformen kopplas till ett konstrukt med en lång litteratur — inte ett internt mått som vi hittat på. Vi publicerar metodik i takt med att vi genererar pilotdata.",
+      "titleAccent": "fältet redan validerar.",
+      "titleLead": "Byggd på konstrukt som"
+    },
+    "meta": {
+      "description": "WelloWorks kognitiva träning och bedömningar bygger på validerade konstrukt: arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet.",
+      "title": "Forskning & metodik — de kognitiva konstrukten bakom WelloWork"
+    },
+    "subpages": {
+      "constructs": {
+        "body": "Vart och ett av de fem domänerna i detalj — vad de mäter, vad litteraturen säger och hur WelloWork operationaliserar dem.",
+        "title": "Kognitiva konstrukt"
+      },
+      "methodology": {
+        "body": "Hur övningar kopplas till konstrukt, och vårt åtagande att publicera metodik i takt med att pilotdata genereras.",
+        "title": "Översikt av metodiken"
+      },
+      "scienceInsight": {
+        "body": "Anteckningar, sammanställningar och metodiska observationer från WelloWorks forskningsteam.",
+        "title": "Vetenskap & insikt"
+      }
+    },
+    "subpagesSection": {
+      "heading": "Var kan jag läsa mer?"
+    }
+  },
+  "researchMethodology": {
+    "aggregations": {
+      "heading": "Hur görs aggregeringarna?"
+    },
+    "aggrGrid": {
+      "levelVariability": {
+        "body": "Redovisas separat — de svarar på olika frågor.",
+        "title": "Nivå kontra variabilitet"
+      },
+      "minTeamSize": {
+        "body": "Aggregat visas endast när teamtröskeln är uppnådd.",
+        "title": "Minsta teamstorlek tillämpas"
+      },
+      "weeklySmoothing": {
+        "body": "Enstaka dagars toppar styr inte chefens uppmärksamhet.",
+        "title": "Veckovis utjämning"
+      },
+      "workEvents": {
+        "body": "Sprintgenomgångar, releaser och jourperioder taggas automatiskt.",
+        "title": "Annoteringar av arbetshändelser"
+      }
+    },
+    "answer": {
+      "body": "WelloWork mäter kognitiv prestation via korta adaptiva uppgifter kopplade till fem validerade konstrukt — arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet. Poäng per session normaliseras mot en baslinje per medarbetare och aggregeras till trender på teamnivå med tillämpning av minsta teamstorlek. Vi gör inga kliniska eller diagnostiska påståenden om biomarkörrapporter.",
+      "label": "Vad är WelloWork-metodiken, i ett stycke?"
+    },
+    "bellCurve": {
+      "population": "population",
+      "youVsOthers": "du jämfört med andra"
+    },
+    "claims": {
+      "outOfScope": {
+        "businessOutcomes": "Överföring till specifika affärsresultat",
+        "clinical": "Kliniskt eller diagnostiskt värde",
+        "ranking": "Tillförlitlig individuell rangordning från korta uppgifter",
+        "selfInvented": "Självpåhittade mätvärden"
+      },
+      "outOfScopeBadge": "Utanför omfattning",
+      "outOfScopeTitle": "Vad vi inte påstår",
+      "supported": {
+        "signals": "Konstruktkopplade beteendesignaler",
+        "teamPatterns": "Mönster på teamnivå",
+        "trends": "Kognitiva trender över tid",
+        "variance": "Variation inom person"
+      },
+      "supportedBadge": "Stöds",
+      "supportedTitle": "Vad vi mäter"
+    },
+    "closingBanner": {
+      "adaptive": {
+        "body": "Varje session kalibreras i realtid mot din aktuella prestationsnivå.",
+        "title": "Adaptiv svårighetsgrad"
+      },
+      "signal": {
+        "body": "Mönster över veckor betyder mer än någon enskild sessionspoäng.",
+        "title": "Signal över tid"
+      },
+      "workplace": {
+        "body": "Korta dagliga sessioner. Inga laboratorieförhållanden krävs.",
+        "title": "Utformad för arbetsplatsens rytm"
+      }
+    },
+    "crumbs": {
+      "current": "Metodik",
+      "home": "Hem",
+      "research": "Forskning"
+    },
+    "cta": {
+      "body": "En demo inkluderar en lucka på 5–10 minuter för att gå på djupet med hur en specifik övning kopplas till ett konstrukt, och hur poängen landar i chefsvyn.",
+      "primary": "Boka en demo",
+      "secondary": "Tillbaka till forskning",
+      "title": "Vill du få metodiken genomgången live?"
+    },
+    "hero": {
+      "eyebrow": "Metodik",
+      "lede": "En kort genomgång av konstruktkopplingen, poängsättningen, aggregeringen och integritetshållningen bakom WelloWork-plattformen. Vi publicerar metodiken i takt med att vi genererar pilotdata.",
+      "titleAccent": "och vad vi inte påstår.",
+      "titleLead": "Hur vi mäter kognitiv prestation —"
+    },
+    "mapping": {
+      "body": "Varje uppgift på plattformen kopplas till ett primärt konstrukt och högst ett sekundärt konstrukt. Den primära kopplingen styr poängsättningen; den sekundära kopplingen registreras för metodikrevision men bidrar inte till det huvudsakliga mätvärdet. Vi använder etablerade paradigm — N-back, span-uppgifter, symbolsubstitution, Posner-cueing, Raven-liknande resonemang, uppgiftsväxling — anpassade för korta sessioner på plattformen.",
+      "heading": "Hur kopplas övningar till konstrukt?"
+    },
+    "mappingCard": {
+      "colConstruct": "Primärt konstrukt",
+      "colTask": "Uppgift",
+      "footnote": "Varje uppgift kopplas till ett primärt konstrukt. Sekundära signaler registreras men styr inte poängen.",
+      "rows": {
+        "sequenceRecall": {
+          "construct": "Arbetsminne",
+          "task": "Sekvensåtergivning"
+        },
+        "symbolSubstitution": {
+          "construct": "Bearbetningshastighet",
+          "task": "Symbolsubstitution"
+        },
+        "targetDetection": {
+          "construct": "Uppmärksamhet",
+          "task": "Måldetektion"
+        }
+      }
+    },
+    "meta": {
+      "description": "Hur WelloWork kopplar övningar till validerade kognitiva konstrukt, poängsätter dem och aggregerar resultaten till longitudinella prestationstrender — med inbyggd integritet.",
+      "title": "Metodiköversikt — hur WelloWork mäter kognitiv prestation"
+    },
+    "normCard": {
+      "caption": "Vi jämför inte medarbetare med varandra. Vi följer varje person mot dennes egna etablerade baslinje.",
+      "populationBadge": "Används inte",
+      "populationNote": "Att jämföra en medarbetare mot en fördelning bland kollegor. Brusigt på individnivå — och obekvämt på arbetsplatsen.",
+      "populationTitle": "Populationsrangordning",
+      "withinPersonBadge": "WelloWork-ansatsen",
+      "withinPersonNote": "Varje session poängsätts mot medarbetarens egen löpande baslinje från de senaste 90 dagarna.",
+      "withinPersonTitle": "Baslinje inom person"
+    },
+    "notClaim": {
+      "body": "Vi påstår inte att kognitiv träning överförs till specifika affärsresultat (intäkter, produktivitet). Vi påstår inte att biomarkörrapporter har kliniskt eller diagnostiskt värde. Vi påstår inte att individuell rangordning av medarbetare är tillförlitlig från korta adaptiva uppgifter — endast att trender är det. Och vi hittar inte på mätvärden: varje påstående knyts tillbaka till ett publicerat konstrukt eller till en metodiknotis som vi kommer att publicera under /research.",
+      "heading": "Vad väljer vi medvetet att inte påstå?"
+    },
+    "pipeline": {
+      "adaptive": {
+        "label": "Adaptiv uppgift",
+        "subtitle": "Svårighetsgraden kalibreras per session"
+      },
+      "aggregate": {
+        "label": "Aggregat på teamnivå",
+        "subtitle": "Tröskelstyrt, veckovis utjämnat"
+      },
+      "aria": "WelloWork mätpipeline",
+      "badge": "Inga kliniska påståenden. Ingen populationsrangordning.",
+      "baseline": {
+        "label": "Baslinjenormalisering per medarbetare",
+        "subtitle": "Jämfört med din egen trend"
+      },
+      "mapping": {
+        "label": "Konstruktkoppling",
+        "subtitle": "Ett primärt kognitivt konstrukt"
+      }
+    },
+    "privacy": {
+      "body": "Metodik och integritet hänger ihop. Plattformens val att normalisera inom en medarbetare, inte mot en population, är också det som gör det svårare att \"avanonymisera\" ett aggregat.",
+      "heading": "Integritet i metodiken"
+    },
+    "privacyGrid": {
+      "caption": "Samma metodiska val som gör vår mätning träffsäker gör också avanonymisering strukturellt svårare.",
+      "subThreshold": {
+        "body": "Aggregat från små kohorter kan reverse-engineeras till en enskild medarbetare. Vi undertrycker dem vid källan.",
+        "title": "Varför vi inte publicerar aggregat under tröskeln"
+      },
+      "withinPerson": {
+        "body": "En individuell baslinje bär ingen information om kollegor — det finns ingen fördelning bland kollegor att räkna bakåt mot.",
+        "title": "Varför normalisering inom person skyddar integriteten"
+      }
+    },
+    "publish": {
+      "body": "Metodiknotiser kommer att publiceras under /research/science-insight i takt med att pilotkohorter producerar tillräckligt med data för att skriva något försvarbart. Vi kommer inte att publicera enskilda kunddata, och vi kommer inte att publicera aggregat som inte uppfyller vår tröskel för minsta teamstorlek.",
+      "heading": "Hur publicerar vi uppdateringar?"
+    },
+    "scenariosPanel": {
+      "gameBadge": "Problem med speltransfer",
+      "gameLevel": "Nivå 6",
+      "gameMatch": "Matcha sekvensen",
+      "gameNote": "Metaanalyser visar genomgående att människor blir bättre på spelet. Överföring till verklig komplexitet på arbetsplatsen: minimal.",
+      "gameStreak": "Svit ×4",
+      "gameTap": "Tryck",
+      "gameTitle": "Standardiserat kognitivt spel",
+      "optionA": "Förslag 1 och 2 — båda hänvisar till brytdatumet för Q3.",
+      "optionB": "Förslag 1 och 3 — överlappande leveransfönster och gemensamt lager.",
+      "optionC": "Förslag 2 och 3 — olika regioner, ingen överlappning.",
+      "scenarioBadge": "Ekologiskt valid",
+      "scenarioNote": "Byggd på fältobservationer av hur människor faktiskt resonerar på arbetet. Ingen approximation. Inget spel.",
+      "scenarioPrompt": "Du granskar tre leverantörsförslag som lämnats in med tjugo minuters mellanrum. Vilka två står i konflikt om leveranstidslinjen?",
+      "scenarioStep": "Steg 1 av 2",
+      "scenarioTag": "Inköp · granskning",
+      "scenarioTitle": "WelloWork beteendescenario"
+    },
+    "scenariosSection": {
+      "bridge": "Forskning visar genomgående att människor blir bättre på kognitiva spel — inte på de komplexa beslut som deras arbete faktiskt kräver. WelloWork-scenarier är förankrade i beteendevetenskapligt fältarbete.",
+      "heading": "Varför WelloWork-scenarier — inte kognitiva spel?"
+    },
+    "scoring": {
+      "body": "Prestation per session normaliseras mot medarbetarens egen löpande baslinje (z-poäng inom de senaste 90 dagarna). Detta undviker medvetet att jämföra en medarbetare mot en annan på individnivå, eftersom populationsrelativ poängsättning är känslig för brus som inte spelar någon roll i en arbetsplatskontext.",
+      "heading": "Hur beräknas poängen?"
+    },
+    "timeline": {
+      "aria": "Milstolpar för metodikpublicering",
+      "note": "Vi publicerar när data är försvarbar. Inte tidigare.",
+      "stop1": "Pilotkohortdata insamlad",
+      "stop2": "Metodiknotis utkast + granskad",
+      "stop3": "Publicerad under /research/science-insight"
+    },
+    "withinPerson": {
+      "yourBaseline": "din baslinje",
+      "yourGain": "din förbättring"
+    }
+  },
+  "researchScienceInsight": {
+    "anatomy": {
+      "anno1": "Arbetshypotes kontra etablerat fynd",
+      "anno2": "Primärkällor citerade",
+      "anno3": "Konfidensnivå angiven",
+      "anno4": "Länkar tillbaka till metodiken",
+      "aria": "Anatomin hos en forskningsnotis",
+      "body": "Z-skalning per medarbetare tar bort det mellanindividuella brus som populationsrelativ poängsättning ärver. Överföringskostnaden är mätbar men liten i pilotdata.",
+      "confLabel": "Konfidens",
+      "confValue": "Medel",
+      "footlink": "Länkad från metodöversikten →",
+      "metaNote": "Notis · 2026-Q2",
+      "metaPilot": "Pilotkohort 2",
+      "ref": "Owen et al. (2010); Melby-Lervåg & Hulme (2013); Soveri et al. (2017).",
+      "statusBadge": "Arbetshypotes",
+      "title": "Normalisering inom medarbetare"
+    },
+    "crumbs": {
+      "current": "Vetenskap & insikt",
+      "home": "Hem",
+      "research": "Forskning"
+    },
+    "cta": {
+      "body": "Om du vill att en specifik fråga om litteraturen eller vår metod ska tas upp i en notis här, berätta det via kontaktformuläret — vi läser allt.",
+      "primary": "Kontakta forskningsteamet",
+      "secondary": "Tillbaka till forskning",
+      "title": "Vill du ha svar på en metodfråga?"
+    },
+    "expect": {
+      "body": "Korta, daterade notiser om ett specifikt koncept eller designbeslut. Varje notis namnger sina primärkällor, identifierar var det rör sig om en arbetshypotes kontra ett etablerat fynd och länkar tillbaka till metodöversikten för sammanhang.",
+      "heading": "Vad kan läsare förvänta sig här?"
+    },
+    "fieldPanel": {
+      "gameBadge": "Begränsning",
+      "gameLevel": "Nivå 3",
+      "gameMatch": "Matcha formen",
+      "gameNote": "Deltagarna blir bättre på spelet. Överföring till verklig komplexitet på arbetsplatsen: begränsad. Dussintals metaanalyser bekräftar detta.",
+      "gameScore": "Poäng 820",
+      "gameTap": "Tryck",
+      "gameTitle": "Hur kognitiva spel mäter prestation",
+      "optionA": "Slutlista A — stryk leverantör 2 och 4.",
+      "optionB": "Slutlista B — behåll 1, 3, 5; poängsätt om mot de nya villkoren.",
+      "optionC": "Starta om granskningen med de nya villkoren tillämpade först.",
+      "scenarioBadge": "Fältförankrad",
+      "scenarioNote": "Utformad utifrån fältobservationer av verkliga beslut på arbetsplatsen. Mäter beteendemönster, inte spelskicklighet.",
+      "scenarioPrompt": "Du har granskat 5 leverantörsofferter. Två nya villkor har just kommit in. Vilken ursprunglig slutlista håller fortfarande?",
+      "scenarioStep": "Steg 2 av 3",
+      "scenarioTag": "Inköp · slutlista",
+      "scenarioTitle": "Hur WelloWork mäter prestation"
+    },
+    "fieldSection": {
+      "bridge": "Standardiserade kognitiva testbatterier gör människor bättre på kognitiva testbatterier. Våra scenarier är byggda utifrån hur arbete faktiskt går till — så det vi mäter överförs.",
+      "heading": "Varför fältbaserad forskning förändrar vad vi mäter"
+    },
+    "follow": {
+      "body": "Tills vidare är det enklaste sättet att följa uppdateringar att prenumerera via kontakt — vi lägger inte till någon på en lista utan uttryckligt samtycke, och du kan avsluta prenumerationen när som helst.",
+      "heading": "Så här följer du uppdateringar"
+    },
+    "hero": {
+      "eyebrow": "Vetenskap & insikt",
+      "lede": "Ett arbetsutrymme för metodnotiser, litteraturöversikter och observationer från pilotkohorter. Vi publicerar pågående arbete med förbehåll, inte färdiga påståenden.",
+      "titleAccent": "forskningsteam.",
+      "titleLead": "Notiser från WelloWorks"
+    },
+    "meta": {
+      "description": "Arbetsnotiser från WelloWorks forskningsteam om kognitiva koncept, biomarkörmetodik, prestationssignaler på arbetsplatsen och var litteraturen står och inte står.",
+      "title": "Vetenskap & insikt — metodnotiser från WelloWork-forskning"
+    },
+    "notebook": {
+      "aria": "Exempel på en pågående forskningsnotis",
+      "confidenceKey": "Konfidens",
+      "confidenceVal": "Låg–Medel",
+      "constructKey": "Koncept",
+      "constructVal": "N-back-överföring",
+      "eyebrow": "Forskningsnotis",
+      "lastUpdated": "Senast uppdaterad",
+      "lastUpdatedVal": "Pilotkohort 2 · Replikering väntar",
+      "meterAria": "Konfidens ~35 %",
+      "meterLabel": "Konfidens",
+      "meterValue": "35 %",
+      "status": "Pågående arbete",
+      "statusKey": "Status",
+      "statusVal": "Hypotes"
+    },
+    "notThis": {
+      "body": "Detta är varken en marknadsföringsblogg eller en peer review-granskad publikation. Det är mellanskiktet där vi håller oss själva ärliga offentligt.",
+      "heading": "Vad detta inte är"
+    },
+    "pipelineStrip": {
+      "aria": "Kommande forskningsnotiser",
+      "note1": {
+        "status": "Kommer först",
+        "tag": "Poängsättningsmetodik",
+        "title": "Normalisering inom medarbetare"
+      },
+      "note2": {
+        "status": "Inkluderar nollresultat",
+        "tag": "Begreppsvaliditet",
+        "title": "N-back-överföringseffekter"
+      },
+      "note3": {
+        "status": "Tillämpad",
+        "tag": "Aggregeringsdesign",
+        "title": "Tröskelvärden för minsta teamstorlek"
+      },
+      "note4": {
+        "status": "Designsvar inkluderat",
+        "tag": "Pilotobservation",
+        "title": "Bortfall i sessionsfrekvens"
+      }
+    },
+    "publishedFirst": {
+      "body": "Ett litet antal notiser finns redan i utkast. Var och en kommer att publiceras med förbehållen inbyggda — inklusive nollresultat och designändringar vi gjorde som svar på tidiga data.",
+      "heading": "Vad publiceras först?"
+    },
+    "scope": {
+      "body": "Metodnotiser, mindre litteraturöversikter och observationer från tidiga pilotkohorter. Målet är att visa hur vi resonerar — inklusive de platser där litteraturen ännu inte stöder den typ av påstående som en marknadsföringssida skulle vilja göra.",
+      "label": "Vad finns under Vetenskap & insikt?"
+    },
+    "scopeStrip": {
+      "aria": "Vad detta avsnitt innehåller",
+      "litReviews": {
+        "body": "Vad forskningen faktiskt säger — inklusive de svaga punkterna.",
+        "label": "Mindre litteraturöversikter"
+      },
+      "methodology": {
+        "body": "Hur vi utformade varje koncept och varför.",
+        "label": "Metodnotiser"
+      },
+      "pilot": {
+        "body": "Tidiga kohortdata och vad de förändrade i vår design.",
+        "label": "Pilotobservationer"
+      }
+    },
+    "spectrum": {
+      "aria": "WelloWorks forskningspositionering",
+      "journalSub": "Färdiga påståenden · fullständig peer review",
+      "journalTitle": "Peer review-granskad tidskrift",
+      "marketingSub": "Påståenden utan osäkerhet",
+      "marketingTitle": "Marknadsföringsblogg",
+      "midSub": "Arbetsnotiser · förbehåll synliga · ärlig om luckor",
+      "midTitle": "Vetenskap & insikt",
+      "note": "Allt som når publiceringsstandard kommer att länkas härifrån."
+    },
+    "trustStrip": {
+      "aria": "Redaktionella åtaganden",
+      "noClaims": {
+        "body": "Vi publicerar innan vi är säkra. Det säger vi tydligt.",
+        "title": "Inga färdiga påståenden"
+      },
+      "optIn": {
+        "body": "Inga listpåläggningar. Avsluta prenumerationen när som helst.",
+        "title": "Endast med samtycke"
+      },
+      "sources": {
+        "body": "Varje notis identifierar primärlitteraturen.",
+        "title": "Källor namngivna"
+      }
+    }
+  },
+  "researchTeaser": {
+    "constructs": [
+      {
+        "cap": "N-back, spannuppgifter · Baddeley, 1992",
+        "name": "Arbetsminne"
+      },
+      {
+        "cap": "Symbolsubstitution · Wechsler, klassisk",
+        "name": "Bearbetningshastighet"
+      },
+      {
+        "cap": "Ihållande & selektiv · Posner-paradigm",
+        "name": "Uppmärksamhet"
+      },
+      {
+        "cap": "Tower- och Raven-liknande resonemang",
+        "name": "Problemlösning"
+      },
+      {
+        "cap": "Kostnader vid uppgiftsväxling · Monsell, 2003",
+        "name": "Kognitiv flexibilitet"
+      }
+    ],
+    "cta": {
+      "methodology": "Översikt över metodik",
+      "research": "Forskningssida"
+    },
+    "eyebrow": "Forskning & evidens",
+    "heading": {
+      "accent": "fältet redan validerar.",
+      "lead": "Byggt på konstrukt som "
+    },
+    "lede": "Varje kognitiv övning på plattformen kopplas till ett konstrukt med en gedigen litteratur — inte ett internt mått som vi har hittat på. Vi publicerar metodik i takt med att vi genererar pilotdata."
+  },
+  "solutions": {
+    "eyebrow": "Lösningar per roll",
+    "heading": {
+      "accent": "En enda källa till sanning.",
+      "lead": "Tre vyer."
+    },
+    "lede": "HR, Operations och L&D ser var och en den del av plattformen som är relevant för deras beslut — med samma underliggande prestationsdata som grund.",
+    "roles": {
+      "hr": {
+        "bullets": [
+          "Aggregerade förändringar i kognitiva trender över team",
+          "Försvarbar avkastning på hälsosatsningar grundad i prestationsdata",
+          "Signaler om befordringsmognad som inte vilar på årliga utvecklingssamtal"
+        ],
+        "label": "För HR- och personalansvariga",
+        "title": "Se signaler på utbrändhet innan de blir uppsägningar."
+      },
+      "ld": {
+        "bullets": [
+          "Personliga rekommendationer utifrån kognitiva styrkor",
+          "Tokenfinansierad kursmarknadsplats, fullt bokbar direkt i appen",
+          "Kompetensutveckling som följs parallellt med prestationstrender"
+        ],
+        "label": "För L&D-ansvariga",
+        "title": "Bygg utvecklingsspår kopplade till en uppmätt kognitiv profil."
+      },
+      "operations": {
+        "bullets": [
+          "Upptäck mönster av trötthet per skiftupplägg och roll",
+          "Optimera teamsammansättning för verksamhetskritiska projekt",
+          "Minska variation där variation äventyrar säkerheten"
+        ],
+        "label": "För verksamhetsansvariga",
+        "title": "Schemalägg skift utifrån hur människor faktiskt presterar."
+      }
+    }
+  }
+}
