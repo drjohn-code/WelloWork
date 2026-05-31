@@ -1,6 +1,6 @@
 import { NextResponse, type NextRequest } from "next/server";
 import { getSupabaseServerClient } from "../../lib/supabase";
-import { parseDemoRequest } from "../../lib/validation";
+import { parseDemoRequest, FORM_ERROR_CODE } from "../../lib/validation";
 import { rateLimit, getClientIp } from "../../lib/rate-limit";
 import { sendDemoFallbackConfirmation } from "../../lib/email";
 import type { DemoBookingInsert } from "../../types/database";
@@ -18,7 +18,7 @@ export async function POST(request: NextRequest) {
   const rl = rateLimit(`demo:${ip}`, 5, 60_000);
   if (!rl.allowed) {
     return NextResponse.json(
-      { ok: false, error: "Too many requests. Please try again in a minute." },
+      { ok: false, code: FORM_ERROR_CODE.RATE_LIMITED },
       { status: 429 }
     );
   }
@@ -61,7 +61,7 @@ export async function POST(request: NextRequest) {
     if (error) {
       console.error("[demo-requests] insert error", error);
       return NextResponse.json(
-        { ok: false, error: "We couldn't record your request. Please try again." },
+        { ok: false, code: FORM_ERROR_CODE.REQUEST_FAILED },
         { status: 500 }
       );
     }

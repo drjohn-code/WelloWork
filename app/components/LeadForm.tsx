@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "./Icons";
+import { formErrorKey } from "./formErrors";
 import { COMPANY_SIZES, INDUSTRIES } from "../lib/validation";
 
 const INDUSTRY_KEYS = {
@@ -56,7 +57,7 @@ export function LeadForm({
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
         errors?: ServerErrors;
-        error?: string;
+        code?: string;
       };
       if (res.ok && data.ok) {
         setStatus("success");
@@ -64,10 +65,10 @@ export function LeadForm({
         return;
       }
       if (data.errors) setErrors(data.errors);
-      if (data.error) setGlobalError(data.error);
+      if (data.code) setGlobalError(data.code);
       setStatus("error");
     } catch {
-      setGlobalError(t("error.network"));
+      setGlobalError("NETWORK");
       setStatus("error");
     }
   };
@@ -100,7 +101,7 @@ export function LeadForm({
         <div className="field">
           <label htmlFor="name">{t("label.fullName")}</label>
           <input id="name" name="name" type="text" required autoComplete="name" />
-          {errors.name && <span className="err">{errors.name}</span>}
+          {errors.name && <span className="err">{t(formErrorKey(errors.name))}</span>}
         </div>
         <div className="field">
           <label htmlFor="work_email">{t("label.workEmail")}</label>
@@ -111,7 +112,7 @@ export function LeadForm({
             required
             autoComplete="email"
           />
-          {errors.work_email && <span className="err">{errors.work_email}</span>}
+          {errors.work_email && <span className="err">{t(formErrorKey(errors.work_email))}</span>}
         </div>
         <div className="field">
           <label htmlFor="company">
@@ -124,7 +125,7 @@ export function LeadForm({
             required={companyRequired}
             autoComplete="organization"
           />
-          {errors.company && <span className="err">{errors.company}</span>}
+          {errors.company && <span className="err">{t(formErrorKey(errors.company))}</span>}
         </div>
         <div className="field">
           <label htmlFor="company_size">{t("label.companySize")}</label>
@@ -172,7 +173,7 @@ export function LeadForm({
             required={messageRequired}
             placeholder={t("placeholder.leadMessage")}
           />
-          {errors.message && <span className="err">{errors.message}</span>}
+          {errors.message && <span className="err">{t(formErrorKey(errors.message))}</span>}
         </div>
 
         {/* Honeypot — must remain empty */}
@@ -197,12 +198,12 @@ export function LeadForm({
               })}
             </span>
           </label>
-          {errors.consent && <span className="err">{errors.consent}</span>}
+          {errors.consent && <span className="err">{t(formErrorKey(errors.consent))}</span>}
         </div>
       </div>
 
       {globalError && (
-        <p style={{ marginTop: 14, fontSize: 13.5, color: "#b91c1c" }}>{globalError}</p>
+        <p style={{ marginTop: 14, fontSize: 13.5, color: "#b91c1c" }}>{t(formErrorKey(globalError))}</p>
       )}
 
       <div style={{ marginTop: 20, display: "flex", gap: 12, alignItems: "center", flexWrap: "wrap" }}>

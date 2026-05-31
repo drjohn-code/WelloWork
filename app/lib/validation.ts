@@ -46,7 +46,26 @@ export function isEmail(email: string): boolean {
   return EMAIL_RE.test(email);
 }
 
-export type FormErrors = Record<string, string>;
+/**
+ * Stable, locale-agnostic error codes returned by the API. The client maps them
+ * to localized messages (see app/components/formErrors.ts -> forms.error.*).
+ * The API never returns human-readable / localized strings.
+ */
+export const FORM_ERROR_CODE = {
+  REQUIRED_NAME: "REQUIRED_NAME",
+  INVALID_EMAIL: "INVALID_EMAIL",
+  REQUIRED_COMPANY: "REQUIRED_COMPANY",
+  REQUIRED_CONSENT: "REQUIRED_CONSENT",
+  REQUIRED_MESSAGE: "REQUIRED_MESSAGE",
+  RATE_LIMITED: "RATE_LIMITED",
+  SUBMIT_FAILED: "SUBMIT_FAILED",
+  REQUEST_FAILED: "REQUEST_FAILED",
+} as const;
+
+export type FormErrorCode = (typeof FORM_ERROR_CODE)[keyof typeof FORM_ERROR_CODE];
+
+/** Field name -> error code. */
+export type FormErrors = Record<string, FormErrorCode>;
 
 export type DemoRequestPayload = {
   name: string;
@@ -89,10 +108,10 @@ export function parseDemoRequest(form: FormData): { value: DemoRequestPayload; e
     consent: form.get("consent") === "on" || form.get("consent") === "true",
   };
   const errors: FormErrors = {};
-  if (value.name.length < 2) errors.name = "Please enter your full name.";
-  if (!isEmail(value.work_email)) errors.work_email = "Please enter a valid email.";
-  if (value.company.length < 2) errors.company = "Please enter your company.";
-  if (!value.consent) errors.consent = "Please confirm consent to be contacted.";
+  if (value.name.length < 2) errors.name = FORM_ERROR_CODE.REQUIRED_NAME;
+  if (!isEmail(value.work_email)) errors.work_email = FORM_ERROR_CODE.INVALID_EMAIL;
+  if (value.company.length < 2) errors.company = FORM_ERROR_CODE.REQUIRED_COMPANY;
+  if (!value.consent) errors.consent = FORM_ERROR_CODE.REQUIRED_CONSENT;
   return { value, errors };
 }
 
@@ -108,9 +127,9 @@ export function parseContact(form: FormData): { value: ContactPayload; errors: F
     consent: form.get("consent") === "on" || form.get("consent") === "true",
   };
   const errors: FormErrors = {};
-  if (value.name.length < 2) errors.name = "Please enter your full name.";
-  if (!isEmail(value.work_email)) errors.work_email = "Please enter a valid email.";
-  if (value.message.length < 4) errors.message = "Please add a short message.";
-  if (!value.consent) errors.consent = "Please confirm consent to be contacted.";
+  if (value.name.length < 2) errors.name = FORM_ERROR_CODE.REQUIRED_NAME;
+  if (!isEmail(value.work_email)) errors.work_email = FORM_ERROR_CODE.INVALID_EMAIL;
+  if (value.message.length < 4) errors.message = FORM_ERROR_CODE.REQUIRED_MESSAGE;
+  if (!value.consent) errors.consent = FORM_ERROR_CODE.REQUIRED_CONSENT;
   return { value, errors };
 }

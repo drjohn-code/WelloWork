@@ -4,6 +4,7 @@ import { useState, type FormEvent } from "react";
 import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "./Icons";
+import { formErrorKey } from "./formErrors";
 import { COMPANY_SIZES, INDUSTRIES } from "../lib/validation";
 
 type ServerErrors = Record<string, string>;
@@ -47,7 +48,7 @@ export function DemoFallbackForm() {
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
         errors?: ServerErrors;
-        error?: string;
+        code?: string;
       };
       if (res.ok && data.ok) {
         setStatus("success");
@@ -55,10 +56,10 @@ export function DemoFallbackForm() {
         return;
       }
       if (data.errors) setErrors(data.errors);
-      if (data.error) setGlobalError(data.error);
+      if (data.code) setGlobalError(data.code);
       setStatus("error");
     } catch {
-      setGlobalError(t("error.network"));
+      setGlobalError("NETWORK");
       setStatus("error");
     }
   };
@@ -100,7 +101,7 @@ export function DemoFallbackForm() {
         <div className="field">
           <label htmlFor="name">{t("label.fullName")}</label>
           <input id="name" name="name" type="text" required autoComplete="name" aria-required="true" />
-          {errors.name && <span className="err" role="alert">{errors.name}</span>}
+          {errors.name && <span className="err" role="alert">{t(formErrorKey(errors.name))}</span>}
         </div>
         <div className="field">
           <label htmlFor="work_email">{t("label.workEmail")}</label>
@@ -112,7 +113,7 @@ export function DemoFallbackForm() {
             autoComplete="email"
             aria-required="true"
           />
-          {errors.work_email && <span className="err" role="alert">{errors.work_email}</span>}
+          {errors.work_email && <span className="err" role="alert">{t(formErrorKey(errors.work_email))}</span>}
         </div>
         <div className="field">
           <label htmlFor="company">{t("label.company")}</label>
@@ -124,7 +125,7 @@ export function DemoFallbackForm() {
             autoComplete="organization"
             aria-required="true"
           />
-          {errors.company && <span className="err" role="alert">{errors.company}</span>}
+          {errors.company && <span className="err" role="alert">{t(formErrorKey(errors.company))}</span>}
         </div>
         <div className="field">
           <label htmlFor="company_size">{t("label.companySize")}</label>
@@ -187,7 +188,7 @@ export function DemoFallbackForm() {
             name="message"
             placeholder={t("placeholder.demoMessage")}
           />
-          {errors.message && <span className="err" role="alert">{errors.message}</span>}
+          {errors.message && <span className="err" role="alert">{t(formErrorKey(errors.message))}</span>}
         </div>
 
         {/* Honeypot — must remain empty */}
@@ -212,13 +213,13 @@ export function DemoFallbackForm() {
               })}
             </span>
           </label>
-          {errors.consent && <span className="err" role="alert">{errors.consent}</span>}
+          {errors.consent && <span className="err" role="alert">{t(formErrorKey(errors.consent))}</span>}
         </div>
       </div>
 
       {globalError && (
         <p role="alert" style={{ marginTop: 14, fontSize: 13.5, color: "#b91c1c" }}>
-          {globalError}
+          {t(formErrorKey(globalError))}
         </p>
       )}
 

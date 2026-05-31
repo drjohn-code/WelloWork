@@ -2,10 +2,11 @@
  * Single source of truth for locale enablement and per-locale metadata.
  *
  * ──────────────────────────────────────────────────────────────────────────
- *  TO PUBLISH A LOCALE: add its code to `ENABLED_LOCALES` below. That one
+ *  TO PUBLISH A LOCALE: add its code to `PUBLISHED_LOCALES` below. That one
  *  array drives routing, the language switcher, hreflang alternates and the
- *  sitemap. A locale that is NOT in `ENABLED_LOCALES` never appears in any of
- *  them (SEO_GUIDELINES §6 config-driven enablement; §9 international SEO).
+ *  sitemap (via the derived `ENABLED_LOCALES`). A locale that is NOT enabled
+ *  never appears in any of them (SEO_GUIDELINES §6 config-driven enablement;
+ *  §9 international SEO).
  * ──────────────────────────────────────────────────────────────────────────
  *
  *  Brand rule (SEO_GUIDELINES §2.1): "WelloWork" (and the product sub-brands
@@ -85,12 +86,27 @@ export const LOCALES: Record<AppLocale, LocaleMeta> = {
 export const defaultLocale: AppLocale = 'en';
 
 /**
- * THE enablement switch. Only these locales are routed, switchable, emitted in
- * hreflang and listed in the sitemap. Launch = English only; the Tier-1/2/3
- * locales above are scaffolded as flagged DRAFTS (messages/<code>.json) and stay
- * disabled until a human-reviewed translation lands — then add the code here.
+ * THE enablement switch — add a locale code here to publish it. Launch = English
+ * only; the Tier-1/2/3 locales above are scaffolded as flagged DRAFTS
+ * (messages/<code>.json) and stay disabled until a human-reviewed translation
+ * lands — then add the code here.
+ *
+ * `en-XA` may be added here for LOCAL testing only. It is force-stripped from
+ * production builds (see ENABLED_LOCALES below), so it can NEVER ship enabled
+ * even if this toggle is accidentally left in.
  */
-export const ENABLED_LOCALES: AppLocale[] = ['en'];
+const PUBLISHED_LOCALES: AppLocale[] = ['en'];
+
+/**
+ * Effective enabled locales. Routing, the switcher, hreflang, the sitemap and
+ * detection all derive from this. The pseudo-locale `en-XA` is removed in
+ * production regardless of PUBLISHED_LOCALES — making it impossible to ship the
+ * test locale enabled or indexable.
+ */
+export const ENABLED_LOCALES: AppLocale[] =
+  process.env.NODE_ENV === "production"
+    ? PUBLISHED_LOCALES.filter((locale) => locale !== "en-XA")
+    : PUBLISHED_LOCALES;
 
 /** Runtime guard: is this string an enabled (publishable) locale? */
 export function isEnabledLocale(value: string): value is AppLocale {

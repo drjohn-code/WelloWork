@@ -564,9 +564,13 @@
     "error": {
       "company": "Please enter your company.",
       "consent": "Please confirm consent to be contacted.",
+      "generic": "Something went wrong. Please try again.",
       "message": "Please add a short message.",
       "name": "Please enter your full name.",
       "network": "Network error. Please try again.",
+      "rateLimited": "Too many requests. Please try again in a minute.",
+      "requestFailed": "We couldn't record your request. Please try again.",
+      "submitFailed": "We couldn't send your message. Please try again.",
       "workEmail": "Please enter a valid email."
     },
     "footnote": {
