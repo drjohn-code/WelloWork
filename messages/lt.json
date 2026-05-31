@@ -1,0 +1,2968 @@
+{
+  "_draft": {
+    "status": "MACHINE DRAFT — NOT human-reviewed",
+    "locale": "lt",
+    "language": "Lithuanian",
+    "method": "LLM machine translation of en.json",
+    "instructions": "Unreviewed machine translation. Have a native Lithuanian speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize are kept verbatim."
+  },
+  "about": {
+    "based": {
+      "body": "WelloWork AB yra registruota Švedijoje ir veikia iš Upsalos. Aptarnaujame klientus visoje ES, Jungtinėje Karalystėje ir Šiaurės šalyse, o platformą valdome ES esančioje infrastruktūroje.",
+      "title": "Kur įsikūrusi WelloWork?"
+    },
+    "cta": {
+      "body": "Trisdešimt minučių, realistiški pavyzdiniai duomenys ir nuoširdus pokalbis apie apimtį bei kainą.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Susisiekite su mumis",
+      "title": "Norite pamatyti, kaip <italic>atrodo bandomasis projektas?</italic>"
+    },
+    "featureGrid": {
+      "biomarker": {
+        "desc": "Mėginiai namuose",
+        "label": "Biožymenų tyrimai"
+      },
+      "trends": {
+        "desc": "Veiklos rezultatai laikui bėgant",
+        "label": "Ilgalaikės tendencijos"
+      },
+      "welloRise": {
+        "desc": "Kognityvinis lavinimas",
+        "label": "WelloRise"
+      },
+      "welloWize": {
+        "desc": "Įdarbinimas ir vertinimai",
+        "label": "WelloWize"
+      },
+      "workshops": {
+        "desc": "Tiesioginės grupinės sesijos",
+        "label": "Sveikatos dirbtuvės"
+      }
+    },
+    "gap": {
+      "dividerLabel": "atotrūkis",
+      "itemCognitive": "Kognityviniai rezultatai",
+      "itemEngagement": "Įsitraukimas",
+      "itemLongitudinal": "Ilgalaikės tendencijos",
+      "itemOutput": "Realus rezultatas",
+      "itemPulse": "Pulsas",
+      "itemSatisfaction": "Pasitenkinimas",
+      "measuredLabel": "Ką matuoja dauguma platformų",
+      "welloLabel": "Ką matuoja WelloWork"
+    },
+    "hero": {
+      "eyebrow": "Apie WelloWork",
+      "lede": "WelloWork įkūrėme 2024 m. Upsaloje, Švedijoje. Kuriame HR, operacijų ir L&D komandoms, kurios jau žino, kad įsitraukimo rodikliai nėra tas pat kas veiklos rezultatai — ir nori vienos platformos, kuri iš tikrųjų matuotų antrąjį.",
+      "title": "Švedijos komanda, kurianti kitokią <italic>darbo vietos platformą.</italic>"
+    },
+    "meta": {
+      "description": "WelloWork AB yra Švedijos darbo vietos veiklos platforma, įkurta 2024 m. Mes deriname kognityvinį lavinimą, ilgalaikius veiklos rezultatus, biožymenų tyrimus ir tiesiogines dirbtuves.",
+      "title": "Apie WelloWork — darbo vietos veiklos rezultatai, sukurta Švedijoje"
+    },
+    "persona": {
+      "hr": {
+        "tag": "Anksti pastebėkite perdegimo signalus",
+        "title": "HR ir personalo vadovai"
+      },
+      "ld": {
+        "tag": "Augimo kryptys, susietos su kognityviniais profiliais",
+        "title": "L&D vadovai"
+      },
+      "ops": {
+        "tag": "Planuokite pagal realius veiklos rezultatus",
+        "title": "Operacijų vadovai"
+      }
+    },
+    "privacy": {
+      "body": "Privatumas yra architektūros dalis, o ne paskutinę minutę pridurtas atitikties reikalavimas. Darbuotojo lygmens kognityviniai rezultatai, biožymenų ataskaitos ir vertinimų rezultatai lieka pas darbuotoją. Vadovai ir administratoriai mato tik anonimizuotas, apibendrintas tendencijas. Visi darbuotojų duomenys saugomi ES pagal GDPR, o mes siekiame ISO 27001 sertifikato.",
+      "title": "Kokia yra privatumo pozicija?"
+    },
+    "privacyDiagram": {
+      "admin": {
+        "detail": "Apibendrintas organizacijos vaizdas",
+        "role": "Administratorius"
+      },
+      "badgeEu": "Saugoma ES",
+      "badgeGdpr": "Atitinka GDPR",
+      "badgeIso": "ISO 27001 vykdoma",
+      "employee": {
+        "detail": "Valdo savo duomenis",
+        "role": "Darbuotojas"
+      },
+      "manager": {
+        "detail": "Anonimizuotos tendencijos",
+        "role": "Vadovas"
+      }
+    },
+    "schema": {
+      "aboutPageName": "Apie WelloWork"
+    },
+    "swedenMap": {
+      "coord": "59°51′N · 17°38′E",
+      "label": "Upsalos būstinė",
+      "note": "Veikia iš Upsalos. Aptarnauja klientus visoje ES, JK ir Šiaurės šalyse."
+    },
+    "uppsalaCard": {
+      "badge": "Įkurta 2024 m.",
+      "location": "Upsala, Švedija · 59°51′N"
+    },
+    "whatWeDo": {
+      "body": "WelloWork yra darbo vietos veiklos platforma, jungianti kasdienį kognityvinį lavinimą (WelloRise), įdarbinimo ir vidinius vertinimus (WelloWize), ilgalaikes veiklos tendencijas, tiesiogines sveikatos dirbtuves ir biožymenų mėginių tyrimus. Darbuotojai valdo savo duomenis; vadovai mato tik anonimizuotas, apibendrintas įžvalgas.",
+      "title": "Ką daro WelloWork?"
+    },
+    "who": {
+      "body": "Dirbame su 50–5 000 darbuotojų turinčiomis organizacijomis ES, JK ir Šiaurės šalyse — paprastai tomis, kurios jau renka įsitraukimo duomenis ir nori greta jų turėti patikimą veiklos rodiklį. HR ir personalo vadovai mus naudoja, kad anksti pastebėtų perdegimo signalus; operacijų vadovai — kad planuotų pagal tai, kaip komandos iš tikrųjų dirba; L&D vadovai — kad kurtų augimo kryptis, susietas su išmatuotais kognityviniais profiliais.",
+      "title": "Kam skirta WelloWork?"
+    },
+    "why": {
+      "body": "Dauguma darbo vietos platformų arba matuoja, kaip žmonės <em>jaučiasi</em> dėl darbo — įsitraukimą, pulsą, pasitenkinimą — arba veikia įdarbinimo etape ir nutyla po pasiūlymo laiško. Trūksta ilgalaikio kognityvinių rezultatų vaizdo, kai žmonės jau dirba organizacijoje. WelloWork sukurta būtent šiam atotrūkiui užpildyti, naudojant tą patį duomenų modelį lavinimui, vertinimams, dirbtuvėms ir biožymenų ataskaitoms.",
+      "title": "Kodėl tai sukūrėme?"
+    }
+  },
+  "advantage": {
+    "eyebrow": "WelloWork pranašumas",
+    "heading": {
+      "accent": "apginsime pardavimų pokalbyje.",
+      "lead": "Keturi teiginiai, kuriuos "
+    },
+    "intro": "Jokių išgalvotų skaičių. Jokių fiktyvių patvirtinimų. Kategorijos lygmens teiginiai, paremti tuo, ką platforma iš tikrųjų daro ir kaip ji sukurta.",
+    "points": [
+      {
+        "body": "Dauguma įrankių apima vieną iš šių sričių. Mes sujungiame visas tris, kad vienos srities signalai padėtų priimti sprendimus kitose.",
+        "label": "01",
+        "title": "Vienintelė platforma, sujungianti kognityvinį lavinimą, biožymenų tyrimus ir komandų įžvalgas."
+      },
+      {
+        "body": "Privatumas yra architektūros pagrindas, o ne atitikties išnaša. Vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+        "label": "02",
+        "title": "Sukurta Švedijoje, pagal numatytuosius nustatymus laikantis GDPR — darbuotojai valdo savo duomenis."
+      },
+      {
+        "body": "Veiklos rezultatai kinta per sprintus, pamainas ir sezonus. Mes matuojame ištisus metus, o ne vertinimo dieną.",
+        "label": "03",
+        "title": "Ilgalaikės tendencijos, o ne vienkartiniai įvertinimai."
+      },
+      {
+        "body": "Kognityvinis lavinimas telpa į kavos pertraukėlę. Seminarai – į pietus. Mėginių tyrimai atliekami vietoje.",
+        "label": "04",
+        "title": "Pritaikyta kasdieniam naudojimui — matuojama minutėmis, o ne valandomis."
+      }
+    ]
+  },
+  "bookDemo": {
+    "agenda": {
+      "dashboard": {
+        "body": "Apibendrintos komandos tendencijos, biožymenų testų užbaigimas, sudėties signalai — naudojant pavyzdinius jūsų pramonės šakos duomenis.",
+        "minutes": "5–20 min.",
+        "title": "Vadovo skydelis"
+      },
+      "intro": {
+        "body": "Trumpas prisistatymas, jūsų šiuo metu taikomos praktikos ir tai, ką norite sužinoti šio pokalbio metu.",
+        "minutes": "0–5 min.",
+        "title": "Įžanga ir kontekstas"
+      },
+      "lede": "Darbotvarkė kiekvieną kartą yra ta pati, todėl žinote, kam skiriate tas 30 minučių.",
+      "list": {
+        "aria": "Demonstracinio pokalbio darbotvarkė"
+      },
+      "pilot": {
+        "body": "Darbuotojų skaičius, diegimo tempas, ar į apimtį įtrauktos dirbtuvės arba biožymenų testavimas, ir kainodara.",
+        "minutes": "25–30 min.",
+        "title": "Bandomojo etapo apimties nustatymas"
+      },
+      "privacy": {
+        "body": "Ką darbuotojai mato savo programėlėje ir ką vadovo rodinys atskleidžia — bei ko neatskleidžia.",
+        "minutes": "20–25 min.",
+        "title": "Darbuotojų privatumas"
+      },
+      "title": "Kas vyksta pokalbio metu"
+    },
+    "audience": {
+      "hr": {
+        "body": "Sujunkite esamas apklausas su kasdieniais kognityviniais rodikliais ir biožymenų tendencijomis — neatskleisdami vadovams individualių darbuotojų duomenų.",
+        "eyebrow": "HR ir žmonės",
+        "title": "Sukurkite ilgalaikį signalą, viršijantį įsitraukimą"
+      },
+      "ld": {
+        "body": "Susiekite L&D programas su ilgalaikiais tendencijų duomenimis, o tada papildykite jas gyvomis dirbtuvėmis ten, kur jos duos rezultatų.",
+        "eyebrow": "Mokymas ir tobulinimas",
+        "title": "Parodykite mokymų poveikį realiems veiklos rodikliams"
+      },
+      "lede": "Demonstracija sukurta komandai, kuri valdys diegimą. Pasirinkite jūsų vaidmenį atitinkančią perspektyvą.",
+      "ops": {
+        "body": "Anonimizuoti sudėties signalai ir pajėgumų tendencijos, apibrėžti pagal komandas, o ne pagal atskirus asmenis.",
+        "eyebrow": "Operacijos",
+        "title": "Pamatykite komandos sudėtį ir apkrovą dar prieš krintant rezultatams"
+      },
+      "title": "Kam verta užsisakyti?"
+    },
+    "calcom": {
+      "iframeTitle": "Suplanuokite WelloWork demonstraciją",
+      "loading": "Įkeliamas planuoklis…",
+      "regionAria": "Demonstracijos planuoklis"
+    },
+    "expect": {
+      "cantFind": "Nerandate jums tinkamo laiko? <emailLink>Parašykite komandai</emailLink> ir mes jį surasime.",
+      "eyebrow": "Ko tikėtis",
+      "leaveWith": {
+        "body": "Trumpa rašytinė santrauka, jūsų darbuotojų skaičių atitinkanti bandomojo etapo kainodara ir kitas žingsnis be jokio spaudimo.",
+        "title": "Su kuo išeisite"
+      },
+      "long": {
+        "body": "30 minučių — 20 minučių vadovaujamos demonstracijos, 10 minučių klausimams ir bandomojo etapo apimties nustatymui.",
+        "title": "Kiek užtruks"
+      },
+      "noPressure": {
+        "body": "Jokio tolesnio susisiekimo, nebent paprašysite. Su darbuotojų duomenimis — ir jūsų laiku — elgiamės vienodai.",
+        "title": "Jokio spaudimo"
+      },
+      "show": {
+        "body": "Vadovo skydelis su pavyzdiniais jūsų pramonės šakos duomenimis, darbuotojo programėlė ir privatumo architektūra.",
+        "title": "Ką parodysime"
+      },
+      "title": "Sutelktos 30 minučių — be tuščiažodžiavimo",
+      "who": {
+        "body": "WelloWork produkto specialistas — paprastai vienas žmogus, niekada ne pardavimų komanda.",
+        "title": "Kas prisijungs"
+      }
+    },
+    "faq": {
+      "attend": {
+        "a": "Idealu, jei dalyvauja HR, žmonių, L&D ar operacijų srities sprendimų priėmėjas. Puikiai tinka pasikviesti kolegą, kuris valdys diegimą; pirmajame pokalbyje finansų ar pirkimų skyriaus mums nereikia.",
+        "q": "Kas iš jūsų pusės turėtų dalyvauti?"
+      },
+      "length": {
+        "a": "Trisdešimt minučių nuo pradžios iki pabaigos. Pirmosios 20 minučių — vadovaujama vadovo skydelio ir darbuotojo programėlės apžvalga; paskutinės 10 minučių skirtos jūsų klausimams ir bandomojo etapo apimties nustatymui.",
+        "q": "Kiek trunka WelloWork demonstracija?"
+      },
+      "pitch": {
+        "a": "Tai produkto apžvalga realiame skydelyje su pavyzdiniais jūsų pramonės šakos duomenimis. Jokių išgalvotų ROI diagramų ir jokio spaudimo užbaigti sandorį — paliekame jums informaciją, kad galėtumėte nuspręsti savo tempu.",
+        "q": "Demonstracija — tai pardavimų pristatymas ar produkto apžvalga?"
+      },
+      "prep": {
+        "a": "Jokio pasiruošimo nereikia. Atsineškite komandos dydį, savo veiklos pramonės šaką ir apytikslį supratimą, kada galėtumėte pradėti bandomąjį etapą — to pakanka, kad demonstracija būtų konkreti.",
+        "q": "Ar prieš pokalbį reikia ką nors paruošti?"
+      },
+      "reschedule": {
+        "a": "Taip. Kiekviename patvirtinimo el. laiške yra perkėlimo ir atšaukimo nuorodos iš kalendoriaus — jokio susirašinėjimo el. paštu nereikia.",
+        "q": "Ar galime perkelti laiką arba atšaukti?"
+      },
+      "title": "Dažniausiai užduodami klausimai"
+    },
+    "hero": {
+      "answerBody": "vadovo skydelio su realistiškais pavyzdiniais jūsų pramonės šakos duomenimis. Pamatysite kasdienį kognityvinį treniravimą, ilgalaikį tendencijų stebėjimą, komandos sudėties signalus ir biožymenų testų užbaigimą — o pabaigoje trumpai aptarsime bandomojo etapo apimtį. Jokių išgalvotų ROI diagramų.",
+      "answerLead": "WelloWork demonstracija — tai 30 minučių tiesioginė apžvalga",
+      "badgeGdpr": "GDPR pagrindu",
+      "badgeIso": "ISO 27001 ruošiama",
+      "badgeMadeInSweden": "Sukurta Švedijoje",
+      "eyebrow": "Užsisakyti demonstraciją",
+      "title": "Pamatykite savo komandos kognityvinę veiklą — <italic>vienoje demonstracijoje.</italic>"
+    },
+    "meta": {
+      "description": "Pasirinkite laiką tiesioginiame kalendoriuje ir susitikite su WelloWork produkto specialistu 30 minučių vadovo skydelio apžvalgai. Sukurta Švedijoje · GDPR pagrindu.",
+      "title": "Užsisakykite WelloWork demonstraciją — pasirinkite 30 minučių laiką"
+    },
+    "scheduler": {
+      "body": "Jūsų laiko juosta nustatoma automatiškai. Pasirinkite dieną, tada laiką — duomenis patvirtinsite kitame žingsnyje ir iškart gausite kalendoriaus kvietimą.",
+      "title": "Pasirinkite jums tinkamą laiką"
+    },
+    "schema": {
+      "reservationName": "WelloWork produkto demonstracija",
+      "webPageDescription": "Suplanuokite 30 minučių tiesioginę WelloWork vadovo skydelio demonstraciją su realistiškais pavyzdiniais jūsų pramonės šakos duomenimis.",
+      "webPageName": "Užsisakyti WelloWork demonstraciją"
+    },
+    "secondaryCta": {
+      "body": "Norite pirmiausia pasikalbėti arba patys gilintis į produktą? Suprantame — nėra jokio spaudimo užsisakyti šiandien.",
+      "primary": "Susisiekite su mumis",
+      "secondary": "Susipažinkite su platforma",
+      "title": "Dar nepasiruošę pasirinkti laiko?"
+    }
+  },
+  "breadcrumbs": {
+    "about": "Apie mus",
+    "ariaLabel": "Naršymo kelias",
+    "bookDemo": "Užsisakyti demonstraciją",
+    "careers": "Karjera",
+    "contact": "Kontaktai",
+    "home": "Pradžia",
+    "legal": "Teisinė informacija"
+  },
+  "careers": {
+    "anchor": {
+      "body": "Šiuo metu ne. Įdarbiname lėtai ir apgalvotai, kol vykdome bandomuosius projektus. Jei norėtumėte patekti į trumpąjį būsimų pareigybių kandidatų sąrašą, rašykite <email></email> pridėdami vienos pastraipos prisistatymą ir aktualias nuorodas — perskaitome kiekvieną laišką.",
+      "q": "Ar WelloWork yra laisvų darbo vietų?"
+    },
+    "cta": {
+      "body": "Jei WelloWork skamba kaip vieta, kurioje norėtumėte praleisti keletą metų kurdami, parašykite mums pastraipą. Net kai neturime atvirų pareigybių, mes pasižymime kontaktus.",
+      "primary": "Susisiekite su mumis",
+      "secondary": "Apie WelloWork",
+      "title": "Atsiųskite mums prisistatymą."
+    },
+    "hero": {
+      "eyebrow": "Karjera",
+      "lede": "WelloWork yra nedidelė švedų komanda ankstyvame bandomajame etape. Kai atversime pareigybes, jos bus paskelbtos čia. Iki tol pradėti pokalbį nesunku, jei jūsų istorija atitinka mūsiškę.",
+      "title": "Šiuo metu neturime atvirų pareigybių — <italic>tačiau perskaitome kiekvieną prisistatymą.</italic>"
+    },
+    "hireFirst": {
+      "li1": "Inžinierius, kurie sukūrė ir išleido produktus, o ne vien karkasus.",
+      "li2": "Dizainerius, kuriems rūpi įrodymais grįstas produktas ir kurie turi nuomonę apie tipografiją bei judesį.",
+      "li3": "Tyrėjus su kognityvinių mokslų arba kiekybinės psichologijos išsilavinimu, gebančius rašyti patikimas metodikos pastabas.",
+      "li4": "Pardavimų ir klientų sėkmės specialistus, kurie nuo pradžios iki pabaigos vykdė bandomuosius projektus nedidelėse, atsakingose B2B įmonėse.",
+      "title": "Kokius žmones tikriausiai įdarbinsime pirmiausia?"
+    },
+    "hiringFlow": {
+      "conversation": {
+        "label": "Pokalbis",
+        "note": "~30 min, be pasiruošimo"
+      },
+      "intro": {
+        "label": "Prisistatymo el. laiškas",
+        "note": "Žemas slenkstis — CV nereikia"
+      },
+      "stagePrefix": "{n} etapas",
+      "trialDay": {
+        "label": "Apmokama bandomoji diena",
+        "note": "Susipažinsite su visa komanda"
+      },
+      "workSample": {
+        "label": "Darbo pavyzdys",
+        "note": "Susijęs su realiomis pareigomis"
+      }
+    },
+    "introCard": {
+      "bodyP1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Jau kurį laiką seku WelloWork metodikos pastabas ir norėjau trumpai pasisveikinti.",
+      "bodyP2": "Sed do eiusmod tempor incididunt ut labore — mielai pasidalinčiau darbo pavyzdžiais ir papasakočiau, kaip ėmčiausi bandomojo įvedimo srauto.",
+      "name": "Lena K.",
+      "readBadge": "Perskaityta",
+      "role": "Produkto dizainerė",
+      "subjectKey": "Tema",
+      "subjectVal": "Sveiki iš Berlyno — norėčiau prisistatyti",
+      "tagCaseStudy": "Atvejo analizė",
+      "tagGithub": "GitHub",
+      "tagPortfolio": "Portfelis"
+    },
+    "life": {
+      "body": "Maža komanda, įsikūrusi Upsaloje, draugiška nuotoliniam darbui visoje ES ir JK. Dirbame anglų kalba. Užuot viską aptarinėję žodžiu, dažniausiai pasižymime mintis raštu, o savo metodiką skelbiame viešai — tai palengvina likusį darbą apginti.",
+      "title": "Kaip yra dirbti WelloWork?"
+    },
+    "meta": {
+      "description": "Šiuo metu neturime atvirų pareigybių, tačiau perskaitome kiekvieną prisistatymą. Štai kaip WelloWork mąsto apie įdarbinimą, ką tikriausiai įdarbinsime pirmiausia ir kaip su mumis susisiekti.",
+      "title": "Karjera WelloWork — kaip įdarbiname ir kaip su mumis susisiekti"
+    },
+    "norms": {
+      "public": {
+        "label": "Vieša metodika",
+        "note": "Skelbiame savo metodus — tai išlaiko mus sąžiningus."
+      },
+      "remote": {
+        "label": "Draugiška nuotoliniam darbui ES/JK",
+        "note": "Įsikūrę Upsaloje, pasiskirstę visoje ES ir JK."
+      },
+      "written": {
+        "label": "Pirmiausia raštu",
+        "note": "Dažniausiai pirma pasižymime mintis raštu, o tik tada jas aptariame."
+      }
+    },
+    "process": {
+      "body": "Trumpi, skaidrūs etapai — paprastai pokalbis, su pareigomis susijęs konkretus darbo pavyzdys ir apmokama bandomoji diena su komanda. Vertinimo kriterijais dalijamės iš anksto, o vidiniam darbui naudojame savo pačių platformą, kad galėtume patys išbandyti kandidato patirtį.",
+      "title": "Kaip vykdome įdarbinimo procesą?"
+    },
+    "reach": {
+      "body": "Rašykite <email></email> arba pasinaudokite forma <contactLink>kontaktų</contactLink> puslapyje. Pridėkite vienos pastraipos prisistatymą ir prie ko norėtumėte dirbti pirmiausia — prisistatymo etape pilno CV nereikia.",
+      "title": "Kaip galiu su jumis susisiekti dėl pareigybės?"
+    },
+    "reachTiles": {
+      "contactLabel": "Naudokite kontaktų formą",
+      "contactSub": "CV nereikia — prisistatymo etape pakanka pastraipos.",
+      "emailLabel": "Parašykite mums"
+    },
+    "roleCards": {
+      "designers": {
+        "desc": "Įrodymais grįstas produktas su nuomone apie tipografiją ir judesį.",
+        "label": "Dizaineriai"
+      },
+      "engineers": {
+        "desc": "Sukurti ir išleisti produktai, o ne vien karkasai.",
+        "label": "Inžinieriai"
+      },
+      "researchers": {
+        "desc": "Kognityviniai mokslai arba kiekybinė psichologija — patikimos metodikos pastabos.",
+        "label": "Tyrėjai"
+      },
+      "salesCs": {
+        "desc": "Nuo pradžios iki pabaigos vykdė bandomuosius projektus nedidelėse, atsakingose B2B įmonėse.",
+        "label": "Pardavimai ir KS"
+      }
+    },
+    "schema": {
+      "webPageName": "Karjera WelloWork"
+    }
+  },
+  "chips": {
+    "privacy": {
+      "default": "Apibendrinta, anonimizuota — vadovo rodinys"
+    },
+    "sweden": "Grįsta mokslu, kurta su rūpesčiu"
+  },
+  "common": {
+    "advantage": {
+      "body": "Jokių išgalvotų skaičių. Jokių netikrų patvirtinimų. Kategorijos lygmens teiginiai, pagrįsti tuo, ką platforma iš tiesų daro ir kaip ji sukurta.",
+      "eyebrow": "WelloWork pranašumas",
+      "point1": {
+        "body": "Dauguma įrankių apima tik vieną iš šių sričių. Mes sujungiame visas tris, kad vienos srities signalai padėtų priimti sprendimus kitose.",
+        "title": "Vienintelė platforma, jungianti kognityvinį lavinimą, biožymenų tyrimus ir komandos analitiką."
+      },
+      "point2": {
+        "body": "Privatumas yra architektūros pagrindas, o ne atitikties išnaša. Vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+        "title": "Sukurta Švedijoje pagal GDPR pagal numatytuosius nustatymus — darbuotojai valdo savo duomenis."
+      },
+      "point3": {
+        "body": "Veiklos rezultatai kinta per sprintus, pamainas ir sezonus. Mes matuojame ištisus metus, o ne tik vertinimo dieną.",
+        "title": "Ilgalaikės tendencijos, o ne vienkartiniai įverčiai."
+      },
+      "point4": {
+        "body": "Kognityvinis lavinimas telpa į kavos pertraukėlę. Seminarai — į pietų laiką. Mėginių tyrimai atliekami vietoje.",
+        "title": "Sukurta kasdieniam naudojimui — matuojama minutėmis, o ne valandomis."
+      },
+      "titleAccent": "apginti pardavimų pokalbyje.",
+      "titleLead": "Keturi teiginiai, kuriuos galime"
+    },
+    "breadcrumb": {
+      "aria": "Naršymo seka"
+    },
+    "privacyChip": {
+      "default": "Apibendrinta, anonimizuota — vadovo rodinys"
+    },
+    "swedenChip": "Grįsta mokslu, kurta su rūpesčiu",
+    "logoAlt": "WelloWork logotipas"
+  },
+  "contact": {
+    "based": {
+      "body": "WelloWork AB yra registruota Švedijoje ir veikia iš Upsalos. Visi darbuotojų duomenys saugomi ES viduje, infrastruktūroje, atitinkančioje GDPR reikalavimus. Aptarnaujame klientus visoje ES, Jungtinėje Karalystėje ir Šiaurės šalyse.",
+      "title": "Kur įsikūrusi WelloWork?"
+    },
+    "hero": {
+      "eyebrow": "Kontaktai",
+      "lede": "Pardavimai, partnerystės, pagalba, karjera — kiekviena žinutė pasiekia nedidelę komandą Švedijoje. Į daugumą užklausų atsakome per vieną darbo dieną.",
+      "title": "Bendraukite su tikru žmogumi — <italic>Upsaloje.</italic>"
+    },
+    "meta": {
+      "description": "Susisiekite su WelloWork komanda Upsaloje, Švedijoje. Rašykite el. paštu info@wellowork.net arba skambinkite +46 760 28 1272 dėl pardavimų, partnerysčių ar bendrų užklausų.",
+      "title": "Susisiekite su WelloWork — kreipkitės į pardavimus, pagalbą ar partnerystes"
+    },
+    "reach": {
+      "answerBody": "Norėdami užsisakyti demonstraciją, naudokite šiame puslapyje esančią formą arba <demoLink>/book-a-demo</demoLink>. Visais kitais klausimais — partnerystės, spauda, karjera, pagalba — rašykite adresu {email} arba skambinkite {phone} ES darbo valandomis.",
+      "answerLead": "Greičiausia susisiekti el. paštu arba telefonu.",
+      "title": "Kaip galiu susisiekti su WelloWork?"
+    },
+    "row": {
+      "area": {
+        "label": "Biuras ir aptarnavimo zona",
+        "value": "{city}, {country} · aptarnaujame ES, JK ir Šiaurės šalis"
+      },
+      "email": {
+        "label": "El. paštas"
+      },
+      "hours": {
+        "label": "Darbo laikas",
+        "value": "Pr–Pn · 09:00–17:00 CET"
+      },
+      "phone": {
+        "label": "Telefonas"
+      }
+    },
+    "form": {
+      "submitLabel": "Siųsti žinutę",
+      "successTitle": "Žinutė gauta.",
+      "successBody": "Atsakysime per vieną darbo dieną. Skubiais klausimais skambinkite šiame puslapyje nurodytu numeriu."
+    }
+  },
+  "featureGrid": {
+    "_note": "FeatureGrid neturi jokių užkoduotų naudotojui matomų eilučių. Visą tekstą (eyebrow, title, item.title, item.body) kaip props perduoda kvietėjai. Jis NĖRA naudojamas niekur pradžios (Home) puslapio medyje (page.tsx jo neatvaizduoja). Verskite iškvietimo vietose, kurios tiekia props, o ne čia."
+  },
+  "finalCta": {
+    "cta": {
+      "bookDemo": "Užsisakyti demonstraciją",
+      "contact": "Susisiekite su mumis"
+    },
+    "footnote": "Pagaminta Švedijoje · Sukurta laikantis GDPR · ISO 27001",
+    "heading": {
+      "accent": "per vieną demonstraciją.",
+      "lead": "Pamatykite savo komandos kognityvinį našumą — "
+    },
+    "lede": "30 minučių vadovo skydelio apžvalga su realistiškais jūsų pramonės šakos pavyzdiniais duomenimis. Jokių išgalvotų investicijų grąžos diagramų."
+  },
+  "footer": {
+    "aria": {
+      "home": "WelloWork pradinis puslapis"
+    },
+    "badges": {
+      "gdpr": "GDPR įgimta",
+      "hipaa": "Parengta HIPAA",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    },
+    "columns": {
+      "company": {
+        "h": "Įmonė",
+        "items": [
+          "Apie mus",
+          "Karjera",
+          "Kontaktai"
+        ]
+      },
+      "platform": {
+        "h": "Platforma",
+        "items": [
+          "WelloRise [Augimas]",
+          "WelloWize [Vertinimas]",
+          "Veiklos tendencijos",
+          "Seminarai",
+          "Proaktyvi priežiūra"
+        ]
+      },
+      "research": {
+        "h": "Moksliniai tyrimai",
+        "items": [
+          "Metodika",
+          "Mokslas ir įžvalgos",
+          "Kognityvinės konstrukcijos"
+        ]
+      }
+    },
+    "copyright": "© 2024-2026 WelloWork AB · Upsala, Švedija",
+    "legal": {
+      "cookies": "Slapukai",
+      "dataProcessing": "Duomenų tvarkymas",
+      "privacy": "Privatumas",
+      "terms": "Sąlygos"
+    },
+    "tagline": "Darbo vietos veiklos platforma. Kasdienis kognityvinis lavinimas, ilgalaikės tendencijos ir biožymenimis pagrįstos sveikatos įžvalgos, sukurta Švedijoje."
+  },
+  "forms": {
+    "consent": {
+      "demoForm": "Sutinku, kad WelloWork gali su manimi susisiekti dėl šios demonstracijos suplanavimo ir saugoti šiuos duomenis pagal savo <privacyLink>privatumo politiką</privacyLink>. (GDPR)",
+      "leadForm": "Sutinku, kad WelloWork gali su manimi susisiekti dėl šios užklausos ir saugoti šiuos duomenis pagal savo <privacyLink>privatumo politiką</privacyLink>."
+    },
+    "contact": {
+      "submitLabel": "Siųsti žinutę",
+      "successBody": "Atsakysime per vieną darbo dieną. Skubiais klausimais prašome skambinti šiame puslapyje nurodytu numeriu.",
+      "successTitle": "Žinutė gauta."
+    },
+    "demo": {
+      "formAria": "Užsisakyti demonstracijos laiką",
+      "formIntro": "Šioje aplinkoje planavimas neveikia — palikite savo duomenis ir per vieną darbo dieną el. paštu patvirtinsime laiką.",
+      "formTitle": "Užsisakyti demonstracijos laiką",
+      "successBody": "Produkto specialistas su jumis susisieks per vieną darbo dieną, kad patvirtintų demonstracijos laiką. Patikrinkite savo darbo pašto dėžutę (ir šlamšto aplanką, dėl visa ko) – ar gavote patvirtinimo laišką.",
+      "successTitle": "Ačiū — užklausa gauta."
+    },
+    "error": {
+      "company": "Įveskite savo įmonę.",
+      "consent": "Patvirtinkite sutikimą, kad su jumis būtų susisiekta.",
+      "generic": "Kažkas nepavyko. Bandykite dar kartą.",
+      "message": "Pridėkite trumpą žinutę.",
+      "name": "Įveskite savo vardą ir pavardę.",
+      "network": "Tinklo klaida. Bandykite dar kartą.",
+      "rateLimited": "Per daug užklausų. Bandykite dar kartą po minutės.",
+      "requestFailed": "Nepavyko užregistruoti jūsų užklausos. Bandykite dar kartą.",
+      "submitFailed": "Nepavyko išsiųsti jūsų žinutės. Bandykite dar kartą.",
+      "workEmail": "Įveskite galiojantį el. pašto adresą."
+    },
+    "footnote": {
+      "dataStored": "Jūsų duomenys saugomi ES. Jokios rinkodaros be jūsų sutikimo."
+    },
+    "label": {
+      "company": "Įmonė",
+      "companySize": "Įmonės dydis",
+      "demoMessage": "Ką norėtumėte pamatyti (neprivaloma)",
+      "fullName": "Vardas ir pavardė",
+      "industry": "Sritis",
+      "message": "Žinutė",
+      "optionalSuffix": "(neprivaloma)",
+      "preferredTimeframe": "Pageidaujamas laikas",
+      "role": "Jūsų pareigos",
+      "roleTitle": "Jūsų pareigos / titulas",
+      "websiteHoneypot": "Svetainė",
+      "workEmail": "Darbo el. paštas"
+    },
+    "option": {
+      "companySize": "{size}",
+      "industry": {
+        "education": "Švietimas",
+        "energy": "Energetika ir komunalinės paslaugos",
+        "financial": "Finansinės paslaugos",
+        "healthcare": "Sveikatos priežiūra",
+        "manufacturing": "Gamyba",
+        "other": "Kita",
+        "professional": "Profesinės paslaugos",
+        "publicSector": "Viešasis sektorius",
+        "retail": "Mažmeninė prekyba ir el. komercija",
+        "softwareTech": "Programinė įranga ir technologijos"
+      }
+    },
+    "placeholder": {
+      "demoMessage": "Komandos dydis, kam norėtumėte skirti demonstraciją, galimas bandomojo etapo laikas.",
+      "leadMessage": "Papasakokite apie savo bandomojo etapo planus, darbuotojų skaičių ir ką norėtumėte pamatyti demonstracijos metu.",
+      "role": "HR, operacijos, L&D, įkūrėjas…"
+    },
+    "select": {
+      "industryPlaceholder": "Pasirinkite sritį",
+      "teamSizePlaceholder": "Pasirinkite komandos dydį",
+      "timeframePlaceholder": "Kada norėtumėte susitikti?"
+    },
+    "submit": {
+      "demo": "Užsisakyti demonstracijos laiką",
+      "lead": "Siųsti žinutę",
+      "sending": "Siunčiama…"
+    },
+    "timeframe": {
+      "exploring": "Tiesiog domiuosi",
+      "nextWeek": "Kitą savaitę",
+      "thisWeek": "Šią savaitę",
+      "twoToFourWeeks": "Per artimiausias 2–4 savaites"
+    }
+  },
+  "hero": {
+    "badge": {
+      "platform": "Darbo vietos veiklos efektyvumo platforma"
+    },
+    "cta": {
+      "bookDemo": "Užsisakyti demonstraciją",
+      "seeHow": "Pažiūrėkite, kaip tai veikia"
+    },
+    "floatBadge": {
+      "session": "Darbinė atmintis · 4 sesija",
+      "today": "Šiandien · 7 min"
+    },
+    "headline": {
+      "accent": "Matuokite tai, kas svarbu.",
+      "lead": "Treniruokite kognityvinį veiklos efektyvumą."
+    },
+    "lede": "Kasdienės kognityvinės treniruotės, ilgalaikės veiklos efektyvumo tendencijos ir biožymenimis pagrįstos sveikatos įžvalgos — vienoje platformoje, kuria vadovai ir darbuotojai iš tikrųjų naudojasi.",
+    "trust": {
+      "gdpr": "GDPR principu sukurta",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    }
+  },
+  "heroDashboard": {
+    "biomarker": {
+      "caption": "Atlikta šį ciklą",
+      "count": "{completed} / {total}",
+      "label": "Biožymenų ataskaitos"
+    },
+    "browser": {
+      "url": "app.wellowork.net / team"
+    },
+    "chart": {
+      "annotation": "Sprinto apžvalgos savaitė",
+      "axis": {
+        "wk1": "1 sav.",
+        "wk12": "12 sav.",
+        "wk4": "4 sav.",
+        "wk8": "8 sav."
+      },
+      "legend": {
+        "focus": "Susitelkimas",
+        "memory": "Atmintis"
+      },
+      "range": "Pastarosios 90 dienų"
+    },
+    "composition": {
+      "fit": "{value}% atitiktis",
+      "member1": {
+        "name": "Anna L.",
+        "role": "Problemų sprendimas · 92"
+      },
+      "member2": {
+        "name": "Erik S.",
+        "role": "Apdorojimo greitis · 88"
+      },
+      "member3": {
+        "name": "Maja J.",
+        "role": "Darbinė atmintis · 89"
+      },
+      "project": "Projektas: III ketv. platformos atnaujinimas",
+      "title": "Komandos sudėtis"
+    },
+    "privacyChip": "Anonimizuoti suvestiniai duomenys",
+    "sampleData": "Pavyzdiniai duomenys",
+    "team": {
+      "label": "Inžinerija · 14 narių",
+      "title": "Komandos kognityvinis veiksmingumas"
+    }
+  },
+  "legal": {
+    "cookies": {
+      "changesBody": "Jei pridėsime kokių nors nebūtinų slapukų, šis puslapis bus atnaujintas nurodant peržiūros datą, o sutikimo juosta pasiūlys galimybę juos įjungti.",
+      "changesQ": "Pakeitimai",
+      "controlQ": "Kaip galite valdyti slapukus?",
+      "coverA": "Rinkodaros svetainėje naudojami tik būtinieji slapukai, reikalingi svetainės veikimui užtikrinti (pvz., formos būsenai išsaugoti perkraunant puslapį). Analitiniai ir rinkodaros slapukai pagal numatytuosius nustatymus neįjungti; jei kada nors bus įjungti, jų bus galima atsisakyti arba juos įjungti per sutikimo juostą, ir jie bus išvardyti toliau.",
+      "coverQ": "Kokius slapukus naudoja WelloWork svetainė?",
+      "lede": "Pagal numatytuosius nustatymus slapukus naudojame minimaliai, laikydamiesi bendros privatumo pozicijos.",
+      "title": "Slapukų politika",
+      "usedHereQ": "Kokie slapukai naudojami čia?",
+      "whatBody": "Slapukas yra mažas tekstinis failas, kurį svetainė įrašo jūsų įrenginyje. Slapukai naudojami tokiems tikslams kaip prisijungimo būsenos išlaikymas, nuostatų įsiminimas ir (kai kuriais atvejais) naudojimo stebėjimas analitikos ar reklamos tikslais.",
+      "whatQ": "Kas yra slapukas?"
+    },
+    "dpa": {
+      "contactQ": "Klausimai dėl subtvarkytojų ar DPA",
+      "coverA": "Kai naudojatės WelloWork platforma kaip kliento organizacijos darbuotojas, jūsų darbdavys yra jūsų duomenų valdytojas, o {legalName} yra tvarkytojas, veikiantis pagal dokumentuotus nurodymus. To duomenų tvarkymo sąlygos nustatytos Duomenų tvarkymo sutartyje (DPA), sudarytoje tarp WelloWork ir jūsų darbdavio.",
+      "coverQ": "Kokie yra duomenų tvarkymo santykiai?",
+      "lede": "Santrauka, kaip WelloWork pagal GDPR veikia kaip tvarkytojas kliento organizacijoms. Konkrečiam klientui sudaryta DPA turi pirmenybę.",
+      "natureBody": "Kliento galutinių naudotojų asmens duomenis tvarkome tam, kad teiktume WelloWork platformą ir įgaliotiems administratoriams parengtume apibendrintas, nuasmenintas ataskaitas.",
+      "natureQ": "Duomenų pobūdis, tikslas ir kategorijos",
+      "securityBody": "Šifravimas perduodant ir saugant, prieiga pagal vaidmenis, audito registravimas, minimalaus komandos dydžio reikalavimas vadovams matomiems apibendrintiems duomenims, periodinė saugumo peržiūra.",
+      "securityQ": "Saugumas",
+      "subjectQ": "Dalykas ir trukmė",
+      "subjectsBody": "WelloWork platformos galutiniai naudotojai — paprastai kliento darbuotojai.",
+      "subjectsQ": "Duomenų subjektų kategorijos",
+      "subprocessorsQ": "Subtvarkytojai",
+      "title": "Duomenų tvarkymas",
+      "transfersBody": "Asmens duomenų neperduodame už ES/EEE ribų be tinkamo perdavimo mechanizmo. Kai perdavimas būtinas (pvz., operacinės pagalbos priemonėms), tai dokumentuojama DPA.",
+      "transfersQ": "Tarptautiniai perdavimai"
+    },
+    "hero": {
+      "eyebrow": "Teisinė informacija",
+      "lede": "Privatumo politika, paslaugų teikimo sąlygos, slapukų politika ir duomenų tvarkymo santrauka — visa vienoje vietoje, reglamentuojama Švedijos teisės ir GDPR.",
+      "title": "Teisinė informacija."
+    },
+    "meta": {
+      "description": "WelloWork privatumo politika, paslaugų teikimo sąlygos, slapukų politika ir duomenų tvarkymo santrauka — Švedijos ir ES rinkoms, sukurta laikantis GDPR.",
+      "title": "Teisinė informacija — WelloWork"
+    },
+    "nav": {
+      "cookies": "Slapukų politika",
+      "dataProcessing": "Duomenų tvarkymas",
+      "desktopAria": "Teisinės informacijos skiltys (kompiuteryje)",
+      "mobileAria": "Teisinės informacijos skiltys (mobiliajame)",
+      "onThisPage": "Šiame puslapyje",
+      "privacy": "Privatumo politika",
+      "terms": "Paslaugų teikimo sąlygos"
+    },
+    "privacy": {
+      "basisQ": "Koks yra teisinis tvarkymo pagrindas?",
+      "changesBody": "Esminiai pakeitimai bus skelbiami čia nurodant peržiūros datą. Paskutinės peržiūros data: šio puslapio data atitinka dabartinį diegimą ir bus atnaujinta po teisininkų peržiūros.",
+      "changesQ": "Šios politikos pakeitimai",
+      "controllerBody": "{legalName}, registruota Švedijoje ir veikianti iš {city}, {country}, yra šioje svetainėje ir per užklausas renkamų asmens duomenų valdytojas. Duomenims, tvarkomiems WelloWork platformoje kliento organizacijos vardu, {legalName} veikia kaip tvarkytojas, o kliento organizacija yra valdytojas — tie santykiai reglamentuojami atskira Duomenų tvarkymo sutartimi.",
+      "controllerQ": "Kas yra jūsų duomenų valdytojas?",
+      "coverA": "Joje paaiškinama, kokius asmens duomenis WelloWork renka, kai naudojatės šia svetaine ar WelloWork platforma, ką su jais darome, teisiniai pagrindai, kuriais remiamės pagal GDPR, jūsų teisės ir kaip dėl jų su mumis susisiekti.",
+      "coverQ": "Ką apima ši privatumo politika?",
+      "dataQ": "Kokius asmens duomenis renkame?",
+      "exerciseNote": "Norėdami pasinaudoti bet kuria teise, rašykite el. paštu {email} su tema „privatumo užklausa“.",
+      "lede": "Kaip WelloWork renka, naudoja ir saugo asmens duomenis pagal GDPR ir Švedijos teisę.",
+      "retentionQ": "Kiek laiko juos saugome?",
+      "rightsBody": "Pagal GDPR galite reikalauti susipažinti su duomenimis, juos ištaisyti, ištrinti, apriboti jų tvarkymą, perkelti duomenis ir turite teisę nesutikti. Taip pat galite pateikti skundą Švedijos duomenų apsaugos institucijai (IMY).",
+      "rightsQ": "Kokias teises turite?",
+      "securityBody": "Šifravimas perduodant, šifravimas saugant, prieiga pagal vaidmenis, audito registravimas ir minimalaus komandos dydžio riba visiems vadovams matomiems apibendrintiems duomenims.",
+      "securityQ": "Kaip apsaugome duomenis?",
+      "storedBody": "Visi asmens duomenys saugomi Europos Sąjungoje esančioje infrastruktūroje. WelloWork neperduoda asmens duomenų už ES/EEE ribų be tinkamo perdavimo mechanizmo.",
+      "storedQ": "Kur saugomi jūsų duomenys?",
+      "title": "Privatumo politika"
+    },
+    "schema": {
+      "webPageName": "Teisinė informacija"
+    },
+    "section": {
+      "label": "{n} skiltis"
+    },
+    "terms": {
+      "changesBody": "Šias sąlygas laikui bėgant galime atnaujinti. Esminiai pakeitimai bus skelbiami čia nurodant peržiūros datą.",
+      "changesQ": "Pakeitimai",
+      "coverA": "Priimtinas WelloWork svetainės naudojimas, už paslaugą atsakingas juridinis asmuo, intelektinė nuosavybė, garantijos ir jų atsisakymas, atsakomybės ribojimas ir taikytina teisė. Jei esate mokantis klientas, užsakymo forma ir pagrindinė paslaugų teikimo sutartis turi pirmenybę.",
+      "coverQ": "Ką apima šios sąlygos?",
+      "entityBody": "{legalName}, Švedijos bendrovė. Šios sąlygos reglamentuoja šiuo adresu esančios svetainės ir bet kokių mūsų teikiamų demonstracinių / bandomųjų aplinkų naudojimą. Gamybinės platformos naudojimas pagal mokamą sutartį reglamentuojamas užsakymo forma ir prie jos pridedama sutartimi.",
+      "entityQ": "Su kuo sudarote sutartį?",
+      "ipBody": "Visas turinys, prekės ženklai, programos kodas, dizainas ir kita šios svetainės medžiaga priklauso {legalName} arba jos licencijų teikėjams. Niekas šioje svetainėje nesuteikia jums teisės naudotis ta medžiaga, išskyrus aiškiai nurodytus atvejus.",
+      "ipQ": "O kaip dėl intelektinės nuosavybės?",
+      "lawBody": "Šios sąlygos reglamentuojamos Švedijos teisės. Ginčai, kylantys dėl šios svetainės naudojimo, priklauso išimtinei Švedijos teismų jurisdikcijai, nebent jūsų jurisdikcijoje imperatyvi teisė numato kitaip.",
+      "lawQ": "Taikytina teisė",
+      "lede": "Sąlygos, kuriomis naudojatės šia svetaine ir WelloWork platforma. Klientų sutartys, kai taikoma, pakeičia šį puslapį.",
+      "title": "Paslaugų teikimo sąlygos",
+      "useQ": "Kas yra priimtinas naudojimas?",
+      "warrantiesBody": "Svetainė teikiama tokia, „kokia yra“. Nesuteikiame jokios garantijos dėl prieinamumo, tinkamumo konkrečiam tikslui ar bet kokios svetainėje pateiktos trečiųjų šalių informacijos tikslumo. Atsakomybė už svetainės naudojimą ribojama tiek, kiek leidžia Švedijos ir taikytina ES teisė.",
+      "warrantiesQ": "Garantijos ir apribojimai"
+    },
+    "visual": {
+      "anchor": {
+        "changes": "Pakeitimai",
+        "ip": "Intelektinė nuosavybė",
+        "law": "Taikytina teisė",
+        "liability": "Atsakomybė",
+        "use": "Priimtinas naudojimas",
+        "warranties": "Garantijos"
+      },
+      "basis": {
+        "consent": {
+          "label": "Sutikimas",
+          "note": "Rinkodaros tolesnis ryšys po demonstracijos ar kontakto užklausos."
+        },
+        "contract": {
+          "label": "Sutartis",
+          "note": "Sutartos platformos teikimas jūsų darbdaviui."
+        },
+        "interest": {
+          "label": "Teisėti interesai",
+          "note": "Atsakymas į užklausas, saugumo registravimas, apsauga nuo piktnaudžiavimo."
+        },
+        "law": {
+          "label": "Teisinė prievolė",
+          "note": "Švedijos ar ES teisės nustatyti saugojimo terminai."
+        }
+      },
+      "controller": {
+        "customerOrg": "Kliento org.",
+        "directRel": "Tiesioginiai santykiai",
+        "platformUser": "Platformos naudotojas",
+        "roleController": "Valdytojas",
+        "roleProcessor": "Tvarkytojas",
+        "title": "Kas valdo jūsų duomenis?",
+        "viaDpa": "Per DPA",
+        "websiteVisitor": "Svetainės lankytojas",
+        "welloWork": "WelloWork AB",
+        "you": "Jūs"
+      },
+      "cookieBadge": "Tik būtinieji slapukai — pagal numatytuosius nustatymus jokio stebėjimo",
+      "cookieChanges": "Prieš įjungdami bet kokius nebūtinus slapukus, pridėsime sutikimo juostą ir atnaujinsime šį puslapį.",
+      "cookieSteps": {
+        "clear": {
+          "note": "Pašalinkite esamus slapukus arba užblokuokite naujus.",
+          "title": "Išvalykite arba užblokuokite"
+        },
+        "heads": {
+          "note": "Užblokavus būtinuosius slapukus, gali nustoti veikti formų pateikimas.",
+          "title": "Atkreipkite dėmesį"
+        },
+        "settings": {
+          "note": "Atverkite naršyklės privatumo arba slapukų valdiklius.",
+          "title": "Naršyklės nustatymai"
+        }
+      },
+      "cookieTable": {
+        "advertising": {
+          "purpose": "Šioje svetainėje nėra reklamos slapukų.",
+          "status": "Nenaudojama",
+          "type": "Reklama"
+        },
+        "analytics": {
+          "purpose": "Matuotų apibendrintą naudojimą. Įjungimas per būsimą sutikimo juostą.",
+          "status": "Pagal numatytuosius nustatymus išjungta",
+          "type": "Analitika"
+        },
+        "essential": {
+          "purpose": "Būtina svetainės veikimui — pvz., formos būsenai perkraunant.",
+          "status": "Pagal numatytuosius nustatymus įjungta",
+          "type": "Būtinieji"
+        },
+        "headPurpose": "Tikslas",
+        "headStatus": "Būsena",
+        "headType": "Tipas"
+      },
+      "dataGrid": {
+        "contact": {
+          "desc": "Iš formų — vardas, darbo el. paštas, įmonė, pareigos, neprivaloma žinutė.",
+          "label": "Kontaktiniai duomenys"
+        },
+        "platform": {
+          "badge": "Tik jei esate platformos galutinis naudotojas",
+          "desc": "Mokymo, vertinimo ir biožymenų įrašai.",
+          "label": "Platformos duomenys"
+        },
+        "technical": {
+          "desc": "IP ir naršyklės informacija pateikiant formą, siekiant apsisaugoti nuo brukalo ir užtikrinti saugumą.",
+          "label": "Techniniai duomenys"
+        }
+      },
+      "dpaCta": {
+        "note": "Tema: „DPA užklausa“ — nukreipsime jus pas tinkamą asmenį.",
+        "title": "Rašykite el. paštu {email}"
+      },
+      "dpaRel": {
+        "customerOrg": {
+          "detail": "Valdytojas",
+          "role": "Kliento org."
+        },
+        "edgeDelivery": "paslaugos teikimas",
+        "edgeInstructions": "dokumentuoti nurodymai",
+        "endUsers": {
+          "detail": "Duomenų subjektai",
+          "role": "Galutiniai naudotojai"
+        },
+        "welloWork": {
+          "detail": "Tvarkytojas",
+          "role": "WelloWork AB"
+        }
+      },
+      "dpaSplit": {
+        "cat": {
+          "biomarker": "Biožymenų ataskaitos",
+          "cognitive": "Kognityvinis našumas",
+          "identification": "Tapatybė ir kontaktai",
+          "metadata": "Operaciniai metaduomenys"
+        },
+        "dataWeProcess": "Mūsų tvarkomi duomenys",
+        "purpose": {
+          "anonymised": "Nuasmenintos ataskaitos",
+          "biomarker": "Biožymenų ataskaitos",
+          "cognitive": "Kognityvinis lavinimas",
+          "workshop": "Praktinių dirbtuvių planavimas"
+        },
+        "whatWeDo": "Ką darome"
+      },
+      "dpaSubject": {
+        "durationLabel": "Trukmė",
+        "durationValue": "Kliento sutarties trukmė + DPA saugojimo laikotarpis.",
+        "scopeLabel": "Apimtis",
+        "scopeValue": "WelloWork platformos galutiniai naudotojai (paprastai darbuotojai)."
+      },
+      "entity": {
+        "meta": "Registruota Švedijoje",
+        "name": "WelloWork AB",
+        "note": "Taikoma Švedijos teisė.",
+        "tag": "Sutartį sudarantis subjektas"
+      },
+      "euCard": {
+        "defaultLabel": "Tik ES/EEE infrastruktūra",
+        "dpaLabel": "Jokių perdavimų už ES/EEE ribų",
+        "dpaNote": "Be tinkamo perdavimo mechanizmo.",
+        "privacyNote": "Jokių perdavimų už ES/EEE ribų be tinkamo mechanizmo."
+      },
+      "ip": {
+        "branchBranding": "Prekės ženklas",
+        "branchContent": "Turinys",
+        "branchSource": "Programos kodas",
+        "foot": "Licencija nesuteikiama, nebent aiškiai nurodyta.",
+        "ownedBadge": "© priklauso",
+        "owner": "WelloWork AB",
+        "ownerLabel": "Savininkas"
+      },
+      "law": {
+        "text": "<strong>Švedijos teismai</strong> · Švedijos teisė"
+      },
+      "retention": {
+        "backups": {
+          "duration": "90 dienų",
+          "label": "Atsarginės kopijos"
+        },
+        "enquiry": {
+          "duration": "24 mėnesiai",
+          "label": "Užklausų duomenys"
+        },
+        "platform": {
+          "duration": "pagal DPA",
+          "label": "Platformos įrašai"
+        }
+      },
+      "rights": {
+        "access": {
+          "desc": "Gauti turimų duomenų apie jus kopiją.",
+          "name": "Susipažinimas"
+        },
+        "cta": "Rašykite el. paštu {email} su „privatumo užklausa“",
+        "erase": {
+          "desc": "Paprašyti ištrinti jūsų duomenis.",
+          "name": "Ištrynimas"
+        },
+        "object": {
+          "desc": "Nesutikti su tvarkymu, pagrįstu teisėtais interesais.",
+          "name": "Nesutikimas"
+        },
+        "portability": {
+          "desc": "Gauti savo duomenis perkeliamu formatu.",
+          "name": "Perkeliamumas"
+        },
+        "rectify": {
+          "desc": "Paprašyti ištaisyti netikslius duomenis.",
+          "name": "Ištaisymas"
+        },
+        "restrict": {
+          "desc": "Apriboti, kaip tvarkome jūsų duomenis.",
+          "name": "Apribojimas"
+        }
+      },
+      "security": {
+        "audit": "Audito registravimas",
+        "isoBadge": "ISO 27001 rengiama",
+        "rbac": "Prieiga pagal vaidmenis",
+        "rest": "Šifravimas saugant",
+        "transit": "Šifravimas perduodant"
+      },
+      "subprocessor": {
+        "body": "Dabartinis sąrašas klientams pateikiamas pareikalavus.",
+        "email": "El. paštas",
+        "hosting": "Prieglobos paslaugos",
+        "labPartners": "Laboratorijų partneriai",
+        "title": "Subtvarkytojai atitinka GDPR, prireikus įsikūrę ES ir išvardyti jūsų DPA."
+      },
+      "trustBar": {
+        "euData": "Tik ES/EEE duomenys",
+        "gdpr": "Atitinka GDPR",
+        "swedishLaw": "Švedijos teisė"
+      },
+      "use": {
+        "may1": "Naudoti šią svetainę, kad sužinotumėte apie WelloWork ir paprašytumėte demonstracijos.",
+        "may2": "Naršyti mūsų skelbiamą turinį asmeniniams ar verslo tyrimams.",
+        "may3": "Susisiekti su mumis per šioje svetainėje pateiktas formas.",
+        "mayHead": "Galite",
+        "mayNot1": "Bandyti gauti neteisėtą prieigą ar trikdyti paslaugos veikimą.",
+        "mayNot2": "Išgauti, kopijuoti ar nuskaityti duomenis daugiau, nei būdinga įprastam naršymui.",
+        "mayNot3": "Naudoti svetainę konkurencinei žvalgybai neįprastai dideliais kiekiais.",
+        "mayNotHead": "Negalite"
+      },
+      "warranty": {
+        "body": "Ši svetainė teikiama tokia, kokia yra. Negarantuojame veikimo laiko, tikslumo ar tinkamumo konkrečiam tikslui.",
+        "title": "Tokia, kokia yra, be garantijų"
+      }
+    }
+  },
+  "localeSwitcher": {
+    "label": "Kalba",
+    "change": "Keisti kalbą",
+    "current": "Dabartinė kalba: {language}",
+    "menu": "Pasirinkite kalbą",
+    "banner": {
+      "region": "Kalbos pasiūlymas",
+      "question": "Peržiūrėti šią svetainę {language} kalba?",
+      "switch": "Perjungti į {language}",
+      "dismiss": "Ne dabar"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "WelloWork — lavinkite kognityvinį našumą. Matuokite tai, kas svarbu.",
+      "description": "Kasdienis kognityvinis lavinimas, ilgalaikės našumo tendencijos ir biožymenimis grįstos sveikatos įžvalgos — vienoje platformoje, kurią vadovai ir darbuotojai iš tikrųjų naudoja. Sukurta Švedijoje."
+    },
+    "about": {
+      "title": "Apie WelloWork — darbo vietos našumas, sukurtas Švedijoje",
+      "description": "WelloWork AB — švediška darbo vietos našumo platforma, įkurta 2024 m. Mes apjungiame kognityvinį lavinimą, ilgalaikį našumą, biožymenų tyrimus ir tiesioginius praktinius seminarus."
+    },
+    "careers": {
+      "title": "Karjera WelloWork — kaip mes samdome ir kaip su mumis susisiekti",
+      "description": "Šiuo metu neturime atvirų pozicijų, tačiau perskaitome kiekvieną prisistatymą. Štai kaip WelloWork žiūri į samdą, ką greičiausiai pasamdytume pirmiausia ir kaip susisiekti."
+    },
+    "contact": {
+      "title": "Susisiekite su WelloWork — kalbėkitės su pardavimų, palaikymo ar partnerysčių komanda",
+      "description": "Susisiekite su WelloWork komanda Upsaloje, Švedijoje. Rašykite el. paštu info@wellowork.net arba skambinkite +46 760 28 1272 dėl pardavimų, partnerysčių ar bendrų užklausų."
+    },
+    "bookDemo": {
+      "title": "Užsisakykite WelloWork demonstraciją — pasirinkite 30 minučių laiką",
+      "description": "Pasirinkite laiką tiesioginiame kalendoriuje ir susitikite su WelloWork produkto specialistu 30 minučių vadovo skydelio apžvalgai. Sukurta Švedijoje · GDPR atitinkanti."
+    },
+    "legal": {
+      "title": "Teisinė informacija — WelloWork",
+      "description": "WelloWork privatumo politika, naudojimosi sąlygos, slapukų politika ir duomenų tvarkymo santrauka — Švedijos ir ES rinkoms, atitinkanti GDPR."
+    },
+    "platformGrowth": {
+      "title": "WelloRise — kasdienis kognityvinis lavinimas komandoms | WelloWork",
+      "description": "WelloRise — kasdienis kognityvinis lavinimas apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas įtemptoms darbo savaitėms."
+    },
+    "platformAssessment": {
+      "title": "WelloWize — kognityviniai ir techniniai vertinimai | WelloWork",
+      "description": "WelloWize — viena vertinimo sistema atrankos komisijoms ir vidiniam lyginamajam vertinimui. Kognityvinė ir techninė, vertinama pagal pareigybę ir darbo stažą — pagrįsta tiek pasiūlymo etape, tiek vėliau."
+    },
+    "platformMeasure": {
+      "title": "Matavimas — ilgalaikės kognityvinio našumo tendencijos | WelloWork",
+      "description": "WelloWork Matavimas kiekvieną lavinimo sesiją, vertinimą ir praktinį seminarą paverčia ilgalaike našumo tendencija — 90 dienų, 6 mėnesių ir 12 mėnesių vaizdai vadovams."
+    },
+    "platformWorkshops": {
+      "title": "Praktiniai seminarai — tiesioginiai sveikatos seminarai vietoje arba nuotoliniu būdu | WelloWork",
+      "description": "Vadovaujami praktiniai seminarai apie miegą, atsigavimą, mitybą, susikaupimą ir ilgaamžiškumą. Vietoje arba nuotoliniu būdu, užsakomi WelloWork sistemoje, su rezultatais, grįžtančiais į našumo tendencijas."
+    },
+    "platformProactiveCare": {
+      "title": "Proaktyvi priežiūra — biožymenų tyrimai ilgaamžiškumui ir sveikatai | WelloWork",
+      "description": "Kraujo tyrimai ilgaamžiškumo žymenims ir šlapimo tyrimai bendrai sveikatai bei narkotikų patikrai. Darbuotojai mato savo ataskaitą; vadovai mato tik anonimizuotas, apibendrintas tendencijas."
+    },
+    "research": {
+      "title": "Tyrimai ir metodika — kognityviniai konstruktai už WelloWork",
+      "description": "WelloWork kognityvinis lavinimas ir vertinimai grindžiami patvirtintais konstruktais: darbine atmintimi, apdorojimo greičiu, dėmesiu, problemų sprendimu ir kognityviniu lankstumu."
+    },
+    "researchMethodology": {
+      "title": "Metodikos apžvalga — kaip WelloWork matuoja kognityvinį našumą",
+      "description": "Kaip WelloWork susieja pratimus su patvirtintais kognityviniais konstruktais, juos vertina ir apibendrina rezultatus į ilgalaikes našumo tendencijas — su privatumu kaip projektavimo principu."
+    },
+    "researchScienceInsight": {
+      "title": "Mokslas ir įžvalgos — metodikos pastabos iš WelloWork tyrimų",
+      "description": "WelloWork tyrimų komandos darbinės pastabos apie kognityvinius konstruktus, biožymenų metodiką, darbo vietos našumo signalus ir tai, kur literatūra yra ir kur jos nėra."
+    },
+    "researchCognitiveConstructs": {
+      "title": "Kognityviniai konstruktai — penkios sritys, kurias matuoja WelloWork",
+      "description": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas — kiekviena sritis, ją grindžianti literatūra ir kaip WelloWork ją operacionalizuoja."
+    }
+  },
+  "nav": {
+    "aria": {
+      "logoHome": "WelloWork pradinis puslapis",
+      "primary": "Pagrindinis"
+    },
+    "cta": {
+      "bookDemo": "Užsisakyti demonstraciją",
+      "contact": "Susisiekti"
+    },
+    "items": {
+      "about": "Apie mus",
+      "platform": "Platforma",
+      "pricing": "Kainodara",
+      "research": "Tyrimai",
+      "solutions": "Sprendimai"
+    }
+  },
+  "platformAssessment": {
+    "answer": {
+      "body": "WelloWork vertinimo produktas. Jis vertina kandidatus ir esamus darbuotojus pagal tą pačią pažinimo ir techninių gebėjimų sistemą, per kelias minutes pateikia atrankos komisijai parengtus rezultatus ir sukuria vidinius lyginamuosius rodiklius pagal pareigybę ir darbo stažą, kuriuos galima atnaujinti kas ketvirtį.",
+      "label": "Kas yra WelloWize?"
+    },
+    "benchmarkChart": {
+      "eyebrow": "Ketvirtiniai pakartojimai",
+      "legend": {
+        "benchmark": "Pareigybės lyginamasis rodiklis",
+        "employee": "Darbuotojo trajektorija"
+      },
+      "sampleData": "Pavyzdiniai duomenys",
+      "title": "Trajektorija ir pareigybės lyginamasis rodiklis"
+    },
+    "benchmarkSection": {
+      "body": "Viduje WelloWize galima pakartoti pagal grafiką. Rezultatai maitina ilgalaikę tendenciją, kurią atskleidžia Measure produktas, todėl sprendimai dėl pasirengimo paaukštinimui grindžiami metų tendencija, o ne rezultatu, kurį žmogus atsitiktinai pasiekė vertinimo dieną.",
+      "headingAccent": "pareigybę ir stažą.",
+      "headingLead": "Vidiniai lyginamieji rodikliai pagal"
+    },
+    "crumbs": {
+      "current": "Vertinimas — WelloWize",
+      "home": "Pradžia",
+      "platform": "Platforma"
+    },
+    "cta": {
+      "body": "30 minučių pristatymas su pavyzdiniais kandidatų profiliais ir atviras pokalbis apie bandomąjį etapą.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Skaityti tyrimus",
+      "title": "Pamatykite WelloWize realiose atrankos komisijose."
+    },
+    "differSection": {
+      "headingAccent": "atrankos vertinimo įrankio?",
+      "headingLead": "Kuo WelloWize skiriasi nuo",
+      "intro": "Dauguma įrankių baigia veikti vos kandidatui pasirašius. WelloWize naudoja tą pačią sistemą prieš pasiūlymo laišką ir po jo.",
+      "standardLabel": "Standartinis įrankis"
+    },
+    "features": {
+      "auditable": {
+        "body": "Kiekvienas rezultatas atsekamas iki jį sudarančių užduočių ir laiko, sugaišto užduotims, todėl jį galima pagrįsti, jei įdarbinimo sprendimas ginčijamas.",
+        "title": "Audituojamas vertinimas"
+      },
+      "benchmarks": {
+        "body": "Vidiniai rezultatai palyginami tarp įdarbintų asmenų ir darbo stažų, o ne su bendra populiacija.",
+        "title": "Pareigybės ir stažo lyginamieji rodikliai"
+      },
+      "eyebrow": "Kas įtraukta",
+      "feedsTrends": {
+        "body": "Pakartojimai patenka į Measure produktą, todėl sprendimai dėl paaukštinimo remiasi tendencijomis, o ne vienu testu.",
+        "title": "Maitina ilgalaikes tendencijas"
+      },
+      "gdpr": {
+        "body": "Kandidatų ir darbuotojų vertinimo duomenys saugomi ES. Saugojimo ir ištrynimo nuostatas galima konfigūruoti.",
+        "title": "GDPR pagrindu sukurta"
+      },
+      "oneFramework": {
+        "body": "Penkios pažinimo sritys ir pareigybei būdingi techniniai patikrinimai — atskiro tiekėjo kiekvienai daliai nereikia.",
+        "title": "Pažinimas ir technika vienoje sistemoje"
+      },
+      "panelReports": {
+        "body": "Normalizuotas profilis pagal pareigybės lyginamąjį rodiklį, parengtas aptarti pagal pareigybės aprašymą.",
+        "title": "Atrankos komisijos ataskaitos per kelias minutes"
+      },
+      "title": "Su kuo WelloWize pateikiamas?"
+    },
+    "hero": {
+      "eyebrow": "WelloWize — Vertinimas",
+      "lede": "WelloWize suteikia atrankos komisijoms ir žmonių vadovams tą pačią vertinimo terminiją, todėl darbas nesibaigia ties pasiūlymo laišku. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą.",
+      "titleAccent": "ir po jo.",
+      "titleLead": "Viena vertinimo sistema — įdarbinimui"
+    },
+    "measureCards": {
+      "cognitive": {
+        "body": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir pažinimo lankstumas — suderinta su platformos literatūra pagrįstomis konstrukcijomis.",
+        "title": "Penkios pažinimo sritys"
+      },
+      "technical": {
+        "body": "SQL, TypeScript, statistika ir kiti pareigybei aktualūs gebėjimai — pridedami pagal pareigybę ir vertinami kartu su pažinimo profiliu.",
+        "title": "Pareigybei būdingi techniniai patikrinimai"
+      },
+      "timeOnTask": {
+        "body": "Savarankiško tempo ir nuovargio signalai įvertinami kontekste — naudojami rezultatui interpretuoti, o ne kandidatui bausti.",
+        "title": "Laiko, sugaišto užduotims, modeliai"
+      }
+    },
+    "measureSection": {
+      "headingAccent": "iš tikrųjų išmatuoja?",
+      "headingLead": "Ką jis",
+      "intro": "Trys signalo sluoksniai, pateikiami kartu kaip vienas profilis."
+    },
+    "meta": {
+      "description": "WelloWize yra viena vertinimo sistema atrankos komisijoms ir vidiniam lyginimui. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą — pagrįstas pasiūlymo etape ir po jo.",
+      "title": "WelloWize — pažinimo ir techniniai vertinimai | WelloWork"
+    },
+    "panelSection": {
+      "body": "Kandidatui atlikus vertinimą, atrankos komisija mato normalizuotą profilį pagal pareigybės lyginamąjį rodiklį. Tai sąmoningai yra profilis, o ne vienas skaičius — pagrįstas pasiūlymo etape ir lengviau aptariamas pagal pareigybės aprašymą.",
+      "headingAccent": "minutes.",
+      "headingLead": "Atrankos komisijos rezultatai per kelias"
+    },
+    "resultsCard": {
+      "above": "Aukščiau",
+      "aboveBenchmark": "Aukščiau lyginamojo rodiklio 3 iš 5",
+      "below": "Žemiau",
+      "candidateName": "Alex M.",
+      "candidateRole": "Vyresnysis inžinierius — kandidatas",
+      "domains": {
+        "attention": "Dėmesys",
+        "cognitiveFlexibility": "Pažinimo lankstumas",
+        "problemSolving": "Problemų sprendimas",
+        "processingSpeed": "Apdorojimo greitis",
+        "workingMemory": "Darbinė atmintis"
+      },
+      "normalisedProfile": "Normalizuotas profilis",
+      "sampleData": "Pavyzdiniai duomenys",
+      "scaleBenchmark": "· · · pareigybės lyginamasis rodiklis",
+      "scaleHigh": "Aukštas",
+      "scaleLow": "Žemas",
+      "windowLabel": "wellowize · kandidato profilis"
+    },
+    "standardPoints": {
+      "endsAtOffer": "Baigiasi pasirašius pasiūlymą",
+      "scopedHiring": "Apima tik įdarbinimą",
+      "singleScore": "Vienas suminis rezultatas"
+    },
+    "timeline": {
+      "candidateCompletes": {
+        "label": "Kandidatas atlieka",
+        "time": "~45 min."
+      },
+      "panelNotified": {
+        "label": "Komisija informuojama",
+        "time": "Iš karto"
+      },
+      "resultsProcessed": {
+        "label": "Rezultatai apdorojami",
+        "time": "~2 min."
+      }
+    },
+    "timelineCard": {
+      "endToEnd": "~50 min. nuo pradžios iki pabaigos",
+      "eyebrow": "Laikas iki komisijos",
+      "footnote": "Komisija gauna normalizuotą profilį, o ne neapdorotą įrašą. Pavyzdiniai laikai."
+    },
+    "welloWizePoints": {
+      "continuous": {
+        "label": "Nepertraukiamas, pakartojamas",
+        "why": "Ketvirtiniai pakartojimai maitina ilgalaikę tendenciją, kurią atskleidžia Measure produktas."
+      },
+      "prePost": {
+        "label": "Prieš įdarbinimą ir po jo",
+        "why": "Ta pati sistema kandidatui ir tam pačiam žmogui po dvylikos mėnesių — tiesiogiai palyginama."
+      },
+      "profile": {
+        "label": "Normalizuotas profilis, o ne skaičius",
+        "why": "Forma pagal pareigybės lyginamąjį rodiklį — pagrįsta pasiūlymo etape ir lengviau aptariama pagal pareigybės aprašymą."
+      }
+    }
+  },
+  "platformGrowth": {
+    "answer": {
+      "body": "Kasdienio kognityvinio lavinimo sluoksnis WelloWork platformoje — adaptyvios sesijos, apimančios penkis patvirtintus konstruktus, apmokamos žetonais ir maitinančios tą pačią ilgalaikę tendenciją, kurią vadovai mato apibendrintą.",
+      "label": "Kas yra WelloRise?"
+    },
+    "comparison": {
+      "consumerLabel": "Vartotojiška programėlė",
+      "headingAccent": "smegenų lavinimo programėlės?",
+      "headingLead": "Kuo tai skiriasi nuo"
+    },
+    "constructs": {
+      "attention": {
+        "desc": "Išlaikykite dėmesį tam, kas svarbu, ir atsijokite tai, kas ne.",
+        "label": "Dėmesys"
+      },
+      "cognitiveFlexibility": {
+        "desc": "Akimirksniu pereikite tarp užduočių, požiūrių ir mąstymo modelių.",
+        "label": "Kognityvinis lankstumas"
+      },
+      "problemSolving": {
+        "desc": "Mąstykite logiškai naujose situacijose ir prisitaikykite prie neįprastų apribojimų.",
+        "label": "Problemų sprendimas"
+      },
+      "processingSpeed": {
+        "desc": "Kaip greitai jūs priimate, įvertinate ir reaguojate į naują informaciją esant spaudimui.",
+        "label": "Apdorojimo greitis"
+      },
+      "workingMemory": {
+        "desc": "Laikykite ir atnaujinkite informaciją mintyse — kognityvinis darbastalis sudėtingam darbui.",
+        "label": "Darbinė atmintis"
+      }
+    },
+    "constructsSection": {
+      "headingAccent": "iš tikrųjų duoda?",
+      "headingLead": "Ką kasdienis kognityvinis lavinimas",
+      "intro": "Penki patvirtinti konstruktai, lavinami trumpose adaptyviose sesijose."
+    },
+    "consumerPoints": {
+      "noWorkContext": "Nėra darbo konteksto",
+      "optimisedEngagement": "Optimizuota įsitraukimui",
+      "personalEntertainment": "Asmeninė pramoga",
+      "singleUserData": "Vieno naudotojo duomenys",
+      "standaloneScore": "Atskiras balas"
+    },
+    "crumbs": {
+      "current": "Augimas — WelloRise",
+      "home": "Pradžia",
+      "platform": "Platforma"
+    },
+    "cta": {
+      "body": "30 minučių apžvalga su jūsų pramonės pavyzdiniais duomenimis — ir atviras pokalbis apie bandomąjį projektą.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Palyginti platformos planus",
+      "titleAccent": "vadovo skydelyje.",
+      "titleLead": "Pamatykite WelloRise"
+    },
+    "employeeCards": {
+      "adaptive": {
+        "body": "Kiekviena sesija prisitaiko prie jūsų dabartinio lygio visuose penkiuose konstruktuose. Esate tempiami į priekį, bet ne pervarginami — ir niekada nenuobodžiaujate.",
+        "sub": "Sukalibruota pagal kiekvieną sritį",
+        "title": "Prisitaiko prie jūsų"
+      },
+      "peers": {
+        "body": "Kuruokite kolegą, surenkite pietų metu vykstantį seminarą arba paimkite tobulinimo užduotį iš prekyvietės — kolegos atsilygina jums žetonais.",
+        "sub": "Žetonais apmokama užduočių prekyvietė",
+        "title": "Padėkite kolegoms, uždirbkite daugiau"
+      },
+      "privacy": {
+        "body": "Individualūs sesijų rezultatai lieka pas jus. Vadovai mato tik anonimizuotas, apibendrintas tendencijas — niekada ne pavienių asmenų balus.",
+        "sub": "Vadovai mato tik apibendrinimus",
+        "title": "Jūsų duomenys — privatūs"
+      },
+      "tokens": {
+        "body": "Kasdienės sesijos uždirba žetonus. Išleiskite juos knygoms, kursams ar tobulinimo programoms — finansuojama iš biudžeto, kurį komanda jau turi.",
+        "sub": "Iškeiskite į kursus ir tobulėjimą",
+        "title": "Žetonai finansuoja mokymąsi"
+      }
+    },
+    "employeeSection": {
+      "headingAccent": "darbuotojui?",
+      "headingLead": "Kuo tai naudinga"
+    },
+    "features": {
+      "adaptive": {
+        "body": "Kiekviena sesija kalibruojama pagal sritį. Per mažai išmėginami darbuotojai nesustingsta vietoje; pervarginti — nepervargsta.",
+        "title": "Adaptyvus sudėtingumas"
+      },
+      "domains": {
+        "body": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas — susieti su konstruktų lygmens literatūra.",
+        "title": "Penkios patvirtintos kognityvinės sritys"
+      },
+      "eyebrow": "Kas įtraukta",
+      "longitudinal": {
+        "body": "Kiekviena sesija yra duomenų taškas. Tendencijos, o ne pavieniai balai, formuoja vadovo rodinį ir pasirengimo paaukštinimui signalus.",
+        "title": "Ilgalaikės tendencijos"
+      },
+      "privacy": {
+        "body": "Individualūs sesijų rezultatai yra privatūs darbuotojui. Vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+        "title": "Privatumas pirmiausia darbuotojui"
+      },
+      "teamComposition": {
+        "body": "Rekomenduoja optimalų komandos sudėties derinį kiekvienam projektui, remiantis apibendrintais kognityviniais profiliais ir ankstesniais rezultatais.",
+        "title": "Komandos sudėties variklis"
+      },
+      "titleAccent": "WelloRise",
+      "titleLead": "Ką siūlo",
+      "titleTrail": "?",
+      "tokens": {
+        "body": "Sesijos uždirba žetonus, kuriuos galima iškeisti į kursus, tobulinimo programas ar kolegų pagalbą — finansuojant mokymąsi, kurio komanda jau nori.",
+        "title": "Žetonų ekonomika"
+      }
+    },
+    "hero": {
+      "eyebrow": "WelloRise — Augimas",
+      "lede": "WelloRise yra kasdienio kognityvinio lavinimo produktas, sukurtas darbo savaitėms, o ne laboratorijos sąlygoms. Penkios–dešimt minučių per dieną penkiuose patvirtintuose kognityviniuose konstruktuose — su žetonų ekonomika, finansuojančia mokymąsi.",
+      "titleAccent": "kavos pertraukėlę.",
+      "titleLead": "Kasdienis kognityvinis lavinimas, telpantis į"
+    },
+    "managerCards": {
+      "annotated": {
+        "body": "Sprintų apkarpymai, leidimai ir budėjimo rotacijos pažymimi tendencijų linijoje — kad matytumėte, kurie darbo modeliai kainuoja komandai.",
+        "sub": "Sprintai, leidimai, budėjimai",
+        "title": "Pažymėta prie darbo įvykių"
+      },
+      "composition": {
+        "body": "Rekomenduokite tinkamą kognityvinių stiprybių derinį projektui, sprintui ar darbo grupei — remiantis apibendrintais profiliais, o ne spėjimais.",
+        "sub": "Pagrįsta kognityvinėmis stiprybėmis",
+        "title": "Komandos sudėties atitiktis"
+      },
+      "trends": {
+        "body": "Slankieji ilgalaikiai rodiniai parodo, ar komanda tobulėja, ar nukrypsta — gerokai anksčiau, nei tai galėtų atskleisti viena apklausa.",
+        "sub": "90 dienų, 6 mėnesių, 12 mėnesių rodiniai",
+        "title": "Tendencijos per visus metus"
+      },
+      "variability": {
+        "body": "Operacijoms kritinėse pareigose stebėkite dėmesio ir apdorojimo greičio kintamumo šuolius, kurie dažnai įvyksta prieš klaidų laikotarpius.",
+        "sub": "Operacijoms kritinėms pareigoms",
+        "title": "Kintamumas ten, kur svarbu"
+      }
+    },
+    "managerSection": {
+      "headingAccent": "vadovui?",
+      "headingLead": "Kuo tai naudinga"
+    },
+    "meta": {
+      "description": "WelloRise yra kasdienis kognityvinis lavinimas, apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas užimtoms darbo savaitėms.",
+      "title": "WelloRise — kasdienis kognityvinis lavinimas komandoms | WelloWork"
+    },
+    "sessionCard": {
+      "chip": {
+        "attention": "Dėmesys",
+        "flexibility": "Lankstumas",
+        "memory": "Atmintis",
+        "problemSolving": "Problemų sprendimas",
+        "processing": "Apdorojimas"
+      },
+      "constructs": "konstruktai",
+      "currentTask": "Darbinė atmintis",
+      "elapsed": "praėjo 2:14",
+      "eyebrow": "Šiandienos sesija",
+      "inProgress": "Vyksta",
+      "left": "liko ~3 min.",
+      "live": "Tiesiogiai",
+      "taskOf": "2 užduotis iš 3",
+      "taskProgressAria": "Užduoties eiga",
+      "title": "5 minutės jūsų tendencijai palaikyti",
+      "tokensEarned": "+12 žetonų uždirbta šiandien",
+      "tokensRedeem": "Iškeiskite į kursus, knygas ar kolegų pagalbą"
+    },
+    "welloRisePoints": {
+      "annotated": {
+        "label": "Pažymėta prie darbo įvykių",
+        "why": "Sprintai, leidimai ir budėjimo pamainos pažymimi tendencijų linijoje."
+      },
+      "feedsDashboard": {
+        "label": "Maitina komandos skydelį",
+        "why": "Apibendrintas, anonimizuotas signalas pasiekia vadovus — niekada ne individualūs rezultatai."
+      },
+      "longitudinal": {
+        "label": "Ilgalaikė tendencija",
+        "why": "Stebime, kaip kiekviena sritis kinta savaitėmis, o ne balą kurią nors atskirą dieną."
+      },
+      "stableSignal": {
+        "label": "Optimizuota stabiliam signalui",
+        "why": "Ta pati užduočių struktūra ir sudėtingumo kreivė — kad šio mėnesio balas būtų palyginamas su kito ketvirčio balu."
+      },
+      "workplaceLayer": {
+        "label": "Darbo vietos rezultatų sluoksnis",
+        "why": "Veikia toje pačioje platformoje kaip vertinimas, seminarai ir komandos sudėtis."
+      }
+    }
+  },
+  "platformMeasure": {
+    "answer": {
+      "body": "„Measure“ kiekvieną treniruočių sesiją, vertinimą ir seminaro sąveiką paverčia ilgalaikiu veiklos rodikliu. Vadovai mato 90 dienų, 6 mėnesių ir 12 mėnesių apibendrintas tendencijas, automatiškai pažymėtas šalia darbo įvykių, tokių kaip sprintų peržiūros, budėjimo rotacijos ir pamainų pasikeitimai.",
+      "label": "Kas yra „WelloWork Measure“?"
+    },
+    "crumbs": {
+      "current": "Measure — Veiklos tendencijos",
+      "home": "Pradžia",
+      "platform": "Platforma"
+    },
+    "cta": {
+      "body": "Realistiniai jūsų pramonės šakos pavyzdiniai duomenys su tiesiogiai įdiegtu privatumo modeliu.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Kaip mes tai matuojame",
+      "titleAccent": "viename ekrane.",
+      "titleLead": "Pamatykite šešių mėnesių tendenciją"
+    },
+    "employeeCard": {
+      "anonymised": "Anonimizuota",
+      "appUrl": "app.wellowork.net / me",
+      "gdprNote": "GDPR · eksportas arba ištrynimas",
+      "ownNote": "Šie duomenys priklauso darbuotojams — vadovai mato tik išlygintus apibendrinimus, viršijančius minimalų komandos dydį.",
+      "perSession": "Per sesiją",
+      "sampleData": "Pavyzdiniai duomenys",
+      "teamAggregateLead": "Komandos suvestinė",
+      "teamAggregateQualifier": "(ką mato jūsų vadovas)",
+      "yourTrendLead": "Jūsų tendencija",
+      "yourTrendQualifier": "(matoma jums)"
+    },
+    "employeeSection": {
+      "body": "Darbuotojai mato savo pačių duomenis — savo individualius sesijų rezultatus ir tą pačią tendenciją, kurią vadovas mato apibendrintai. Jie kontroliuoja, ką jų vadovas ir HR gali matyti komandos lygmeniu, ir bet kuriuo metu gali prašyti eksportuoti ar ištrinti duomenis pagal GDPR.",
+      "heading": "Kaip tai atrodo darbuotojui?"
+    },
+    "features": {
+      "aggregated": {
+        "body": "Vadovai ir HR mato anonimizuotas tendencijas pagal komandą ir kohortą — niekada atskirus darbuotojus.",
+        "title": "Apibendrinti komandos vaizdai"
+      },
+      "annotated": {
+        "body": "Sprintų peržiūros, leidimai, pamainų pasikeitimai ir budėjimo rotacijos uždedami ant tendencijos, kad nuosmukiai neatrodytų kaip paslaptys.",
+        "title": "Automatiškai pažymėta šalia darbo įvykių"
+      },
+      "eyebrow": "Kas įskaičiuota",
+      "privacy": {
+        "body": "Apibendrinimai užtikrina minimalų komandos dydį, kol bet koks skaičius nerodomas. Darbuotojai išlaiko eksporto ir ištrynimo teises.",
+        "title": "Privatumas pagal dizainą"
+      },
+      "promotion": {
+        "body": "Tendencijos nuolydis, vaidmens etalonas ir stažui proporcinga veikla susilieja į vieną, pagrįstą rodiklį.",
+        "title": "Pasirengimo paaukštinimui rodiklis"
+      },
+      "title": "Kas yra „Measure“ komplekte?",
+      "variability": {
+        "body": "Ten, kur kintamumas kenkia (sauga, operacijos), „Measure“ jį atskleidžia. Ten, kur jis sveikas (kūrybinis darbas), jis nebaudžiamas.",
+        "title": "Kintamumo metrikos"
+      },
+      "views": {
+        "body": "Trys tendencijos horizontai — sprinto kadencijos, pusmečio ir viso metų. Rodmenys išlieka stabilūs, kai nutinka viena bloga savaitė.",
+        "title": "90 / 180 / 365 dienų vaizdai"
+      }
+    },
+    "hero": {
+      "eyebrow": "Measure — Veiklos tendencijos",
+      "lede": "„Measure“ yra „WelloWork“ platformos tendencijų sluoksnis. Kiekviena sesija, kiekvienas vertinimas ir kiekvienas seminaras yra duomenų taškas — apibendrintas vadovams ir detalizuotas darbuotojui, kuriam jis priklauso.",
+      "titleAccent": "ne vienkartinis balas.",
+      "titleLead": "Ilgalaikė veikla —"
+    },
+    "meta": {
+      "description": "„WelloWork Measure“ kiekvieną treniruočių sesiją, vertinimą ir seminarą paverčia ilgalaike veiklos tendencija — 90 dienų, 6 mėnesių ir 12 mėnesių vaizdais vadovams.",
+      "title": "Measure — ilgalaikės kognityvinės veiklos tendencijos | WelloWork"
+    },
+    "promotionCard": {
+      "last6mo": "Paskutiniai 6 mėnesiai · Pavyzdiniai duomenys",
+      "roleEmployee": "Darbuotojas",
+      "roleHR": "HR",
+      "roleManager": "Vadovas",
+      "signalStrong": "Stiprus",
+      "signalStrongLead": "Pasirengimo paaukštinimui rodiklis:",
+      "threeWay": "Pradeda trišalį pokalbį",
+      "trendSlope": "Tendencijos nuolydis ↑"
+    },
+    "promotionSection": {
+      "body": "Mes sąmoningai laikomės, kad pasirengimas paaukštinimui yra rodiklis, o ne nuosprendis. Tai atspirties taškas pokalbiui tarp vadovo, HR ir darbuotojo — tokiam, kurį jie gali vesti turėdami už nugaros mėnesius palyginamų duomenų, o ne vienos vertinimo dienos.",
+      "heading": "Pasirengimas paaukštinimui pagal tendenciją, o ne vieną testą"
+    },
+    "scoreVsTrend": {
+      "body": "Vienas kognityvinis balas tam tikrą dieną atspindi miegą, kofeiną, stresą ir triukšmą tiek pat, kiek ir pačią sritį. Tendencija per savaites ir mėnesius filtruoja tą triukšmą ir parodo kryptį — vienintelį dalyką, pagal kurį vadovas gali veikti be neteisingų vieno taško sprendimų.",
+      "heading": "Kodėl tendencija geriau už balą?"
+    },
+    "scoreVsTrendCompare": {
+      "oneTimeAffected": "Veikiama: miego, kofeino, streso, triukšmo, paros laiko.",
+      "oneTimeScore": "Vienkartinis balas",
+      "trendDirection": "Rodo kryptį — ne momentinį vaizdą.",
+      "trendView": "Tendencijos vaizdas",
+      "vs": "PRIEŠ"
+    },
+    "seeCards": {
+      "annotation": {
+        "body": "Sprintų peržiūros, budėjimo rotacijos, leidimai ir pamainų pasikeitimai, uždėti ant tendencijos.",
+        "title": "Automatinis žymėjimas"
+      },
+      "promotion": {
+        "body": "Pagrįsta tendencijos nuolydžiu per mėnesius, o ne viena vertinimo diena.",
+        "title": "Pasirengimo paaukštinimui rodiklis"
+      },
+      "teamTrend": {
+        "body": "Per penkias kognityvines sritis — anonimizuota, niekada nepriklausomai nuo asmens.",
+        "title": "Apibendrinta komandos tendencija"
+      },
+      "variability": {
+        "body": "Naudinga saugai kritinėms ir operacijoms kritinėms rolėms, kur svarbi sklaida.",
+        "title": "Kintamumas komandoje"
+      }
+    },
+    "seeSection": {
+      "heading": "Ką iš tikrųjų galite pamatyti?"
+    },
+    "trendCard": {
+      "annotationShift": "Pamainos pasikeitimas",
+      "annotationSprint": "Sprinto peržiūra",
+      "chartTitle": "12 mėnesių kognityvinė tendencija",
+      "monthApr": "Bal.",
+      "monthJan": "Saus.",
+      "monthJul": "Liep.",
+      "monthOct": "Spal.",
+      "personName": "Jordan K.",
+      "personRole": "Vyresnysis inžinierius",
+      "privacyChip": "Šis vaizdas priklauso darbuotojui · Galimas GDPR eksportas",
+      "sampleData": "Pavyzdiniai duomenys",
+      "tab12mo": "12 mėnesių",
+      "tab6mo": "6 mėnesiai",
+      "tab90": "90 dienų",
+      "trendingUp": "↑ Kyla aukštyn"
+    }
+  },
+  "platformProactiveCare": {
+    "answer": {
+      "body": "„Proactive Care“ yra WelloWork biožymenų mėginių tyrimų paslauga. Bandomieji projektai vykdomi vietoje arba per partnerystės laboratorijas, atliekant kraujo tyrimus, orientuotus į ilgaamžiškumui aktualius žymenis (HbA1c, ApoB, hs-CRP, lipidai, vitaminas D ir kt.), bei šlapimo tyrimus bendrai sveikatai ir medžiagų patikrai įvertinti. Ataskaita priklauso darbuotojui; vadovai mato tik dalyvavimo rodiklius ir aukšto lygio tendencijas.",
+      "label": "Kas yra „Proactive Care“?"
+    },
+    "crumbs": {
+      "current": "Proactive Care",
+      "home": "Pradžia",
+      "platform": "Platforma"
+    },
+    "cta": {
+      "body": "Tyrimų rinkiniai, geografinė aprėptis ir patikros apimtis patvirtinami planavimo pokalbio metu. Bandomieji projektai paprastai jungia biožymenų tyrimus su praktiniais užsiėmimais „Platform + Services“ pakopoje.",
+      "primary": "Užsisakyti planavimo pokalbį",
+      "secondary": "Susisiekti su pardavimų komanda",
+      "title": "Suplanuokite „Proactive Care“ projektą."
+    },
+    "features": {
+      "aggregated": {
+        "body": "Vadovai mato dalyvavimo rodiklius ir anonimizuotas, apibendrintas tendencijas — niekada ne individualias reikšmes.",
+        "title": "Apibendrintas vadovo vaizdas"
+      },
+      "bloodPanel": {
+        "body": "Konfigūruojamas ilgaamžiškumui aktualių žymenų rinkinys, paimamas vietoje arba per partnerystės laboratorijas.",
+        "title": "Ilgaamžiškumo kraujo tyrimas"
+      },
+      "chainOfCustody": {
+        "body": "Mėginių tvarkymas ir saugojimo grandinė atitinka akredituotos laboratorijos partnerės standartinę praktiką kiekvienoje šalyje.",
+        "title": "Laboratorinio lygio saugojimo grandinė"
+      },
+      "employeeOwned": {
+        "body": "Rezultatus mato tik darbuotojas. Jis gali jais pasidalyti su savo gydytoju, eksportuoti arba paprašyti ištrinti.",
+        "title": "Darbuotojui priklausančios ataskaitos"
+      },
+      "eyebrow": "Kas įtraukta",
+      "linked": {
+        "body": "Darbuotojui sutikus, biožymenų duomenys pažymimi jo paties kognityvinių tendencijų rodinyje.",
+        "title": "Susieta su veiklos tendencijomis"
+      },
+      "title": "Su kuo pristatomas „Proactive Care“ projektas?",
+      "urinePanel": {
+        "body": "Bendros sveikatos žymenys ir, kai numatyta, narkotikų patikra, sukonfigūruota pagal kliento politiką.",
+        "title": "Šlapimo sveikata ir patikra"
+      }
+    },
+    "hero": {
+      "eyebrow": "Proactive Care",
+      "lede": "Kraujo tyrimai ilgaamžiškumo žymenims ir šlapimo tyrimai bendrai sveikatai bei narkotikų patikrai. Darbuotojai mato visą savo ataskaitą. Vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+      "titleAccent": "narkotikų patikrai.",
+      "titleLead": "Biožymenų tyrimai ilgaamžiškumui, sveikatai ir"
+    },
+    "logistics": {
+      "step1": {
+        "body": "Vietoje – bandomiesiems projektams, arba per partnerystės laboratoriją netoli darbuotojo.",
+        "note": "Atskiro darbuotojo sutikimas prieš paimant bet kokį mėginį.",
+        "title": "Mėginys paimtas"
+      },
+      "step2": {
+        "body": "Akredituota laboratorija partnerė tvarko mėginį, apdorojimą ir ataskaitų rengimą pagal savo standartinę praktiką.",
+        "title": "Saugojimo grandinės apdorojimas"
+      },
+      "step3": {
+        "body": "Tik darbuotojas. Jis gali pasidalyti su savo gydytoju, eksportuoti arba paprašyti ištrinti.",
+        "title": "Darbuotojas gauna ataskaitą"
+      },
+      "stepLabel": "ŽINGSNIS {index}"
+    },
+    "logisticsSection": {
+      "body": "Didesniems bandomiesiems projektams mėginiai imami vietoje, arba per partnerystės laboratorijas netoli darbuotojo. Mėginių saugojimo grandinė ir laboratorinis tvarkymas atitinka toje šalyje pasitelktos akredituotos laboratorijos partnerės standartinę praktiką. Narkotikų patikros apimtis konfigūruojama pagal kliento politiką ir suderinama su atskiru darbuotoju prieš paimant mėginį.",
+      "heading": "Kaip tai vykdoma logistiškai?"
+    },
+    "meta": {
+      "description": "Kraujo tyrimai ilgaamžiškumo žymenims ir šlapimo tyrimai bendrai sveikatai bei narkotikų patikrai. Darbuotojai mato savo ataskaitą; vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+      "title": "Proactive Care — biožymenų tyrimai ilgaamžiškumui ir sveikatai | WelloWork"
+    },
+    "panels": {
+      "blood": {
+        "body": "Metaboliniai, uždegiminiai ir širdies bei kraujagyslių žymenys, dažnai naudojami į ilgaamžiškumą orientuotoje profilaktinėje priežiūroje.",
+        "eyebrow": "Kraujas",
+        "markers": {
+          "apob": "ApoB",
+          "cbc": "CBC",
+          "hba1c": "HbA1c",
+          "hscrp": "hs-CRP",
+          "lipidSubFractions": "Lipidų pofrakcijos",
+          "vitaminD": "Vitaminas D"
+        },
+        "title": "Ilgaamžiškumo rinkinys"
+      },
+      "urine": {
+        "body": "Standartiniai bendros sveikatos žymenys ir, kai numatyta, medžiagų vartojimo patikra, sukonfigūruota pagal kliento politiką.",
+        "eyebrow": "Šlapimas",
+        "markers": {
+          "drugScreen": "Narkotikų patikra (pasirinktinai)",
+          "glucose": "Gliukozė",
+          "hydration": "Hidratacija",
+          "kidney": "Inkstų funkcija",
+          "protein": "Baltymai"
+        },
+        "title": "Bendra sveikata ir patikra"
+      }
+    },
+    "reportCard": {
+      "colHealthy": "Sveikatos norma",
+      "colHigh": "Aukšta",
+      "colLow": "Žema",
+      "colMarker": "Žymuo",
+      "markers": {
+        "apob": "ApoB",
+        "hba1c": "HbA1c",
+        "hscrp": "hs-CRP",
+        "lipids": "Lipidai",
+        "vitaminD": "Vitaminas D"
+      },
+      "markersAttention": "2 žymenims reikia dėmesio",
+      "personName": "Jordan K.",
+      "personRole": "Rinkodaros vadovas",
+      "privacyChip": "Ši ataskaita priklauso darbuotojui · Galimas GDPR eksportas",
+      "reportQ2": "Biožymenų ataskaita · II ketv.",
+      "sampleData": "Pavyzdiniai duomenys"
+    },
+    "roleAccess": {
+      "aria": {
+        "aggregated": "Apibendrinta",
+        "cohortTrend": "Anonimizuota kohortos tendencija",
+        "hidden": "Paslėpta",
+        "visibleMarker": "Matomas žymuo"
+      },
+      "cellAggLabel": "APIBENDR.",
+      "employee": {
+        "detail": "Visa ataskaita — matomas kiekvienas žymuo",
+        "role": "Darbuotojas"
+      },
+      "heading": "Ką mato kiekvienas vaidmuo",
+      "legend": {
+        "aggregated": "Apibendrinta",
+        "cohortTrend": "Kohortos tendencija",
+        "hidden": "Paslėpta",
+        "visible": "Žymuo matomas"
+      },
+      "managerHR": {
+        "detail": "Apibendrintos tendencijos esant minimaliam komandos dydžiui",
+        "role": "Vadovas / HR"
+      },
+      "privacyChip": "Architektūrinė taisyklė — ne politikos išimtis",
+      "wellowork": {
+        "detail": "Tik anonimizuota, kohortos lygmens tendencija",
+        "role": "WelloWork"
+      }
+    },
+    "siloVsLongitudinal": {
+      "annualLabel": "Metinis sveikatos patikrinimas",
+      "annualNote1": "Kartą per metus, be ilgalaikio konteksto.",
+      "annualNote2": "Pastebėta per vėlai.",
+      "monthApr": "Bal.",
+      "monthDec": "Gruod.",
+      "monthJan": "Saus.",
+      "monthJul": "Liep.",
+      "monthOct": "Spal.",
+      "oneReading": "Vienas matavimas",
+      "vs": "PRIEŠ",
+      "welloWorkNote1": "Biožymenys + kognityviniai duomenys — nuolatiniai, taikytini.",
+      "welloWorkNote2": "Imkitės veiksmų dabar.",
+      "welloWorkView": "WelloWork vaizdas"
+    },
+    "testSection": {
+      "body": "Du tyrimų rinkiniai, konfigūruojami pagal kiekvieną projektą. Kraujas — ilgaamžiškumui aktualiems žymenims, šlapimas — bendrai sveikatai ir (kai numatyta) medžiagų patikrai.",
+      "heading": "Ką tiria „Proactive Care“?",
+      "note": "Pastaba: WelloWork nėra klinikinė diagnostikos paslauga. Ataskaitose nurodomi normos ribas viršijantys žymenys ir rekomenduojama kreiptis į savo gydytoją. Mes nediagnozuojame ligų ir neteikiame medicininių patarimų."
+    },
+    "whoSeesSection": {
+      "body": "Darbuotojas yra vienintelis asmuo, matantis visą savo biožymenų ataskaitą. Vadovai ir HR mato apibendrintas, anonimizuotas tendencijas esant minimaliam komandos dydžiui — niekada ne individualias reikšmes. Tai yra griežta architektūrinė platformos taisyklė, o ne politika, kurią kas nors galėtų pakeisti.",
+      "heading": "Kas mato rezultatus?"
+    },
+    "whySection": {
+      "body": "Nedidelis biožymenų skaičius reikšmingai veikia kognityvinius gebėjimus ilgainiui — miego struktūra (vertinama per metabolinius žymenis), gliukozės svyravimai, uždegimas ir bazinė mikronutrientų būklė. Vertinant biožymenų duomenis kaip dalį to paties ilgalaikio vaizdo kartu su kognityviniu lavinimu ir vertinimais, darbuotojai ir jų gydytojai gali jais remtis veikdami, o ne sužinoti apie tai kartą per metus per sveikatos patikrinimą.",
+      "heading": "Kodėl tyrimai yra veiklos platformos dalis?"
+    }
+  },
+  "platformTabs": {
+    "cta": {
+      "explore": "Naršyti {tab}"
+    },
+    "explore": "Naršyti {section}",
+    "section": {
+      "eyebrow": "Platforma",
+      "heading": {
+        "accent": "žmogiškąjį kapitalą.",
+        "lead": "Viena operacinė sistema "
+      },
+      "titleAccent": "žmogiškąjį kapitalą.",
+      "titleLead": "Viena operacinė sistema"
+    },
+    "tabs": {
+      "assessment": {
+        "body": "Viena vertinimo sistema kandidatams ir esamiems darbuotojams. Sukurkite pagrįstus profilius dar prieš pasiūlymo laišką ir toliau matuokite po jo.",
+        "bullet1": "Kognityvinis ir techninis — viena sistema",
+        "bullet2": "Atrankos komisijos rezultatai per kelias minutes",
+        "bullet3": "Vidiniai etalonai pagal vaidmenį ir stažą",
+        "bullets": [
+          "Kognityvinis ir techninis — viena sistema",
+          "Atrankos komisijos rezultatai per kelias minutes",
+          "Vidiniai etalonai pagal vaidmenį ir stažą"
+        ],
+        "eyebrow": "WelloWize",
+        "label": "Vertinimas",
+        "title": "Įdarbinimo ir vidiniai vertinimai — kognityviniai ir techniniai."
+      },
+      "growth": {
+        "body": "Adaptyvūs pratimai, apimantys problemų sprendimą, darbinę atmintį, dėmesį, informacijos apdorojimo greitį ir kognityvinį lankstumą. Žetonai atrakina kursus; užduočių rinka leidžia kolegoms padėti vieni kitiems ir užsidirbti.",
+        "bullet1": "Adaptyvus sudėtingumas pagal kiekvieną kognityvinę sritį",
+        "bullet2": "Žetonai keičiami į kursus ir tobulėjimo kryptis",
+        "bullet3": "Komandos sudarymo varikliukas rekomenduoja optimalias komandas kiekvienam projektui",
+        "bullets": [
+          "Adaptyvus sudėtingumas pagal kiekvieną kognityvinę sritį",
+          "Žetonai keičiami į kursus ir tobulėjimo kryptis",
+          "Komandos sudarymo varikliukas rekomenduoja optimalias komandas kiekvienam projektui"
+        ],
+        "eyebrow": "WelloRise",
+        "label": "Tobulėjimas",
+        "title": "Kasdienės kognityvinės treniruotės, telpančios į kavos pertraukėlę."
+      },
+      "measure": {
+        "body": "Kiekviena sesija, kiekvienas vertinimas, kiekvienas seminaras yra duomenų taškas. Stebėkite, kaip kognityvinis darbingumas kinta per sprintus, pamainas ir sezonus — atskiriems žmonėms ir apibendrintai vadovams.",
+        "bullet1": "90 dienų, 6 mėnesių ir 12 mėnesių rodiniai",
+        "bullet2": "Automatiškai anotuojami pagal darbo įvykius",
+        "bullet3": "Pasirengimo paaukštinimui signalai pagal tendenciją, o ne pagal vienkartinį testą",
+        "bullets": [
+          "90 dienų, 6 mėnesių ir 12 mėnesių rodiniai",
+          "Automatiškai anotuojami pagal darbo įvykius",
+          "Pasirengimo paaukštinimui signalai pagal tendenciją, o ne pagal vienkartinį testą"
+        ],
+        "eyebrow": "Darbingumo tendencijos",
+        "label": "Matavimas",
+        "title": "Ilgalaikis darbingumas — o ne vienkartinis įvertis."
+      },
+      "proactiveCare": {
+        "body": "Kraujo tyrimai ilgaamžiškumo žymenims ir šlapimo tyrimai bendrai sveikatai bei narkotikų patikrai. Darbuotojai mato visą savo ataskaitą. Vadovai mato tik anonimizuotas, apibendrintas tendencijas.",
+        "bullet1": "Kraujas: ilgaamžiškumo biožymenys",
+        "bullet2": "Šlapimas: bendra sveikata ir narkotikų patikra",
+        "bullet3": "Darbuotojui privatūs ir vadovui apibendrinti rodiniai",
+        "bullets": [
+          "Kraujas: ilgaamžiškumo biožymenys",
+          "Šlapimas: bendra sveikata ir narkotikų patikra",
+          "Darbuotojui privatūs ir vadovui apibendrinti rodiniai"
+        ],
+        "eyebrow": "Prevencinė priežiūra",
+        "label": "Aktyvi priežiūra",
+        "title": "Biožymenų tyrimai ilgaamžiškumui, bendrai sveikatai ir narkotikų patikrai."
+      },
+      "workshops": {
+        "body": "Vedančiojo organizuojamos sesijos, sukurtos pagal kognityvinio darbingumo ir ilgaamžiškumo temas, kurių poveikis kaupiasi. Užsakoma per tą pačią platformą — rezultatai grįžta atgal į tendencijų duomenis.",
+        "bullet1": "Su vedančiuoju, vietoje arba nuotoliniu būdu",
+        "bullet2": "Suderinta su kognityvinio darbingumo ir ilgaamžiškumo mokslu",
+        "bullet3": "Užsakymai, dalyvavimas ir tolesni veiksmai vienoje vietoje",
+        "bullets": [
+          "Su vedančiuoju, vietoje arba nuotoliniu būdu",
+          "Suderinta su kognityvinio darbingumo ir ilgaamžiškumo mokslu",
+          "Užsakymai, dalyvavimas ir tolesni veiksmai vienoje vietoje"
+        ],
+        "eyebrow": "Paslaugų sluoksnis",
+        "label": "Seminarai",
+        "title": "Gyvi sveikatos seminarai — vietoje arba nuotoliniu būdu."
+      }
+    },
+    "visual": {
+      "assessment": {
+        "badge": "Pavyzdinis kandidatas",
+        "benchmarkNote": "Viršija vaidmens etaloną 4 iš 5 kognityvinių sričių.",
+        "candidateName": "J. Karlsson",
+        "candidateRole": "Backend inžinierius · Stokholmas",
+        "score": {
+          "attention": "Dėmesys",
+          "problemSolving": "Problemų sprendimas",
+          "processingSpeed": "Apdorojimo greitis",
+          "technicalTs": "Techninis · TS",
+          "workingMemory": "Darbinė atmintis"
+        },
+        "strongMatch": "Stipri atitiktis",
+        "url": "app.wellowork.net / assess / candidate"
+      },
+      "growth": {
+        "badge": "Darbinė atmintis · 14 diena",
+        "matchBtn": "Sutampa (M)",
+        "nbackLevel": "N-back · 4 lygis",
+        "skipBtn": "Praleisti (tarpas)",
+        "streak": "Serija: 14 dienų · Rinkos likutis: 248",
+        "timer": "00:24",
+        "tokensEarned": "+12 uždirbtų žetonų",
+        "url": "app.wellowork.net / train"
+      },
+      "measure": {
+        "badge": "Inžinerijos komanda · 6 mėnesiai",
+        "cognitivePerformance": "Kognityvinis darbingumas",
+        "metric": {
+          "avgFocus": {
+            "cap": "lyginant su praėjusiu ketvirčiu",
+            "l": "Vid. susikaupimas",
+            "v": "+11%"
+          },
+          "memory": {
+            "cap": "slenkantis 30 dienų",
+            "l": "Atmintis",
+            "v": "+6%"
+          },
+          "variability": {
+            "cap": "komandos lygmeniu",
+            "l": "Kintamumas",
+            "v": "−14%"
+          }
+        },
+        "monthApr": "Bal.",
+        "monthDec": "Gruod.",
+        "monthFeb": "Vas.",
+        "monthJan": "Saus.",
+        "monthMar": "Kov.",
+        "monthMay": "Geg.",
+        "smoothed": "Išlyginta savaitiškai · pavyzdiniai duomenys",
+        "sprintAnnotation": "Sprinto apžvalga · susikaupimas −8%",
+        "url": "app.wellowork.net / trends"
+      },
+      "proactiveCare": {
+        "anonymised": "Anonimizuota",
+        "badge": "Jūsų rodinys · privatus",
+        "managerView": "Vadovo rodinys · apibendrintas",
+        "marker": {
+          "apob": {
+            "l": "ApoB",
+            "tag": "stebėti"
+          },
+          "hba1c": {
+            "l": "HbA1c",
+            "tag": "optimalu"
+          },
+          "hscrp": {
+            "l": "hs-CRP",
+            "tag": "gerai"
+          },
+          "vitaminD": {
+            "l": "Vitaminas D",
+            "tag": "optimalu"
+          }
+        },
+        "panelMeta": "Paimta gegužės 12 d. · 11 žymenų",
+        "panelTitle": "Kraujo tyrimas · ilgaamžiškumas",
+        "privacyChip": "Tai matote tik jūs",
+        "reportsCompleted": "ataskaitų užbaigta šį ciklą",
+        "team": "Inžinerija · 14 narių",
+        "trendsNote": "Atskiros reikšmės niekada nerodomos — tik tendencijos.",
+        "url": "app.wellowork.net / health / report"
+      },
+      "workshops": {
+        "badge": "Gegužė · būsimi",
+        "booked": "14 užsakyta",
+        "day": {
+          "fri": "PEN",
+          "thu": "KET",
+          "tue": "ANT",
+          "wed": "TRE"
+        },
+        "url": "app.wellowork.net / workshops",
+        "w1": {
+          "title": "Miego architektūra ir atsigavimas",
+          "when": "10:00 · Nuotoliniu būdu · 60 min"
+        },
+        "w2": {
+          "title": "Mityba kognityviniam darbingumui",
+          "when": "13:00 · Vietoje · 90 min"
+        },
+        "w3": {
+          "title": "Stresas, susikaupimas ir kognityvinis krūvis",
+          "when": "15:30 · Nuotoliniu būdu · 60 min"
+        },
+        "w4": {
+          "title": "Ilgaamžiškumo ir metabolinės sveikatos pagrindai",
+          "when": "11:00 · Vietoje · 90 min"
+        }
+      }
+    }
+  },
+  "platformTabsMock": {
+    "assessment": {
+      "badge": "Pavyzdinis kandidatas",
+      "match": "Stiprus atitikimas",
+      "name": "J. Karlsson",
+      "note": "Aukščiau pareigybės etalono 4 iš 5 kognityvinių sričių.",
+      "role": "Backend inžinierius · Stokholmas",
+      "score": {
+        "attention": "Dėmesys",
+        "problemSolving": "Problemų sprendimas",
+        "processingSpeed": "Apdorojimo greitis",
+        "technical": "Techninė · TS",
+        "workingMemory": "Darbinė atmintis"
+      },
+      "url": "app.wellowork.net / assess / candidate"
+    },
+    "growth": {
+      "badge": "Darbinė atmintis · 14 diena",
+      "btnMatch": "Atitiktis (M)",
+      "btnSkip": "Praleisti (tarpas)",
+      "exercise": "N-back · 4 lygis",
+      "streak": "Serija: 14 dienų · Prekyvietės balansas: 248",
+      "timer": "00:24",
+      "tokens": "+12 uždirbtų žetonų",
+      "url": "app.wellowork.net / train"
+    },
+    "measure": {
+      "annotation": "Sprinto peržiūra · susikaupimas −8 %",
+      "axis": {
+        "apr": "Bal.",
+        "dec": "Gruod.",
+        "feb": "Vas.",
+        "jan": "Saus.",
+        "mar": "Kov.",
+        "may": "Geg."
+      },
+      "badge": "Inžinerijos komanda · 6 mėnesiai",
+      "stat": {
+        "focus": {
+          "cap": "palyginti su praėjusiu ketvirčiu",
+          "label": "Vid. susikaupimas",
+          "value": "+11 %"
+        },
+        "memory": {
+          "cap": "slankusis 30 dienų",
+          "label": "Atmintis",
+          "value": "+6 %"
+        },
+        "variability": {
+          "cap": "komandos lygmuo",
+          "label": "Kintamumas",
+          "value": "−14 %"
+        }
+      },
+      "subtitle": "Išlyginta savaitiniu pjūviu · pavyzdiniai duomenys",
+      "title": "Kognityvinis našumas",
+      "url": "app.wellowork.net / trends"
+    },
+    "proactiveCare": {
+      "anonymised": "Anonimizuota",
+      "badge": "Jūsų vaizdas · privatu",
+      "footnote": "Individualios reikšmės niekada nerodomos — tik tendencijos.",
+      "managerView": "Vadovo vaizdas · apibendrinta",
+      "marker": {
+        "apob": {
+          "tag": "stebėti"
+        },
+        "hba1c": {
+          "tag": "optimalu"
+        },
+        "hscrp": {
+          "tag": "gerai"
+        },
+        "vitd": {
+          "tag": "optimalu"
+        }
+      },
+      "panelSub": "Paimta gegužės 12 d. · 11 žymenų",
+      "panelTitle": "Kraujo tyrimų rinkinys · ilgaamžiškumas",
+      "privacyChip": "Tai matote tik jūs",
+      "reports": "šiame cikle užbaigtų ataskaitų",
+      "team": "Inžinerija · 14 narių",
+      "url": "app.wellowork.net / health / report"
+    },
+    "workshops": [
+      {
+        "day": "ANTR",
+        "title": "Miego architektūra ir atsigavimas",
+        "when": "10:00 · Nuotoliniu būdu · 60 min"
+      },
+      {
+        "day": "TREČ",
+        "title": "Mityba kognityviniam našumui",
+        "when": "13:00 · Vietoje · 90 min"
+      },
+      {
+        "day": "KETV",
+        "title": "Stresas, susikaupimas ir kognityvinė apkrova",
+        "when": "15:30 · Nuotoliniu būdu · 60 min"
+      },
+      {
+        "day": "PENK",
+        "title": "Ilgaamžiškumo ir metabolinės sveikatos pagrindai",
+        "when": "11:00 · Vietoje · 90 min"
+      }
+    ]
+  },
+  "platformWorkshops": {
+    "answer": {
+      "body": "Tai tiesioginiai, fasilitatoriaus vedami užsiėmimai darbuotojams – vietoje arba nuotoliniu būdu – apimantys miego architektūrą, mitybą kognityviniam našumui, stresą ir susikaupimą bei ilgaamžiškumo pagrindus. Registracijos, dalyvavimas ir tolesni veiksmai vyksta toje pačioje platformoje, kurioje vyksta kasdienės treniruotės ir našumo tendencijų stebėjimas.",
+      "label": "Kas yra WelloWork dirbtuvės?"
+    },
+    "bookingCard": {
+      "bookButton": "Rezervuoti užsiėmimą",
+      "enrolled": "+12 užsiregistravusių",
+      "eyebrow": "Dirbtuvės",
+      "pickSession": "Pasirinkite užsiėmimą",
+      "sample": "Pavyzdys",
+      "slot1": {
+        "date": "Ket · birž. 4 d.",
+        "tag": "Vietoje · Stokholmas",
+        "time": "09:30 CET"
+      },
+      "slot2": {
+        "date": "Antr · birž. 9 d.",
+        "tag": "Nuotoliu · Zoom",
+        "time": "14:00 CET"
+      },
+      "slotOpen": "Laisva",
+      "slotSelected": "Pasirinkta",
+      "title": "Miego architektūra ir atsigavimas"
+    },
+    "cadenceCompare": {
+      "monthJul": "Liep.",
+      "monthMay": "Geg.",
+      "monthNov": "Lapkr.",
+      "monthSep": "Rugs.",
+      "oneOffLabel": "Vienkartinis pranešėjas",
+      "oneOffSub": "Pamirštas iki antradienio",
+      "welloWorkLabel": "WelloWork dirbtuvės",
+      "welloWorkSub": "Stiprėja bėgant laikui"
+    },
+    "cadenceSection": {
+      "body": "Vienkartinio pranešėjo turinys nesikaupia. Čia dirbtuvės planuojamos tokiu ritmu, kuris atitinka kiekvieno kliento bandomąjį projektą, o dalyvavimas ir tolesni veiksmai fiksuojami platformoje. Gegužę vykusios dirbtuvės apie miegą susiejamos su liepą pažymėtu atsigavimo nuosmukiu – o ne lieka miglotu antradienio popietės prisiminimu.",
+      "heading": "Kuo tai skiriasi nuo vienkartinio pranešėjo?"
+    },
+    "crumbs": {
+      "current": "Dirbtuvės",
+      "home": "Pradžia",
+      "platform": "Platforma"
+    },
+    "cta": {
+      "body": "Dirbtuvių ir biožymenų tyrimų apimtys patvirtinamos apimties aptarimo pokalbio metu. Atsineškite savo darbuotojų skaičių ir apribojimus – mes pasiūlysime variantų.",
+      "primary": "Rezervuoti apimties aptarimo pokalbį",
+      "secondary": "Kalbėkitės su pardavimų komanda",
+      "title": "Suplanuokite dirbtuvių bendradarbiavimą."
+    },
+    "deliverySection": {
+      "body": "Abu. Daugumoje bandomųjų projektų taikomas derinys – vietoje Šiaurės šalims, nuotoliu paskirstytoms komandoms kitur. Fasilitatoriai vertinami kasmet ir derinami su platesne platformos metodika.",
+      "heading": "Vietoje ar nuotoliu?"
+    },
+    "deliveryToggle": {
+      "onSite": "Vietoje",
+      "remote": "Nuotoliu",
+      "whereWeRun": "Kur vedame"
+    },
+    "features": {
+      "aligned": {
+        "body": "Programa suderinta su ta pačia konstruktų sistema, kuri valdo WelloRise ir Measure – tai nėra atskira pasaulėžiūra.",
+        "title": "Suderinta su kognityvinėmis ir ilgaamžiškumo nuostatomis"
+      },
+      "bookings": {
+        "body": "Darbuotojai registruojasi per tą pačią WelloWork programėlę, kurioje vyksta treniruotės ir tendencijų stebėjimas – jokio atskiro tiekėjo portalo.",
+        "title": "Registracija platformoje"
+      },
+      "eyebrow": "Kas įtraukta",
+      "facilitator": {
+        "body": "Tiesioginiai užsiėmimai, vedami apmokytų fasilitatorių, su struktūruotais klausimais ir atsakymais bei trumpais tolesniais veiksmais.",
+        "title": "Veda fasilitatorius"
+      },
+      "outcomes": {
+        "body": "Dalyvavimas dirbtuvėse ir tolesni veiksmai pažymimi našumo tendencijoje, todėl nuosmukiai ir pakilimai neatrodo kaip atsitiktinis triukšmas.",
+        "title": "Rezultatai maitina tendencijas"
+      },
+      "privacy": {
+        "body": "Atskiro darbuotojo dalyvavimas niekada nerodomas vadovams – tik apibendrinti ir anonimizuoti rodikliai pagal komandą.",
+        "title": "Gerbiantis privatumą"
+      },
+      "title": "Su kuo pateikiamas dirbtuvių bendradarbiavimas?",
+      "tracking": {
+        "body": "Apibendrinti dalyvavimo ir tolesnių veiksmų rodikliai maitina Paslaugų įsitraukimo ataskaitas HR ir veiklos skyriams.",
+        "title": "Dalyvavimo ir tolesnių veiksmų stebėjimas"
+      }
+    },
+    "hero": {
+      "eyebrow": "Dirbtuvės",
+      "lede": "Fasilitatoriaus vedami užsiėmimai kognityvinio našumo ir ilgaamžiškumo temomis, kurios kaupiasi – miegas, mityba, atsigavimas, susikaupimas. Rezervuojama platformoje; rezultatai grįžta į našumo tendencijas.",
+      "titleAccent": "nuotoliu.",
+      "titleLead": "Tiesioginės sveikatos dirbtuvės, vietoje arba"
+    },
+    "mapBlob": {
+      "distributed": "PASKIRSTYTA",
+      "nordics": "ŠIAURĖS ŠALYS"
+    },
+    "meta": {
+      "description": "Fasilitatoriaus vedamos dirbtuvės apie miegą, atsigavimą, mitybą, susikaupimą ir ilgaamžiškumą. Vietoje arba nuotoliu, rezervuojamos WelloWork, su rezultatais, grįžtančiais į našumo tendencijas.",
+      "title": "Dirbtuvės — tiesioginės sveikatos dirbtuvės, vietoje arba nuotoliu | WelloWork"
+    },
+    "scoping": {
+      "step1": {
+        "body": "Darbuotojų skaičius, vietos, kalbos, apribojimai.",
+        "title": "Apimties aptarimo pokalbis"
+      },
+      "step2": {
+        "body": "Tema ir ritmas suderinti su tinkamu vedėju.",
+        "title": "Parinktas fasilitatorius"
+      },
+      "step3": {
+        "body": "Rezervuojama platformoje; tolesni veiksmai susieti su tendencijomis.",
+        "title": "Suplanuoti užsiėmimai"
+      }
+    },
+    "scopingSection": {
+      "body": "Dirbtuvės apibrėžiamos kiekvienam bendradarbiavimui atskirai – fasilitatorių prieinamumas, vieta, kalba ir tolesnių veiksmų ritmas patvirtinami apimties aptarimo pokalbio metu. Jos įtrauktos į Platform + Services planą kartu su biožymenų tyrimais.",
+      "heading": "Apimties nustatymas"
+    },
+    "topics": {
+      "cognitiveLoad": {
+        "body": "Stresas, dėmesys ir darbinės atminties ribos.",
+        "title": "Kognityvinė apkrova"
+      },
+      "longevity": {
+        "body": "Metabolinė sveikata ilgalaikei perspektyvai, ne ketvirčiui.",
+        "title": "Ilgaamžiškumo pagrindai"
+      },
+      "movement": {
+        "body": "Atsigavimo rutinos darbui prie ekrano.",
+        "title": "Judėjimas dirbant prie stalo"
+      },
+      "nutrition": {
+        "body": "Kognityvinio našumo maitinimas per visą dieną.",
+        "title": "Mityba susikaupimui"
+      },
+      "sleep": {
+        "body": "Miego stadijos, atsigavimas ir kaip apsaugoti gilų miegą.",
+        "title": "Miego architektūra"
+      }
+    },
+    "topicsSection": {
+      "heading": "Kokios dirbtuvės yra prieinamos?"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Kainodara",
+    "featuredBadge": "Daugelis komandų pradeda nuo čia",
+    "heading": {
+      "accent": "Abu pritaikyti jūsų bandomajam projektui.",
+      "lead": "Du būdai pradėti. "
+    },
+    "lede": "Kainą nustatome pagal jūsų bandomojo projekto dydį ir etapą — visi skaičiai bus pokalbio metu.",
+    "plans": {
+      "platform": {
+        "cta": "Susisiekite su pardavimų komanda",
+        "desc": "SaaS prieiga vienam darbuotojui prie WelloRise ir WelloWize.",
+        "features": [
+          "Kasdienės kognityvinės treniruotės (WelloRise)",
+          "Įdarbinimo ir vidiniai vertinimai (WelloWize)",
+          "Vadovų ataskaitų skydeliai ir tendencijų analitika",
+          "GDPR atitinkanti duomenų saugojimo vieta"
+        ],
+        "name": "Platforma",
+        "price": "€12",
+        "unit": "vienam darbuotojui · per mėnesį"
+      },
+      "platformServices": {
+        "cta": "Užsisakykite apimties aptarimo pokalbį",
+        "desc": "Prideda dirbtuves ir biožymenų tyrimus pagal kiekvieną projektą.",
+        "features": [
+          "Viskas, kas yra Platformoje",
+          "Tiesioginės sveikatos dirbtuvės, vietoje arba nuotoliniu būdu",
+          "Kraujo (ilgaamžiškumo) ir šlapimo mėginių tyrimai",
+          "Skirtas CSM ir ataskaitų šablonai"
+        ],
+        "name": "Platforma + paslaugos",
+        "note": "Dirbtuvių ir biožymenų tyrimų apimtys nustatomos pagal kiekvieną projektą ir patvirtinamos pokalbio metu.",
+        "price": "nuo €28",
+        "unit": "vienam darbuotojui · per mėnesį · platforma + paslaugos pagal projektą"
+      }
+    }
+  },
+  "problem": {
+    "eyebrow": "Spraga",
+    "heading": {
+      "accent": "Mes matuojame rezultatus.",
+      "lead": "Gerovės platformos matuoja įsitraukimą. "
+    },
+    "items": [
+      {
+        "body": "Pasitenkinimo apklausos matuoja, kaip žmonės jaučiasi dėl darbo. Jos nematuoja, kaip darbas juos keičia.",
+        "title": "Įsitraukimo įverčiai neparodo, kam gresia perdegimas."
+      },
+      {
+        "body": "Miego struktūra, gliukozės kintamumas, uždegimas — dalykai, kurie tyliai lenkia pažintinę kreivę, niekada nepatenka į HR duomenis.",
+        "title": "Metiniai sveikatos patikrinimai praleidžia biožymenis, lemiančius pažintinius rezultatus."
+      },
+      {
+        "body": "Tarp šių dviejų kraštutinumų nėra ilgalaikio vaizdo, kaip iš tikrųjų dirba jūsų pasamdyti žmonės.",
+        "title": "Įdarbinimo vertinimai baigiasi pasiūlymo laišku, o HR apklausos — nuotaikomis."
+      }
+    ],
+    "lede": "Trys dalykai, kuriuos kiekvienas vadovas jau žino apie savo žmonių duomenis, bet kurių jokia priemonė iš tikrųjų neišsprendžia."
+  },
+  "researchCognitiveConstructs": {
+    "answer": {
+      "body": "Penki: darbinė atmintis, informacijos apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas. Kiekvienas iš jų atitinka nusistovėjusią kognityvinio mokslo paradigmą — N-back, simbolių keitimą, Posnerio tipo dėmesio užduotis, Raveno samprotavimą ir užduočių perjungimą — pritaikytą trumpoms kasdienėms sesijoms darbo vietos platformoje.",
+      "label": "Kokius kognityvinius konstruktus matuoja WelloWork?"
+    },
+    "att": {
+      "body": "Dėmesys apima kelis subkonstruktus: tvarų, atrankinį, žadinantį, orientuojantį, vykdomąjį. Mes sutelkiame dėmesį į tvarų dėmesį (budrumą atliekant nenutrūkstamą užduotį) ir atrankinį dėmesį (blaškančių veiksnių filtravimą) taikydami Posnerio tipo užuominų paradigmas, pritaikytas sesijoms platformoje.",
+      "heading": "Kas yra dėmesys ir kaip jį matuojame?"
+    },
+    "crumbs": {
+      "current": "Kognityviniai konstruktai",
+      "home": "Pradžia",
+      "research": "Tyrimai"
+    },
+    "cta": {
+      "body": "Demonstracijoje rodoma pavyzdinio darbuotojo adaptyvios sesijos ir to rezultato vietos komandos suvestinėje gretiminė peržiūra.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Metodikos apžvalga",
+      "title": "Pamatykite konstruktus suvestinėje."
+    },
+    "domainGrid": {
+      "aria": "Matuojami kognityviniai domenai",
+      "att": {
+        "descriptor": "Filtruoja triukšmą",
+        "label": "Dėmesys"
+      },
+      "flex": {
+        "descriptor": "Prisitaiko prie taisyklių rinkinių",
+        "label": "Kognityvinis lankstumas"
+      },
+      "long": {
+        "descriptor": "Modeliai per savaites",
+        "label": "Išilginis indeksas"
+      },
+      "prob": {
+        "descriptor": "Samprotauja esant apribojimams",
+        "label": "Problemų sprendimas"
+      },
+      "ps": {
+        "descriptor": "Reaguoja nepavargdamas",
+        "label": "Apdorojimo greitis"
+      },
+      "wm": {
+        "descriptor": "Išlaiko kontekstą esant apkrovai",
+        "label": "Darbinė atmintis"
+      }
+    },
+    "exclude": {
+      "gamified": {
+        "label": "Žaidybiniai rezultatai",
+        "why": "Pagerėjimas žaidžiant retai perkeliamas. Mes matuojame elgseną, o ne taškus."
+      },
+      "headLeft": "Ką atmetame",
+      "headRight": "Kodėl",
+      "mood": {
+        "label": "Nuotaika ir emocijos",
+        "why": "Privačiai saugoma paties darbuotojo kaip neprivalomas kontekstas. Vadovai jos niekada nemato."
+      },
+      "personality": {
+        "label": "Asmenybės bruožai",
+        "why": "Asmenybės vertinimas yra atskira disciplina su savais griežtumo reikalavimais — ir nejauki darbo aplinkoje."
+      }
+    },
+    "excludeSection": {
+      "body": "Mes sąmoningai nevertiname asmenybės, nuotaikos ar emocijų kognityvinių testų rinkiniu. Asmenybės vertinimas yra atskira disciplina su savais griežtumo reikalavimais; čia neturime nieko naudingo pridurti ir bet kuriuo atveju esame atsargūs dėl jo naudojimo darbo aplinkoje. Nuotaiką patys darbuotojai fiksuoja kaip neprivalomą kontekstą savo asmeninei tendencijų peržiūrai; vadovai jos nemato.",
+      "heading": "O kaip dėl konstruktų, kurių nematuojame?"
+    },
+    "flex": {
+      "body": "Gebėjimas pereiti nuo vieno taisyklių rinkinio ir konteksto prie kito. Operacionalizuojama taikant užduočių perjungimo metodus (pagal Monsell, 2003 ir platesnę vykdomųjų funkcijų literatūrą), o perjungimo sąnaudų sumažėjimas stebimas laikui bėgant kaip lankstumo žemos rizikos sąlygomis rodiklis.",
+      "heading": "Kas yra kognityvinis lankstumas ir kaip jį matuojame?"
+    },
+    "gamesPanel": {
+      "gameBadge": "Apribojimas",
+      "gameMatch": "Suderinkite modelį",
+      "gameNote": "Pagerėja žaidžiant. Perkėlimas į realų darbą: ribotas.",
+      "gameRound": "4 raundas",
+      "gameScore": "Rezultatas 1 240",
+      "gameTap": "Bakstelkite",
+      "gameTitle": "Standartinis kognityvinis žaidimas",
+      "optionA": "Imkite pirmą bilietą, o likusius peradresuokite vėliau.",
+      "optionB": "Perskaitykite taisykles iš naujo; pasirinkite eilę, tinkančią šios dienos apkrovai.",
+      "optionC": "Perduokite vadovui ir laukite.",
+      "scenarioBadge": "Ekologiškai pagrįsta",
+      "scenarioNote": "Atspindi, kaip iš tikrųjų samprotaujate ir priimate sprendimus. Sukurta remiantis lauko stebėjimais.",
+      "scenarioPrompt": "Dvi incidentų eilės ką tik pakeitė prioritetų taisykles. Kitas jūsų priimtas bilietas nustatys jūsų eilę likusiai pamainos daliai.",
+      "scenarioStep": "2 žingsnis iš 3",
+      "scenarioTag": "Operacijos · eskalavimas",
+      "scenarioTitle": "WelloWork scenarijus"
+    },
+    "gamesSection": {
+      "bridge": "Tyrimai nuosekliai rodo, kad žmonės tampa geresni kognityviniuose žaidimuose — bet ne sudėtingose realaus pasaulio užduotyse. WelloWork scenarijai grindžiami elgsenos lauko tyrimais, o ne žaidybiniais pakaitalais.",
+      "heading": "Kodėl tiesiog nenaudoti kognityvinių žaidimų?"
+    },
+    "hero": {
+      "eyebrow": "Kognityviniai konstruktai",
+      "lede": "Konstruktai, kuriais grindžiami WelloRise ir WelloWize — kiekvienas su naudojama paradigma, tuo, ką nustato literatūra, ir veiklos atsargumo nuostatomis, kurių patys laikomės.",
+      "titleAccent": "ilga literatūra.",
+      "titleLead": "Penki domenai, kiekvienas turintis"
+    },
+    "meta": {
+      "description": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas — kiekvienas domenas, jį pagrindžianti literatūra ir tai, kaip WelloWork jį operacionalizuoja.",
+      "title": "Kognityviniai konstruktai — penki domenai, kuriuos matuoja WelloWork"
+    },
+    "methodBanner": {
+      "adaptive": {
+        "body": "Kiekviena sesija realiu laiku prisitaiko prie jūsų dabartinio veiklos lygio.",
+        "title": "Adaptyvus sudėtingumas"
+      },
+      "daily": {
+        "body": "Sukurta darbo vietos ritmui — ne laboratorinėms sąlygoms.",
+        "title": "Trumpos kasdienės sesijos"
+      },
+      "long": {
+        "body": "Tendencijos laikui bėgant svarbesnės už bet kurį pavienį rezultatą.",
+        "title": "Išilginis signalas"
+      }
+    },
+    "pillStrip": {
+      "aria": "Penki kognityviniai domenai",
+      "att": "Dėmesys",
+      "flex": "Kognityvinis lankstumas",
+      "prob": "Problemų sprendimas",
+      "ps": "Apdorojimo greitis",
+      "wm": "Darbinė atmintis"
+    },
+    "prob": {
+      "body": "Neverbalinis samprotavimas esant apribojimams. Naudojame Raveno tipo progresuojančias matricas ir Hanojaus bokšto tipo užduotis su aiškiu užduočiai skirto laiko stebėjimu. Problemų sprendimas yra konstruktas, kuriam labiausiai įtaką daro srities žinios, todėl jį pateikiame kartu su konkrečiai rolei skirtais techniniais patikrinimais WelloWize.",
+      "heading": "Kas yra problemų sprendimas ir kaip jį matuojame?"
+    },
+    "ps": {
+      "body": "Apdorojimo greitis matuoja, kaip greitai galima atlikti paprastas kognityvines operacijas. Naudojame simbolių keitimo tipo užduotis (paradigmą su ilga istorija kognityviniame vertinime) ir trumpus pasirinkimo–reakcijos metodus. Apdorojimo greitis ypač jautrus miego trūkumui ir ūmiam nuovargiui, todėl jis ir naudingas darbo aplinkoje.",
+      "heading": "Kas yra apdorojimo greitis ir kaip jį matuojame?"
+    },
+    "scenarioCard": {
+      "att": {
+        "paradigm": "Posnerio užuominos",
+        "scenario": "Dvidešimt minučių stebėkite šešių kanalų operacijų suvestinę. Pastebėkite tikrąjį nuokrypį; ignoruokite įprastą triukšmą."
+      },
+      "exampleLabel": "Scenarijaus pavyzdys",
+      "flex": {
+        "paradigm": "Užduočių perjungimas",
+        "scenario": "Perjunkite tarp trijų eskalavimo eilių su skirtingomis taisyklėmis. Pritaikykite tinkamą taisyklę prieš klaidingą refleksą."
+      },
+      "footer": "Signalų modelis fiksuojamas per sesiją",
+      "prob": {
+        "paradigm": "Raveno matricos",
+        "scenario": "Pasikartojantis tvarkaraščio konfliktas apima tris komandas ir du apribojimus. Pirmiausia nustatykite išsprendžiamą ašį."
+      },
+      "ps": {
+        "paradigm": "Simbolių keitimas",
+        "scenario": "Pažymėkite anomalijas tiesioginiame operacijų sraute prieš paskelbiant kitą būsenos ataskaitą."
+      },
+      "wm": {
+        "paradigm": "N-back",
+        "scenario": "Peržiūrėkite šešis tiekėjų pasiūlymus. Prisiminkite pagrindinius skaičius lygindami du paskutinius su pirmuoju."
+      }
+    },
+    "signalTrace": {
+      "att": {
+        "falseAlarms": "Klaidingi pavojai",
+        "hits": "Pataikymai"
+      },
+      "flex": {
+        "sessions": "sesijos →",
+        "switchCost": "perjungimo sąnaudos"
+      },
+      "prob": {
+        "timeOnTask": "laikas užduočiai",
+        "trials": "bandymai →"
+      },
+      "ps": {
+        "freq": "dažnis",
+        "reactionTime": "reakcijos laikas →"
+      },
+      "wm": {
+        "accuracy": "tikslumas",
+        "difficulty": "sudėtingumas →"
+      }
+    },
+    "wm": {
+      "body": "Darbinė atmintis yra gebėjimas išlaikyti ir manipuliuoti informacija mintyse. Ją operacionalizuojame per N-back užduotis (pagal Baddeley ir platesnę apimties literatūrą) su adaptyviu sudėtingumu kiekvienoje sesijoje. Darbinė atmintis yra vienas labiausiai akademinį ir sudėtingų užduočių atlikimą prognozuojančių kognityvinių konstruktų publikuotoje literatūroje, nors perkėlimas į darbo lygio rezultatus labiau priklauso nuo srities.",
+      "heading": "Kas yra darbinė atmintis ir kaip ją matuojame?"
+    }
+  },
+  "researchIndex": {
+    "answer": {
+      "body": "WelloWork mokymai ir vertinimai grindžiami penkiomis seniai patvirtintomis kognityvinėmis konstrukcijomis — darbine atmintimi, apdorojimo greičiu, dėmesiu, problemų sprendimu ir kognityviniu lankstumu. Įsipareigojame skelbti savo metodiką ir bandomųjų projektų rezultatus bei nepateikiame jokių klinikinių ar diagnostinių teiginių apie platformos biožymenų pusę.",
+      "label": "Koks yra WelloWork tyrimų požiūris?"
+    },
+    "constructs": {
+      "attention": {
+        "body": "Dėmesio išlaikymas atliekant užduotį ir blaškančių veiksnių filtravimas. Užuominomis grįsto dėmesio modeliai, paremti Posnerio tipo paradigmomis.",
+        "cap": "Tvarus ir atrankinis · Posnerio paradigmos",
+        "name": "Dėmesys"
+      },
+      "cognitiveFlexibility": {
+        "body": "Gebėjimas pereiti tarp taisyklių rinkinių. Užduočių perjungimo modeliai, kuriais laikui bėgant stebimas perjungimo sąnaudų mažėjimas.",
+        "cap": "Užduočių perjungimo sąnaudos · Monsell, 2003",
+        "name": "Kognityvinis lankstumas"
+      },
+      "problemSolving": {
+        "body": "Neverbalinis samprotavimas esant apribojimams. Pritaikytos Raveno progresuojančios matricos ir Bokšto užduotys.",
+        "cap": "Bokšto ir Raveno tipo samprotavimas",
+        "name": "Problemų sprendimas"
+      },
+      "processingSpeed": {
+        "body": "Kaip greitai gali būti atliekamos paprastos kognityvinės operacijos. Simbolių keitimo paradigmos; jautrios miegui ir nuovargiui.",
+        "cap": "Simbolių keitimas · Wechsler, klasikinis",
+        "name": "Apdorojimo greitis"
+      },
+      "workingMemory": {
+        "body": "Gebėjimas išlaikyti ir apdoroti informaciją mintyse. Operacionalizuojama naudojant n-back ir apimties užduotis su prisitaikančiu sudėtingumu.",
+        "cap": "N-back, apimties užduotys · Baddeley, 1992",
+        "name": "Darbinė atmintis"
+      }
+    },
+    "constructsSection": {
+      "heading": "Kurias kognityvines konstrukcijas matuoja WelloWork?"
+    },
+    "crumbs": {
+      "current": "Tyrimai",
+      "home": "Pradžia"
+    },
+    "cta": {
+      "body": "Atsineškite savo darbuotojų skaičių ir apribojimus — to paties pokalbio metu pristatysime metodiką ir privatumo modelį.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Metodikos apžvalga",
+      "title": "Norite tai pamatyti su tikrais bandomųjų projektų duomenimis?"
+    },
+    "hero": {
+      "eyebrow": "Tyrimai ir įrodymai",
+      "lede": "Kiekvienas platformoje esantis kognityvinis pratimas atitinka konstrukciją su ilga literatūros tradicija — ne mūsų sugalvotą vidinį rodiklį. Metodiką skelbiame kaupdami bandomųjų projektų duomenis.",
+      "titleAccent": "kurias sritis jau patvirtino.",
+      "titleLead": "Sukurta remiantis konstrukcijomis,"
+    },
+    "meta": {
+      "description": "WelloWork kognityviniai mokymai ir vertinimai grindžiami patvirtintomis konstrukcijomis: darbine atmintimi, apdorojimo greičiu, dėmesiu, problemų sprendimu ir kognityviniu lankstumu.",
+      "title": "Tyrimai ir metodika — kognityvinės konstrukcijos, kuriomis grindžiamas WelloWork"
+    },
+    "subpages": {
+      "constructs": {
+        "body": "Kiekviena iš penkių sričių išsamiai — ką jos matuoja, ką sako literatūra ir kaip WelloWork jas operacionalizuoja.",
+        "title": "Kognityvinės konstrukcijos"
+      },
+      "methodology": {
+        "body": "Kaip pratimai atitinka konstrukcijas ir mūsų įsipareigojimas skelbti metodiką kaupiant bandomųjų projektų duomenis.",
+        "title": "Metodikos apžvalga"
+      },
+      "scienceInsight": {
+        "body": "WelloWork tyrimų komandos pastabos, apžvalgos ir metodikos įžvalgos.",
+        "title": "Mokslas ir įžvalgos"
+      }
+    },
+    "subpagesSection": {
+      "heading": "Kur galiu paskaityti daugiau?"
+    }
+  },
+  "researchMethodology": {
+    "aggregations": {
+      "heading": "Kaip atliekamas agregavimas?"
+    },
+    "aggrGrid": {
+      "levelVariability": {
+        "body": "Pateikiama atskirai — jie atsako į skirtingus klausimus.",
+        "title": "Lygis ir kintamumas"
+      },
+      "minTeamSize": {
+        "body": "Agreguoti duomenys rodomi tik tada, kai pasiekiama komandos riba.",
+        "title": "Taikomas minimalus komandos dydis"
+      },
+      "weeklySmoothing": {
+        "body": "Vienos dienos šuoliai nepatraukia vadovų dėmesio.",
+        "title": "Savaitinis išlyginimas"
+      },
+      "workEvents": {
+        "body": "Sprinto peržiūros, leidimai ir budėjimo laikotarpiai pažymimi automatiškai.",
+        "title": "Darbo įvykių žymėjimas"
+      }
+    },
+    "answer": {
+      "body": "WelloWork matuoja pažintinį našumą trumpomis adaptyviomis užduotimis, susietomis su penkiais patvirtintais konstruktais — darbine atmintimi, apdorojimo greičiu, dėmesiu, problemų sprendimu ir pažintiniu lankstumu. Kiekvienos sesijos rezultatai normalizuojami pagal individualų darbuotojo bazinį lygį ir agreguojami į komandos lygmens tendencijas, taikant minimalų komandos dydį. Apie biožymenų ataskaitas neteikiame jokių klinikinių ar diagnostinių teiginių.",
+      "label": "Kokia yra WelloWork metodologija viena pastraipa?"
+    },
+    "bellCurve": {
+      "population": "populiacija",
+      "youVsOthers": "jūs ir kiti"
+    },
+    "claims": {
+      "outOfScope": {
+        "businessOutcomes": "Perkėlimas į konkrečius verslo rezultatus",
+        "clinical": "Klinikinė ar diagnostinė vertė",
+        "ranking": "Patikimas individualus reitingavimas pagal trumpas užduotis",
+        "selfInvented": "Savaime sugalvoti rodikliai"
+      },
+      "outOfScopeBadge": "Neapima",
+      "outOfScopeTitle": "Ko mes neteigiame",
+      "supported": {
+        "signals": "Su konstruktais susieti elgsenos signalai",
+        "teamPatterns": "Komandos lygmens dėsningumai",
+        "trends": "Pažintinės tendencijos laikui bėgant",
+        "variance": "Asmens vidinis kintamumas"
+      },
+      "supportedBadge": "Pagrįsta",
+      "supportedTitle": "Ką mes matuojame"
+    },
+    "closingBanner": {
+      "adaptive": {
+        "body": "Kiekviena sesija realiu laiku prisitaiko prie jūsų esamo našumo lygio.",
+        "title": "Adaptyvus sudėtingumas"
+      },
+      "signal": {
+        "body": "Dėsningumai per kelias savaites svarbesni nei bet kurios vienos sesijos rezultatas.",
+        "title": "Signalas laikui bėgant"
+      },
+      "workplace": {
+        "body": "Trumpos kasdienės sesijos. Laboratorinių sąlygų nereikia.",
+        "title": "Pritaikyta darbo ritmui"
+      }
+    },
+    "crumbs": {
+      "current": "Metodologija",
+      "home": "Pradžia",
+      "research": "Moksliniai tyrimai"
+    },
+    "cta": {
+      "body": "Demonstracija apima 5–10 minučių, skirtų išsiaiškinti, kaip konkretus pratimas siejasi su konstruktu ir kaip rezultatas atsispindi vadovo rodinyje.",
+      "primary": "Užsisakyti demonstraciją",
+      "secondary": "Grįžti prie mokslinių tyrimų",
+      "title": "Norite, kad metodologija būtų paaiškinta gyvai?"
+    },
+    "hero": {
+      "eyebrow": "Metodologija",
+      "lede": "Trumpa apžvalga apie konstruktų susiejimą, vertinimą, agregavimą ir privatumo principus, kuriais grindžiama WelloWork platforma. Metodologiją skelbiame kaupdami bandomųjų tyrimų duomenis.",
+      "titleAccent": "ir ko neteigiame.",
+      "titleLead": "Kaip matuojame pažintinį našumą —"
+    },
+    "mapping": {
+      "body": "Kiekviena platformos užduotis siejama su vienu pagrindiniu konstruktu ir daugiausia vienu antriniu konstruktu. Pagrindinis susiejimas lemia vertinimą; antrinis susiejimas fiksuojamas metodologijos auditui, bet neprisideda prie pagrindinio rodiklio. Naudojame nusistovėjusias paradigmas — N-back, apimties užduotis, simbolių keitimą, Posner žymėjimą, Raveno tipo samprotavimą, užduočių keitimą — pritaikytas trumpoms platformos sesijoms.",
+      "heading": "Kaip pratimai siejami su konstruktais?"
+    },
+    "mappingCard": {
+      "colConstruct": "Pagrindinis konstruktas",
+      "colTask": "Užduotis",
+      "footnote": "Kiekviena užduotis siejama su vienu pagrindiniu konstruktu. Antriniai signalai fiksuojami, bet nelemia rezultato.",
+      "rows": {
+        "sequenceRecall": {
+          "construct": "Darbinė atmintis",
+          "task": "Sekos atkūrimas"
+        },
+        "symbolSubstitution": {
+          "construct": "Apdorojimo greitis",
+          "task": "Simbolių keitimas"
+        },
+        "targetDetection": {
+          "construct": "Dėmesys",
+          "task": "Taikinio aptikimas"
+        }
+      }
+    },
+    "meta": {
+      "description": "Kaip WelloWork sieja pratimus su patvirtintais pažintiniais konstruktais, juos vertina ir agreguoja rezultatus į ilgalaikes našumo tendencijas — su privatumu kaip projektavimo principu.",
+      "title": "Metodologijos apžvalga — kaip WelloWork matuoja pažintinį našumą"
+    },
+    "normCard": {
+      "caption": "Mes nelyginame darbuotojų tarpusavyje. Kiekvieną asmenį stebime pagal jo paties nusistovėjusį bazinį lygį.",
+      "populationBadge": "Nenaudojama",
+      "populationNote": "Darbuotojo lyginimas su bendraamžių pasiskirstymu. Triukšmingas individualiu lygmeniu — ir nejaukus darbe.",
+      "populationTitle": "Reitingavimas pagal populiaciją",
+      "withinPersonBadge": "WelloWork metodas",
+      "withinPersonNote": "Kiekviena sesija vertinama pagal darbuotojo paties einamąjį bazinį lygį per pastarąsias 90 dienų.",
+      "withinPersonTitle": "Asmeninis bazinis lygis"
+    },
+    "notClaim": {
+      "body": "Neteigiame, kad pažintinis lavinimas perkeliamas į konkrečius verslo rezultatus (pajamas, produktyvumą). Neteigiame, kad biožymenų ataskaitos turi klinikinę ar diagnostinę vertę. Neteigiame, kad individualus darbuotojų reitingavimas pagal trumpas adaptyvias užduotis yra patikimas — tik kad tendencijos yra patikimos. Ir nesugalvojame rodiklių: kiekvienas teiginys siejasi su paskelbtu konstruktu arba su metodologijos pastaba, kurią paskelbsime skiltyje /research.",
+      "heading": "Ko mes sąmoningai neteigiame?"
+    },
+    "pipeline": {
+      "adaptive": {
+        "label": "Adaptyvi užduotis",
+        "subtitle": "Sudėtingumas kalibruojamas kiekvienai sesijai"
+      },
+      "aggregate": {
+        "label": "Komandos lygmens agregatas",
+        "subtitle": "Ribota slenksčiu, išlyginta savaitėmis"
+      },
+      "aria": "WelloWork matavimo procesas",
+      "badge": "Jokių klinikinių teiginių. Jokio reitingavimo pagal populiaciją.",
+      "baseline": {
+        "label": "Normalizavimas pagal individualų darbuotojo bazinį lygį",
+        "subtitle": "Lyginama su jūsų pačių tendencija"
+      },
+      "mapping": {
+        "label": "Konstruktų susiejimas",
+        "subtitle": "Vienas pagrindinis pažintinis konstruktas"
+      }
+    },
+    "privacy": {
+      "body": "Metodologija ir privatumas yra susiję. Platformos pasirinkimas normalizuoti pagal patį darbuotoją, o ne pagal populiaciją, taip pat apsunkina agregato „deanonimizavimą“.",
+      "heading": "Privatumas metodologijoje"
+    },
+    "privacyGrid": {
+      "caption": "Tie patys metodologiniai pasirinkimai, dėl kurių mūsų matavimas yra tikslus, taip pat struktūriškai apsunkina deanonimizavimą.",
+      "subThreshold": {
+        "body": "Mažų grupių agregatus galima atsekti iki vieno darbuotojo. Slopiname juos pačiame šaltinyje.",
+        "title": "Kodėl neskelbiame žemiau slenksčio esančių agregatų"
+      },
+      "withinPerson": {
+        "body": "Asmeninis bazinis lygis neturi jokios informacijos apie bendraamžius — nėra bendraamžių pasiskirstymo, kurį būtų galima atvirkščiai išspręsti.",
+        "title": "Kodėl normalizavimas pagal asmenį saugo privatumą"
+      }
+    },
+    "publish": {
+      "body": "Metodologijos pastabos bus skelbiamos skiltyje /research/science-insight, kai bandomosios grupės sukaups pakankamai duomenų, kad būtų galima parašyti ką nors pagrįsto. Neskelbsime individualių klientų duomenų ir neskelbsime agregatų, neatitinkančių mūsų minimalaus komandos slenksčio.",
+      "heading": "Kaip skelbiame atnaujinimus?"
+    },
+    "scenariosPanel": {
+      "gameBadge": "Žaidimo perkėlimo problema",
+      "gameLevel": "6 lygis",
+      "gameMatch": "Atkartokite seką",
+      "gameNote": "Metaanalizės nuosekliai rodo, kad žmonės pagerina rezultatus žaidime. Perkėlimas į realų darbo sudėtingumą: minimalus.",
+      "gameStreak": "Serija ×4",
+      "gameTap": "Bakstelėkite",
+      "gameTitle": "Standartinis pažintinis žaidimas",
+      "optionA": "1 ir 2 pasiūlymai — abu remiasi III ketvirčio galutiniu terminu.",
+      "optionB": "1 ir 3 pasiūlymai — persidengiantys pristatymo laikotarpiai ir bendras sandėlis.",
+      "optionC": "2 ir 3 pasiūlymai — skirtingi regionai, persidengimo nėra.",
+      "scenarioBadge": "Ekologiškai pagrįsta",
+      "scenarioNote": "Sukurta remiantis lauko stebėjimais, kaip žmonės iš tikrųjų samprotauja darbe. Ne pakaitalas. Ne žaidimas.",
+      "scenarioPrompt": "Peržiūrite tris tiekėjų pasiūlymus, pateiktus dvidešimties minučių intervalu. Kurie du prieštarauja vienas kitam dėl pristatymo termino?",
+      "scenarioStep": "1 žingsnis iš 2",
+      "scenarioTag": "Pirkimai · peržiūra",
+      "scenarioTitle": "WelloWork elgsenos scenarijus"
+    },
+    "scenariosSection": {
+      "bridge": "Tyrimai nuosekliai rodo, kad žmonės tampa geresni pažintiniuose žaidimuose — bet ne sprendžiant sudėtingus sprendimus, kurių iš tikrųjų reikalauja jų darbas. WelloWork scenarijai grindžiami elgsenos lauko darbu.",
+      "heading": "Kodėl WelloWork scenarijai, o ne pažintiniai žaidimai?"
+    },
+    "scoring": {
+      "body": "Kiekvienos sesijos našumas normalizuojamas pagal darbuotojo paties einamąjį bazinį lygį (z-įvertis per pastarąsias 90 dienų). Tai sąmoningai vengia darbuotojų lyginimo tarpusavyje individualiu lygmeniu, nes pagal populiaciją grindžiamas vertinimas yra jautrus triukšmui, kuris darbo kontekste neturi reikšmės.",
+      "heading": "Kaip apskaičiuojami rezultatai?"
+    },
+    "timeline": {
+      "aria": "Metodologijos skelbimo etapai",
+      "note": "Skelbiame, kai duomenys yra pagrįsti. Ne anksčiau.",
+      "stop1": "Surinkti bandomosios grupės duomenys",
+      "stop2": "Parengta + peržiūrėta metodologijos pastaba",
+      "stop3": "Paskelbta skiltyje /research/science-insight"
+    },
+    "withinPerson": {
+      "yourBaseline": "jūsų bazinis lygis",
+      "yourGain": "jūsų prieaugis"
+    }
+  },
+  "researchScienceInsight": {
+    "anatomy": {
+      "anno1": "Darbinė hipotezė ir patvirtintas radinys",
+      "anno2": "Cituojami pirminiai šaltiniai",
+      "anno3": "Nurodytas patikimumo lygis",
+      "anno4": "Nuorodos atgal į metodiką",
+      "aria": "Tyrimo pastabos anatomija",
+      "body": "Z balų skaičiavimas pagal kiekvieną darbuotoją atskirai pašalina tarpindividualų triukšmą, kurį paveldi populiacijos atžvilgiu vertinamas balas. Perkėlimo sąnaudos yra išmatuojamos, tačiau bandomųjų duomenų atveju nedidelės.",
+      "confLabel": "Patikimumas",
+      "confValue": "Vidutinis",
+      "footlink": "Susieta iš metodikos apžvalgos →",
+      "metaNote": "Pastaba · 2026-Q2",
+      "metaPilot": "Bandomoji grupė 2",
+      "ref": "Owen et al. (2010); Melby-Lervåg & Hulme (2013); Soveri et al. (2017).",
+      "statusBadge": "Darbinė hipotezė",
+      "title": "Normalizavimas darbuotojo viduje"
+    },
+    "crumbs": {
+      "current": "Mokslas ir įžvalgos",
+      "home": "Pradžia",
+      "research": "Tyrimai"
+    },
+    "cta": {
+      "body": "Jei norėtumėte, kad konkretus klausimas apie literatūrą ar mūsų metodą būtų aptartas pastaboje čia, parašykite mums per kontaktų formą — perskaitome viską.",
+      "primary": "Susisiekti su tyrimų komanda",
+      "secondary": "Atgal į tyrimus",
+      "title": "Norite atsakymo į metodikos klausimą?"
+    },
+    "expect": {
+      "body": "Trumpos, datuotos pastabos apie konkretų konstruktą ar dizaino sprendimą. Kiekvienoje pastaboje bus įvardyti jos pirminiai šaltiniai, nurodyta, kur tai yra darbinė hipotezė, o kur patvirtintas radinys, ir pateikta nuoroda atgal į metodikos apžvalgą platesniam kontekstui.",
+      "heading": "Ko skaitytojai gali tikėtis čia?"
+    },
+    "fieldPanel": {
+      "gameBadge": "Apribojimas",
+      "gameLevel": "3 lygis",
+      "gameMatch": "Suderinkite figūrą",
+      "gameNote": "Dalyviai pažangą daro žaisdami žaidimą. Perkėlimas į realų darbo sudėtingumą: ribotas. Tai patvirtina dešimtys metaanalizių.",
+      "gameScore": "Rezultatas 820",
+      "gameTap": "Bakstelėkite",
+      "gameTitle": "Kaip kognityviniai žaidimai matuoja veiklą",
+      "optionA": "Trumpasis sąrašas A — atmesti 2 ir 4 tiekėjus.",
+      "optionB": "Trumpasis sąrašas B — palikti 1, 3, 5; iš naujo įvertinti pagal naujus apribojimus.",
+      "optionC": "Pradėti vertinimą iš naujo, pirmiausia pritaikius naujus apribojimus.",
+      "scenarioBadge": "Paremta praktika",
+      "scenarioNote": "Sukurta remiantis realių darbo vietos sprendimų lauko stebėjimais. Matuoja elgesio modelius, o ne žaidimo įgūdžius.",
+      "scenarioPrompt": "Peržiūrėjote 5 tiekėjų pasiūlymus. Ką tik gauti du nauji apribojimai. Kuris pirminis trumpasis sąrašas vis dar tinka?",
+      "scenarioStep": "2 žingsnis iš 3",
+      "scenarioTag": "Pirkimai · trumpasis sąrašas",
+      "scenarioTitle": "Kaip WelloWork matuoja veiklą"
+    },
+    "fieldSection": {
+      "bridge": "Standartiniai kognityviniai testų rinkiniai pagerina žmonių gebėjimą atlikti kognityvinius testus. Mūsų scenarijai sukurti pagal tai, kaip darbas vyksta iš tikrųjų, todėl tai, ką matuojame, perkeliama į praktiką.",
+      "heading": "Kodėl lauko tyrimai keičia tai, ką matuojame"
+    },
+    "follow": {
+      "body": "Kol kas paprasčiausias būdas sekti naujienas — užsiprenumeruoti per kontaktus. Niekada neįtrauksime nieko į jokį sąrašą be aiškaus sutikimo, o atsisakyti galite bet kada.",
+      "heading": "Kaip sekti naujienas"
+    },
+    "hero": {
+      "eyebrow": "Mokslas ir įžvalgos",
+      "lede": "Darbinė erdvė metodikos pastaboms, literatūros apžvalgoms ir bandomųjų grupių stebėjimams. Publikuojame nebaigtus darbus su išlygomis, o ne galutinius teiginius.",
+      "titleAccent": "tyrimų komandos.",
+      "titleLead": "Pastabos iš WelloWork"
+    },
+    "meta": {
+      "description": "Darbinės WelloWork tyrimų komandos pastabos apie kognityvinius konstruktus, biožymenų metodiką, darbo vietos veiklos signalus ir tai, kur literatūra pasiekia ribas, o kur ne.",
+      "title": "Mokslas ir įžvalgos — metodikos pastabos iš WelloWork tyrimų"
+    },
+    "notebook": {
+      "aria": "Rengiamos tyrimo pastabos pavyzdys",
+      "confidenceKey": "Patikimumas",
+      "confidenceVal": "Žemas–vidutinis",
+      "constructKey": "Konstruktas",
+      "constructVal": "N-back perkėlimas",
+      "eyebrow": "Tyrimo pastaba",
+      "lastUpdated": "Paskutinį kartą atnaujinta",
+      "lastUpdatedVal": "Bandomoji grupė 2 · Laukiama atkartojimo",
+      "meterAria": "Patikimumas ~35 %",
+      "meterLabel": "Patikimumas",
+      "meterValue": "35 %",
+      "status": "Rengiama",
+      "statusKey": "Būsena",
+      "statusVal": "Hipotezė"
+    },
+    "notThis": {
+      "body": "Tai nėra rinkodaros tinklaraštis ir ne recenzuojamas leidinys. Tai tarpinis sluoksnis, kuriame viešai laikomės sąžiningumo.",
+      "heading": "Kas tai nėra"
+    },
+    "pipelineStrip": {
+      "aria": "Būsimos tyrimų pastabos",
+      "note1": {
+        "status": "Pasirodys pirmoji",
+        "tag": "Balų skaičiavimo metodika",
+        "title": "Normalizavimas darbuotojo viduje"
+      },
+      "note2": {
+        "status": "Įtraukti neigiami rezultatai",
+        "tag": "Konstrukto validumas",
+        "title": "N-back perkėlimo poveikis"
+      },
+      "note3": {
+        "status": "Pritaikyta",
+        "tag": "Agregavimo dizainas",
+        "title": "Minimalūs komandos dydžio slenksčiai"
+      },
+      "note4": {
+        "status": "Įtrauktas dizaino atsakas",
+        "tag": "Bandomasis stebėjimas",
+        "title": "Sesijų reguliarumo mažėjimas"
+      }
+    },
+    "publishedFirst": {
+      "body": "Nedidelis juodraščio stadijoje jau esančių pastabų rinkinys. Kiekviena pasirodys su iš anksto įtrauktomis išlygomis — įskaitant neigiamus rezultatus ir dizaino pakeitimus, kuriuos padarėme reaguodami į ankstyvuosius duomenis.",
+      "heading": "Kas bus publikuojama pirmiausia?"
+    },
+    "scope": {
+      "body": "Metodikos pastabos, mini literatūros apžvalgos ir ankstyvųjų bandomųjų grupių stebėjimai. Tikslas — parodyti, kaip dirbame, įskaitant vietas, kur literatūra dar nepalaiko tokio teiginio, kokį norėtų pateikti rinkodaros puslapis.",
+      "label": "Kas yra skiltyje „Mokslas ir įžvalgos“?"
+    },
+    "scopeStrip": {
+      "aria": "Ką apima ši skiltis",
+      "litReviews": {
+        "body": "Ką tyrimai iš tikrųjų teigia — įskaitant silpnąsias vietas.",
+        "label": "Mini literatūros apžvalgos"
+      },
+      "methodology": {
+        "body": "Kaip sukūrėme kiekvieną konstruktą ir kodėl.",
+        "label": "Metodikos pastabos"
+      },
+      "pilot": {
+        "body": "Ankstyvieji grupių duomenys ir tai, ką jie pakeitė mūsų dizaine.",
+        "label": "Bandomieji stebėjimai"
+      }
+    },
+    "spectrum": {
+      "aria": "WelloWork tyrimų pozicionavimas",
+      "journalSub": "Galutiniai teiginiai · visapusiška recenzija",
+      "journalTitle": "Recenzuojamas žurnalas",
+      "marketingSub": "Teiginiai be neapibrėžtumo",
+      "marketingTitle": "Rinkodaros tinklaraštis",
+      "midSub": "Darbinės pastabos · matomos išlygos · sąžiningai apie spragas",
+      "midTitle": "Mokslas ir įžvalgos",
+      "note": "Viskas, kas pasiekia publikavimo standartą, bus susieta iš čia."
+    },
+    "trustStrip": {
+      "aria": "Redakciniai įsipareigojimai",
+      "noClaims": {
+        "body": "Publikuojame dar nebūdami tikri. Tai aiškiai pasakome.",
+        "title": "Jokių galutinių teiginių"
+      },
+      "optIn": {
+        "body": "Jokio įtraukimo į sąrašus be sutikimo. Atsisakyti galima bet kada.",
+        "title": "Tik su sutikimu"
+      },
+      "sources": {
+        "body": "Kiekviena pastaba įvardija pirminę literatūrą.",
+        "title": "Įvardyti šaltiniai"
+      }
+    }
+  },
+  "researchTeaser": {
+    "constructs": [
+      {
+        "cap": "N-back, atminties apimties užduotys · Baddeley, 1992",
+        "name": "Darbinė atmintis"
+      },
+      {
+        "cap": "Simbolių keitimas · Wechsler, klasikinis",
+        "name": "Apdorojimo greitis"
+      },
+      {
+        "cap": "Ištvermingas ir selektyvus · Posner paradigmos",
+        "name": "Dėmesys"
+      },
+      {
+        "cap": "Tower ir Raven tipo samprotavimas",
+        "name": "Problemų sprendimas"
+      },
+      {
+        "cap": "Užduočių perjungimo kaštai · Monsell, 2003",
+        "name": "Kognityvinis lankstumas"
+      }
+    ],
+    "cta": {
+      "methodology": "Metodikos apžvalga",
+      "research": "Tyrimų puslapis"
+    },
+    "eyebrow": "Tyrimai ir įrodymai",
+    "heading": {
+      "accent": "sritis jau patvirtina.",
+      "lead": "Sukurta remiantis konstruktais, kuriuos "
+    },
+    "lede": "Kiekvienas platformos kognityvinis pratimas atitinka konstruktą su išsamia moksline literatūra — ne mūsų pačių sugalvotą rodiklį. Metodiką skelbiame generuodami bandomuosius duomenis."
+  },
+  "solutions": {
+    "eyebrow": "Sprendimai pagal vaidmenį",
+    "heading": {
+      "accent": "Vienas tiesos šaltinis.",
+      "lead": "Trys perspektyvos."
+    },
+    "lede": "Personalo (HR), operacijų ir mokymosi bei tobulėjimo (L&D) komandos mato būtent tą platformos dalį, kuri svarbi jų sprendimams — pagrįstą tais pačiais bendrais veiklos duomenimis.",
+    "roles": {
+      "hr": {
+        "bullets": [
+          "Apibendrinti kognityvinių tendencijų pokyčiai visose komandose",
+          "Pagrįsta gerovės investicijų grąža, paremta veiklos duomenimis",
+          "Pasirengimo paaukštinimui signalai, nepriklausantys nuo metinių vertinimų"
+        ],
+        "label": "Personalo ir žmonių vadovams",
+        "title": "Pastebėkite perdegimo signalus, kol jie netapo išėjimais."
+      },
+      "ld": {
+        "bullets": [
+          "Asmeninės rekomendacijos pagal kognityvines stiprybes",
+          "Žetonais finansuojama kursų rinka, visiškai užsakoma programėlėje",
+          "Įgūdžių ugdymas stebimas kartu su veiklos tendencijomis"
+        ],
+        "label": "Mokymosi ir tobulėjimo (L&D) vadovams",
+        "title": "Kurkite augimo kryptis, susietas su išmatuotu kognityviniu profiliu."
+      },
+      "operations": {
+        "bullets": [
+          "Atpažinkite nuovargio modelius pagal pamainų grafiką ir vaidmenį",
+          "Optimizuokite komandos sudėtį operacijoms svarbiems projektams",
+          "Sumažinkite kintamumą ten, kur jis kenkia saugai"
+        ],
+        "label": "Operacijų vadovams",
+        "title": "Planuokite pamainas atsižvelgdami į tai, kaip žmonės iš tikrųjų dirba."
+      }
+    }
+  }
+}

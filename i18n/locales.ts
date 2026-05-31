@@ -95,7 +95,7 @@ export const defaultLocale: AppLocale = 'en';
  * production builds (see ENABLED_LOCALES below), so it can NEVER ship enabled
  * even if this toggle is accidentally left in.
  */
-const PUBLISHED_LOCALES: AppLocale[] = ['en'];
+const PUBLISHED_LOCALES: AppLocale[] = ['en', 'lt'];
 
 /**
  * Effective enabled locales. Routing, the switcher, hreflang, the sitemap and

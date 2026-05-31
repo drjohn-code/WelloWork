@@ -7,8 +7,13 @@ import {
   type AppLocale,
 } from "@/i18n/locales";
 
+// Canonical base for ALL absolute SEO URLs (canonical, hreflang, og:url, sitemap,
+// robots host, JSON-LD). Must match the serving host: Vercel's primary domain is
+// www.wellowork.net (apex wellowork.net 307-redirects to it), so the fallback is
+// www to avoid emitting canonicals that resolve through a redirect.
+// `NEXT_PUBLIC_SITE_URL` (set in Vercel) overrides this and should also be www.
 export const SITE_URL =
-  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://wellowork.net";
+  process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.wellowork.net";
 
 // Brand entity — identical across every locale (SEO_GUIDELINES §2.1). Never
 // translate SITE_NAME / ORG_LEGAL_NAME or interpolate them into translatable
