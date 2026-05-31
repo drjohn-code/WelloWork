@@ -1,0 +1,2968 @@
+{
+  "_draft": {
+    "status": "MACHINE DRAFT — NOT human-reviewed",
+    "locale": "nl",
+    "language": "Dutch",
+    "method": "LLM machine translation of en.json",
+    "instructions": "Unreviewed machine translation. Have a native Dutch speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize kept verbatim."
+  },
+  "about": {
+    "based": {
+      "body": "WelloWork AB is geregistreerd in Zweden en opereert vanuit Uppsala. We bedienen klanten in de EU, het Verenigd Koninkrijk en de Scandinavische landen, en draaien het platform op infrastructuur die binnen de EU is ondergebracht.",
+      "title": "Waar is WelloWork gevestigd?"
+    },
+    "cta": {
+      "body": "Dertig minuten, realistische voorbeeldgegevens en een open gesprek over scope en prijs.",
+      "primary": "Plan een demo",
+      "secondary": "Neem contact op",
+      "title": "Wil je zien hoe een pilot <italic>eruitziet?</italic>"
+    },
+    "featureGrid": {
+      "biomarker": {
+        "desc": "Thuis afgenomen monsters",
+        "label": "Biomarkertesten"
+      },
+      "trends": {
+        "desc": "Prestaties in de tijd",
+        "label": "Longitudinale trends"
+      },
+      "welloRise": {
+        "desc": "Cognitieve training",
+        "label": "WelloRise"
+      },
+      "welloWize": {
+        "desc": "Werving en assessments",
+        "label": "WelloWize"
+      },
+      "workshops": {
+        "desc": "Live groepssessies",
+        "label": "Gezondheidsworkshops"
+      }
+    },
+    "gap": {
+      "dividerLabel": "de kloof",
+      "itemCognitive": "Cognitieve prestaties",
+      "itemEngagement": "Betrokkenheid",
+      "itemLongitudinal": "Longitudinale trends",
+      "itemOutput": "Werkelijke output",
+      "itemPulse": "Pulse",
+      "itemSatisfaction": "Tevredenheid",
+      "measuredLabel": "Wat de meeste platforms meten",
+      "welloLabel": "Wat WelloWork meet"
+    },
+    "hero": {
+      "eyebrow": "Over WelloWork",
+      "lede": "We zijn WelloWork in 2024 begonnen in Uppsala, Zweden. We bouwen voor HR-, Operations- en L&D-teams die al weten dat betrokkenheidsscores niet hetzelfde zijn als prestaties — en die één platform willen dat dat tweede daadwerkelijk meet.",
+      "title": "Een Zweeds team dat een ander soort <italic>werkplekplatform bouwt.</italic>"
+    },
+    "meta": {
+      "description": "WelloWork AB is een Zweeds platform voor werkplekprestaties, opgericht in 2024. We combineren cognitieve training, longitudinale prestaties, biomarkertesten en live workshops.",
+      "title": "Over WelloWork — werkplekprestaties, gebouwd in Zweden"
+    },
+    "persona": {
+      "hr": {
+        "tag": "Signalen van burn-out vroeg herkennen",
+        "title": "HR- en People-leiders"
+      },
+      "ld": {
+        "tag": "Groeitrajecten gekoppeld aan cognitieve profielen",
+        "title": "L&D-leiders"
+      },
+      "ops": {
+        "tag": "Plannen op basis van werkelijke prestaties",
+        "title": "Operations-leiders"
+      }
+    },
+    "privacy": {
+      "body": "Privacy zit in de architectuur, niet als nagedachte rond compliance. Cognitieve scores, biomarkerrapporten en assessmentresultaten op medewerkerniveau blijven bij de medewerker. Managers en beheerders zien alleen geanonimiseerde, geaggregeerde trends. Alle medewerkergegevens worden binnen de EU opgeslagen onder de GDPR, en we werken toe naar ISO 27001-certificering.",
+      "title": "Wat is het privacystandpunt?"
+    },
+    "privacyDiagram": {
+      "admin": {
+        "detail": "Geaggregeerd organisatieoverzicht",
+        "role": "Beheerder"
+      },
+      "badgeEu": "Opgeslagen in de EU",
+      "badgeGdpr": "GDPR-conform",
+      "badgeIso": "ISO 27001 in uitvoering",
+      "employee": {
+        "detail": "Eigenaar van eigen gegevens",
+        "role": "Medewerker"
+      },
+      "manager": {
+        "detail": "Geanonimiseerde trends",
+        "role": "Manager"
+      }
+    },
+    "schema": {
+      "aboutPageName": "Over WelloWork"
+    },
+    "swedenMap": {
+      "coord": "59°51′N · 17°38′E",
+      "label": "Hoofdkantoor Uppsala",
+      "note": "Opererend vanuit Uppsala. We bedienen klanten in de EU, het VK en de Scandinavische landen."
+    },
+    "uppsalaCard": {
+      "badge": "Opgericht in 2024",
+      "location": "Uppsala, Zweden · 59°51′N"
+    },
+    "whatWeDo": {
+      "body": "WelloWork is een platform voor werkplekprestaties dat dagelijkse cognitieve training (WelloRise), werving en interne assessments (WelloWize), longitudinale prestatietrends, live gezondheidsworkshops en biomarkertesten combineert. Medewerkers zijn eigenaar van hun gegevens; managers zien alleen geanonimiseerde, geaggregeerde inzichten.",
+      "title": "Wat doet WelloWork?"
+    },
+    "who": {
+      "body": "We werken met organisaties tussen 50 en 5.000 medewerkers in de EU, het VK en de Scandinavische landen — doorgaans organisaties die al betrokkenheidsgegevens verzamelen en daarnaast een verdedigbaar prestatiesignaal willen. HR- en People-leiders gebruiken ons om signalen van burn-out vroeg te herkennen; Operations-leiders gebruiken ons om te plannen op basis van hoe teams daadwerkelijk presteren; L&D-leiders gebruiken ons om groeitrajecten te bouwen die gekoppeld zijn aan gemeten cognitieve profielen.",
+      "title": "Voor wie is WelloWork bedoeld?"
+    },
+    "why": {
+      "body": "De meeste werkplekplatforms meten ofwel hoe mensen zich over hun werk <em>voelen</em> — betrokkenheid, pulse, tevredenheid — of zitten in de wervingstrechter en stoppen na de aanbiedingsbrief. Wat ontbreekt, is een longitudinaal beeld van cognitieve prestaties zodra mensen binnen de organisatie zijn. WelloWork is specifiek gebouwd voor die kloof, met hetzelfde datamodel dat door training, assessments, workshops en biomarkerrapporten loopt.",
+      "title": "Waarom hebben we dit gebouwd?"
+    }
+  },
+  "advantage": {
+    "eyebrow": "Het WelloWork-voordeel",
+    "heading": {
+      "accent": "verdedigen in een verkoopgesprek.",
+      "lead": "Vier beweringen die we zullen "
+    },
+    "intro": "Geen verzonnen cijfers. Geen valse validaties. Beweringen op categorieniveau, geworteld in wat het platform daadwerkelijk doet en hoe het is gebouwd.",
+    "points": [
+      {
+        "body": "De meeste tools dekken er één van. Wij verbinden alle drie, zodat signalen uit het ene beslissingen in de andere voeden.",
+        "label": "01",
+        "title": "Het enige platform dat cognitieve training, biomarkertests en teamintelligentie combineert."
+      },
+      {
+        "body": "Privacy is de architectuur, niet een nalevingsvoetnoot. Managers zien alleen geanonimiseerde, geaggregeerde trends.",
+        "label": "02",
+        "title": "Gebouwd in Zweden, standaard onder GDPR — medewerkers zijn eigenaar van hun data."
+      },
+      {
+        "body": "Prestaties veranderen door sprints, ploegendiensten en seizoenen heen. Wij meten gedurende het hele jaar, niet op de dag van de beoordeling.",
+        "label": "03",
+        "title": "Longitudinale trends, geen eenmalige scores."
+      },
+      {
+        "body": "Cognitieve training past in een koffiepauze. Workshops passen in de lunch. Het testen van monsters gebeurt op locatie.",
+        "label": "04",
+        "title": "Ontworpen voor dagelijks gebruik — gemeten in minuten, niet in uren."
+      }
+    ]
+  },
+  "bookDemo": {
+    "agenda": {
+      "dashboard": {
+        "body": "Geaggregeerde teamtrends, voltooiing van biomarkers, signalen over teamsamenstelling — op basis van voorbeeldgegevens uit uw sector.",
+        "minutes": "5–20 min",
+        "title": "Managementdashboard"
+      },
+      "intro": {
+        "body": "Korte kennismaking, de huidige rituelen die u uitvoert, en wat u uit dit gesprek wilt leren.",
+        "minutes": "0–5 min",
+        "title": "Introductie & context"
+      },
+      "lede": "De agenda is elke keer hetzelfde, zodat u weet waar u zich met deze 30 minuten aan verbindt.",
+      "list": {
+        "aria": "Agenda van het demogesprek"
+      },
+      "pilot": {
+        "body": "Personeelsomvang, uitroltempo, of workshops of biomarkerbemonstering binnen scope vallen, en prijsstelling.",
+        "minutes": "25–30 min",
+        "title": "Pilot afbakenen"
+      },
+      "privacy": {
+        "body": "Wat medewerkers in hun eigen app zien, en wat de managementweergave wel — en niet — toont.",
+        "minutes": "20–25 min",
+        "title": "Privacy van medewerkers"
+      },
+      "title": "Wat er tijdens het gesprek gebeurt"
+    },
+    "audience": {
+      "hr": {
+        "body": "Combineer uw bestaande enquêtes met dagelijkse cognitieve metingen en biomarkertrends — zonder individuele medewerkergegevens aan managers te tonen.",
+        "eyebrow": "HR & People",
+        "title": "Bouw een longitudinaal signaal op dat verder gaat dan betrokkenheid"
+      },
+      "ld": {
+        "body": "Koppel L&D-programma's aan longitudinale trendgegevens en voeg vervolgens live workshops toe op de plekken waar ze echt het verschil maken.",
+        "eyebrow": "Learning & Development",
+        "title": "Toon de impact van training op echte prestatie-indicatoren"
+      },
+      "lede": "De demo is gebouwd voor het team dat de uitrol gaat beheren. Kies de invalshoek die bij uw rol past.",
+      "ops": {
+        "body": "Geanonimiseerde signalen over teamsamenstelling en capaciteitstrends, afgebakend op teams in plaats van individuen.",
+        "eyebrow": "Operations",
+        "title": "Zie teamsamenstelling en belasting voordat de output daalt"
+      },
+      "title": "Wie zou een demo moeten boeken?"
+    },
+    "calcom": {
+      "iframeTitle": "Plan een WelloWork-demo",
+      "loading": "Planner laden…",
+      "regionAria": "Demoplanner"
+    },
+    "expect": {
+      "cantFind": "Geen geschikt tijdslot gevonden? <emailLink>Stuur het team een e-mail</emailLink> en we vinden er een.",
+      "eyebrow": "Wat u kunt verwachten",
+      "leaveWith": {
+        "body": "Een korte schriftelijke samenvatting, pilotprijzen die passen bij uw personeelsomvang, en een vrijblijvende vervolgstap.",
+        "title": "Wat u meeneemt"
+      },
+      "long": {
+        "body": "30 minuten — 20 minuten begeleid, 10 minuten vragen en het afbakenen van de pilot.",
+        "title": "Hoe lang"
+      },
+      "noPressure": {
+        "body": "Geen vaste opvolging tenzij u erom vraagt. We behandelen medewerkergegevens — en uw tijd — op dezelfde manier.",
+        "title": "Geen druk"
+      },
+      "show": {
+        "body": "Managementdashboard met voorbeeldgegevens uit uw sector, de medewerkersapp en de privacyarchitectuur.",
+        "title": "Wat we laten zien"
+      },
+      "title": "Een gerichte 30 minuten — zonder opvulling",
+      "who": {
+        "body": "Een WelloWork-productspecialist — meestal één persoon, nooit een verkoopteam.",
+        "title": "Wie er meedoet"
+      }
+    },
+    "faq": {
+      "attend": {
+        "a": "Een beslisser uit HR, People, L&D of Operations is ideaal. Het is prima om een collega uit te nodigen die de uitrol gaat beheren; we hebben in het eerste gesprek geen finance of inkoop nodig.",
+        "q": "Wie zou er van onze kant aanwezig moeten zijn?"
+      },
+      "length": {
+        "a": "Dertig minuten van begin tot eind. De eerste 20 minuten zijn een begeleide rondleiding door het managementdashboard en de medewerkersapp; de laatste 10 minuten zijn gereserveerd voor uw vragen en het afbakenen van de pilot.",
+        "q": "Hoe lang duurt een WelloWork-demo?"
+      },
+      "pitch": {
+        "a": "Het is een productrondleiding op een echt dashboard met voorbeeldgegevens uit uw sector. Geen fictieve ROI-grafieken en geen verkoop onder hoge druk — we laten u achter met de informatie om in uw eigen tempo te beslissen.",
+        "q": "Is de demo een verkooppraatje of een productrondleiding?"
+      },
+      "prep": {
+        "a": "Geen voorbereiding nodig. Neem uw teamomvang mee, de sector waarin u actief bent, en een ruw idee van wanneer u zou kunnen piloten — dat is genoeg om de demo concreet te maken.",
+        "q": "Moeten we iets voorbereiden vóór het gesprek?"
+      },
+      "reschedule": {
+        "a": "Ja. Elke bevestigingsmail bevat links om te verzetten of annuleren vanuit de agenda — geen e-mailheen-en-weer nodig.",
+        "q": "Kunnen we verzetten of annuleren?"
+      },
+      "title": "Veelgestelde vragen"
+    },
+    "hero": {
+      "answerBody": "van het managementdashboard met realistische voorbeeldgegevens uit uw sector. U ziet dagelijkse cognitieve training, longitudinale trendmonitoring, signalen over teamsamenstelling en voltooiing van biomarkers — en we sluiten af met een kort gesprek over het afbakenen van de pilot. Geen fictieve ROI-grafieken.",
+      "answerLead": "Een WelloWork-demo is een live rondleiding van 30 minuten",
+      "badgeGdpr": "GDPR-native",
+      "badgeIso": "ISO 27001 in uitvoering",
+      "badgeMadeInSweden": "Gemaakt in Zweden",
+      "eyebrow": "Boek een demo",
+      "title": "Bekijk de cognitieve prestaties van uw team — <italic>in één demo.</italic>"
+    },
+    "meta": {
+      "description": "Kies een tijdstip in de live agenda en ontmoet een WelloWork-productspecialist voor een rondleiding van 30 minuten door het managementdashboard. Gemaakt in Zweden · GDPR-native.",
+      "title": "Boek een WelloWork-demo — kies een tijdslot van 30 minuten"
+    },
+    "scheduler": {
+      "body": "Uw tijdzone wordt automatisch gedetecteerd. Kies een dag en vervolgens een tijdslot — u bevestigt de details in de volgende stap en ontvangt direct een agenda-uitnodiging.",
+      "title": "Kies een tijdstip dat u uitkomt"
+    },
+    "schema": {
+      "reservationName": "WelloWork-productdemo",
+      "webPageDescription": "Plan een live demo van 30 minuten van het WelloWork-managementdashboard met realistische voorbeeldgegevens uit uw sector.",
+      "webPageName": "Boek een WelloWork-demo"
+    },
+    "secondaryCta": {
+      "body": "Liever eerst praten, of wilt u zelf in het product duiken? Wij begrijpen het — er is geen druk om vandaag te boeken.",
+      "primary": "Neem contact op",
+      "secondary": "Verken het platform",
+      "title": "Nog niet klaar om een tijdstip te kiezen?"
+    }
+  },
+  "breadcrumbs": {
+    "about": "Over ons",
+    "ariaLabel": "Broodkruimel",
+    "bookDemo": "Demo boeken",
+    "careers": "Vacatures",
+    "contact": "Contact",
+    "home": "Home",
+    "legal": "Juridisch"
+  },
+  "careers": {
+    "anchor": {
+      "body": "Op dit moment niet. We nemen langzaam en weloverwogen aan terwijl we pilots draaien. Wil je op de shortlist staan voor de volgende ronde functies, mail dan naar <email></email> met een korte introductie van één alinea en relevante links — we lezen ze allemaal.",
+      "q": "Zijn er openstaande functies bij WelloWork?"
+    },
+    "cta": {
+      "body": "Klinkt WelloWork als een plek waar je een paar jaar zou willen bouwen, schrijf ons dan een alinea. Ook als we geen functies open hebben staan, houden we aantekeningen bij.",
+      "primary": "Neem contact op",
+      "secondary": "Over WelloWork",
+      "title": "Stuur ons een introductie."
+    },
+    "hero": {
+      "eyebrow": "Vacatures",
+      "lede": "WelloWork is een klein Zweeds team dat zich vroeg in zijn pilotfase bevindt. Wanneer we functies openstellen, worden ze hier geplaatst. Tot die tijd is de drempel om een gesprek te beginnen laag als jouw verhaal bij het onze past.",
+      "title": "We hebben op dit moment geen openstaande functies — <italic>maar we lezen elke introductie.</italic>"
+    },
+    "hireFirst": {
+      "li1": "Engineers die product hebben opgeleverd, niet alleen frameworks.",
+      "li2": "Designers die geven om evidence-based product en uitgesproken meningen hebben over typografie en motion.",
+      "li3": "Onderzoekers met een achtergrond in cognitieve wetenschap of kwantitatieve psychologie die methodologienotities kunnen schrijven die standhouden.",
+      "li4": "Sales- en customer-successmensen die pilots van begin tot eind hebben gedraaid bij kleine, zorgvuldige B2B-bedrijven.",
+      "title": "Wat voor mensen nemen we waarschijnlijk als eerste aan?"
+    },
+    "hiringFlow": {
+      "conversation": {
+        "label": "Gesprek",
+        "note": "~30 min, geen voorbereiding"
+      },
+      "intro": {
+        "label": "Introductie-e-mail",
+        "note": "Lage drempel — geen cv nodig"
+      },
+      "stagePrefix": "Fase {n}",
+      "trialDay": {
+        "label": "Betaalde proefdag",
+        "note": "Je ontmoet het hele team"
+      },
+      "workSample": {
+        "label": "Werkproef",
+        "note": "Gekoppeld aan de daadwerkelijke functie"
+      }
+    },
+    "introCard": {
+      "bodyP1": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ik volg de methodologienotities van WelloWork al een tijdje en wilde even een kort hallo sturen.",
+      "bodyP2": "Sed do eiusmod tempor incididunt ut labore — ik deel graag werkproeven en loop graag door hoe ik een onboardingflow voor een pilot zou aanpakken.",
+      "name": "Lena K.",
+      "readBadge": "Gelezen",
+      "role": "Product Designer",
+      "subjectKey": "Onderwerp",
+      "subjectVal": "Hallo uit Berlijn — ik zou me graag voorstellen",
+      "tagCaseStudy": "Case study",
+      "tagGithub": "GitHub",
+      "tagPortfolio": "Portfolio"
+    },
+    "life": {
+      "body": "Klein team, verankerd in Uppsala, remote-vriendelijk door de hele EU en het VK. We werken in het Engels. We kiezen er standaard voor om dingen op te schrijven in plaats van ze uit te praten, en we publiceren onze methodologie in het openbaar — wat de rest van het werk makkelijker te onderbouwen maakt.",
+      "title": "Hoe is het om bij WelloWork te werken?"
+    },
+    "meta": {
+      "description": "We hebben op dit moment geen openstaande functies, maar we lezen elke introductie. Hier lees je hoe WelloWork denkt over aannemen, wie we waarschijnlijk als eerste toevoegen en hoe je contact opneemt.",
+      "title": "Vacatures bij WelloWork — hoe we aannemen en hoe je ons bereikt"
+    },
+    "norms": {
+      "public": {
+        "label": "Publieke methodologie",
+        "note": "We publiceren onze methoden — wat ons eerlijk houdt."
+      },
+      "remote": {
+        "label": "Remote-vriendelijk EU/VK",
+        "note": "Verankerd in Uppsala, verspreid over de EU en het VK."
+      },
+      "written": {
+        "label": "Schriftelijk-eerst",
+        "note": "We kiezen er standaard voor om dingen op te schrijven voordat we ze uitpraten."
+      }
+    },
+    "process": {
+      "body": "Korte, transparante fases — meestal een gesprek, een gerichte werkproef die aansluit op de functie, en een betaalde proefdag met het team. We delen de beoordelingscriteria vooraf, en we gebruiken ons eigen platform intern zodat we de kandidaatervaring zelf kunnen ervaren.",
+      "title": "Hoe verloopt ons wervingsproces?"
+    },
+    "reach": {
+      "body": "Mail naar <email></email> of gebruik het formulier op de <contactLink>contactpagina</contactLink>. Voeg een introductie van één alinea toe en waar je als eerste aan zou willen werken — geen volledig cv nodig in de introductiefase.",
+      "title": "Hoe kan ik je bereiken over een functie?"
+    },
+    "reachTiles": {
+      "contactLabel": "Gebruik het contactformulier",
+      "contactSub": "Geen cv nodig — een alinea is genoeg in de introductiefase.",
+      "emailLabel": "Mail ons"
+    },
+    "roleCards": {
+      "designers": {
+        "desc": "Evidence-based product met uitgesproken meningen over typografie en motion.",
+        "label": "Designers"
+      },
+      "engineers": {
+        "desc": "Product opgeleverd, niet alleen frameworks.",
+        "label": "Engineers"
+      },
+      "researchers": {
+        "desc": "Cognitieve wetenschap of kwantitatieve psychologie — methodologienotities die standhouden.",
+        "label": "Onderzoekers"
+      },
+      "salesCs": {
+        "desc": "Pilots van begin tot eind gedraaid bij kleine, zorgvuldige B2B-bedrijven.",
+        "label": "Sales & CS"
+      }
+    },
+    "schema": {
+      "webPageName": "Vacatures bij WelloWork"
+    }
+  },
+  "chips": {
+    "privacy": {
+      "default": "Geaggregeerd, geanonimiseerd — managerweergave"
+    },
+    "sweden": "Gedreven door wetenschap, gebouwd met zorg"
+  },
+  "common": {
+    "advantage": {
+      "body": "Geen verzonnen cijfers. Geen valse validaties. Claims op categorieniveau, gebaseerd op wat het platform daadwerkelijk doet en hoe het is gebouwd.",
+      "eyebrow": "Het WelloWork-voordeel",
+      "point1": {
+        "body": "De meeste tools dekken er één van. Wij verbinden alle drie, zodat signalen uit het ene de beslissingen in de andere voeden.",
+        "title": "Het enige platform dat cognitieve training, biomarkertesten en teamintelligentie combineert."
+      },
+      "point2": {
+        "body": "Privacy is de architectuur, geen compliance-voetnoot. Managers zien alleen geanonimiseerde, geaggregeerde trends.",
+        "title": "Gebouwd in Zweden, standaard onder GDPR — medewerkers zijn eigenaar van hun data."
+      },
+      "point3": {
+        "body": "Prestaties veranderen door sprints, diensten en seizoenen heen. Wij meten het hele jaar door, niet alleen op de beoordelingsdag.",
+        "title": "Longitudinale trends, geen eenmalige scores."
+      },
+      "point4": {
+        "body": "Cognitieve training past in een koffiepauze. Workshops passen in de lunch. Sampletesten gebeuren op locatie.",
+        "title": "Ontworpen voor dagelijks gebruik — gemeten in minuten, niet in uren."
+      },
+      "titleAccent": "verdedigen in een salesgesprek.",
+      "titleLead": "Vier claims die we"
+    },
+    "breadcrumb": {
+      "aria": "Kruimelpad"
+    },
+    "privacyChip": {
+      "default": "Geaggregeerd, geanonimiseerd — managerweergave"
+    },
+    "swedenChip": "Gedreven door wetenschap, gebouwd met zorg",
+    "logoAlt": "WelloWork-logo"
+  },
+  "contact": {
+    "based": {
+      "body": "WelloWork AB is geregistreerd in Zweden en opereert vanuit Uppsala. Alle werknemersgegevens worden binnen de EU opgeslagen op infrastructuur die voldoet aan de GDPR. We bedienen klanten in de hele EU, het Verenigd Koninkrijk en de Scandinavische landen.",
+      "title": "Waar is WelloWork gevestigd?"
+    },
+    "hero": {
+      "eyebrow": "Contact",
+      "lede": "Verkoop, partnerschappen, support, vacatures — elk bericht komt terecht bij een klein team in Zweden. De meeste vragen krijgen binnen één werkdag antwoord.",
+      "title": "Spreek met een echt persoon — <italic>in Uppsala.</italic>"
+    },
+    "meta": {
+      "description": "Neem contact op met het WelloWork-team in Uppsala, Zweden. Mail naar info@wellowork.net of bel +46 760 28 1272 voor verkoop, partnerschappen of algemene vragen.",
+      "title": "Contact met WelloWork — spreek met verkoop, support of partnerschappen"
+    },
+    "reach": {
+      "answerBody": "Gebruik voor demoaanvragen het formulier op deze pagina of <demoLink>/book-a-demo</demoLink>. Voor al het overige — partnerschappen, pers, vacatures, support — mail naar {email} of bel {phone} tijdens EU-kantooruren.",
+      "answerLead": "E-mail of telefoon is het snelst.",
+      "title": "Hoe kan ik WelloWork bereiken?"
+    },
+    "row": {
+      "area": {
+        "label": "Kantoor & verzorgingsgebied",
+        "value": "{city}, {country} · bedient de EU, het VK en de Scandinavische landen"
+      },
+      "email": {
+        "label": "E-mail"
+      },
+      "hours": {
+        "label": "Openingstijden",
+        "value": "Ma–vr · 09:00–17:00 CET"
+      },
+      "phone": {
+        "label": "Telefoon"
+      }
+    },
+    "form": {
+      "submitLabel": "Bericht verzenden",
+      "successTitle": "Bericht ontvangen.",
+      "successBody": "We reageren binnen één werkdag. Bel voor dringende zaken het nummer op deze pagina."
+    }
+  },
+  "featureGrid": {
+    "_note": "FeatureGrid heeft GEEN hardgecodeerde tekst die zichtbaar is voor gebruikers. Alle tekst (eyebrow, title, item.title, item.body) wordt als props doorgegeven door de aanroepende code. Het wordt nergens in de Home-paginastructuur gebruikt (page.tsx rendert het niet). Vertaal op de aanroeppunten die de props leveren, niet hier."
+  },
+  "finalCta": {
+    "cta": {
+      "bookDemo": "Plan een demo",
+      "contact": "Neem contact op"
+    },
+    "footnote": "Gemaakt in Zweden · GDPR-native · ISO 27001",
+    "heading": {
+      "accent": "in één demo.",
+      "lead": "Bekijk de cognitieve prestaties van uw team — "
+    },
+    "lede": "Een rondleiding van 30 minuten door het managerdashboard met realistische voorbeeldgegevens uit uw branche. Geen fictieve ROI-grafieken."
+  },
+  "footer": {
+    "aria": {
+      "home": "WelloWork home"
+    },
+    "badges": {
+      "gdpr": "GDPR-native",
+      "hipaa": "HIPAA-klaar",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    },
+    "columns": {
+      "company": {
+        "h": "Bedrijf",
+        "items": [
+          "Over ons",
+          "Vacatures",
+          "Contact"
+        ]
+      },
+      "platform": {
+        "h": "Platform",
+        "items": [
+          "WelloRise [Groei]",
+          "WelloWize [Assessment]",
+          "Prestatietrends",
+          "Workshops",
+          "Proactieve zorg"
+        ]
+      },
+      "research": {
+        "h": "Onderzoek",
+        "items": [
+          "Methodologie",
+          "Wetenschap & inzicht",
+          "Cognitieve constructen"
+        ]
+      }
+    },
+    "copyright": "© 2024-2026 WelloWork AB · Uppsala, Zweden",
+    "legal": {
+      "cookies": "Cookies",
+      "dataProcessing": "Gegevensverwerking",
+      "privacy": "Privacy",
+      "terms": "Voorwaarden"
+    },
+    "tagline": "Het platform voor werkplekprestaties. Dagelijkse cognitieve training, longitudinale trends en op biomarkers gebaseerde gezondheidsinzichten, ontwikkeld in Zweden."
+  },
+  "forms": {
+    "consent": {
+      "demoForm": "Ik ga ermee akkoord dat WelloWork contact met mij mag opnemen om deze demo in te plannen en deze gegevens mag opslaan conform haar <privacyLink>privacybeleid</privacyLink>. (GDPR)",
+      "leadForm": "Ik ga ermee akkoord dat WelloWork contact met mij mag opnemen over deze aanvraag en deze gegevens mag opslaan conform haar <privacyLink>privacybeleid</privacyLink>."
+    },
+    "contact": {
+      "submitLabel": "Bericht verzenden",
+      "successBody": "We reageren binnen één werkdag. Voor dringende zaken belt u het nummer op deze pagina.",
+      "successTitle": "Bericht ontvangen."
+    },
+    "demo": {
+      "formAria": "Een demotijd aanvragen",
+      "formIntro": "Het inplannen is niet beschikbaar in deze omgeving — laat uw gegevens achter en we bevestigen binnen één werkdag een tijdslot per e-mail.",
+      "formTitle": "Een demotijd aanvragen",
+      "successBody": "Een productspecialist neemt binnen één werkdag contact met u op om een demotijd te bevestigen. Controleer uw zakelijke inbox (en voor de zekerheid uw spam) op een bevestigingsmail.",
+      "successTitle": "Bedankt — aanvraag ontvangen."
+    },
+    "error": {
+      "company": "Voer uw bedrijf in.",
+      "consent": "Bevestig uw toestemming om gecontacteerd te worden.",
+      "generic": "Er is iets misgegaan. Probeer het opnieuw.",
+      "message": "Voeg een kort bericht toe.",
+      "name": "Voer uw volledige naam in.",
+      "network": "Netwerkfout. Probeer het opnieuw.",
+      "rateLimited": "Te veel aanvragen. Probeer het over een minuut opnieuw.",
+      "requestFailed": "We konden uw aanvraag niet registreren. Probeer het opnieuw.",
+      "submitFailed": "We konden uw bericht niet verzenden. Probeer het opnieuw.",
+      "workEmail": "Voer een geldig e-mailadres in."
+    },
+    "footnote": {
+      "dataStored": "Uw gegevens worden opgeslagen in de EU. Geen marketing zonder opt-in."
+    },
+    "label": {
+      "company": "Bedrijf",
+      "companySize": "Bedrijfsgrootte",
+      "demoMessage": "Wat u graag wilt zien (optioneel)",
+      "fullName": "Volledige naam",
+      "industry": "Sector",
+      "message": "Bericht",
+      "optionalSuffix": "(optioneel)",
+      "preferredTimeframe": "Gewenste termijn",
+      "role": "Uw functie",
+      "roleTitle": "Uw functie / titel",
+      "websiteHoneypot": "Website",
+      "workEmail": "Zakelijk e-mailadres"
+    },
+    "option": {
+      "companySize": "{size}",
+      "industry": {
+        "education": "Onderwijs",
+        "energy": "Energie & nutsvoorzieningen",
+        "financial": "Financiële dienstverlening",
+        "healthcare": "Gezondheidszorg",
+        "manufacturing": "Productie",
+        "other": "Overig",
+        "professional": "Zakelijke dienstverlening",
+        "publicSector": "Publieke sector",
+        "retail": "Retail & e-commerce",
+        "softwareTech": "Software & technologie"
+      }
+    },
+    "placeholder": {
+      "demoMessage": "Teamgrootte, waarop de demo zich moet richten, eventuele timing van een pilot.",
+      "leadMessage": "Vertel ons over uw pilotplannen, personeelsbestand en wat u graag wilt zien tijdens de demo.",
+      "role": "HR, Operations, L&D, oprichter…"
+    },
+    "select": {
+      "industryPlaceholder": "Selecteer sector",
+      "teamSizePlaceholder": "Selecteer teamgrootte",
+      "timeframePlaceholder": "Wanneer wilt u afspreken?"
+    },
+    "submit": {
+      "demo": "Een demotijd aanvragen",
+      "lead": "Bericht verzenden",
+      "sending": "Verzenden…"
+    },
+    "timeframe": {
+      "exploring": "Alleen aan het verkennen",
+      "nextWeek": "Volgende week",
+      "thisWeek": "Deze week",
+      "twoToFourWeeks": "Binnen 2–4 weken"
+    }
+  },
+  "hero": {
+    "badge": {
+      "platform": "Platform voor werkprestaties"
+    },
+    "cta": {
+      "bookDemo": "Demo aanvragen",
+      "seeHow": "Bekijk hoe het werkt"
+    },
+    "floatBadge": {
+      "session": "Werkgeheugen · sessie 4",
+      "today": "Vandaag · 7 min"
+    },
+    "headline": {
+      "accent": "Meet wat telt.",
+      "lead": "Train cognitieve prestaties."
+    },
+    "lede": "Dagelijkse cognitieve training, langetermijntrends in prestaties en op biomarkers gebaseerde gezondheidsinzichten — in één platform dat managers en medewerkers daadwerkelijk gebruiken.",
+    "trust": {
+      "gdpr": "GDPR-native",
+      "iso": "ISO 27001",
+      "soc": "SOC Type II"
+    }
+  },
+  "heroDashboard": {
+    "biomarker": {
+      "caption": "Voltooid in deze cyclus",
+      "count": "{completed} / {total}",
+      "label": "Biomarkerrapporten"
+    },
+    "browser": {
+      "url": "app.wellowork.net / team"
+    },
+    "chart": {
+      "annotation": "Week van de sprintreview",
+      "axis": {
+        "wk1": "Wk 1",
+        "wk12": "Wk 12",
+        "wk4": "Wk 4",
+        "wk8": "Wk 8"
+      },
+      "legend": {
+        "focus": "Focus",
+        "memory": "Geheugen"
+      },
+      "range": "Laatste 90 dagen"
+    },
+    "composition": {
+      "fit": "{value}% match",
+      "member1": {
+        "name": "Anna L.",
+        "role": "Probleemoplossing · 92"
+      },
+      "member2": {
+        "name": "Erik S.",
+        "role": "Verwerkingssnelheid · 88"
+      },
+      "member3": {
+        "name": "Maja J.",
+        "role": "Werkgeheugen · 89"
+      },
+      "project": "Project: Q3-platformupdate",
+      "title": "Teamsamenstelling"
+    },
+    "privacyChip": "Geanonimiseerd aggregaat",
+    "sampleData": "Voorbeeldgegevens",
+    "team": {
+      "label": "Engineering · 14 leden",
+      "title": "Cognitieve prestaties van het team"
+    }
+  },
+  "legal": {
+    "cookies": {
+      "changesBody": "Als we niet-essentiële cookies toevoegen, wordt deze pagina bijgewerkt met een revisiedatum en biedt de toestemmingsbanner een opt-in.",
+      "changesQ": "Wijzigingen",
+      "controlQ": "Hoe kunt u cookies beheren?",
+      "coverA": "De marketingsite gebruikt uitsluitend essentiële cookies die nodig zijn om de site te laten werken (bijv. het bewaren van de formulierstatus bij het opnieuw laden). Analyse- en marketingcookies zijn standaard niet ingeschakeld; mochten ze dat ooit wel zijn, dan zijn ze opt-in via een toestemmingsbanner en hieronder gespecificeerd.",
+      "coverQ": "Welke cookies gebruikt de WelloWork-website?",
+      "lede": "Wij gaan standaard uit van minimaal cookiegebruik, in lijn met onze overige privacybenadering.",
+      "title": "Cookiebeleid",
+      "usedHereQ": "Welke cookies worden hier gebruikt?",
+      "whatBody": "Een cookie is een klein tekstbestand dat door een website op uw apparaat wordt opgeslagen. Cookies worden gebruikt voor zaken als ingelogd blijven, het onthouden van voorkeuren en (in sommige gevallen) het bijhouden van gebruik voor analyse of advertenties.",
+      "whatQ": "Wat is een cookie?"
+    },
+    "dpa": {
+      "contactQ": "Vragen over subverwerkers of de verwerkersovereenkomst",
+      "coverA": "Wanneer u het WelloWork-platform gebruikt als medewerker van een klantorganisatie, is uw werkgever de verwerkingsverantwoordelijke voor uw gegevens en treedt {legalName} op als verwerker op basis van gedocumenteerde instructies. De voorwaarden van die verwerking zijn vastgelegd in een verwerkersovereenkomst (DPA) die is gesloten tussen WelloWork en uw werkgever.",
+      "coverQ": "Wat houdt de verwerkingsrelatie in?",
+      "lede": "Een samenvatting van hoe WelloWork onder de GDPR optreedt als verwerker voor klantorganisaties. De voor een specifieke klant gesloten verwerkersovereenkomst is doorslaggevend.",
+      "natureBody": "Wij verwerken persoonsgegevens van de eindgebruikers van de klant om het WelloWork-platform te leveren en geaggregeerde, geanonimiseerde rapportages te produceren voor geautoriseerde beheerders.",
+      "natureQ": "Aard, doel en categorieën van gegevens",
+      "securityBody": "Versleuteling tijdens verzending en in rust, rolgebaseerde toegang, auditlogging, handhaving van een minimale teamomvang voor voor managers zichtbare aggregaten, en periodieke beveiligingsbeoordeling.",
+      "securityQ": "Beveiliging",
+      "subjectQ": "Onderwerp en duur",
+      "subjectsBody": "Eindgebruikers van het WelloWork-platform — doorgaans medewerkers van de klant.",
+      "subjectsQ": "Categorieën van betrokkenen",
+      "subprocessorsQ": "Subverwerkers",
+      "title": "Gegevensverwerking",
+      "transfersBody": "Wij dragen geen persoonsgegevens buiten de EU/EER over zonder een passend doorgiftemechanisme. Waar een doorgifte vereist is (bijv. operationele ondersteuningstools), wordt dit vastgelegd in de verwerkersovereenkomst.",
+      "transfersQ": "Internationale doorgiften"
+    },
+    "hero": {
+      "eyebrow": "Juridisch",
+      "lede": "Privacybeleid, gebruiksvoorwaarden, cookiebeleid en een samenvatting van de gegevensverwerking — alles op één plek, beheerst door Zweeds recht en de GDPR.",
+      "title": "Juridisch."
+    },
+    "meta": {
+      "description": "Privacybeleid, gebruiksvoorwaarden, cookiebeleid en samenvatting van de gegevensverwerking voor WelloWork — Zweedse en EU-markten, GDPR-native.",
+      "title": "Juridisch — WelloWork"
+    },
+    "nav": {
+      "cookies": "Cookiebeleid",
+      "dataProcessing": "Gegevensverwerking",
+      "desktopAria": "Juridische secties (desktop)",
+      "mobileAria": "Juridische secties (mobiel)",
+      "onThisPage": "Op deze pagina",
+      "privacy": "Privacybeleid",
+      "terms": "Gebruiksvoorwaarden"
+    },
+    "privacy": {
+      "basisQ": "Wat is de rechtsgrondslag voor de verwerking?",
+      "changesBody": "Materiële wijzigingen worden hier geplaatst met een revisiedatum. Laatste revisiedatum: deze pagina is gedateerd op basis van de huidige deploy en wordt bijgewerkt na beoordeling door juristen.",
+      "changesQ": "Wijzigingen in dit beleid",
+      "controllerBody": "{legalName}, geregistreerd in Zweden en opererend vanuit {city}, {country}, is de verwerkingsverantwoordelijke voor persoonsgegevens die op deze website en via aanvragen worden verzameld. Voor gegevens die binnen het WelloWork-platform namens een klantorganisatie worden verwerkt, treedt {legalName} op als verwerker en is de klantorganisatie de verwerkingsverantwoordelijke — die relatie wordt beheerst door een afzonderlijke verwerkersovereenkomst.",
+      "controllerQ": "Wie is de verwerkingsverantwoordelijke voor uw gegevens?",
+      "coverA": "Het legt uit welke persoonsgegevens WelloWork verzamelt wanneer u deze website of het WelloWork-platform gebruikt, wat we ermee doen, op welke rechtsgrondslagen we ons onder de GDPR baseren, welke rechten u heeft en hoe u ons daarover kunt bereiken.",
+      "coverQ": "Wat valt er onder dit privacybeleid?",
+      "dataQ": "Welke persoonsgegevens verzamelen wij?",
+      "exerciseNote": "Om een recht uit te oefenen, stuurt u een e-mail naar {email} met \"privacyverzoek\" in het onderwerp.",
+      "lede": "Hoe WelloWork persoonsgegevens verzamelt, gebruikt en beschermt, onder de GDPR en het Zweedse recht.",
+      "retentionQ": "Hoe lang bewaren wij ze?",
+      "rightsBody": "Onder de GDPR kunt u verzoeken om inzage, rectificatie, wissing, beperking, overdraagbaarheid en het recht van bezwaar. U kunt ook een klacht indienen bij de Zweedse gegevensbeschermingsautoriteit (IMY).",
+      "rightsQ": "Welke rechten heeft u?",
+      "securityBody": "Versleuteling tijdens verzending, versleuteling in rust, rolgebaseerde toegang, auditlogging en een drempel voor minimale teamomvang voor alle voor managers zichtbare aggregaten.",
+      "securityQ": "Hoe beveiligen wij gegevens?",
+      "storedBody": "Alle persoonsgegevens worden opgeslagen op infrastructuur die zich in de Europese Unie bevindt. WelloWork draagt geen persoonsgegevens buiten de EU/EER over zonder dat er een passend doorgiftemechanisme aanwezig is.",
+      "storedQ": "Waar worden uw gegevens opgeslagen?",
+      "title": "Privacybeleid"
+    },
+    "schema": {
+      "webPageName": "Juridisch"
+    },
+    "section": {
+      "label": "Sectie {n}"
+    },
+    "terms": {
+      "changesBody": "Wij kunnen deze voorwaarden in de loop van de tijd bijwerken. Materiële wijzigingen worden hier geplaatst met een revisiedatum.",
+      "changesQ": "Wijzigingen",
+      "coverA": "Aanvaardbaar gebruik van de WelloWork-website, de juridische entiteit achter de dienst, intellectueel eigendom, garanties en uitsluitingen, beperking van aansprakelijkheid en het toepasselijk recht. Voor zover u een betalende klant bent, hebben de bestelformulier en de hoofddienstenovereenkomst voorrang.",
+      "coverQ": "Wat valt er onder deze voorwaarden?",
+      "entityBody": "{legalName}, een Zweeds bedrijf. Deze voorwaarden zijn van toepassing op het gebruik van de website op dit domein en op eventuele demo-/proefomgevingen die wij beschikbaar stellen. Het gebruik van het productieplatform onder een betaald contract wordt beheerst door het bestelformulier en de bijbehorende overeenkomst.",
+      "entityQ": "Met wie sluit u een contract?",
+      "ipBody": "Alle content, branding, broncode, vormgeving en overig materiaal op deze site zijn eigendom van {legalName} of haar licentiegevers. Niets op de site verleent u een licentie op dat materiaal, behalve voor zover dit uitdrukkelijk is vermeld.",
+      "ipQ": "Hoe zit het met intellectueel eigendom?",
+      "lawBody": "Deze voorwaarden worden beheerst door het Zweedse recht. Geschillen die voortvloeien uit het gebruik van deze website vallen onder de exclusieve bevoegdheid van de Zweedse rechtbanken, tenzij dwingend recht in uw rechtsgebied anders bepaalt.",
+      "lawQ": "Toepasselijk recht",
+      "lede": "De voorwaarden waaronder u deze website en het WelloWork-platform gebruikt. Klantovereenkomsten gaan voor op deze pagina waar van toepassing.",
+      "title": "Gebruiksvoorwaarden",
+      "useQ": "Wat is aanvaardbaar gebruik?",
+      "warrantiesBody": "De website wordt geleverd op een \"as is\"-basis. Wij geven geen garantie ten aanzien van beschikbaarheid, geschiktheid voor een bepaald doel of juistheid van enige informatie van derden waarnaar vanaf de site wordt verwezen. De aansprakelijkheid voor het gebruik van de website is beperkt tot de maximaal door het Zweedse en toepasselijke EU-recht toegestane omvang.",
+      "warrantiesQ": "Garanties en beperkingen"
+    },
+    "visual": {
+      "anchor": {
+        "changes": "Wijzigingen",
+        "ip": "Intellectueel eigendom",
+        "law": "Toepasselijk recht",
+        "liability": "Aansprakelijkheid",
+        "use": "Aanvaardbaar gebruik",
+        "warranties": "Garanties"
+      },
+      "basis": {
+        "consent": {
+          "label": "Toestemming",
+          "note": "Marketingopvolging na een demo- of contactaanvraag."
+        },
+        "contract": {
+          "label": "Overeenkomst",
+          "note": "Het leveren van het gecontracteerde platform aan uw werkgever."
+        },
+        "interest": {
+          "label": "Gerechtvaardigde belangen",
+          "note": "Het beantwoorden van aanvragen, beveiligingslogging, misbruikbescherming."
+        },
+        "law": {
+          "label": "Wettelijke verplichting",
+          "note": "Bewaartermijnen opgelegd door het Zweedse of EU-recht."
+        }
+      },
+      "controller": {
+        "customerOrg": "Klantorganisatie",
+        "directRel": "Directe relatie",
+        "platformUser": "Platformgebruiker",
+        "roleController": "Verwerkingsverantwoordelijke",
+        "roleProcessor": "Verwerker",
+        "title": "Wie beheert uw gegevens?",
+        "viaDpa": "Via verwerkersovereenkomst",
+        "websiteVisitor": "Websitebezoeker",
+        "welloWork": "WelloWork AB",
+        "you": "U"
+      },
+      "cookieBadge": "Alleen essentiële cookies — standaard geen tracking",
+      "cookieChanges": "Wij voegen een toestemmingsbanner toe en werken deze pagina bij voordat we niet-essentiële cookies inschakelen.",
+      "cookieSteps": {
+        "clear": {
+          "note": "Verwijder bestaande cookies of blokkeer nieuwe.",
+          "title": "Wissen of blokkeren"
+        },
+        "heads": {
+          "note": "Het blokkeren van essentiële cookies kan formulierinzendingen verhinderen.",
+          "title": "Let op"
+        },
+        "settings": {
+          "note": "Open de privacy- of cookie-instellingen van uw browser.",
+          "title": "Browserinstellingen"
+        }
+      },
+      "cookieTable": {
+        "advertising": {
+          "purpose": "Geen advertentiecookies op deze site.",
+          "status": "Niet gebruikt",
+          "type": "Advertenties"
+        },
+        "analytics": {
+          "purpose": "Zou geaggregeerd gebruik meten. Opt-in via een toekomstige toestemmingsbanner.",
+          "status": "Standaard uit",
+          "type": "Analyse"
+        },
+        "essential": {
+          "purpose": "Vereist voor de werking van de site — bijv. formulierstatus bij opnieuw laden.",
+          "status": "Standaard actief",
+          "type": "Essentieel"
+        },
+        "headPurpose": "Doel",
+        "headStatus": "Status",
+        "headType": "Type"
+      },
+      "dataGrid": {
+        "contact": {
+          "desc": "Uit formulieren — naam, zakelijk e-mailadres, bedrijf, functie, optioneel bericht.",
+          "label": "Contactgegevens"
+        },
+        "platform": {
+          "badge": "Alleen als u een eindgebruiker van het platform bent",
+          "desc": "Trainings-, assessment- en biomarkerregistraties.",
+          "label": "Platformgegevens"
+        },
+        "technical": {
+          "desc": "IP-adres en user-agent bij formulierinzending, voor spambestrijding en beveiliging.",
+          "label": "Technische gegevens"
+        }
+      },
+      "dpaCta": {
+        "note": "Onderwerp: 'DPA-verzoek' — wij verwijzen u door naar de juiste persoon.",
+        "title": "E-mail {email}"
+      },
+      "dpaRel": {
+        "customerOrg": {
+          "detail": "Verwerkingsverantwoordelijke",
+          "role": "Klantorganisatie"
+        },
+        "edgeDelivery": "dienstverlening",
+        "edgeInstructions": "gedocumenteerde instructies",
+        "endUsers": {
+          "detail": "Betrokkenen",
+          "role": "Eindgebruikers"
+        },
+        "welloWork": {
+          "detail": "Verwerker",
+          "role": "WelloWork AB"
+        }
+      },
+      "dpaSplit": {
+        "cat": {
+          "biomarker": "Biomarkerrapporten",
+          "cognitive": "Cognitieve prestaties",
+          "identification": "Identificatie en contact",
+          "metadata": "Operationele metadata"
+        },
+        "dataWeProcess": "Gegevens die wij verwerken",
+        "purpose": {
+          "anonymised": "Geanonimiseerde rapportage",
+          "biomarker": "Biomarkerrapportage",
+          "cognitive": "Cognitieve training",
+          "workshop": "Workshopplanning"
+        },
+        "whatWeDo": "Wat wij doen"
+      },
+      "dpaSubject": {
+        "durationLabel": "Duur",
+        "durationValue": "Looptijd van de klantovereenkomst + bewaartermijn van de verwerkersovereenkomst.",
+        "scopeLabel": "Reikwijdte",
+        "scopeValue": "Eindgebruikers van het WelloWork-platform (doorgaans medewerkers)."
+      },
+      "entity": {
+        "meta": "Geregistreerd in Zweden",
+        "name": "WelloWork AB",
+        "note": "Zweeds recht is van toepassing.",
+        "tag": "Contracterende entiteit"
+      },
+      "euCard": {
+        "defaultLabel": "Uitsluitend EU/EER-infrastructuur",
+        "dpaLabel": "Geen doorgiften buiten de EU/EER",
+        "dpaNote": "Zonder dat er een passend doorgiftemechanisme aanwezig is.",
+        "privacyNote": "Geen doorgiften buiten de EU/EER zonder een passend mechanisme."
+      },
+      "ip": {
+        "branchBranding": "Branding",
+        "branchContent": "Content",
+        "branchSource": "Broncode",
+        "foot": "Er wordt geen licentie verleend tenzij dit uitdrukkelijk is vermeld.",
+        "ownedBadge": "© in eigendom",
+        "owner": "WelloWork AB",
+        "ownerLabel": "Eigenaar"
+      },
+      "law": {
+        "text": "<strong>Zweedse rechtbanken</strong> · Zweeds recht"
+      },
+      "retention": {
+        "backups": {
+          "duration": "90 dagen",
+          "label": "Back-ups"
+        },
+        "enquiry": {
+          "duration": "24 maanden",
+          "label": "Aanvraaggegevens"
+        },
+        "platform": {
+          "duration": "per verwerkersovereenkomst",
+          "label": "Platformregistraties"
+        }
+      },
+      "rights": {
+        "access": {
+          "desc": "Ontvang een kopie van de gegevens die wij over u bewaren.",
+          "name": "Inzage"
+        },
+        "cta": "E-mail {email} met 'privacyverzoek'",
+        "erase": {
+          "desc": "Vraag ons om uw gegevens te verwijderen.",
+          "name": "Wissing"
+        },
+        "object": {
+          "desc": "Maak bezwaar tegen verwerking op basis van gerechtvaardigde belangen.",
+          "name": "Bezwaar"
+        },
+        "portability": {
+          "desc": "Ontvang uw gegevens in een overdraagbaar formaat.",
+          "name": "Overdraagbaarheid"
+        },
+        "rectify": {
+          "desc": "Vraag ons om onjuiste gegevens te corrigeren.",
+          "name": "Rectificatie"
+        },
+        "restrict": {
+          "desc": "Beperk de manier waarop wij uw gegevens verwerken.",
+          "name": "Beperking"
+        }
+      },
+      "security": {
+        "audit": "Auditlogging",
+        "isoBadge": "ISO 27001 in uitvoering",
+        "rbac": "Rolgebaseerde toegang",
+        "rest": "Versleuteling in rust",
+        "transit": "Versleuteling tijdens verzending"
+      },
+      "subprocessor": {
+        "body": "Actuele lijst op verzoek aan klanten verstrekt.",
+        "email": "E-mail",
+        "hosting": "Hosting",
+        "labPartners": "Laboratoriumpartners",
+        "title": "Subverwerkers zijn GDPR-conform, waar relevant gevestigd in de EU, en vermeld in uw verwerkersovereenkomst."
+      },
+      "trustBar": {
+        "euData": "Uitsluitend EU/EER-gegevens",
+        "gdpr": "GDPR-conform",
+        "swedishLaw": "Zweeds recht"
+      },
+      "use": {
+        "may1": "Deze website gebruiken om meer te weten te komen over WelloWork en een demo aan te vragen.",
+        "may2": "Onze gepubliceerde content doornemen voor persoonlijk of zakelijk onderzoek.",
+        "may3": "Contact met ons opnemen via de op deze site beschikbare formulieren.",
+        "mayHead": "U mag",
+        "mayNot1": "Proberen ongeautoriseerde toegang te verkrijgen of de dienst te verstoren.",
+        "mayNot2": "Gegevens exfiltreren, kopiëren of scrapen buiten normaal browsen om.",
+        "mayNot3": "De site gebruiken voor concurrentie-informatie in abnormale volumes.",
+        "mayNotHead": "U mag niet"
+      },
+      "warranty": {
+        "body": "Deze website wordt geleverd zoals deze is. Wij garanderen geen uptime, juistheid of geschiktheid voor een bepaald doel.",
+        "title": "Zoals deze is, geen garanties"
+      }
+    }
+  },
+  "localeSwitcher": {
+    "label": "Taal",
+    "change": "Taal wijzigen",
+    "current": "Huidige taal: {language}",
+    "menu": "Selecteer taal",
+    "banner": {
+      "region": "Taalsuggestie",
+      "question": "Deze site bekijken in het {language}?",
+      "switch": "Overschakelen naar {language}",
+      "dismiss": "Niet nu"
+    }
+  },
+  "metadata": {
+    "home": {
+      "title": "WelloWork — Train cognitieve prestaties. Meet wat telt.",
+      "description": "Dagelijkse cognitieve training, langlopende prestatietrends en op biomarkers gebaseerde gezondheidsinzichten — in één platform dat managers en medewerkers ook echt gebruiken. Gebouwd in Zweden."
+    },
+    "about": {
+      "title": "Over WelloWork — werkplekprestaties, gebouwd in Zweden",
+      "description": "WelloWork AB is een Zweeds platform voor werkplekprestaties, opgericht in 2024. Wij combineren cognitieve training, langlopende prestaties, biomarkertesten en live workshops."
+    },
+    "careers": {
+      "title": "Werken bij WelloWork — hoe we aannemen en hoe je ons bereikt",
+      "description": "We hebben op dit moment geen openstaande functies, maar we lezen elke kennismaking. Zo denkt WelloWork over werving, wie we waarschijnlijk als eerste toevoegen en hoe je contact opneemt."
+    },
+    "contact": {
+      "title": "Contact met WelloWork — praat met sales, support of partnerships",
+      "description": "Neem contact op met het WelloWork-team in Uppsala, Zweden. Mail info@wellowork.net of bel +46 760 28 1272 voor sales, partnerships of algemene vragen."
+    },
+    "bookDemo": {
+      "title": "Boek een WelloWork-demo — kies een tijdslot van 30 minuten",
+      "description": "Kies een tijd in de live agenda en ontmoet een WelloWork-productspecialist voor een rondleiding van 30 minuten door het managerdashboard. Gemaakt in Zweden · GDPR-native."
+    },
+    "legal": {
+      "title": "Juridisch — WelloWork",
+      "description": "Privacybeleid, servicevoorwaarden, cookiebeleid en samenvatting gegevensverwerking voor WelloWork — Zweedse en EU-markten, GDPR-native."
+    },
+    "platformGrowth": {
+      "title": "WelloRise — dagelijkse cognitieve training voor teams | WelloWork",
+      "description": "WelloRise is dagelijkse cognitieve training op het gebied van werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gebouwd voor drukke werkweken."
+    },
+    "platformAssessment": {
+      "title": "WelloWize — cognitieve en technische assessments | WelloWork",
+      "description": "WelloWize is één assessmentkader voor selectiepanels en interne benchmarking. Cognitief en technisch, beoordeeld op functie en anciënniteit — verdedigbaar bij het uitbrengen van een aanbod en daarna."
+    },
+    "platformMeasure": {
+      "title": "Meten — langlopende cognitieve prestatietrends | WelloWork",
+      "description": "WelloWork Meten zet elke trainingssessie, elk assessment en elke workshop om in een langlopende prestatietrend — overzichten over 90 dagen, 6 maanden en 12 maanden voor managers."
+    },
+    "platformWorkshops": {
+      "title": "Workshops — live gezondheidsworkshops, op locatie of op afstand | WelloWork",
+      "description": "Door facilitators geleide workshops over slaap, herstel, voeding, focus en longevity. Op locatie of op afstand, boekbaar in WelloWork, met resultaten die terugvloeien in prestatietrends."
+    },
+    "platformProactiveCare": {
+      "title": "Proactieve zorg — biomarkertesten voor longevity en gezondheid | WelloWork",
+      "description": "Bloedpanels voor longevity-markers en urinepanels voor algemene gezondheid en drugsscreening. Medewerkers zien hun rapport; managers zien alleen geanonimiseerde, geaggregeerde trends."
+    },
+    "research": {
+      "title": "Onderzoek en methodologie — de cognitieve constructen achter WelloWork",
+      "description": "De cognitieve training en assessments van WelloWork zijn gebouwd op gevalideerde constructen: werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit."
+    },
+    "researchMethodology": {
+      "title": "Methodologie-overzicht — hoe WelloWork cognitieve prestaties meet",
+      "description": "Hoe WelloWork oefeningen koppelt aan gevalideerde cognitieve constructen, ze beoordeelt en resultaten samenvoegt tot langlopende prestatietrends — met privacy by design."
+    },
+    "researchScienceInsight": {
+      "title": "Wetenschap en inzicht — methodologienotities van WelloWork-onderzoek",
+      "description": "Werknotities van het WelloWork-onderzoeksteam over cognitieve constructen, biomarkermethodologie, signalen van werkplekprestaties en waar de literatuur wel en niet staat."
+    },
+    "researchCognitiveConstructs": {
+      "title": "Cognitieve constructen — de vijf domeinen die WelloWork meet",
+      "description": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — elk domein, de literatuur erachter en hoe WelloWork het operationaliseert."
+    }
+  },
+  "nav": {
+    "aria": {
+      "logoHome": "WelloWork home",
+      "primary": "Hoofdnavigatie"
+    },
+    "cta": {
+      "bookDemo": "Demo boeken",
+      "contact": "Contact"
+    },
+    "items": {
+      "about": "Over ons",
+      "platform": "Platform",
+      "pricing": "Prijzen",
+      "research": "Onderzoek",
+      "solutions": "Oplossingen"
+    }
+  },
+  "platformAssessment": {
+    "answer": {
+      "body": "Het assessmentproduct van WelloWork. Het beoordeelt kandidaten en huidige medewerkers binnen hetzelfde cognitieve en technische kader, levert binnen enkele minuten resultaten die klaar zijn voor de selectiecommissie, en produceert interne benchmarks ten opzichte van functie en dienstjaren die elk kwartaal opnieuw kunnen worden uitgevoerd.",
+      "label": "Wat is WelloWize?"
+    },
+    "benchmarkChart": {
+      "eyebrow": "Kwartaalherhalingen",
+      "legend": {
+        "benchmark": "Functiebenchmark",
+        "employee": "Ontwikkeling medewerker"
+      },
+      "sampleData": "Voorbeeldgegevens",
+      "title": "Ontwikkeling versus functiebenchmark"
+    },
+    "benchmarkSection": {
+      "body": "Intern kan WelloWize volgens een vast schema opnieuw worden uitgevoerd. De resultaten voeden de longitudinale trend die het Measure-product zichtbaar maakt — zodat beslissingen over promotiegereedheid worden onderbouwd door een trend over het jaar, in plaats van door de score die iemand toevallig op de assessmentdag neerzette.",
+      "headingAccent": "functie + dienstjaren.",
+      "headingLead": "Interne benchmarks ten opzichte van"
+    },
+    "crumbs": {
+      "current": "Assessment — WelloWize",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Een rondleiding van 30 minuten met voorbeeldprofielen van kandidaten en een open gesprek over een pilot.",
+      "primary": "Plan een demo",
+      "secondary": "Lees het onderzoek",
+      "title": "Zie WelloWize in echte selectiecommissies."
+    },
+    "differSection": {
+      "headingAccent": "assessmenttool voor werving?",
+      "headingLead": "Hoe verschilt WelloWize van een",
+      "intro": "De meeste tools houden op zodra een kandidaat tekent. WelloWize gebruikt hetzelfde kader voor en na de aanstellingsbrief.",
+      "standardLabel": "Standaardtool"
+    },
+    "features": {
+      "auditable": {
+        "body": "Elke score is herleidbaar tot de onderliggende taken en de bestede tijd per taak — verdedigbaar als een wervingsbeslissing wordt aangevochten.",
+        "title": "Controleerbare scoring"
+      },
+      "benchmarks": {
+        "body": "Interne scores zijn vergelijkbaar over aanstellingen en dienstjaren heen, niet ten opzichte van een algemene populatie.",
+        "title": "Benchmarks op functie + dienstjaren"
+      },
+      "eyebrow": "Wat is inbegrepen",
+      "feedsTrends": {
+        "body": "Herhalingen stromen door naar het Measure-product, zodat promotiebeslissingen op trends rusten in plaats van op één enkele test.",
+        "title": "Voedt longitudinale trends"
+      },
+      "gdpr": {
+        "body": "Assessmentgegevens van kandidaten en medewerkers worden in de EU opgeslagen. Bewaren en verwijderen zijn instelbaar.",
+        "title": "GDPR-native"
+      },
+      "oneFramework": {
+        "body": "Vijf cognitieve domeinen plus functiespecifieke technische screens — geen aparte leverancier voor elk onderdeel.",
+        "title": "Cognitief + technisch, één kader"
+      },
+      "panelReports": {
+        "body": "Genormaliseerd profiel ten opzichte van de functiebenchmark, klaar om te bespreken aan de hand van de functieomschrijving.",
+        "title": "Rapporten voor de selectiecommissie binnen minuten"
+      },
+      "title": "Wat zit er bij WelloWize inbegrepen?"
+    },
+    "hero": {
+      "eyebrow": "WelloWize — Assessment",
+      "lede": "WelloWize geeft selectiecommissies en people-leaders hetzelfde assessmentvocabulaire, zodat het werk niet stopt bij de aanstellingsbrief. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren.",
+      "titleAccent": "en erna.",
+      "titleLead": "Eén assessmentkader — werving"
+    },
+    "measureCards": {
+      "cognitive": {
+        "body": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — afgestemd op de wetenschappelijk onderbouwde constructen van het platform.",
+        "title": "Vijf cognitieve domeinen"
+      },
+      "technical": {
+        "body": "SQL, TypeScript, statistiek en andere functierelevante vaardigheden — per functie toegevoegd, gescoord naast het cognitieve profiel.",
+        "title": "Functiespecifieke technische screens"
+      },
+      "timeOnTask": {
+        "body": "Signalen van zelftempo en vermoeidheid worden in context meegewogen — gebruikt om een score te interpreteren, niet om de kandidaat te benadelen.",
+        "title": "Patronen in bestede tijd per taak"
+      }
+    },
+    "measureSection": {
+      "headingAccent": "daadwerkelijk?",
+      "headingLead": "Wat meet het",
+      "intro": "Drie lagen van signaal, samen teruggegeven als één enkel profiel."
+    },
+    "meta": {
+      "description": "WelloWize is één assessmentkader voor selectiecommissies en interne benchmarking. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren — verdedigbaar in de aanstellingsfase en erna.",
+      "title": "WelloWize — cognitieve & technische assessments | WelloWork"
+    },
+    "panelSection": {
+      "body": "Zodra een kandidaat het assessment heeft afgerond, ziet de selectiecommissie een genormaliseerd profiel ten opzichte van de functiebenchmark. Dit is bewust een profiel en geen enkel getal — verdedigbaar in de aanstellingsfase en eenvoudiger te bespreken aan de hand van de functieomschrijving.",
+      "headingAccent": "minuten.",
+      "headingLead": "Resultaten voor de selectiecommissie binnen"
+    },
+    "resultsCard": {
+      "above": "Boven",
+      "aboveBenchmark": "Boven benchmark op 3 van 5",
+      "below": "Onder",
+      "candidateName": "Alex M.",
+      "candidateRole": "Senior Engineer — kandidaat",
+      "domains": {
+        "attention": "Aandacht",
+        "cognitiveFlexibility": "Cognitieve flexibiliteit",
+        "problemSolving": "Probleemoplossing",
+        "processingSpeed": "Verwerkingssnelheid",
+        "workingMemory": "Werkgeheugen"
+      },
+      "normalisedProfile": "Genormaliseerd profiel",
+      "sampleData": "Voorbeeldgegevens",
+      "scaleBenchmark": "· · · functiebenchmark",
+      "scaleHigh": "Hoog",
+      "scaleLow": "Laag",
+      "windowLabel": "wellowize · kandidaatprofiel"
+    },
+    "standardPoints": {
+      "endsAtOffer": "Eindigt bij ondertekening aanbod",
+      "scopedHiring": "Beperkt tot alleen werving",
+      "singleScore": "Eén samengestelde score"
+    },
+    "timeline": {
+      "candidateCompletes": {
+        "label": "Kandidaat rondt af",
+        "time": "~45 min"
+      },
+      "panelNotified": {
+        "label": "Commissie genotificeerd",
+        "time": "Direct"
+      },
+      "resultsProcessed": {
+        "label": "Resultaten verwerkt",
+        "time": "~2 min"
+      }
+    },
+    "timelineCard": {
+      "endToEnd": "~50 min van begin tot eind",
+      "eyebrow": "Tijd tot commissie",
+      "footnote": "De commissie krijgt een genormaliseerd profiel, geen ruwe transcriptie. Voorbeeldtijden."
+    },
+    "welloWizePoints": {
+      "continuous": {
+        "label": "Continu, herhaalbaar",
+        "why": "Kwartaalherhalingen voeden een longitudinale trend die het Measure-product zichtbaar maakt."
+      },
+      "prePost": {
+        "label": "Voor en na aanname",
+        "why": "Hetzelfde kader voor de kandidaat en voor dezelfde persoon twaalf maanden later — direct vergelijkbaar."
+      },
+      "profile": {
+        "label": "Genormaliseerd profiel, geen getal",
+        "why": "Een vorm ten opzichte van de functiebenchmark — verdedigbaar in de aanstellingsfase en eenvoudiger te bespreken aan de hand van de functieomschrijving."
+      }
+    }
+  },
+  "platformGrowth": {
+    "answer": {
+      "body": "De dagelijkse cognitieve-trainingslaag van het WelloWork-platform — adaptieve sessies over vijf gevalideerde constructen, betaald in tokens, die dezelfde langetermijntrend voeden die managers geaggregeerd zien.",
+      "label": "Wat is WelloRise?"
+    },
+    "comparison": {
+      "consumerLabel": "Consumentenapp",
+      "headingAccent": "hersentraining-app?",
+      "headingLead": "Hoe verschilt het van een"
+    },
+    "constructs": {
+      "attention": {
+        "desc": "Behoud focus op wat ertoe doet en filter weg wat dat niet doet.",
+        "label": "Aandacht"
+      },
+      "cognitiveFlexibility": {
+        "desc": "Schakel moeiteloos tussen taken, perspectieven en mentale modellen.",
+        "label": "Cognitieve flexibiliteit"
+      },
+      "problemSolving": {
+        "desc": "Redeneer door nieuwe situaties heen en pas je aan onbekende randvoorwaarden aan.",
+        "label": "Probleemoplossing"
+      },
+      "processingSpeed": {
+        "desc": "Hoe snel je nieuwe informatie onder druk opneemt, beoordeelt en erop reageert.",
+        "label": "Verwerkingssnelheid"
+      },
+      "workingMemory": {
+        "desc": "Houd informatie vast en werk die bij — de cognitieve werkbank voor complex werk.",
+        "label": "Werkgeheugen"
+      }
+    },
+    "constructsSection": {
+      "headingAccent": "eigenlijk?",
+      "headingLead": "Wat doet dagelijkse cognitieve training",
+      "intro": "Vijf gevalideerde constructen, getraind in korte adaptieve sessies."
+    },
+    "consumerPoints": {
+      "noWorkContext": "Geen werkcontext",
+      "optimisedEngagement": "Geoptimaliseerd voor engagement",
+      "personalEntertainment": "Persoonlijk vermaak",
+      "singleUserData": "Data van één gebruiker",
+      "standaloneScore": "Losstaande score"
+    },
+    "crumbs": {
+      "current": "Groei — WelloRise",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Een rondleiding van 30 minuten met voorbeelddata uit jouw branche — en een eerlijk gesprek over een pilot.",
+      "primary": "Plan een demo",
+      "secondary": "Vergelijk platformniveaus",
+      "titleAccent": "managerdashboard.",
+      "titleLead": "Bekijk WelloRise in het"
+    },
+    "employeeCards": {
+      "adaptive": {
+        "body": "Elke sessie past zich aan je huidige niveau aan over alle vijf constructen. Je wordt uitgedaagd, niet overweldigd — en nooit verveeld.",
+        "sub": "Per domein gekalibreerd",
+        "title": "Aangepast aan jou"
+      },
+      "peers": {
+        "body": "Begeleid een collega, geef een workshop tijdens de lunch of pak een uitdagende taak op uit de marktplaats — collega's betalen je in tokens.",
+        "sub": "Een marktplaats met taken betaald in tokens",
+        "title": "Help collega's, verdien meer"
+      },
+      "privacy": {
+        "body": "Individuele sessieresultaten blijven bij jou. Managers zien alleen geanonimiseerde, geaggregeerde trends — nooit scores van één persoon.",
+        "sub": "Managers zien alleen aggregaten",
+        "title": "Jouw data, privé"
+      },
+      "tokens": {
+        "body": "Met dagelijkse sessies verdien je tokens. Geef ze uit aan boeken, cursussen of groeitrajecten — gefinancierd uit een budget dat het team al heeft.",
+        "sub": "Inwisselen voor cursussen en groei",
+        "title": "Tokens financieren leren"
+      }
+    },
+    "employeeSection": {
+      "headingAccent": "medewerker?",
+      "headingLead": "Wat levert het op voor de"
+    },
+    "features": {
+      "adaptive": {
+        "body": "Elke sessie kalibreert per domein. Onderbenutte medewerkers stagneren niet; overbelaste medewerkers branden niet op.",
+        "title": "Adaptieve moeilijkheidsgraad"
+      },
+      "domains": {
+        "body": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — in kaart gebracht aan de hand van literatuur op constructniveau.",
+        "title": "Vijf gevalideerde cognitieve domeinen"
+      },
+      "eyebrow": "Wat is inbegrepen",
+      "longitudinal": {
+        "body": "Elke sessie is een datapunt. Trends, niet losse scores, bepalen de managerweergave en signalen over promotiegereedheid.",
+        "title": "Langetermijntrends"
+      },
+      "privacy": {
+        "body": "Individuele sessieresultaten zijn privé voor de medewerker. Managers zien alleen geanonimiseerde, geaggregeerde trends.",
+        "title": "Privacy met de medewerker voorop"
+      },
+      "teamComposition": {
+        "body": "Beveelt optimale teamsamenstellingen per project aan, op basis van geaggregeerde cognitieve profielen en eerdere prestaties.",
+        "title": "Team Composition-engine"
+      },
+      "titleAccent": "WelloRise",
+      "titleLead": "Wat biedt",
+      "titleTrail": "standaard?",
+      "tokens": {
+        "body": "Met sessies verdien je tokens die inwisselbaar zijn voor cursussen, groeitrajecten of hulp van collega's — zo financier je het leren dat het team toch al wil.",
+        "title": "Token-economie"
+      }
+    },
+    "hero": {
+      "eyebrow": "WelloRise — Groei",
+      "lede": "WelloRise is een dagelijks cognitief trainingsproduct, ontworpen voor werkweken, niet voor laboratoriumomstandigheden. Vijf tot tien minuten per dag over vijf gevalideerde cognitieve constructen — met een token-economie die het leren financiert.",
+      "titleAccent": "koffiepauze past.",
+      "titleLead": "Dagelijkse cognitieve training die in een"
+    },
+    "managerCards": {
+      "annotated": {
+        "body": "Sprintwissels, releases en wachtdiensten worden gemarkeerd op de trendlijn — zo zie je welke werkpatronen het team geld kosten.",
+        "sub": "Sprints, releases, wachtdiensten",
+        "title": "Gekoppeld aan werkgebeurtenissen"
+      },
+      "composition": {
+        "body": "Beveel de juiste mix van cognitieve sterktes aan voor een project, sprint of taskforce — op basis van geaggregeerde profielen, niet gokwerk.",
+        "sub": "Geworteld in cognitieve sterktes",
+        "title": "Passende teamsamenstelling"
+      },
+      "trends": {
+        "body": "Voortschrijdende langetermijnweergaven laten zien of het team verbetert of afdrijft — lang voordat een enkele enquête dit aan het licht zou brengen.",
+        "sub": "Weergaven over 90 dagen, 6 maanden, 12 maanden",
+        "title": "Trends door het jaar heen"
+      },
+      "variability": {
+        "body": "Voor operationeel kritieke rollen: let op pieken in variabiliteit in aandacht en verwerkingssnelheid die vaak voorafgaan aan foutgevoelige periodes.",
+        "sub": "Voor operationeel kritieke rollen",
+        "title": "Variabiliteit waar het telt"
+      }
+    },
+    "managerSection": {
+      "headingAccent": "manager?",
+      "headingLead": "Wat levert het op voor de"
+    },
+    "meta": {
+      "description": "WelloRise is dagelijkse cognitieve training over werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gemaakt voor drukke werkweken.",
+      "title": "WelloRise — dagelijkse cognitieve training voor teams | WelloWork"
+    },
+    "sessionCard": {
+      "chip": {
+        "attention": "Aandacht",
+        "flexibility": "Flexibiliteit",
+        "memory": "Geheugen",
+        "problemSolving": "Probleemoplossing",
+        "processing": "Verwerking"
+      },
+      "constructs": "constructen",
+      "currentTask": "Werkgeheugen",
+      "elapsed": "2:14 verstreken",
+      "eyebrow": "Sessie van vandaag",
+      "inProgress": "Bezig",
+      "left": "~3 min resterend",
+      "live": "Live",
+      "taskOf": "Taak 2 van 3",
+      "taskProgressAria": "Taakvoortgang",
+      "title": "5 minuten om je trend op peil te houden",
+      "tokensEarned": "+12 tokens verdiend vandaag",
+      "tokensRedeem": "Inwisselen voor cursussen, boeken of hulp van collega's"
+    },
+    "welloRisePoints": {
+      "annotated": {
+        "label": "Gekoppeld aan werkgebeurtenissen",
+        "why": "Sprints, releases en wachtdiensten worden gemarkeerd op de trendlijn."
+      },
+      "feedsDashboard": {
+        "label": "Voedt teamdashboard",
+        "why": "Geaggregeerd, geanonimiseerd signaal stroomt naar managers — nooit individuele resultaten."
+      },
+      "longitudinal": {
+        "label": "Langetermijntrend",
+        "why": "We volgen hoe elk domein zich over weken beweegt, niet de score op een enkele dag."
+      },
+      "stableSignal": {
+        "label": "Geoptimaliseerd voor stabiel signaal",
+        "why": "Hetzelfde taakontwerp en dezelfde moeilijkheidscurve — zo is een score deze maand vergelijkbaar met een volgend kwartaal."
+      },
+      "workplaceLayer": {
+        "label": "Werkplekprestatielaag",
+        "why": "Zit binnen hetzelfde platform als assessment, workshops en teamsamenstelling."
+      }
+    }
+  },
+  "platformMeasure": {
+    "answer": {
+      "body": "Measure zet elke trainingssessie, elke assessment en elke workshopinteractie om in een longitudinaal prestatiesignaal. Managers zien geaggregeerde trends over 90 dagen, 6 maanden en 12 maanden, automatisch geannoteerd ten opzichte van werkgebeurtenissen zoals sprintreviews, on-callroosters en ploegwisselingen.",
+      "label": "Wat is WelloWork Measure?"
+    },
+    "crumbs": {
+      "current": "Measure — Prestatietrends",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Realistische voorbeeldgegevens uit uw branche, met het privacymodel live aangesloten.",
+      "primary": "Plan een demo",
+      "secondary": "Hoe we het meten",
+      "titleAccent": "één scherm.",
+      "titleLead": "Bekijk zes maanden trend op"
+    },
+    "employeeCard": {
+      "anonymised": "Geanonimiseerd",
+      "appUrl": "app.wellowork.net / me",
+      "gdprNote": "GDPR · exporteren of verwijderen",
+      "ownNote": "Medewerkers zijn eigenaar van deze gegevens — managers zien alleen vereffende aggregaten boven een minimale teamomvang.",
+      "perSession": "Per sessie",
+      "sampleData": "Voorbeeldgegevens",
+      "teamAggregateLead": "Teamaggregaat",
+      "teamAggregateQualifier": "(wat uw manager ziet)",
+      "yourTrendLead": "Uw trend",
+      "yourTrendQualifier": "(zichtbaar voor u)"
+    },
+    "employeeSection": {
+      "body": "Medewerkers zien hun eigen gegevens — hun resultaten per sessie plus dezelfde trend die een manager geaggregeerd ziet. Zij bepalen wat hun manager en HR op teamniveau kunnen zien en kunnen op elk moment onder de GDPR om export of verwijdering verzoeken.",
+      "heading": "Hoe ziet het eruit voor de medewerker?"
+    },
+    "features": {
+      "aggregated": {
+        "body": "Managers en HR zien geanonimiseerde trends per team en per cohort — nooit individuele medewerkers.",
+        "title": "Geaggregeerde teamweergaven"
+      },
+      "annotated": {
+        "body": "Sprintreviews, releases, ploegwisselingen en on-callroosters worden over de trend gelegd, zodat dips geen raadsels worden.",
+        "title": "Automatisch geannoteerd ten opzichte van werkgebeurtenissen"
+      },
+      "eyebrow": "Wat is inbegrepen",
+      "privacy": {
+        "body": "Aggregaties hanteren een minimale teamomvang voordat er ook maar één getal wordt getoond. Medewerkers behouden hun recht op export en verwijdering.",
+        "title": "Privacy-by-design"
+      },
+      "promotion": {
+        "body": "Trendrichting, rolbenchmark en prestaties ten opzichte van anciënniteit worden gecombineerd tot één onderbouwd signaal.",
+        "title": "Signaal voor promotiegereedheid"
+      },
+      "title": "Wat zit er in Measure?",
+      "variability": {
+        "body": "Waar variabiliteit schaadt (veiligheid, operations), legt Measure die bloot. Waar ze gezond is (creatief werk), wordt ze niet afgestraft.",
+        "title": "Variabiliteitsmetrieken"
+      },
+      "views": {
+        "body": "Drie trendhorizonten — sprintcadans, halfjaar en volledig jaar. Inzichten blijven stabiel wanneer er één slechte week voorkomt.",
+        "title": "Weergaven over 90 / 180 / 365 dagen"
+      }
+    },
+    "hero": {
+      "eyebrow": "Measure — Prestatietrends",
+      "lede": "Measure is de trendlaag van het WelloWork-platform. Elke sessie, elke assessment en elke workshop is een datapunt — geaggregeerd voor managers en gespecificeerd voor de medewerker die er eigenaar van is.",
+      "titleAccent": "geen eenmalige score.",
+      "titleLead": "Longitudinale prestaties —"
+    },
+    "meta": {
+      "description": "WelloWork Measure zet elke trainingssessie, assessment en workshop om in een longitudinale prestatietrend — weergaven over 90 dagen, 6 maanden en 12 maanden voor managers.",
+      "title": "Measure — longitudinale cognitieve prestatietrends | WelloWork"
+    },
+    "promotionCard": {
+      "last6mo": "Laatste 6 maanden · Voorbeeldgegevens",
+      "roleEmployee": "Medewerker",
+      "roleHR": "HR",
+      "roleManager": "Manager",
+      "signalStrong": "Sterk",
+      "signalStrongLead": "Signaal voor promotiegereedheid:",
+      "threeWay": "Start een driegesprek",
+      "trendSlope": "Trendrichting ↑"
+    },
+    "promotionSection": {
+      "body": "We zijn er bewust van dat promotiegereedheid een signaal is, geen oordeel. Het is een startpunt voor een gesprek tussen een manager, HR en de medewerker — een gesprek dat ze kunnen voeren met maanden aan vergelijkbare gegevens achter de hand, in plaats van één enkele assessmentdag.",
+      "heading": "Promotiegereedheid op basis van trend, niet één test"
+    },
+    "scoreVsTrend": {
+      "body": "Eén cognitieve score op een bepaalde dag weerspiegelt evenzeer slaap, cafeïne, stress en ruis als het onderliggende domein. Een trend over weken en maanden filtert die ruis weg en toont richting — het enige waarop een manager kan handelen zonder oneerlijke beslissingen op basis van één meetpunt.",
+      "heading": "Waarom is een trend beter dan een score?"
+    },
+    "scoreVsTrendCompare": {
+      "oneTimeAffected": "Beïnvloed door: slaap, cafeïne, stress, ruis, tijdstip van de dag.",
+      "oneTimeScore": "Eenmalige score",
+      "trendDirection": "Toont richting — geen momentopname.",
+      "trendView": "Trendweergave",
+      "vs": "VS"
+    },
+    "seeCards": {
+      "annotation": {
+        "body": "Sprintreviews, on-callroosters, releases en ploegwisselingen over de trend gelegd.",
+        "title": "Automatische annotatie"
+      },
+      "promotion": {
+        "body": "Gegrond in de trendrichting over maanden, niet in één enkele assessmentdag.",
+        "title": "Signaal voor promotiegereedheid"
+      },
+      "teamTrend": {
+        "body": "Over de vijf cognitieve domeinen — geanonimiseerd, nooit per persoon.",
+        "title": "Geaggregeerde teamtrend"
+      },
+      "variability": {
+        "body": "Nuttig voor veiligheidskritische en operations-kritische rollen waar spreiding belangrijk is.",
+        "title": "Variabiliteit binnen het team"
+      }
+    },
+    "seeSection": {
+      "heading": "Wat kunt u daadwerkelijk zien?"
+    },
+    "trendCard": {
+      "annotationShift": "Ploegwisseling",
+      "annotationSprint": "Sprintreview",
+      "chartTitle": "Cognitieve trend over 12 maanden",
+      "monthApr": "apr",
+      "monthJan": "jan",
+      "monthJul": "jul",
+      "monthOct": "okt",
+      "personName": "Jordan K.",
+      "personRole": "Staff Engineer",
+      "privacyChip": "Medewerker is eigenaar van deze weergave · GDPR-export beschikbaar",
+      "sampleData": "Voorbeeldgegevens",
+      "tab12mo": "12 maanden",
+      "tab6mo": "6 maanden",
+      "tab90": "90 dagen",
+      "trendingUp": "↑ Stijgende trend"
+    }
+  },
+  "platformProactiveCare": {
+    "answer": {
+      "body": "Proactive Care is de biomarker-monsterservice van WelloWork. Pilotprojecten worden op locatie of via partnerlaboratoria uitgevoerd, met bloedpanels gericht op longevity-relevante markers (HbA1c, ApoB, hs-CRP, lipiden, vitamine D, enz.) en urinepanels voor algemene gezondheid en middelenscreening. Medewerkers zijn eigenaar van hun rapport; managers zien uitsluitend deelnamepercentages en trends op hoofdlijnen.",
+      "label": "Wat is Proactive Care?"
+    },
+    "crumbs": {
+      "current": "Proactive Care",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "Panels, geografische gebieden en de omvang van de screening worden vastgelegd in een scopinggesprek. Pilots combineren biomarkertests doorgaans met Workshops in het Platform + Services-niveau.",
+      "primary": "Plan een scopinggesprek",
+      "secondary": "Praat met sales",
+      "title": "Stel een Proactive Care-traject samen."
+    },
+    "features": {
+      "aggregated": {
+        "body": "Managers zien deelnamepercentages en geanonimiseerde, geaggregeerde trends — nooit een individuele waarde.",
+        "title": "Geaggregeerd managementoverzicht"
+      },
+      "bloodPanel": {
+        "body": "Een configureerbaar panel van longevity-relevante markers, afgenomen op locatie of via partnerlaboratoria.",
+        "title": "Longevity-bloedpanel"
+      },
+      "chainOfCustody": {
+        "body": "De verwerking van monsters en de chain-of-custody volgen de standaardwerkwijze van de geaccrediteerde laboratoriumpartner in elk gebied.",
+        "title": "Chain-of-custody op laboratoriumniveau"
+      },
+      "employeeOwned": {
+        "body": "Alleen de medewerker ziet zijn resultaten. Hij kan ze delen met zijn arts, exporteren of verwijdering aanvragen.",
+        "title": "Rapporten in eigendom van de medewerker"
+      },
+      "eyebrow": "Wat is inbegrepen",
+      "linked": {
+        "body": "Waar de medewerker toestemming geeft, worden biomarkergegevens geannoteerd op zijn eigen cognitieve trendoverzicht.",
+        "title": "Gekoppeld aan prestatietrends"
+      },
+      "title": "Wat omvat een Proactive Care-traject?",
+      "urinePanel": {
+        "body": "Markers voor algemene gezondheid plus, waar afgesproken, drugsscreening geconfigureerd per klantbeleid.",
+        "title": "Urinegezondheid & screening"
+      }
+    },
+    "hero": {
+      "eyebrow": "Proactive Care",
+      "lede": "Bloedpanels voor longevity-markers en urinepanels voor algemene gezondheid en drugsscreening. Medewerkers zien hun volledige rapport. Managers zien alleen geanonimiseerde, geaggregeerde trends.",
+      "titleAccent": "drugsscreening.",
+      "titleLead": "Biomarkertests voor longevity, gezondheid en"
+    },
+    "logistics": {
+      "step1": {
+        "body": "Op locatie voor pilots, of via een partnerlaboratorium in de buurt van de medewerker.",
+        "note": "Toestemming per medewerker voordat een monster wordt afgenomen.",
+        "title": "Monster afgenomen"
+      },
+      "step2": {
+        "body": "De geaccrediteerde laboratoriumpartner verzorgt het monster, de verwerking en de rapportage volgens zijn standaardwerkwijze.",
+        "title": "Chain-of-custody-verwerking"
+      },
+      "step3": {
+        "body": "Alleen de medewerker. Hij kan het delen met zijn arts, exporteren of verwijdering aanvragen.",
+        "title": "Medewerker ontvangt rapport"
+      },
+      "stepLabel": "STAP {index}"
+    },
+    "logisticsSection": {
+      "body": "De monsterafname vindt op locatie plaats voor grotere pilots, of via partnerlaboratoria in de buurt van de medewerker. De chain-of-custody van monsters en de laboratoriumverwerking volgen de standaardwerkwijze van de geaccrediteerde laboratoriumpartner in dat gebied. De omvang van de drugsscreening wordt geconfigureerd per klantbeleid en er wordt per medewerker toestemming voor gegeven voordat het monster wordt afgenomen.",
+      "heading": "Hoe wordt het logistiek uitgevoerd?"
+    },
+    "meta": {
+      "description": "Bloedpanels voor longevity-markers en urinepanels voor algemene gezondheid en drugsscreening. Medewerkers zien hun rapport; managers zien alleen geanonimiseerde, geaggregeerde trends.",
+      "title": "Proactive Care — biomarkertests voor longevity & gezondheid | WelloWork"
+    },
+    "panels": {
+      "blood": {
+        "body": "Metabole, inflammatoire en cardiovasculaire markers die vaak worden gebruikt in longevity-gerichte preventieve zorg.",
+        "eyebrow": "Bloed",
+        "markers": {
+          "apob": "ApoB",
+          "cbc": "CBC",
+          "hba1c": "HbA1c",
+          "hscrp": "hs-CRP",
+          "lipidSubFractions": "Lipiden-subfracties",
+          "vitaminD": "Vitamine D"
+        },
+        "title": "Longevity-panel"
+      },
+      "urine": {
+        "body": "Standaardmarkers voor algemene gezondheid plus, waar afgesproken, middelenscreening geconfigureerd volgens het beleid van de klant.",
+        "eyebrow": "Urine",
+        "markers": {
+          "drugScreen": "Drugsscreening (optioneel)",
+          "glucose": "Glucose",
+          "hydration": "Hydratatie",
+          "kidney": "Nierfunctie",
+          "protein": "Eiwit"
+        },
+        "title": "Algemene gezondheid & screening"
+      }
+    },
+    "reportCard": {
+      "colHealthy": "Gezonde marge",
+      "colHigh": "Hoog",
+      "colLow": "Laag",
+      "colMarker": "Marker",
+      "markers": {
+        "apob": "ApoB",
+        "hba1c": "HbA1c",
+        "hscrp": "hs-CRP",
+        "lipids": "Lipiden",
+        "vitaminD": "Vitamine D"
+      },
+      "markersAttention": "2 markers vereisen aandacht",
+      "personName": "Jordan K.",
+      "personRole": "Marketing Lead",
+      "privacyChip": "Medewerker is eigenaar van dit rapport · GDPR-export beschikbaar",
+      "reportQ2": "Biomarkerrapport · Q2",
+      "sampleData": "Voorbeeldgegevens"
+    },
+    "roleAccess": {
+      "aria": {
+        "aggregated": "Geaggregeerd",
+        "cohortTrend": "Geanonimiseerde cohorttrend",
+        "hidden": "Verborgen",
+        "visibleMarker": "Zichtbare marker"
+      },
+      "cellAggLabel": "AGG",
+      "employee": {
+        "detail": "Volledig rapport — elke marker zichtbaar",
+        "role": "Medewerker"
+      },
+      "heading": "Wat elke rol ziet",
+      "legend": {
+        "aggregated": "Geaggregeerd",
+        "cohortTrend": "Cohorttrend",
+        "hidden": "Verborgen",
+        "visible": "Marker zichtbaar"
+      },
+      "managerHR": {
+        "detail": "Geaggregeerde trends over een minimale teamomvang",
+        "role": "Manager / HR"
+      },
+      "privacyChip": "Architectonisch — geen beleidsoverschrijving",
+      "wellowork": {
+        "detail": "Alleen geanonimiseerde trend op cohortniveau",
+        "role": "WelloWork"
+      }
+    },
+    "siloVsLongitudinal": {
+      "annualLabel": "Jaarlijkse keuring",
+      "annualNote1": "Eens per jaar, zonder longitudinale context.",
+      "annualNote2": "Te laat ontdekt.",
+      "monthApr": "apr",
+      "monthDec": "dec",
+      "monthJan": "jan",
+      "monthJul": "jul",
+      "monthOct": "okt",
+      "oneReading": "Eén meting",
+      "vs": "VS",
+      "welloWorkNote1": "Biomarkers + cognitieve gegevens — continu, bruikbaar.",
+      "welloWorkNote2": "Handel er nu naar.",
+      "welloWorkView": "WelloWork-overzicht"
+    },
+    "testSection": {
+      "body": "Twee panels, geconfigureerd per traject. Bloed voor longevity-relevante markers, urine voor algemene gezondheid en (waar afgesproken) middelenscreening.",
+      "heading": "Wat test Proactive Care?",
+      "note": "Let op: WelloWork is geen klinische diagnostische dienst. Rapporten identificeren markers buiten het normbereik en bevelen vervolgonderzoek aan bij de eigen arts van de medewerker. Wij stellen geen diagnoses en geven geen medisch advies."
+    },
+    "whoSeesSection": {
+      "body": "De medewerker is de enige persoon die zijn volledige biomarkerrapport ziet. Managers en HR zien geaggregeerde, geanonimiseerde trends over een minimale teamomvang — nooit de waarden van een individu. Dit is een harde architectonische regel van het platform, geen beleid dat iemand kan overschrijven.",
+      "heading": "Wie ziet de resultaten?"
+    },
+    "whySection": {
+      "body": "Een klein aantal biomarkers buigt de cognitieve prestaties in de loop van de tijd wezenlijk om — slaaparchitectuur (afgeleid via metabole markers), glucosevariabiliteit, ontsteking en de basale micronutriëntenstatus. Door biomarkergegevens te behandelen als onderdeel van hetzelfde longitudinale overzicht als cognitieve training en assessments, kunnen medewerkers en hun artsen ernaar handelen, in plaats van het eens per jaar bij een keuring te ontdekken.",
+      "heading": "Waarom testen als onderdeel van een prestatieplatform?"
+    }
+  },
+  "platformTabs": {
+    "cta": {
+      "explore": "Ontdek {tab}"
+    },
+    "explore": "Ontdek {section}",
+    "section": {
+      "eyebrow": "Het platform",
+      "heading": {
+        "accent": "menselijk kapitaal.",
+        "lead": "Eén besturingssysteem voor "
+      },
+      "titleAccent": "menselijk kapitaal.",
+      "titleLead": "Eén besturingssysteem voor"
+    },
+    "tabs": {
+      "assessment": {
+        "body": "Eén assessmentkader voor kandidaten en bestaande medewerkers. Bouw verdedigbare profielen op nog vóór de aanbieding en blijf meten daarna.",
+        "bullet1": "Cognitief + technisch, één kader",
+        "bullet2": "Resultaten voor het aanwervingspanel in enkele minuten",
+        "bullet3": "Interne benchmarks op basis van functie + anciënniteit",
+        "bullets": [
+          "Cognitief + technisch, één kader",
+          "Resultaten voor het aanwervingspanel in enkele minuten",
+          "Interne benchmarks op basis van functie + anciënniteit"
+        ],
+        "eyebrow": "WelloWize",
+        "label": "Assessment",
+        "title": "Werving en interne assessments — cognitief en technisch."
+      },
+      "growth": {
+        "body": "Adaptieve oefeningen voor probleemoplossing, werkgeheugen, aandacht, verwerkingssnelheid en cognitieve flexibiliteit. Tokens geven toegang tot cursussen; een takenmarktplaats laat collega's elkaar helpen en verdienen.",
+        "bullet1": "Adaptieve moeilijkheidsgraad per cognitief domein",
+        "bullet2": "Tokens inwisselbaar voor cursussen en groeitrajecten",
+        "bullet3": "Team Composition-engine beveelt optimale teams per project aan",
+        "bullets": [
+          "Adaptieve moeilijkheidsgraad per cognitief domein",
+          "Tokens inwisselbaar voor cursussen en groeitrajecten",
+          "Team Composition-engine beveelt optimale teams per project aan"
+        ],
+        "eyebrow": "WelloRise",
+        "label": "Groei",
+        "title": "Dagelijkse cognitieve training die in een koffiepauze past."
+      },
+      "measure": {
+        "body": "Elke sessie, elk assessment, elke workshop is een datapunt. Zie hoe cognitieve prestaties veranderen door sprints, shifts en seizoenen heen — voor individuen en geaggregeerd voor managers.",
+        "bullet1": "Overzichten over 90 dagen, 6 maanden en 12 maanden",
+        "bullet2": "Automatisch geannoteerd op basis van werkgebeurtenissen",
+        "bullet3": "Signalen voor promotiegereedheid op basis van trend, niet van één enkele test",
+        "bullets": [
+          "Overzichten over 90 dagen, 6 maanden en 12 maanden",
+          "Automatisch geannoteerd op basis van werkgebeurtenissen",
+          "Signalen voor promotiegereedheid op basis van trend, niet van één enkele test"
+        ],
+        "eyebrow": "Prestatietrends",
+        "label": "Meten",
+        "title": "Longitudinale prestaties — geen eenmalige score."
+      },
+      "proactiveCare": {
+        "body": "Bloedpanels voor longevity-markers en urinepanels voor algemene gezondheid en drugsscreening. Medewerkers zien hun volledige rapport. Managers zien alleen geanonimiseerde, geaggregeerde trends.",
+        "bullet1": "Bloed: longevity-biomarkers",
+        "bullet2": "Urine: algemene gezondheid en drugsscreening",
+        "bullet3": "Privéweergaven voor medewerkers + geaggregeerde weergaven voor managers",
+        "bullets": [
+          "Bloed: longevity-biomarkers",
+          "Urine: algemene gezondheid en drugsscreening",
+          "Privéweergaven voor medewerkers + geaggregeerde weergaven voor managers"
+        ],
+        "eyebrow": "Preventieve zorg",
+        "label": "Proactieve zorg",
+        "title": "Biomarkertesten voor longevity, algemene gezondheid en drugsscreening."
+      },
+      "workshops": {
+        "body": "Sessies onder leiding van een facilitator, opgebouwd rond de thema's cognitieve prestaties en longevity die elkaar versterken. Geboekt via hetzelfde platform — de resultaten vloeien terug in de trenddata.",
+        "bullet1": "Onder leiding van een facilitator, op locatie of op afstand",
+        "bullet2": "Afgestemd op cognitieve en longevity-wetenschap",
+        "bullet3": "Boekingen, aanwezigheid en opvolging op één plek",
+        "bullets": [
+          "Onder leiding van een facilitator, op locatie of op afstand",
+          "Afgestemd op cognitieve en longevity-wetenschap",
+          "Boekingen, aanwezigheid en opvolging op één plek"
+        ],
+        "eyebrow": "Servicelaag",
+        "label": "Workshops",
+        "title": "Live gezondheidsworkshops, op locatie of op afstand."
+      }
+    },
+    "visual": {
+      "assessment": {
+        "badge": "Voorbeeldkandidaat",
+        "benchmarkNote": "Boven de functiebenchmark in 4 van de 5 cognitieve domeinen.",
+        "candidateName": "J. Karlsson",
+        "candidateRole": "Backend Engineer · Stockholm",
+        "score": {
+          "attention": "Aandacht",
+          "problemSolving": "Probleemoplossing",
+          "processingSpeed": "Verwerkingssnelheid",
+          "technicalTs": "Technisch · TS",
+          "workingMemory": "Werkgeheugen"
+        },
+        "strongMatch": "Sterke match",
+        "url": "app.wellowork.net / assess / candidate"
+      },
+      "growth": {
+        "badge": "Werkgeheugen · dag 14",
+        "matchBtn": "Match (M)",
+        "nbackLevel": "N-back · niveau 4",
+        "skipBtn": "Overslaan (Spatie)",
+        "streak": "Reeks: 14 dagen · Marktplaatssaldo: 248",
+        "timer": "00:24",
+        "tokensEarned": "+12 tokens verdiend",
+        "url": "app.wellowork.net / train"
+      },
+      "measure": {
+        "badge": "Eng-team · 6 maanden",
+        "cognitivePerformance": "Cognitieve prestaties",
+        "metric": {
+          "avgFocus": {
+            "cap": "t.o.v. vorig kwartaal",
+            "l": "Gem. focus",
+            "v": "+11%"
+          },
+          "memory": {
+            "cap": "voortschrijdend 30 dagen",
+            "l": "Geheugen",
+            "v": "+6%"
+          },
+          "variability": {
+            "cap": "teamniveau",
+            "l": "Variabiliteit",
+            "v": "−14%"
+          }
+        },
+        "monthApr": "apr",
+        "monthDec": "dec",
+        "monthFeb": "feb",
+        "monthJan": "jan",
+        "monthMar": "mrt",
+        "monthMay": "mei",
+        "smoothed": "Wekelijks geëffend · voorbeeldgegevens",
+        "sprintAnnotation": "Sprintreview · focus −8%",
+        "url": "app.wellowork.net / trends"
+      },
+      "proactiveCare": {
+        "anonymised": "Geanonimiseerd",
+        "badge": "Jouw weergave · privé",
+        "managerView": "Managerweergave · geaggregeerd",
+        "marker": {
+          "apob": {
+            "l": "ApoB",
+            "tag": "opvolgen"
+          },
+          "hba1c": {
+            "l": "HbA1c",
+            "tag": "optimaal"
+          },
+          "hscrp": {
+            "l": "hs-CRP",
+            "tag": "goed"
+          },
+          "vitaminD": {
+            "l": "Vitamine D",
+            "tag": "optimaal"
+          }
+        },
+        "panelMeta": "Afgenomen op 12 mei · 11 markers",
+        "panelTitle": "Bloedpanel · longevity",
+        "privacyChip": "Alleen jij kunt dit zien",
+        "reportsCompleted": "rapporten voltooid in deze cyclus",
+        "team": "Engineering · 14 leden",
+        "trendsNote": "Individuele waarden worden nooit getoond — alleen trends.",
+        "url": "app.wellowork.net / health / report"
+      },
+      "workshops": {
+        "badge": "mei · aankomend",
+        "booked": "14 geboekt",
+        "day": {
+          "fri": "VRIJ",
+          "thu": "DON",
+          "tue": "DIN",
+          "wed": "WOE"
+        },
+        "url": "app.wellowork.net / workshops",
+        "w1": {
+          "title": "Slaaparchitectuur en herstel",
+          "when": "10:00 · Op afstand · 60 min"
+        },
+        "w2": {
+          "title": "Voeding voor cognitieve prestaties",
+          "when": "13:00 · Op locatie · 90 min"
+        },
+        "w3": {
+          "title": "Stress, focus en cognitieve belasting",
+          "when": "15:30 · Op afstand · 60 min"
+        },
+        "w4": {
+          "title": "Basis van longevity en metabole gezondheid",
+          "when": "11:00 · Op locatie · 90 min"
+        }
+      }
+    }
+  },
+  "platformTabsMock": {
+    "assessment": {
+      "badge": "Voorbeeldkandidaat",
+      "match": "Sterke match",
+      "name": "J. Karlsson",
+      "note": "Boven het rolbenchmark in 4 van de 5 cognitieve domeinen.",
+      "role": "Backend Engineer · Stockholm",
+      "score": {
+        "attention": "Aandacht",
+        "problemSolving": "Probleemoplossing",
+        "processingSpeed": "Verwerkingssnelheid",
+        "technical": "Technisch · TS",
+        "workingMemory": "Werkgeheugen"
+      },
+      "url": "app.wellowork.net / assess / candidate"
+    },
+    "growth": {
+      "badge": "Werkgeheugen · dag 14",
+      "btnMatch": "Match (M)",
+      "btnSkip": "Overslaan (spatie)",
+      "exercise": "N-back · niveau 4",
+      "streak": "Reeks: 14 dagen · Marktplaatssaldo: 248",
+      "timer": "00:24",
+      "tokens": "+12 tokens verdiend",
+      "url": "app.wellowork.net / train"
+    },
+    "measure": {
+      "annotation": "Sprintreview · focus −8%",
+      "axis": {
+        "apr": "Apr",
+        "dec": "Dec",
+        "feb": "Feb",
+        "jan": "Jan",
+        "mar": "Mrt",
+        "may": "Mei"
+      },
+      "badge": "Engineeringteam · 6 maanden",
+      "stat": {
+        "focus": {
+          "cap": "t.o.v. vorig kwartaal",
+          "label": "Gem. focus",
+          "value": "+11%"
+        },
+        "memory": {
+          "cap": "voortschrijdend 30 dagen",
+          "label": "Geheugen",
+          "value": "+6%"
+        },
+        "variability": {
+          "cap": "teamniveau",
+          "label": "Variabiliteit",
+          "value": "−14%"
+        }
+      },
+      "subtitle": "Wekelijks afgevlakt · voorbeeldgegevens",
+      "title": "Cognitieve prestaties",
+      "url": "app.wellowork.net / trends"
+    },
+    "proactiveCare": {
+      "anonymised": "Geanonimiseerd",
+      "badge": "Jouw weergave · privé",
+      "footnote": "Individuele waarden worden nooit getoond — alleen trends.",
+      "managerView": "Managerweergave · geaggregeerd",
+      "marker": {
+        "apob": {
+          "tag": "monitoren"
+        },
+        "hba1c": {
+          "tag": "optimaal"
+        },
+        "hscrp": {
+          "tag": "goed"
+        },
+        "vitd": {
+          "tag": "optimaal"
+        }
+      },
+      "panelSub": "Afgenomen 12 mei · 11 markers",
+      "panelTitle": "Bloedpanel · longevity",
+      "privacyChip": "Alleen jij kunt dit zien",
+      "reports": "rapporten voltooid deze cyclus",
+      "team": "Engineering · 14 leden",
+      "url": "app.wellowork.net / health / report"
+    },
+    "workshops": [
+      {
+        "day": "DI",
+        "title": "Slaaparchitectuur en herstel",
+        "when": "10:00 · Op afstand · 60 min"
+      },
+      {
+        "day": "WO",
+        "title": "Voeding voor cognitieve prestaties",
+        "when": "13:00 · Op locatie · 90 min"
+      },
+      {
+        "day": "DO",
+        "title": "Stress, focus en cognitieve belasting",
+        "when": "15:30 · Op afstand · 60 min"
+      },
+      {
+        "day": "VR",
+        "title": "Basis van longevity en metabole gezondheid",
+        "when": "11:00 · Op locatie · 90 min"
+      }
+    ]
+  },
+  "platformWorkshops": {
+    "answer": {
+      "body": "Het zijn live sessies onder leiding van een facilitator voor medewerkers — op locatie of op afstand — over slaaparchitectuur, voeding voor cognitieve prestaties, stress en focus, en de basis van longevity. Boekingen, aanwezigheid en opvolging vinden plaats binnen hetzelfde platform dat dagelijkse training en prestatietrends aanstuurt.",
+      "label": "Wat zijn WelloWork-workshops?"
+    },
+    "bookingCard": {
+      "bookButton": "Sessie boeken",
+      "enrolled": "+12 ingeschreven",
+      "eyebrow": "Workshop",
+      "pickSession": "Kies een sessie",
+      "sample": "Voorbeeld",
+      "slot1": {
+        "date": "do · 4 jun",
+        "tag": "Op locatie · Stockholm",
+        "time": "09:30 CET"
+      },
+      "slot2": {
+        "date": "di · 9 jun",
+        "tag": "Op afstand · Zoom",
+        "time": "14:00 CET"
+      },
+      "slotOpen": "Beschikbaar",
+      "slotSelected": "Geselecteerd",
+      "title": "Slaaparchitectuur & herstel"
+    },
+    "cadenceCompare": {
+      "monthJul": "jul",
+      "monthMay": "mei",
+      "monthNov": "nov",
+      "monthSep": "sep",
+      "oneOffLabel": "Eenmalige spreker",
+      "oneOffSub": "Dinsdag al vergeten",
+      "welloWorkLabel": "WelloWork-workshop",
+      "welloWorkSub": "Bouwt op in de loop van de tijd"
+    },
+    "cadenceSection": {
+      "body": "De inhoud van een eenmalige spreker bouwt niet op. Workshops hier worden ingepland in een ritme dat aansluit op de pilot van elke klant, waarbij aanwezigheid en vervolgacties weer in het platform worden vastgelegd. Een workshop over slaap in mei sluit later aan op een herstel-gemarkeerde dip in juli — geen vage herinnering aan een dinsdagmiddag.",
+      "heading": "Hoe verschilt dit van een eenmalige spreker?"
+    },
+    "crumbs": {
+      "current": "Workshops",
+      "home": "Home",
+      "platform": "Platform"
+    },
+    "cta": {
+      "body": "De volumes voor workshops en biomarkertesten worden bevestigd in een scopinggesprek. Breng uw personeelsaantal en randvoorwaarden mee — wij brengen opties.",
+      "primary": "Boek een scopinggesprek",
+      "secondary": "Praat met sales",
+      "title": "Bepaal de scope van een workshoptraject."
+    },
+    "deliverySection": {
+      "body": "Beide. De meeste pilots draaien een mix — op locatie voor de Nordics, op afstand voor verspreide teams elders. Facilitators worden jaarlijks geëvalueerd en afgestemd op de bredere methodologie van het platform.",
+      "heading": "Op locatie of op afstand?"
+    },
+    "deliveryToggle": {
+      "onSite": "Op locatie",
+      "remote": "Op afstand",
+      "whereWeRun": "Waar we ze houden"
+    },
+    "features": {
+      "aligned": {
+        "body": "Curriculum afgestemd op hetzelfde constructraamwerk dat WelloRise en Measure aandrijft — niet een aparte zienswijze.",
+        "title": "Cognitief- en longevity-afgestemd"
+      },
+      "bookings": {
+        "body": "Medewerkers boeken via dezelfde WelloWork-app die training en trends aanstuurt — geen apart leveranciersportaal.",
+        "title": "Boekingen binnen het platform"
+      },
+      "eyebrow": "Wat is inbegrepen",
+      "facilitator": {
+        "body": "Live sessies onder leiding van getrainde facilitators, met gestructureerde Q&A en korte opvolgworkflows.",
+        "title": "Onder leiding van een facilitator"
+      },
+      "outcomes": {
+        "body": "Workshopaanwezigheid en opvolging worden geannoteerd op de prestatietrend, zodat dips en pieken niet als ruis worden gelezen.",
+        "title": "Resultaten voeden trends"
+      },
+      "privacy": {
+        "body": "Individuele aanwezigheid van medewerkers wordt nooit zichtbaar gemaakt voor managers — alleen geaggregeerde en geanonimiseerde percentages per team.",
+        "title": "Privacyrespecterend"
+      },
+      "title": "Wat wordt er bij een workshoptraject geleverd?",
+      "tracking": {
+        "body": "Geaggregeerde aanwezigheids- en opvolgpercentages voeden de Service Engagement-rapportage voor HR en L&D.",
+        "title": "Aanwezigheids- en opvolgtracking"
+      }
+    },
+    "hero": {
+      "eyebrow": "Workshops",
+      "lede": "Sessies onder leiding van een facilitator over de thema's rond cognitieve prestaties en longevity die opbouwen — slaap, voeding, herstel, focus. Geboekt in het platform; resultaten stromen terug in prestatietrends.",
+      "titleAccent": "op afstand.",
+      "titleLead": "Live gezondheidsworkshops, op locatie of"
+    },
+    "mapBlob": {
+      "distributed": "VERSPREID",
+      "nordics": "NORDICS"
+    },
+    "meta": {
+      "description": "Workshops onder leiding van een facilitator over slaap, herstel, voeding, focus en longevity. Op locatie of op afstand, te boeken in WelloWork, met resultaten die terugvloeien in prestatietrends.",
+      "title": "Workshops — live gezondheidsworkshops, op locatie of op afstand | WelloWork"
+    },
+    "scoping": {
+      "step1": {
+        "body": "Personeelsaantal, locaties, talen, randvoorwaarden.",
+        "title": "Scopinggesprek"
+      },
+      "step2": {
+        "body": "Onderwerp en ritme afgestemd op de juiste lead.",
+        "title": "Facilitator gematcht"
+      },
+      "step3": {
+        "body": "Te boeken in het platform; opvolging gekoppeld aan trends.",
+        "title": "Sessies ingepland"
+      }
+    },
+    "scopingSection": {
+      "body": "Workshops worden per traject afgebakend — beschikbaarheid van facilitators, locatie, taal en opvolgritme worden bevestigd in een scopinggesprek. Ze zijn inbegrepen in de Platform + Services-tier, naast biomarkertesten.",
+      "heading": "Scoping"
+    },
+    "topics": {
+      "cognitiveLoad": {
+        "body": "Stress, aandacht en de grenzen van het werkgeheugen.",
+        "title": "Cognitieve belasting"
+      },
+      "longevity": {
+        "body": "Metabole gezondheid voor de lange termijn, niet voor het kwartaal.",
+        "title": "Basis van longevity"
+      },
+      "movement": {
+        "body": "Herstelroutines voor schermintensieve functies.",
+        "title": "Beweging bij zittend werk"
+      },
+      "nutrition": {
+        "body": "Cognitieve prestaties voeden gedurende de dag.",
+        "title": "Voeding voor focus"
+      },
+      "sleep": {
+        "body": "Fases, herstel en hoe je diepe slaap beschermt.",
+        "title": "Slaaparchitectuur"
+      }
+    },
+    "topicsSection": {
+      "heading": "Welke workshops zijn beschikbaar?"
+    }
+  },
+  "pricing": {
+    "eyebrow": "Prijzen",
+    "featuredBadge": "De meeste teams beginnen hier",
+    "heading": {
+      "accent": "Beide afgestemd op uw pilot.",
+      "lead": "Twee manieren om te starten. "
+    },
+    "lede": "We bepalen de prijs op basis van de omvang en fase van uw pilot — de volledige cijfers krijgt u in het gesprek.",
+    "plans": {
+      "platform": {
+        "cta": "Neem contact op met sales",
+        "desc": "SaaS-toegang per medewerker tot WelloRise en WelloWize.",
+        "features": [
+          "Dagelijkse cognitieve training (WelloRise)",
+          "Assessments voor werving & interne beoordeling (WelloWize)",
+          "Managerdashboards & trendanalyses",
+          "GDPR-native dataresidentie"
+        ],
+        "name": "Platform",
+        "price": "€12",
+        "unit": "per medewerker · per maand"
+      },
+      "platformServices": {
+        "cta": "Plan een scopinggesprek",
+        "desc": "Voegt workshops en biomarkertesten toe per opdracht.",
+        "features": [
+          "Alles uit Platform",
+          "Live health-workshops, op locatie of op afstand",
+          "Bloed- (longevity) & urinemonstertesten",
+          "Toegewijde CSM en rapportsjablonen"
+        ],
+        "name": "Platform + Services",
+        "note": "De volumes voor workshops en biomarkertesten worden per opdracht bepaald en in het gesprek bevestigd.",
+        "price": "vanaf €28",
+        "unit": "per medewerker · per maand · platform + diensten per opdracht"
+      }
+    }
+  },
+  "problem": {
+    "eyebrow": "De kloof",
+    "heading": {
+      "accent": "Wij meten prestaties.",
+      "lead": "Wellnessplatforms meten betrokkenheid. "
+    },
+    "items": [
+      {
+        "body": "Tevredenheidsenquêtes meten hoe mensen zich voelen over hun werk. Ze meten niet hoe het werk hen verandert.",
+        "title": "Betrokkenheidsscores voorspellen niet wie op het punt staat om uit te branden."
+      },
+      {
+        "body": "Slaaparchitectuur, glucosevariabiliteit, ontsteking — de factoren die de cognitieve curve geleidelijk ombuigen, belanden nooit in HR-data.",
+        "title": "Jaarlijkse keuringen missen de biomarkers die cognitieve prestaties aandrijven."
+      },
+      {
+        "body": "Tussen die twee uitersten bestaat er geen longitudinaal beeld van hoe de mensen die je hebt aangenomen daadwerkelijk presteren.",
+        "title": "Wervingsassessments eindigen bij de aanstellingsbrief — en HR-enquêtes eindigen bij het moreel."
+      }
+    ],
+    "lede": "Drie dingen die elke operator al weet over zijn personeelsdata — maar die geen enkele tool werkelijk oplost."
+  },
+  "researchCognitiveConstructs": {
+    "answer": {
+      "body": "Vijf: werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit. Elk daarvan is gekoppeld aan een gevestigd paradigma uit de cognitieve wetenschap — N-back, symboolsubstitutie, Posner-achtige aandacht, Raven-redeneren en task-switching — aangepast voor korte, dagelijkse sessies binnen een werkplekplatform.",
+      "label": "Welke cognitieve constructen meet WelloWork?"
+    },
+    "att": {
+      "body": "Aandacht omvat meerdere subconstructen: volgehouden, selectieve, alerterende, oriënterende en uitvoerende aandacht. Wij richten ons op volgehouden aandacht (waakzaamheid bij een doorlopende taak) en selectieve aandacht (het filteren van afleiders) via Posner-achtige cueing-paradigma's, aangepast voor sessies binnen het platform.",
+      "heading": "Wat is aandacht en hoe meten we die?"
+    },
+    "crumbs": {
+      "current": "Cognitieve constructen",
+      "home": "Home",
+      "research": "Onderzoek"
+    },
+    "cta": {
+      "body": "De demo bevat een vergelijking naast elkaar van de adaptieve sessie van een voorbeeldmedewerker en waar dat resultaat terechtkomt in het teamaggregaat.",
+      "primary": "Plan een demo",
+      "secondary": "Overzicht van de methodologie",
+      "title": "Bekijk de constructen in het dashboard."
+    },
+    "domainGrid": {
+      "aria": "Gemeten cognitieve domeinen",
+      "att": {
+        "descriptor": "Filtert ruis",
+        "label": "Aandacht"
+      },
+      "flex": {
+        "descriptor": "Past regelsets aan",
+        "label": "Cognitieve flexibiliteit"
+      },
+      "long": {
+        "descriptor": "Patronen over weken",
+        "label": "Longitudinale index"
+      },
+      "prob": {
+        "descriptor": "Redeneert onder beperkingen",
+        "label": "Probleemoplossing"
+      },
+      "ps": {
+        "descriptor": "Reageert zonder vermoeidheid",
+        "label": "Verwerkingssnelheid"
+      },
+      "wm": {
+        "descriptor": "Houdt context vast onder belasting",
+        "label": "Werkgeheugen"
+      }
+    },
+    "exclude": {
+      "gamified": {
+        "label": "Gegamificeerde prestatiescores",
+        "why": "Verbetering in spellen draagt zelden over. Wij meten gedrag, geen punten."
+      },
+      "headLeft": "Wat we uitsluiten",
+      "headRight": "Waarom",
+      "mood": {
+        "label": "Stemming en emotie",
+        "why": "Privé bijgehouden door de medewerker als optionele context. Managers zien het nooit."
+      },
+      "personality": {
+        "label": "Persoonlijkheidskenmerken",
+        "why": "Persoonlijkheidsbeoordeling is een aparte discipline met eigen eisen aan zorgvuldigheid — en ligt gevoelig op het werk."
+      }
+    },
+    "excludeSection": {
+      "body": "We scoren bewust geen persoonlijkheid, stemming of emotie via de cognitieve testbatterij. Persoonlijkheidsbeoordeling is een eigen discipline met eigen eisen aan zorgvuldigheid; daar hebben wij niets nuttigs aan toe te voegen en we zijn sowieso voorzichtig met het gebruik ervan op de werkplek. Stemming wordt door medewerkers zelf vastgelegd als optionele context voor hun eigen trendweergave; managers zien dit niet.",
+      "heading": "Hoe zit het met constructen die we niet meten?"
+    },
+    "flex": {
+      "body": "Het vermogen om te schakelen tussen regelsets en contexten. Geoperationaliseerd via task-switching-ontwerpen (naar Monsell, 2003 en de bredere literatuur over uitvoerende functies), waarbij de afname van de switch-kosten in de loop van de tijd wordt gevolgd als signaal van flexibiliteit onder omstandigheden met lage inzet.",
+      "heading": "Wat is cognitieve flexibiliteit en hoe meten we die?"
+    },
+    "gamesPanel": {
+      "gameBadge": "Beperking",
+      "gameMatch": "Match het patroon",
+      "gameNote": "Wordt beter in het spel. Overdracht naar echt werk: beperkt.",
+      "gameRound": "Ronde 4",
+      "gameScore": "Score 1.240",
+      "gameTap": "Tik",
+      "gameTitle": "Standaard cognitief spel",
+      "optionA": "Neem het eerste ticket en herverdeel de rest later.",
+      "optionB": "Lees de regels opnieuw; kies de wachtrij die past bij de belasting van vandaag.",
+      "optionC": "Escaleer naar de teamleider en wacht af.",
+      "scenarioBadge": "Ecologisch valide",
+      "scenarioNote": "Legt vast hoe je daadwerkelijk redeneert en beslist. Opgebouwd uit veldobservaties.",
+      "scenarioPrompt": "Twee incidentwachtrijen hebben zojuist hun prioriteitsregels gewijzigd. Het volgende ticket dat je aanneemt, bepaalt je wachtrij voor de rest van de dienst.",
+      "scenarioStep": "Stap 2 van 3",
+      "scenarioTag": "Ops · escalatie",
+      "scenarioTitle": "WelloWork-scenario"
+    },
+    "gamesSection": {
+      "bridge": "Onderzoek toont consequent aan dat mensen beter worden in cognitieve spellen — niet in complexe taken in de echte wereld. WelloWork-scenario's zijn gebaseerd op gedragsmatig veldwerk, niet op gegamificeerde benaderingen.",
+      "heading": "Waarom niet gewoon cognitieve spellen gebruiken?"
+    },
+    "hero": {
+      "eyebrow": "Cognitieve constructen",
+      "lede": "De constructen achter WelloRise en WelloWize — elk met het paradigma dat we gebruiken, wat de literatuur vaststelt en de operationele voorbehouden die we onszelf opleggen.",
+      "titleAccent": "uitgebreide literatuur.",
+      "titleLead": "Vijf domeinen, elk met een"
+    },
+    "meta": {
+      "description": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — elk domein, de literatuur erachter en hoe WelloWork het operationaliseert.",
+      "title": "Cognitieve constructen — de vijf domeinen die WelloWork meet"
+    },
+    "methodBanner": {
+      "adaptive": {
+        "body": "Elke sessie past zich in realtime aan je huidige prestatieniveau aan.",
+        "title": "Adaptieve moeilijkheidsgraad"
+      },
+      "daily": {
+        "body": "Ontworpen voor het ritme van de werkplek — niet voor laboratoriumomstandigheden.",
+        "title": "Korte dagelijkse sessies"
+      },
+      "long": {
+        "body": "Patronen in de loop van de tijd zijn belangrijker dan welke afzonderlijke score dan ook.",
+        "title": "Longitudinaal signaal"
+      }
+    },
+    "pillStrip": {
+      "aria": "Vijf cognitieve domeinen",
+      "att": "Aandacht",
+      "flex": "Cognitieve flexibiliteit",
+      "prob": "Probleemoplossing",
+      "ps": "Verwerkingssnelheid",
+      "wm": "Werkgeheugen"
+    },
+    "prob": {
+      "body": "Non-verbaal redeneren onder beperkingen. We gebruiken Raven-achtige progressieve matrices en problemen in de stijl van de Tower of Hanoi, met expliciete registratie van de tijd-op-taak. Probleemoplossing is het construct dat het sterkst wordt beïnvloed door domeinkennis, en daarom rapporteren we het samen met de rolspecifieke technische screenings in WelloWize.",
+      "heading": "Wat is probleemoplossing en hoe meten we die?"
+    },
+    "ps": {
+      "body": "Verwerkingssnelheid meet hoe snel eenvoudige cognitieve handelingen kunnen worden uitgevoerd. We gebruiken taken in de stijl van symboolsubstitutie (een paradigma met een lange geschiedenis in cognitieve beoordeling) en korte keuzereactie-ontwerpen. Verwerkingssnelheid is opvallend gevoelig voor slaaptekort en acute vermoeidheid, wat mede verklaart waarom ze nuttig is in een werkplekcontext.",
+      "heading": "Wat is verwerkingssnelheid en hoe meten we die?"
+    },
+    "scenarioCard": {
+      "att": {
+        "paradigm": "Posner-cueing",
+        "scenario": "Bewaak twintig minuten lang een ops-dashboard met zes kanalen. Breng echte afwijkingen aan het licht; negeer routineruis."
+      },
+      "exampleLabel": "Voorbeeldscenario",
+      "flex": {
+        "paradigm": "Task-switching",
+        "scenario": "Schakel tussen drie escalatiewachtrijen met verschillende regels. Pas de juiste regel toe vóór de verkeerde reflex."
+      },
+      "footer": "Signaalpatroon per sessie vastgelegd",
+      "prob": {
+        "paradigm": "Raven-matrices",
+        "scenario": "Een terugkerend planningsconflict raakt drie teams en twee beperkingen. Identificeer eerst de oplosbare as."
+      },
+      "ps": {
+        "paradigm": "Symboolsubstitutie",
+        "scenario": "Markeer afwijkingen in een live operationele feed voordat het volgende statusrapport uitgaat."
+      },
+      "wm": {
+        "paradigm": "N-back",
+        "scenario": "Beoordeel zes leveranciersvoorstellen. Roep de belangrijkste cijfers in herinnering terwijl je de laatste twee vergelijkt met het eerste."
+      }
+    },
+    "signalTrace": {
+      "att": {
+        "falseAlarms": "Fout-alarmen",
+        "hits": "Treffers"
+      },
+      "flex": {
+        "sessions": "sessies →",
+        "switchCost": "switch-kosten"
+      },
+      "prob": {
+        "timeOnTask": "tijd op taak",
+        "trials": "trials →"
+      },
+      "ps": {
+        "freq": "freq",
+        "reactionTime": "reactietijd →"
+      },
+      "wm": {
+        "accuracy": "nauwkeurigheid",
+        "difficulty": "moeilijkheidsgraad →"
+      }
+    },
+    "wm": {
+      "body": "Werkgeheugen is het vermogen om informatie in gedachten vast te houden en te manipuleren. We operationaliseren het via N-back-taken (naar Baddeley en de bredere span-literatuur) met adaptieve moeilijkheidsgraad per sessie. Werkgeheugen is in de gepubliceerde literatuur een van de meest voorspellende cognitieve constructen voor academische prestaties en prestaties bij complexe taken, hoewel de overdracht naar uitkomsten op functieniveau meer domeinspecifiek is.",
+      "heading": "Wat is werkgeheugen en hoe meten we het?"
+    }
+  },
+  "researchIndex": {
+    "answer": {
+      "body": "De training en assessments van WelloWork zijn gebouwd op vijf al lang gevalideerde cognitieve constructen — werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit. Wij verbinden ons ertoe onze methodologie en pilotresultaten te publiceren, en wij doen geen klinische of diagnostische uitspraken over het biomarker-gedeelte van het platform.",
+      "label": "Wat is de onderzoeksaanpak van WelloWork?"
+    },
+    "constructs": {
+      "attention": {
+        "body": "Het vasthouden van focus op een taak en het filteren van afleidingen. Cued-attention-ontwerpen gebaseerd op Posner-achtige paradigma's.",
+        "cap": "Aanhoudend & selectief · Posner-paradigma's",
+        "name": "Aandacht"
+      },
+      "cognitiveFlexibility": {
+        "body": "Het vermogen om te schakelen tussen regelsets. Task-switching-ontwerpen, waarbij de afname van schakelkosten in de loop van de tijd wordt gevolgd.",
+        "cap": "Task-switching-kosten · Monsell, 2003",
+        "name": "Cognitieve flexibiliteit"
+      },
+      "problemSolving": {
+        "body": "Non-verbaal redeneren onder beperkingen. Aangepaste Raven Progressive Matrices en Tower-problemen.",
+        "cap": "Tower- & Raven-achtig redeneren",
+        "name": "Probleemoplossing"
+      },
+      "processingSpeed": {
+        "body": "Hoe snel eenvoudige cognitieve operaties kunnen worden uitgevoerd. Symbool-substitutie-paradigma's; gevoelig voor slaap en vermoeidheid.",
+        "cap": "Symboolsubstitutie · Wechsler, klassiek",
+        "name": "Verwerkingssnelheid"
+      },
+      "workingMemory": {
+        "body": "Het vermogen om informatie in gedachten vast te houden en te manipuleren. Geoperationaliseerd via n-back- en span-taken met adaptieve moeilijkheidsgraad.",
+        "cap": "N-back, span-taken · Baddeley, 1992",
+        "name": "Werkgeheugen"
+      }
+    },
+    "constructsSection": {
+      "heading": "Welke cognitieve constructen meet WelloWork?"
+    },
+    "crumbs": {
+      "current": "Onderzoek",
+      "home": "Home"
+    },
+    "cta": {
+      "body": "Breng uw personeelsaantal en randvoorwaarden mee — we lopen tijdens hetzelfde gesprek met u door de methodologie en het privacymodel.",
+      "primary": "Plan een demo",
+      "secondary": "Overzicht methodologie",
+      "title": "Wilt u dit zien op echte pilotdata?"
+    },
+    "hero": {
+      "eyebrow": "Onderzoek & bewijs",
+      "lede": "Elke cognitieve oefening op het platform is gekoppeld aan een construct met een uitgebreide literatuur — geen intern bedachte maatstaf. We publiceren methodologie naarmate we pilotdata genereren.",
+      "titleAccent": "vakgebied al valideert.",
+      "titleLead": "Gebouwd op constructen die het"
+    },
+    "meta": {
+      "description": "De cognitieve training en assessments van WelloWork zijn gebouwd op gevalideerde constructen: werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit.",
+      "title": "Onderzoek & methodologie — de cognitieve constructen achter WelloWork"
+    },
+    "subpages": {
+      "constructs": {
+        "body": "Elk van de vijf domeinen in detail — wat ze meten, wat de literatuur zegt en hoe WelloWork ze operationaliseert.",
+        "title": "Cognitieve constructen"
+      },
+      "methodology": {
+        "body": "Hoe oefeningen worden gekoppeld aan constructen, en onze toezegging om methodologie te publiceren naarmate er pilotdata wordt gegenereerd.",
+        "title": "Overzicht methodologie"
+      },
+      "scienceInsight": {
+        "body": "Notities, uitwerkingen en methodologische observaties van het onderzoeksteam van WelloWork.",
+        "title": "Wetenschap & inzicht"
+      }
+    },
+    "subpagesSection": {
+      "heading": "Waar kan ik meer lezen?"
+    }
+  },
+  "researchMethodology": {
+    "aggregations": {
+      "heading": "Hoe worden aggregaties uitgevoerd?"
+    },
+    "aggrGrid": {
+      "levelVariability": {
+        "body": "Afzonderlijk gerapporteerd — ze beantwoorden verschillende vragen.",
+        "title": "Niveau versus variabiliteit"
+      },
+      "minTeamSize": {
+        "body": "Aggregaten verschijnen pas wanneer de teamdrempel is bereikt.",
+        "title": "Minimale teamgrootte afgedwongen"
+      },
+      "weeklySmoothing": {
+        "body": "Pieken op een enkele dag sturen de aandacht van de manager niet.",
+        "title": "Wekelijkse afvlakking"
+      },
+      "workEvents": {
+        "body": "Sprintreviews, releases en oproepperiodes worden automatisch gemarkeerd.",
+        "title": "Annotaties van werkgebeurtenissen"
+      }
+    },
+    "answer": {
+      "body": "WelloWork meet cognitieve prestaties via korte adaptieve taken die zijn gekoppeld aan vijf gevalideerde constructen — werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit. Scores per sessie worden genormaliseerd ten opzichte van een baseline per medewerker en geaggregeerd tot trends op teamniveau, met afdwinging van een minimale teamgrootte. We doen geen klinische of diagnostische uitspraken over biomarkerrapporten.",
+      "label": "Wat is de WelloWork-methodologie, in één alinea?"
+    },
+    "bellCurve": {
+      "population": "populatie",
+      "youVsOthers": "jij versus anderen"
+    },
+    "claims": {
+      "outOfScope": {
+        "businessOutcomes": "Overdracht naar specifieke bedrijfsresultaten",
+        "clinical": "Klinische of diagnostische waarde",
+        "ranking": "Betrouwbare individuele rangschikking op basis van korte taken",
+        "selfInvented": "Zelfverzonnen metrieken"
+      },
+      "outOfScopeBadge": "Buiten scope",
+      "outOfScopeTitle": "Wat we niet beweren",
+      "supported": {
+        "signals": "Aan constructen gekoppelde gedragssignalen",
+        "teamPatterns": "Patronen op teamniveau",
+        "trends": "Cognitieve trends in de tijd",
+        "variance": "Variantie binnen een persoon"
+      },
+      "supportedBadge": "Onderbouwd",
+      "supportedTitle": "Wat we meten"
+    },
+    "closingBanner": {
+      "adaptive": {
+        "body": "Elke sessie kalibreert in realtime naar je huidige prestatieniveau.",
+        "title": "Adaptieve moeilijkheidsgraad"
+      },
+      "signal": {
+        "body": "Patronen over weken heen tellen zwaarder dan de score van een enkele sessie.",
+        "title": "Signaal over tijd"
+      },
+      "workplace": {
+        "body": "Korte dagelijkse sessies. Geen laboratoriumomstandigheden vereist.",
+        "title": "Ontworpen voor het ritme op de werkplek"
+      }
+    },
+    "crumbs": {
+      "current": "Methodologie",
+      "home": "Home",
+      "research": "Onderzoek"
+    },
+    "cta": {
+      "body": "Een demo bevat een slot van 5–10 minuten om dieper in te gaan op hoe een specifieke oefening aan een construct is gekoppeld, en hoe de score in de managerweergave terechtkomt.",
+      "primary": "Plan een demo",
+      "secondary": "Terug naar onderzoek",
+      "title": "Wil je de methodologie live toegelicht krijgen?"
+    },
+    "hero": {
+      "eyebrow": "Methodologie",
+      "lede": "Een korte rondgang langs de constructkoppeling, scoring, aggregatie en privacyhouding achter het WelloWork-platform. We publiceren methodologie naarmate we pilotdata genereren.",
+      "titleAccent": "en wat we niet beweren.",
+      "titleLead": "Hoe we cognitieve prestaties meten —"
+    },
+    "mapping": {
+      "body": "Elke taak op het platform wordt gekoppeld aan één primair construct en aan hoogstens één secundair construct. De primaire koppeling stuurt de scoring; de secundaire koppeling wordt vastgelegd voor de methodologie-audit, maar draagt niet bij aan de kernmetriek. We gebruiken gevestigde paradigma's — N-back, span-taken, symboolsubstitutie, Posner-cueing, redeneren in Raven-stijl, taakwisseling — aangepast voor korte sessies op het platform.",
+      "heading": "Hoe worden oefeningen aan constructen gekoppeld?"
+    },
+    "mappingCard": {
+      "colConstruct": "Primair construct",
+      "colTask": "Taak",
+      "footnote": "Elke taak wordt gekoppeld aan één primair construct. Secundaire signalen worden vastgelegd maar sturen de score niet.",
+      "rows": {
+        "sequenceRecall": {
+          "construct": "Werkgeheugen",
+          "task": "Sequentieherinnering"
+        },
+        "symbolSubstitution": {
+          "construct": "Verwerkingssnelheid",
+          "task": "Symboolsubstitutie"
+        },
+        "targetDetection": {
+          "construct": "Aandacht",
+          "task": "Doeldetectie"
+        }
+      }
+    },
+    "meta": {
+      "description": "Hoe WelloWork oefeningen koppelt aan gevalideerde cognitieve constructen, ze scoort en de resultaten aggregeert tot longitudinale prestatietrends — met privacy by design.",
+      "title": "Methodologieoverzicht — hoe WelloWork cognitieve prestaties meet"
+    },
+    "normCard": {
+      "caption": "We vergelijken medewerkers niet met elkaar. We volgen elke persoon ten opzichte van zijn eigen vastgestelde baseline.",
+      "populationBadge": "Niet gebruikt",
+      "populationNote": "Een medewerker vergelijken met een verdeling onder collega's. Ruisgevoelig op individueel niveau — en ongemakkelijk op het werk.",
+      "populationTitle": "Populatierangschikking",
+      "withinPersonBadge": "WelloWork-aanpak",
+      "withinPersonNote": "Elke sessie wordt gescoord ten opzichte van de eigen voortschrijdende baseline van de medewerker over de afgelopen 90 dagen.",
+      "withinPersonTitle": "Baseline binnen de persoon"
+    },
+    "notClaim": {
+      "body": "We beweren niet dat cognitieve training wordt overgedragen naar specifieke bedrijfsresultaten (omzet, productiviteit). We beweren geen klinische of diagnostische waarde voor biomarkerrapporten. We beweren niet dat individuele rangschikking van medewerkers betrouwbaar is op basis van korte adaptieve taken — alleen dat trends dat zijn. En we verzinnen geen metrieken: elke claim is terug te voeren op een gepubliceerd construct of op een methodologienotitie die we onder /research zullen publiceren.",
+      "heading": "Wat beweren we bewust niet?"
+    },
+    "pipeline": {
+      "adaptive": {
+        "label": "Adaptieve taak",
+        "subtitle": "Moeilijkheidsgraad kalibreert per sessie"
+      },
+      "aggregate": {
+        "label": "Aggregaat op teamniveau",
+        "subtitle": "Drempelgestuurd, wekelijks afgevlakt"
+      },
+      "aria": "WelloWork-meetpijplijn",
+      "badge": "Geen klinische claims. Geen populatierangschikking.",
+      "baseline": {
+        "label": "Baselinenormalisatie per medewerker",
+        "subtitle": "Vergeleken met je eigen trend"
+      },
+      "mapping": {
+        "label": "Constructkoppeling",
+        "subtitle": "Eén primair cognitief construct"
+      }
+    },
+    "privacy": {
+      "body": "Methodologie en privacy zijn met elkaar verbonden. De keuze van het platform om binnen een medewerker te normaliseren, en niet ten opzichte van een populatie, is ook wat het moeilijker maakt om een aggregaat te \"de-anonimiseren\".",
+      "heading": "Privacy in de methodologie"
+    },
+    "privacyGrid": {
+      "caption": "Dezelfde methodologische keuzes die onze meting nauwkeurig maken, maken de-anonimisering ook structureel lastiger.",
+      "subThreshold": {
+        "body": "Aggregaten van kleine cohorten kunnen worden teruggerekend tot een enkele medewerker. We onderdrukken ze bij de bron.",
+        "title": "Waarom we geen aggregaten onder de drempel publiceren"
+      },
+      "withinPerson": {
+        "body": "Een individuele baseline bevat geen informatie over collega's — er is geen verdeling onder collega's om naar terug te rekenen.",
+        "title": "Waarom normalisatie binnen de persoon de privacy beschermt"
+      }
+    },
+    "publish": {
+      "body": "Methodologienotities worden geplaatst onder /research/science-insight zodra pilotcohorten genoeg data opleveren om iets verdedigbaars te schrijven. We zullen geen individuele klantgegevens publiceren, en we zullen geen aggregaten publiceren die niet aan onze minimale teamdrempel voldoen.",
+      "heading": "Hoe publiceren we updates?"
+    },
+    "scenariosPanel": {
+      "gameBadge": "Probleem van speloverdracht",
+      "gameLevel": "Niveau 6",
+      "gameMatch": "Match de sequentie",
+      "gameNote": "Meta-analyses laten consistent zien dat mensen beter worden in het spel. Overdracht naar echte complexiteit op de werkplek: minimaal.",
+      "gameStreak": "Reeks ×4",
+      "gameTap": "Tik",
+      "gameTitle": "Standaard cognitief spel",
+      "optionA": "Voorstellen 1 en 2 — beide verwijzen naar de deadline van Q3.",
+      "optionB": "Voorstellen 1 en 3 — overlappende leverperiodes en gedeeld depot.",
+      "optionC": "Voorstellen 2 en 3 — verschillende regio's, geen overlap.",
+      "scenarioBadge": "Ecologisch valide",
+      "scenarioNote": "Gebouwd op veldobservaties van hoe mensen daadwerkelijk redeneren op het werk. Geen proxy. Geen spel.",
+      "scenarioPrompt": "Je beoordeelt drie leveranciersvoorstellen die twintig minuten na elkaar zijn ingediend. Welke twee zijn in strijd op het gebied van levertijdlijn?",
+      "scenarioStep": "Stap 1 van 2",
+      "scenarioTag": "Inkoop · beoordeling",
+      "scenarioTitle": "WelloWork-gedragsscenario"
+    },
+    "scenariosSection": {
+      "bridge": "Onderzoek laat consistent zien dat mensen beter worden in cognitieve spellen — maar niet in de complexe beslissingen die hun werk daadwerkelijk vereist. WelloWork-scenario's zijn gegrond in gedragsveldwerk.",
+      "heading": "Waarom WelloWork-scenario's — en geen cognitieve spellen?"
+    },
+    "scoring": {
+      "body": "De prestatie per sessie wordt genormaliseerd ten opzichte van de eigen voortschrijdende baseline van de medewerker (z-gescoord binnen de afgelopen 90 dagen). Dit vermijdt bewust het vergelijken van de ene medewerker met de andere op individueel niveau, aangezien populatierelatieve scoring gevoelig is voor ruis die er in een werkplekcontext niet toe doet.",
+      "heading": "Hoe worden scores berekend?"
+    },
+    "timeline": {
+      "aria": "Mijlpalen voor methodologiepublicatie",
+      "note": "We publiceren wanneer de data verdedigbaar is. Niet eerder.",
+      "stop1": "Data van pilotcohort verzameld",
+      "stop2": "Methodologienotitie opgesteld + beoordeeld",
+      "stop3": "Gepubliceerd onder /research/science-insight"
+    },
+    "withinPerson": {
+      "yourBaseline": "je baseline",
+      "yourGain": "je vooruitgang"
+    }
+  },
+  "researchScienceInsight": {
+    "anatomy": {
+      "anno1": "Werkhypothese vs. vastgestelde bevinding",
+      "anno2": "Primaire bronnen geciteerd",
+      "anno3": "Betrouwbaarheidsniveau aangegeven",
+      "anno4": "Verwijst terug naar methodologie",
+      "aria": "Anatomie van een onderzoeksnotitie",
+      "body": "Z-scoring per medewerker verwijdert de interindividuele ruis die populatie-relatieve scoring met zich meebrengt. De transferkosten zijn meetbaar maar klein in de pilotdata.",
+      "confLabel": "Betrouwbaarheid",
+      "confValue": "Gemiddeld",
+      "footlink": "Gelinkt vanuit methodologie-overzicht →",
+      "metaNote": "Notitie · 2026-Q2",
+      "metaPilot": "Pilotcohort 2",
+      "ref": "Owen et al. (2010); Melby-Lervåg & Hulme (2013); Soveri et al. (2017).",
+      "statusBadge": "Werkhypothese",
+      "title": "Normalisatie binnen de medewerker"
+    },
+    "crumbs": {
+      "current": "Wetenschap & inzicht",
+      "home": "Home",
+      "research": "Onderzoek"
+    },
+    "cta": {
+      "body": "Wilt u een specifieke vraag over de literatuur of onze aanpak hier in een notitie behandeld zien? Laat het ons weten via het contactformulier — wij lezen alles.",
+      "primary": "Contact onderzoek",
+      "secondary": "Terug naar onderzoek",
+      "title": "Een methodologievraag beantwoord zien?"
+    },
+    "expect": {
+      "body": "Korte, gedateerde notities over een specifiek construct of een ontwerpbeslissing. Elke notitie benoemt de primaire bronnen, geeft aan waar het om een werkhypothese gaat versus een vastgestelde bevinding, en verwijst voor context terug naar het methodologie-overzicht.",
+      "heading": "Wat kunnen lezers hier verwachten?"
+    },
+    "fieldPanel": {
+      "gameBadge": "Beperking",
+      "gameLevel": "Niveau 3",
+      "gameMatch": "Match de vorm",
+      "gameNote": "Deelnemers worden beter in het spel. Transfer naar werkelijke werkplekcomplexiteit: beperkt. Tientallen meta-analyses bevestigen dit.",
+      "gameScore": "Score 820",
+      "gameTap": "Tik",
+      "gameTitle": "Hoe cognitieve games prestaties meten",
+      "optionA": "Shortlist A — schrap leverancier 2 en 4.",
+      "optionB": "Shortlist B — behoud 1, 3, 5; herscoor tegen nieuwe randvoorwaarden.",
+      "optionC": "Herstart de beoordeling met de nieuwe randvoorwaarden eerst toegepast.",
+      "scenarioBadge": "Praktijkgefundeerd",
+      "scenarioNote": "Ontworpen op basis van praktijkobservaties van echte werkplekbeslissingen. Meet gedragspatronen, geen spelvaardigheid.",
+      "scenarioPrompt": "U hebt 5 leveranciersvoorstellen beoordeeld. Er zijn zojuist twee nieuwe randvoorwaarden binnengekomen. Welke oorspronkelijke shortlist houdt nog stand?",
+      "scenarioStep": "Stap 2 van 3",
+      "scenarioTag": "Inkoop · shortlist",
+      "scenarioTitle": "Hoe WelloWork prestaties meet"
+    },
+    "fieldSection": {
+      "bridge": "Standaard cognitieve testbatterijen maken mensen beter in cognitieve testbatterijen. Onze scenario's zijn opgebouwd vanuit hoe werk werkelijk verloopt — zodat wat wij meten transfereert.",
+      "heading": "Waarom praktijkgericht onderzoek verandert wat wij meten"
+    },
+    "follow": {
+      "body": "Voorlopig is de eenvoudigste manier om updates te volgen het abonneren via contact — wij voegen niemand toe aan welke lijst dan ook zonder expliciete opt-in, en u kunt zich op elk moment uitschrijven.",
+      "heading": "Hoe updates te volgen"
+    },
+    "hero": {
+      "eyebrow": "Wetenschap & inzicht",
+      "lede": "Een werkruimte voor methodologienotities, literatuuroverzichten en observaties uit pilotcohorten. Wij publiceren werk in uitvoering met kanttekeningen, geen afgeronde beweringen.",
+      "titleAccent": "onderzoeksteam.",
+      "titleLead": "Notities van het WelloWork-"
+    },
+    "meta": {
+      "description": "Werknotities van het WelloWork-onderzoeksteam over cognitieve constructen, biomarkermethodologie, signalen van werkplekprestaties, en waar de literatuur wel en niet staat.",
+      "title": "Wetenschap & inzicht — methodologienotities van WelloWork-onderzoek"
+    },
+    "notebook": {
+      "aria": "Voorbeeld van een onderzoeksnotitie in uitvoering",
+      "confidenceKey": "Betrouwbaarheid",
+      "confidenceVal": "Laag–Gemiddeld",
+      "constructKey": "Construct",
+      "constructVal": "N-back-transfer",
+      "eyebrow": "Onderzoeksnotitie",
+      "lastUpdated": "Laatst bijgewerkt",
+      "lastUpdatedVal": "Pilotcohort 2 · In afwachting van replicatie",
+      "meterAria": "Betrouwbaarheid ~35%",
+      "meterLabel": "Betrouwbaarheid",
+      "meterValue": "35%",
+      "status": "Werk in uitvoering",
+      "statusKey": "Status",
+      "statusVal": "Hypothese"
+    },
+    "notThis": {
+      "body": "Dit is geen marketingblog en geen peer-reviewed publicatie. Het is de tussenlaag waar wij onszelf in het openbaar eerlijk houden.",
+      "heading": "Wat dit niet is"
+    },
+    "pipelineStrip": {
+      "aria": "Aankomende onderzoeksnotities",
+      "note1": {
+        "status": "Komt als eerste",
+        "tag": "Scoringmethodologie",
+        "title": "Normalisatie binnen de medewerker"
+      },
+      "note2": {
+        "status": "Inclusief nulresultaten",
+        "tag": "Constructvaliditeit",
+        "title": "N-back-transfereffecten"
+      },
+      "note3": {
+        "status": "Toegepast",
+        "tag": "Aggregatieontwerp",
+        "title": "Minimale teamomvang-drempels"
+      },
+      "note4": {
+        "status": "Inclusief ontwerprespons",
+        "tag": "Pilotobservatie",
+        "title": "Afname van sessiefrequentie"
+      }
+    },
+    "publishedFirst": {
+      "body": "Een kleine reeks notities die al in concept klaarstaat. Elke notitie verschijnt met de kanttekeningen ingebouwd — inclusief nulresultaten en ontwerpwijzigingen die wij naar aanleiding van vroege data hebben doorgevoerd.",
+      "heading": "Wat wordt het eerst gepubliceerd?"
+    },
+    "scope": {
+      "body": "Methodologienotities, mini-literatuuroverzichten en observaties uit vroege pilotcohorten. Het doel is om ons werk te laten zien — inclusief de plekken waar de literatuur het soort bewering dat een marketingpagina zou willen maken, nog niet ondersteunt.",
+      "label": "Wat valt er onder Wetenschap & inzicht?"
+    },
+    "scopeStrip": {
+      "aria": "Wat deze sectie bevat",
+      "litReviews": {
+        "body": "Wat het onderzoek werkelijk zegt — inclusief de zwakke plekken.",
+        "label": "Mini-literatuuroverzichten"
+      },
+      "methodology": {
+        "body": "Hoe wij elk construct hebben ontworpen en waarom.",
+        "label": "Methodologienotities"
+      },
+      "pilot": {
+        "body": "Vroege cohortdata en wat het veranderde in ons ontwerp.",
+        "label": "Pilotobservaties"
+      }
+    },
+    "spectrum": {
+      "aria": "WelloWork-onderzoekspositionering",
+      "journalSub": "Afgeronde beweringen · volledige peer review",
+      "journalTitle": "Peer-reviewed tijdschrift",
+      "marketingSub": "Beweringen zonder onzekerheid",
+      "marketingTitle": "Marketingblog",
+      "midSub": "Werknotities · kanttekeningen zichtbaar · eerlijk over hiaten",
+      "midTitle": "Wetenschap & inzicht",
+      "note": "Alles wat de publicatiestandaard bereikt, wordt vanaf hier gelinkt."
+    },
+    "trustStrip": {
+      "aria": "Redactionele toezeggingen",
+      "noClaims": {
+        "body": "Wij publiceren voordat we zeker zijn. Dat zeggen we erbij.",
+        "title": "Geen afgeronde beweringen"
+      },
+      "optIn": {
+        "body": "Geen lijsttoevoegingen. Schrijf u op elk moment uit.",
+        "title": "Alleen opt-in"
+      },
+      "sources": {
+        "body": "Elke notitie benoemt primaire literatuur.",
+        "title": "Bronnen benoemd"
+      }
+    }
+  },
+  "researchTeaser": {
+    "constructs": [
+      {
+        "cap": "N-back, span-taken · Baddeley, 1992",
+        "name": "Werkgeheugen"
+      },
+      {
+        "cap": "Symboolsubstitutie · Wechsler, klassiek",
+        "name": "Verwerkingssnelheid"
+      },
+      {
+        "cap": "Volgehouden & selectief · Posner-paradigma's",
+        "name": "Aandacht"
+      },
+      {
+        "cap": "Redeneren in Tower- en Raven-stijl",
+        "name": "Probleemoplossing"
+      },
+      {
+        "cap": "Kosten van taakwisseling · Monsell, 2003",
+        "name": "Cognitieve flexibiliteit"
+      }
+    ],
+    "cta": {
+      "methodology": "Methodologie-overzicht",
+      "research": "Onderzoekspagina"
+    },
+    "eyebrow": "Onderzoek & bewijs",
+    "heading": {
+      "accent": "die het vakgebied al valideert.",
+      "lead": "Gebouwd op constructen "
+    },
+    "lede": "Elke cognitieve oefening op het platform is gekoppeld aan een construct met een uitgebreide literatuur — geen zelfbedachte interne maatstaf. We publiceren onze methodologie naarmate we pilotdata genereren."
+  },
+  "solutions": {
+    "eyebrow": "Oplossingen per rol",
+    "heading": {
+      "accent": "Eén bron van waarheid.",
+      "lead": "Drie perspectieven."
+    },
+    "lede": "HR, Operations en L&D zien elk het deel van het platform dat relevant is voor hun beslissingen — onderbouwd door dezelfde onderliggende prestatiegegevens.",
+    "roles": {
+      "hr": {
+        "bullets": [
+          "Aggregeer cognitieve trendverschillen over teams heen",
+          "Verdedigbare wellness-ROI, geworteld in prestatiegegevens",
+          "Signalen voor promotiegereedheid die niet afhankelijk zijn van jaarlijkse beoordelingen"
+        ],
+        "label": "Voor HR- en peopleleiders",
+        "title": "Zie burn-outsignalen voordat ze uitstroom worden."
+      },
+      "ld": {
+        "bullets": [
+          "Persoonlijke aanbevelingen op basis van cognitieve sterktes",
+          "Token-gefinancierde cursusmarktplaats, volledig boekbaar in de app",
+          "Vaardigheidsontwikkeling gevolgd naast prestatietrends"
+        ],
+        "label": "Voor L&D-leiders",
+        "title": "Bouw groeitrajecten gekoppeld aan een gemeten cognitief profiel."
+      },
+      "operations": {
+        "bullets": [
+          "Herken vermoeidheidspatronen per ploegenrooster en rol",
+          "Optimaliseer de teamsamenstelling voor operationeel cruciale projecten",
+          "Verminder variabiliteit waar variabiliteit de veiligheid schaadt"
+        ],
+        "label": "Voor Operations-leiders",
+        "title": "Plan diensten rond hoe mensen daadwerkelijk presteren."
+      }
+    }
+  }
+}
