@@ -1087,6 +1087,10 @@
     "researchCognitiveConstructs": {
       "title": "Kognitive Konstrukte — die fünf Domänen, die WelloWork misst",
       "description": "Arbeitsgedächtnis, Verarbeitungsgeschwindigkeit, Aufmerksamkeit, Problemlösung und kognitive Flexibilität — jede Domäne, die zugrunde liegende Literatur und wie WelloWork sie operationalisiert."
+    },
+    "cognitiveRewards": {
+      "title": "Spielerische Mitarbeiterbelohnungen | WelloWork",
+      "description": "Cognitive Rewards von WelloWork, ermöglicht durch Puzzify: Mitarbeitende schalten echte Belohnungen frei, indem sie Rätsel allein oder im Team lösen. Jetzt entdecken."
     }
   },
   "nav": {
@@ -2963,6 +2967,203 @@
         "label": "Für Operations-Verantwortliche",
         "title": "Planen Sie Schichten danach, wie Menschen tatsächlich leistungsfähig sind."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Start",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · ermöglicht durch Puzzify",
+      "titleLead": "Spielerische Mitarbeiterbelohnungen, ",
+      "titleAccent": "verdient durch das Lösen von Aufgaben",
+      "lede": "Ein Engagement-Programm, in dem Ihre Mitarbeitenden echte Belohnungen freischalten — durch logisches Denken, Problemlösen und Teamarbeit statt durch passives Einlösen.",
+      "answerLabel": "Kurz gesagt:",
+      "answerBody": "Cognitive Rewards ist ein Engagement-Programm von WelloWork, ermöglicht durch Puzzify, bei dem Mitarbeitende Belohnungen freischalten — Gutscheine und Geschenke, die Ihr Unternehmen finanziert — indem sie Rätsel und Aufgaben lösen, die logisches Denken, Konzentration und Problemlösen trainieren. Sie können allein oder im Team spielen und erhalten Anerkennung durch Einsatz statt durch passives Einlösen.",
+      "primaryCta": "Cognitive Rewards bestellen",
+      "secondaryCta": "Beratung buchen"
+    },
+    "whatItIs": {
+      "heading": "Was ist Cognitive Rewards?",
+      "body1": "Cognitive Rewards ist eine Partnerschaft zwischen WelloWork und Puzzify. Ihr Unternehmen finanziert einen Pool an Belohnungen; Ihre Mitarbeitenden verdienen sie, indem sie Rätsel und Aufgaben rund um logisches Denken, Konzentration und Problemlösen bewältigen. So wird Anerkennung zu etwas Aktivem — verdient durch kognitiven Einsatz statt einfach verteilt.",
+      "body2": "Da Belohnungen an Aufgaben geknüpft sind und nicht an Anwesenheit oder Betriebszugehörigkeit, dient das Programm zugleich als leichtes kognitives Training und als gemeinsamer Moment für Teams — ohne jemandes Arbeitslast zu erhöhen."
+    },
+    "howItWorks": {
+      "heading": "Wie verdienen Mitarbeitende Belohnungen?",
+      "intro": "Der Ablauf ist einfach — ob jemand allein oder im Team spielt.",
+      "steps": {
+        "receive": {
+          "title": "Eine Aufgabe erhalten",
+          "body": "Mitarbeitende erhalten ein Rätsel oder eine Aufgabenreihe auf der Puzzify-Plattform, passend zur Belohnung, die Ihr Unternehmen finanziert hat."
+        },
+        "solve": {
+          "title": "Die Rätsel lösen",
+          "body": "Sie bewältigen Aufgaben, die logisches Denken, Konzentration und Problemlösen trainieren — allein oder gemeinsam mit Teamkolleg:innen."
+        },
+        "unlock": {
+          "title": "Die Belohnung freischalten",
+          "body": "Nach Abschluss wird die Belohnung freigeschaltet. Bei Team-Aufgaben erfolgt die Freischaltung gemeinsam und wird unter allen Beteiligten aufgeteilt."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Einzel- oder Team-Aufgaben — was passt zu Ihren Zielen?",
+      "intro": "Beide Formate laufen auf derselben Plattform. Wählen Sie nach dem gewünschten Ergebnis — persönliche Anerkennung oder Teamzusammenhalt.",
+      "caption": "Cognitive-Rewards-Formate im Vergleich",
+      "colDimension": "Dimension",
+      "colIndividual": "Einzeln",
+      "colGroup": "Gruppe / Team",
+      "rows": {
+        "how": {
+          "label": "So funktioniert es",
+          "individual": "Ein:e Mitarbeitende:r bewältigt die Aufgabe allein.",
+          "group": "Ein Team löst eine gemeinsame Aufgabe zusammen."
+        },
+        "bestFor": {
+          "label": "Am besten geeignet für",
+          "individual": "Persönliche Konzentration, Anerkennung und einen Moment kognitiven Trainings.",
+          "group": "Zusammenarbeit, Kommunikation und Teamzusammenhalt."
+        },
+        "builds": {
+          "label": "Was es stärkt",
+          "individual": "Logisches Denken, Konzentration und Problemlösen.",
+          "group": "Gemeinsames Problemlösen und Vertrauen zwischen Teamkolleg:innen."
+        },
+        "reward": {
+          "label": "Belohnung",
+          "individual": "Wird nach Abschluss von der Einzelperson freigeschaltet.",
+          "group": "Wird gemeinsam freigeschaltet und unter den Beteiligten aufgeteilt."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Warum funktioniert spielerische, leistungsbasierte Anerkennung?",
+      "intro": "Anerkennung wirkt stärker, wenn sie verdient ist. Cognitive Rewards verbindet mehrere Faktoren, die das Engagement nachweislich fördern.",
+      "points": {
+        "play": {
+          "title": "Engagement durch Spiel",
+          "body": "Spielmechaniken lassen die Teilnahme freiwillig und angenehm wirken — nicht wie eine weitere Aufgabe auf der Liste."
+        },
+        "exercise": {
+          "title": "Echtes kognitives Training",
+          "body": "Die Aufgaben fordern logisches Denken, Konzentration und Problemlösen — dieselben Konstrukte, auf denen das Training von WelloWork aufbaut."
+        },
+        "collaboration": {
+          "title": "Zusammenarbeit, die bleibt",
+          "body": "Team-Aufgaben geben Kolleg:innen ein gemeinsames Ziel und einen Anlass, sich über die übliche Arbeit hinaus auszutauschen."
+        },
+        "recognition": {
+          "title": "Anerkennung mit Bedeutung",
+          "body": "Eine durch Einsatz verdiente Belohnung signalisiert echte Wertschätzung statt eines automatischen Vorteils."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "Für wen ist es gedacht?",
+      "intro": "Cognitive Rewards passt zu Teams, die Engagement und Anerkennung doppelt nutzen möchten.",
+      "roles": {
+        "hr": {
+          "title": "HR- & People-Teams",
+          "body": "Die Engagement-, Anerkennungs- oder Wohlbefindens-Initiativen umsetzen, die echte Beteiligung brauchen."
+        },
+        "culture": {
+          "title": "People-&-Culture-Verantwortliche",
+          "body": "Die Zusammenhalt über Teams, Standorte oder eine hybride Belegschaft hinweg aufbauen."
+        },
+        "rewards": {
+          "title": "Total-Rewards- & Benefits-Verantwortliche",
+          "body": "Die ein Anerkennungsformat suchen, das aktiv und einprägsam ist — nicht nur transaktional."
+        }
+      },
+      "orgSizes": "Geeignet für Teams von zehn Personen bis hin zu Unternehmen mit Tausenden — Aufgaben und Belohnungspools skalieren passgenau."
+    },
+    "related": {
+      "heading": "Entdecken Sie den Rest der Plattform",
+      "intro": "Cognitive Rewards ist Teil der umfassenderen Plattform für Arbeitsplatzleistung von WelloWork.",
+      "links": {
+        "growth": {
+          "label": "Tägliches kognitives Training mit WelloRise",
+          "desc": "Adaptive Übungen über fünf validierte kognitive Konstrukte hinweg."
+        },
+        "workshops": {
+          "label": "Live-Workshops zu Gesundheit und Leistung",
+          "desc": "Präsenz- und Online-Sitzungen für Ihre Teams."
+        },
+        "assessment": {
+          "label": "Kognitive und Team-Assessments",
+          "desc": "Stärken und Teamzusammensetzung mit WelloWize verstehen."
+        },
+        "measure": {
+          "label": "Längsschnittliche Leistungstrends",
+          "desc": "Verfolgen Sie aggregierte, anonymisierte Trends im Zeitverlauf."
+        },
+        "research": {
+          "label": "Die Forschung hinter unserem Ansatz",
+          "desc": "Wie WelloWork seine Methoden auf Evidenz stützt."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Häufig gestellte Fragen",
+      "items": {
+        "ordering": {
+          "q": "Wie funktioniert die Bestellung?",
+          "a": "Sie bestellen über die Puzzify-Plattform, wo Sie einen Belohnungspool finanzieren und die Aufgaben einrichten, die Ihre Mitarbeitenden spielen werden. Die „Cognitive Rewards bestellen“-Schaltfläche auf dieser Seite führt Sie direkt dorthin. WelloWork unterstützt Sie gern dabei, vorab das passende Format und den richtigen Belohnungsmix festzulegen."
+        },
+        "individualGroup": {
+          "q": "Was ist der Unterschied zwischen Einzel- und Team-Aufgaben?",
+          "a": "Einzel-Aufgaben werden allein gelöst, und die Belohnung wird von dieser Person freigeschaltet. Team-Aufgaben werden gemeinsam von einer Gruppe gelöst; die Belohnung wird gemeinsam freigeschaltet und unter allen Beteiligten aufgeteilt. Das Einzelformat eignet sich für persönliche Anerkennung, während das Teamformat auf Zusammenarbeit und Zusammenhalt ausgelegt ist."
+        },
+        "languages": {
+          "q": "Welche Sprachen werden unterstützt?",
+          "a": "Das Aufgaben- und Belohnungserlebnis läuft auf der Puzzify-Plattform — nehmen Sie vor der Bestellung Kontakt mit uns auf, um die für Ihre Teams verfügbaren Sprachen zu klären. Die eigenen Materialien von WelloWork werden derzeit auf Englisch bereitgestellt."
+        },
+        "delivery": {
+          "q": "Wie werden die Belohnungen ausgeliefert?",
+          "a": "Belohnungen sind Gutscheine und Geschenke, die Ihr Unternehmen finanziert und die nach Abschluss einer Aufgabe über die Puzzify-Plattform bereitgestellt werden. Der konkrete Katalog und die Abwicklung werden auf Puzzify verwaltet, und wir helfen Ihnen gern, einen Belohnungsmix zu wählen, der zu Ihrem Team passt."
+        },
+        "privacy": {
+          "q": "Wie steht es um den Datenschutz bei der Teilnahme?",
+          "a": "Im Einklang mit dem Ansatz von WelloWork gehört die Teilnahme den Mitarbeitenden selbst: Menschen nehmen freiwillig teil, und Führungskräfte sehen das Engagement auf aggregierter, anonymisierter Ebene, statt Einzelpersonen zu verfolgen. Die Belohnungsabwicklung erfolgt auf der Puzzify-Plattform — klären Sie die Einzelheiten mit uns und Puzzify, bevor Sie das Programm einführen."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Machen Sie Anerkennung zu ",
+      "headingAccent": "etwas Verdientem",
+      "body": "Bringen Sie spielerische, leistungsbasierte Belohnungen mit Cognitive Rewards in Ihr Team, ermöglicht durch Puzzify.",
+      "primaryCta": "Cognitive Rewards bestellen",
+      "secondaryCta": "Beratung buchen"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · ermöglicht durch Puzzify",
+      "headingLead": "Belohnungen, die Ihr Team ",
+      "headingAccent": "durch Denken verdient",
+      "body": "Ein spielerisches Engagement-Programm, bei dem Mitarbeitende echte Belohnungen freischalten, indem sie Rätsel lösen — allein oder im Team.",
+      "points": {
+        "cognitive": {
+          "title": "Kognitive Fähigkeiten",
+          "body": "Aufgaben trainieren logisches Denken, Konzentration und Problemlösen."
+        },
+        "teamwork": {
+          "title": "Teamarbeit",
+          "body": "Gruppen-Aufgaben schalten eine gemeinsame Belohnung frei, die im Team aufgeteilt wird."
+        },
+        "recognition": {
+          "title": "Leistungsbasierte Anerkennung",
+          "body": "Belohnungen werden durch Einsatz verdient, nicht passiv eingelöst."
+        }
+      },
+      "primaryCta": "Cognitive Rewards bestellen",
+      "secondaryCta": "Erfahren, wie es funktioniert",
+      "visualAlt": "Illustration von Mitarbeitenden, die gemeinsam eine Belohnung durch das Lösen eines Rätsels freischalten",
+      "visualReward": "Belohnung freigeschaltet",
+      "visualSolo": "Allein",
+      "visualTeam": "Team"
+    },
+    "external": {
+      "newTab": "(öffnet die Puzzify-Plattform in einem neuen Tab)"
     }
   }
 }

@@ -1087,6 +1087,10 @@
     "researchCognitiveConstructs": {
       "title": "Costrutti cognitivi — i cinque domini che WelloWork misura",
       "description": "Memoria di lavoro, velocità di elaborazione, attenzione, problem solving e flessibilità cognitiva — ogni dominio, la letteratura che lo supporta e come WelloWork lo rende operativo."
+    },
+    "cognitiveRewards": {
+      "title": "Riconoscimenti gamificati che uniscono i team | WelloWork",
+      "description": "Cognitive Rewards di WelloWork, powered by Puzzify: i dipendenti sbloccano riconoscimenti reali risolvendo enigmi da soli o in squadra. Scopri come funziona."
     }
   },
   "nav": {
@@ -2963,6 +2967,203 @@
         "label": "Per i responsabili Operations",
         "title": "Pianifica i turni in base a come le persone rendono davvero."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Home",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · powered by Puzzify",
+      "titleLead": "Riconoscimenti gamificati per i dipendenti, ",
+      "titleAccent": "guadagnati superando sfide",
+      "lede": "Un programma di coinvolgimento in cui le persone sbloccano riconoscimenti reali con ragionamento, problem solving e lavoro di squadra — non con semplici richieste passive.",
+      "answerLabel": "In breve:",
+      "answerBody": "Cognitive Rewards è un programma di coinvolgimento WelloWork, powered by Puzzify, in cui i dipendenti sbloccano riconoscimenti — coupon e regali finanziati dalla tua azienda — risolvendo enigmi e sfide che allenano ragionamento, concentrazione e problem solving. Possono giocare da soli o in squadra, ottenendo riconoscimento attraverso l'impegno anziché tramite una richiesta passiva.",
+      "primaryCta": "Ordina Cognitive Rewards",
+      "secondaryCta": "Prenota una consulenza"
+    },
+    "whatItIs": {
+      "heading": "Che cos'è Cognitive Rewards?",
+      "body1": "Cognitive Rewards è una collaborazione tra WelloWork e Puzzify. La tua azienda finanzia un fondo di riconoscimenti; le tue persone se li guadagnano affrontando enigmi e sfide costruiti attorno a ragionamento, concentrazione e problem solving. Trasforma il riconoscimento in qualcosa di attivo — guadagnato grazie all'impegno cognitivo anziché distribuito.",
+      "body2": "Poiché i riconoscimenti sono legati alle sfide e non alla presenza o all'anzianità, il programma funziona anche come leggero allenamento cognitivo e come momento condiviso per i team — senza aggiungere carico di lavoro a nessuno."
+    },
+    "howItWorks": {
+      "heading": "Come fanno i dipendenti a guadagnare i riconoscimenti?",
+      "intro": "Il percorso è semplice, sia che si giochi da soli sia in squadra.",
+      "steps": {
+        "receive": {
+          "title": "Ricevi una sfida",
+          "body": "I dipendenti ricevono un enigma o un set di sfide sulla piattaforma Puzzify, abbinati al riconoscimento finanziato dalla tua azienda."
+        },
+        "solve": {
+          "title": "Risolvi gli enigmi",
+          "body": "Affrontano attività che allenano ragionamento, concentrazione e problem solving — da soli o insieme ai colleghi."
+        },
+        "unlock": {
+          "title": "Sblocca il riconoscimento",
+          "body": "Al completamento il riconoscimento si sblocca. Nelle sfide di squadra si sblocca collettivamente e viene condiviso tra tutti i partecipanti."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Sfide individuali o di squadra — quale si adatta ai tuoi obiettivi?",
+      "intro": "Entrambi i formati funzionano sulla stessa piattaforma. Scegli in base al risultato che desideri — riconoscimento personale o coesione del team.",
+      "caption": "Confronto tra i formati di Cognitive Rewards",
+      "colDimension": "Dimensione",
+      "colIndividual": "Individuale",
+      "colGroup": "Gruppo / team",
+      "rows": {
+        "how": {
+          "label": "Come funziona",
+          "individual": "Un dipendente affronta la sfida da solo.",
+          "group": "Un team risolve insieme una sfida condivisa."
+        },
+        "bestFor": {
+          "label": "Ideale per",
+          "individual": "Concentrazione personale, riconoscimento e un momento di allenamento cognitivo.",
+          "group": "Collaborazione, comunicazione e coesione del team."
+        },
+        "builds": {
+          "label": "Cosa sviluppa",
+          "individual": "Ragionamento, concentrazione e problem solving.",
+          "group": "Problem solving collettivo e fiducia tra colleghi."
+        },
+        "reward": {
+          "label": "Riconoscimento",
+          "individual": "Sbloccato dall'individuo al completamento.",
+          "group": "Sbloccato collettivamente e suddiviso tra i partecipanti."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Perché funziona il riconoscimento gamificato e basato sull'impegno?",
+      "intro": "Il riconoscimento ha più valore quando viene guadagnato. Cognitive Rewards combina diversi elementi che tendono a stimolare il coinvolgimento.",
+      "points": {
+        "play": {
+          "title": "Coinvolgimento attraverso il gioco",
+          "body": "Le meccaniche di gioco rendono la partecipazione volontaria e piacevole, non l'ennesimo compito nella lista."
+        },
+        "exercise": {
+          "title": "Vero allenamento cognitivo",
+          "body": "Le sfide si basano su ragionamento, concentrazione e problem solving — gli stessi costrutti su cui è costruito l'allenamento di WelloWork."
+        },
+        "collaboration": {
+          "title": "Collaborazione che dura",
+          "body": "Le sfide di squadra offrono ai colleghi un obiettivo condiviso e un motivo per comunicare al di fuori del lavoro abituale."
+        },
+        "recognition": {
+          "title": "Riconoscimento che ha significato",
+          "body": "Un riconoscimento guadagnato con l'impegno trasmette un apprezzamento autentico, non un beneficio automatico."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "A chi è rivolto?",
+      "intro": "Cognitive Rewards è ideale per i team che vogliono far svolgere un doppio ruolo a coinvolgimento e riconoscimento.",
+      "roles": {
+        "hr": {
+          "title": "Team HR e People",
+          "body": "Che gestiscono iniziative di coinvolgimento, riconoscimento o benessere che richiedono una partecipazione autentica."
+        },
+        "culture": {
+          "title": "Leader People & Culture",
+          "body": "Che costruiscono coesione tra team, sedi o una forza lavoro ibrida."
+        },
+        "rewards": {
+          "title": "Leader Total Rewards e Benefit",
+          "body": "Alla ricerca di un formato di riconoscimento attivo e memorabile, non solo transazionale."
+        }
+      },
+      "orgSizes": "Adatto a team da dieci persone fino a grandi aziende con migliaia di dipendenti — le sfide e i fondi di riconoscimenti si adattano alle dimensioni."
+    },
+    "related": {
+      "heading": "Esplora il resto della piattaforma",
+      "intro": "Cognitive Rewards si affianca alla più ampia piattaforma WelloWork per le performance sul lavoro.",
+      "links": {
+        "growth": {
+          "label": "Allenamento cognitivo quotidiano con WelloRise",
+          "desc": "Esercizi adattivi su cinque costrutti cognitivi validati."
+        },
+        "workshops": {
+          "label": "Workshop dal vivo su salute e performance",
+          "desc": "Sessioni in presenza e online per i tuoi team."
+        },
+        "assessment": {
+          "label": "Valutazioni cognitive e di team",
+          "desc": "Comprendi i punti di forza e la composizione del team con WelloWize."
+        },
+        "measure": {
+          "label": "Tendenze longitudinali delle performance",
+          "desc": "Monitora le tendenze aggregate e anonimizzate nel tempo."
+        },
+        "research": {
+          "label": "La ricerca alla base del nostro approccio",
+          "desc": "Come WelloWork fonda i propri metodi sulle evidenze."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Domande frequenti",
+      "items": {
+        "ordering": {
+          "q": "Come funziona l'ordine?",
+          "a": "L'ordine avviene tramite la piattaforma Puzzify, dove finanzi un fondo di riconoscimenti e imposti le sfide a cui parteciperanno le tue persone. Il pulsante «Ordina Cognitive Rewards» in questa pagina ti porta direttamente lì. WelloWork può aiutarti a definire il formato e il mix di riconoscimenti più adatti prima di iniziare."
+        },
+        "individualGroup": {
+          "q": "Qual è la differenza tra sfide individuali e di squadra?",
+          "a": "Le sfide individuali si risolvono da soli, con il riconoscimento sbloccato da quella persona. Le sfide di squadra vengono risolte insieme da un gruppo; il riconoscimento si sblocca collettivamente e viene suddiviso tra tutti i partecipanti. Il formato individuale si adatta al riconoscimento personale, mentre quello di squadra è pensato per collaborazione e coesione."
+        },
+        "languages": {
+          "q": "Quali lingue sono supportate?",
+          "a": "L'esperienza di sfide e riconoscimenti funziona sulla piattaforma Puzzify — contattaci prima di ordinare per confermare le lingue disponibili per i tuoi team. I materiali di WelloWork sono attualmente forniti in inglese."
+        },
+        "delivery": {
+          "q": "Come vengono consegnati i riconoscimenti?",
+          "a": "I riconoscimenti sono coupon e regali finanziati dalla tua azienda e consegnati tramite la piattaforma Puzzify una volta completata una sfida. Il catalogo specifico e l'evasione sono gestiti su Puzzify, e possiamo aiutarti a scegliere un mix di riconoscimenti adatto al tuo team."
+        },
+        "privacy": {
+          "q": "E la privacy della partecipazione?",
+          "a": "In linea con l'approccio di WelloWork, i dipendenti sono titolari della propria partecipazione: le persone partecipano volontariamente e i manager vedono il coinvolgimento a livello aggregato e anonimizzato, senza monitorare i singoli. L'evasione dei riconoscimenti è gestita sulla piattaforma Puzzify — verifica i dettagli con noi e con Puzzify prima del lancio."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Trasforma il riconoscimento in ",
+      "headingAccent": "qualcosa di guadagnato",
+      "body": "Porta al tuo team riconoscimenti gamificati e basati sull'impegno con Cognitive Rewards, powered by Puzzify.",
+      "primaryCta": "Ordina Cognitive Rewards",
+      "secondaryCta": "Prenota una consulenza"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · powered by Puzzify",
+      "headingLead": "Riconoscimenti che il tuo team ",
+      "headingAccent": "si guadagna pensando",
+      "body": "Un programma di coinvolgimento gamificato in cui i dipendenti sbloccano riconoscimenti reali risolvendo enigmi — da soli o in squadra.",
+      "points": {
+        "cognitive": {
+          "title": "Competenze cognitive",
+          "body": "Le sfide allenano ragionamento, concentrazione e problem solving."
+        },
+        "teamwork": {
+          "title": "Lavoro di squadra",
+          "body": "Le sfide di gruppo sbloccano un riconoscimento condiviso, suddiviso tra il team."
+        },
+        "recognition": {
+          "title": "Riconoscimento basato sull'impegno",
+          "body": "I riconoscimenti si guadagnano con l'impegno, non si ottengono passivamente."
+        }
+      },
+      "primaryCta": "Ordina Cognitive Rewards",
+      "secondaryCta": "Scopri come funziona",
+      "visualAlt": "Illustrazione di dipendenti che sbloccano un riconoscimento risolvendo insieme un enigma",
+      "visualReward": "Riconoscimento sbloccato",
+      "visualSolo": "Da solo",
+      "visualTeam": "Team"
+    },
+    "external": {
+      "newTab": "(apre la piattaforma Puzzify in una nuova scheda)"
     }
   }
 }

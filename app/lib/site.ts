@@ -15,6 +15,12 @@ import {
 export const SITE_URL =
   process.env.NEXT_PUBLIC_SITE_URL?.replace(/\/$/, "") || "https://www.wellowork.net";
 
+// External partner "order / get started" destination for Cognitive Rewards
+// (powered by Puzzify). UTMs are attribution-only (no PII) so the partner can
+// attribute referrals back to this site. Opened in a new tab from the CTAs.
+export const PUZZIFY_ORDER_URL =
+  "https://puzzify-platform.web.app?utm_source=wellowork&utm_medium=referral&utm_campaign=cognitive-rewards";
+
 // Brand entity — identical across every locale (SEO_GUIDELINES §2.1). Never
 // translate SITE_NAME / ORG_LEGAL_NAME or interpolate them into translatable
 // message strings.

@@ -1087,6 +1087,10 @@
     "researchCognitiveConstructs": {
       "title": "Kognityviniai konstruktai — penkios sritys, kurias matuoja WelloWork",
       "description": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas — kiekviena sritis, ją grindžianti literatūra ir kaip WelloWork ją operacionalizuoja."
+    },
+    "cognitiveRewards": {
+      "title": "Žaidybinis darbuotojų atlygis, kuriantis komandas | WelloWork",
+      "description": "Cognitive Rewards iš WelloWork, veikiantis su Puzzify: darbuotojai atrakina tikrą atlygį spręsdami galvosūkius vieni ar komandoje. Sužinokite, kaip tai veikia."
     }
   },
   "nav": {
@@ -2963,6 +2967,203 @@
         "label": "Operacijų vadovams",
         "title": "Planuokite pamainas atsižvelgdami į tai, kaip žmonės iš tikrųjų dirba."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Pradžia",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · veikia su Puzzify",
+      "titleLead": "Žaidybinis darbuotojų atlygis, ",
+      "titleAccent": "pelnomas sprendžiant iššūkius",
+      "lede": "Įsitraukimo programa, kurioje jūsų žmonės atrakina tikrą atlygį mąstydami, spręsdami problemas ir dirbdami komandoje — o ne pasyviai prašydami.",
+      "answerLabel": "Trumpai:",
+      "answerBody": "Cognitive Rewards yra WelloWork įsitraukimo programa, veikianti su Puzzify, kurioje darbuotojai atrakina atlygį — jūsų įmonės finansuojamus kuponus ir dovanas — spręsdami galvosūkius ir iššūkius, lavinančius mąstymą, dėmesį ir problemų sprendimą. Jie gali žaisti vieni arba komandoje, pelnydami pripažinimą per pastangas, o ne per pasyvų prašymą.",
+      "primaryCta": "Užsisakyti Cognitive Rewards",
+      "secondaryCta": "Užsisakyti konsultaciją"
+    },
+    "whatItIs": {
+      "heading": "Kas yra Cognitive Rewards?",
+      "body1": "Cognitive Rewards yra WelloWork ir Puzzify partnerystė. Jūsų įmonė finansuoja atlygio fondą; jūsų žmonės jį pelno spręsdami galvosūkius ir iššūkius, sukurtus aplink mąstymą, dėmesį ir problemų sprendimą. Pripažinimas tampa aktyvus — pelnomas per kognityvines pastangas, o ne dalijamas.",
+      "body2": "Kadangi atlygis siejamas su iššūkiais, o ne su lankomumu ar darbo stažu, programa kartu tampa lengvu kognityviniu pratimu ir bendra komandos akimirka — nepridedant nė vienam papildomo darbo."
+    },
+    "howItWorks": {
+      "heading": "Kaip darbuotojai pelno atlygį?",
+      "intro": "Eiga paprasta — žaidžiama vienam ar su komanda.",
+      "steps": {
+        "receive": {
+          "title": "Gaukite iššūkį",
+          "body": "Darbuotojai gauna galvosūkį ar iššūkių rinkinį Puzzify platformoje, suderintą su jūsų įmonės finansuotu atlygiu."
+        },
+        "solve": {
+          "title": "Išspręskite galvosūkius",
+          "body": "Jie atlieka užduotis, lavinančias mąstymą, dėmesį ir problemų sprendimą — vieni arba kartu su kolegomis."
+        },
+        "unlock": {
+          "title": "Atrakinkite atlygį",
+          "body": "Užbaigus atlygis atrakinamas. Komandiniuose iššūkiuose jis atrakinamas bendrai ir pasidalijamas tarp visų dalyvavusių."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Individualūs ar komandiniai iššūkiai — kuris tinka jūsų tikslams?",
+      "intro": "Abu formatai veikia toje pačioje platformoje. Rinkitės pagal norimą rezultatą — asmeninį pripažinimą ar komandos darną.",
+      "caption": "Cognitive Rewards formatų palyginimas",
+      "colDimension": "Kriterijus",
+      "colIndividual": "Individualus",
+      "colGroup": "Grupė / komanda",
+      "rows": {
+        "how": {
+          "label": "Kaip veikia",
+          "individual": "Vienas darbuotojas sprendžia iššūkį pats.",
+          "group": "Komanda kartu sprendžia bendrą iššūkį."
+        },
+        "bestFor": {
+          "label": "Tinkamiausia",
+          "individual": "Asmeniniam dėmesiui, pripažinimui ir kognityvinio pratimo akimirkai.",
+          "group": "Bendradarbiavimui, komunikacijai ir komandos darnai."
+        },
+        "builds": {
+          "label": "Ką ugdo",
+          "individual": "Mąstymą, dėmesį ir problemų sprendimą.",
+          "group": "Bendrą problemų sprendimą ir pasitikėjimą tarp kolegų."
+        },
+        "reward": {
+          "label": "Atlygis",
+          "individual": "Užbaigus atrakinamas individualiai.",
+          "group": "Atrakinamas bendrai ir pasidalijamas tarp dalyvių."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Kodėl veikia žaidybinis, pastangomis grįstas pripažinimas?",
+      "intro": "Pripažinimas paveikia stipriau, kai yra pelnytas. Cognitive Rewards sujungia kelis dalykus, kurie paprastai skatina įsitraukimą.",
+      "points": {
+        "play": {
+          "title": "Įsitraukimas per žaidimą",
+          "body": "Žaidimo mechanika dalyvavimą paverčia savanorišku ir maloniu, o ne dar viena užduotimi sąraše."
+        },
+        "exercise": {
+          "title": "Tikras kognityvinis pratimas",
+          "body": "Iššūkiai remiasi mąstymu, dėmesiu ir problemų sprendimu — tais pačiais principais, kuriais grįstas WelloWork lavinimas."
+        },
+        "collaboration": {
+          "title": "Bendradarbiavimas, kuris išlieka",
+          "body": "Komandiniai iššūkiai suteikia kolegoms bendrą tikslą ir priežastį bendrauti už įprastų darbų ribų."
+        },
+        "recognition": {
+          "title": "Pripažinimas su prasme",
+          "body": "Pastangomis pelnytas atlygis reiškia tikrą įvertinimą, o ne automatišką privilegiją."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "Kam tai skirta?",
+      "intro": "Cognitive Rewards tinka komandoms, norinčioms, kad įsitraukimas ir pripažinimas atliktų dvigubą vaidmenį.",
+      "roles": {
+        "hr": {
+          "title": "HR ir personalo komandos",
+          "body": "Vykdančioms įsitraukimo, pripažinimo ar gerovės iniciatyvas, kurioms reikia tikro dalyvavimo."
+        },
+        "culture": {
+          "title": "People & Culture vadovai",
+          "body": "Kuriantiems darną tarp komandų, padalinių ar hibridinės darbo jėgos."
+        },
+        "rewards": {
+          "title": "Total Rewards ir privilegijų vadovai",
+          "body": "Ieškantiems pripažinimo formato, kuris būtų aktyvus ir įsimintinas, o ne vien sandėrio pobūdžio."
+        }
+      },
+      "orgSizes": "Tinka dešimties žmonių komandoms ir tūkstantinėms organizacijoms — iššūkiai ir atlygio fondai prisitaiko prie poreikių."
+    },
+    "related": {
+      "heading": "Susipažinkite su likusia platforma",
+      "intro": "Cognitive Rewards yra greta platesnės WelloWork darbo vietos veiklos platformos.",
+      "links": {
+        "growth": {
+          "label": "Kasdienis kognityvinis lavinimas su WelloRise",
+          "desc": "Adaptyvūs pratimai pagal penkis patvirtintus kognityvinius konstruktus."
+        },
+        "workshops": {
+          "label": "Gyvi sveikatos ir veiklos seminarai",
+          "desc": "Gyvos ir internetinės sesijos jūsų komandoms."
+        },
+        "assessment": {
+          "label": "Kognityviniai ir komandų vertinimai",
+          "desc": "Suprasti stiprybes ir komandos sudėtį su WelloWize."
+        },
+        "measure": {
+          "label": "Ilgalaikės veiklos tendencijos",
+          "desc": "Stebėkite apibendrintas, nuasmenintas tendencijas laikui bėgant."
+        },
+        "research": {
+          "label": "Tyrimai, kuriais grįstas mūsų požiūris",
+          "desc": "Kaip WelloWork savo metodus grindžia įrodymais."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Dažniausiai užduodami klausimai",
+      "items": {
+        "ordering": {
+          "q": "Kaip vyksta užsakymas?",
+          "a": "Užsakote per Puzzify platformą, kur finansuojate atlygio fondą ir sukuriate iššūkius, kuriuos spręs jūsų žmonės. Mygtukas „Užsisakyti Cognitive Rewards“ šiame puslapyje nukreipia jus tiesiai ten. WelloWork gali padėti parinkti tinkamą formatą ir atlygio derinį prieš pradedant."
+        },
+        "individualGroup": {
+          "q": "Kuo skiriasi individualūs ir komandiniai iššūkiai?",
+          "a": "Individualūs iššūkiai sprendžiami vienam, o atlygį atrakina tas pats žmogus. Komandiniai iššūkiai sprendžiami kartu grupėje; atlygis atrakinamas bendrai ir pasidalijamas tarp visų dalyvavusių. Individualus formatas tinka asmeniniam pripažinimui, o komandinis — bendradarbiavimui ir darnai."
+        },
+        "languages": {
+          "q": "Kokios kalbos palaikomos?",
+          "a": "Iššūkių ir atlygio patirtis veikia Puzzify platformoje — prieš užsakydami susisiekite, kad patvirtintumėte jūsų komandoms prieinamas kalbas. Pačios WelloWork medžiagos šiuo metu teikiamos anglų kalba."
+        },
+        "delivery": {
+          "q": "Kaip pristatomas atlygis?",
+          "a": "Atlygis — tai jūsų įmonės finansuojami kuponai ir dovanos, pristatomi per Puzzify platformą, kai iššūkis užbaigiamas. Konkretus katalogas ir įvykdymas tvarkomi Puzzify, o mes galime padėti pasirinkti jūsų komandai tinkantį atlygio derinį."
+        },
+        "privacy": {
+          "q": "O kaip dėl dalyvavimo privatumo?",
+          "a": "Laikantis WelloWork požiūrio, darbuotojams priklauso jų dalyvavimas: žmonės dalyvauja savanoriškai, o vadovai mato įsitraukimą apibendrintu, nuasmenintu lygiu, o ne seka atskirus asmenis. Atlygio įvykdymas tvarkomas Puzzify platformoje — prieš diegdami patvirtinkite konkrečias detales su mumis ir Puzzify."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Paverskite pripažinimą ",
+      "headingAccent": "kažkuo pelnytu",
+      "body": "Suteikite savo komandai žaidybinį, pastangomis grįstą atlygį su Cognitive Rewards, veikiančiu su Puzzify.",
+      "primaryCta": "Užsisakyti Cognitive Rewards",
+      "secondaryCta": "Užsisakyti konsultaciją"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · veikia su Puzzify",
+      "headingLead": "Atlygis, kurį jūsų komanda ",
+      "headingAccent": "pelno mąstydama",
+      "body": "Žaidybinė įsitraukimo programa, kurioje darbuotojai atrakina tikrą atlygį spręsdami galvosūkius — vieni arba komandoje.",
+      "points": {
+        "cognitive": {
+          "title": "Kognityviniai gebėjimai",
+          "body": "Iššūkiai lavina mąstymą, dėmesį ir problemų sprendimą."
+        },
+        "teamwork": {
+          "title": "Komandinis darbas",
+          "body": "Grupiniai iššūkiai atrakina bendrą atlygį, pasidalijamą tarp komandos."
+        },
+        "recognition": {
+          "title": "Pastangomis grįstas pripažinimas",
+          "body": "Atlygis pelnomas per pastangas, o ne pasyviai prašomas."
+        }
+      },
+      "primaryCta": "Užsisakyti Cognitive Rewards",
+      "secondaryCta": "Sužinoti, kaip tai veikia",
+      "visualAlt": "Iliustracija, kurioje darbuotojai kartu atrakina atlygį spręsdami galvosūkį",
+      "visualReward": "Atlygis atrakintas",
+      "visualSolo": "Vienam",
+      "visualTeam": "Komandai"
+    },
+    "external": {
+      "newTab": "(atveria Puzzify platformą naujame skirtuke)"
     }
   }
 }

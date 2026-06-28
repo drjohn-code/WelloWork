@@ -1087,6 +1087,10 @@
     "researchCognitiveConstructs": {
       "title": "Kognitiva konstrukt — de fem domäner WelloWork mäter",
       "description": "Arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — varje domän, litteraturen bakom den och hur WelloWork operationaliserar den."
+    },
+    "cognitiveRewards": {
+      "title": "Spelifierade medarbetarbelöningar som bygger team | WelloWork",
+      "description": "Cognitive Rewards från WelloWork, drivs av Puzzify: medarbetare låser upp riktiga belöningar genom att lösa pussel ensamma eller i team. Se hur det fungerar."
     }
   },
   "nav": {
@@ -2963,6 +2967,203 @@
         "label": "För verksamhetsansvariga",
         "title": "Schemalägg skift utifrån hur människor faktiskt presterar."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Hem",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · drivs av Puzzify",
+      "titleLead": "Spelifierade medarbetarbelöningar, ",
+      "titleAccent": "som förtjänas genom att lösa utmaningar",
+      "lede": "Ett engagemangsprogram där era medarbetare låser upp riktiga belöningar genom resonemang, problemlösning och samarbete — inte genom passiva anspråk.",
+      "answerLabel": "Kort sagt:",
+      "answerBody": "Cognitive Rewards är ett engagemangsprogram från WelloWork, som drivs av Puzzify, där medarbetare låser upp belöningar — kuponger och gåvor som ert företag finansierar — genom att lösa pussel och utmaningar som tränar resonemang, fokus och problemlösning. De kan spela på egen hand eller i team och får erkännande genom insats snarare än genom passivt anspråk.",
+      "primaryCta": "Beställ Cognitive Rewards",
+      "secondaryCta": "Boka en konsultation"
+    },
+    "whatItIs": {
+      "heading": "Vad är Cognitive Rewards?",
+      "body1": "Cognitive Rewards är ett samarbete mellan WelloWork och Puzzify. Ert företag finansierar en pott med belöningar; era medarbetare förtjänar dem genom att arbeta sig igenom pussel och utmaningar byggda kring resonemang, fokus och problemlösning. Det gör erkännande till något aktivt — förtjänat genom kognitiv insats i stället för utdelat.",
+      "body2": "Eftersom belöningarna är kopplade till utmaningar snarare än närvaro eller anställningstid fungerar programmet också som lätt kognitiv träning och en gemensam stund för teamen — utan att öka någons arbetsbörda."
+    },
+    "howItWorks": {
+      "heading": "Hur förtjänar medarbetare belöningar?",
+      "intro": "Flödet är enkelt, oavsett om någon spelar på egen hand eller med sitt team.",
+      "steps": {
+        "receive": {
+          "title": "Få en utmaning",
+          "body": "Medarbetare får ett pussel eller en utmaningsuppsättning på Puzzify-plattformen, matchad mot den belöning som ert företag har finansierat."
+        },
+        "solve": {
+          "title": "Lös pusslen",
+          "body": "De arbetar sig igenom uppgifter som tränar resonemang, fokus och problemlösning — ensamma eller tillsammans med kollegor."
+        },
+        "unlock": {
+          "title": "Lås upp belöningen",
+          "body": "När uppgiften är klar låses belöningen upp. Vid teamutmaningar låses den upp gemensamt och delas mellan alla som deltog."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Individuella utmaningar eller teamutmaningar — vad passar era mål?",
+      "intro": "Båda formaten körs på samma plattform. Välj utifrån det resultat ni vill uppnå — personligt erkännande eller sammanhållning i teamet.",
+      "caption": "Jämförelse av format för Cognitive Rewards",
+      "colDimension": "Dimension",
+      "colIndividual": "Individuell",
+      "colGroup": "Grupp / team",
+      "rows": {
+        "how": {
+          "label": "Så fungerar det",
+          "individual": "En medarbetare arbetar sig igenom utmaningen på egen hand.",
+          "group": "Ett team löser en gemensam utmaning tillsammans."
+        },
+        "bestFor": {
+          "label": "Passar bäst för",
+          "individual": "Personligt fokus, erkännande och en stund av kognitiv träning.",
+          "group": "Samarbete, kommunikation och sammanhållning i teamet."
+        },
+        "builds": {
+          "label": "Vad det bygger",
+          "individual": "Resonemang, fokus och problemlösning.",
+          "group": "Gemensam problemlösning och tillit mellan kollegor."
+        },
+        "reward": {
+          "label": "Belöning",
+          "individual": "Låses upp av individen när uppgiften är klar.",
+          "group": "Låses upp gemensamt och delas mellan deltagarna."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Varför fungerar spelifierat, insatsbaserat erkännande?",
+      "intro": "Erkännande landar starkare när det är förtjänat. Cognitive Rewards kombinerar flera saker som tenderar att driva engagemang.",
+      "points": {
+        "play": {
+          "title": "Engagemang genom lek",
+          "body": "Spelmekanik får deltagandet att kännas frivilligt och roligt, inte som ännu en uppgift på listan."
+        },
+        "exercise": {
+          "title": "Genuin kognitiv träning",
+          "body": "Utmaningarna bygger på resonemang, fokus och problemlösning — samma förmågor som WelloWorks träning är byggd kring."
+        },
+        "collaboration": {
+          "title": "Samarbete som består",
+          "body": "Teamutmaningar ger kollegor ett gemensamt mål och en anledning att kommunicera utanför det vanliga arbetet."
+        },
+        "recognition": {
+          "title": "Erkännande med innebörd",
+          "body": "En belöning som förtjänas genom insats signalerar ett genuint erkännande, inte en automatisk förmån."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "Vem är det för?",
+      "intro": "Cognitive Rewards passar team som vill att engagemang och erkännande ska göra dubbel nytta.",
+      "roles": {
+        "hr": {
+          "title": "HR och People-team",
+          "body": "Som driver initiativ inom engagemang, erkännande eller välbefinnande och behöver genuint deltagande."
+        },
+        "culture": {
+          "title": "People & Culture-ledare",
+          "body": "Som bygger sammanhållning över team, kontor eller en hybrid arbetsstyrka."
+        },
+        "rewards": {
+          "title": "Total Rewards- och förmånsansvariga",
+          "body": "Som söker ett erkännandeformat som är aktivt och minnesvärt, inte bara transaktionellt."
+        }
+      },
+      "orgSizes": "Fungerar för team på tio personer ända upp till företag med tusentals — utmaningar och belöningspotter skalar efter behov."
+    },
+    "related": {
+      "heading": "Utforska resten av plattformen",
+      "intro": "Cognitive Rewards finns vid sidan av WelloWorks bredare plattform för prestation på arbetsplatsen.",
+      "links": {
+        "growth": {
+          "label": "Daglig kognitiv träning med WelloRise",
+          "desc": "Adaptiva övningar över fem validerade kognitiva förmågor."
+        },
+        "workshops": {
+          "label": "Live-workshops för hälsa och prestation",
+          "desc": "Fysiska och digitala sessioner för era team."
+        },
+        "assessment": {
+          "label": "Kognitiva bedömningar och teambedömningar",
+          "desc": "Förstå styrkor och teamsammansättning med WelloWize."
+        },
+        "measure": {
+          "label": "Longitudinella prestationstrender",
+          "desc": "Följ aggregerade, anonymiserade trender över tid."
+        },
+        "research": {
+          "label": "Forskningen bakom vårt arbetssätt",
+          "desc": "Hur WelloWork grundar sina metoder i evidens."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Vanliga frågor",
+      "items": {
+        "ordering": {
+          "q": "Hur går beställningen till?",
+          "a": "Ni beställer via Puzzify-plattformen, där ni finansierar en pott med belöningar och sätter upp de utmaningar era medarbetare ska spela. Knappen ”Beställ Cognitive Rewards” på den här sidan tar er direkt dit. WelloWork kan hjälpa er att avgränsa rätt format och belöningsmix innan ni sätter igång."
+        },
+        "individualGroup": {
+          "q": "Vad är skillnaden mellan individuella utmaningar och teamutmaningar?",
+          "a": "Individuella utmaningar löses på egen hand, och belöningen låses upp av den personen. Teamutmaningar löses tillsammans av en grupp; belöningen låses upp gemensamt och delas mellan alla som deltog. Det individuella formatet passar för personligt erkännande, medan teamformatet är byggt för samarbete och sammanhållning."
+        },
+        "languages": {
+          "q": "Vilka språk stöds?",
+          "a": "Upplevelsen av utmaningar och belöningar körs på Puzzify-plattformen — hör av er innan ni beställer för att bekräfta vilka språk som är tillgängliga för era team. WelloWorks eget material tillhandahålls för närvarande på engelska."
+        },
+        "delivery": {
+          "q": "Hur levereras belöningarna?",
+          "a": "Belöningarna är kuponger och gåvor som finansieras av ert företag och levereras via Puzzify-plattformen när en utmaning är genomförd. Den specifika katalogen och leveransen hanteras i Puzzify, och vi kan hjälpa er att välja en belöningsmix som passar ert team."
+        },
+        "privacy": {
+          "q": "Hur är det med integriteten kring deltagandet?",
+          "a": "I linje med WelloWorks arbetssätt äger medarbetarna sitt eget deltagande: man deltar frivilligt och chefer ser engagemanget på en aggregerad, anonymiserad nivå snarare än att följa enskilda personer. Leveransen av belöningar hanteras i Puzzify-plattformen — bekräfta detaljerna med oss och Puzzify innan ni rullar ut programmet."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Gör erkännande till ",
+      "headingAccent": "något förtjänat",
+      "body": "Ge ert team spelifierade, insatsbaserade belöningar med Cognitive Rewards, som drivs av Puzzify.",
+      "primaryCta": "Beställ Cognitive Rewards",
+      "secondaryCta": "Boka en konsultation"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · drivs av Puzzify",
+      "headingLead": "Belöningar som ert team ",
+      "headingAccent": "förtjänar genom att tänka",
+      "body": "Ett spelifierat engagemangsprogram där medarbetare låser upp riktiga belöningar genom att lösa pussel — på egen hand eller i team.",
+      "points": {
+        "cognitive": {
+          "title": "Kognitiva förmågor",
+          "body": "Utmaningarna tränar resonemang, fokus och problemlösning."
+        },
+        "teamwork": {
+          "title": "Samarbete",
+          "body": "Grupputmaningar låser upp en gemensam belöning som delas i teamet."
+        },
+        "recognition": {
+          "title": "Insatsbaserat erkännande",
+          "body": "Belöningarna förtjänas genom insats, inte genom passiva anspråk."
+        }
+      },
+      "primaryCta": "Beställ Cognitive Rewards",
+      "secondaryCta": "Se hur det fungerar",
+      "visualAlt": "Illustration av medarbetare som låser upp en belöning genom att lösa ett pussel tillsammans",
+      "visualReward": "Belöning upplåst",
+      "visualSolo": "Ensam",
+      "visualTeam": "Team"
+    },
+    "external": {
+      "newTab": "(öppnar Puzzify-plattformen i en ny flik)"
     }
   }
 }

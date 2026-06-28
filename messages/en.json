@@ -1080,6 +1080,10 @@
     "researchCognitiveConstructs": {
       "title": "Cognitive constructs — the five domains WelloWork measures",
       "description": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — each domain, the literature behind it, and how WelloWork operationalises it."
+    },
+    "cognitiveRewards": {
+      "title": "Gamified Employee Rewards That Build Teams | WelloWork",
+      "description": "Cognitive Rewards by WelloWork, powered by Puzzify: employees unlock real rewards by solving puzzles solo or as a team. See how effort-based recognition works."
     }
   },
   "nav": {
@@ -2956,6 +2960,203 @@
         "label": "For Operations leaders",
         "title": "Schedule shifts around how people actually perform."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Home",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · powered by Puzzify",
+      "titleLead": "Gamified employee rewards, ",
+      "titleAccent": "earned by solving challenges",
+      "lede": "An engagement program where your people unlock real rewards through reasoning, problem-solving and teamwork — not passive claims.",
+      "answerLabel": "In short:",
+      "answerBody": "Cognitive Rewards is a WelloWork engagement program, powered by Puzzify, where employees unlock rewards — coupons and gifts your company funds — by solving puzzles and challenges that exercise reasoning, focus and problem-solving. They can play solo or as a team, earning recognition through effort rather than passive claim.",
+      "primaryCta": "Order Cognitive Rewards",
+      "secondaryCta": "Book a consultation"
+    },
+    "whatItIs": {
+      "heading": "What is Cognitive Rewards?",
+      "body1": "Cognitive Rewards is a partnership between WelloWork and Puzzify. Your company funds a pool of rewards; your people earn them by working through puzzles and challenges built around reasoning, focus and problem-solving. It turns recognition into something active — earned through cognitive effort instead of handed out.",
+      "body2": "Because rewards are tied to challenges rather than attendance or tenure, the program doubles as light cognitive exercise and a shared moment for teams — without adding to anyone's workload."
+    },
+    "howItWorks": {
+      "heading": "How do employees earn rewards?",
+      "intro": "The flow is simple, whether someone plays solo or with their team.",
+      "steps": {
+        "receive": {
+          "title": "Receive a challenge",
+          "body": "Employees get a puzzle or challenge set on the Puzzify platform, matched to the reward your company has funded."
+        },
+        "solve": {
+          "title": "Solve the puzzles",
+          "body": "They work through tasks that exercise reasoning, focus and problem-solving — alone or alongside teammates."
+        },
+        "unlock": {
+          "title": "Unlock the reward",
+          "body": "On completion the reward unlocks. For team challenges it unlocks collectively and is shared among everyone who took part."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Individual vs. team challenges — which fits your goals?",
+      "intro": "Both formats run on the same platform. Choose by the outcome you want — personal recognition or team cohesion.",
+      "caption": "Cognitive Rewards formats compared",
+      "colDimension": "Dimension",
+      "colIndividual": "Individual",
+      "colGroup": "Group / team",
+      "rows": {
+        "how": {
+          "label": "How it works",
+          "individual": "One employee works through the challenge solo.",
+          "group": "A team solves a shared challenge together."
+        },
+        "bestFor": {
+          "label": "Best for",
+          "individual": "Personal focus, recognition and a moment of cognitive exercise.",
+          "group": "Collaboration, communication and team cohesion."
+        },
+        "builds": {
+          "label": "What it builds",
+          "individual": "Reasoning, focus and problem-solving.",
+          "group": "Collective problem-solving and trust between teammates."
+        },
+        "reward": {
+          "label": "Reward",
+          "individual": "Unlocked by the individual on completion.",
+          "group": "Unlocked collectively and split among participants."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Why does gamified, effort-based recognition work?",
+      "intro": "Recognition lands harder when it's earned. Cognitive Rewards combines several things that tend to drive engagement.",
+      "points": {
+        "play": {
+          "title": "Engagement through play",
+          "body": "Game mechanics make participation feel voluntary and enjoyable, not like another task on the list."
+        },
+        "exercise": {
+          "title": "Genuine cognitive exercise",
+          "body": "Challenges draw on reasoning, focus and problem-solving — the same constructs WelloWork's training is built around."
+        },
+        "collaboration": {
+          "title": "Collaboration that sticks",
+          "body": "Team challenges give colleagues a shared goal and a reason to communicate outside their usual work."
+        },
+        "recognition": {
+          "title": "Recognition with meaning",
+          "body": "A reward earned through effort signals genuine acknowledgement, not an automatic perk."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "Who is it for?",
+      "intro": "Cognitive Rewards fits teams that want engagement and recognition to do double duty.",
+      "roles": {
+        "hr": {
+          "title": "HR & People teams",
+          "body": "Running engagement, recognition or wellbeing initiatives that need genuine participation."
+        },
+        "culture": {
+          "title": "People & Culture leaders",
+          "body": "Building cohesion across teams, sites or a hybrid workforce."
+        },
+        "rewards": {
+          "title": "Total Rewards & Benefits leaders",
+          "body": "Looking for a recognition format that's active and memorable, not just transactional."
+        }
+      },
+      "orgSizes": "Works for teams of ten through to enterprises of thousands — challenges and reward pools scale to fit."
+    },
+    "related": {
+      "heading": "Explore the rest of the platform",
+      "intro": "Cognitive Rewards sits alongside WelloWork's wider workplace performance platform.",
+      "links": {
+        "growth": {
+          "label": "Daily cognitive training with WelloRise",
+          "desc": "Adaptive exercises across five validated cognitive constructs."
+        },
+        "workshops": {
+          "label": "Live health and performance workshops",
+          "desc": "In-person and online sessions for your teams."
+        },
+        "assessment": {
+          "label": "Cognitive and team assessments",
+          "desc": "Understand strengths and team composition with WelloWize."
+        },
+        "measure": {
+          "label": "Longitudinal performance trends",
+          "desc": "Track aggregated, anonymised trends over time."
+        },
+        "research": {
+          "label": "The research behind our approach",
+          "desc": "How WelloWork grounds its methods in evidence."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Frequently asked questions",
+      "items": {
+        "ordering": {
+          "q": "How does ordering work?",
+          "a": "You order through the Puzzify platform, where you fund a pool of rewards and set up the challenges your people will play. The \"Order Cognitive Rewards\" button on this page takes you straight there. WelloWork can help you scope the right format and reward mix before you start."
+        },
+        "individualGroup": {
+          "q": "What's the difference between individual and team challenges?",
+          "a": "Individual challenges are solved solo, with the reward unlocked by that person. Team challenges are solved together by a group; the reward unlocks collectively and is split among everyone who took part. Individual format suits personal recognition, while team format is built for collaboration and cohesion."
+        },
+        "languages": {
+          "q": "What languages are supported?",
+          "a": "The challenge and reward experience runs on the Puzzify platform — reach out before ordering to confirm the languages available for your teams. WelloWork's own materials are currently provided in English."
+        },
+        "delivery": {
+          "q": "How are rewards delivered?",
+          "a": "Rewards are coupons and gifts funded by your company and delivered through the Puzzify platform once a challenge is completed. The specific catalogue and fulfilment are managed on Puzzify, and we can help you choose a reward mix that fits your team."
+        },
+        "privacy": {
+          "q": "What about the privacy of participation?",
+          "a": "In keeping with WelloWork's approach, employees own their participation: people take part voluntarily and managers see engagement at an aggregated, anonymised level rather than tracking individuals. Reward fulfilment is handled on the Puzzify platform — confirm the specifics with us and Puzzify before rolling out."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Turn recognition into ",
+      "headingAccent": "something earned",
+      "body": "Bring gamified, effort-based rewards to your team with Cognitive Rewards, powered by Puzzify.",
+      "primaryCta": "Order Cognitive Rewards",
+      "secondaryCta": "Book a consultation"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · powered by Puzzify",
+      "headingLead": "Rewards your team ",
+      "headingAccent": "earns by thinking",
+      "body": "A gamified engagement program where employees unlock real rewards by solving puzzles — solo or as a team.",
+      "points": {
+        "cognitive": {
+          "title": "Cognitive skills",
+          "body": "Challenges exercise reasoning, focus and problem-solving."
+        },
+        "teamwork": {
+          "title": "Teamwork",
+          "body": "Group challenges unlock a shared reward, split among the team."
+        },
+        "recognition": {
+          "title": "Effort-based recognition",
+          "body": "Rewards are earned through effort, not passively claimed."
+        }
+      },
+      "primaryCta": "Order Cognitive Rewards",
+      "secondaryCta": "Learn how it works",
+      "visualAlt": "Illustration of employees unlocking a reward by solving a puzzle together",
+      "visualReward": "Reward unlocked",
+      "visualSolo": "Solo",
+      "visualTeam": "Team"
+    },
+    "external": {
+      "newTab": "(opens the Puzzify platform in a new tab)"
     }
   }
 }

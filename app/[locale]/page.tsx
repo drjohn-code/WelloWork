@@ -5,6 +5,7 @@ import { Hero } from "@/app/components/Hero";
 import { ProblemSection } from "@/app/components/ProblemSection";
 import { PlatformTabs } from "@/app/components/PlatformTabs";
 import { SolutionsByRole } from "@/app/components/SolutionsByRole";
+import { CognitiveRewardsSection } from "@/app/components/CognitiveRewardsSection";
 import { AdvantageSection } from "@/app/components/AdvantageSection";
 import { ResearchSection } from "@/app/components/ResearchSection";
 import { PricingTeaser } from "@/app/components/PricingTeaser";
@@ -25,6 +26,7 @@ export default async function Home({ params }: PageProps) {
       <ProblemSection />
       <PlatformTabs />
       <SolutionsByRole />
+      <CognitiveRewardsSection />
       <AdvantageSection />
       <ResearchSection />
       <PricingTeaser />

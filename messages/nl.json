@@ -1087,6 +1087,10 @@
     "researchCognitiveConstructs": {
       "title": "Cognitieve constructen — de vijf domeinen die WelloWork meet",
       "description": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — elk domein, de literatuur erachter en hoe WelloWork het operationaliseert."
+    },
+    "cognitiveRewards": {
+      "title": "Gamified beloningen die teams versterken | WelloWork",
+      "description": "Cognitive Rewards van WelloWork, mogelijk gemaakt door Puzzify: medewerkers ontgrendelen echte beloningen door puzzels op te lossen, solo of als team. Ontdek hoe het werkt."
     }
   },
   "nav": {
@@ -2963,6 +2967,203 @@
         "label": "Voor Operations-leiders",
         "title": "Plan diensten rond hoe mensen daadwerkelijk presteren."
       }
+    }
+  },
+  "cognitiveRewards": {
+    "crumbs": {
+      "home": "Home",
+      "current": "Cognitive Rewards"
+    },
+    "hero": {
+      "eyebrow": "Cognitive Rewards · mogelijk gemaakt door Puzzify",
+      "titleLead": "Gamified beloningen voor medewerkers, ",
+      "titleAccent": "verdiend door uitdagingen op te lossen",
+      "lede": "Een betrokkenheidsprogramma waarin uw mensen echte beloningen ontgrendelen door redeneren, probleemoplossing en samenwerking — niet door passief in te lossen.",
+      "answerLabel": "Kort gezegd:",
+      "answerBody": "Cognitive Rewards is een betrokkenheidsprogramma van WelloWork, mogelijk gemaakt door Puzzify, waarin medewerkers beloningen ontgrendelen — coupons en cadeaus die uw bedrijf financiert — door puzzels en uitdagingen op te lossen die redeneren, focus en probleemoplossing trainen. Ze kunnen solo of als team spelen en verdienen erkenning door inzet in plaats van door passief in te lossen.",
+      "primaryCta": "Bestel Cognitive Rewards",
+      "secondaryCta": "Plan een adviesgesprek"
+    },
+    "whatItIs": {
+      "heading": "Wat is Cognitive Rewards?",
+      "body1": "Cognitive Rewards is een samenwerking tussen WelloWork en Puzzify. Uw bedrijf financiert een pot met beloningen; uw mensen verdienen ze door puzzels en uitdagingen op te lossen die draaien om redeneren, focus en probleemoplossing. Het maakt erkenning actief — verdiend door cognitieve inzet in plaats van zomaar uitgedeeld.",
+      "body2": "Omdat beloningen gekoppeld zijn aan uitdagingen en niet aan aanwezigheid of anciënniteit, fungeert het programma tegelijk als lichte cognitieve training en een gedeeld moment voor teams — zonder de werkdruk van wie dan ook te verhogen."
+    },
+    "howItWorks": {
+      "heading": "Hoe verdienen medewerkers beloningen?",
+      "intro": "Het verloop is eenvoudig, of iemand nu solo of met zijn team speelt.",
+      "steps": {
+        "receive": {
+          "title": "Ontvang een uitdaging",
+          "body": "Medewerkers krijgen een puzzel of set uitdagingen op het Puzzify-platform, afgestemd op de beloning die uw bedrijf heeft gefinancierd."
+        },
+        "solve": {
+          "title": "Los de puzzels op",
+          "body": "Ze werken aan opdrachten die redeneren, focus en probleemoplossing trainen — alleen of samen met collega's."
+        },
+        "unlock": {
+          "title": "Ontgrendel de beloning",
+          "body": "Bij afronding wordt de beloning ontgrendeld. Bij teamuitdagingen gebeurt dat gezamenlijk en wordt de beloning gedeeld onder iedereen die meedeed."
+        }
+      }
+    },
+    "formats": {
+      "heading": "Individuele uitdagingen versus teamuitdagingen — wat past bij uw doelen?",
+      "intro": "Beide formats draaien op hetzelfde platform. Kies op basis van het gewenste resultaat — persoonlijke erkenning of teamcohesie.",
+      "caption": "Cognitive Rewards-formats vergeleken",
+      "colDimension": "Dimensie",
+      "colIndividual": "Individueel",
+      "colGroup": "Groep / team",
+      "rows": {
+        "how": {
+          "label": "Hoe het werkt",
+          "individual": "Eén medewerker werkt de uitdaging solo door.",
+          "group": "Een team lost samen een gedeelde uitdaging op."
+        },
+        "bestFor": {
+          "label": "Geschikt voor",
+          "individual": "Persoonlijke focus, erkenning en een moment van cognitieve training.",
+          "group": "Samenwerking, communicatie en teamcohesie."
+        },
+        "builds": {
+          "label": "Wat het opbouwt",
+          "individual": "Redeneren, focus en probleemoplossing.",
+          "group": "Gezamenlijke probleemoplossing en vertrouwen tussen collega's."
+        },
+        "reward": {
+          "label": "Beloning",
+          "individual": "Bij afronding ontgrendeld door het individu.",
+          "group": "Gezamenlijk ontgrendeld en verdeeld onder de deelnemers."
+        }
+      }
+    },
+    "whyItWorks": {
+      "heading": "Waarom werkt gamified erkenning op basis van inzet?",
+      "intro": "Erkenning komt harder aan wanneer ze verdiend is. Cognitive Rewards combineert meerdere elementen die betrokkenheid doorgaans bevorderen.",
+      "points": {
+        "play": {
+          "title": "Betrokkenheid door spel",
+          "body": "Spelmechanismen maken deelname vrijwillig en plezierig — niet zomaar weer een taak op de lijst."
+        },
+        "exercise": {
+          "title": "Echte cognitieve training",
+          "body": "Uitdagingen doen een beroep op redeneren, focus en probleemoplossing — dezelfde bouwstenen waarop de training van WelloWork is gebaseerd."
+        },
+        "collaboration": {
+          "title": "Samenwerking die beklijft",
+          "body": "Teamuitdagingen geven collega's een gedeeld doel en een reden om te communiceren buiten hun gebruikelijke werk."
+        },
+        "recognition": {
+          "title": "Erkenning met betekenis",
+          "body": "Een beloning die door inzet is verdiend, is een teken van oprechte waardering, niet van een automatische extra."
+        }
+      }
+    },
+    "whoFor": {
+      "heading": "Voor wie is het bedoeld?",
+      "intro": "Cognitive Rewards past bij teams die willen dat betrokkenheid en erkenning dubbel werk doen.",
+      "roles": {
+        "hr": {
+          "title": "HR- en People-teams",
+          "body": "Die initiatieven rond betrokkenheid, erkenning of welzijn uitvoeren waarvoor echte deelname nodig is."
+        },
+        "culture": {
+          "title": "People & Culture-leiders",
+          "body": "Die cohesie opbouwen tussen teams, locaties of een hybride personeelsbestand."
+        },
+        "rewards": {
+          "title": "Total Rewards- en Benefits-leiders",
+          "body": "Die op zoek zijn naar een erkenningsvorm die actief en memorabel is, niet louter transactioneel."
+        }
+      },
+      "orgSizes": "Geschikt voor teams van tien tot organisaties met duizenden medewerkers — uitdagingen en beloningspotten schalen mee."
+    },
+    "related": {
+      "heading": "Ontdek de rest van het platform",
+      "intro": "Cognitive Rewards staat naast het bredere platform van WelloWork voor werkprestaties.",
+      "links": {
+        "growth": {
+          "label": "Dagelijkse cognitieve training met WelloRise",
+          "desc": "Adaptieve oefeningen over vijf gevalideerde cognitieve bouwstenen."
+        },
+        "workshops": {
+          "label": "Live workshops over gezondheid en prestaties",
+          "desc": "Fysieke en online sessies voor uw teams."
+        },
+        "assessment": {
+          "label": "Cognitieve assessments en teamassessments",
+          "desc": "Krijg inzicht in sterke punten en teamsamenstelling met WelloWize."
+        },
+        "measure": {
+          "label": "Longitudinale prestatietrends",
+          "desc": "Volg geaggregeerde, geanonimiseerde trends in de tijd."
+        },
+        "research": {
+          "label": "Het onderzoek achter onze aanpak",
+          "desc": "Hoe WelloWork zijn methoden onderbouwt met bewijs."
+        }
+      }
+    },
+    "faq": {
+      "heading": "Veelgestelde vragen",
+      "items": {
+        "ordering": {
+          "q": "Hoe werkt het bestellen?",
+          "a": "U bestelt via het Puzzify-platform, waar u een pot met beloningen financiert en de uitdagingen opzet die uw mensen gaan spelen. De knop “Bestel Cognitive Rewards” op deze pagina brengt u er rechtstreeks naartoe. WelloWork helpt u graag om vóór de start het juiste format en de juiste mix van beloningen te bepalen."
+        },
+        "individualGroup": {
+          "q": "Wat is het verschil tussen individuele uitdagingen en teamuitdagingen?",
+          "a": "Individuele uitdagingen worden solo opgelost en de beloning wordt door die persoon ontgrendeld. Teamuitdagingen worden samen door een groep opgelost; de beloning wordt gezamenlijk ontgrendeld en verdeeld onder iedereen die meedeed. Het individuele format past bij persoonlijke erkenning, terwijl het teamformat gemaakt is voor samenwerking en cohesie."
+        },
+        "languages": {
+          "q": "Welke talen worden ondersteund?",
+          "a": "De ervaring met uitdagingen en beloningen draait op het Puzzify-platform — neem vóór het bestellen contact op om te bevestigen welke talen voor uw teams beschikbaar zijn. Het eigen materiaal van WelloWork is momenteel beschikbaar in het Engels."
+        },
+        "delivery": {
+          "q": "Hoe worden beloningen geleverd?",
+          "a": "Beloningen zijn coupons en cadeaus die door uw bedrijf worden gefinancierd en via het Puzzify-platform worden geleverd zodra een uitdaging is afgerond. De specifieke catalogus en de afhandeling worden beheerd op Puzzify, en we helpen u graag bij het kiezen van een mix van beloningen die bij uw team past."
+        },
+        "privacy": {
+          "q": "Hoe zit het met de privacy van deelname?",
+          "a": "In lijn met de aanpak van WelloWork zijn medewerkers eigenaar van hun deelname: mensen doen vrijwillig mee en managers zien betrokkenheid op geaggregeerd, geanonimiseerd niveau in plaats van individuen te volgen. De afhandeling van beloningen verloopt via het Puzzify-platform — bevestig de details met ons en met Puzzify vóór de uitrol."
+        }
+      }
+    },
+    "finalCta": {
+      "headingLead": "Maak van erkenning ",
+      "headingAccent": "iets dat je verdient",
+      "body": "Breng gamified beloningen op basis van inzet naar uw team met Cognitive Rewards, mogelijk gemaakt door Puzzify.",
+      "primaryCta": "Bestel Cognitive Rewards",
+      "secondaryCta": "Plan een adviesgesprek"
+    },
+    "section": {
+      "eyebrow": "Cognitive Rewards · mogelijk gemaakt door Puzzify",
+      "headingLead": "Beloningen die je team ",
+      "headingAccent": "verdient door te denken",
+      "body": "Een gamified betrokkenheidsprogramma waarin medewerkers echte beloningen ontgrendelen door puzzels op te lossen — solo of als team.",
+      "points": {
+        "cognitive": {
+          "title": "Cognitieve vaardigheden",
+          "body": "Uitdagingen trainen redeneren, focus en probleemoplossing."
+        },
+        "teamwork": {
+          "title": "Teamwerk",
+          "body": "Groepsuitdagingen ontgrendelen een gedeelde beloning, verdeeld onder het team."
+        },
+        "recognition": {
+          "title": "Erkenning op basis van inzet",
+          "body": "Beloningen worden verdiend door inzet, niet passief ingelost."
+        }
+      },
+      "primaryCta": "Bestel Cognitive Rewards",
+      "secondaryCta": "Ontdek hoe het werkt",
+      "visualAlt": "Illustratie van medewerkers die samen een beloning ontgrendelen door een puzzel op te lossen",
+      "visualReward": "Beloning ontgrendeld",
+      "visualSolo": "Solo",
+      "visualTeam": "Team"
+    },
+    "external": {
+      "newTab": "(opent het Puzzify-platform in een nieuw tabblad)"
     }
   }
 }
