@@ -256,6 +256,40 @@ img { display: block; max-width: 100%; }
 @keyframes drift3 { 0%,100%{transform:translate(0,0)} 50%{transform:translate(15px,25px)} }
 @keyframes pulseDot { 0%, 100% { opacity: 1; } 50% { opacity: 0.35; } }
 
+/* Cognitive Rewards teaser: team lines converging + padlock unlocking */
+@keyframes cr-draw-line { from { stroke-dashoffset: 26; } to { stroke-dashoffset: 0; } }
+@keyframes cr-shackle-open {
+  0% { transform: translateY(7px) rotate(-10deg); opacity: 0; }
+  55% { opacity: 1; }
+  100% { transform: translateY(0) rotate(0deg); opacity: 1; }
+}
+@keyframes cr-reward-glow {
+  0%, 100% { opacity: 0.45; transform: scale(1); }
+  50% { opacity: 0.85; transform: scale(1.1); }
+}
+.cr-unlock-line {
+  stroke-dasharray: 26;
+  stroke-dashoffset: 26;
+  animation: cr-draw-line 900ms ease-out forwards;
+  animation-delay: var(--cr-delay, 0ms);
+}
+.cr-unlock-shackle {
+  transform-box: fill-box;
+  transform-origin: 100% 100%;
+  animation: cr-shackle-open 650ms 550ms cubic-bezier(0.2, 0.8, 0.3, 1) both;
+}
+.cr-unlock-glow-pulse {
+  animation: cr-reward-glow 2.6s ease-in-out 1.2s infinite;
+}
+@media (prefers-reduced-motion: reduce) {
+  .cr-unlock-line, .cr-unlock-shackle, .cr-unlock-glow-pulse {
+    animation: none !important;
+    stroke-dashoffset: 0 !important;
+    transform: none !important;
+    opacity: 1 !important;
+  }
+}
+
 /* Number ticker for stats */
 .stat-num {
   font-family: var(--font-display); font-weight: 700;

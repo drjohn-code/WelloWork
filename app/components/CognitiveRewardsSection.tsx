@@ -114,11 +114,7 @@ export function CognitiveRewardsSection() {
           </div>
 
           <Reveal delay={2}>
-            <RewardVisual
-              alt={t("visualAlt")}
-              reward={t("visualReward")}
-              team={t("visualTeam")}
-            />
+            <RewardVisual alt={t("visualAlt")} team={t("visualTeam")} />
           </Reveal>
         </div>
       </div>
@@ -126,8 +122,10 @@ export function CognitiveRewardsSection() {
   );
 }
 
-/** Team nodes converging on a central unlocking star — several distinct
- * players contributing together to open the shared reward. */
+/** Team nodes converging on a padlock that springs open to reveal the star
+ * reward — the team's combined effort is what unlocks it. Line-draw,
+ * shackle-lift and glow-pulse are CSS animations gated behind
+ * prefers-reduced-motion in globals.css. */
 function TeamUnlockGraphic({ label }: { label: string }) {
   const nodes = [
     { cx: 32, cy: 22, tone: "var(--primary)" },
@@ -136,44 +134,85 @@ function TeamUnlockGraphic({ label }: { label: string }) {
     { cx: 166, cy: 92, tone: "var(--primary)" },
     { cx: 90, cy: 10, tone: "var(--secondary-deep)" },
   ] as const;
-  const center = { cx: 90, cy: 58 };
+  // Where the players' effort feeds in — the top of the lock body, where
+  // the shackle is anchored.
+  const target = { cx: 90, cy: 64 };
+  // Where the unlocked reward (star) sits — set into the lock's face so the
+  // body still reads as a lock beneath it, clear of the open shackle above.
+  const star = { cx: 90, cy: 72 };
 
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
-      <svg width="100%" height="118" viewBox="0 0 180 116" fill="none" aria-hidden="true">
+      <svg width="100%" height="140" viewBox="0 0 180 140" fill="none" aria-hidden="true">
         <defs>
           <radialGradient id="cr-unlock-glow" cx="50%" cy="50%" r="50%">
             <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.38" />
+            <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
+          </radialGradient>
+          <radialGradient id="cr-reward-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.5" />
             <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
           </radialGradient>
           <linearGradient id="cr-star-grad" x1="0" y1="0" x2="1" y2="1">
             <stop offset="0%" stopColor="var(--accent)" />
             <stop offset="100%" stopColor="var(--primary)" />
           </linearGradient>
+          <linearGradient id="cr-lock-grad" x1="0" y1="0" x2="0" y2="1">
+            <stop offset="0%" stopColor="var(--primary)" />
+            <stop offset="100%" stopColor="var(--secondary-deep)" />
+          </linearGradient>
         </defs>
 
-        <circle cx={center.cx} cy={center.cy} r="40" fill="url(#cr-unlock-glow)" />
+        <circle cx={target.cx} cy={target.cy} r="46" fill="url(#cr-unlock-glow)" />
 
         {nodes.map((n, i) => (
           <line
             key={`line-${i}`}
+            className="cr-unlock-line"
+            style={{ ["--cr-delay" as string]: `${i * 90}ms` }}
             x1={n.cx}
             y1={n.cy}
-            x2={center.cx}
-            y2={center.cy}
-            stroke="color-mix(in oklch, var(--accent) 45%, transparent)"
+            x2={target.cx}
+            y2={target.cy}
+            stroke="color-mix(in oklch, var(--accent) 50%, transparent)"
             strokeWidth="1.4"
             strokeDasharray="3 4"
           />
         ))}
 
-        {/* Sparkle ticks — the moment the reward opens */}
+        {/* Shackle, swung open — anchored on the left, lifted clear on the
+            right — reads as "just unlocked" rather than a closed lock. Drawn
+            behind the body so both legs plug cleanly into its top edge. */}
+        <path
+          className="cr-unlock-shackle"
+          d={`M${target.cx - 9} ${target.cy} V${target.cy - 14} A9 9 0 0 1 ${target.cx + 9} ${target.cy - 14} V${target.cy - 30}`}
+          stroke="url(#cr-lock-grad)"
+          strokeWidth="6"
+          strokeLinecap="round"
+          fill="none"
+        />
+
+        {/* Padlock body — the star reward is set into its face, with the
+            body still visible around and beneath it */}
+        <rect
+          x={target.cx - 17}
+          y={target.cy}
+          width="34"
+          height="30"
+          rx="8"
+          fill="url(#cr-lock-grad)"
+        />
+
+        {/* Reveal glow behind the star — pulses to signal the unlock moment */}
+        <circle className="cr-unlock-glow-pulse" cx={star.cx} cy={star.cy} r="23" fill="url(#cr-reward-glow)" />
+
+        {/* Sparkle ticks around the revealed reward */}
         {[0, 90, 180, 270].map((deg) => {
           const rad = (deg * Math.PI) / 180;
-          const x1 = center.cx + Math.cos(rad) * 26;
-          const y1 = center.cy + Math.sin(rad) * 26;
-          const x2 = center.cx + Math.cos(rad) * 33;
-          const y2 = center.cy + Math.sin(rad) * 33;
+          const x1 = star.cx + Math.cos(rad) * 20;
+          const y1 = star.cy + Math.sin(rad) * 20;
+          const x2 = star.cx + Math.cos(rad) * 26;
+          const y2 = star.cy + Math.sin(rad) * 26;
           return (
             <line
               key={`spark-${deg}`}
@@ -188,10 +227,11 @@ function TeamUnlockGraphic({ label }: { label: string }) {
           );
         })}
 
-        <g transform={`translate(${center.cx} ${center.cy})`}>
-          <circle r="21" fill="white" stroke="url(#cr-star-grad)" strokeWidth="1.5" />
+        {/* The reward itself, revealed inside the open lock body */}
+        <g transform={`translate(${star.cx} ${star.cy})`}>
+          <circle r="15" fill="white" stroke="url(#cr-star-grad)" strokeWidth="1.5" />
           <path
-            d="M0 -11l3.2 6.6 7.3 1-5.3 5 1.3 7.2L0 5.6l-6.5 3.2 1.3-7.2-5.3-5 7.3-1L0-11z"
+            d="M0 -8l2.3 4.7 5.2 0.7-3.8 3.6 0.9 5.1L0 4l-4.6 2.3 0.9-5.1-3.8-3.6 5.2-0.7L0-8z"
             fill="url(#cr-star-grad)"
           />
         </g>
@@ -223,17 +263,10 @@ function TeamUnlockGraphic({ label }: { label: string }) {
   );
 }
 
-/** Reward-unlock visual — several player nodes contributing together into a
- * central star that opens, then the reward pill below. */
-function RewardVisual({
-  alt,
-  reward,
-  team,
-}: {
-  alt: string;
-  reward: string;
-  team: string;
-}) {
+/** Reward-unlock visual — player nodes contributing together into a padlock
+ * that springs open to reveal the star reward. The unlock is shown, not
+ * captioned. */
+function RewardVisual({ alt, team }: { alt: string; team: string }) {
   return (
     <div
       className="glass-strong"
@@ -256,57 +289,8 @@ function RewardVisual({
           pointerEvents: "none",
         }}
       />
-      <div
-        style={{
-          position: "relative",
-          marginBottom: 22,
-        }}
-      >
+      <div style={{ position: "relative" }}>
         <TeamUnlockGraphic label={team} />
-      </div>
-
-      <div
-        style={{
-          position: "relative",
-          padding: "16px 18px",
-          borderRadius: 18,
-          background:
-            "linear-gradient(135deg, color-mix(in oklch, var(--accent) 12%, white), white)",
-          border: "1px solid color-mix(in oklch, var(--accent) 28%, transparent)",
-          display: "flex",
-          alignItems: "center",
-          gap: 14,
-        }}
-        aria-hidden="true"
-      >
-        <span
-          aria-hidden="true"
-          style={{
-            width: 44,
-            height: 44,
-            borderRadius: 999,
-            background: "var(--primary)",
-            color: "white",
-            display: "flex",
-            alignItems: "center",
-            justifyContent: "center",
-            flexShrink: 0,
-            boxShadow: "0 6px 18px color-mix(in oklch, var(--primary) 35%, transparent)",
-          }}
-        >
-          <Icon name="star" size={22} />
-        </span>
-        <span
-          style={{
-            fontFamily: "var(--font-display)",
-            fontWeight: 600,
-            fontSize: 16,
-            color: "var(--ink-1)",
-            letterSpacing: "-0.01em",
-          }}
-        >
-          {reward}
-        </span>
       </div>
     </div>
   );

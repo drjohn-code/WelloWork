@@ -22,6 +22,10 @@
         "desc": "Proben für zu Hause",
         "label": "Biomarker-Tests"
       },
+      "cognitiveRewards": {
+        "desc": "Teambasiertes Belohnungsspiel",
+        "label": "Spiel & Belohnung"
+      },
       "trends": {
         "desc": "Leistung im Zeitverlauf",
         "label": "Langzeittrends"
@@ -107,7 +111,7 @@
       "location": "Uppsala, Schweden · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork ist eine Plattform für Arbeitsplatzleistung, die tägliches kognitives Training (WelloRise), Recruiting und interne Assessments (WelloWize), Langzeit-Leistungstrends, Live-Gesundheits-Workshops und Biomarker-Tests vereint. Mitarbeitende sind Eigentümer ihrer Daten; Führungskräfte sehen ausschließlich anonymisierte, aggregierte Erkenntnisse.",
+      "body": "WelloWork ist eine Plattform für Arbeitsplatzleistung, die tägliches kognitives Training (WelloRise), Recruiting und interne Assessments (WelloWize), Langzeit-Leistungstrends, Live-Gesundheits-Workshops, Biomarker-Tests und ein teambasiertes Belohnungsspiel (Cognitive Rewards) vereint. Mitarbeitende sind Eigentümer ihrer Daten; Führungskräfte sehen ausschließlich anonymisierte, aggregierte Erkenntnisse.",
       "title": "Was macht WelloWork?"
     },
     "who": {
@@ -3166,7 +3170,6 @@
       "primaryCta": "Cognitive Rewards bestellen",
       "secondaryCta": "So funktioniert's",
       "visualAlt": "Illustration eines Teams von Mitarbeitenden, die gemeinsam eine geteilte Challenge lösen, um eine Belohnung freizuschalten",
-      "visualReward": "Belohnung freigeschaltet",
       "visualTeam": "3-5 Spieler"
     }
   },

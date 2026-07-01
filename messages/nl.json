@@ -22,6 +22,10 @@
         "desc": "Thuis afgenomen monsters",
         "label": "Biomarkertesten"
       },
+      "cognitiveRewards": {
+        "desc": "Teamgebaseerd beloningsspel",
+        "label": "Spel & beloning"
+      },
       "trends": {
         "desc": "Prestaties in de tijd",
         "label": "Longitudinale trends"
@@ -107,7 +111,7 @@
       "location": "Uppsala, Zweden · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork is een platform voor werkplekprestaties dat dagelijkse cognitieve training (WelloRise), werving en interne assessments (WelloWize), longitudinale prestatietrends, live gezondheidsworkshops en biomarkertesten combineert. Medewerkers zijn eigenaar van hun gegevens; managers zien alleen geanonimiseerde, geaggregeerde inzichten.",
+      "body": "WelloWork is een platform voor werkplekprestaties dat dagelijkse cognitieve training (WelloRise), werving en interne assessments (WelloWize), longitudinale prestatietrends, live gezondheidsworkshops, biomarkertesten en een teamgebaseerd beloningsspel (Cognitive Rewards) combineert. Medewerkers zijn eigenaar van hun gegevens; managers zien alleen geanonimiseerde, geaggregeerde inzichten.",
       "title": "Wat doet WelloWork?"
     },
     "who": {
@@ -3166,7 +3170,6 @@
       "primaryCta": "Cognitive Rewards bestellen",
       "secondaryCta": "Ontdek hoe het werkt",
       "visualAlt": "Illustratie van een team medewerkers dat samen een gedeelde challenge oplost om een beloning te ontgrendelen",
-      "visualReward": "Beloning ontgrendeld",
       "visualTeam": "3-5 spelers"
     }
   },

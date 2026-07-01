@@ -165,6 +165,7 @@ export function FeatureIconGrid() {
     { icon: "pulse", key: "trends" },
     { icon: "spark", key: "workshops" },
     { icon: "drop", key: "biomarker" },
+    { icon: "star", key: "cognitiveRewards" },
   ] as const;
   return (
     <div className="about-feature-grid">

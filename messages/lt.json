@@ -22,6 +22,10 @@
         "desc": "Mėginiai namuose",
         "label": "Biožymenų tyrimai"
       },
+      "cognitiveRewards": {
+        "desc": "Komandinis atlygio žaidimas",
+        "label": "Žaidimas ir atlygis"
+      },
       "trends": {
         "desc": "Veiklos rezultatai laikui bėgant",
         "label": "Ilgalaikės tendencijos"
@@ -107,7 +111,7 @@
       "location": "Upsala, Švedija · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork yra darbo vietos veiklos platforma, jungianti kasdienį kognityvinį lavinimą (WelloRise), įdarbinimo ir vidinius vertinimus (WelloWize), ilgalaikes veiklos tendencijas, tiesiogines sveikatos dirbtuves ir biožymenų mėginių tyrimus. Darbuotojai valdo savo duomenis; vadovai mato tik anonimizuotas, apibendrintas įžvalgas.",
+      "body": "WelloWork yra darbo vietos veiklos platforma, jungianti kasdienį kognityvinį lavinimą (WelloRise), įdarbinimo ir vidinius vertinimus (WelloWize), ilgalaikes veiklos tendencijas, tiesiogines sveikatos dirbtuves, biožymenų mėginių tyrimus ir komandinį atlygio žaidimą (Cognitive Rewards). Darbuotojai valdo savo duomenis; vadovai mato tik anonimizuotas, apibendrintas įžvalgas.",
       "title": "Ką daro WelloWork?"
     },
     "who": {
@@ -3166,7 +3170,6 @@
       "primaryCta": "Užsisakyti Cognitive Rewards",
       "secondaryCta": "Sužinoti, kaip tai veikia",
       "visualAlt": "Iliustracija, kurioje darbuotojų komanda kartu sprendžia bendrą iššūkį, kad atrakintų atlygį",
-      "visualReward": "Atlygis atrakintas",
       "visualTeam": "3-5 žaidėjai"
     }
   },
