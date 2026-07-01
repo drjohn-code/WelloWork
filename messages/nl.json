@@ -518,7 +518,8 @@
           "WelloWize [Assessment]",
           "Prestatietrends",
           "Workshops",
-          "Proactieve zorg"
+          "Proactieve zorg",
+          "Spel & beloning"
         ]
       },
       "research": {
@@ -1089,8 +1090,16 @@
       "description": "Werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — elk domein, de literatuur erachter en hoe WelloWork het operationaliseert."
     },
     "cognitiveRewards": {
-      "title": "Gamified beloningen die teams versterken | WelloWork",
-      "description": "Cognitive Rewards van WelloWork, mogelijk gemaakt door Puzzify: medewerkers ontgrendelen echte beloningen door puzzels op te lossen, solo of als team. Ontdek hoe het werkt."
+      "title": "Cognitive Rewards: teambeloningen die je samen verdient | WelloWork",
+      "description": "Cognitive Rewards is WelloWork's eigen teamgerichte beloningsspel: medewerkers in groepen van 3-5 lossen samen een live, AI-geleide challenge op om een door het bedrijf gefinancierde beloningspot te ontgrendelen en te verdelen."
+    },
+    "cognitiveRewardsOrder": {
+      "title": "Order Cognitive Rewards | WelloWork",
+      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+    },
+    "cognitiveRewardsOrderPayment": {
+      "title": "Payment | Order Cognitive Rewards | WelloWork",
+      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
     }
   },
   "nav": {
@@ -1104,6 +1113,7 @@
     },
     "items": {
       "about": "Over ons",
+      "gameReward": "Spel & beloning",
       "platform": "Platform",
       "pricing": "Prijzen",
       "research": "Onderzoek",
@@ -2975,132 +2985,124 @@
       "current": "Cognitive Rewards"
     },
     "hero": {
-      "eyebrow": "Cognitive Rewards · mogelijk gemaakt door Puzzify",
-      "titleLead": "Gamified beloningen voor medewerkers, ",
-      "titleAccent": "verdiend door uitdagingen op te lossen",
-      "lede": "Een betrokkenheidsprogramma waarin uw mensen echte beloningen ontgrendelen door redeneren, probleemoplossing en samenwerking — niet door passief in te lossen.",
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Teambeloningen, ",
+      "titleAccent": "verdiend door samen te spelen",
+      "lede": "Een live, teamgericht spel dat uw bedrijf financiert en uw mensen spelen — ze redeneren, communiceren en lossen samen een AI-geleide challenge op om een gedeelde beloning te ontgrendelen.",
       "answerLabel": "Kort gezegd:",
-      "answerBody": "Cognitive Rewards is een betrokkenheidsprogramma van WelloWork, mogelijk gemaakt door Puzzify, waarin medewerkers beloningen ontgrendelen — coupons en cadeaus die uw bedrijf financiert — door puzzels en uitdagingen op te lossen die redeneren, focus en probleemoplossing trainen. Ze kunnen solo of als team spelen en verdienen erkenning door inzet in plaats van door passief in te lossen.",
-      "primaryCta": "Bestel Cognitive Rewards",
-      "secondaryCta": "Plan een adviesgesprek"
+      "answerBody": "Cognitive Rewards is een betrokkenheidsspel van WelloWork waarin teams van 3 tot 5 medewerkers samen een korte, AI-geleide challenge spelen en zich een weg banen door puzzels rond redeneren, focus en communicatie. Zodra het team de laatste challenge kraakt, ontgrendelt de door uw bedrijf gefinancierde beloningspot en wordt deze verdeeld naar bijdrage, met een gegarandeerd minimumaandeel voor iedereen die meespeelde.",
+      "primaryCta": "Cognitive Rewards bestellen",
+      "secondaryCta": "Boek een consult"
     },
     "whatItIs": {
       "heading": "Wat is Cognitive Rewards?",
-      "body1": "Cognitive Rewards is een samenwerking tussen WelloWork en Puzzify. Uw bedrijf financiert een pot met beloningen; uw mensen verdienen ze door puzzels en uitdagingen op te lossen die draaien om redeneren, focus en probleemoplossing. Het maakt erkenning actief — verdiend door cognitieve inzet in plaats van zomaar uitgedeeld.",
-      "body2": "Omdat beloningen gekoppeld zijn aan uitdagingen en niet aan aanwezigheid of anciënniteit, fungeert het programma tegelijk als lichte cognitieve training en een gedeeld moment voor teams — zonder de werkdruk van wie dan ook te verhogen."
+      "body1": "Cognitive Rewards is WelloWork's eigen teamgerichte betrokkenheidsspel. Uw bedrijf financiert een beloningspot, en teams van 3 tot 5 medewerkers verdienen deze samen door zich een weg te banen door een live, AI-geleide challenge rond redeneren, focus, probleemoplossing en communicatie.",
+      "body2": "Elke sessie is kort, visueel en makkelijk op te pakken — de waarde zit in wat teams samen moeten doen, niet in hoe moeilijk de puzzels zijn. Omdat beloningen worden verdiend door te spelen in plaats van door dienstjaren of aanwezigheid, is het spel ook een luchtig teambuildingmoment zonder extra werkdruk."
     },
     "howItWorks": {
       "heading": "Hoe verdienen medewerkers beloningen?",
-      "intro": "Het verloop is eenvoudig, of iemand nu solo of met zijn team speelt.",
+      "intro": "Elke beloning wordt verdiend door een team dat in realtime samenwerkt.",
       "steps": {
         "receive": {
-          "title": "Ontvang een uitdaging",
-          "body": "Medewerkers krijgen een puzzel of set uitdagingen op het Puzzify-platform, afgestemd op de beloning die uw bedrijf heeft gefinancierd."
+          "title": "Vorm een team en ontvang een challenge",
+          "body": "Medewerkers vormen teams van 3, 4 of 5 en ontvangen een thematische challenge die aansluit bij de beloningspot die uw bedrijf heeft gefinancierd."
         },
         "solve": {
-          "title": "Los de puzzels op",
-          "body": "Ze werken aan opdrachten die redeneren, focus en probleemoplossing trainen — alleen of samen met collega's."
+          "title": "Werk er samen doorheen",
+          "body": "Elke speler ziet een ander deel van de puzzel, dus het team moet praten, kennis delen en redeneringen combineren om vooruitgang te boeken."
         },
         "unlock": {
-          "title": "Ontgrendel de beloning",
-          "body": "Bij afronding wordt de beloning ontgrendeld. Bij teamuitdagingen gebeurt dat gezamenlijk en wordt de beloning gedeeld onder iedereen die meedeed."
+          "title": "Ontgrendel en verdeel de beloning",
+          "body": "Zodra het team de laatste challenge kraakt, ontgrendelt de beloning voor iedereen die meespeelde en wordt deze verdeeld naar bijdrage, met een gegarandeerd minimumaandeel per teamlid."
         }
       }
     },
-    "formats": {
-      "heading": "Individuele uitdagingen versus teamuitdagingen — wat past bij uw doelen?",
-      "intro": "Beide formats draaien op hetzelfde platform. Kies op basis van het gewenste resultaat — persoonlijke erkenning of teamcohesie.",
-      "caption": "Cognitive Rewards-formats vergeleken",
-      "colDimension": "Dimensie",
-      "colIndividual": "Individueel",
-      "colGroup": "Groep / team",
-      "rows": {
-        "how": {
-          "label": "Hoe het werkt",
-          "individual": "Eén medewerker werkt de uitdaging solo door.",
-          "group": "Een team lost samen een gedeelde uitdaging op."
+    "howAGameWorks": {
+      "heading": "Zo werkt een Cognitive Rewards-spel",
+      "intro": "Eén live sessie, één gedeeld doel — iedereen doet mee, niemand speelt alleen.",
+      "steps": {
+        "teamUp": {
+          "title": "Vorm een team van 3 tot 5 spelers",
+          "body": "Kies een teamgrootte en start een thematische sessie geleid door WelloWork's AI Game Master."
         },
-        "bestFor": {
-          "label": "Geschikt voor",
-          "individual": "Persoonlijke focus, erkenning en een moment van cognitieve training.",
-          "group": "Samenwerking, communicatie en teamcohesie."
+        "differentClues": {
+          "title": "Iedereen krijgt andere aanwijzingen",
+          "body": "Elke speler krijgt een ander deel van de puzzel, dus niemand heeft alleen het volledige beeld."
         },
-        "builds": {
-          "label": "Wat het opbouwt",
-          "individual": "Redeneren, focus en probleemoplossing.",
-          "group": "Gezamenlijke probleemoplossing en vertrouwen tussen collega's."
+        "talkItThrough": {
+          "title": "Praat het samen door",
+          "body": "Het team vergelijkt aantekeningen, deelt aanwijzingen hardop en redeneert samen door een reeks gekoppelde puzzels om een gedeelde sleutel te kraken."
         },
-        "reward": {
-          "label": "Beloning",
-          "individual": "Bij afronding ontgrendeld door het individu.",
-          "group": "Gezamenlijk ontgrendeld en verdeeld onder de deelnemers."
+        "crackIt": {
+          "title": "Kraak de laatste challenge",
+          "body": "Het oplossen van de gedeelde sleutel ontgrendelt een gezamenlijke slotchallenge die wordt beoordeeld door de Game Master — en de beloningspot voor het hele team."
         }
       }
     },
     "whyItWorks": {
-      "heading": "Waarom werkt gamified erkenning op basis van inzet?",
-      "intro": "Erkenning komt harder aan wanneer ze verdiend is. Cognitive Rewards combineert meerdere elementen die betrokkenheid doorgaans bevorderen.",
+      "heading": "Waarom werkt gamified, op inzet gebaseerde erkenning?",
+      "intro": "Erkenning komt harder binnen als hij samen wordt verdiend. Cognitive Rewards combineert meerdere factoren die betrokkenheid stimuleren.",
       "points": {
         "play": {
           "title": "Betrokkenheid door spel",
-          "body": "Spelmechanismen maken deelname vrijwillig en plezierig — niet zomaar weer een taak op de lijst."
+          "body": "Spelmechanieken maken deelname vrijwillig en leuk, niet nog een taak op de lijst."
         },
         "exercise": {
           "title": "Echte cognitieve training",
-          "body": "Uitdagingen doen een beroep op redeneren, focus en probleemoplossing — dezelfde bouwstenen waarop de training van WelloWork is gebaseerd."
+          "body": "Elke challenge doet een beroep op redeneren, focus en probleemoplossing — dezelfde vaardigheden waar WelloWork's training op is gebouwd."
         },
         "collaboration": {
-          "title": "Samenwerking die beklijft",
-          "body": "Teamuitdagingen geven collega's een gedeeld doel en een reden om te communiceren buiten hun gebruikelijke werk."
+          "title": "Echte samenwerking, niet alleen nabijheid",
+          "body": "Omdat elke speler een ander deel van de puzzel heeft, moet het team praten, luisteren en redeneringen combineren om te winnen."
         },
         "recognition": {
           "title": "Erkenning met betekenis",
-          "body": "Een beloning die door inzet is verdiend, is een teken van oprechte waardering, niet van een automatische extra."
+          "body": "Een beloning die het team samen verdient, verdeeld naar bijdrage, geeft blijk van oprechte erkenning in plaats van een automatische extraatje."
         }
       }
     },
     "whoFor": {
-      "heading": "Voor wie is het bedoeld?",
-      "intro": "Cognitive Rewards past bij teams die willen dat betrokkenheid en erkenning dubbel werk doen.",
+      "heading": "Voor wie is het?",
+      "intro": "Cognitive Rewards past bij teams die betrokkenheid en erkenning dubbel willen laten renderen.",
       "roles": {
         "hr": {
           "title": "HR- en People-teams",
-          "body": "Die initiatieven rond betrokkenheid, erkenning of welzijn uitvoeren waarvoor echte deelname nodig is."
+          "body": "Runnen betrokkenheids-, erkennings- of welzijnsinitiatieven die om oprechte deelname vragen."
         },
         "culture": {
           "title": "People & Culture-leiders",
-          "body": "Die cohesie opbouwen tussen teams, locaties of een hybride personeelsbestand."
+          "body": "Bouwen aan verbondenheid tussen teams, locaties of een hybride personeelsbestand."
         },
         "rewards": {
-          "title": "Total Rewards- en Benefits-leiders",
-          "body": "Die op zoek zijn naar een erkenningsvorm die actief en memorabel is, niet louter transactioneel."
+          "title": "Total Rewards- en benefits-leiders",
+          "body": "Zoeken een erkenningsvorm die actief en gedenkwaardig is, niet alleen transactioneel."
         }
       },
-      "orgSizes": "Geschikt voor teams van tien tot organisaties met duizenden medewerkers — uitdagingen en beloningspotten schalen mee."
+      "orgSizes": "Teams spelen in groepen van drie tot vijf, dus het format schaalt van één team van tien tot organisaties met duizenden medewerkers — challenges en beloningspotten schalen mee."
     },
     "related": {
       "heading": "Ontdek de rest van het platform",
-      "intro": "Cognitive Rewards staat naast het bredere platform van WelloWork voor werkprestaties.",
+      "intro": "Cognitive Rewards staat naast WelloWork's bredere platform voor werkplekprestaties.",
       "links": {
         "growth": {
           "label": "Dagelijkse cognitieve training met WelloRise",
-          "desc": "Adaptieve oefeningen over vijf gevalideerde cognitieve bouwstenen."
+          "desc": "Adaptieve oefeningen over vijf gevalideerde cognitieve domeinen."
         },
         "workshops": {
-          "label": "Live workshops over gezondheid en prestaties",
+          "label": "Live gezondheids- en prestatieworkshops",
           "desc": "Fysieke en online sessies voor uw teams."
         },
         "assessment": {
-          "label": "Cognitieve assessments en teamassessments",
-          "desc": "Krijg inzicht in sterke punten en teamsamenstelling met WelloWize."
+          "label": "Cognitieve en teambeoordelingen",
+          "desc": "Begrijp sterktes en teamsamenstelling met WelloWize."
         },
         "measure": {
           "label": "Longitudinale prestatietrends",
-          "desc": "Volg geaggregeerde, geanonimiseerde trends in de tijd."
+          "desc": "Volg geaggregeerde, geanonimiseerde trends over tijd."
         },
         "research": {
           "label": "Het onderzoek achter onze aanpak",
-          "desc": "Hoe WelloWork zijn methoden onderbouwt met bewijs."
+          "desc": "Hoe WelloWork zijn methodes verankert in bewijs."
         }
       }
     },
@@ -3108,62 +3110,166 @@
       "heading": "Veelgestelde vragen",
       "items": {
         "ordering": {
-          "q": "Hoe werkt het bestellen?",
-          "a": "U bestelt via het Puzzify-platform, waar u een pot met beloningen financiert en de uitdagingen opzet die uw mensen gaan spelen. De knop “Bestel Cognitive Rewards” op deze pagina brengt u er rechtstreeks naartoe. WelloWork helpt u graag om vóór de start het juiste format en de juiste mix van beloningen te bepalen."
-        },
-        "individualGroup": {
-          "q": "Wat is het verschil tussen individuele uitdagingen en teamuitdagingen?",
-          "a": "Individuele uitdagingen worden solo opgelost en de beloning wordt door die persoon ontgrendeld. Teamuitdagingen worden samen door een groep opgelost; de beloning wordt gezamenlijk ontgrendeld en verdeeld onder iedereen die meedeed. Het individuele format past bij persoonlijke erkenning, terwijl het teamformat gemaakt is voor samenwerking en cohesie."
+          "q": "Hoe werkt bestellen?",
+          "a": "Kies een teamgrootte van drie, vier of vijf, voeg de spelers toe die meedoen en financier de beloningspot voor uw sessie. De knop \"Cognitive Rewards bestellen\" op deze pagina helpt u op weg, en WelloWork kan u helpen bij het bepalen van teamgroottes en beloningsmix voordat u besluit."
         },
         "languages": {
           "q": "Welke talen worden ondersteund?",
-          "a": "De ervaring met uitdagingen en beloningen draait op het Puzzify-platform — neem vóór het bestellen contact op om te bevestigen welke talen voor uw teams beschikbaar zijn. Het eigen materiaal van WelloWork is momenteel beschikbaar in het Engels."
+          "a": "Cognitive Rewards is meertalig, zodat teams kunnen spelen in de taal waarin ze zich het prettigst voelen. Laat ons weten welke talen uw teams nodig hebben bij het opzetten van uw sessie."
         },
         "delivery": {
           "q": "Hoe worden beloningen geleverd?",
-          "a": "Beloningen zijn coupons en cadeaus die door uw bedrijf worden gefinancierd en via het Puzzify-platform worden geleverd zodra een uitdaging is afgerond. De specifieke catalogus en de afhandeling worden beheerd op Puzzify, en we helpen u graag bij het kiezen van een mix van beloningen die bij uw team past."
+          "a": "Zodra een team zijn beloning ontgrendelt, ontvangt elke speler deze digitaal — een prepaid Visa- of Mastercard, of een cadeaubon naar keuze — verdeeld naar bijdrage met een gegarandeerd minimumaandeel, zodat iedereen die meespeelde iets waardevols meeneemt."
         },
         "privacy": {
           "q": "Hoe zit het met de privacy van deelname?",
-          "a": "In lijn met de aanpak van WelloWork zijn medewerkers eigenaar van hun deelname: mensen doen vrijwillig mee en managers zien betrokkenheid op geaggregeerd, geanonimiseerd niveau in plaats van individuen te volgen. De afhandeling van beloningen verloopt via het Puzzify-platform — bevestig de details met ons en met Puzzify vóór de uitrol."
+          "a": "In lijn met de aanpak van WelloWork zijn medewerkers eigenaar van hun deelname. Uw bedrijf ziet een geaggregeerd overzicht van vaardigheden en betrokkenheid per team, terwijl de speelse interactie binnen elke sessie privé blijft voor het team dat speelde."
         }
       }
     },
     "finalCta": {
       "headingLead": "Maak van erkenning ",
-      "headingAccent": "iets dat je verdient",
-      "body": "Breng gamified beloningen op basis van inzet naar uw team met Cognitive Rewards, mogelijk gemaakt door Puzzify.",
-      "primaryCta": "Bestel Cognitive Rewards",
-      "secondaryCta": "Plan een adviesgesprek"
+      "headingAccent": "iets wat uw team samen verdient",
+      "body": "Geef uw mensen een live, teamgericht beloningsspel met Cognitive Rewards — WelloWork's eigen betrokkenheidsplatform.",
+      "primaryCta": "Cognitive Rewards bestellen",
+      "secondaryCta": "Boek een consult"
     },
     "section": {
-      "eyebrow": "Cognitive Rewards · mogelijk gemaakt door Puzzify",
-      "headingLead": "Beloningen die je team ",
-      "headingAccent": "verdient door te denken",
-      "body": "Een gamified betrokkenheidsprogramma waarin medewerkers echte beloningen ontgrendelen door puzzels op te lossen — solo of als team.",
+      "eyebrow": "Cognitive Rewards",
+      "headingLead": "Beloningen die uw team ",
+      "headingAccent": "verdient door na te denken",
+      "body": "Een live, teamgericht spel waarin medewerkers een gedeelde beloning ontgrendelen door samen te redeneren, communiceren en een AI-geleide challenge op te lossen.",
       "points": {
         "cognitive": {
           "title": "Cognitieve vaardigheden",
-          "body": "Uitdagingen trainen redeneren, focus en probleemoplossing."
+          "body": "Elke challenge traint redeneren, focus en probleemoplossing."
         },
         "teamwork": {
-          "title": "Teamwerk",
-          "body": "Groepsuitdagingen ontgrendelen een gedeelde beloning, verdeeld onder het team."
+          "title": "Teamwork",
+          "body": "Teams van 3 tot 5 spelen samen — iedereen heeft een eigen deel van de puzzel."
         },
         "recognition": {
-          "title": "Erkenning op basis van inzet",
-          "body": "Beloningen worden verdiend door inzet, niet passief ingelost."
+          "title": "Op inzet gebaseerde erkenning",
+          "body": "De beloningspot ontgrendelt voor het hele team en wordt verdeeld naar bijdrage."
         }
       },
-      "primaryCta": "Bestel Cognitive Rewards",
+      "primaryCta": "Cognitive Rewards bestellen",
       "secondaryCta": "Ontdek hoe het werkt",
-      "visualAlt": "Illustratie van medewerkers die samen een beloning ontgrendelen door een puzzel op te lossen",
+      "visualAlt": "Illustratie van een team medewerkers dat samen een gedeelde challenge oplost om een beloning te ontgrendelen",
       "visualReward": "Beloning ontgrendeld",
-      "visualSolo": "Solo",
-      "visualTeam": "Team"
+      "visualTeam": "3-5 spelers"
+    }
+  },
+  "cognitiveRewardsOrder": {
+    "crumbs": {
+      "home": "Home",
+      "cognitiveRewards": "Cognitive Rewards",
+      "current": "Order",
+      "payment": "Payment"
     },
-    "external": {
-      "newTab": "(opent het Puzzify-platform in een nieuw tabblad)"
+    "eyebrow": "Cognitive Rewards",
+    "titleLead": "Set up your team's ",
+    "titleAccent": "reward game",
+    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "wizard": {
+      "stepLabel": "Step {current} of {total}",
+      "steps": {
+        "teamSize": "Team size",
+        "players": "Players",
+        "pool": "Reward pool",
+        "review": "Review & pay"
+      },
+      "nav": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Continue to payment",
+        "submitting": "Processing…"
+      },
+      "step1": {
+        "heading": "Choose your team size",
+        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
+        "playersCount": "{n} players",
+        "vatSuffix": "+ VAT",
+        "helper": "Your team size sets the game fee and creates one player row in the next step."
+      },
+      "step2": {
+        "heading": "Add your players",
+        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
+        "playerLabel": "Player {n}",
+        "fields": {
+          "name": "Full name",
+          "email": "Email",
+          "role": "Role"
+        },
+        "rolePlaceholder": "Select a role",
+        "roles": {
+          "staff": "Staff",
+          "manager": "Manager",
+          "clevel": "C-level"
+        },
+        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+      },
+      "step3": {
+        "heading": "Fund the reward pool",
+        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
+        "quickPickLabel": "Quick amounts",
+        "customLabel": "Custom amount (€)",
+        "minHint": "Minimum €100, whole euros only.",
+        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+      },
+      "step4": {
+        "heading": "Your details & review",
+        "fields": {
+          "buyerName": "Your name",
+          "buyerEmail": "Work email",
+          "buyerCompany": "Company name"
+        },
+        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "summary": {
+          "heading": "Order summary",
+          "gameFee": "Game fee ({size} players)",
+          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
+          "rewardPool": "Reward pool (paid out to your team, no VAT)",
+          "total": "Total",
+          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+        },
+        "consent": {
+          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
+          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+        }
+      },
+      "errors": {
+        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
+        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
+        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
+        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
+        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
+        "REQUIRED_PLAYER_ROLE": "Select a role.",
+        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
+        "REQUIRED_BUYER_NAME": "Enter your full name.",
+        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
+        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
+        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
+        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
+        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
+        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
+        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
+        "NETWORK": "Connection problem — please check you're online and try again.",
+        "GENERIC": "Something went wrong. Please try again."
+      }
+    },
+    "payment": {
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Continue to ",
+      "titleAccent": "payment",
+      "lede": "Payment is coming soon. Here's what you're about to pay for.",
+      "orderReference": "Order reference",
+      "summaryHeading": "Order summary",
+      "payButton": "Pay securely",
+      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
+      "missingHeading": "We couldn't find this order",
+      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
+      "startNew": "Start a new order"
     }
   }
 }

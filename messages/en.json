@@ -511,7 +511,8 @@
           "WelloWize [Assessment]",
           "Performance trends",
           "Workshops",
-          "Proactive Care"
+          "Proactive Care",
+          "Game & Reward"
         ]
       },
       "research": {
@@ -1082,8 +1083,16 @@
       "description": "Working memory, processing speed, attention, problem solving, and cognitive flexibility — each domain, the literature behind it, and how WelloWork operationalises it."
     },
     "cognitiveRewards": {
-      "title": "Gamified Employee Rewards That Build Teams | WelloWork",
-      "description": "Cognitive Rewards by WelloWork, powered by Puzzify: employees unlock real rewards by solving puzzles solo or as a team. See how effort-based recognition works."
+      "title": "Cognitive Rewards: Team Rewards Earned By Playing Together | WelloWork",
+      "description": "Cognitive Rewards is WelloWork's own team-based reward game: employees in groups of 3-5 solve a live, AI-hosted challenge together to unlock and split a company-funded reward pool."
+    },
+    "cognitiveRewardsOrder": {
+      "title": "Order Cognitive Rewards | WelloWork",
+      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+    },
+    "cognitiveRewardsOrderPayment": {
+      "title": "Payment | Order Cognitive Rewards | WelloWork",
+      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
     }
   },
   "nav": {
@@ -1097,6 +1106,7 @@
     },
     "items": {
       "about": "About",
+      "gameReward": "Game & Reward",
       "platform": "Platform",
       "pricing": "Pricing",
       "research": "Research",
@@ -2968,71 +2978,63 @@
       "current": "Cognitive Rewards"
     },
     "hero": {
-      "eyebrow": "Cognitive Rewards · powered by Puzzify",
-      "titleLead": "Gamified employee rewards, ",
-      "titleAccent": "earned by solving challenges",
-      "lede": "An engagement program where your people unlock real rewards through reasoning, problem-solving and teamwork — not passive claims.",
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Team rewards, ",
+      "titleAccent": "earned by playing together",
+      "lede": "A live, team-based game your company funds and your people play — reasoning, communicating and solving an AI-hosted challenge together to unlock a shared reward.",
       "answerLabel": "In short:",
-      "answerBody": "Cognitive Rewards is a WelloWork engagement program, powered by Puzzify, where employees unlock rewards — coupons and gifts your company funds — by solving puzzles and challenges that exercise reasoning, focus and problem-solving. They can play solo or as a team, earning recognition through effort rather than passive claim.",
+      "answerBody": "Cognitive Rewards is a WelloWork engagement game where teams of 3 to 5 employees play a short, AI-hosted challenge together, working through puzzles built around reasoning, focus and communication. When the team cracks the final challenge, the reward pool your company funded unlocks and splits by contribution, with a guaranteed minimum share for everyone who played.",
       "primaryCta": "Order Cognitive Rewards",
       "secondaryCta": "Book a consultation"
     },
     "whatItIs": {
       "heading": "What is Cognitive Rewards?",
-      "body1": "Cognitive Rewards is a partnership between WelloWork and Puzzify. Your company funds a pool of rewards; your people earn them by working through puzzles and challenges built around reasoning, focus and problem-solving. It turns recognition into something active — earned through cognitive effort instead of handed out.",
-      "body2": "Because rewards are tied to challenges rather than attendance or tenure, the program doubles as light cognitive exercise and a shared moment for teams — without adding to anyone's workload."
+      "body1": "Cognitive Rewards is WelloWork's own team-based engagement game. Your company funds a reward pool, and teams of 3 to 5 employees earn it together by working through a live, AI-hosted challenge built around reasoning, focus, problem-solving and communication.",
+      "body2": "Each session is short, visual and easy to pick up — the value comes from what teams have to do together, not from how hard the puzzles are. Because rewards are earned through play rather than tenure or attendance, the game doubles as a light team-building moment without adding to anyone's workload."
     },
     "howItWorks": {
       "heading": "How do employees earn rewards?",
-      "intro": "The flow is simple, whether someone plays solo or with their team.",
+      "intro": "Every reward is earned by a team, working together in real time.",
       "steps": {
         "receive": {
-          "title": "Receive a challenge",
-          "body": "Employees get a puzzle or challenge set on the Puzzify platform, matched to the reward your company has funded."
+          "title": "Form a team and get a challenge",
+          "body": "Employees group into teams of 3, 4 or 5 and receive a themed challenge matched to the reward pool your company has funded."
         },
         "solve": {
-          "title": "Solve the puzzles",
-          "body": "They work through tasks that exercise reasoning, focus and problem-solving — alone or alongside teammates."
+          "title": "Work through it together",
+          "body": "Each player sees a different piece of the puzzle, so the team has to talk, share what they know and combine their reasoning to make progress."
         },
         "unlock": {
-          "title": "Unlock the reward",
-          "body": "On completion the reward unlocks. For team challenges it unlocks collectively and is shared among everyone who took part."
+          "title": "Unlock and split the reward",
+          "body": "When the team cracks the final challenge, the reward unlocks for everyone who played and splits by contribution, with a guaranteed minimum share for each teammate."
         }
       }
     },
-    "formats": {
-      "heading": "Individual vs. team challenges — which fits your goals?",
-      "intro": "Both formats run on the same platform. Choose by the outcome you want — personal recognition or team cohesion.",
-      "caption": "Cognitive Rewards formats compared",
-      "colDimension": "Dimension",
-      "colIndividual": "Individual",
-      "colGroup": "Group / team",
-      "rows": {
-        "how": {
-          "label": "How it works",
-          "individual": "One employee works through the challenge solo.",
-          "group": "A team solves a shared challenge together."
+    "howAGameWorks": {
+      "heading": "How a Cognitive Rewards game works",
+      "intro": "One live session, one shared goal — every player takes part, no one plays alone.",
+      "steps": {
+        "teamUp": {
+          "title": "Team up, 3 to 5 players",
+          "body": "Choose a team size and jump into a themed session hosted by WelloWork's AI Game Master."
         },
-        "bestFor": {
-          "label": "Best for",
-          "individual": "Personal focus, recognition and a moment of cognitive exercise.",
-          "group": "Collaboration, communication and team cohesion."
+        "differentClues": {
+          "title": "Everyone gets different clues",
+          "body": "Each player receives a different piece of the puzzle, so no one has the full picture alone."
         },
-        "builds": {
-          "label": "What it builds",
-          "individual": "Reasoning, focus and problem-solving.",
-          "group": "Collective problem-solving and trust between teammates."
+        "talkItThrough": {
+          "title": "Talk it through",
+          "body": "The team compares notes, shares clues out loud and reasons through a set of linked puzzles together to crack a shared key."
         },
-        "reward": {
-          "label": "Reward",
-          "individual": "Unlocked by the individual on completion.",
-          "group": "Unlocked collectively and split among participants."
+        "crackIt": {
+          "title": "Crack the final challenge",
+          "body": "Solving the shared key unlocks a collaborative final challenge graded by the Game Master — and the reward pool for the whole team."
         }
       }
     },
     "whyItWorks": {
       "heading": "Why does gamified, effort-based recognition work?",
-      "intro": "Recognition lands harder when it's earned. Cognitive Rewards combines several things that tend to drive engagement.",
+      "intro": "Recognition lands harder when it's earned together. Cognitive Rewards combines several things that tend to drive engagement.",
       "points": {
         "play": {
           "title": "Engagement through play",
@@ -3040,15 +3042,15 @@
         },
         "exercise": {
           "title": "Genuine cognitive exercise",
-          "body": "Challenges draw on reasoning, focus and problem-solving — the same constructs WelloWork's training is built around."
+          "body": "Every challenge draws on reasoning, focus and problem-solving — the same constructs WelloWork's training is built around."
         },
         "collaboration": {
-          "title": "Collaboration that sticks",
-          "body": "Team challenges give colleagues a shared goal and a reason to communicate outside their usual work."
+          "title": "Real collaboration, not just proximity",
+          "body": "Because every player holds a different piece of the puzzle, the team has to talk, listen and combine reasoning to win."
         },
         "recognition": {
           "title": "Recognition with meaning",
-          "body": "A reward earned through effort signals genuine acknowledgement, not an automatic perk."
+          "body": "A reward the team earns together, split by contribution, signals genuine acknowledgement rather than an automatic perk."
         }
       }
     },
@@ -3069,7 +3071,7 @@
           "body": "Looking for a recognition format that's active and memorable, not just transactional."
         }
       },
-      "orgSizes": "Works for teams of ten through to enterprises of thousands — challenges and reward pools scale to fit."
+      "orgSizes": "Teams play in groups of three to five, so the format scales from a single team of ten to enterprises with thousands of employees — challenges and reward pools scale with you."
     },
     "related": {
       "heading": "Explore the rest of the platform",
@@ -3102,61 +3104,165 @@
       "items": {
         "ordering": {
           "q": "How does ordering work?",
-          "a": "You order through the Puzzify platform, where you fund a pool of rewards and set up the challenges your people will play. The \"Order Cognitive Rewards\" button on this page takes you straight there. WelloWork can help you scope the right format and reward mix before you start."
-        },
-        "individualGroup": {
-          "q": "What's the difference between individual and team challenges?",
-          "a": "Individual challenges are solved solo, with the reward unlocked by that person. Team challenges are solved together by a group; the reward unlocks collectively and is split among everyone who took part. Individual format suits personal recognition, while team format is built for collaboration and cohesion."
+          "a": "Choose a team size of three, four or five, add the players who'll take part, and fund the reward pool for your session. The \"Order Cognitive Rewards\" button on this page gets you started, and WelloWork can help you scope team sizes and reward mix before you commit."
         },
         "languages": {
           "q": "What languages are supported?",
-          "a": "The challenge and reward experience runs on the Puzzify platform — reach out before ordering to confirm the languages available for your teams. WelloWork's own materials are currently provided in English."
+          "a": "Cognitive Rewards is multi-language, so teams can play in the language they're most comfortable with. Tell us which languages your teams need when you set up your session."
         },
         "delivery": {
           "q": "How are rewards delivered?",
-          "a": "Rewards are coupons and gifts funded by your company and delivered through the Puzzify platform once a challenge is completed. The specific catalogue and fulfilment are managed on Puzzify, and we can help you choose a reward mix that fits your team."
+          "a": "Once a team unlocks its reward, each player receives it digitally — a prepaid Visa or Mastercard, or a gift card of their choice — split by contribution with a guaranteed minimum share, so everyone who played takes home something meaningful."
         },
         "privacy": {
           "q": "What about the privacy of participation?",
-          "a": "In keeping with WelloWork's approach, employees own their participation: people take part voluntarily and managers see engagement at an aggregated, anonymised level rather than tracking individuals. Reward fulfilment is handled on the Puzzify platform — confirm the specifics with us and Puzzify before rolling out."
+          "a": "In keeping with WelloWork's approach, employees own their participation. Your company sees an aggregated skills and engagement readout across teams, while the playful back-and-forth inside each session stays private to the team that played."
         }
       }
     },
     "finalCta": {
       "headingLead": "Turn recognition into ",
-      "headingAccent": "something earned",
-      "body": "Bring gamified, effort-based rewards to your team with Cognitive Rewards, powered by Puzzify.",
+      "headingAccent": "something your team earns together",
+      "body": "Bring a live, team-based reward game to your people with Cognitive Rewards — WelloWork's own engagement platform.",
       "primaryCta": "Order Cognitive Rewards",
       "secondaryCta": "Book a consultation"
     },
     "section": {
-      "eyebrow": "Cognitive Rewards · powered by Puzzify",
+      "eyebrow": "Cognitive Rewards",
       "headingLead": "Rewards your team ",
       "headingAccent": "earns by thinking",
-      "body": "A gamified engagement program where employees unlock real rewards by solving puzzles — solo or as a team.",
+      "body": "A live, team-based game where employees unlock a shared reward by reasoning, communicating and solving an AI-hosted challenge together.",
       "points": {
         "cognitive": {
           "title": "Cognitive skills",
-          "body": "Challenges exercise reasoning, focus and problem-solving."
+          "body": "Every challenge exercises reasoning, focus and problem-solving."
         },
         "teamwork": {
           "title": "Teamwork",
-          "body": "Group challenges unlock a shared reward, split among the team."
+          "body": "Teams of 3 to 5 play together — everyone holds a different piece of the puzzle."
         },
         "recognition": {
           "title": "Effort-based recognition",
-          "body": "Rewards are earned through effort, not passively claimed."
+          "body": "The reward pool unlocks for the whole team and splits by contribution."
         }
       },
       "primaryCta": "Order Cognitive Rewards",
       "secondaryCta": "Learn how it works",
-      "visualAlt": "Illustration of employees unlocking a reward by solving a puzzle together",
+      "visualAlt": "Illustration of a team of employees solving a shared challenge together to unlock a reward",
       "visualReward": "Reward unlocked",
-      "visualSolo": "Solo",
-      "visualTeam": "Team"
+      "visualTeam": "3-5 players"
+    }
+  },
+  "cognitiveRewardsOrder": {
+    "crumbs": {
+      "home": "Home",
+      "cognitiveRewards": "Cognitive Rewards",
+      "current": "Order",
+      "payment": "Payment"
     },
-    "external": {
-      "newTab": "(opens the Puzzify platform in a new tab)"
+    "eyebrow": "Cognitive Rewards",
+    "titleLead": "Set up your team's ",
+    "titleAccent": "reward game",
+    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "wizard": {
+      "stepLabel": "Step {current} of {total}",
+      "steps": {
+        "teamSize": "Team size",
+        "players": "Players",
+        "pool": "Reward pool",
+        "review": "Review & pay"
+      },
+      "nav": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Continue to payment",
+        "submitting": "Processing…"
+      },
+      "step1": {
+        "heading": "Choose your team size",
+        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
+        "playersCount": "{n} players",
+        "vatSuffix": "+ VAT",
+        "helper": "Your team size sets the game fee and creates one player row in the next step."
+      },
+      "step2": {
+        "heading": "Add your players",
+        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
+        "playerLabel": "Player {n}",
+        "fields": {
+          "name": "Full name",
+          "email": "Email",
+          "role": "Role"
+        },
+        "rolePlaceholder": "Select a role",
+        "roles": {
+          "staff": "Staff",
+          "manager": "Manager",
+          "clevel": "C-level"
+        },
+        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+      },
+      "step3": {
+        "heading": "Fund the reward pool",
+        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
+        "quickPickLabel": "Quick amounts",
+        "customLabel": "Custom amount (€)",
+        "minHint": "Minimum €100, whole euros only.",
+        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+      },
+      "step4": {
+        "heading": "Your details & review",
+        "fields": {
+          "buyerName": "Your name",
+          "buyerEmail": "Work email",
+          "buyerCompany": "Company name"
+        },
+        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "summary": {
+          "heading": "Order summary",
+          "gameFee": "Game fee ({size} players)",
+          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
+          "rewardPool": "Reward pool (paid out to your team, no VAT)",
+          "total": "Total",
+          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+        },
+        "consent": {
+          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
+          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+        }
+      },
+      "errors": {
+        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
+        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
+        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
+        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
+        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
+        "REQUIRED_PLAYER_ROLE": "Select a role.",
+        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
+        "REQUIRED_BUYER_NAME": "Enter your full name.",
+        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
+        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
+        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
+        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
+        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
+        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
+        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
+        "NETWORK": "Connection problem — please check you're online and try again.",
+        "GENERIC": "Something went wrong. Please try again."
+      }
+    },
+    "payment": {
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Continue to ",
+      "titleAccent": "payment",
+      "lede": "Payment is coming soon. Here's what you're about to pay for.",
+      "orderReference": "Order reference",
+      "summaryHeading": "Order summary",
+      "payButton": "Pay securely",
+      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
+      "missingHeading": "We couldn't find this order",
+      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
+      "startNew": "Start a new order"
     }
   }
 }

@@ -6,9 +6,13 @@ import { Link, usePathname } from "@/i18n/navigation";
 import { Logo } from "./Logo";
 import { LocaleSwitcher } from "./LocaleSwitcher";
 
-const NAV_ITEMS: Array<{ key: "platform" | "solutions" | "pricing" | "research" | "about"; href: string }> = [
+const NAV_ITEMS: Array<{
+  key: "platform" | "solutions" | "gameReward" | "pricing" | "research" | "about";
+  href: string;
+}> = [
   { key: "platform", href: "/#platform" },
   { key: "solutions", href: "/#solutions" },
+  { key: "gameReward", href: "/cognitive-rewards" },
   { key: "pricing", href: "/#pricing" },
   { key: "research", href: "/#research" },
   { key: "about", href: "/about" },

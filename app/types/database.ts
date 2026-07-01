@@ -122,12 +122,78 @@ export type Database = {
         Update: Partial<Database["public"]["Tables"]["demo_bookings"]["Insert"]>;
         Relationships: [];
       };
+      cognitive_rewards_orders: {
+        Row: {
+          id: string;
+          created_at: string;
+          updated_at: string;
+          status: CognitiveRewardsOrderStatus;
+          buyer_name: string;
+          buyer_email: string;
+          company_name: string;
+          team_size: number;
+          game_fee: number;
+          vat_rate: number;
+          vat_amount: number;
+          reward_pool: number;
+          currency: string;
+          total: number;
+          locale: string | null;
+          consent_terms: boolean;
+          consent_gdpr: boolean;
+          user_agent: string | null;
+        };
+        Insert: {
+          id?: string;
+          created_at?: string;
+          updated_at?: string;
+          status?: CognitiveRewardsOrderStatus;
+          buyer_name: string;
+          buyer_email: string;
+          company_name: string;
+          team_size: number;
+          game_fee: number;
+          vat_rate: number;
+          vat_amount: number;
+          reward_pool: number;
+          currency?: string;
+          total: number;
+          locale?: string | null;
+          consent_terms?: boolean;
+          consent_gdpr?: boolean;
+          user_agent?: string | null;
+        };
+        Update: Partial<Database["public"]["Tables"]["cognitive_rewards_orders"]["Insert"]>;
+        Relationships: [];
+      };
+      cognitive_rewards_order_players: {
+        Row: {
+          id: string;
+          created_at: string;
+          order_id: string;
+          name: string;
+          email: string;
+          role: CognitiveRewardsPlayerRole;
+        };
+        Insert: {
+          id?: string;
+          created_at?: string;
+          order_id: string;
+          name: string;
+          email: string;
+          role: CognitiveRewardsPlayerRole;
+        };
+        Update: Partial<Database["public"]["Tables"]["cognitive_rewards_order_players"]["Insert"]>;
+        Relationships: [];
+      };
     };
     Views: Record<string, never>;
     Functions: Record<string, never>;
     Enums: {
       demo_booking_source: DemoBookingSource;
       demo_booking_status: DemoBookingStatus;
+      cognitive_rewards_order_status: CognitiveRewardsOrderStatus;
+      cognitive_rewards_player_role: CognitiveRewardsPlayerRole;
     };
   };
 };
@@ -140,7 +206,15 @@ export type DemoBookingStatus =
   | "completed"
   | "pending";
 
+export type CognitiveRewardsOrderStatus = "pending_payment" | "paid" | "cancelled";
+export type CognitiveRewardsPlayerRole = "staff" | "manager" | "clevel";
+
 export type DemoRequestInsert = Database["public"]["Tables"]["demo_requests"]["Insert"];
 export type ContactMessageInsert = Database["public"]["Tables"]["contact_messages"]["Insert"];
 export type DemoBookingInsert = Database["public"]["Tables"]["demo_bookings"]["Insert"];
 export type DemoBookingRow = Database["public"]["Tables"]["demo_bookings"]["Row"];
+export type CognitiveRewardsOrderInsert =
+  Database["public"]["Tables"]["cognitive_rewards_orders"]["Insert"];
+export type CognitiveRewardsOrderRow = Database["public"]["Tables"]["cognitive_rewards_orders"]["Row"];
+export type CognitiveRewardsOrderPlayerInsert =
+  Database["public"]["Tables"]["cognitive_rewards_order_players"]["Insert"];

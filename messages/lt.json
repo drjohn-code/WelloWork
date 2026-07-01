@@ -518,7 +518,8 @@
           "WelloWize [Vertinimas]",
           "Veiklos tendencijos",
           "Seminarai",
-          "Proaktyvi priežiūra"
+          "Proaktyvi priežiūra",
+          "Žaidimas ir atlygis"
         ]
       },
       "research": {
@@ -1089,8 +1090,16 @@
       "description": "Darbinė atmintis, apdorojimo greitis, dėmesys, problemų sprendimas ir kognityvinis lankstumas — kiekviena sritis, ją grindžianti literatūra ir kaip WelloWork ją operacionalizuoja."
     },
     "cognitiveRewards": {
-      "title": "Žaidybinis darbuotojų atlygis, kuriantis komandas | WelloWork",
-      "description": "Cognitive Rewards iš WelloWork, veikiantis su Puzzify: darbuotojai atrakina tikrą atlygį spręsdami galvosūkius vieni ar komandoje. Sužinokite, kaip tai veikia."
+      "title": "Cognitive Rewards: komandos atlygis, uždirbtas kartu | WelloWork",
+      "description": "Cognitive Rewards yra nuosavas WelloWork komandinis atlygio žaidimas: 3-5 darbuotojų komandos kartu sprendžia tiesioginį, DI valdomą iššūkį, kad atrakintų ir pasidalytų įmonės finansuojamą atlygio fondą."
+    },
+    "cognitiveRewardsOrder": {
+      "title": "Order Cognitive Rewards | WelloWork",
+      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+    },
+    "cognitiveRewardsOrderPayment": {
+      "title": "Payment | Order Cognitive Rewards | WelloWork",
+      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
     }
   },
   "nav": {
@@ -1104,6 +1113,7 @@
     },
     "items": {
       "about": "Apie mus",
+      "gameReward": "Žaidimas ir atlygis",
       "platform": "Platforma",
       "pricing": "Kainodara",
       "research": "Tyrimai",
@@ -2975,132 +2985,124 @@
       "current": "Cognitive Rewards"
     },
     "hero": {
-      "eyebrow": "Cognitive Rewards · veikia su Puzzify",
-      "titleLead": "Žaidybinis darbuotojų atlygis, ",
-      "titleAccent": "pelnomas sprendžiant iššūkius",
-      "lede": "Įsitraukimo programa, kurioje jūsų žmonės atrakina tikrą atlygį mąstydami, spręsdami problemas ir dirbdami komandoje — o ne pasyviai prašydami.",
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Komandos atlygis, ",
+      "titleAccent": "uždirbamas žaidžiant kartu",
+      "lede": "Tiesioginis, tik komandoms skirtas žaidimas, kurį finansuoja jūsų įmonė, o žaidžia jūsų žmonės — jie mąsto, bendrauja ir kartu sprendžia DI valdomą iššūkį, kad atrakintų bendrą atlygį.",
       "answerLabel": "Trumpai:",
-      "answerBody": "Cognitive Rewards yra WelloWork įsitraukimo programa, veikianti su Puzzify, kurioje darbuotojai atrakina atlygį — jūsų įmonės finansuojamus kuponus ir dovanas — spręsdami galvosūkius ir iššūkius, lavinančius mąstymą, dėmesį ir problemų sprendimą. Jie gali žaisti vieni arba komandoje, pelnydami pripažinimą per pastangas, o ne per pasyvų prašymą.",
+      "answerBody": "Cognitive Rewards yra WelloWork įsitraukimo žaidimas, kuriame 3-5 darbuotojų komandos kartu žaidžia trumpą, DI valdomą iššūkį, spręsdamos galvosūkius, sukurtus aplink mąstymą, susikaupimą ir bendravimą. Kai komanda įveikia paskutinį iššūkį, atrakinamas jūsų įmonės finansuojamas atlygio fondas ir paskirstomas pagal indėlį, garantuojant minimalią dalį kiekvienam žaidusiam.",
       "primaryCta": "Užsisakyti Cognitive Rewards",
       "secondaryCta": "Užsisakyti konsultaciją"
     },
     "whatItIs": {
       "heading": "Kas yra Cognitive Rewards?",
-      "body1": "Cognitive Rewards yra WelloWork ir Puzzify partnerystė. Jūsų įmonė finansuoja atlygio fondą; jūsų žmonės jį pelno spręsdami galvosūkius ir iššūkius, sukurtus aplink mąstymą, dėmesį ir problemų sprendimą. Pripažinimas tampa aktyvus — pelnomas per kognityvines pastangas, o ne dalijamas.",
-      "body2": "Kadangi atlygis siejamas su iššūkiais, o ne su lankomumu ar darbo stažu, programa kartu tampa lengvu kognityviniu pratimu ir bendra komandos akimirka — nepridedant nė vienam papildomo darbo."
+      "body1": "Cognitive Rewards yra nuosavas WelloWork komandinis įsitraukimo žaidimas. Jūsų įmonė finansuoja atlygio fondą, o 3-5 darbuotojų komandos jį uždirba kartu, spręsdamos tiesioginį, DI valdomą iššūkį, sukurtą aplink mąstymą, susikaupimą, problemų sprendimą ir bendravimą.",
+      "body2": "Kiekviena sesija yra trumpa, vaizdi ir lengvai suprantama — vertė slypi tame, ką komandos turi daryti kartu, o ne galvosūkių sudėtingume. Kadangi atlygis uždirbamas žaidžiant, o ne pagal darbo stažą ar dalyvavimą, žaidimas taip pat tampa lengvu komandos telkimo momentu, neapkraunant nieko papildomu darbu."
     },
     "howItWorks": {
-      "heading": "Kaip darbuotojai pelno atlygį?",
-      "intro": "Eiga paprasta — žaidžiama vienam ar su komanda.",
+      "heading": "Kaip darbuotojai uždirba atlygį?",
+      "intro": "Kiekvieną atlygį uždirba komanda, dirbanti kartu realiu laiku.",
       "steps": {
         "receive": {
-          "title": "Gaukite iššūkį",
-          "body": "Darbuotojai gauna galvosūkį ar iššūkių rinkinį Puzzify platformoje, suderintą su jūsų įmonės finansuotu atlygiu."
+          "title": "Suburkite komandą ir gaukite iššūkį",
+          "body": "Darbuotojai suburiami į 3, 4 ar 5 žmonių komandas ir gauna teminį iššūkį, atitinkantį jūsų įmonės finansuojamą atlygio fondą."
         },
         "solve": {
-          "title": "Išspręskite galvosūkius",
-          "body": "Jie atlieka užduotis, lavinančias mąstymą, dėmesį ir problemų sprendimą — vieni arba kartu su kolegomis."
+          "title": "Spręskite jį kartu",
+          "body": "Kiekvienas žaidėjas mato skirtingą galvosūkio dalį, todėl komanda turi kalbėtis, dalytis žiniomis ir derinti samprotavimus, kad judėtų į priekį."
         },
         "unlock": {
-          "title": "Atrakinkite atlygį",
-          "body": "Užbaigus atlygis atrakinamas. Komandiniuose iššūkiuose jis atrakinamas bendrai ir pasidalijamas tarp visų dalyvavusių."
+          "title": "Atrakinkite ir pasidalykite atlygiu",
+          "body": "Kai komanda įveikia paskutinį iššūkį, atlygis atrakinamas visiems žaidusiems ir paskirstomas pagal indėlį, garantuojant minimalią dalį kiekvienam komandos nariui."
         }
       }
     },
-    "formats": {
-      "heading": "Individualūs ar komandiniai iššūkiai — kuris tinka jūsų tikslams?",
-      "intro": "Abu formatai veikia toje pačioje platformoje. Rinkitės pagal norimą rezultatą — asmeninį pripažinimą ar komandos darną.",
-      "caption": "Cognitive Rewards formatų palyginimas",
-      "colDimension": "Kriterijus",
-      "colIndividual": "Individualus",
-      "colGroup": "Grupė / komanda",
-      "rows": {
-        "how": {
-          "label": "Kaip veikia",
-          "individual": "Vienas darbuotojas sprendžia iššūkį pats.",
-          "group": "Komanda kartu sprendžia bendrą iššūkį."
+    "howAGameWorks": {
+      "heading": "Kaip vyksta Cognitive Rewards žaidimas",
+      "intro": "Viena tiesioginė sesija, vienas bendras tikslas — dalyvauja visi, niekas nežaidžia vienas.",
+      "steps": {
+        "teamUp": {
+          "title": "Suburkite 3-5 žaidėjų komandą",
+          "body": "Pasirinkite komandos dydį ir prisijunkite prie teminės sesijos, kuriai vadovauja WelloWork DI Game Master."
         },
-        "bestFor": {
-          "label": "Tinkamiausia",
-          "individual": "Asmeniniam dėmesiui, pripažinimui ir kognityvinio pratimo akimirkai.",
-          "group": "Bendradarbiavimui, komunikacijai ir komandos darnai."
+        "differentClues": {
+          "title": "Kiekvienas gauna skirtingas užuominas",
+          "body": "Kiekvienas žaidėjas gauna skirtingą galvosūkio dalį, todėl niekas vienas neturi viso vaizdo."
         },
-        "builds": {
-          "label": "Ką ugdo",
-          "individual": "Mąstymą, dėmesį ir problemų sprendimą.",
-          "group": "Bendrą problemų sprendimą ir pasitikėjimą tarp kolegų."
+        "talkItThrough": {
+          "title": "Aptarkite kartu",
+          "body": "Komanda palygina užuominas, jomis dalijasi garsiai ir kartu samprotauja per susijusių galvosūkių seriją, kad įminta bendrą raktą."
         },
-        "reward": {
-          "label": "Atlygis",
-          "individual": "Užbaigus atrakinamas individualiai.",
-          "group": "Atrakinamas bendrai ir pasidalijamas tarp dalyvių."
+        "crackIt": {
+          "title": "Įveikite paskutinį iššūkį",
+          "body": "Įminus bendrą raktą, atrakinamas bendras baigiamasis iššūkis, kurį vertina Game Master — ir visos komandos atlygio fondas."
         }
       }
     },
     "whyItWorks": {
-      "heading": "Kodėl veikia žaidybinis, pastangomis grįstas pripažinimas?",
-      "intro": "Pripažinimas paveikia stipriau, kai yra pelnytas. Cognitive Rewards sujungia kelis dalykus, kurie paprastai skatina įsitraukimą.",
+      "heading": "Kodėl veikia žaismingas, pastangomis grįstas pripažinimas?",
+      "intro": "Pripažinimas jaučiamas stipriau, kai jis uždirbamas kartu. Cognitive Rewards apjungia kelis dalykus, skatinančius įsitraukimą.",
       "points": {
         "play": {
           "title": "Įsitraukimas per žaidimą",
-          "body": "Žaidimo mechanika dalyvavimą paverčia savanorišku ir maloniu, o ne dar viena užduotimi sąraše."
+          "body": "Žaidimo mechanika leidžia dalyvavimui jaustis savanoriškam ir maloniam, o ne dar viena užduotimi sąraše."
         },
         "exercise": {
           "title": "Tikras kognityvinis pratimas",
-          "body": "Iššūkiai remiasi mąstymu, dėmesiu ir problemų sprendimu — tais pačiais principais, kuriais grįstas WelloWork lavinimas."
+          "body": "Kiekvienas iššūkis remiasi mąstymu, susikaupimu ir problemų sprendimu — tais pačiais gebėjimais, ant kurių sukurtas WelloWork mokymas."
         },
         "collaboration": {
-          "title": "Bendradarbiavimas, kuris išlieka",
-          "body": "Komandiniai iššūkiai suteikia kolegoms bendrą tikslą ir priežastį bendrauti už įprastų darbų ribų."
+          "title": "Tikras bendradarbiavimas, o ne vien artumas",
+          "body": "Kadangi kiekvienas žaidėjas turi skirtingą galvosūkio dalį, komanda turi kalbėtis, klausytis ir derinti samprotavimus, kad laimėtų."
         },
         "recognition": {
-          "title": "Pripažinimas su prasme",
-          "body": "Pastangomis pelnytas atlygis reiškia tikrą įvertinimą, o ne automatišką privilegiją."
+          "title": "Prasmingas pripažinimas",
+          "body": "Atlygis, kurį komanda uždirba kartu ir pasidalija pagal indėlį, parodo tikrą pripažinimą, o ne automatinę privilegiją."
         }
       }
     },
     "whoFor": {
       "heading": "Kam tai skirta?",
-      "intro": "Cognitive Rewards tinka komandoms, norinčioms, kad įsitraukimas ir pripažinimas atliktų dvigubą vaidmenį.",
+      "intro": "Cognitive Rewards tinka komandoms, norinčioms, kad įsitraukimas ir pripažinimas atliktų dvigubą darbą.",
       "roles": {
         "hr": {
           "title": "HR ir personalo komandos",
-          "body": "Vykdančioms įsitraukimo, pripažinimo ar gerovės iniciatyvas, kurioms reikia tikro dalyvavimo."
+          "body": "Vykdo įsitraukimo, pripažinimo ar gerovės iniciatyvas, kurioms reikia tikro dalyvavimo."
         },
         "culture": {
           "title": "People & Culture vadovai",
-          "body": "Kuriantiems darną tarp komandų, padalinių ar hibridinės darbo jėgos."
+          "body": "Kuria sanglaudą tarp komandų, padalinių ar hibridinės darbo jėgos."
         },
         "rewards": {
           "title": "Total Rewards ir privilegijų vadovai",
-          "body": "Ieškantiems pripažinimo formato, kuris būtų aktyvus ir įsimintinas, o ne vien sandėrio pobūdžio."
+          "body": "Ieško aktyvaus ir įsimintino pripažinimo formato, o ne vien sandorio pobūdžio."
         }
       },
-      "orgSizes": "Tinka dešimties žmonių komandoms ir tūkstantinėms organizacijoms — iššūkiai ir atlygio fondai prisitaiko prie poreikių."
+      "orgSizes": "Komandos žaidžia trijų–penkių žmonių grupėmis, todėl formatas tinka nuo vienos dešimties žmonių komandos iki tūkstančius darbuotojų turinčių įmonių — iššūkiai ir atlygio fondai auga kartu su jumis."
     },
     "related": {
-      "heading": "Susipažinkite su likusia platforma",
-      "intro": "Cognitive Rewards yra greta platesnės WelloWork darbo vietos veiklos platformos.",
+      "heading": "Susipažinkite su likusia platformos dalimi",
+      "intro": "Cognitive Rewards papildo platesnę WelloWork darbo vietos efektyvumo platformą.",
       "links": {
         "growth": {
-          "label": "Kasdienis kognityvinis lavinimas su WelloRise",
-          "desc": "Adaptyvūs pratimai pagal penkis patvirtintus kognityvinius konstruktus."
+          "label": "Kasdienis kognityvinis mokymas su WelloRise",
+          "desc": "Adaptyvūs pratimai penkiose patvirtintose kognityvinėse srityse."
         },
         "workshops": {
-          "label": "Gyvi sveikatos ir veiklos seminarai",
-          "desc": "Gyvos ir internetinės sesijos jūsų komandoms."
+          "label": "Tiesioginiai sveikatos ir efektyvumo seminarai",
+          "desc": "Sesijos gyvai ir internetu jūsų komandoms."
         },
         "assessment": {
-          "label": "Kognityviniai ir komandų vertinimai",
-          "desc": "Suprasti stiprybes ir komandos sudėtį su WelloWize."
+          "label": "Kognityviniai ir komandos vertinimai",
+          "desc": "Supraskite stipriąsias puses ir komandos sudėtį su WelloWize."
         },
         "measure": {
           "label": "Ilgalaikės veiklos tendencijos",
-          "desc": "Stebėkite apibendrintas, nuasmenintas tendencijas laikui bėgant."
+          "desc": "Stebėkite apibendrintas, anonimizuotas tendencijas laikui bėgant."
         },
         "research": {
-          "label": "Tyrimai, kuriais grįstas mūsų požiūris",
-          "desc": "Kaip WelloWork savo metodus grindžia įrodymais."
+          "label": "Mūsų požiūrio pagrindas — tyrimai",
+          "desc": "Kaip WelloWork grindžia savo metodus įrodymais."
         }
       }
     },
@@ -3109,61 +3111,165 @@
       "items": {
         "ordering": {
           "q": "Kaip vyksta užsakymas?",
-          "a": "Užsakote per Puzzify platformą, kur finansuojate atlygio fondą ir sukuriate iššūkius, kuriuos spręs jūsų žmonės. Mygtukas „Užsisakyti Cognitive Rewards“ šiame puslapyje nukreipia jus tiesiai ten. WelloWork gali padėti parinkti tinkamą formatą ir atlygio derinį prieš pradedant."
-        },
-        "individualGroup": {
-          "q": "Kuo skiriasi individualūs ir komandiniai iššūkiai?",
-          "a": "Individualūs iššūkiai sprendžiami vienam, o atlygį atrakina tas pats žmogus. Komandiniai iššūkiai sprendžiami kartu grupėje; atlygis atrakinamas bendrai ir pasidalijamas tarp visų dalyvavusių. Individualus formatas tinka asmeniniam pripažinimui, o komandinis — bendradarbiavimui ir darnai."
+          "a": "Pasirinkite trijų, keturių ar penkių žmonių komandos dydį, pridėkite dalyvausiančius žaidėjus ir finansuokite savo sesijos atlygio fondą. Mygtukas „Užsisakyti Cognitive Rewards“ šiame puslapyje padės pradėti, o WelloWork gali padėti nustatyti komandos dydį ir atlygio derinį prieš įsipareigojant."
         },
         "languages": {
           "q": "Kokios kalbos palaikomos?",
-          "a": "Iššūkių ir atlygio patirtis veikia Puzzify platformoje — prieš užsakydami susisiekite, kad patvirtintumėte jūsų komandoms prieinamas kalbas. Pačios WelloWork medžiagos šiuo metu teikiamos anglų kalba."
+          "a": "Cognitive Rewards yra daugiakalbis, todėl komandos gali žaisti ta kalba, kuri joms patogiausia. Praneškite mums, kokių kalbų reikia jūsų komandoms, kai kursite sesiją."
         },
         "delivery": {
           "q": "Kaip pristatomas atlygis?",
-          "a": "Atlygis — tai jūsų įmonės finansuojami kuponai ir dovanos, pristatomi per Puzzify platformą, kai iššūkis užbaigiamas. Konkretus katalogas ir įvykdymas tvarkomi Puzzify, o mes galime padėti pasirinkti jūsų komandai tinkantį atlygio derinį."
+          "a": "Vos tik komanda atrakina savo atlygį, kiekvienas žaidėjas jį gauna skaitmeniniu būdu — iš anksto apmokėtą „Visa“ ar „Mastercard“ kortelę arba pasirinktą dovanų kortelę — paskirstytą pagal indėlį su garantuota minimalia dalimi, kad kiekvienas žaidęs gautų kažką reikšmingo."
         },
         "privacy": {
-          "q": "O kaip dėl dalyvavimo privatumo?",
-          "a": "Laikantis WelloWork požiūrio, darbuotojams priklauso jų dalyvavimas: žmonės dalyvauja savanoriškai, o vadovai mato įsitraukimą apibendrintu, nuasmenintu lygiu, o ne seka atskirus asmenis. Atlygio įvykdymas tvarkomas Puzzify platformoje — prieš diegdami patvirtinkite konkrečias detales su mumis ir Puzzify."
+          "q": "Kaip su dalyvavimo privatumu?",
+          "a": "Laikantis WelloWork požiūrio, darbuotojai patys valdo savo dalyvavimą. Jūsų įmonė mato apibendrintą įgūdžių ir įsitraukimo vaizdą pagal komandas, o žaismingas bendravimas kiekvienos sesijos viduje lieka privatus žaidusiai komandai."
         }
       }
     },
     "finalCta": {
-      "headingLead": "Paverskite pripažinimą ",
-      "headingAccent": "kažkuo pelnytu",
-      "body": "Suteikite savo komandai žaidybinį, pastangomis grįstą atlygį su Cognitive Rewards, veikiančiu su Puzzify.",
+      "headingLead": "Paverskite pripažinimą į ",
+      "headingAccent": "tai, ką jūsų komanda uždirba kartu",
+      "body": "Suteikite savo žmonėms tiesioginį, komandoms skirtą atlygio žaidimą su Cognitive Rewards — nuosava WelloWork įsitraukimo platforma.",
       "primaryCta": "Užsisakyti Cognitive Rewards",
       "secondaryCta": "Užsisakyti konsultaciją"
     },
     "section": {
-      "eyebrow": "Cognitive Rewards · veikia su Puzzify",
+      "eyebrow": "Cognitive Rewards",
       "headingLead": "Atlygis, kurį jūsų komanda ",
-      "headingAccent": "pelno mąstydama",
-      "body": "Žaidybinė įsitraukimo programa, kurioje darbuotojai atrakina tikrą atlygį spręsdami galvosūkius — vieni arba komandoje.",
+      "headingAccent": "uždirba mąstydama",
+      "body": "Tiesioginis, tik komandoms skirtas žaidimas, kuriame darbuotojai atrakina bendrą atlygį mąstydami, bendraudami ir kartu spręsdami DI valdomą iššūkį.",
       "points": {
         "cognitive": {
           "title": "Kognityviniai gebėjimai",
-          "body": "Iššūkiai lavina mąstymą, dėmesį ir problemų sprendimą."
+          "body": "Kiekvienas iššūkis lavina mąstymą, susikaupimą ir problemų sprendimą."
         },
         "teamwork": {
           "title": "Komandinis darbas",
-          "body": "Grupiniai iššūkiai atrakina bendrą atlygį, pasidalijamą tarp komandos."
+          "body": "3-5 žmonių komandos žaidžia kartu — kiekvienas turi skirtingą galvosūkio dalį."
         },
         "recognition": {
           "title": "Pastangomis grįstas pripažinimas",
-          "body": "Atlygis pelnomas per pastangas, o ne pasyviai prašomas."
+          "body": "Atlygio fondas atrakinamas visai komandai ir paskirstomas pagal indėlį."
         }
       },
       "primaryCta": "Užsisakyti Cognitive Rewards",
       "secondaryCta": "Sužinoti, kaip tai veikia",
-      "visualAlt": "Iliustracija, kurioje darbuotojai kartu atrakina atlygį spręsdami galvosūkį",
+      "visualAlt": "Iliustracija, kurioje darbuotojų komanda kartu sprendžia bendrą iššūkį, kad atrakintų atlygį",
       "visualReward": "Atlygis atrakintas",
-      "visualSolo": "Vienam",
-      "visualTeam": "Komandai"
+      "visualTeam": "3-5 žaidėjai"
+    }
+  },
+  "cognitiveRewardsOrder": {
+    "crumbs": {
+      "home": "Home",
+      "cognitiveRewards": "Cognitive Rewards",
+      "current": "Order",
+      "payment": "Payment"
     },
-    "external": {
-      "newTab": "(atveria Puzzify platformą naujame skirtuke)"
+    "eyebrow": "Cognitive Rewards",
+    "titleLead": "Set up your team's ",
+    "titleAccent": "reward game",
+    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "wizard": {
+      "stepLabel": "Step {current} of {total}",
+      "steps": {
+        "teamSize": "Team size",
+        "players": "Players",
+        "pool": "Reward pool",
+        "review": "Review & pay"
+      },
+      "nav": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Continue to payment",
+        "submitting": "Processing…"
+      },
+      "step1": {
+        "heading": "Choose your team size",
+        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
+        "playersCount": "{n} players",
+        "vatSuffix": "+ VAT",
+        "helper": "Your team size sets the game fee and creates one player row in the next step."
+      },
+      "step2": {
+        "heading": "Add your players",
+        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
+        "playerLabel": "Player {n}",
+        "fields": {
+          "name": "Full name",
+          "email": "Email",
+          "role": "Role"
+        },
+        "rolePlaceholder": "Select a role",
+        "roles": {
+          "staff": "Staff",
+          "manager": "Manager",
+          "clevel": "C-level"
+        },
+        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+      },
+      "step3": {
+        "heading": "Fund the reward pool",
+        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
+        "quickPickLabel": "Quick amounts",
+        "customLabel": "Custom amount (€)",
+        "minHint": "Minimum €100, whole euros only.",
+        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+      },
+      "step4": {
+        "heading": "Your details & review",
+        "fields": {
+          "buyerName": "Your name",
+          "buyerEmail": "Work email",
+          "buyerCompany": "Company name"
+        },
+        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "summary": {
+          "heading": "Order summary",
+          "gameFee": "Game fee ({size} players)",
+          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
+          "rewardPool": "Reward pool (paid out to your team, no VAT)",
+          "total": "Total",
+          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+        },
+        "consent": {
+          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
+          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+        }
+      },
+      "errors": {
+        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
+        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
+        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
+        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
+        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
+        "REQUIRED_PLAYER_ROLE": "Select a role.",
+        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
+        "REQUIRED_BUYER_NAME": "Enter your full name.",
+        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
+        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
+        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
+        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
+        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
+        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
+        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
+        "NETWORK": "Connection problem — please check you're online and try again.",
+        "GENERIC": "Something went wrong. Please try again."
+      }
+    },
+    "payment": {
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Continue to ",
+      "titleAccent": "payment",
+      "lede": "Payment is coming soon. Here's what you're about to pay for.",
+      "orderReference": "Order reference",
+      "summaryHeading": "Order summary",
+      "payButton": "Pay securely",
+      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
+      "missingHeading": "We couldn't find this order",
+      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
+      "startNew": "Start a new order"
     }
   }
 }

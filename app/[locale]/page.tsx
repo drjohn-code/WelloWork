@@ -23,10 +23,10 @@ export default async function Home({ params }: PageProps) {
       <div className="page-bg" />
       <Header />
       <Hero />
+      <CognitiveRewardsSection />
       <ProblemSection />
       <PlatformTabs />
       <SolutionsByRole />
-      <CognitiveRewardsSection />
       <AdvantageSection />
       <ResearchSection />
       <PricingTeaser />

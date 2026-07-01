@@ -13,6 +13,7 @@ const COLUMNS: FooterColumn[] = [
       "/platform/measure",
       "/platform/workshops",
       "/platform/proactive-care",
+      "/cognitive-rewards",
     ],
   },
   {

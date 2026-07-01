@@ -8,7 +8,7 @@ import { Breadcrumbs } from "@/app/components/Breadcrumbs";
 import { JsonLd } from "@/app/components/JsonLd";
 import { Reveal } from "@/app/components/Reveal";
 import { Icon } from "@/app/components/Icons";
-import { ExternalCTA } from "@/app/components/ExternalCTA";
+import { OrderCTA } from "@/app/components/OrderCTA";
 import { Link } from "@/i18n/navigation";
 import {
   SITE_URL,
@@ -27,7 +27,13 @@ const STEP_ICONS: Record<(typeof STEP_KEYS)[number], string> = {
   solve: "brain",
   unlock: "star",
 };
-const FORMAT_ROW_KEYS = ["how", "bestFor", "builds", "reward"] as const;
+const GAME_KEYS = ["teamUp", "differentClues", "talkItThrough", "crackIt"] as const;
+const GAME_ICONS: Record<(typeof GAME_KEYS)[number], string> = {
+  teamUp: "users",
+  differentClues: "layers",
+  talkItThrough: "flow",
+  crackIt: "star",
+};
 const WHY_KEYS = ["play", "exercise", "collaboration", "recognition"] as const;
 const WHY_ICONS: Record<(typeof WHY_KEYS)[number], string> = {
   play: "spark",
@@ -36,7 +42,7 @@ const WHY_ICONS: Record<(typeof WHY_KEYS)[number], string> = {
   recognition: "star",
 };
 const ROLE_KEYS = ["hr", "culture", "rewards"] as const;
-const FAQ_KEYS = ["ordering", "individualGroup", "languages", "delivery", "privacy"] as const;
+const FAQ_KEYS = ["ordering", "languages", "delivery", "privacy"] as const;
 const RELATED = [
   { key: "growth", href: "/platform/growth" },
   { key: "workshops", href: "/platform/workshops" },
@@ -93,7 +99,7 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
       "@type": "Service",
       name: "Cognitive Rewards",
       provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
-      serviceType: "Gamified employee rewards",
+      serviceType: "Team-based gamified employee rewards",
       areaServed: ["EU", "UK"],
       url: localizedUrl("/cognitive-rewards", loc),
       inLanguage: inLanguage(loc),
@@ -144,11 +150,7 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
           </Reveal>
           <Reveal delay={2}>
             <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 24 }}>
-              <ExternalCTA
-                label={t("hero.primaryCta")}
-                newTabHint={t("external.newTab")}
-                event="cognitive_rewards_order_hero"
-              />
+              <OrderCTA label={t("hero.primaryCta")} event="cognitive_rewards_order_hero" />
               <Link href="/book-a-demo" className="btn btn-glass">
                 {t("hero.secondaryCta")}
               </Link>
@@ -262,118 +264,78 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* Individual vs team — comparison table */}
+      {/* How a game works */}
       <section style={{ padding: "48px 0" }}>
         <div className="container">
           <Reveal>
-            <div style={{ maxWidth: 760, marginBottom: 28 }}>
-              <h2 style={SECTION_HEADING}>{t("formats.heading")}</h2>
-              <p style={SECTION_INTRO}>{t("formats.intro")}</p>
+            <div style={{ maxWidth: 760, marginBottom: 32 }}>
+              <h2 style={SECTION_HEADING}>{t("howAGameWorks.heading")}</h2>
+              <p style={SECTION_INTRO}>{t("howAGameWorks.intro")}</p>
             </div>
           </Reveal>
-          <Reveal delay={1}>
-            <div className="glass" style={{ padding: 0, overflow: "hidden" }}>
-              <table style={{ width: "100%", borderCollapse: "collapse", fontFamily: "var(--font-body)" }}>
-                <caption className="sr-only-caption" style={{ position: "absolute", left: -9999 }}>
-                  {t("formats.caption")}
-                </caption>
-                <thead>
-                  <tr>
-                    <th
-                      scope="col"
+          <div className="grid grid-2">
+            {GAME_KEYS.map((k, i) => (
+              <Reveal key={k} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
+                <article
+                  className="glass lift"
+                  style={{
+                    padding: 26,
+                    height: "100%",
+                    display: "flex",
+                    flexDirection: "column",
+                    gap: 14,
+                    minHeight: 170,
+                  }}
+                >
+                  <div style={{ display: "flex", alignItems: "center", gap: 12 }}>
+                    <span
+                      aria-hidden="true"
                       style={{
-                        textAlign: "left",
-                        padding: "16px 20px",
-                        fontSize: 12,
+                        width: 44,
+                        height: 44,
+                        borderRadius: 12,
+                        background:
+                          "linear-gradient(135deg, color-mix(in oklch, var(--accent) 18%, white), color-mix(in oklch, var(--secondary) 60%, white))",
+                        display: "flex",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        border: "1px solid rgba(255,255,255,0.7)",
+                      }}
+                    >
+                      <Icon name={GAME_ICONS[k]} size={22} />
+                    </span>
+                    <span
+                      style={{
+                        fontFamily: "var(--font-display)",
                         fontWeight: 700,
+                        fontSize: 13,
                         letterSpacing: "0.06em",
-                        textTransform: "uppercase",
-                        color: "var(--ink-3)",
-                        background: "rgba(15,29,69,0.03)",
-                        borderBottom: "1px solid rgba(15,29,69,0.08)",
+                        color: "var(--accent)",
                       }}
                     >
-                      {t("formats.colDimension")}
-                    </th>
-                    <th
-                      scope="col"
-                      style={{
-                        textAlign: "left",
-                        padding: "16px 20px",
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: "var(--ink-1)",
-                        background: "rgba(15,29,69,0.03)",
-                        borderBottom: "1px solid rgba(15,29,69,0.08)",
-                      }}
-                    >
-                      {t("formats.colIndividual")}
-                    </th>
-                    <th
-                      scope="col"
-                      style={{
-                        textAlign: "left",
-                        padding: "16px 20px",
-                        fontSize: 14,
-                        fontWeight: 700,
-                        color: "var(--primary)",
-                        background: "color-mix(in oklch, var(--accent) 8%, white)",
-                        borderBottom: "1px solid color-mix(in oklch, var(--accent) 22%, transparent)",
-                      }}
-                    >
-                      {t("formats.colGroup")}
-                    </th>
-                  </tr>
-                </thead>
-                <tbody>
-                  {FORMAT_ROW_KEYS.map((rk) => (
-                    <tr key={rk}>
-                      <th
-                        scope="row"
-                        style={{
-                          textAlign: "left",
-                          verticalAlign: "top",
-                          padding: "16px 20px",
-                          fontSize: 13.5,
-                          fontWeight: 600,
-                          color: "var(--ink-2)",
-                          borderBottom: "1px solid rgba(15,29,69,0.06)",
-                          width: "22%",
-                        }}
-                      >
-                        {t(`formats.rows.${rk}.label`)}
-                      </th>
-                      <td
-                        style={{
-                          verticalAlign: "top",
-                          padding: "16px 20px",
-                          fontSize: 14,
-                          lineHeight: 1.5,
-                          color: "var(--ink-2)",
-                          borderBottom: "1px solid rgba(15,29,69,0.06)",
-                        }}
-                      >
-                        {t(`formats.rows.${rk}.individual`)}
-                      </td>
-                      <td
-                        style={{
-                          verticalAlign: "top",
-                          padding: "16px 20px",
-                          fontSize: 14,
-                          lineHeight: 1.5,
-                          color: "var(--ink-1)",
-                          background: "color-mix(in oklch, var(--accent) 5%, white)",
-                          borderBottom: "1px solid color-mix(in oklch, var(--accent) 14%, transparent)",
-                        }}
-                      >
-                        {t(`formats.rows.${rk}.group`)}
-                      </td>
-                    </tr>
-                  ))}
-                </tbody>
-              </table>
-            </div>
-          </Reveal>
+                      {String(i + 1).padStart(2, "0")}
+                    </span>
+                  </div>
+                  <h3
+                    style={{
+                      fontFamily: "var(--font-display)",
+                      fontWeight: 600,
+                      fontSize: 18,
+                      lineHeight: 1.3,
+                      letterSpacing: "-0.01em",
+                      margin: 0,
+                      color: "var(--ink-1)",
+                    }}
+                  >
+                    {t(`howAGameWorks.steps.${k}.title`)}
+                  </h3>
+                  <p className="body" style={{ margin: 0, fontSize: 14.5 }}>
+                    {t(`howAGameWorks.steps.${k}.body`)}
+                  </p>
+                </article>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
@@ -387,7 +349,6 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
             </div>
           </Reveal>
           {/* TODO: verified stat + source — John to supply (e.g. engagement/participation lift). Do not fabricate. */}
-          {/* TODO: first-hand / partner insight from Puzzify — John to supply. Do not fabricate. */}
           <div className="grid grid-2">
             {WHY_KEYS.map((k, i) => (
               <Reveal key={k} delay={((i % 4) + 1) as 1 | 2 | 3 | 4}>
@@ -608,11 +569,7 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
                 {t("finalCta.body")}
               </p>
               <div style={{ display: "flex", gap: 12, justifyContent: "center", flexWrap: "wrap" }}>
-                <ExternalCTA
-                  label={t("finalCta.primaryCta")}
-                  newTabHint={t("external.newTab")}
-                  event="cognitive_rewards_order_footer"
-                />
+                <OrderCTA label={t("finalCta.primaryCta")} event="cognitive_rewards_order_footer" />
                 <Link href="/book-a-demo" className="btn btn-glass">
                   {t("finalCta.secondaryCta")}
                 </Link>

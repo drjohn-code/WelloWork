@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { Reveal } from "./Reveal";
 import { Icon } from "./Icons";
-import { ExternalCTA } from "./ExternalCTA";
+import { OrderCTA } from "./OrderCTA";
 
 const POINTS = [
   { key: "cognitive", icon: "brain" },
@@ -11,9 +11,10 @@ const POINTS = [
 ] as const;
 
 /**
- * Homepage section introducing Cognitive Rewards (powered by Puzzify) and linking
- * to the dedicated /cognitive-rewards landing page. Server Component — reuses the
- * site's section / glass / button primitives, no new design language.
+ * Homepage section introducing Cognitive Rewards, WelloWork's own team-based
+ * reward game, and linking to the dedicated /cognitive-rewards landing page.
+ * Server Component — reuses the site's section / glass / button primitives,
+ * no new design language.
  */
 export function CognitiveRewardsSection() {
   const t = useTranslations("cognitiveRewards.section");
@@ -104,11 +105,7 @@ export function CognitiveRewardsSection() {
 
             <Reveal delay={3}>
               <div style={{ display: "flex", gap: 12, flexWrap: "wrap" }}>
-                <ExternalCTA
-                  label={t("primaryCta")}
-                  newTabHint={t("secondaryCta")}
-                  event="cognitive_rewards_order_home"
-                />
+                <OrderCTA label={t("primaryCta")} event="cognitive_rewards_order_home" />
                 <Link href="/cognitive-rewards" className="btn btn-glass">
                   {t("secondaryCta")}
                 </Link>
@@ -120,7 +117,6 @@ export function CognitiveRewardsSection() {
             <RewardVisual
               alt={t("visualAlt")}
               reward={t("visualReward")}
-              solo={t("visualSolo")}
               team={t("visualTeam")}
             />
           </Reveal>
@@ -134,12 +130,10 @@ export function CognitiveRewardsSection() {
 function RewardVisual({
   alt,
   reward,
-  solo,
   team,
 }: {
   alt: string;
   reward: string;
-  solo: string;
   team: string;
 }) {
   return (
@@ -168,24 +162,24 @@ function RewardVisual({
         style={{
           position: "relative",
           display: "flex",
+          flexDirection: "column",
           alignItems: "center",
           justifyContent: "center",
-          gap: 18,
+          gap: 10,
           marginBottom: 22,
         }}
       >
-        {/* Two solvers → shared reward */}
-        <PuzzleTile label={solo} />
-        <svg width="40" height="24" viewBox="0 0 40 24" fill="none" aria-hidden="true">
+        {/* Team unlocking a shared reward */}
+        <PuzzleTile label={team} />
+        <svg width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true">
           <path
-            d="M2 12h30m0 0-7-6m7 6-7 6"
+            d="M12 2v18m0 0-6-6m6 6 6-6"
             stroke="var(--accent)"
             strokeWidth="2"
             strokeLinecap="round"
             strokeLinejoin="round"
           />
         </svg>
-        <PuzzleTile label={team} team />
       </div>
 
       <div
@@ -235,7 +229,7 @@ function RewardVisual({
   );
 }
 
-function PuzzleTile({ label, team = false }: { label: string; team?: boolean }) {
+function PuzzleTile({ label }: { label: string }) {
   return (
     <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
       <span
@@ -244,16 +238,15 @@ function PuzzleTile({ label, team = false }: { label: string; team?: boolean }) 
           width: 64,
           height: 64,
           borderRadius: 16,
-          background: team
-            ? "linear-gradient(135deg, color-mix(in oklch, var(--secondary-deep) 55%, white), white)"
-            : "linear-gradient(135deg, color-mix(in oklch, var(--accent) 22%, white), white)",
+          background:
+            "linear-gradient(135deg, color-mix(in oklch, var(--secondary-deep) 55%, white), white)",
           border: "1px solid rgba(22,43,92,0.10)",
           display: "flex",
           alignItems: "center",
           justifyContent: "center",
         }}
       >
-        <Icon name={team ? "users" : "cube"} size={28} />
+        <Icon name="users" size={28} />
       </span>
       <span
         style={{

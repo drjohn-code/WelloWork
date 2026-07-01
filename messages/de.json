@@ -518,7 +518,8 @@
           "WelloWize [Assessment]",
           "Leistungstrends",
           "Workshops",
-          "Proaktive Gesundheitsvorsorge"
+          "Proaktive Gesundheitsvorsorge",
+          "Spiel & Belohnung"
         ]
       },
       "research": {
@@ -1089,8 +1090,16 @@
       "description": "Arbeitsgedächtnis, Verarbeitungsgeschwindigkeit, Aufmerksamkeit, Problemlösung und kognitive Flexibilität — jede Domäne, die zugrunde liegende Literatur und wie WelloWork sie operationalisiert."
     },
     "cognitiveRewards": {
-      "title": "Spielerische Mitarbeiterbelohnungen | WelloWork",
-      "description": "Cognitive Rewards von WelloWork, ermöglicht durch Puzzify: Mitarbeitende schalten echte Belohnungen frei, indem sie Rätsel allein oder im Team lösen. Jetzt entdecken."
+      "title": "Cognitive Rewards: Teambelohnungen, gemeinsam verdient | WelloWork",
+      "description": "Cognitive Rewards ist WelloWorks eigenes teambasiertes Belohnungsspiel: Teams von 3-5 Mitarbeitenden lösen gemeinsam eine live, KI-geführte Challenge, um einen vom Unternehmen finanzierten Belohnungspool freizuschalten und aufzuteilen."
+    },
+    "cognitiveRewardsOrder": {
+      "title": "Order Cognitive Rewards | WelloWork",
+      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+    },
+    "cognitiveRewardsOrderPayment": {
+      "title": "Payment | Order Cognitive Rewards | WelloWork",
+      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
     }
   },
   "nav": {
@@ -1104,6 +1113,7 @@
     },
     "items": {
       "about": "Über uns",
+      "gameReward": "Spiel & Belohnung",
       "platform": "Plattform",
       "pricing": "Preise",
       "research": "Forschung",
@@ -2975,120 +2985,112 @@
       "current": "Cognitive Rewards"
     },
     "hero": {
-      "eyebrow": "Cognitive Rewards · ermöglicht durch Puzzify",
-      "titleLead": "Spielerische Mitarbeiterbelohnungen, ",
-      "titleAccent": "verdient durch das Lösen von Aufgaben",
-      "lede": "Ein Engagement-Programm, in dem Ihre Mitarbeitenden echte Belohnungen freischalten — durch logisches Denken, Problemlösen und Teamarbeit statt durch passives Einlösen.",
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Teambelohnungen, ",
+      "titleAccent": "verdient durch gemeinsames Spielen",
+      "lede": "Ein Live-Spiel für Teams, das Ihr Unternehmen finanziert und Ihre Mitarbeitenden spielen — sie denken, kommunizieren und lösen gemeinsam eine KI-geführte Challenge, um eine gemeinsame Belohnung freizuschalten.",
       "answerLabel": "Kurz gesagt:",
-      "answerBody": "Cognitive Rewards ist ein Engagement-Programm von WelloWork, ermöglicht durch Puzzify, bei dem Mitarbeitende Belohnungen freischalten — Gutscheine und Geschenke, die Ihr Unternehmen finanziert — indem sie Rätsel und Aufgaben lösen, die logisches Denken, Konzentration und Problemlösen trainieren. Sie können allein oder im Team spielen und erhalten Anerkennung durch Einsatz statt durch passives Einlösen.",
+      "answerBody": "Cognitive Rewards ist ein Engagement-Spiel von WelloWork, bei dem Teams aus 3 bis 5 Mitarbeitenden gemeinsam eine kurze, KI-geführte Challenge spielen und sich durch Rätsel arbeiten, die auf logischem Denken, Fokus und Kommunikation aufbauen. Knackt das Team die letzte Challenge, schaltet sich der von Ihrem Unternehmen finanzierte Belohnungspool frei und wird nach Beitrag aufgeteilt — mit einem garantierten Mindestanteil für alle, die mitgespielt haben.",
       "primaryCta": "Cognitive Rewards bestellen",
       "secondaryCta": "Beratung buchen"
     },
     "whatItIs": {
       "heading": "Was ist Cognitive Rewards?",
-      "body1": "Cognitive Rewards ist eine Partnerschaft zwischen WelloWork und Puzzify. Ihr Unternehmen finanziert einen Pool an Belohnungen; Ihre Mitarbeitenden verdienen sie, indem sie Rätsel und Aufgaben rund um logisches Denken, Konzentration und Problemlösen bewältigen. So wird Anerkennung zu etwas Aktivem — verdient durch kognitiven Einsatz statt einfach verteilt.",
-      "body2": "Da Belohnungen an Aufgaben geknüpft sind und nicht an Anwesenheit oder Betriebszugehörigkeit, dient das Programm zugleich als leichtes kognitives Training und als gemeinsamer Moment für Teams — ohne jemandes Arbeitslast zu erhöhen."
+      "body1": "Cognitive Rewards ist WelloWorks eigenes teambasiertes Engagement-Spiel. Ihr Unternehmen finanziert einen Belohnungspool, und Teams aus 3 bis 5 Mitarbeitenden verdienen ihn gemeinsam, indem sie sich durch eine live, KI-geführte Challenge arbeiten, die auf logischem Denken, Fokus, Problemlösung und Kommunikation aufbaut.",
+      "body2": "Jede Session ist kurz, visuell und leicht verständlich — der Wert liegt darin, was Teams gemeinsam tun müssen, nicht darin, wie schwer die Rätsel sind. Da Belohnungen durch Spielen statt durch Betriebszugehörigkeit oder Anwesenheit verdient werden, ist das Spiel zugleich ein leichter Teambuilding-Moment, ohne zusätzliche Arbeitsbelastung."
     },
     "howItWorks": {
       "heading": "Wie verdienen Mitarbeitende Belohnungen?",
-      "intro": "Der Ablauf ist einfach — ob jemand allein oder im Team spielt.",
+      "intro": "Jede Belohnung wird von einem Team verdient, das in Echtzeit zusammenarbeitet.",
       "steps": {
         "receive": {
-          "title": "Eine Aufgabe erhalten",
-          "body": "Mitarbeitende erhalten ein Rätsel oder eine Aufgabenreihe auf der Puzzify-Plattform, passend zur Belohnung, die Ihr Unternehmen finanziert hat."
+          "title": "Team bilden und Challenge erhalten",
+          "body": "Mitarbeitende bilden Teams aus 3, 4 oder 5 Personen und erhalten eine thematische Challenge passend zum vom Unternehmen finanzierten Belohnungspool."
         },
         "solve": {
-          "title": "Die Rätsel lösen",
-          "body": "Sie bewältigen Aufgaben, die logisches Denken, Konzentration und Problemlösen trainieren — allein oder gemeinsam mit Teamkolleg:innen."
+          "title": "Gemeinsam durcharbeiten",
+          "body": "Jede Person sieht ein anderes Teil des Puzzles, sodass das Team reden, Wissen teilen und Überlegungen kombinieren muss, um voranzukommen."
         },
         "unlock": {
-          "title": "Die Belohnung freischalten",
-          "body": "Nach Abschluss wird die Belohnung freigeschaltet. Bei Team-Aufgaben erfolgt die Freischaltung gemeinsam und wird unter allen Beteiligten aufgeteilt."
+          "title": "Belohnung freischalten und aufteilen",
+          "body": "Knackt das Team die letzte Challenge, schaltet sich die Belohnung für alle Mitspielenden frei und wird nach Beitrag aufgeteilt, mit einem garantierten Mindestanteil pro Teammitglied."
         }
       }
     },
-    "formats": {
-      "heading": "Einzel- oder Team-Aufgaben — was passt zu Ihren Zielen?",
-      "intro": "Beide Formate laufen auf derselben Plattform. Wählen Sie nach dem gewünschten Ergebnis — persönliche Anerkennung oder Teamzusammenhalt.",
-      "caption": "Cognitive-Rewards-Formate im Vergleich",
-      "colDimension": "Dimension",
-      "colIndividual": "Einzeln",
-      "colGroup": "Gruppe / Team",
-      "rows": {
-        "how": {
-          "label": "So funktioniert es",
-          "individual": "Ein:e Mitarbeitende:r bewältigt die Aufgabe allein.",
-          "group": "Ein Team löst eine gemeinsame Aufgabe zusammen."
+    "howAGameWorks": {
+      "heading": "So funktioniert ein Cognitive-Rewards-Spiel",
+      "intro": "Eine Live-Session, ein gemeinsames Ziel — alle machen mit, niemand spielt allein.",
+      "steps": {
+        "teamUp": {
+          "title": "Team bilden, 3 bis 5 Spieler",
+          "body": "Wählen Sie eine Teamgröße und starten Sie eine thematische Session, geleitet von WelloWorks KI-Spielleiter."
         },
-        "bestFor": {
-          "label": "Am besten geeignet für",
-          "individual": "Persönliche Konzentration, Anerkennung und einen Moment kognitiven Trainings.",
-          "group": "Zusammenarbeit, Kommunikation und Teamzusammenhalt."
+        "differentClues": {
+          "title": "Jeder erhält andere Hinweise",
+          "body": "Jede Person erhält ein anderes Teil des Puzzles, sodass niemand allein das ganze Bild kennt."
         },
-        "builds": {
-          "label": "Was es stärkt",
-          "individual": "Logisches Denken, Konzentration und Problemlösen.",
-          "group": "Gemeinsames Problemlösen und Vertrauen zwischen Teamkolleg:innen."
+        "talkItThrough": {
+          "title": "Gemeinsam durchsprechen",
+          "body": "Das Team vergleicht Notizen, teilt Hinweise laut mit und denkt gemeinsam durch eine Reihe verknüpfter Rätsel, um einen gemeinsamen Schlüssel zu knacken."
         },
-        "reward": {
-          "label": "Belohnung",
-          "individual": "Wird nach Abschluss von der Einzelperson freigeschaltet.",
-          "group": "Wird gemeinsam freigeschaltet und unter den Beteiligten aufgeteilt."
+        "crackIt": {
+          "title": "Letzte Challenge knacken",
+          "body": "Das Lösen des gemeinsamen Schlüssels schaltet eine gemeinsame Abschluss-Challenge frei, die vom Spielleiter bewertet wird — und den Belohnungspool für das ganze Team."
         }
       }
     },
     "whyItWorks": {
       "heading": "Warum funktioniert spielerische, leistungsbasierte Anerkennung?",
-      "intro": "Anerkennung wirkt stärker, wenn sie verdient ist. Cognitive Rewards verbindet mehrere Faktoren, die das Engagement nachweislich fördern.",
+      "intro": "Anerkennung wirkt stärker, wenn sie gemeinsam verdient wird. Cognitive Rewards vereint mehrere Faktoren, die Engagement fördern.",
       "points": {
         "play": {
           "title": "Engagement durch Spiel",
-          "body": "Spielmechaniken lassen die Teilnahme freiwillig und angenehm wirken — nicht wie eine weitere Aufgabe auf der Liste."
+          "body": "Spielmechaniken machen Teilnahme freiwillig und angenehm, nicht wie eine weitere Aufgabe auf der Liste."
         },
         "exercise": {
           "title": "Echtes kognitives Training",
-          "body": "Die Aufgaben fordern logisches Denken, Konzentration und Problemlösen — dieselben Konstrukte, auf denen das Training von WelloWork aufbaut."
+          "body": "Jede Challenge baut auf logischem Denken, Fokus und Problemlösung auf — denselben Konstrukten, auf denen WelloWorks Training basiert."
         },
         "collaboration": {
-          "title": "Zusammenarbeit, die bleibt",
-          "body": "Team-Aufgaben geben Kolleg:innen ein gemeinsames Ziel und einen Anlass, sich über die übliche Arbeit hinaus auszutauschen."
+          "title": "Echte Zusammenarbeit, nicht nur Nähe",
+          "body": "Da jede Person ein eigenes Teil des Puzzles hat, muss das Team reden, zuhören und Überlegungen kombinieren, um zu gewinnen."
         },
         "recognition": {
           "title": "Anerkennung mit Bedeutung",
-          "body": "Eine durch Einsatz verdiente Belohnung signalisiert echte Wertschätzung statt eines automatischen Vorteils."
+          "body": "Eine Belohnung, die das Team gemeinsam verdient und nach Beitrag aufteilt, signalisiert echte Wertschätzung statt eines automatischen Extras."
         }
       }
     },
     "whoFor": {
-      "heading": "Für wen ist es gedacht?",
-      "intro": "Cognitive Rewards passt zu Teams, die Engagement und Anerkennung doppelt nutzen möchten.",
+      "heading": "Für wen ist es geeignet?",
+      "intro": "Cognitive Rewards passt zu Teams, bei denen Engagement und Anerkennung doppelt wirken sollen.",
       "roles": {
         "hr": {
-          "title": "HR- & People-Teams",
-          "body": "Die Engagement-, Anerkennungs- oder Wohlbefindens-Initiativen umsetzen, die echte Beteiligung brauchen."
+          "title": "HR- und People-Teams",
+          "body": "Betreiben Engagement-, Anerkennungs- oder Wellbeing-Initiativen, die echte Teilnahme brauchen."
         },
         "culture": {
-          "title": "People-&-Culture-Verantwortliche",
-          "body": "Die Zusammenhalt über Teams, Standorte oder eine hybride Belegschaft hinweg aufbauen."
+          "title": "People & Culture Leads",
+          "body": "Bauen Zusammenhalt über Teams, Standorte oder eine hybride Belegschaft hinweg auf."
         },
         "rewards": {
-          "title": "Total-Rewards- & Benefits-Verantwortliche",
-          "body": "Die ein Anerkennungsformat suchen, das aktiv und einprägsam ist — nicht nur transaktional."
+          "title": "Total-Rewards- und Benefits-Verantwortliche",
+          "body": "Suchen ein Anerkennungsformat, das aktiv und einprägsam ist, nicht nur transaktional."
         }
       },
-      "orgSizes": "Geeignet für Teams von zehn Personen bis hin zu Unternehmen mit Tausenden — Aufgaben und Belohnungspools skalieren passgenau."
+      "orgSizes": "Teams spielen in Gruppen von drei bis fünf, das Format skaliert also von einem einzelnen Team mit zehn Personen bis zu Unternehmen mit Tausenden Mitarbeitenden — Challenges und Belohnungspools wachsen mit."
     },
     "related": {
       "heading": "Entdecken Sie den Rest der Plattform",
-      "intro": "Cognitive Rewards ist Teil der umfassenderen Plattform für Arbeitsplatzleistung von WelloWork.",
+      "intro": "Cognitive Rewards ergänzt WelloWorks umfassendere Plattform für Arbeitsplatzleistung.",
       "links": {
         "growth": {
           "label": "Tägliches kognitives Training mit WelloRise",
-          "desc": "Adaptive Übungen über fünf validierte kognitive Konstrukte hinweg."
+          "desc": "Adaptive Übungen über fünf validierte kognitive Konstrukte."
         },
         "workshops": {
-          "label": "Live-Workshops zu Gesundheit und Leistung",
-          "desc": "Präsenz- und Online-Sitzungen für Ihre Teams."
+          "label": "Live-Gesundheits- und Leistungsworkshops",
+          "desc": "Präsenz- und Online-Sessions für Ihre Teams."
         },
         "assessment": {
           "label": "Kognitive und Team-Assessments",
@@ -3096,11 +3098,11 @@
         },
         "measure": {
           "label": "Längsschnittliche Leistungstrends",
-          "desc": "Verfolgen Sie aggregierte, anonymisierte Trends im Zeitverlauf."
+          "desc": "Verfolgen Sie aggregierte, anonymisierte Trends über die Zeit."
         },
         "research": {
           "label": "Die Forschung hinter unserem Ansatz",
-          "desc": "Wie WelloWork seine Methoden auf Evidenz stützt."
+          "desc": "Wie WelloWork seine Methoden auf Evidenz gründet."
         }
       }
     },
@@ -3109,61 +3111,165 @@
       "items": {
         "ordering": {
           "q": "Wie funktioniert die Bestellung?",
-          "a": "Sie bestellen über die Puzzify-Plattform, wo Sie einen Belohnungspool finanzieren und die Aufgaben einrichten, die Ihre Mitarbeitenden spielen werden. Die „Cognitive Rewards bestellen“-Schaltfläche auf dieser Seite führt Sie direkt dorthin. WelloWork unterstützt Sie gern dabei, vorab das passende Format und den richtigen Belohnungsmix festzulegen."
-        },
-        "individualGroup": {
-          "q": "Was ist der Unterschied zwischen Einzel- und Team-Aufgaben?",
-          "a": "Einzel-Aufgaben werden allein gelöst, und die Belohnung wird von dieser Person freigeschaltet. Team-Aufgaben werden gemeinsam von einer Gruppe gelöst; die Belohnung wird gemeinsam freigeschaltet und unter allen Beteiligten aufgeteilt. Das Einzelformat eignet sich für persönliche Anerkennung, während das Teamformat auf Zusammenarbeit und Zusammenhalt ausgelegt ist."
+          "a": "Wählen Sie eine Teamgröße von drei, vier oder fünf, fügen Sie die teilnehmenden Spieler hinzu und finanzieren Sie den Belohnungspool für Ihre Session. Der Button \"Cognitive Rewards bestellen\" auf dieser Seite bringt Sie an den Start, und WelloWork hilft Ihnen gerne, Teamgrößen und Belohnungsmix vor der Buchung festzulegen."
         },
         "languages": {
           "q": "Welche Sprachen werden unterstützt?",
-          "a": "Das Aufgaben- und Belohnungserlebnis läuft auf der Puzzify-Plattform — nehmen Sie vor der Bestellung Kontakt mit uns auf, um die für Ihre Teams verfügbaren Sprachen zu klären. Die eigenen Materialien von WelloWork werden derzeit auf Englisch bereitgestellt."
+          "a": "Cognitive Rewards ist mehrsprachig, sodass Teams in der Sprache spielen können, mit der sie sich am wohlsten fühlen. Teilen Sie uns beim Einrichten Ihrer Session mit, welche Sprachen Ihre Teams brauchen."
         },
         "delivery": {
-          "q": "Wie werden die Belohnungen ausgeliefert?",
-          "a": "Belohnungen sind Gutscheine und Geschenke, die Ihr Unternehmen finanziert und die nach Abschluss einer Aufgabe über die Puzzify-Plattform bereitgestellt werden. Der konkrete Katalog und die Abwicklung werden auf Puzzify verwaltet, und wir helfen Ihnen gern, einen Belohnungsmix zu wählen, der zu Ihrem Team passt."
+          "q": "Wie werden Belohnungen ausgeliefert?",
+          "a": "Sobald ein Team seine Belohnung freischaltet, erhält jede Person sie digital — eine Prepaid-Visa- oder Mastercard oder einen Geschenkgutschein nach Wahl — aufgeteilt nach Beitrag mit einem garantierten Mindestanteil, sodass alle Mitspielenden etwas Bedeutsames mitnehmen."
         },
         "privacy": {
-          "q": "Wie steht es um den Datenschutz bei der Teilnahme?",
-          "a": "Im Einklang mit dem Ansatz von WelloWork gehört die Teilnahme den Mitarbeitenden selbst: Menschen nehmen freiwillig teil, und Führungskräfte sehen das Engagement auf aggregierter, anonymisierter Ebene, statt Einzelpersonen zu verfolgen. Die Belohnungsabwicklung erfolgt auf der Puzzify-Plattform — klären Sie die Einzelheiten mit uns und Puzzify, bevor Sie das Programm einführen."
+          "q": "Wie steht es um die Privatsphäre der Teilnehmenden?",
+          "a": "Ganz im Sinne von WelloWorks Ansatz gehört Mitarbeitenden ihre Teilnahme selbst. Ihr Unternehmen sieht einen aggregierten Überblick über Skills und Engagement je Team, während der spielerische Austausch innerhalb jeder Session privat beim jeweiligen Team bleibt."
         }
       }
     },
     "finalCta": {
       "headingLead": "Machen Sie Anerkennung zu ",
-      "headingAccent": "etwas Verdientem",
-      "body": "Bringen Sie spielerische, leistungsbasierte Belohnungen mit Cognitive Rewards in Ihr Team, ermöglicht durch Puzzify.",
+      "headingAccent": "etwas, das Ihr Team gemeinsam verdient",
+      "body": "Bringen Sie Ihren Mitarbeitenden ein Live-Team-Belohnungsspiel mit Cognitive Rewards — WelloWorks eigener Engagement-Plattform.",
       "primaryCta": "Cognitive Rewards bestellen",
       "secondaryCta": "Beratung buchen"
     },
     "section": {
-      "eyebrow": "Cognitive Rewards · ermöglicht durch Puzzify",
+      "eyebrow": "Cognitive Rewards",
       "headingLead": "Belohnungen, die Ihr Team ",
       "headingAccent": "durch Denken verdient",
-      "body": "Ein spielerisches Engagement-Programm, bei dem Mitarbeitende echte Belohnungen freischalten, indem sie Rätsel lösen — allein oder im Team.",
+      "body": "Ein Live-Team-Spiel, bei dem Mitarbeitende eine gemeinsame Belohnung freischalten, indem sie gemeinsam denken, kommunizieren und eine KI-geführte Challenge lösen.",
       "points": {
         "cognitive": {
           "title": "Kognitive Fähigkeiten",
-          "body": "Aufgaben trainieren logisches Denken, Konzentration und Problemlösen."
+          "body": "Jede Challenge trainiert logisches Denken, Fokus und Problemlösung."
         },
         "teamwork": {
           "title": "Teamarbeit",
-          "body": "Gruppen-Aufgaben schalten eine gemeinsame Belohnung frei, die im Team aufgeteilt wird."
+          "body": "Teams aus 3 bis 5 spielen gemeinsam — jeder hält ein eigenes Teil des Puzzles."
         },
         "recognition": {
           "title": "Leistungsbasierte Anerkennung",
-          "body": "Belohnungen werden durch Einsatz verdient, nicht passiv eingelöst."
+          "body": "Der Belohnungspool schaltet sich für das ganze Team frei und wird nach Beitrag aufgeteilt."
         }
       },
       "primaryCta": "Cognitive Rewards bestellen",
-      "secondaryCta": "Erfahren, wie es funktioniert",
-      "visualAlt": "Illustration von Mitarbeitenden, die gemeinsam eine Belohnung durch das Lösen eines Rätsels freischalten",
+      "secondaryCta": "So funktioniert's",
+      "visualAlt": "Illustration eines Teams von Mitarbeitenden, die gemeinsam eine geteilte Challenge lösen, um eine Belohnung freizuschalten",
       "visualReward": "Belohnung freigeschaltet",
-      "visualSolo": "Allein",
-      "visualTeam": "Team"
+      "visualTeam": "3-5 Spieler"
+    }
+  },
+  "cognitiveRewardsOrder": {
+    "crumbs": {
+      "home": "Home",
+      "cognitiveRewards": "Cognitive Rewards",
+      "current": "Order",
+      "payment": "Payment"
     },
-    "external": {
-      "newTab": "(öffnet die Puzzify-Plattform in einem neuen Tab)"
+    "eyebrow": "Cognitive Rewards",
+    "titleLead": "Set up your team's ",
+    "titleAccent": "reward game",
+    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "wizard": {
+      "stepLabel": "Step {current} of {total}",
+      "steps": {
+        "teamSize": "Team size",
+        "players": "Players",
+        "pool": "Reward pool",
+        "review": "Review & pay"
+      },
+      "nav": {
+        "back": "Back",
+        "next": "Continue",
+        "submit": "Continue to payment",
+        "submitting": "Processing…"
+      },
+      "step1": {
+        "heading": "Choose your team size",
+        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
+        "playersCount": "{n} players",
+        "vatSuffix": "+ VAT",
+        "helper": "Your team size sets the game fee and creates one player row in the next step."
+      },
+      "step2": {
+        "heading": "Add your players",
+        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
+        "playerLabel": "Player {n}",
+        "fields": {
+          "name": "Full name",
+          "email": "Email",
+          "role": "Role"
+        },
+        "rolePlaceholder": "Select a role",
+        "roles": {
+          "staff": "Staff",
+          "manager": "Manager",
+          "clevel": "C-level"
+        },
+        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+      },
+      "step3": {
+        "heading": "Fund the reward pool",
+        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
+        "quickPickLabel": "Quick amounts",
+        "customLabel": "Custom amount (€)",
+        "minHint": "Minimum €100, whole euros only.",
+        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+      },
+      "step4": {
+        "heading": "Your details & review",
+        "fields": {
+          "buyerName": "Your name",
+          "buyerEmail": "Work email",
+          "buyerCompany": "Company name"
+        },
+        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "summary": {
+          "heading": "Order summary",
+          "gameFee": "Game fee ({size} players)",
+          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
+          "rewardPool": "Reward pool (paid out to your team, no VAT)",
+          "total": "Total",
+          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+        },
+        "consent": {
+          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
+          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+        }
+      },
+      "errors": {
+        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
+        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
+        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
+        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
+        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
+        "REQUIRED_PLAYER_ROLE": "Select a role.",
+        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
+        "REQUIRED_BUYER_NAME": "Enter your full name.",
+        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
+        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
+        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
+        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
+        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
+        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
+        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
+        "NETWORK": "Connection problem — please check you're online and try again.",
+        "GENERIC": "Something went wrong. Please try again."
+      }
+    },
+    "payment": {
+      "eyebrow": "Cognitive Rewards",
+      "titleLead": "Continue to ",
+      "titleAccent": "payment",
+      "lede": "Payment is coming soon. Here's what you're about to pay for.",
+      "orderReference": "Order reference",
+      "summaryHeading": "Order summary",
+      "payButton": "Pay securely",
+      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
+      "missingHeading": "We couldn't find this order",
+      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
+      "startNew": "Start a new order"
     }
   }
 }
