@@ -13,6 +13,7 @@ import {
   MAX_REWARD_POOL_EUR,
   MIN_REWARD_POOL_EUR,
   PLAYER_ROLES,
+  REWARD_POOL_MOST_POPULAR,
   REWARD_POOL_QUICK_PICKS,
   TEAM_SIZES,
   validateOrderInput,
@@ -396,24 +397,46 @@ export function OrderWizard() {
             <h2 className="h-card" style={{ margin: "0 0 8px", fontSize: 22 }}>
               {t("wizard.step3.heading")}
             </h2>
-            <p className="body" style={{ margin: "0 0 20px" }}>
+            <p className="body" style={{ margin: "0 0 24px" }}>
               {t("wizard.step3.intro")}
             </p>
-            <div
-              role="group"
-              aria-label={t("wizard.step3.quickPickLabel")}
-              style={{ display: "flex", gap: 10, flexWrap: "wrap", marginBottom: 18 }}
+            <span
+              style={{
+                display: "block",
+                fontSize: 12.5,
+                fontWeight: 700,
+                letterSpacing: "0.04em",
+                textTransform: "uppercase",
+                color: "var(--ink-3)",
+                marginBottom: 10,
+              }}
             >
-              {REWARD_POOL_QUICK_PICKS.map((amount) => (
-                <button
-                  key={amount}
-                  type="button"
-                  className={`order-pool-chip ${draft.rewardPool === amount ? "selected" : ""}`}
-                  onClick={() => setDraft((d) => ({ ...d, rewardPool: amount }))}
-                >
-                  €{amount}
-                </button>
-              ))}
+              {t("wizard.step3.quickPickLabel")}
+            </span>
+            <div
+              role="radiogroup"
+              aria-label={t("wizard.step3.quickPickLabel")}
+              className="order-pool-grid"
+              style={{ marginBottom: 20 }}
+            >
+              {REWARD_POOL_QUICK_PICKS.map((amount) => {
+                const selected = draft.rewardPool === amount;
+                return (
+                  <label key={amount} className={`order-choice-card order-pool-card ${selected ? "selected" : ""}`}>
+                    {amount === REWARD_POOL_MOST_POPULAR && (
+                      <span className="order-pool-badge">{t("wizard.step3.mostPopular")}</span>
+                    )}
+                    <input
+                      type="radio"
+                      name="rewardPoolPreset"
+                      value={amount}
+                      checked={selected}
+                      onChange={() => setDraft((d) => ({ ...d, rewardPool: amount }))}
+                    />
+                    <span className="order-pool-card-amount">€{amount}</span>
+                  </label>
+                );
+              })}
             </div>
             <div className="field" style={{ maxWidth: 260 }}>
               <label htmlFor="reward-pool">{t("wizard.step3.customLabel")}</label>

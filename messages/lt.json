@@ -1098,12 +1098,12 @@
       "description": "Cognitive Rewards yra nuosavas WelloWork komandinis atlygio žaidimas: 3-5 darbuotojų komandos kartu sprendžia tiesioginį, DI valdomą iššūkį, kad atrakintų ir pasidalytų įmonės finansuojamą atlygio fondą."
     },
     "cognitiveRewardsOrder": {
-      "title": "Order Cognitive Rewards | WelloWork",
-      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+      "title": "Užsisakyti Cognitive Rewards | WelloWork",
+      "description": "Sukonfigūruokite savo komandos Cognitive Rewards žaidimą — pasirinkite komandos dydį, pridėkite žaidėjus ir finansuokite atlygio fondą per kelis paprastus žingsnius."
     },
     "cognitiveRewardsOrderPayment": {
-      "title": "Payment | Order Cognitive Rewards | WelloWork",
-      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
+      "title": "Mokėjimas | Užsisakyti Cognitive Rewards | WelloWork",
+      "description": "Prieš apmokėjimą peržiūrėkite savo Cognitive Rewards užsakymo santrauką. Saugus atsiskaitymas bus prieinamas netrukus."
     }
   },
   "nav": {
@@ -3175,119 +3175,120 @@
   },
   "cognitiveRewardsOrder": {
     "crumbs": {
-      "home": "Home",
+      "home": "Pradžia",
       "cognitiveRewards": "Cognitive Rewards",
-      "current": "Order",
-      "payment": "Payment"
+      "current": "Užsakymas",
+      "payment": "Mokėjimas"
     },
     "eyebrow": "Cognitive Rewards",
-    "titleLead": "Set up your team's ",
-    "titleAccent": "reward game",
-    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "titleLead": "Sukurkite savo komandos ",
+    "titleAccent": "atlygio žaidimą",
+    "lede": "Pasirinkite komandos dydį, pridėkite žaidėjus ir finansuokite atlygio fondą — keturi trumpi žingsniai iki apmokėjimo.",
     "wizard": {
-      "stepLabel": "Step {current} of {total}",
+      "stepLabel": "{current} žingsnis iš {total}",
       "steps": {
-        "teamSize": "Team size",
-        "players": "Players",
-        "pool": "Reward pool",
-        "review": "Review & pay"
+        "teamSize": "Komandos dydis",
+        "players": "Žaidėjai",
+        "pool": "Atlygio fondas",
+        "review": "Peržiūra ir apmokėjimas"
       },
       "nav": {
-        "back": "Back",
-        "next": "Continue",
-        "submit": "Continue to payment",
-        "submitting": "Processing…"
+        "back": "Atgal",
+        "next": "Toliau",
+        "submit": "Tęsti prie apmokėjimo",
+        "submitting": "Apdorojama…"
       },
       "step1": {
-        "heading": "Choose your team size",
-        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
-        "playersCount": "{n} players",
-        "vatSuffix": "+ VAT",
-        "helper": "Your team size sets the game fee and creates one player row in the next step."
+        "heading": "Pasirinkite savo komandos dydį",
+        "intro": "Cognitive Rewards žaidžiamas komandomis — individualaus varianto nėra.",
+        "playersCount": "{n} žaidėjai",
+        "vatSuffix": "+ PVM",
+        "helper": "Jūsų komandos dydis nustato žaidimo mokestį ir kitame žingsnyje sukuria po vieną eilutę kiekvienam žaidėjui."
       },
       "step2": {
-        "heading": "Add your players",
-        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
-        "playerLabel": "Player {n}",
+        "heading": "Pridėkite savo žaidėjus",
+        "intro": "Po vieną eilutę kiekvienam žaidėjui. Kiekvienas komandos narys po apmokėjimo el. paštu gauna savo asmeninį kvietimą — įskaitant jus, jei žaisite ir jūs.",
+        "playerLabel": "Žaidėjas {n}",
         "fields": {
-          "name": "Full name",
-          "email": "Email",
-          "role": "Role"
+          "name": "Vardas ir pavardė",
+          "email": "El. paštas",
+          "role": "Pareigos"
         },
-        "rolePlaceholder": "Select a role",
+        "rolePlaceholder": "Pasirinkite pareigas",
         "roles": {
-          "staff": "Staff",
-          "manager": "Manager",
-          "clevel": "C-level"
+          "staff": "Darbuotojas",
+          "manager": "Vadovas",
+          "clevel": "Aukščiausioji vadovybė"
         },
-        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+        "roleHint": "Naudojama tik kaip žaidimo tono ir saugumo signalas — niekada nerodoma kaip reitingas."
       },
       "step3": {
-        "heading": "Fund the reward pool",
-        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
-        "quickPickLabel": "Quick amounts",
-        "customLabel": "Custom amount (€)",
-        "minHint": "Minimum €100, whole euros only.",
-        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+        "heading": "Finansuokite atlygio fondą",
+        "intro": "Šis fondas yra dovana. Jūsų komanda jį pasidalija pagal tai, kaip žaidžia, kiekvienam garantuojant minimalią dalį — laimėtojas vėliau pasirenka, kaip ją gauti.",
+        "quickPickLabel": "Populiarios sumos",
+        "mostPopular": "Populiariausia",
+        "customLabel": "Kita suma (€)",
+        "minHint": "Minimali suma — 100 €, tik sveikais eurais.",
+        "noVat": "Atlygio fondui PVM netaikomas — jis išmokamas tiesiogiai jūsų komandai."
       },
       "step4": {
-        "heading": "Your details & review",
+        "heading": "Jūsų duomenys ir peržiūra",
         "fields": {
-          "buyerName": "Your name",
-          "buyerEmail": "Work email",
-          "buyerCompany": "Company name"
+          "buyerName": "Jūsų vardas ir pavardė",
+          "buyerEmail": "Darbo el. paštas",
+          "buyerCompany": "Įmonės pavadinimas"
         },
-        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "billingNote": "Atsiskaitymo adresas ir PVM mokėtojo kodas saugiai surenkami apmokėjimo žingsnyje.",
         "summary": {
-          "heading": "Order summary",
-          "gameFee": "Game fee ({size} players)",
-          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
-          "rewardPool": "Reward pool (paid out to your team, no VAT)",
-          "total": "Total",
-          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+          "heading": "Užsakymo santrauka",
+          "gameFee": "Žaidimo mokestis ({size} žaidėjų)",
+          "vatEstimate": "PVM (numatomas — galutinis mokestis apskaičiuojamas apmokėjimo metu)",
+          "rewardPool": "Atlygio fondas (išmokamas jūsų komandai, be PVM)",
+          "total": "Iš viso",
+          "vatExplainer": "PVM taikomas tik žaidimo mokesčiui — atlygio fondas yra dovana jūsų komandai ir jam PVM netaikomas."
         },
         "consent": {
-          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
-          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+          "terms": "Sutinku su <termsLink>Paslaugų teikimo sąlygomis</termsLink> ir <privacyLink>Privatumo politika</privacyLink>.",
+          "gdpr": "Patvirtinu, kad turiu teisinį pagrindą dalytis savo kolegų vardais, pavardėmis ir el. pašto adresais su „WelloWork“ šiai veiklai. (BDAR)"
         }
       },
       "errors": {
-        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
-        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
-        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
-        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
-        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
-        "REQUIRED_PLAYER_ROLE": "Select a role.",
-        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
-        "REQUIRED_BUYER_NAME": "Enter your full name.",
-        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
-        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
-        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
-        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
-        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
-        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
-        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
-        "NETWORK": "Connection problem — please check you're online and try again.",
-        "GENERIC": "Something went wrong. Please try again."
+        "INVALID_TEAM_SIZE": "Pasirinkite komandos dydį, kad galėtumėte tęsti.",
+        "PLAYER_COUNT_MISMATCH": "Žaidėjų skaičius neatitinka jūsų komandos dydžio.",
+        "REQUIRED_PLAYER_NAME": "Įveskite šio žaidėjo vardą ir pavardę.",
+        "INVALID_PLAYER_EMAIL": "Įveskite galiojantį el. pašto adresą.",
+        "DUPLICATE_PLAYER_EMAIL": "Kiekvienam žaidėjui reikalingas unikalus el. pašto adresas.",
+        "REQUIRED_PLAYER_ROLE": "Pasirinkite pareigas.",
+        "INVALID_REWARD_POOL": "Įveskite sveiką sumą eurais nuo 100 € iki 10 000 €.",
+        "REQUIRED_BUYER_NAME": "Įveskite savo vardą ir pavardę.",
+        "INVALID_BUYER_EMAIL": "Įveskite galiojantį darbo el. pašto adresą.",
+        "REQUIRED_BUYER_COMPANY": "Įveskite savo įmonės pavadinimą.",
+        "REQUIRED_CONSENT_TERMS": "Sutikite su Paslaugų teikimo sąlygomis ir Privatumo politika.",
+        "REQUIRED_CONSENT_GDPR": "Patvirtinkite, kad turite pagrindą dalytis šia informacija.",
+        "RATE_LIMITED": "Per daug bandymų — palaukite akimirką ir bandykite dar kartą.",
+        "SUBMIT_FAILED": "Nepavyko pateikti jūsų užsakymo. Bandykite dar kartą.",
+        "REQUEST_FAILED": "Įvyko klaida mūsų pusėje. Bandykite dar kartą.",
+        "NETWORK": "Ryšio problema — patikrinkite, ar esate prisijungę prie interneto, ir bandykite dar kartą.",
+        "GENERIC": "Kažkas nepavyko. Bandykite dar kartą."
       }
     },
     "bulk": {
-      "heading": "Running this for a large team or multiple groups?",
-      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
-      "cta": "Book a consultation"
+      "heading": "Organizuojate tai didelei komandai ar kelioms grupėms?",
+      "body": "Dideliems užsakymams, plataus masto varžyboms tarp daugelio komandų arba individualiai apskaičiuotoms kainoms „WelloWork“ viską sutvarko tiesiogiai — nereikia pateikti kelių atskirų užsakymų.",
+      "cta": "Užsisakyti konsultaciją"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Continue to ",
-      "titleAccent": "payment",
-      "lede": "Payment is coming soon. Here's what you're about to pay for.",
-      "orderReference": "Order reference",
-      "summaryHeading": "Order summary",
-      "payButton": "Pay securely",
-      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
-      "missingHeading": "We couldn't find this order",
-      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
-      "startNew": "Start a new order"
+      "titleLead": "Tęsti prie ",
+      "titleAccent": "apmokėjimo",
+      "lede": "Apmokėjimas bus prieinamas netrukus. Štai už ką jūs ruošiatės mokėti.",
+      "orderReference": "Užsakymo numeris",
+      "summaryHeading": "Užsakymo santrauka",
+      "payButton": "Saugiai apmokėti",
+      "comingSoon": "Apmokėjimas bus prieinamas netrukus — saugus atsiskaitymas šiuo metu diegiamas.",
+      "missingHeading": "Nepavyko rasti šio užsakymo",
+      "missingBody": "Jūsų užsakymo santrauka šioje naršyklės sesijoje nepasiekiama — taip gali nutikti po puslapio atnaujinimo arba jei šią nuorodą atidarėte kitur. Norėdami tęsti, pradėkite naują užsakymą.",
+      "startNew": "Pradėti naują užsakymą"
     }
   }
 }

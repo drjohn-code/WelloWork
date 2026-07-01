@@ -1098,12 +1098,12 @@
       "description": "Cognitive Rewards est le jeu de récompenses propre à WelloWork : des équipes de 3 à 5 collaborateurs résolvent ensemble un défi en direct animé par IA pour débloquer et se partager une cagnotte financée par l'entreprise."
     },
     "cognitiveRewardsOrder": {
-      "title": "Order Cognitive Rewards | WelloWork",
-      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+      "title": "Commander Cognitive Rewards | WelloWork",
+      "description": "Configurez le jeu Cognitive Rewards de votre équipe — choisissez une taille d'équipe, ajoutez des joueurs et financez la cagnotte de récompenses en quelques étapes guidées."
     },
     "cognitiveRewardsOrderPayment": {
-      "title": "Payment | Order Cognitive Rewards | WelloWork",
-      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
+      "title": "Paiement | Commander Cognitive Rewards | WelloWork",
+      "description": "Vérifiez le récapitulatif de votre commande Cognitive Rewards avant le paiement. Le paiement sécurisé arrive bientôt."
     }
   },
   "nav": {
@@ -3175,119 +3175,120 @@
   },
   "cognitiveRewardsOrder": {
     "crumbs": {
-      "home": "Home",
+      "home": "Accueil",
       "cognitiveRewards": "Cognitive Rewards",
-      "current": "Order",
-      "payment": "Payment"
+      "current": "Commande",
+      "payment": "Paiement"
     },
     "eyebrow": "Cognitive Rewards",
-    "titleLead": "Set up your team's ",
-    "titleAccent": "reward game",
-    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "titleLead": "Configurez le ",
+    "titleAccent": "jeu de récompenses de votre équipe",
+    "lede": "Choisissez la taille de votre équipe, ajoutez vos joueurs et financez la cagnotte de récompenses — quatre étapes courtes jusqu'au paiement.",
     "wizard": {
-      "stepLabel": "Step {current} of {total}",
+      "stepLabel": "Étape {current} sur {total}",
       "steps": {
-        "teamSize": "Team size",
-        "players": "Players",
-        "pool": "Reward pool",
-        "review": "Review & pay"
+        "teamSize": "Taille de l'équipe",
+        "players": "Joueurs",
+        "pool": "Cagnotte",
+        "review": "Vérification & paiement"
       },
       "nav": {
-        "back": "Back",
-        "next": "Continue",
-        "submit": "Continue to payment",
-        "submitting": "Processing…"
+        "back": "Retour",
+        "next": "Continuer",
+        "submit": "Continuer vers le paiement",
+        "submitting": "Traitement en cours…"
       },
       "step1": {
-        "heading": "Choose your team size",
-        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
-        "playersCount": "{n} players",
-        "vatSuffix": "+ VAT",
-        "helper": "Your team size sets the game fee and creates one player row in the next step."
+        "heading": "Choisissez la taille de votre équipe",
+        "intro": "Cognitive Rewards se joue en équipe — il n'y a pas d'option individuelle.",
+        "playersCount": "{n} joueurs",
+        "vatSuffix": "+ TVA",
+        "helper": "La taille de votre équipe détermine les frais de jeu et crée une ligne par joueur à l'étape suivante."
       },
       "step2": {
-        "heading": "Add your players",
-        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
-        "playerLabel": "Player {n}",
+        "heading": "Ajoutez vos joueurs",
+        "intro": "Une ligne par joueur. Chaque coéquipier reçoit sa propre invitation par e-mail après le paiement — y compris vous, si vous jouez.",
+        "playerLabel": "Joueur {n}",
         "fields": {
-          "name": "Full name",
-          "email": "Email",
-          "role": "Role"
+          "name": "Nom complet",
+          "email": "E-mail",
+          "role": "Rôle"
         },
-        "rolePlaceholder": "Select a role",
+        "rolePlaceholder": "Sélectionner un rôle",
         "roles": {
-          "staff": "Staff",
+          "staff": "Collaborateur",
           "manager": "Manager",
-          "clevel": "C-level"
+          "clevel": "Direction générale"
         },
-        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+        "roleHint": "Utilisé uniquement comme signal de ton et de sécurité pour le jeu — jamais affiché comme un classement."
       },
       "step3": {
-        "heading": "Fund the reward pool",
-        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
-        "quickPickLabel": "Quick amounts",
-        "customLabel": "Custom amount (€)",
-        "minHint": "Minimum €100, whole euros only.",
-        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+        "heading": "Financez la cagnotte de récompenses",
+        "intro": "Cette cagnotte est le cadeau. Votre équipe la partage selon la façon dont elle joue, avec une part minimale garantie pour chacun — le gagnant choisit ensuite comment la recevoir.",
+        "quickPickLabel": "Montants populaires",
+        "mostPopular": "Le plus populaire",
+        "customLabel": "Montant personnalisé (€)",
+        "minHint": "Minimum 100 €, en euros entiers uniquement.",
+        "noVat": "La cagnotte de récompenses n'est pas soumise à la TVA — elle est versée directement à votre équipe."
       },
       "step4": {
-        "heading": "Your details & review",
+        "heading": "Vos informations & vérification",
         "fields": {
-          "buyerName": "Your name",
-          "buyerEmail": "Work email",
-          "buyerCompany": "Company name"
+          "buyerName": "Votre nom",
+          "buyerEmail": "E-mail professionnel",
+          "buyerCompany": "Nom de l'entreprise"
         },
-        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "billingNote": "L'adresse de facturation et le numéro de TVA sont recueillis de façon sécurisée à l'étape de paiement.",
         "summary": {
-          "heading": "Order summary",
-          "gameFee": "Game fee ({size} players)",
-          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
-          "rewardPool": "Reward pool (paid out to your team, no VAT)",
+          "heading": "Récapitulatif de la commande",
+          "gameFee": "Frais de jeu ({size} joueurs)",
+          "vatEstimate": "TVA (estimée — taxe finale calculée au paiement)",
+          "rewardPool": "Cagnotte (versée à votre équipe, sans TVA)",
           "total": "Total",
-          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+          "vatExplainer": "La TVA s'applique uniquement aux frais de jeu — la cagnotte de récompenses est un cadeau à votre équipe et n'est pas soumise à la TVA."
         },
         "consent": {
-          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
-          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+          "terms": "J'accepte les <termsLink>conditions d'utilisation</termsLink> et la <privacyLink>politique de confidentialité</privacyLink>.",
+          "gdpr": "Je confirme disposer d'une base légale pour partager les noms et adresses e-mail de mes collègues avec WelloWork dans le cadre de cette activité. (RGPD)"
         }
       },
       "errors": {
-        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
-        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
-        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
-        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
-        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
-        "REQUIRED_PLAYER_ROLE": "Select a role.",
-        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
-        "REQUIRED_BUYER_NAME": "Enter your full name.",
-        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
-        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
-        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
-        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
-        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
-        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
-        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
-        "NETWORK": "Connection problem — please check you're online and try again.",
-        "GENERIC": "Something went wrong. Please try again."
+        "INVALID_TEAM_SIZE": "Choisissez une taille d'équipe pour continuer.",
+        "PLAYER_COUNT_MISMATCH": "Le nombre de joueurs ne correspond pas à la taille de votre équipe.",
+        "REQUIRED_PLAYER_NAME": "Saisissez le nom complet de ce joueur.",
+        "INVALID_PLAYER_EMAIL": "Saisissez une adresse e-mail valide.",
+        "DUPLICATE_PLAYER_EMAIL": "Chaque joueur doit avoir une adresse e-mail unique.",
+        "REQUIRED_PLAYER_ROLE": "Sélectionnez un rôle.",
+        "INVALID_REWARD_POOL": "Saisissez un montant entier en euros compris entre 100 € et 10 000 €.",
+        "REQUIRED_BUYER_NAME": "Saisissez votre nom complet.",
+        "INVALID_BUYER_EMAIL": "Saisissez une adresse e-mail professionnelle valide.",
+        "REQUIRED_BUYER_COMPANY": "Saisissez le nom de votre entreprise.",
+        "REQUIRED_CONSENT_TERMS": "Veuillez accepter les conditions d'utilisation et la politique de confidentialité.",
+        "REQUIRED_CONSENT_GDPR": "Veuillez confirmer que vous disposez d'une base légale pour partager ces informations.",
+        "RATE_LIMITED": "Trop de tentatives — veuillez patienter un instant puis réessayer.",
+        "SUBMIT_FAILED": "Nous n'avons pas pu envoyer votre commande. Veuillez réessayer.",
+        "REQUEST_FAILED": "Un problème est survenu de notre côté. Veuillez réessayer.",
+        "NETWORK": "Problème de connexion — vérifiez que vous êtes en ligne puis réessayez.",
+        "GENERIC": "Une erreur s'est produite. Veuillez réessayer."
       }
     },
     "bulk": {
-      "heading": "Running this for a large team or multiple groups?",
-      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
-      "cta": "Book a consultation"
+      "heading": "Vous organisez cela pour une grande équipe ou plusieurs groupes ?",
+      "body": "Pour les commandes groupées, les compétitions à grande échelle réunissant de nombreuses équipes, ou une tarification au volume personnalisée, WelloWork s'en charge directement — inutile de passer plusieurs commandes individuelles.",
+      "cta": "Réserver une consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Continue to ",
-      "titleAccent": "payment",
-      "lede": "Payment is coming soon. Here's what you're about to pay for.",
-      "orderReference": "Order reference",
-      "summaryHeading": "Order summary",
-      "payButton": "Pay securely",
-      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
-      "missingHeading": "We couldn't find this order",
-      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
-      "startNew": "Start a new order"
+      "titleLead": "Continuer vers le ",
+      "titleAccent": "paiement",
+      "lede": "Le paiement arrive bientôt. Voici ce que vous vous apprêtez à payer.",
+      "orderReference": "Référence de commande",
+      "summaryHeading": "Récapitulatif de la commande",
+      "payButton": "Payer en toute sécurité",
+      "comingSoon": "Le paiement arrive bientôt — le paiement sécurisé est en cours de connexion.",
+      "missingHeading": "Nous n'avons pas trouvé cette commande",
+      "missingBody": "Le récapitulatif de votre commande n'est pas disponible dans cette session de navigateur — cela peut arriver après une actualisation ou si vous avez ouvert ce lien ailleurs. Démarrez une nouvelle commande pour continuer.",
+      "startNew": "Démarrer une nouvelle commande"
     }
   }
 }

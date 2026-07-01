@@ -18,7 +18,9 @@ export const GAME_FEE_EUR: Record<TeamSize, number> = {
 export const MIN_REWARD_POOL_EUR = 100;
 /** Fat-finger guard, not a product limit — raise if buyers legitimately need more. */
 export const MAX_REWARD_POOL_EUR = 10_000;
-export const REWARD_POOL_QUICK_PICKS = [100, 250, 500] as const;
+export const REWARD_POOL_QUICK_PICKS = [100, 250, 500, 1000, 2000] as const;
+/** Highlighted as "most popular" among the quick-pick presets — presentation only. */
+export const REWARD_POOL_MOST_POPULAR = 500;
 
 /**
  * TODO: replace with Stripe Tax, which computes the correct per-country VAT

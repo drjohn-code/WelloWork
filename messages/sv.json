@@ -1098,12 +1098,12 @@
       "description": "Cognitive Rewards är WelloWorks eget teambaserade belöningsspel: medarbetare i grupper om 3–5 löser en live, AI-ledd utmaning tillsammans för att låsa upp och dela en belöningspott som företaget finansierat."
     },
     "cognitiveRewardsOrder": {
-      "title": "Order Cognitive Rewards | WelloWork",
-      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+      "title": "Beställ Cognitive Rewards | WelloWork",
+      "description": "Konfigurera ert lags Cognitive Rewards-spel — välj teamstorlek, lägg till spelare och finansiera belöningspotten i några enkla steg."
     },
     "cognitiveRewardsOrderPayment": {
-      "title": "Payment | Order Cognitive Rewards | WelloWork",
-      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
+      "title": "Betalning | Beställ Cognitive Rewards | WelloWork",
+      "description": "Granska er sammanfattning av Cognitive Rewards-beställningen innan betalning. Säker kassa kommer snart."
     }
   },
   "nav": {
@@ -3175,119 +3175,120 @@
   },
   "cognitiveRewardsOrder": {
     "crumbs": {
-      "home": "Home",
+      "home": "Hem",
       "cognitiveRewards": "Cognitive Rewards",
-      "current": "Order",
-      "payment": "Payment"
+      "current": "Beställning",
+      "payment": "Betalning"
     },
     "eyebrow": "Cognitive Rewards",
-    "titleLead": "Set up your team's ",
-    "titleAccent": "reward game",
-    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "titleLead": "Skapa ditt lags ",
+    "titleAccent": "belöningsspel",
+    "lede": "Välj teamstorlek, lägg till era spelare och finansiera belöningspotten — fyra korta steg till kassan.",
     "wizard": {
-      "stepLabel": "Step {current} of {total}",
+      "stepLabel": "Steg {current} av {total}",
       "steps": {
-        "teamSize": "Team size",
-        "players": "Players",
-        "pool": "Reward pool",
-        "review": "Review & pay"
+        "teamSize": "Teamstorlek",
+        "players": "Spelare",
+        "pool": "Belöningspott",
+        "review": "Granska & betala"
       },
       "nav": {
-        "back": "Back",
-        "next": "Continue",
-        "submit": "Continue to payment",
-        "submitting": "Processing…"
+        "back": "Tillbaka",
+        "next": "Fortsätt",
+        "submit": "Fortsätt till betalning",
+        "submitting": "Bearbetar…"
       },
       "step1": {
-        "heading": "Choose your team size",
-        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
-        "playersCount": "{n} players",
-        "vatSuffix": "+ VAT",
-        "helper": "Your team size sets the game fee and creates one player row in the next step."
+        "heading": "Välj er teamstorlek",
+        "intro": "Cognitive Rewards spelas i team — det finns inget individuellt alternativ.",
+        "playersCount": "{n} spelare",
+        "vatSuffix": "+ moms",
+        "helper": "Er teamstorlek avgör spelavgiften och skapar en spelarrad i nästa steg."
       },
       "step2": {
-        "heading": "Add your players",
-        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
-        "playerLabel": "Player {n}",
+        "heading": "Lägg till era spelare",
+        "intro": "En rad per spelare. Varje lagmedlem får sin egen inbjudan via e-post efter kassan — inklusive dig, om du spelar.",
+        "playerLabel": "Spelare {n}",
         "fields": {
-          "name": "Full name",
-          "email": "Email",
-          "role": "Role"
+          "name": "Fullständigt namn",
+          "email": "E-post",
+          "role": "Roll"
         },
-        "rolePlaceholder": "Select a role",
+        "rolePlaceholder": "Välj en roll",
         "roles": {
-          "staff": "Staff",
-          "manager": "Manager",
-          "clevel": "C-level"
+          "staff": "Medarbetare",
+          "manager": "Chef",
+          "clevel": "Ledningsgrupp"
         },
-        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+        "roleHint": "Används endast som en ton- och trygghetssignal för spelet — visas aldrig som en rankning."
       },
       "step3": {
-        "heading": "Fund the reward pool",
-        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
-        "quickPickLabel": "Quick amounts",
-        "customLabel": "Custom amount (€)",
-        "minHint": "Minimum €100, whole euros only.",
-        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+        "heading": "Finansiera belöningspotten",
+        "intro": "Den här potten är gåvan. Ert team delar den utifrån hur de spelar, med en garanterad minsta andel för alla — vinnaren väljer senare hur den ska mottas.",
+        "quickPickLabel": "Populära belopp",
+        "mostPopular": "Mest populär",
+        "customLabel": "Eget belopp (€)",
+        "minHint": "Minst 100 €, endast hela euro.",
+        "noVat": "Belöningspotten har ingen moms — den betalas ut direkt till ert team."
       },
       "step4": {
-        "heading": "Your details & review",
+        "heading": "Dina uppgifter & granskning",
         "fields": {
-          "buyerName": "Your name",
-          "buyerEmail": "Work email",
-          "buyerCompany": "Company name"
+          "buyerName": "Ditt namn",
+          "buyerEmail": "Jobb-e-post",
+          "buyerCompany": "Företagsnamn"
         },
-        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
+        "billingNote": "Faktureringsadress och momsregistreringsnummer samlas in säkert i betalningssteget.",
         "summary": {
-          "heading": "Order summary",
-          "gameFee": "Game fee ({size} players)",
-          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
-          "rewardPool": "Reward pool (paid out to your team, no VAT)",
-          "total": "Total",
-          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
+          "heading": "Ordersammanfattning",
+          "gameFee": "Spelavgift ({size} spelare)",
+          "vatEstimate": "Moms (uppskattad — slutlig skatt beräknas vid kassan)",
+          "rewardPool": "Belöningspott (betalas ut till ert team, ingen moms)",
+          "total": "Totalt",
+          "vatExplainer": "Moms gäller endast spelavgiften — belöningspotten är en gåva till ert team och har ingen moms."
         },
         "consent": {
-          "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
-          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+          "terms": "Jag godkänner <termsLink>användarvillkoren</termsLink> och <privacyLink>integritetspolicyn</privacyLink>.",
+          "gdpr": "Jag bekräftar att jag har rättslig grund att dela mina kollegors namn och e-postadresser med WelloWork för denna aktivitet. (GDPR)"
         }
       },
       "errors": {
-        "INVALID_TEAM_SIZE": "Choose a team size to continue.",
-        "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
-        "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
-        "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
-        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
-        "REQUIRED_PLAYER_ROLE": "Select a role.",
-        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
-        "REQUIRED_BUYER_NAME": "Enter your full name.",
-        "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
-        "REQUIRED_BUYER_COMPANY": "Enter your company name.",
-        "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
-        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
-        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
-        "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
-        "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
-        "NETWORK": "Connection problem — please check you're online and try again.",
-        "GENERIC": "Something went wrong. Please try again."
+        "INVALID_TEAM_SIZE": "Välj en teamstorlek för att fortsätta.",
+        "PLAYER_COUNT_MISMATCH": "Antalet spelare matchar inte er teamstorlek.",
+        "REQUIRED_PLAYER_NAME": "Ange den här spelarens fullständiga namn.",
+        "INVALID_PLAYER_EMAIL": "Ange en giltig e-postadress.",
+        "DUPLICATE_PLAYER_EMAIL": "Varje spelare behöver en unik e-postadress.",
+        "REQUIRED_PLAYER_ROLE": "Välj en roll.",
+        "INVALID_REWARD_POOL": "Ange ett helt eurobelopp mellan 100 € och 10 000 €.",
+        "REQUIRED_BUYER_NAME": "Ange ditt fullständiga namn.",
+        "INVALID_BUYER_EMAIL": "Ange en giltig jobb-e-postadress.",
+        "REQUIRED_BUYER_COMPANY": "Ange ditt företagsnamn.",
+        "REQUIRED_CONSENT_TERMS": "Godkänn användarvillkoren och integritetspolicyn.",
+        "REQUIRED_CONSENT_GDPR": "Bekräfta att du har grund att dela denna information.",
+        "RATE_LIMITED": "För många försök — vänta en stund och försök igen.",
+        "SUBMIT_FAILED": "Vi kunde inte skicka din order. Försök igen.",
+        "REQUEST_FAILED": "Något gick fel hos oss. Försök igen.",
+        "NETWORK": "Anslutningsproblem — kontrollera att du är uppkopplad och försök igen.",
+        "GENERIC": "Något gick fel. Försök igen."
       }
     },
     "bulk": {
-      "heading": "Running this for a large team or multiple groups?",
-      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
-      "cta": "Book a consultation"
+      "heading": "Kör ni detta för ett stort team eller flera grupper?",
+      "body": "För större beställningar, storskaliga tävlingar mellan många team eller anpassad volymprissättning ordnar WelloWork det direkt — inga flera enskilda beställningar behövs.",
+      "cta": "Boka en konsultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Continue to ",
-      "titleAccent": "payment",
-      "lede": "Payment is coming soon. Here's what you're about to pay for.",
-      "orderReference": "Order reference",
-      "summaryHeading": "Order summary",
-      "payButton": "Pay securely",
-      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
-      "missingHeading": "We couldn't find this order",
-      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
-      "startNew": "Start a new order"
+      "titleLead": "Fortsätt till ",
+      "titleAccent": "betalning",
+      "lede": "Betalning kommer snart. Här är vad du är på väg att betala för.",
+      "orderReference": "Ordernummer",
+      "summaryHeading": "Ordersammanfattning",
+      "payButton": "Betala säkert",
+      "comingSoon": "Betalning kommer snart — säker kassa kopplas in härnäst.",
+      "missingHeading": "Vi kunde inte hitta den här ordern",
+      "missingBody": "Din ordersammanfattning är inte tillgänglig i den här webbläsarsessionen — det kan hända efter en uppdatering eller om du öppnade länken någon annanstans. Starta en ny order för att fortsätta.",
+      "startNew": "Starta en ny order"
     }
   }
 }

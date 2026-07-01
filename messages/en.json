@@ -3218,7 +3218,8 @@
       "step3": {
         "heading": "Fund the reward pool",
         "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
-        "quickPickLabel": "Quick amounts",
+        "quickPickLabel": "Popular amounts",
+        "mostPopular": "Most popular",
         "customLabel": "Custom amount (€)",
         "minHint": "Minimum €100, whole euros only.",
         "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
