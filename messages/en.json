@@ -2985,12 +2985,22 @@
       "answerLabel": "In short:",
       "answerBody": "Cognitive Rewards is a WelloWork engagement game where teams of 3 to 5 employees play a short, AI-hosted challenge together, working through puzzles built around reasoning, focus and communication. When the team cracks the final challenge, the reward pool your company funded unlocks and splits by contribution, with a guaranteed minimum share for everyone who played.",
       "primaryCta": "Order Cognitive Rewards",
-      "secondaryCta": "Book a consultation"
+      "secondaryCta": "Book a consultation",
+      "visualAlt": "Illustration of team members connected together mid-challenge on a live game screen",
+      "visualLiveLabel": "Live now",
+      "visualCaption": "Team, mid-challenge"
     },
     "whatItIs": {
       "heading": "What is Cognitive Rewards?",
       "body1": "Cognitive Rewards is WelloWork's own team-based engagement game. Your company funds a reward pool, and teams of 3 to 5 employees earn it together by working through a live, AI-hosted challenge built around reasoning, focus, problem-solving and communication.",
-      "body2": "Each session is short, visual and easy to pick up — the value comes from what teams have to do together, not from how hard the puzzles are. Because rewards are earned through play rather than tenure or attendance, the game doubles as a light team-building moment without adding to anyone's workload."
+      "body2": "Each session is short, visual and easy to pick up — the value comes from what teams have to do together, not from how hard the puzzles are. Because rewards are earned through play rather than tenure or attendance, the game doubles as a light team-building moment without adding to anyone's workload.",
+      "visualAlt": "Illustration of three steps: a company funds a reward pool, a team solves a challenge together, and the reward splits by contribution",
+      "visualEyebrow": "How the reward flows",
+      "visualSteps": {
+        "fund": "Company funds the pool",
+        "team": "Team solves together",
+        "split": "Reward splits by contribution"
+      }
     },
     "howItWorks": {
       "heading": "How do employees earn rewards?",
@@ -3250,6 +3260,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",

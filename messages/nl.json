@@ -2992,12 +2992,22 @@
       "answerLabel": "Kort gezegd:",
       "answerBody": "Cognitive Rewards is een betrokkenheidsspel van WelloWork waarin teams van 3 tot 5 medewerkers samen een korte, AI-geleide challenge spelen en zich een weg banen door puzzels rond redeneren, focus en communicatie. Zodra het team de laatste challenge kraakt, ontgrendelt de door uw bedrijf gefinancierde beloningspot en wordt deze verdeeld naar bijdrage, met een gegarandeerd minimumaandeel voor iedereen die meespeelde.",
       "primaryCta": "Cognitive Rewards bestellen",
-      "secondaryCta": "Boek een consult"
+      "secondaryCta": "Boek een consult",
+      "visualAlt": "Illustratie van teamleden die tijdens een live uitdaging op het spelscherm met elkaar verbonden zijn",
+      "visualLiveLabel": "Nu live",
+      "visualCaption": "Team, midden in de uitdaging"
     },
     "whatItIs": {
       "heading": "Wat is Cognitive Rewards?",
       "body1": "Cognitive Rewards is WelloWork's eigen teamgerichte betrokkenheidsspel. Uw bedrijf financiert een beloningspot, en teams van 3 tot 5 medewerkers verdienen deze samen door zich een weg te banen door een live, AI-geleide challenge rond redeneren, focus, probleemoplossing en communicatie.",
-      "body2": "Elke sessie is kort, visueel en makkelijk op te pakken — de waarde zit in wat teams samen moeten doen, niet in hoe moeilijk de puzzels zijn. Omdat beloningen worden verdiend door te spelen in plaats van door dienstjaren of aanwezigheid, is het spel ook een luchtig teambuildingmoment zonder extra werkdruk."
+      "body2": "Elke sessie is kort, visueel en makkelijk op te pakken — de waarde zit in wat teams samen moeten doen, niet in hoe moeilijk de puzzels zijn. Omdat beloningen worden verdiend door te spelen in plaats van door dienstjaren of aanwezigheid, is het spel ook een luchtig teambuildingmoment zonder extra werkdruk.",
+      "visualAlt": "Illustratie van drie stappen: het bedrijf financiert een beloningspot, een team lost samen een uitdaging op en de beloning wordt verdeeld naar bijdrage",
+      "visualEyebrow": "Zo stroomt de beloning",
+      "visualSteps": {
+        "fund": "Bedrijf financiert de pot",
+        "team": "Team lost samen op",
+        "split": "Beloning verdeeld naar bijdrage"
+      }
     },
     "howItWorks": {
       "heading": "Hoe verdienen medewerkers beloningen?",
@@ -3257,6 +3267,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",

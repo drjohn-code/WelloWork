@@ -126,7 +126,105 @@ export function CognitiveRewardsSection() {
   );
 }
 
-/** Decorative on-brand SVG — placeholder for final artwork (see summary). */
+/** Team nodes converging on a central unlocking star — several distinct
+ * players contributing together to open the shared reward. */
+function TeamUnlockGraphic({ label }: { label: string }) {
+  const nodes = [
+    { cx: 32, cy: 22, tone: "var(--primary)" },
+    { cx: 148, cy: 16, tone: "var(--accent)" },
+    { cx: 14, cy: 88, tone: "var(--accent)" },
+    { cx: 166, cy: 92, tone: "var(--primary)" },
+    { cx: 90, cy: 10, tone: "var(--secondary-deep)" },
+  ] as const;
+  const center = { cx: 90, cy: 58 };
+
+  return (
+    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 10 }}>
+      <svg width="100%" height="118" viewBox="0 0 180 116" fill="none" aria-hidden="true">
+        <defs>
+          <radialGradient id="cr-unlock-glow" cx="50%" cy="50%" r="50%">
+            <stop offset="0%" stopColor="var(--accent)" stopOpacity="0.38" />
+            <stop offset="100%" stopColor="var(--accent)" stopOpacity="0" />
+          </radialGradient>
+          <linearGradient id="cr-star-grad" x1="0" y1="0" x2="1" y2="1">
+            <stop offset="0%" stopColor="var(--accent)" />
+            <stop offset="100%" stopColor="var(--primary)" />
+          </linearGradient>
+        </defs>
+
+        <circle cx={center.cx} cy={center.cy} r="40" fill="url(#cr-unlock-glow)" />
+
+        {nodes.map((n, i) => (
+          <line
+            key={`line-${i}`}
+            x1={n.cx}
+            y1={n.cy}
+            x2={center.cx}
+            y2={center.cy}
+            stroke="color-mix(in oklch, var(--accent) 45%, transparent)"
+            strokeWidth="1.4"
+            strokeDasharray="3 4"
+          />
+        ))}
+
+        {/* Sparkle ticks — the moment the reward opens */}
+        {[0, 90, 180, 270].map((deg) => {
+          const rad = (deg * Math.PI) / 180;
+          const x1 = center.cx + Math.cos(rad) * 26;
+          const y1 = center.cy + Math.sin(rad) * 26;
+          const x2 = center.cx + Math.cos(rad) * 33;
+          const y2 = center.cy + Math.sin(rad) * 33;
+          return (
+            <line
+              key={`spark-${deg}`}
+              x1={x1}
+              y1={y1}
+              x2={x2}
+              y2={y2}
+              stroke="var(--accent)"
+              strokeWidth="2"
+              strokeLinecap="round"
+            />
+          );
+        })}
+
+        <g transform={`translate(${center.cx} ${center.cy})`}>
+          <circle r="21" fill="white" stroke="url(#cr-star-grad)" strokeWidth="1.5" />
+          <path
+            d="M0 -11l3.2 6.6 7.3 1-5.3 5 1.3 7.2L0 5.6l-6.5 3.2 1.3-7.2-5.3-5 7.3-1L0-11z"
+            fill="url(#cr-star-grad)"
+          />
+        </g>
+
+        {nodes.map((n, i) => (
+          <g key={`node-${i}`}>
+            <circle cx={n.cx} cy={n.cy} r="13" fill={n.tone} />
+            <circle cx={n.cx} cy={n.cy - 3.5} r="3.2" fill="white" opacity="0.92" />
+            <path
+              d={`M${n.cx - 5.5} ${n.cy + 6.5}a5.5 5 0 0111 0z`}
+              fill="white"
+              opacity="0.92"
+            />
+          </g>
+        ))}
+      </svg>
+      <span
+        style={{
+          fontSize: 11,
+          fontWeight: 600,
+          letterSpacing: "0.06em",
+          textTransform: "uppercase",
+          color: "var(--ink-3)",
+        }}
+      >
+        {label}
+      </span>
+    </div>
+  );
+}
+
+/** Reward-unlock visual — several player nodes contributing together into a
+ * central star that opens, then the reward pill below. */
 function RewardVisual({
   alt,
   reward,
@@ -161,25 +259,10 @@ function RewardVisual({
       <div
         style={{
           position: "relative",
-          display: "flex",
-          flexDirection: "column",
-          alignItems: "center",
-          justifyContent: "center",
-          gap: 10,
           marginBottom: 22,
         }}
       >
-        {/* Team unlocking a shared reward */}
-        <PuzzleTile label={team} />
-        <svg width="24" height="28" viewBox="0 0 24 28" fill="none" aria-hidden="true">
-          <path
-            d="M12 2v18m0 0-6-6m6 6 6-6"
-            stroke="var(--accent)"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          />
-        </svg>
+        <TeamUnlockGraphic label={team} />
       </div>
 
       <div
@@ -225,40 +308,6 @@ function RewardVisual({
           {reward}
         </span>
       </div>
-    </div>
-  );
-}
-
-function PuzzleTile({ label }: { label: string }) {
-  return (
-    <div style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: 8 }}>
-      <span
-        aria-hidden="true"
-        style={{
-          width: 64,
-          height: 64,
-          borderRadius: 16,
-          background:
-            "linear-gradient(135deg, color-mix(in oklch, var(--secondary-deep) 55%, white), white)",
-          border: "1px solid rgba(22,43,92,0.10)",
-          display: "flex",
-          alignItems: "center",
-          justifyContent: "center",
-        }}
-      >
-        <Icon name="users" size={28} />
-      </span>
-      <span
-        style={{
-          fontSize: 11,
-          fontWeight: 600,
-          letterSpacing: "0.06em",
-          textTransform: "uppercase",
-          color: "var(--ink-3)",
-        }}
-      >
-        {label}
-      </span>
     </div>
   );
 }

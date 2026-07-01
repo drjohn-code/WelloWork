@@ -9,6 +9,7 @@ import { JsonLd } from "@/app/components/JsonLd";
 import { Reveal } from "@/app/components/Reveal";
 import { Icon } from "@/app/components/Icons";
 import { OrderCTA } from "@/app/components/OrderCTA";
+import { CognitiveRewardsHeroVisual, CognitiveRewardsFlowVisual } from "@/app/components/CognitiveRewardsVisuals";
 import { Link } from "@/i18n/navigation";
 import {
   SITE_URL,
@@ -127,35 +128,49 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
           <Reveal>
             <Breadcrumbs items={CRUMBS} />
           </Reveal>
-          <Reveal delay={1}>
-            <div style={{ marginTop: 18 }}>
-              <span className="eyebrow">{t("hero.eyebrow")}</span>
+          <div
+            className="hero-grid"
+            style={{
+              marginTop: 18,
+              display: "grid",
+              gridTemplateColumns: "1.05fr 0.95fr",
+              gap: 48,
+              alignItems: "center",
+            }}
+          >
+            <div>
+              <Reveal delay={1}>
+                <span className="eyebrow">{t("hero.eyebrow")}</span>
+              </Reveal>
+              <Reveal delay={1}>
+                <h1
+                  className="h-section"
+                  style={{ margin: "10px 0 18px", maxWidth: "20ch", fontSize: "clamp(34px, 5vw, 58px)" }}
+                >
+                  {t("hero.titleLead")}
+                  <span className="italic-serif" style={{ color: "var(--accent)" }}>
+                    {t("hero.titleAccent")}
+                  </span>
+                </h1>
+              </Reveal>
+              <Reveal delay={2}>
+                <p className="lede" style={{ margin: 0, maxWidth: "56ch" }}>
+                  {t("hero.lede")}
+                </p>
+              </Reveal>
+              <Reveal delay={2}>
+                <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 24 }}>
+                  <OrderCTA label={t("hero.primaryCta")} event="cognitive_rewards_order_hero" />
+                  <Link href="/book-a-demo" className="btn btn-glass">
+                    {t("hero.secondaryCta")}
+                  </Link>
+                </div>
+              </Reveal>
             </div>
-          </Reveal>
-          <Reveal delay={1}>
-            <h1
-              className="h-section"
-              style={{ margin: "10px 0 18px", maxWidth: "20ch", fontSize: "clamp(34px, 5vw, 58px)" }}
-            >
-              {t("hero.titleLead")}
-              <span className="italic-serif" style={{ color: "var(--accent)" }}>
-                {t("hero.titleAccent")}
-              </span>
-            </h1>
-          </Reveal>
-          <Reveal delay={2}>
-            <p className="lede" style={{ margin: 0, maxWidth: "56ch" }}>
-              {t("hero.lede")}
-            </p>
-          </Reveal>
-          <Reveal delay={2}>
-            <div style={{ display: "flex", gap: 12, flexWrap: "wrap", marginTop: 24 }}>
-              <OrderCTA label={t("hero.primaryCta")} event="cognitive_rewards_order_hero" />
-              <Link href="/book-a-demo" className="btn btn-glass">
-                {t("hero.secondaryCta")}
-              </Link>
-            </div>
-          </Reveal>
+            <Reveal delay={2}>
+              <CognitiveRewardsHeroVisual />
+            </Reveal>
+          </div>
         </div>
       </section>
 
@@ -173,13 +188,21 @@ export default async function CognitiveRewardsPage({ params }: PageProps) {
       {/* What it is */}
       <section style={{ padding: "48px 0" }}>
         <div className="container">
-          <Reveal>
-            <div style={{ maxWidth: 760 }}>
-              <h2 style={SECTION_HEADING}>{t("whatItIs.heading")}</h2>
-              <p style={SECTION_INTRO}>{t("whatItIs.body1")}</p>
-              <p style={{ ...SECTION_INTRO, marginTop: 14 }}>{t("whatItIs.body2")}</p>
-            </div>
-          </Reveal>
+          <div
+            className="hero-grid"
+            style={{ display: "grid", gridTemplateColumns: "1.1fr 0.9fr", gap: 48, alignItems: "center" }}
+          >
+            <Reveal>
+              <div>
+                <h2 style={SECTION_HEADING}>{t("whatItIs.heading")}</h2>
+                <p style={SECTION_INTRO}>{t("whatItIs.body1")}</p>
+                <p style={{ ...SECTION_INTRO, marginTop: 14 }}>{t("whatItIs.body2")}</p>
+              </div>
+            </Reveal>
+            <Reveal delay={1}>
+              <CognitiveRewardsFlowVisual />
+            </Reveal>
+          </div>
         </div>
       </section>
 

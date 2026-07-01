@@ -2992,12 +2992,22 @@
       "answerLabel": "Kurz gesagt:",
       "answerBody": "Cognitive Rewards ist ein Engagement-Spiel von WelloWork, bei dem Teams aus 3 bis 5 Mitarbeitenden gemeinsam eine kurze, KI-geführte Challenge spielen und sich durch Rätsel arbeiten, die auf logischem Denken, Fokus und Kommunikation aufbauen. Knackt das Team die letzte Challenge, schaltet sich der von Ihrem Unternehmen finanzierte Belohnungspool frei und wird nach Beitrag aufgeteilt — mit einem garantierten Mindestanteil für alle, die mitgespielt haben.",
       "primaryCta": "Cognitive Rewards bestellen",
-      "secondaryCta": "Beratung buchen"
+      "secondaryCta": "Beratung buchen",
+      "visualAlt": "Illustration von Teammitgliedern, die während einer Live-Challenge auf dem Spielbildschirm miteinander verbunden sind",
+      "visualLiveLabel": "Jetzt live",
+      "visualCaption": "Team, mitten in der Challenge"
     },
     "whatItIs": {
       "heading": "Was ist Cognitive Rewards?",
       "body1": "Cognitive Rewards ist WelloWorks eigenes teambasiertes Engagement-Spiel. Ihr Unternehmen finanziert einen Belohnungspool, und Teams aus 3 bis 5 Mitarbeitenden verdienen ihn gemeinsam, indem sie sich durch eine live, KI-geführte Challenge arbeiten, die auf logischem Denken, Fokus, Problemlösung und Kommunikation aufbaut.",
-      "body2": "Jede Session ist kurz, visuell und leicht verständlich — der Wert liegt darin, was Teams gemeinsam tun müssen, nicht darin, wie schwer die Rätsel sind. Da Belohnungen durch Spielen statt durch Betriebszugehörigkeit oder Anwesenheit verdient werden, ist das Spiel zugleich ein leichter Teambuilding-Moment, ohne zusätzliche Arbeitsbelastung."
+      "body2": "Jede Session ist kurz, visuell und leicht verständlich — der Wert liegt darin, was Teams gemeinsam tun müssen, nicht darin, wie schwer die Rätsel sind. Da Belohnungen durch Spielen statt durch Betriebszugehörigkeit oder Anwesenheit verdient werden, ist das Spiel zugleich ein leichter Teambuilding-Moment, ohne zusätzliche Arbeitsbelastung.",
+      "visualAlt": "Illustration von drei Schritten: das Unternehmen finanziert einen Belohnungstopf, ein Team löst gemeinsam eine Challenge, und die Belohnung wird nach Beitrag aufgeteilt",
+      "visualEyebrow": "So fließt die Belohnung",
+      "visualSteps": {
+        "fund": "Unternehmen finanziert den Topf",
+        "team": "Team löst gemeinsam",
+        "split": "Belohnung wird nach Beitrag aufgeteilt"
+      }
     },
     "howItWorks": {
       "heading": "Wie verdienen Mitarbeitende Belohnungen?",
@@ -3257,6 +3267,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",

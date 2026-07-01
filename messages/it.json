@@ -2992,12 +2992,22 @@
       "answerLabel": "In breve:",
       "answerBody": "Cognitive Rewards è un gioco di coinvolgimento WelloWork in cui squadre da 3 a 5 dipendenti giocano insieme una breve sfida guidata dall'IA, risolvendo enigmi costruiti su ragionamento, concentrazione e comunicazione. Quando la squadra supera la sfida finale, il montepremi finanziato dalla tua azienda si sblocca e viene ripartito in base al contributo, con una quota minima garantita per chi ha giocato.",
       "primaryCta": "Ordina Cognitive Rewards",
-      "secondaryCta": "Prenota una consulenza"
+      "secondaryCta": "Prenota una consulenza",
+      "visualAlt": "Illustrazione dei membri di una squadra collegati tra loro durante una sfida dal vivo sullo schermo di gioco",
+      "visualLiveLabel": "In diretta",
+      "visualCaption": "Squadra, a metà sfida"
     },
     "whatItIs": {
       "heading": "Cos'è Cognitive Rewards?",
       "body1": "Cognitive Rewards è il gioco di coinvolgimento tutto di WelloWork, pensato per le squadre. La tua azienda finanzia un montepremi, e squadre da 3 a 5 dipendenti lo guadagnano insieme risolvendo una sfida dal vivo guidata dall'IA, costruita su ragionamento, concentrazione, problem solving e comunicazione.",
-      "body2": "Ogni sessione è breve, visiva e facile da seguire: il valore sta in ciò che le squadre devono fare insieme, non nella difficoltà degli enigmi. Poiché i premi si guadagnano giocando anziché per anzianità o presenza, il gioco funge anche da leggero momento di team building, senza aggiungere carico di lavoro."
+      "body2": "Ogni sessione è breve, visiva e facile da seguire: il valore sta in ciò che le squadre devono fare insieme, non nella difficoltà degli enigmi. Poiché i premi si guadagnano giocando anziché per anzianità o presenza, il gioco funge anche da leggero momento di team building, senza aggiungere carico di lavoro.",
+      "visualAlt": "Illustrazione di tre fasi: l'azienda finanzia un montepremi, una squadra risolve insieme una sfida e il premio viene diviso in base al contributo",
+      "visualEyebrow": "Come si distribuisce il premio",
+      "visualSteps": {
+        "fund": "L'azienda finanzia il montepremi",
+        "team": "La squadra risolve insieme",
+        "split": "Il premio si divide in base al contributo"
+      }
     },
     "howItWorks": {
       "heading": "Come guadagnano i premi i dipendenti?",
@@ -3257,6 +3267,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",

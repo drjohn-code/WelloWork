@@ -2992,12 +2992,22 @@
       "answerLabel": "En resumen:",
       "answerBody": "Cognitive Rewards es un juego de engagement de WelloWork en el que equipos de 3 a 5 empleados juegan juntos un reto corto guiado por IA, resolviendo puzles basados en el razonamiento, el enfoque y la comunicación. Cuando el equipo supera el reto final, se desbloquea el fondo de recompensas financiado por tu empresa y se reparte según la contribución de cada uno, con una parte mínima garantizada para todos los que jugaron.",
       "primaryCta": "Pedir Cognitive Rewards",
-      "secondaryCta": "Reservar una consulta"
+      "secondaryCta": "Reservar una consulta",
+      "visualAlt": "Ilustración de los miembros de un equipo conectados entre sí durante un reto en directo en la pantalla del juego",
+      "visualLiveLabel": "En directo",
+      "visualCaption": "Equipo, en pleno reto"
     },
     "whatItIs": {
       "heading": "¿Qué es Cognitive Rewards?",
       "body1": "Cognitive Rewards es el juego de engagement propio de WelloWork, pensado para equipos. Tu empresa financia un fondo de recompensas, y equipos de 3 a 5 empleados lo ganan juntos resolviendo un reto en directo guiado por IA, construido alrededor del razonamiento, el enfoque, la resolución de problemas y la comunicación.",
-      "body2": "Cada sesión es corta, visual y fácil de coger el ritmo: el valor está en lo que los equipos tienen que hacer juntos, no en la dificultad de los puzles. Como las recompensas se ganan jugando en lugar de por antigüedad o asistencia, el juego también funciona como un momento ligero de cohesión de equipo, sin añadir carga de trabajo."
+      "body2": "Cada sesión es corta, visual y fácil de coger el ritmo: el valor está en lo que los equipos tienen que hacer juntos, no en la dificultad de los puzles. Como las recompensas se ganan jugando en lugar de por antigüedad o asistencia, el juego también funciona como un momento ligero de cohesión de equipo, sin añadir carga de trabajo.",
+      "visualAlt": "Ilustración de tres pasos: la empresa financia un fondo de recompensa, un equipo resuelve juntos un reto y la recompensa se reparte según la contribución",
+      "visualEyebrow": "Cómo fluye la recompensa",
+      "visualSteps": {
+        "fund": "La empresa financia el fondo",
+        "team": "El equipo resuelve junto",
+        "split": "La recompensa se reparte según la contribución"
+      }
     },
     "howItWorks": {
       "heading": "¿Cómo ganan recompensas los empleados?",
@@ -3257,6 +3267,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",

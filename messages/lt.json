@@ -2992,12 +2992,22 @@
       "answerLabel": "Trumpai:",
       "answerBody": "Cognitive Rewards yra WelloWork įsitraukimo žaidimas, kuriame 3-5 darbuotojų komandos kartu žaidžia trumpą, DI valdomą iššūkį, spręsdamos galvosūkius, sukurtus aplink mąstymą, susikaupimą ir bendravimą. Kai komanda įveikia paskutinį iššūkį, atrakinamas jūsų įmonės finansuojamas atlygio fondas ir paskirstomas pagal indėlį, garantuojant minimalią dalį kiekvienam žaidusiam.",
       "primaryCta": "Užsisakyti Cognitive Rewards",
-      "secondaryCta": "Užsisakyti konsultaciją"
+      "secondaryCta": "Užsisakyti konsultaciją",
+      "visualAlt": "Iliustracija, kurioje komandos nariai sujungti tiesioginio iššūkio žaidimo ekrane",
+      "visualLiveLabel": "Tiesiogiai dabar",
+      "visualCaption": "Komanda, iššūkio metu"
     },
     "whatItIs": {
       "heading": "Kas yra Cognitive Rewards?",
       "body1": "Cognitive Rewards yra nuosavas WelloWork komandinis įsitraukimo žaidimas. Jūsų įmonė finansuoja atlygio fondą, o 3-5 darbuotojų komandos jį uždirba kartu, spręsdamos tiesioginį, DI valdomą iššūkį, sukurtą aplink mąstymą, susikaupimą, problemų sprendimą ir bendravimą.",
-      "body2": "Kiekviena sesija yra trumpa, vaizdi ir lengvai suprantama — vertė slypi tame, ką komandos turi daryti kartu, o ne galvosūkių sudėtingume. Kadangi atlygis uždirbamas žaidžiant, o ne pagal darbo stažą ar dalyvavimą, žaidimas taip pat tampa lengvu komandos telkimo momentu, neapkraunant nieko papildomu darbu."
+      "body2": "Kiekviena sesija yra trumpa, vaizdi ir lengvai suprantama — vertė slypi tame, ką komandos turi daryti kartu, o ne galvosūkių sudėtingume. Kadangi atlygis uždirbamas žaidžiant, o ne pagal darbo stažą ar dalyvavimą, žaidimas taip pat tampa lengvu komandos telkimo momentu, neapkraunant nieko papildomu darbu.",
+      "visualAlt": "Trijų žingsnių iliustracija: įmonė finansuoja atlygio fondą, komanda kartu sprendžia iššūkį, o atlygis padalijamas pagal indėlį",
+      "visualEyebrow": "Kaip pasiskirsto atlygis",
+      "visualSteps": {
+        "fund": "Įmonė finansuoja fondą",
+        "team": "Komanda sprendžia kartu",
+        "split": "Atlygis dalijamas pagal indėlį"
+      }
     },
     "howItWorks": {
       "heading": "Kaip darbuotojai uždirba atlygį?",
@@ -3257,6 +3267,11 @@
         "NETWORK": "Connection problem — please check you're online and try again.",
         "GENERIC": "Something went wrong. Please try again."
       }
+    },
+    "bulk": {
+      "heading": "Running this for a large team or multiple groups?",
+      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "cta": "Book a consultation"
     },
     "payment": {
       "eyebrow": "Cognitive Rewards",
