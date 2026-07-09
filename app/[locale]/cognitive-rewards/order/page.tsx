@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import { Suspense } from "react";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { hasLocale } from "next-intl";
 import { routing } from "@/i18n/routing";
@@ -60,7 +61,9 @@ export default async function CognitiveRewardsOrderPage({ params }: PageProps) {
         <div className="container">
           <Reveal>
             <div style={{ maxWidth: 760, margin: "0 auto" }}>
-              <OrderWizard />
+              <Suspense fallback={null}>
+                <OrderWizard />
+              </Suspense>
             </div>
           </Reveal>
           <Reveal delay={1}>

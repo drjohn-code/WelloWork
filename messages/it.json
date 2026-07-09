@@ -438,7 +438,8 @@
       "default": "Aggregati, anonimizzati — vista manager"
     },
     "swedenChip": "Guidati dalla scienza, costruiti con cura",
-    "logoAlt": "Logo WelloWork"
+    "logoAlt": "Logo WelloWork",
+    "opensInNewTab": "(si apre in una nuova scheda)"
   },
   "contact": {
     "based": {
@@ -1101,9 +1102,13 @@
       "title": "Ordina Cognitive Rewards | WelloWork",
       "description": "Configura il gioco Cognitive Rewards della tua squadra — scegli una dimensione della squadra, aggiungi i giocatori e finanzia il montepremi in pochi passaggi guidati."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Pagamento | Ordina Cognitive Rewards | WelloWork",
-      "description": "Verifica il riepilogo del tuo ordine Cognitive Rewards prima del pagamento. Il checkout sicuro arriva presto."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Ordine confermato | Cognitive Rewards | WelloWork",
+      "description": "Conferma e riepilogo della ricevuta del tuo ordine Cognitive Rewards."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: IA psicodinamica per la conoscenza di sé | WelloWork",
+      "description": "TwentyThird è la piattaforma di IA psicodinamica di WelloWork per la conoscenza di sé — analisi freudiana e lacaniana di schemi, sogni, blocchi professionali e relazioni, conforme al GDPR e senza condivisione con terze parti."
     }
   },
   "nav": {
@@ -3178,7 +3183,7 @@
       "home": "Home",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Ordine",
-      "payment": "Pagamento"
+      "success": "Conferma"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Configura il ",
@@ -3278,17 +3283,154 @@
       "cta": "Prenota una consulenza"
     },
     "payment": {
+      "cancelled": {
+        "body": "Il pagamento è stato annullato — non è stato addebitato alcun importo. Rivedi il tuo ordine qui sotto e riprova quando sei pronto."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Continua al ",
-      "titleAccent": "pagamento",
-      "lede": "Il pagamento arriva presto. Ecco cosa stai per pagare.",
+      "titleLead": "Tutto ",
+      "titleAccent": "pronto",
+      "lede": "Grazie per il tuo ordine — ecco la tua conferma.",
       "orderReference": "Riferimento ordine",
       "summaryHeading": "Riepilogo dell'ordine",
-      "payButton": "Paga in sicurezza",
-      "comingSoon": "Il pagamento arriva presto — il checkout sicuro verrà collegato a breve.",
+      "summary": {
+        "gameFee": "Quota di gioco ({size} giocatori)",
+        "gameFeeGeneric": "Quota di gioco",
+        "rewardPool": "Montepremi (versato alla tua squadra)",
+        "tax": "IVA",
+        "total": "Totale pagato"
+      },
+      "paidHeading": "Pagamento ricevuto",
+      "paidBody": "Pagamento ricevuto — gli inviti per la tua squadra arriveranno a breve.",
+      "processingHeading": "Completamento in corso…",
+      "processingBody": "Stiamo confermando il tuo pagamento con Stripe — di solito richiede solo pochi secondi. Aggiorna la pagina tra un momento se non si aggiorna.",
+      "refresh": "Aggiorna stato",
       "missingHeading": "Non siamo riusciti a trovare questo ordine",
-      "missingBody": "Il riepilogo del tuo ordine non è disponibile in questa sessione del browser — può succedere dopo un aggiornamento della pagina o se hai aperto questo link altrove. Avvia un nuovo ordine per continuare.",
+      "missingBody": "Questo link di conferma sembra incompleto o è scaduto. Se hai completato il pagamento, controlla la tua email per la ricevuta, oppure contattaci se non sei sicuro.",
+      "backHome": "Torna a Cognitive Rewards",
       "startNew": "Avvia un nuovo ordine"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Un lavoro alla radice su ",
+      "headingAccent": "gli schemi di fondo",
+      "body": "TwentyThird è la piattaforma di IA psicodinamica di WelloWork per la conoscenza di sé — analisi freudiana e lacaniana applicata agli schemi inconsci dietro il comportamento quotidiano, non un test di personalità superficiale.",
+      "points": {
+        "patterns": {
+          "title": "Mappatura di schemi e cicli",
+          "body": "Fa emergere gli schemi inconsci ricorrenti dietro i comportamenti ripetuti, seguiti nel tempo e non in un'istantanea isolata."
+        },
+        "dreams": {
+          "title": "Interpretazione dei sogni",
+          "body": "Legge i sogni per ciò che rivelano sugli obiettivi verso cui una persona si sta muovendo, o no."
+        },
+        "workBlocks": {
+          "title": "Blocchi professionali",
+          "body": "Affronta la sindrome dell'impostore, la procrastinazione e l'autosabotaggio alla radice."
+        }
+      },
+      "primaryCta": "Avvia la prova gratuita su day-23.com",
+      "secondaryCta": "Come funziona TwentyThird",
+      "visualAlt": "Illustrazione di TwentyThird che unisce schemi inconsci, sogni e relazioni in un unico profilo",
+      "visualLabel": "Mappatura degli schemi"
+    },
+    "crumbs": {
+      "home": "Home",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "IA psicodinamica per la ",
+      "titleAccent": "conoscenza di sé",
+      "lede": "TwentyThird applica l'analisi freudiana e lacaniana agli schemi inconsci dietro il comportamento quotidiano — sogni, blocchi professionali e relazioni — invece di un test di personalità superficiale.",
+      "primaryCta": "Avvia la prova gratuita su day-23.com",
+      "secondaryCta": "Scopri come funziona",
+      "answerLabel": "Cos'è TwentyThird?",
+      "answerBody": "TwentyThird, sviluppata da WelloWork, è una piattaforma di IA psicodinamica per la conoscenza di sé. Combina mappatura di schemi e cicli, interpretazione dei sogni e analisi relazionale per lavorare alla radice sugli schemi inconsci, con una funzione opzionale di connessioni di vita che introduce un contesto relazionale reale da familiari e amici.",
+      "visualAlt": "Illustrazione di TwentyThird che unisce schemi inconsci, sogni e relazioni in un unico profilo",
+      "visualLabel": "Mappatura degli schemi"
+    },
+    "howItWorks": {
+      "heading": "Come funziona",
+      "intro": "Un meccanismo strutturato, non una chat aperta — ogni fase si basa sui dati della precedente.",
+      "steps": {
+        "intake": {
+          "title": "Accoglienza iniziale",
+          "body": "Un'accoglienza strutturata mappa gli schemi attuali, gli obiettivi e le aree professionali o relazionali su cui la persona vuole lavorare."
+        },
+        "analysis": {
+          "title": "Analisi su tutte le capacità principali",
+          "body": "Le letture coprono mappatura di schemi e cicli, interpretazione dei sogni e analisi professionale e relazionale, tutte collegate agli stessi obiettivi di fondo."
+        },
+        "ongoing": {
+          "title": "Utilizzo continuativo",
+          "body": "Check-in, diario dei sogni e sessioni si basano nel tempo sull'analisi precedente, invece di ripartire da zero a ogni utilizzo."
+        },
+        "connections": {
+          "title": "Connessioni di vita (opzionale)",
+          "body": "Gli utenti possono aggiungere familiari e amici come connessioni di vita, così l'analisi si basa su un contesto relazionale reale, non solo sull'autovalutazione."
+        },
+        "report": {
+          "title": "Report clinico in output",
+          "body": "I risultati vengono raccolti in un report strutturato e utilizzabile, non un riassunto in una riga."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "Per i singoli",
+      "intro": "Usa TwentyThird in autonomia, con una prova gratuita di 3 giorni prima di impegnarti.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Conoscenza di sé",
+          "body": "Individua gli schemi inconsci dietro i comportamenti ripetuti, seguiti nel tempo invece che diagnosticati una sola volta."
+        },
+        "dreamGoalAlignment": {
+          "title": "Allineamento tra sogni e obiettivi",
+          "body": "L'interpretazione dei sogni viene ricollegata agli obiettivi verso cui una persona si sta muovendo, o no."
+        },
+        "blockClearing": {
+          "title": "Superamento dei blocchi professionali",
+          "body": "Affronta la sindrome dell'impostore, la procrastinazione e l'autosabotaggio alla radice."
+        }
+      },
+      "cta": "Avvia la prova gratuita su day-23.com",
+      "trialNote": "Prova gratuita di 3 giorni. La creazione dell'account avviene su day-23.com."
+    },
+    "forCompanies": {
+      "heading": "Per le aziende",
+      "intro": "Le aziende offrono TwentyThird ai dipendenti come benefit per la salute mentale e la conoscenza di sé, incentrato su performance e cultura aziendale invece che su benefit di benessere generici.",
+      "points": {
+        "performanceCulture": {
+          "title": "Performance e cultura, non benessere generico",
+          "body": "Basato sull'analisi professionale e dei sogni, legato a come le persone lavorano davvero, non un generico extra di benessere."
+        },
+        "employeeOwned": {
+          "title": "I dipendenti possiedono i propri dati",
+          "body": "I dipendenti possiedono i propri dati; manager e HR vedono solo ciò che il dipendente sceglie di condividere, mai l'analisi grezza."
+        },
+        "companyWide": {
+          "title": "Un benefit a livello aziendale",
+          "body": "Distribuito come benefit per i dipendenti insieme agli altri strumenti di performance sul lavoro di WelloWork."
+        }
+      },
+      "cta": "Parlaci di TwentyThird",
+      "note": "Gestito tramite il contatto commerciale esistente di WelloWork."
+    },
+    "privacy": {
+      "chip": "Conforme al GDPR · nessuna condivisione con terzi",
+      "heading": "Privacy e fiducia",
+      "body": "TwentyThird è conforme al GDPR e non condivide dati personali con terze parti. I dipendenti possiedono i propri dati; quando TwentyThird viene offerto come benefit aziendale, manager e HR vedono solo ciò che il dipendente sceglie di condividere.",
+      "cta": "Leggi l'informativa sulla privacy"
+    },
+    "finalCta": {
+      "headingLead": "Capisci gli schemi ",
+      "headingAccent": "che guidano le tue giornate",
+      "body": "Avvia una prova gratuita di 3 giorni su day-23.com, oppure porta TwentyThird nel tuo team come benefit aziendale.",
+      "primaryCta": "Avvia la prova gratuita su day-23.com",
+      "secondaryCta": "Parlaci di TwentyThird"
     }
   }
 }

@@ -431,7 +431,8 @@
       "default": "Aggregated, anonymised — manager view"
     },
     "swedenChip": "Driven by Science, Built with Care",
-    "logoAlt": "WelloWork Logo"
+    "logoAlt": "WelloWork Logo",
+    "opensInNewTab": "(opens in a new tab)"
   },
   "contact": {
     "based": {
@@ -1094,9 +1095,13 @@
       "title": "Order Cognitive Rewards | WelloWork",
       "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Payment | Order Cognitive Rewards | WelloWork",
-      "description": "Review your Cognitive Rewards order summary before payment. Secure checkout is coming soon."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Order confirmed | Cognitive Rewards | WelloWork",
+      "description": "Your Cognitive Rewards order confirmation and receipt summary."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: Psychodynamic AI for Self-Discovery | WelloWork",
+      "description": "TwentyThird is WelloWork's psychodynamic AI self-discovery platform — Freudian and Lacanian analysis of patterns, dreams, work blocks and relationships, GDPR-compliant with no third-party data sharing."
     }
   },
   "nav": {
@@ -3171,7 +3176,7 @@
       "home": "Home",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Order",
-      "payment": "Payment"
+      "success": "Confirmation"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Set up your team's ",
@@ -3271,17 +3276,154 @@
       "cta": "Book a consultation"
     },
     "payment": {
+      "cancelled": {
+        "body": "Payment was cancelled — no charge was made. Review your order below and try again when you're ready."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Continue to ",
-      "titleAccent": "payment",
-      "lede": "Payment is coming soon. Here's what you're about to pay for.",
+      "titleLead": "You're ",
+      "titleAccent": "all set",
+      "lede": "Thanks for your order — here's your confirmation.",
       "orderReference": "Order reference",
       "summaryHeading": "Order summary",
-      "payButton": "Pay securely",
-      "comingSoon": "Payment coming soon — secure checkout is being connected next.",
+      "summary": {
+        "gameFee": "Game fee ({size} players)",
+        "gameFeeGeneric": "Game fee",
+        "rewardPool": "Reward pool (paid out to your team)",
+        "tax": "VAT",
+        "total": "Total paid"
+      },
+      "paidHeading": "Payment received",
+      "paidBody": "Payment received — your team's invitations are on the way soon.",
+      "processingHeading": "Finishing up…",
+      "processingBody": "We're confirming your payment with Stripe — this usually takes just a few seconds. Refresh in a moment if this page doesn't update.",
+      "refresh": "Refresh status",
       "missingHeading": "We couldn't find this order",
-      "missingBody": "Your order summary isn't available in this browser session — this can happen after a refresh or if you opened this link elsewhere. Start a new order to continue.",
+      "missingBody": "This confirmation link looks incomplete or has expired. If you completed payment, check your email for a receipt, or contact us if you're unsure.",
+      "backHome": "Back to Cognitive Rewards",
       "startNew": "Start a new order"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Root-cause work on ",
+      "headingAccent": "the patterns underneath",
+      "body": "TwentyThird is WelloWork's psychodynamic AI platform for self-discovery — Freudian and Lacanian analysis applied to the subconscious patterns behind daily behaviour, not a personality quiz.",
+      "points": {
+        "patterns": {
+          "title": "Pattern and loop mapping",
+          "body": "Surfaces the recurring subconscious patterns behind repeated behaviour, tracked over time rather than in a single snapshot."
+        },
+        "dreams": {
+          "title": "Dream interpretation",
+          "body": "Reads dreams for what they signal about the goals a person is and isn't moving toward."
+        },
+        "workBlocks": {
+          "title": "Professional blocks",
+          "body": "Works through imposter syndrome, procrastination and self-sabotage at the source."
+        }
+      },
+      "primaryCta": "Start free trial on day-23.com",
+      "secondaryCta": "How TwentyThird works",
+      "visualAlt": "Illustration of TwentyThird mapping subconscious patterns, dreams and relationships into a single profile",
+      "visualLabel": "Pattern mapping"
+    },
+    "crumbs": {
+      "home": "Home",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "Psychodynamic AI for ",
+      "titleAccent": "self-discovery",
+      "lede": "TwentyThird applies Freudian and Lacanian analysis to the subconscious patterns behind daily behaviour — dreams, work blocks and relationships — instead of a surface-level personality quiz.",
+      "primaryCta": "Start free trial on day-23.com",
+      "secondaryCta": "See how it works",
+      "answerLabel": "What is TwentyThird?",
+      "answerBody": "TwentyThird, built by WelloWork, is a psychodynamic AI platform for self-discovery. It combines pattern and loop mapping, dream interpretation and relational analysis to do root-cause work on subconscious patterns, with an optional life-connections feature that adds real relational context from family and friends.",
+      "visualAlt": "Illustration of TwentyThird mapping subconscious patterns, dreams and relationships into a single profile",
+      "visualLabel": "Pattern mapping"
+    },
+    "howItWorks": {
+      "heading": "How it works",
+      "intro": "A structured mechanism, not an open-ended chat — each stage builds on data from the last.",
+      "steps": {
+        "intake": {
+          "title": "Intake",
+          "body": "A structured intake maps current patterns, goals and the professional or relational areas someone wants to work on."
+        },
+        "analysis": {
+          "title": "Analysis across core capabilities",
+          "body": "Readings run across pattern and loop mapping, dream interpretation, and work and relational analysis, each tied back to the same underlying goals."
+        },
+        "ongoing": {
+          "title": "Ongoing use",
+          "body": "Catch-ups, dream logging and sessions build on prior analysis over time, instead of resetting with every use."
+        },
+        "connections": {
+          "title": "Life connections (optional)",
+          "body": "Users can add family and friends as life connections so the analysis draws on real relational context, not self-report alone."
+        },
+        "report": {
+          "title": "Clinical-report output",
+          "body": "Findings are compiled into a structured report a person can act on, not a one-line summary."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "For individuals",
+      "intro": "Use TwentyThird on your own, with a 3-day free trial before you commit.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Self-understanding",
+          "body": "See the subconscious patterns behind repeated behaviour, tracked over time rather than diagnosed once."
+        },
+        "dreamGoalAlignment": {
+          "title": "Dream and goal alignment",
+          "body": "Dream interpretation is tied back to the goals a person is and isn't moving toward."
+        },
+        "blockClearing": {
+          "title": "Professional block-clearing",
+          "body": "Work through imposter syndrome, procrastination and self-sabotage at the root."
+        }
+      },
+      "cta": "Start free trial on day-23.com",
+      "trialNote": "3-day free trial. Account creation happens on day-23.com."
+    },
+    "forCompanies": {
+      "heading": "For companies",
+      "intro": "Companies buy TwentyThird for employees as a mental-health and self-understanding benefit, framed around performance and company culture rather than generic wellness perks.",
+      "points": {
+        "performanceCulture": {
+          "title": "Performance and culture, not generic wellness",
+          "body": "Grounded in work and dream analysis, tied to how people actually work rather than a general wellbeing add-on."
+        },
+        "employeeOwned": {
+          "title": "Employees own their data",
+          "body": "Employees own their data; managers and HR see only what an employee chooses to share, never raw analysis."
+        },
+        "companyWide": {
+          "title": "A company-wide benefit",
+          "body": "Rolled out as an employee benefit alongside WelloWork's other workplace performance tools."
+        }
+      },
+      "cta": "Talk to us about TwentyThird",
+      "note": "Routed through WelloWork's existing sales contact."
+    },
+    "privacy": {
+      "chip": "GDPR-compliant · no third-party sharing",
+      "heading": "Privacy and trust",
+      "body": "TwentyThird is GDPR-compliant and does not share personal data with third parties. Employees own their own data; when TwentyThird is offered as a company benefit, managers and HR see only what an employee chooses to share.",
+      "cta": "Read the privacy policy"
+    },
+    "finalCta": {
+      "headingLead": "Understand the patterns ",
+      "headingAccent": "running your day",
+      "body": "Start a 3-day free trial on day-23.com, or bring TwentyThird to your team as a workplace benefit.",
+      "primaryCta": "Start free trial on day-23.com",
+      "secondaryCta": "Talk to us about TwentyThird"
     }
   }
 }

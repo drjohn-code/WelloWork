@@ -1,8 +1,9 @@
 "use client";
 
 import { useEffect, useMemo, useState, type FormEvent } from "react";
+import { useSearchParams } from "next/navigation";
 import { useLocale, useTranslations } from "next-intl";
-import { Link, useRouter } from "@/i18n/navigation";
+import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "../Icons";
 import { orderErrorKey } from "./orderErrors";
 import { initiateCheckout } from "@/app/lib/checkout";
@@ -94,7 +95,8 @@ function earliestErrorStep(errors: OrderErrors): 1 | 2 | 3 | 4 | null {
 export function OrderWizard() {
   const t = useTranslations("cognitiveRewardsOrder");
   const locale = useLocale();
-  const router = useRouter();
+  const searchParams = useSearchParams();
+  const checkoutCancelled = searchParams.get("checkout") === "cancelled";
 
   const [draft, setDraft] = useState<DraftState>(initialDraft);
   const [hydrated, setHydrated] = useState(false);
@@ -201,20 +203,17 @@ export function OrderWizard() {
       };
 
       if (res.ok && data.ok && data.orderId && data.pricing) {
-        try {
-          window.sessionStorage.removeItem(STORAGE_KEY);
-        } catch {
-          // ignore
+        const checkout = await initiateCheckout(data.orderId, locale);
+        if (checkout.ok) {
+          try {
+            window.sessionStorage.removeItem(STORAGE_KEY);
+          } catch {
+            // ignore
+          }
+          window.location.href = checkout.url;
+          return;
         }
-        initiateCheckout(
-          {
-            orderId: data.orderId,
-            pricing: data.pricing,
-            teamSize: draft.teamSize as TeamSize,
-            buyerCompany: draft.buyerCompany,
-          },
-          (path) => router.push(path)
-        );
+        setGlobalError(checkout.code);
         return;
       }
 
@@ -261,6 +260,22 @@ export function OrderWizard() {
           );
         })}
       </nav>
+
+      {checkoutCancelled && (
+        <div
+          role="status"
+          style={{
+            padding: "14px 18px",
+            borderRadius: 14,
+            background: "rgba(92,115,251,0.10)",
+            border: "1px solid rgba(92,115,251,0.28)",
+            fontSize: 13.5,
+            color: "var(--ink-2)",
+          }}
+        >
+          {t("payment.cancelled.body")}
+        </div>
+      )}
 
       <form onSubmit={handleSubmit} noValidate>
         {draft.step === 1 && (

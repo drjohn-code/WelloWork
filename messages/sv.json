@@ -438,7 +438,8 @@
       "default": "Aggregerat, anonymiserat — chefsvy"
     },
     "swedenChip": "Driven av vetenskap, byggd med omsorg",
-    "logoAlt": "WelloWork-logotyp"
+    "logoAlt": "WelloWork-logotyp",
+    "opensInNewTab": "(öppnas i en ny flik)"
   },
   "contact": {
     "based": {
@@ -1101,9 +1102,13 @@
       "title": "Beställ Cognitive Rewards | WelloWork",
       "description": "Konfigurera ert lags Cognitive Rewards-spel — välj teamstorlek, lägg till spelare och finansiera belöningspotten i några enkla steg."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Betalning | Beställ Cognitive Rewards | WelloWork",
-      "description": "Granska er sammanfattning av Cognitive Rewards-beställningen innan betalning. Säker kassa kommer snart."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Order bekräftad | Cognitive Rewards | WelloWork",
+      "description": "Bekräftelse och kvittosammanfattning för din Cognitive Rewards-beställning."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: Psykodynamisk AI för självinsikt | WelloWork",
+      "description": "TwentyThird är WelloWorks psykodynamiska AI-plattform för självinsikt — freudiansk och lacaniansk analys av mönster, drömmar, professionella blockeringar och relationer, GDPR-kompatibel och utan delning med tredje part."
     }
   },
   "nav": {
@@ -3178,7 +3183,7 @@
       "home": "Hem",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Beställning",
-      "payment": "Betalning"
+      "success": "Bekräftelse"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Skapa ditt lags ",
@@ -3278,17 +3283,154 @@
       "cta": "Boka en konsultation"
     },
     "payment": {
+      "cancelled": {
+        "body": "Betalningen avbröts — ingen betalning har gjorts. Granska din beställning nedan och försök igen när du är redo."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Fortsätt till ",
-      "titleAccent": "betalning",
-      "lede": "Betalning kommer snart. Här är vad du är på väg att betala för.",
+      "titleLead": "Allt ",
+      "titleAccent": "klart",
+      "lede": "Tack för din beställning — här är din bekräftelse.",
       "orderReference": "Ordernummer",
       "summaryHeading": "Ordersammanfattning",
-      "payButton": "Betala säkert",
-      "comingSoon": "Betalning kommer snart — säker kassa kopplas in härnäst.",
+      "summary": {
+        "gameFee": "Spelavgift ({size} spelare)",
+        "gameFeeGeneric": "Spelavgift",
+        "rewardPool": "Belöningspott (betalas ut till ert team)",
+        "tax": "Moms",
+        "total": "Totalt betalt"
+      },
+      "paidHeading": "Betalning mottagen",
+      "paidBody": "Betalning mottagen — inbjudningar till ert team skickas ut inom kort.",
+      "processingHeading": "Slutför…",
+      "processingBody": "Vi bekräftar din betalning med Stripe — det tar oftast bara några sekunder. Uppdatera sidan om den inte har uppdaterats än.",
+      "refresh": "Uppdatera status",
       "missingHeading": "Vi kunde inte hitta den här ordern",
-      "missingBody": "Din ordersammanfattning är inte tillgänglig i den här webbläsarsessionen — det kan hända efter en uppdatering eller om du öppnade länken någon annanstans. Starta en ny order för att fortsätta.",
+      "missingBody": "Den här bekräftelselänken verkar ofullständig eller har gått ut. Om du har genomfört betalningen, kolla din e-post efter ett kvitto, eller kontakta oss om du är osäker.",
+      "backHome": "Tillbaka till Cognitive Rewards",
       "startNew": "Starta en ny order"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Grundorsaksarbete med ",
+      "headingAccent": "mönstren under ytan",
+      "body": "TwentyThird är WelloWorks psykodynamiska AI-plattform för självinsikt — freudiansk och lacaniansk analys tillämpad på de undermedvetna mönster som ligger bakom vardagligt beteende, inte ett ytligt personlighetstest.",
+      "points": {
+        "patterns": {
+          "title": "Kartläggning av mönster och loopar",
+          "body": "Lyfter fram de återkommande undermedvetna mönstren bakom upprepat beteende, följda över tid snarare än i en enskild ögonblicksbild."
+        },
+        "dreams": {
+          "title": "Drömtydning",
+          "body": "Läser drömmar för vad de säger om de mål en person rör sig mot — eller inte."
+        },
+        "workBlocks": {
+          "title": "Professionella blockeringar",
+          "body": "Arbetar igenom bedragarsyndrom, prokrastinering och självsabotage vid roten."
+        }
+      },
+      "primaryCta": "Starta kostnadsfri provperiod på day-23.com",
+      "secondaryCta": "Så fungerar TwentyThird",
+      "visualAlt": "Illustration av TwentyThird som samlar undermedvetna mönster, drömmar och relationer i en enda profil",
+      "visualLabel": "Mönsterkartläggning"
+    },
+    "crumbs": {
+      "home": "Hem",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "Psykodynamisk AI för ",
+      "titleAccent": "självinsikt",
+      "lede": "TwentyThird tillämpar freudiansk och lacaniansk analys på de undermedvetna mönster som ligger bakom vardagligt beteende — drömmar, professionella blockeringar och relationer — i stället för ett ytligt personlighetstest.",
+      "primaryCta": "Starta kostnadsfri provperiod på day-23.com",
+      "secondaryCta": "Se hur det fungerar",
+      "answerLabel": "Vad är TwentyThird?",
+      "answerBody": "TwentyThird, byggt av WelloWork, är en psykodynamisk AI-plattform för självinsikt. Den kombinerar kartläggning av mönster och loopar, drömtydning och relationsanalys för att arbeta med undermedvetna mönster vid roten, med en valfri funktion för livskopplingar som ger analysen verklig relationskontext från familj och vänner.",
+      "visualAlt": "Illustration av TwentyThird som samlar undermedvetna mönster, drömmar och relationer i en enda profil",
+      "visualLabel": "Mönsterkartläggning"
+    },
+    "howItWorks": {
+      "heading": "Så fungerar det",
+      "intro": "En strukturerad process, inte en öppen chatt — varje steg bygger på data från det föregående.",
+      "steps": {
+        "intake": {
+          "title": "Intag",
+          "body": "Ett strukturerat intag kartlägger nuvarande mönster, mål och de professionella eller relationella områden någon vill arbeta med."
+        },
+        "analysis": {
+          "title": "Analys av alla kärnfunktioner",
+          "body": "Analyserna omfattar kartläggning av mönster och loopar, drömtydning samt professionell och relationell analys — allt kopplat till samma underliggande mål."
+        },
+        "ongoing": {
+          "title": "Löpande användning",
+          "body": "Avstämningar, drömdagbok och sessioner bygger vidare på tidigare analys över tid, i stället för att börja om vid varje användning."
+        },
+        "connections": {
+          "title": "Livskopplingar (valfritt)",
+          "body": "Användare kan lägga till familj och vänner som livskopplingar så att analysen bygger på verklig relationskontext, inte enbart självrapportering."
+        },
+        "report": {
+          "title": "Klinisk rapport som resultat",
+          "body": "Resultaten sammanställs i en strukturerad rapport att agera på, inte en enradig sammanfattning."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "För privatpersoner",
+      "intro": "Använd TwentyThird på egen hand, med en kostnadsfri 3-dagars provperiod innan du bestämmer dig.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Självinsikt",
+          "body": "Se de undermedvetna mönster som ligger bakom upprepat beteende, följda över tid i stället för diagnostiserade en gång."
+        },
+        "dreamGoalAlignment": {
+          "title": "Drömmar i linje med mål",
+          "body": "Drömtydning kopplas tillbaka till de mål en person rör sig mot — eller inte."
+        },
+        "blockClearing": {
+          "title": "Lösa professionella blockeringar",
+          "body": "Arbeta igenom bedragarsyndrom, prokrastinering och självsabotage vid roten."
+        }
+      },
+      "cta": "Starta kostnadsfri provperiod på day-23.com",
+      "trialNote": "Kostnadsfri 3-dagars provperiod. Kontot skapas på day-23.com."
+    },
+    "forCompanies": {
+      "heading": "För företag",
+      "intro": "Företag köper TwentyThird till medarbetare som en förmån för mental hälsa och självinsikt, inriktad på prestation och företagskultur snarare än generiska friskvårdsförmåner.",
+      "points": {
+        "performanceCulture": {
+          "title": "Prestation och kultur, inte generisk friskvård",
+          "body": "Grundat i professionell analys och drömtydning, kopplat till hur människor faktiskt arbetar snarare än ett allmänt friskvårdstillägg."
+        },
+        "employeeOwned": {
+          "title": "Medarbetare äger sin data",
+          "body": "Medarbetare äger sin egen data; chefer och HR ser bara det medarbetaren väljer att dela, aldrig råanalysen."
+        },
+        "companyWide": {
+          "title": "En förmån för hela företaget",
+          "body": "Rullas ut som medarbetarförmån tillsammans med WelloWorks övriga verktyg för arbetsplatsprestation."
+        }
+      },
+      "cta": "Prata med oss om TwentyThird",
+      "note": "Hanteras via WelloWorks befintliga säljkontakt."
+    },
+    "privacy": {
+      "chip": "GDPR-kompatibel · ingen delning med tredje part",
+      "heading": "Integritet och förtroende",
+      "body": "TwentyThird är GDPR-kompatibelt och delar inte personuppgifter med tredje part. Medarbetare äger sin egen data; när TwentyThird erbjuds som en företagsförmån ser chefer och HR bara det medarbetaren väljer att dela.",
+      "cta": "Läs integritetspolicyn"
+    },
+    "finalCta": {
+      "headingLead": "Förstå mönstren ",
+      "headingAccent": "som styr din vardag",
+      "body": "Starta en kostnadsfri 3-dagars provperiod på day-23.com, eller ge TwentyThird till ditt team som en arbetsplatsförmån.",
+      "primaryCta": "Starta kostnadsfri provperiod på day-23.com",
+      "secondaryCta": "Prata med oss om TwentyThird"
     }
   }
 }

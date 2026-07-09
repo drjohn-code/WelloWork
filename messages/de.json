@@ -438,7 +438,8 @@
       "default": "Aggregiert, anonymisiert – Ansicht für Führungskräfte"
     },
     "swedenChip": "Von Wissenschaft getrieben, mit Sorgfalt gebaut",
-    "logoAlt": "WelloWork Logo"
+    "logoAlt": "WelloWork Logo",
+    "opensInNewTab": "(öffnet in einem neuen Tab)"
   },
   "contact": {
     "based": {
@@ -1101,9 +1102,13 @@
       "title": "Cognitive Rewards bestellen | WelloWork",
       "description": "Konfigurieren Sie das Cognitive-Rewards-Spiel Ihres Teams — wählen Sie eine Teamgröße, fügen Sie Spieler hinzu und finanzieren Sie den Belohnungstopf in wenigen geführten Schritten."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Zahlung | Cognitive Rewards bestellen | WelloWork",
-      "description": "Prüfen Sie die Übersicht Ihrer Cognitive-Rewards-Bestellung vor der Zahlung. Der sichere Checkout folgt in Kürze."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Bestellung bestätigt | Cognitive Rewards | WelloWork",
+      "description": "Bestätigung und Zusammenfassung Ihrer Cognitive Rewards-Bestellung."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: Psychodynamische KI für Selbsterkenntnis | WelloWork",
+      "description": "TwentyThird ist WelloWorks psychodynamische KI-Plattform für Selbsterkenntnis — Analyse nach Freud und Lacan zu Mustern, Träumen, beruflichen Blockaden und Beziehungen, DSGVO-konform und ohne Weitergabe an Dritte."
     }
   },
   "nav": {
@@ -3178,7 +3183,7 @@
       "home": "Startseite",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Bestellung",
-      "payment": "Zahlung"
+      "success": "Bestätigung"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Richten Sie das ",
@@ -3278,17 +3283,154 @@
       "cta": "Beratungstermin buchen"
     },
     "payment": {
+      "cancelled": {
+        "body": "Die Zahlung wurde abgebrochen — es wurde nichts berechnet. Überprüfen Sie unten Ihre Bestellung und versuchen Sie es erneut, wenn Sie bereit sind."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Weiter zur ",
-      "titleAccent": "Zahlung",
-      "lede": "Die Zahlung folgt in Kürze. Hier sehen Sie, wofür Sie gleich bezahlen.",
-      "orderReference": "Bestellreferenz",
+      "titleLead": "Alles ",
+      "titleAccent": "erledigt",
+      "lede": "Danke für Ihre Bestellung — hier ist Ihre Bestätigung.",
+      "orderReference": "Bestellnummer",
       "summaryHeading": "Bestellübersicht",
-      "payButton": "Sicher bezahlen",
-      "comingSoon": "Zahlung folgt in Kürze — der sichere Checkout wird als Nächstes angebunden.",
+      "summary": {
+        "gameFee": "Spielgebühr ({size} Spieler)",
+        "gameFeeGeneric": "Spielgebühr",
+        "rewardPool": "Belohnungstopf (wird an Ihr Team ausgezahlt)",
+        "tax": "MwSt.",
+        "total": "Gesamtbetrag bezahlt"
+      },
+      "paidHeading": "Zahlung erhalten",
+      "paidBody": "Zahlung erhalten — die Einladungen für Ihr Team folgen in Kürze.",
+      "processingHeading": "Wird abgeschlossen…",
+      "processingBody": "Wir bestätigen Ihre Zahlung bei Stripe — das dauert normalerweise nur wenige Sekunden. Laden Sie die Seite in Kürze neu, falls sie sich nicht aktualisiert.",
+      "refresh": "Status aktualisieren",
       "missingHeading": "Wir konnten diese Bestellung nicht finden",
-      "missingBody": "Ihre Bestellübersicht ist in dieser Browser-Sitzung nicht verfügbar — das kann nach einem Neuladen der Seite passieren oder wenn Sie diesen Link an anderer Stelle geöffnet haben. Starten Sie eine neue Bestellung, um fortzufahren.",
+      "missingBody": "Dieser Bestätigungslink scheint unvollständig zu sein oder ist abgelaufen. Falls Sie die Zahlung abgeschlossen haben, prüfen Sie Ihre E-Mails auf eine Quittung, oder kontaktieren Sie uns, falls Sie unsicher sind.",
+      "backHome": "Zurück zu Cognitive Rewards",
       "startNew": "Neue Bestellung starten"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Ursachenarbeit an ",
+      "headingAccent": "den Mustern dahinter",
+      "body": "TwentyThird ist WelloWorks psychodynamische KI-Plattform für Selbsterkenntnis — Analyse nach Freud und Lacan, angewendet auf die unbewussten Muster hinter dem Alltagsverhalten, kein oberflächlicher Persönlichkeitstest.",
+      "points": {
+        "patterns": {
+          "title": "Muster- und Schleifenanalyse",
+          "body": "Deckt die wiederkehrenden unbewussten Muster hinter wiederholtem Verhalten auf — über die Zeit verfolgt, nicht in einer einzelnen Momentaufnahme."
+        },
+        "dreams": {
+          "title": "Traumdeutung",
+          "body": "Liest Träume danach, was sie über die Ziele aussagen, auf die eine Person zu- oder nicht zusteuert."
+        },
+        "workBlocks": {
+          "title": "Berufliche Blockaden",
+          "body": "Arbeitet Hochstapler-Syndrom, Prokrastination und Selbstsabotage an der Wurzel auf."
+        }
+      },
+      "primaryCta": "Kostenlose Testphase auf day-23.com starten",
+      "secondaryCta": "So funktioniert TwentyThird",
+      "visualAlt": "Illustration von TwentyThird, das unbewusste Muster, Träume und Beziehungen zu einem einzigen Profil zusammenführt",
+      "visualLabel": "Musteranalyse"
+    },
+    "crumbs": {
+      "home": "Startseite",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "Psychodynamische KI für ",
+      "titleAccent": "Selbsterkenntnis",
+      "lede": "TwentyThird wendet die Analyse nach Freud und Lacan auf die unbewussten Muster hinter dem Alltagsverhalten an — Träume, berufliche Blockaden und Beziehungen — statt eines oberflächlichen Persönlichkeitstests.",
+      "primaryCta": "Kostenlose Testphase auf day-23.com starten",
+      "secondaryCta": "So funktioniert es",
+      "answerLabel": "Was ist TwentyThird?",
+      "answerBody": "TwentyThird, entwickelt von WelloWork, ist eine psychodynamische KI-Plattform für Selbsterkenntnis. Sie verbindet Muster- und Schleifenanalyse, Traumdeutung und Beziehungsanalyse, um unbewusste Muster an der Wurzel zu bearbeiten — mit einer optionalen Funktion für Lebensverbindungen, die echten Beziehungskontext von Familie und Freunden einbezieht.",
+      "visualAlt": "Illustration von TwentyThird, das unbewusste Muster, Träume und Beziehungen zu einem einzigen Profil zusammenführt",
+      "visualLabel": "Musteranalyse"
+    },
+    "howItWorks": {
+      "heading": "So funktioniert es",
+      "intro": "Ein strukturierter Ablauf, kein offener Chat — jede Phase baut auf den Daten der vorherigen auf.",
+      "steps": {
+        "intake": {
+          "title": "Aufnahme",
+          "body": "Eine strukturierte Aufnahme erfasst aktuelle Muster, Ziele sowie die beruflichen oder zwischenmenschlichen Bereiche, an denen jemand arbeiten möchte."
+        },
+        "analysis": {
+          "title": "Analyse über alle Kernfunktionen",
+          "body": "Auswertungen laufen über Muster- und Schleifenanalyse, Traumdeutung sowie berufliche und Beziehungsanalyse — jeweils zurückgebunden an dieselben zugrunde liegenden Ziele."
+        },
+        "ongoing": {
+          "title": "Fortlaufende Nutzung",
+          "body": "Check-ins, Traumprotokolle und Sitzungen bauen über die Zeit auf früheren Analysen auf, statt bei jeder Nutzung neu zu beginnen."
+        },
+        "connections": {
+          "title": "Lebensverbindungen (optional)",
+          "body": "Nutzer:innen können Familie und Freunde als Lebensverbindungen hinzufügen, damit die Analyse auf echtem Beziehungskontext beruht — nicht nur auf Selbstauskunft."
+        },
+        "report": {
+          "title": "Klinischer Berichtsausgang",
+          "body": "Die Ergebnisse werden zu einem strukturierten Bericht zusammengefasst, auf dessen Grundlage gehandelt werden kann — keine Ein-Satz-Zusammenfassung."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "Für Einzelpersonen",
+      "intro": "Nutzen Sie TwentyThird eigenständig — mit einer 3-tägigen kostenlosen Testphase, bevor Sie sich entscheiden.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Selbsterkenntnis",
+          "body": "Erkennen Sie die unbewussten Muster hinter wiederholtem Verhalten — über die Zeit verfolgt, statt einmalig diagnostiziert."
+        },
+        "dreamGoalAlignment": {
+          "title": "Träume und Ziele in Einklang bringen",
+          "body": "Traumdeutung wird zurückgebunden an die Ziele, auf die eine Person zu- oder nicht zusteuert."
+        },
+        "blockClearing": {
+          "title": "Berufliche Blockaden lösen",
+          "body": "Hochstapler-Syndrom, Prokrastination und Selbstsabotage werden an der Wurzel bearbeitet."
+        }
+      },
+      "cta": "Kostenlose Testphase auf day-23.com starten",
+      "trialNote": "3-tägige kostenlose Testphase. Die Kontoerstellung erfolgt auf day-23.com."
+    },
+    "forCompanies": {
+      "heading": "Für Unternehmen",
+      "intro": "Unternehmen erwerben TwentyThird für Mitarbeitende als Benefit für mentale Gesundheit und Selbsterkenntnis — ausgerichtet auf Leistung und Unternehmenskultur statt auf allgemeine Wellness-Angebote.",
+      "points": {
+        "performanceCulture": {
+          "title": "Leistung und Kultur statt allgemeiner Wellness",
+          "body": "Basiert auf beruflicher Analyse und Traumdeutung, ausgerichtet daran, wie Menschen tatsächlich arbeiten — kein allgemeines Wellness-Extra."
+        },
+        "employeeOwned": {
+          "title": "Mitarbeitende besitzen ihre Daten",
+          "body": "Mitarbeitende besitzen ihre eigenen Daten; Führungskräfte und HR sehen nur, was Mitarbeitende freiwillig teilen — niemals die Rohanalyse."
+        },
+        "companyWide": {
+          "title": "Ein unternehmensweiter Benefit",
+          "body": "Wird als Mitarbeiter-Benefit neben WelloWorks weiteren Tools zur Arbeitsplatzleistung eingeführt."
+        }
+      },
+      "cta": "Sprechen Sie mit uns über TwentyThird",
+      "note": "Wird über WelloWorks bestehenden Vertriebskontakt abgewickelt."
+    },
+    "privacy": {
+      "chip": "DSGVO-konform · keine Weitergabe an Dritte",
+      "heading": "Datenschutz und Vertrauen",
+      "body": "TwentyThird ist DSGVO-konform und gibt keine personenbezogenen Daten an Dritte weiter. Mitarbeitende besitzen ihre eigenen Daten; wird TwentyThird als Unternehmens-Benefit angeboten, sehen Führungskräfte und HR nur, was Mitarbeitende freiwillig teilen.",
+      "cta": "Datenschutzerklärung lesen"
+    },
+    "finalCta": {
+      "headingLead": "Verstehen Sie die Muster, ",
+      "headingAccent": "die Ihren Alltag bestimmen",
+      "body": "Starten Sie eine 3-tägige kostenlose Testphase auf day-23.com oder bringen Sie TwentyThird als Benefit in Ihr Team.",
+      "primaryCta": "Kostenlose Testphase auf day-23.com starten",
+      "secondaryCta": "Sprechen Sie mit uns über TwentyThird"
     }
   }
 }

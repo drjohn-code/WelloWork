@@ -438,7 +438,8 @@
       "default": "Apibendrinta, anonimizuota — vadovo rodinys"
     },
     "swedenChip": "Grįsta mokslu, kurta su rūpesčiu",
-    "logoAlt": "WelloWork logotipas"
+    "logoAlt": "WelloWork logotipas",
+    "opensInNewTab": "(atsidaro naujame skirtuke)"
   },
   "contact": {
     "based": {
@@ -1101,9 +1102,13 @@
       "title": "Užsisakyti Cognitive Rewards | WelloWork",
       "description": "Sukonfigūruokite savo komandos Cognitive Rewards žaidimą — pasirinkite komandos dydį, pridėkite žaidėjus ir finansuokite atlygio fondą per kelis paprastus žingsnius."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Mokėjimas | Užsisakyti Cognitive Rewards | WelloWork",
-      "description": "Prieš apmokėjimą peržiūrėkite savo Cognitive Rewards užsakymo santrauką. Saugus atsiskaitymas bus prieinamas netrukus."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Užsakymas patvirtintas | Cognitive Rewards | WelloWork",
+      "description": "Jūsų Cognitive Rewards užsakymo patvirtinimas ir kvito santrauka."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: psichodinaminis DI savęs pažinimui | WelloWork",
+      "description": "TwentyThird — tai WelloWork psichodinaminė DI platforma savęs pažinimui: Froido ir Lacano modelių, sapnų, profesinių blokų ir santykių analizė, atitinkanti BDAR ir nesidalijanti duomenimis su trečiosiomis šalimis."
     }
   },
   "nav": {
@@ -3178,7 +3183,7 @@
       "home": "Pradžia",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Užsakymas",
-      "payment": "Mokėjimas"
+      "success": "Patvirtinimas"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Sukurkite savo komandos ",
@@ -3278,17 +3283,154 @@
       "cta": "Užsisakyti konsultaciją"
     },
     "payment": {
+      "cancelled": {
+        "body": "Mokėjimas atšauktas — lėšos nenuskaičiuotos. Peržiūrėkite savo užsakymą žemiau ir bandykite dar kartą, kai būsite pasiruošę."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Tęsti prie ",
-      "titleAccent": "apmokėjimo",
-      "lede": "Apmokėjimas bus prieinamas netrukus. Štai už ką jūs ruošiatės mokėti.",
+      "titleLead": "Viskas ",
+      "titleAccent": "paruošta",
+      "lede": "Dėkojame už jūsų užsakymą — štai jūsų patvirtinimas.",
       "orderReference": "Užsakymo numeris",
       "summaryHeading": "Užsakymo santrauka",
-      "payButton": "Saugiai apmokėti",
-      "comingSoon": "Apmokėjimas bus prieinamas netrukus — saugus atsiskaitymas šiuo metu diegiamas.",
+      "summary": {
+        "gameFee": "Žaidimo mokestis ({size} žaidėjų)",
+        "gameFeeGeneric": "Žaidimo mokestis",
+        "rewardPool": "Atlygio fondas (išmokamas jūsų komandai)",
+        "tax": "PVM",
+        "total": "Iš viso sumokėta"
+      },
+      "paidHeading": "Mokėjimas gautas",
+      "paidBody": "Mokėjimas gautas — kvietimai jūsų komandai bus išsiųsti netrukus.",
+      "processingHeading": "Užbaigiama…",
+      "processingBody": "Patvirtiname jūsų mokėjimą su Stripe — tai paprastai užtrunka vos kelias sekundes. Atnaujinkite puslapį po akimirkos, jei jis neatsinaujina.",
+      "refresh": "Atnaujinti būseną",
       "missingHeading": "Nepavyko rasti šio užsakymo",
-      "missingBody": "Jūsų užsakymo santrauka šioje naršyklės sesijoje nepasiekiama — taip gali nutikti po puslapio atnaujinimo arba jei šią nuorodą atidarėte kitur. Norėdami tęsti, pradėkite naują užsakymą.",
+      "missingBody": "Ši patvirtinimo nuoroda atrodo neišsami arba nebegalioja. Jei atlikote mokėjimą, patikrinkite savo el. paštą dėl kvito, arba susisiekite su mumis, jei nesate tikri.",
+      "backHome": "Grįžti į Cognitive Rewards",
       "startNew": "Pradėti naują užsakymą"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Darbas su pagrindine priežastimi: ",
+      "headingAccent": "po paviršiumi slypintys modeliai",
+      "body": "TwentyThird — tai WelloWork psichodinaminė DI platforma savęs pažinimui: Froido ir Lacano analizė, taikoma pasąmonės modeliams, slypintiems už kasdienio elgesio, o ne paviršutiniškas asmenybės testas.",
+      "points": {
+        "patterns": {
+          "title": "Modelių ir ciklų žemėlapis",
+          "body": "Atskleidžia pasikartojančius pasąmonės modelius, slypinčius už pasikartojančio elgesio, stebimus laikui bėgant, o ne vienkartinėje nuotraukoje."
+        },
+        "dreams": {
+          "title": "Sapnų aiškinimas",
+          "body": "Nagrinėja sapnus pagal tai, ką jie sako apie tikslus, link kurių žmogus juda — arba nejuda."
+        },
+        "workBlocks": {
+          "title": "Profesiniai blokai",
+          "body": "Padeda įveikti apsišaukėlio sindromą, prokrastinaciją ir savisabotažą iš pačių šaknų."
+        }
+      },
+      "primaryCta": "Pradėti nemokamą bandomąjį laikotarpį day-23.com",
+      "secondaryCta": "Kaip veikia TwentyThird",
+      "visualAlt": "Iliustracija, vaizduojanti, kaip TwentyThird sujungia pasąmonės modelius, sapnus ir santykius į vieną profilį",
+      "visualLabel": "Modelių žemėlapis"
+    },
+    "crumbs": {
+      "home": "Pradžia",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "Psichodinaminis DI, skirtas ",
+      "titleAccent": "savęs pažinimui",
+      "lede": "TwentyThird taiko Froido ir Lacano analizę pasąmonės modeliams, slypintiems už kasdienio elgesio — sapnams, profesiniams blokams ir santykiams — vietoje paviršutiniško asmenybės testo.",
+      "primaryCta": "Pradėti nemokamą bandomąjį laikotarpį day-23.com",
+      "secondaryCta": "Peržiūrėti, kaip tai veikia",
+      "answerLabel": "Kas yra TwentyThird?",
+      "answerBody": "TwentyThird, sukurta WelloWork, yra psichodinaminė DI platforma savęs pažinimui. Ji sujungia modelių ir ciklų žemėlapį, sapnų aiškinimą bei santykių analizę, kad būtų galima dirbti su pasąmonės modeliais nuo pat šaknų, o pasirenkamoji gyvenimo ryšių funkcija analizei suteikia realų santykių kontekstą iš šeimos narių ir draugų.",
+      "visualAlt": "Iliustracija, vaizduojanti, kaip TwentyThird sujungia pasąmonės modelius, sapnus ir santykius į vieną profilį",
+      "visualLabel": "Modelių žemėlapis"
+    },
+    "howItWorks": {
+      "heading": "Kaip tai veikia",
+      "intro": "Struktūrizuotas mechanizmas, o ne laisvas pokalbis — kiekvienas etapas remiasi ankstesnio etapo duomenimis.",
+      "steps": {
+        "intake": {
+          "title": "Pradinis įvertinimas",
+          "body": "Struktūrizuotas pradinis įvertinimas nustato dabartinius modelius, tikslus ir profesines ar santykių sritis, su kuriomis žmogus nori dirbti."
+        },
+        "analysis": {
+          "title": "Analizė visose pagrindinėse srityse",
+          "body": "Analizė apima modelių ir ciklų žemėlapį, sapnų aiškinimą bei profesinę ir santykių analizę — visos jos siejamos su tais pačiais pagrindiniais tikslais."
+        },
+        "ongoing": {
+          "title": "Nuolatinis naudojimas",
+          "body": "Pokalbiai, sapnų dienoraštis ir sesijos laikui bėgant remiasi ankstesne analize, o ne pradedami iš naujo kiekvieną kartą."
+        },
+        "connections": {
+          "title": "Gyvenimo ryšiai (pasirenkamai)",
+          "body": "Naudotojai gali pridėti šeimos narius ir draugus kaip gyvenimo ryšius, kad analizė remtųsi realiu santykių kontekstu, o ne vien savistaba."
+        },
+        "report": {
+          "title": "Klinikinė ataskaita kaip rezultatas",
+          "body": "Išvados sudedamos į struktūrizuotą ataskaitą, kuria galima remtis veiksmams, o ne vienos eilutės santrauką."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "Individualiems naudotojams",
+      "intro": "Naudokitės TwentyThird savarankiškai — su 3 dienų nemokamu bandomuoju laikotarpiu prieš apsisprendžiant.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Savęs pažinimas",
+          "body": "Atraskite pasąmonės modelius, slypinčius už pasikartojančio elgesio, stebimus laikui bėgant, o ne diagnozuotus vieną kartą."
+        },
+        "dreamGoalAlignment": {
+          "title": "Sapnų ir tikslų suderinimas",
+          "body": "Sapnų aiškinimas siejamas su tikslais, link kurių žmogus juda — arba nejuda."
+        },
+        "blockClearing": {
+          "title": "Profesinių blokų šalinimas",
+          "body": "Įveikite apsišaukėlio sindromą, prokrastinaciją ir savisabotažą nuo pačių šaknų."
+        }
+      },
+      "cta": "Pradėti nemokamą bandomąjį laikotarpį day-23.com",
+      "trialNote": "3 dienų nemokamas bandomasis laikotarpis. Paskyra sukuriama day-23.com svetainėje."
+    },
+    "forCompanies": {
+      "heading": "Įmonėms",
+      "intro": "Įmonės įsigyja TwentyThird darbuotojams kaip psichinės sveikatos ir savęs pažinimo naudą, orientuotą į rezultatus ir įmonės kultūrą, o ne bendro pobūdžio gerovės paslaugas.",
+      "points": {
+        "performanceCulture": {
+          "title": "Rezultatai ir kultūra, o ne bendra gerovė",
+          "body": "Grindžiama profesine ir sapnų analize, susieta su tuo, kaip žmonės realiai dirba, o ne bendru gerovės priedu."
+        },
+        "employeeOwned": {
+          "title": "Darbuotojai valdo savo duomenis",
+          "body": "Darbuotojai valdo savo duomenis; vadovai ir personalo skyrius mato tik tai, ką darbuotojas nusprendžia pasidalyti, niekada — neapdorotos analizės."
+        },
+        "companyWide": {
+          "title": "Visos įmonės nauda",
+          "body": "Diegiama kaip darbuotojų nauda kartu su kitais WelloWork darbo vietos rezultatų įrankiais."
+        }
+      },
+      "cta": "Susisiekite dėl TwentyThird",
+      "note": "Tvarkoma per esamą WelloWork pardavimų kontaktą."
+    },
+    "privacy": {
+      "chip": "Atitinka BDAR · duomenimis nesidalijama su trečiosiomis šalimis",
+      "heading": "Privatumas ir pasitikėjimas",
+      "body": "TwentyThird atitinka BDAR reikalavimus ir nesidalija asmens duomenimis su trečiosiomis šalimis. Darbuotojai valdo savo duomenis; kai TwentyThird siūloma kaip įmonės nauda, vadovai ir personalo skyrius mato tik tai, ką darbuotojas nusprendžia pasidalyti.",
+      "cta": "Skaityti privatumo politiką"
+    },
+    "finalCta": {
+      "headingLead": "Supraskite modelius, ",
+      "headingAccent": "valdančius jūsų kasdienybę",
+      "body": "Pradėkite 3 dienų nemokamą bandomąjį laikotarpį day-23.com arba pasiūlykite TwentyThird savo komandai kaip darbo vietos naudą.",
+      "primaryCta": "Pradėti nemokamą bandomąjį laikotarpį day-23.com",
+      "secondaryCta": "Susisiekite dėl TwentyThird"
     }
   }
 }

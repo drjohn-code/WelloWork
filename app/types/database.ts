@@ -142,6 +142,14 @@ export type Database = {
           consent_terms: boolean;
           consent_gdpr: boolean;
           user_agent: string | null;
+          stripe_checkout_session_id: string | null;
+          stripe_payment_intent_id: string | null;
+          paid_at: string | null;
+          stripe_tax_amount: number | null;
+          stripe_total: number | null;
+          // TEMPORARY - MOCK PAYMENT, REMOVE BEFORE PROD
+          payment_provider: CognitiveRewardsPaymentProvider;
+          mock_reference: string | null;
         };
         Insert: {
           id?: string;
@@ -162,6 +170,14 @@ export type Database = {
           consent_terms?: boolean;
           consent_gdpr?: boolean;
           user_agent?: string | null;
+          stripe_checkout_session_id?: string | null;
+          stripe_payment_intent_id?: string | null;
+          paid_at?: string | null;
+          stripe_tax_amount?: number | null;
+          stripe_total?: number | null;
+          // TEMPORARY - MOCK PAYMENT, REMOVE BEFORE PROD
+          payment_provider?: CognitiveRewardsPaymentProvider;
+          mock_reference?: string | null;
         };
         Update: Partial<Database["public"]["Tables"]["cognitive_rewards_orders"]["Insert"]>;
         Relationships: [];
@@ -206,8 +222,18 @@ export type DemoBookingStatus =
   | "completed"
   | "pending";
 
-export type CognitiveRewardsOrderStatus = "pending_payment" | "paid" | "cancelled";
+export type CognitiveRewardsOrderStatus =
+  | "pending_payment"
+  | "awaiting_payment"
+  | "paid"
+  | "failed"
+  | "expired"
+  | "cancelled"
+  // TEMPORARY - MOCK PAYMENT, REMOVE BEFORE PROD
+  | "mock_paid";
 export type CognitiveRewardsPlayerRole = "staff" | "manager" | "clevel";
+// TEMPORARY - MOCK PAYMENT, REMOVE BEFORE PROD
+export type CognitiveRewardsPaymentProvider = "stripe" | "mock";
 
 export type DemoRequestInsert = Database["public"]["Tables"]["demo_requests"]["Insert"];
 export type ContactMessageInsert = Database["public"]["Tables"]["contact_messages"]["Insert"];
@@ -218,3 +244,5 @@ export type CognitiveRewardsOrderInsert =
 export type CognitiveRewardsOrderRow = Database["public"]["Tables"]["cognitive_rewards_orders"]["Row"];
 export type CognitiveRewardsOrderPlayerInsert =
   Database["public"]["Tables"]["cognitive_rewards_order_players"]["Insert"];
+export type CognitiveRewardsOrderPlayerRow =
+  Database["public"]["Tables"]["cognitive_rewards_order_players"]["Row"];

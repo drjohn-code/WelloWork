@@ -438,7 +438,8 @@
       "default": "Geaggregeerd, geanonimiseerd — managerweergave"
     },
     "swedenChip": "Gedreven door wetenschap, gebouwd met zorg",
-    "logoAlt": "WelloWork-logo"
+    "logoAlt": "WelloWork-logo",
+    "opensInNewTab": "(opent in een nieuw tabblad)"
   },
   "contact": {
     "based": {
@@ -1101,9 +1102,13 @@
       "title": "Cognitive Rewards bestellen | WelloWork",
       "description": "Configureer het Cognitive Rewards-spel van uw team — kies een teamgrootte, voeg spelers toe en financier de beloningspot in een paar begeleide stappen."
     },
-    "cognitiveRewardsOrderPayment": {
-      "title": "Betaling | Cognitive Rewards bestellen | WelloWork",
-      "description": "Bekijk het overzicht van uw Cognitive Rewards-bestelling voordat u betaalt. Beveiligde kassa volgt binnenkort."
+    "cognitiveRewardsOrderSuccess": {
+      "title": "Bestelling bevestigd | Cognitive Rewards | WelloWork",
+      "description": "Bevestiging en ontvangstoverzicht van uw Cognitive Rewards-bestelling."
+    },
+    "twentyThird": {
+      "title": "TwentyThird: Psychodynamische AI voor zelfinzicht | WelloWork",
+      "description": "TwentyThird is WelloWorks psychodynamische AI-platform voor zelfinzicht — freudiaanse en lacaniaanse analyse van patronen, dromen, professionele blokkades en relaties, AVG-conform en zonder gegevensdeling met derden."
     }
   },
   "nav": {
@@ -3178,7 +3183,7 @@
       "home": "Home",
       "cognitiveRewards": "Cognitive Rewards",
       "current": "Bestelling",
-      "payment": "Betaling"
+      "success": "Bevestiging"
     },
     "eyebrow": "Cognitive Rewards",
     "titleLead": "Stel het ",
@@ -3278,17 +3283,154 @@
       "cta": "Boek een adviesgesprek"
     },
     "payment": {
+      "cancelled": {
+        "body": "Betaling geannuleerd — er is niets in rekening gebracht. Bekijk uw bestelling hieronder en probeer het opnieuw wanneer u klaar bent."
+      }
+    },
+    "success": {
       "eyebrow": "Cognitive Rewards",
-      "titleLead": "Doorgaan naar ",
-      "titleAccent": "betaling",
-      "lede": "Betalen kan binnenkort. Hier ziet u waarvoor u zo gaat betalen.",
-      "orderReference": "Bestelreferentie",
+      "titleLead": "U bent ",
+      "titleAccent": "helemaal klaar",
+      "lede": "Bedankt voor uw bestelling — hier is uw bevestiging.",
+      "orderReference": "Bestelnummer",
       "summaryHeading": "Besteloverzicht",
-      "payButton": "Veilig betalen",
-      "comingSoon": "Betalen kan binnenkort — de beveiligde kassa wordt als volgende stap aangesloten.",
+      "summary": {
+        "gameFee": "Spelkosten ({size} spelers)",
+        "gameFeeGeneric": "Spelkosten",
+        "rewardPool": "Beloningspot (uitbetaald aan uw team)",
+        "tax": "Btw",
+        "total": "Totaal betaald"
+      },
+      "paidHeading": "Betaling ontvangen",
+      "paidBody": "Betaling ontvangen — de uitnodigingen voor uw team volgen binnenkort.",
+      "processingHeading": "Even geduld…",
+      "processingBody": "We bevestigen uw betaling bij Stripe — dit duurt meestal maar een paar seconden. Vernieuw de pagina zo nodig.",
+      "refresh": "Status vernieuwen",
       "missingHeading": "We konden deze bestelling niet vinden",
-      "missingBody": "Uw besteloverzicht is niet beschikbaar in deze browsersessie — dit kan gebeuren na een herlaadactie of als u deze link elders heeft geopend. Start een nieuwe bestelling om door te gaan.",
+      "missingBody": "Deze bevestigingslink lijkt onvolledig of is verlopen. Als u de betaling heeft voltooid, controleer dan uw e-mail voor een bon, of neem contact met ons op als u het niet zeker weet.",
+      "backHome": "Terug naar Cognitive Rewards",
       "startNew": "Nieuwe bestelling starten"
+    }
+  },
+  "twentyThird": {
+    "section": {
+      "eyebrow": "TwentyThird",
+      "headingLead": "Werken aan de grondoorzaak van ",
+      "headingAccent": "de patronen eronder",
+      "body": "TwentyThird is WelloWorks psychodynamische AI-platform voor zelfinzicht — freudiaanse en lacaniaanse analyse toegepast op de onbewuste patronen achter dagelijks gedrag, geen oppervlakkige persoonlijkheidstest.",
+      "points": {
+        "patterns": {
+          "title": "In kaart brengen van patronen en cycli",
+          "body": "Brengt de terugkerende onbewuste patronen achter herhaald gedrag aan het licht, gevolgd over tijd in plaats van in één momentopname."
+        },
+        "dreams": {
+          "title": "Droomduiding",
+          "body": "Analyseert dromen op wat ze zeggen over de doelen waar iemand naartoe beweegt — of juist niet."
+        },
+        "workBlocks": {
+          "title": "Professionele blokkades",
+          "body": "Werkt impostersyndroom, uitstelgedrag en zelfsabotage bij de bron weg."
+        }
+      },
+      "primaryCta": "Start gratis proefperiode op day-23.com",
+      "secondaryCta": "Zo werkt TwentyThird",
+      "visualAlt": "Illustratie van TwentyThird dat onbewuste patronen, dromen en relaties samenbrengt in één profiel",
+      "visualLabel": "Patroonanalyse"
+    },
+    "crumbs": {
+      "home": "Home",
+      "current": "TwentyThird"
+    },
+    "hero": {
+      "eyebrow": "TwentyThird",
+      "titleLead": "Psychodynamische AI voor ",
+      "titleAccent": "zelfinzicht",
+      "lede": "TwentyThird past freudiaanse en lacaniaanse analyse toe op de onbewuste patronen achter dagelijks gedrag — dromen, professionele blokkades en relaties — in plaats van een oppervlakkige persoonlijkheidstest.",
+      "primaryCta": "Start gratis proefperiode op day-23.com",
+      "secondaryCta": "Bekijk hoe het werkt",
+      "answerLabel": "Wat is TwentyThird?",
+      "answerBody": "TwentyThird, gebouwd door WelloWork, is een psychodynamisch AI-platform voor zelfinzicht. Het combineert het in kaart brengen van patronen en cycli, droomduiding en relationele analyse om onbewuste patronen bij de bron aan te pakken, met een optionele functie voor levensverbindingen die echte relationele context toevoegt vanuit familie en vrienden.",
+      "visualAlt": "Illustratie van TwentyThird dat onbewuste patronen, dromen en relaties samenbrengt in één profiel",
+      "visualLabel": "Patroonanalyse"
+    },
+    "howItWorks": {
+      "heading": "Zo werkt het",
+      "intro": "Een gestructureerd mechanisme, geen open gesprek — elke fase bouwt voort op de gegevens van de vorige.",
+      "steps": {
+        "intake": {
+          "title": "Intake",
+          "body": "Een gestructureerde intake brengt de huidige patronen, doelen en de professionele of relationele gebieden in kaart waar iemand aan wil werken."
+        },
+        "analysis": {
+          "title": "Analyse over alle kernfuncties",
+          "body": "Analyses lopen over het in kaart brengen van patronen en cycli, droomduiding, en professionele en relationele analyse — allemaal teruggekoppeld naar dezelfde onderliggende doelen."
+        },
+        "ongoing": {
+          "title": "Doorlopend gebruik",
+          "body": "Check-ins, droomdagboek en sessies bouwen over tijd voort op eerdere analyse, in plaats van bij elk gebruik opnieuw te beginnen."
+        },
+        "connections": {
+          "title": "Levensverbindingen (optioneel)",
+          "body": "Gebruikers kunnen familie en vrienden toevoegen als levensverbindingen, zodat de analyse steunt op echte relationele context in plaats van alleen zelfrapportage."
+        },
+        "report": {
+          "title": "Klinisch rapport als resultaat",
+          "body": "Bevindingen worden samengevat in een gestructureerd rapport waarmee iemand aan de slag kan, geen samenvatting van één regel."
+        }
+      }
+    },
+    "forIndividuals": {
+      "heading": "Voor particulieren",
+      "intro": "Gebruik TwentyThird zelfstandig, met een gratis proefperiode van 3 dagen voordat je je vastlegt.",
+      "points": {
+        "selfUnderstanding": {
+          "title": "Zelfinzicht",
+          "body": "Zie de onbewuste patronen achter herhaald gedrag, gevolgd over tijd in plaats van eenmalig gediagnosticeerd."
+        },
+        "dreamGoalAlignment": {
+          "title": "Dromen afstemmen op doelen",
+          "body": "Droomduiding wordt teruggekoppeld aan de doelen waar iemand naartoe beweegt — of juist niet."
+        },
+        "blockClearing": {
+          "title": "Professionele blokkades opheffen",
+          "body": "Werk impostersyndroom, uitstelgedrag en zelfsabotage bij de bron weg."
+        }
+      },
+      "cta": "Start gratis proefperiode op day-23.com",
+      "trialNote": "Gratis proefperiode van 3 dagen. Account aanmaken gebeurt op day-23.com."
+    },
+    "forCompanies": {
+      "heading": "Voor bedrijven",
+      "intro": "Bedrijven bieden TwentyThird aan medewerkers als voordeel voor mentale gezondheid en zelfinzicht, gericht op prestaties en bedrijfscultuur in plaats van generieke wellnessvoordelen.",
+      "points": {
+        "performanceCulture": {
+          "title": "Prestaties en cultuur, geen generieke wellness",
+          "body": "Gebaseerd op professionele en droomanalyse, aansluitend bij hoe mensen daadwerkelijk werken in plaats van een algemene wellness-extra."
+        },
+        "employeeOwned": {
+          "title": "Medewerkers zijn eigenaar van hun data",
+          "body": "Medewerkers zijn eigenaar van hun eigen data; managers en HR zien alleen wat de medewerker kiest te delen, nooit de ruwe analyse."
+        },
+        "companyWide": {
+          "title": "Een bedrijfsbreed voordeel",
+          "body": "Uitgerold als medewerkersvoordeel naast WelloWorks andere tools voor werkprestaties."
+        }
+      },
+      "cta": "Praat met ons over TwentyThird",
+      "note": "Verloopt via het bestaande salescontact van WelloWork."
+    },
+    "privacy": {
+      "chip": "AVG-conform · geen deling met derden",
+      "heading": "Privacy en vertrouwen",
+      "body": "TwentyThird is AVG-conform en deelt geen persoonsgegevens met derden. Medewerkers zijn eigenaar van hun eigen data; wanneer TwentyThird als bedrijfsvoordeel wordt aangeboden, zien managers en HR alleen wat de medewerker kiest te delen.",
+      "cta": "Lees het privacybeleid"
+    },
+    "finalCta": {
+      "headingLead": "Begrijp de patronen ",
+      "headingAccent": "die je dag bepalen",
+      "body": "Start een gratis proefperiode van 3 dagen op day-23.com, of breng TwentyThird naar je team als werkgerelateerd voordeel.",
+      "primaryCta": "Start gratis proefperiode op day-23.com",
+      "secondaryCta": "Praat met ons over TwentyThird"
     }
   }
 }
