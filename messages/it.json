@@ -18,10 +18,6 @@
       "title": "Vuoi vedere com'è <italic>un progetto pilota?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Campioni prelevati a casa",
-        "label": "Test dei biomarcatori"
-      },
       "cognitiveRewards": {
         "desc": "Gioco a premi in team",
         "label": "Gioco & premio"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "Le prestazioni nel tempo",
         "label": "Trend longitudinali"
+      },
+      "twentyThird": {
+        "desc": "L'IA psicodinamica di WelloWork per l'auto-scoperta dei dipendenti.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Allenamento cognitivo",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Piattaforma",
         "items": [
+          "Gioco & premio",
+          "TwentyThird",
           "WelloRise [Crescita]",
           "WelloWize [Valutazione]",
           "Andamento delle prestazioni",
           "Workshop",
-          "Assistenza proattiva",
-          "Gioco & premio"
+          "Assistenza proattiva"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "Chi siamo",
       "gameReward": "Gioco & premio",
       "platform": "Piattaforma",
-      "pricing": "Prezzi",
       "research": "Ricerca",
       "solutions": "Soluzioni"
     }

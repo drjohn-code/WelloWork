@@ -18,10 +18,6 @@
       "title": "Möchten Sie sehen, wie ein Pilotprojekt <italic>aussieht?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Proben für zu Hause",
-        "label": "Biomarker-Tests"
-      },
       "cognitiveRewards": {
         "desc": "Teambasiertes Belohnungsspiel",
         "label": "Spiel & Belohnung"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "Leistung im Zeitverlauf",
         "label": "Langzeittrends"
+      },
+      "twentyThird": {
+        "desc": "WelloWorks psychodynamische KI für die Selbsterkenntnis der Mitarbeitenden.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Kognitives Training",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Plattform",
         "items": [
+          "Spiel & Belohnung",
+          "TwentyThird",
           "WelloRise [Entwicklung]",
           "WelloWize [Assessment]",
           "Leistungstrends",
           "Workshops",
-          "Proaktive Gesundheitsvorsorge",
-          "Spiel & Belohnung"
+          "Proaktive Gesundheitsvorsorge"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "Über uns",
       "gameReward": "Spiel & Belohnung",
       "platform": "Plattform",
-      "pricing": "Preise",
       "research": "Forschung",
       "solutions": "Lösungen"
     }

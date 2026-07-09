@@ -1,4 +1,5 @@
 import { useTranslations } from "next-intl";
+import { Link } from "@/i18n/navigation";
 import { Icon } from "./Icons";
 
 /* ---------- Hero: Uppsala location card ---------- */
@@ -164,41 +165,56 @@ export function FeatureIconGrid() {
     { icon: "brain", key: "welloWize" },
     { icon: "pulse", key: "trends" },
     { icon: "spark", key: "workshops" },
-    { icon: "drop", key: "biomarker" },
+    // TODO: confirm final positioning copy for about.featureGrid.twentyThird.desc
+    { icon: "layers", key: "twentyThird" },
     { icon: "star", key: "cognitiveRewards" },
   ] as const;
   return (
     <div className="about-feature-grid">
-      {items.map((it) => (
-        <div key={it.key} className="about-feature-cell">
-          <div className="about-feature-icon">
-            <Icon name={it.icon} size={22} />
-          </div>
-          <div style={{ minWidth: 0 }}>
-            <div
-              style={{
-                fontFamily: "var(--font-display)",
-                fontWeight: 600,
-                fontSize: 14.5,
-                color: "var(--ink-1)",
-                lineHeight: 1.2,
-              }}
-            >
-              {t(`featureGrid.${it.key}.label`)}
+      {items.map((it) => {
+        const cellContent = (
+          <>
+            <div className="about-feature-icon">
+              <Icon name={it.icon} size={22} />
             </div>
-            <div
-              style={{
-                fontSize: 12.5,
-                color: "var(--ink-3)",
-                marginTop: 2,
-                letterSpacing: "0.01em",
-              }}
-            >
-              {t(`featureGrid.${it.key}.desc`)}
+            <div style={{ minWidth: 0 }}>
+              <div
+                style={{
+                  fontFamily: "var(--font-display)",
+                  fontWeight: 600,
+                  fontSize: 14.5,
+                  color: "var(--ink-1)",
+                  lineHeight: 1.2,
+                }}
+              >
+                {t(`featureGrid.${it.key}.label`)}
+              </div>
+              <div
+                style={{
+                  fontSize: 12.5,
+                  color: "var(--ink-3)",
+                  marginTop: 2,
+                  letterSpacing: "0.01em",
+                }}
+              >
+                {t(`featureGrid.${it.key}.desc`)}
+              </div>
             </div>
+          </>
+        );
+        if (it.key === "twentyThird") {
+          return (
+            <Link key={it.key} href="/twentythird" className="about-feature-cell">
+              {cellContent}
+            </Link>
+          );
+        }
+        return (
+          <div key={it.key} className="about-feature-cell">
+            {cellContent}
           </div>
-        </div>
-      ))}
+        );
+      })}
     </div>
   );
 }

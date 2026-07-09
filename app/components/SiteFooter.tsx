@@ -8,12 +8,13 @@ const COLUMNS: FooterColumn[] = [
   {
     key: "platform",
     hrefs: [
+      "/cognitive-rewards",
+      "/twentythird",
       "/platform/growth",
       "/platform/assessment",
       "/platform/measure",
       "/platform/workshops",
       "/platform/proactive-care",
-      "/cognitive-rewards",
     ],
   },
   {

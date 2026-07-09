@@ -18,10 +18,6 @@
       "title": "Norite pamatyti, kaip <italic>atrodo bandomasis projektas?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Mėginiai namuose",
-        "label": "Biožymenų tyrimai"
-      },
       "cognitiveRewards": {
         "desc": "Komandinis atlygio žaidimas",
         "label": "Žaidimas ir atlygis"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "Veiklos rezultatai laikui bėgant",
         "label": "Ilgalaikės tendencijos"
+      },
+      "twentyThird": {
+        "desc": "WelloWork psichodinaminis DI, skirtas darbuotojų savęs pažinimui.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Kognityvinis lavinimas",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Platforma",
         "items": [
+          "Žaidimas ir atlygis",
+          "TwentyThird",
           "WelloRise [Augimas]",
           "WelloWize [Vertinimas]",
           "Veiklos tendencijos",
           "Seminarai",
-          "Proaktyvi priežiūra",
-          "Žaidimas ir atlygis"
+          "Proaktyvi priežiūra"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "Apie mus",
       "gameReward": "Žaidimas ir atlygis",
       "platform": "Platforma",
-      "pricing": "Kainodara",
       "research": "Tyrimai",
       "solutions": "Sprendimai"
     }

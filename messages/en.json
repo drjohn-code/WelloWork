@@ -11,10 +11,6 @@
       "title": "Want to see what a pilot <italic>looks like?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "At-home samples",
-        "label": "Biomarker testing"
-      },
       "cognitiveRewards": {
         "desc": "Team-based reward game",
         "label": "Game & Reward"
@@ -22,6 +18,10 @@
       "trends": {
         "desc": "Performance over time",
         "label": "Longitudinal trends"
+      },
+      "twentyThird": {
+        "desc": "WelloWork's psychodynamic AI for employee self-discovery.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Cognitive training",
@@ -512,12 +512,13 @@
       "platform": {
         "h": "Platform",
         "items": [
+          "Game & Reward",
+          "TwentyThird",
           "WelloRise [Growth]",
           "WelloWize [Assessment]",
           "Performance trends",
           "Workshops",
-          "Proactive Care",
-          "Game & Reward"
+          "Proactive Care"
         ]
       },
       "research": {
@@ -1117,7 +1118,6 @@
       "about": "About",
       "gameReward": "Game & Reward",
       "platform": "Platform",
-      "pricing": "Pricing",
       "research": "Research",
       "solutions": "Solutions"
     }

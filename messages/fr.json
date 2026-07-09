@@ -18,10 +18,6 @@
       "title": "Envie de voir à quoi <italic>ressemble un pilote ?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Prélèvements à domicile",
-        "label": "Analyse de biomarqueurs"
-      },
       "cognitiveRewards": {
         "desc": "Jeu de récompense en équipe",
         "label": "Jeu & récompense"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "La performance dans le temps",
         "label": "Tendances longitudinales"
+      },
+      "twentyThird": {
+        "desc": "L'IA psychodynamique de WelloWork pour la découverte de soi des employés.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Entraînement cognitif",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Plateforme",
         "items": [
+          "Jeu & récompense",
+          "TwentyThird",
           "WelloRise [Développement]",
           "WelloWize [Évaluation]",
           "Tendances de performance",
           "Ateliers",
-          "Santé proactive",
-          "Jeu & récompense"
+          "Santé proactive"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "À propos",
       "gameReward": "Jeu & récompense",
       "platform": "Plateforme",
-      "pricing": "Tarifs",
       "research": "Recherche",
       "solutions": "Solutions"
     }

@@ -16,6 +16,7 @@ const STATIC_PATHS: Array<{ path: string; changeFrequency: MetadataRoute.Sitemap
   { path: "/platform/proactive-care", changeFrequency: "monthly", priority: 0.7 },
 
   { path: "/cognitive-rewards", changeFrequency: "monthly", priority: 0.8 },
+  { path: "/twentythird", changeFrequency: "monthly", priority: 0.8 },
 
   { path: "/research", changeFrequency: "monthly", priority: 0.7 },
   { path: "/research/methodology", changeFrequency: "monthly", priority: 0.6 },

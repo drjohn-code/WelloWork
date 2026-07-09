@@ -18,10 +18,6 @@
       "title": "Vill du se hur en pilot <italic>ser ut?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Provtagning hemma",
-        "label": "Biomarkörtestning"
-      },
       "cognitiveRewards": {
         "desc": "Lagbaserat belöningsspel",
         "label": "Spel & belöning"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "Prestation över tid",
         "label": "Longitudinella trender"
+      },
+      "twentyThird": {
+        "desc": "WelloWorks psykodynamiska AI för medarbetares självinsikt.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Kognitiv träning",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Plattform",
         "items": [
+          "Spel & belöning",
+          "TwentyThird",
           "WelloRise [Utveckling]",
           "WelloWize [Bedömning]",
           "Prestationstrender",
           "Workshops",
-          "Proaktiv hälsa",
-          "Spel & belöning"
+          "Proaktiv hälsa"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "Om oss",
       "gameReward": "Spel & belöning",
       "platform": "Plattform",
-      "pricing": "Priser",
       "research": "Forskning",
       "solutions": "Lösningar"
     }

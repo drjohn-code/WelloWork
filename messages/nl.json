@@ -18,10 +18,6 @@
       "title": "Wil je zien hoe een pilot <italic>eruitziet?</italic>"
     },
     "featureGrid": {
-      "biomarker": {
-        "desc": "Thuis afgenomen monsters",
-        "label": "Biomarkertesten"
-      },
       "cognitiveRewards": {
         "desc": "Teamgebaseerd beloningsspel",
         "label": "Spel & beloning"
@@ -29,6 +25,10 @@
       "trends": {
         "desc": "Prestaties in de tijd",
         "label": "Longitudinale trends"
+      },
+      "twentyThird": {
+        "desc": "WelloWork's psychodynamische AI voor zelfontdekking van medewerkers.",
+        "label": "TwentyThird"
       },
       "welloRise": {
         "desc": "Cognitieve training",
@@ -519,12 +519,13 @@
       "platform": {
         "h": "Platform",
         "items": [
+          "Spel & beloning",
+          "TwentyThird",
           "WelloRise [Groei]",
           "WelloWize [Assessment]",
           "Prestatietrends",
           "Workshops",
-          "Proactieve zorg",
-          "Spel & beloning"
+          "Proactieve zorg"
         ]
       },
       "research": {
@@ -1124,7 +1125,6 @@
       "about": "Over ons",
       "gameReward": "Spel & beloning",
       "platform": "Platform",
-      "pricing": "Prijzen",
       "research": "Onderzoek",
       "solutions": "Oplossingen"
     }
