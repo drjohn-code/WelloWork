@@ -37,12 +37,12 @@ export default function robots(): MetadataRoute.Robots {
       {
         userAgent: "*",
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/play/", "/*/play/"],
       },
       ...AI_CRAWLERS.map((userAgent) => ({
         userAgent,
         allow: "/",
-        disallow: ["/api/"],
+        disallow: ["/api/", "/play/", "/*/play/"],
       })),
     ],
     sitemap: `${SITE_URL}/sitemap.xml`,

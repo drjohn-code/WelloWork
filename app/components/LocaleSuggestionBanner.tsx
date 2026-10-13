@@ -45,6 +45,8 @@ export function LocaleSuggestionBanner() {
   }, [activeLocale]);
 
   if (!suggested) return null;
+  // Game and admin pages: a player's personal link already carries their language; keep the view clear.
+  if (/^\/(play|admin)(\/|$)/.test(pathname)) return null;
 
   function persistDismissed() {
     try {

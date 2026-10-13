@@ -402,7 +402,7 @@ export function WhatHappensNext() {
       <ol>
         <li>{t("pay")}</li>
         <li>{t("invoice")}</li>
-        {/* onOrderPaid is still a stub — keep this neutral until invitations ship. */}
+        {/* Sent by onOrderPaid → sendOrderInvitations after the Stripe webhook. */}
         <li>{t("email")}</li>
       </ol>
     </section>

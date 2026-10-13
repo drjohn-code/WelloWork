@@ -3268,7 +3268,7 @@
           "heading": "Qué pasa después",
           "pay": "Paga de forma segura en Stripe.",
           "invoice": "Recibe tu recibo y la factura con IVA por correo electrónico.",
-          "email": "Te enviaremos los siguientes pasos por correo electrónico."
+          "email": "Cada jugador recibe por correo su enlace personal al juego."
         }
       },
       "errors": {
@@ -3329,7 +3329,7 @@
         "total": "Total pagado"
       },
       "paidHeading": "Pago recibido",
-      "paidBody": "Pago recibido — las invitaciones para tu equipo llegarán pronto.",
+      "paidBody": "Pago recibido. Estamos enviando a cada jugador su enlace personal al juego, y recibirás una confirmación cuando todos estén invitados.",
       "processingHeading": "Finalizando…",
       "processingBody": "Estamos confirmando tu pago con Stripe — normalmente tarda solo unos segundos. Actualiza la página en un momento si no se actualiza.",
       "refresh": "Actualizar estado",
@@ -3458,6 +3458,402 @@
       "body": "Inicia una prueba gratuita de 3 días en day-23.com, o lleva TwentyThird a tu equipo como beneficio laboral.",
       "primaryCta": "Iniciar prueba gratuita en day-23.com",
       "secondaryCta": "Habla con nosotros sobre TwentyThird"
+    }
+  },
+  "emails": {
+    "eyebrow": "Cognitive Rewards",
+    "playerInvite": {
+      "subject": "{name}, te han invitado al juego de equipo de {company}",
+      "preheader": "{buyer} te ha añadido a un juego de equipo para {n} jugadores con una bolsa de {pool}. Únete con tu enlace personal.",
+      "heading": "{name}, estás en el equipo",
+      "intro": "{buyer}, de {company}, te ha invitado a Cognitive Rewards, un juego de equipo en tiempo real para {n} jugadores. Jugáis juntos, cada uno en su dispositivo, y compartís una bolsa de recompensas de {pool}.",
+      "factTeam": "Equipo",
+      "factTeamValue": "{n} jugadores",
+      "factPool": "Bolsa de recompensas",
+      "factMin": "Tu mínimo garantizado",
+      "factMinValue": "{min}",
+      "howHeading": "Cómo funciona",
+      "step1": "Abre tu enlace personal y entra en la sala. Verás a tus compañeros a medida que lleguen.",
+      "step2": "El juego empieza cuando los {n} jugadores se han unido.",
+      "step3": "El equipo reparte {pool} según cómo juguéis. Todos reciben al menos {min}, y tú eliges cómo recibir tu parte.",
+      "cta": "Unirme al juego",
+      "personal": "Este enlace es solo para ti: no necesitas cuenta ni contraseña. Por favor, no lo reenvíes.",
+      "fallback": "¿El botón no funciona? Copia este enlace en tu navegador:",
+      "questions": "¿Preguntas? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque {buyer}, de {company}, te ha añadido a un juego de Cognitive Rewards en WelloWork.",
+      "validUntil": "Úsalo para entrar en la sala antes de que empiece el juego. Cuando tu equipo haya jugado y tu recompensa esté pagada, el enlace dejará de funcionar."
+    },
+    "buyerConfirmation": {
+      "subject": "Tu equipo ya está invitado: Cognitive Rewards para {company}",
+      "preheader": "Pago recibido. Hemos enviado a cada jugador su enlace personal al juego.",
+      "heading": "Gracias, {name}. Tu equipo ya está invitado",
+      "intro": "Tu pago se ha completado y hemos enviado a cada uno de los {n} jugadores su propio enlace al juego.",
+      "factPlayers": "Jugadores",
+      "factPool": "Bolsa de recompensas",
+      "nextHeading": "Qué pasa después",
+      "step1": "Cada jugador abre su enlace personal y entra en la sala. No hace falta cuenta.",
+      "step2": "El juego empieza en cuanto todos se han unido.",
+      "step3": "La bolsa se reparte según cómo juegue el equipo, con una parte mínima garantizada para cada jugador.",
+      "receipt": "Tu recibo y la factura con IVA te llegan por separado desde Stripe.",
+      "questions": "¿Preguntas sobre tu pedido? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque has pedido Cognitive Rewards para {company} en WelloWork."
+    },
+    "gameResult": {
+      "subject": "{name}, tu parte de la recompensa: {share}",
+      "preheader": "El juego ha terminado. Has quedado {rank} de {n}. Añade tus datos bancarios para recibir {share}.",
+      "heading": "Bien jugado, {name}",
+      "intro": "Tu equipo en {company} ha terminado Cognitive Rewards y la bolsa se ha repartido según lo que hizo cada uno.",
+      "factShare": "Tu parte",
+      "factRank": "Puesto",
+      "factRankValue": "{rank} de {n}",
+      "factHighlights": "Destacados",
+      "highlights": {
+        "helper": "Top ayudante",
+        "solver": "Top resolviendo",
+        "rescuer": "Top rescate",
+        "memory": "Top memoria",
+        "mvp": "MVP"
+      },
+      "nextHeading": "Para recibirla",
+      "step1": "Abre tu enlace personal, abajo.",
+      "step2": "Introduce el nombre del titular y el IBAN. Comprobamos el número antes de guardarlo.",
+      "step3": "Hacemos la transferencia en 5 días laborables y te avisamos por correo cuando salga.",
+      "cta": "Añadir mis datos bancarios",
+      "taxNote": "La recompensa puede contar como retribución en especie donde vives. Tu empresa puede informarte.",
+      "questions": "¿Preguntas? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque has jugado a Cognitive Rewards para {company} en WelloWork."
+    },
+    "payoutReceived": {
+      "subject": "Datos bancarios recibidos para tus {amount}",
+      "preheader": "Transferiremos {amount} en 5 días laborables.",
+      "heading": "Gracias, {name}. Datos recibidos",
+      "intro": "Tenemos tus datos bancarios y enviaremos tu recompensa por transferencia.",
+      "factAmount": "Importe",
+      "factAccount": "Cuenta",
+      "timing": "Las transferencias salen en 5 días laborables. Recibirás otro correo cuando se envíe. Si algo no cuadra, responde a este correo enseguida.",
+      "questions": "¿Preguntas? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque has añadido datos bancarios para un pago de Cognitive Rewards en WelloWork."
+    },
+    "payoutSent": {
+      "subject": "{amount} van de camino",
+      "preheader": "Tu parte de Cognitive Rewards se ha transferido.",
+      "heading": "Enviado: {amount}",
+      "intro": "Hemos transferido tu recompensa. Según tu banco, puede tardar 1–2 días laborables en aparecer.",
+      "factAmount": "Importe",
+      "factAccount": "Cuenta",
+      "timing": "Tus datos bancarios se borran de nuestros sistemas 30 días después del pago.",
+      "questions": "¿Preguntas? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque has recibido un pago de Cognitive Rewards de WelloWork."
+    },
+    "buyerSummary": {
+      "subject": "Tu equipo ha terminado: Cognitive Rewards para {company}",
+      "preheader": "El juego ha terminado y la bolsa de {pool} se ha repartido. Aquí tienes el resumen del equipo.",
+      "heading": "{name}, tu equipo ha terminado",
+      "intro": "La bolsa de {pool} se ha repartido según lo que hizo cada jugador. Todos han recibido su mínimo garantizado y a cada jugador se le han pedido sus datos bancarios.",
+      "splitHeading": "El reparto",
+      "diagnosticHeading": "Diagnóstico del equipo",
+      "diagnostic": "Punto fuerte: {strength}. Área de mejora: {growth}. Según cómo el equipo compartió información, se ayudó y resolvió las rondas.",
+      "rubric": "Puntuación del equipo en el reto final: {score} de 100.",
+      "privacy": "Las respuestas de los jugadores y las reacciones del director del juego son privadas del equipo. Solo se comparten contigo las puntuaciones y este diagnóstico.",
+      "questions": "¿Preguntas? Responde a este correo o escribe a {email}.",
+      "footer": "Recibes este correo porque pediste Cognitive Rewards para {company} en WelloWork.",
+      "skills": {
+        "dataTransfer": "traspasos claros",
+        "teamwork": "ayudarse entre sí",
+        "problemSolving": "resolución de problemas",
+        "focus": "captar los detalles",
+        "memory": "recordar lo que dijeron los compañeros"
+      }
+    }
+  },
+  "play": {
+    "metaTitle": "Únete a tu equipo | WelloWork",
+    "eyebrow": "Cognitive Rewards",
+    "welcomeLead": "Te damos la bienvenida, ",
+    "intro": "{buyer}, de {company}, te ha invitado a un juego de equipo en tiempo real para {n} jugadores. Todos juegan juntos, cada uno en su dispositivo.",
+    "facts": {
+      "team": "Equipo",
+      "teamValue": "{n} jugadores",
+      "pool": "Bolsa de recompensas",
+      "min": "Tu mínimo garantizado"
+    },
+    "board": {
+      "title": "Tu equipo",
+      "count": "{joined} de {total} se han unido",
+      "you": "Tú",
+      "joined": "Dentro",
+      "waiting": "Aún no ha entrado",
+      "host": "Anfitrión",
+      "missingHint": "¿Falta alguien? Llámale. Su correo de invitación tiene su propio enlace."
+    },
+    "actions": {
+      "join": "Unirme al juego",
+      "joining": "Uniéndote…",
+      "joinNote": "Al unirte, tus compañeros verán que estás aquí.",
+      "waitingFor": "Esperando a {names}…",
+      "start": "Empezar el juego",
+      "allHere": "Ya estáis todos. ¡Podéis empezar!",
+      "keepOpen": "Deja esta página abierta. Se actualiza sola cuando se unen tus compañeros.",
+      "allHereHost": "Ya estáis todos. Eres el anfitrión: elige el idioma del juego y empieza cuando el equipo esté listo.",
+      "starting": "Empezando…",
+      "startIn": "Empezar el juego en {language}",
+      "callHint": "Llamaos o reuníos en la misma sala antes. Vais a hablar mucho.",
+      "waitingForHost": "Esperando a que {host}, vuestro anfitrión, empiece el juego…"
+    },
+    "errors": {
+      "join": "No hemos podido añadirte al juego. Vuelve a intentarlo.",
+      "network": "Problema de conexión. Comprueba que estás en línea y vuelve a intentarlo.",
+      "generic": "Algo ha fallado. Vuelve a intentarlo."
+    },
+    "how": {
+      "title": "Cómo funciona",
+      "step1": "Cada uno entra con su propio enlace personal. El juego empieza cuando está todo el equipo.",
+      "step2": "El equipo reparte la bolsa según cómo juguéis. Tienes garantizado al menos {min}.",
+      "step3": "Después del juego, eliges cómo recibir tu parte."
+    },
+    "privacy": "Tus compañeros ven tu nombre y si te has unido. No se comparte nada más.",
+    "invalid": {
+      "title": "Este enlace no funciona",
+      "body": "Puede que el enlace esté incompleto o que una invitación más reciente lo haya sustituido. Busca la última invitación en tu correo.",
+      "help": "¿Necesitas ayuda? Escribe a <link>{email}</link>."
+    },
+    "gameMaster": "Director del juego",
+    "loading": "Cargando…",
+    "offline": "Conexión perdida. Reintentando…",
+    "language": {
+      "label": "Idioma del juego",
+      "hostHint": "Los acertijos de todos y el director del juego usan este idioma. Cada jugador puede cambiar sus propios botones e instrucciones con el selector de arriba.",
+      "guestHint": "{host} lo elige. Tus botones e instrucciones siguen el selector de arriba.",
+      "fallbackNote": ""
+    },
+    "generating": {
+      "title": "Construyendo vuestra oficina…",
+      "body": "El director del juego está leyendo vuestras respuestas y preparando las rondas. Tarda alrededor de medio minuto."
+    },
+    "team": {
+      "aria": "Tu equipo",
+      "host": "Anfitrión",
+      "solving": "Resolviendo",
+      "online": "en línea",
+      "offline": "desconectado"
+    },
+    "intake": {
+      "stepLabel": "Antes de empezar",
+      "title": "Seis preguntas rápidas",
+      "intro": "El juego se construye con vuestras respuestas. Que sea ligero y sobre la vida de oficina de cada día. Tus compañeros no ven lo que escribes, y la empresa nunca.",
+      "timeLeft": "{m}:{s} restantes",
+      "thanks": "Gracias. Tus respuestas están guardadas.",
+      "waiting": "Esperando a {names}…",
+      "building": "Todos han terminado. Construyendo el juego…",
+      "privateNote": "Las respuestas se quedan en el juego y se borran 30 días después de terminar.",
+      "questions": {
+        "q1": "Una frase que alguien de tu equipo dice constantemente",
+        "q2": "El snack o la bebida con la que funciona tu equipo",
+        "q3": "La reunión que cancelarías para siempre (su nombre, no las personas)",
+        "q4": "Un apodo que usa tu equipo para una herramienta, sala, proceso o la impresora",
+        "q5": "Un pequeño desastre que tu equipo superó junto",
+        "q6": "Si el dinero no importara: la ventaja gloriosamente inútil que añadiríais a la oficina"
+      },
+      "placeholders": {
+        "q1": "lo retomamos luego",
+        "q2": "latte de avena",
+        "q3": "la sincro del lunes",
+        "q4": "la bestia (nuestro CRM)",
+        "q5": "el incidente de responder a todos",
+        "q6": "una sala de siesta con portero"
+      },
+      "optional": "(opcional)",
+      "required": "Responde a esta, por favor.",
+      "safetyNote": "Sin nombres reales ni quejas sobre personas reales. Solo vida de oficina en general.",
+      "submitting": "Enviando…",
+      "submit": "Enviar mis respuestas",
+      "tip": "Corto y concreto funciona mejor: de dos a seis palabras por respuesta. Las erratas son bienvenidas."
+    },
+    "briefing": {
+      "stepLabel": "Instrucciones",
+      "title": "Bienvenidos a la oficina",
+      "rulesTitle": "Tres reglas",
+      "rule1": "En cada ronda, uno de vosotros resuelve. Los demás tienen una pieza que solo ellos pueden ver.",
+      "rule2": "Hablad. Nada se resuelve en solitario, y nadie puede mirar por encima del hombro.",
+      "rule3": "Ayudar cuenta tanto como resolver. La bolsa se reparte según lo que hizo cada uno.",
+      "begin": "Empezar la ronda 1",
+      "beginning": "Empezando…",
+      "hostNote": "Eres el anfitrión. Empieza cuando todos digan que están listos.",
+      "waitingHost": "Esperando a que {host} empiece…"
+    },
+    "round": {
+      "progress": "Ronda {n} de {total}",
+      "youSolve": "Tú resuelves",
+      "solverIs": "{name} resuelve",
+      "promptLabel": "La tarea",
+      "detailMeta": "Desaparece en {s} s. Recuérdalo.",
+      "yourPieceSolver": "Tu pieza",
+      "yourPiece": "Tu pieza. Solo tú puedes verla. Díselo a {name}.",
+      "callbackSource": "Sin pieza en esta ronda. Es una prueba de memoria para quien resuelve, y puede que tú recuerdes lo que necesita.",
+      "revealedLabel": "Compañero desconectado. Su pieza se te muestra a ti.",
+      "revealedFrom": "De {name}",
+      "answerLabel": "Tu respuesta",
+      "checking": "Comprobando…",
+      "submit": "Enviar",
+      "digitsHelp": "Solo cifras",
+      "textHelp": "Letras y cifras, sin espacios",
+      "attemptsLeft": "{n} intentos restantes",
+      "wrong": "No es eso. Inténtalo de nuevo.",
+      "hintIn": "Pista en {s} s",
+      "hint": "Usar una pista",
+      "stuck": "Estoy atascado",
+      "stuckSent": "Tu equipo ya lo sabe ({n} han respondido).",
+      "stuckBanner": "{name} está atascado. Lee tu pieza en voz alta otra vez, despacio.",
+      "acknowledged": "Gracias, anotado.",
+      "acknowledge": "He vuelto a compartir mi pieza",
+      "sourceWaiting": "{name} está en ello. Seguid hablando.",
+      "solved": "Resuelto",
+      "failed": "Se acabó el tiempo",
+      "answerWas": "La respuesta era {answer}.",
+      "nextIn": "Siguiente ronda en {s} s",
+      "finaleIn": "Reto final en {s} s",
+      "pieces": {
+        "busy": "Ocupado",
+        "free": "Libre",
+        "expired": "Caducado",
+        "yourMessages": "Tus mensajes ({n})",
+        "rule": "Regla {n}",
+        "clue": "Tus pistas ({n})"
+      },
+      "introLevel": "Ronda {n}",
+      "introReady": "Preparaos",
+      "introGo": "¡Vamos!"
+    },
+    "challenge": {
+      "stepLabel": "Reto final",
+      "title": "Todos vosotros, juntos",
+      "timeLeft": "{m}:{s} restantes",
+      "judging": "El director del juego está leyendo vuestra respuesta…",
+      "editorLabel": "La respuesta de tu equipo",
+      "hostHint": "Tú escribes por el equipo. Todos lo ven en directo.",
+      "submitting": "Enviando…",
+      "submit": "Enviar la respuesta del equipo",
+      "liveLabel": "{host} escribe por el equipo",
+      "liveEmpty": "Nada aún. Decidlo en voz alta y dejad que vuestro anfitrión escriba.",
+      "guestHint": "Esta parte se puntúa para todo el equipo y no cambia el reparto."
+    },
+    "key": {
+      "stepLabel": "La llave",
+      "title": "Desbloquea la recompensa",
+      "entered": "{n} de {total} han introducido la llave",
+      "yours": "Tu llave es correcta.",
+      "waiting": "Esperando a {names}…",
+      "help": "Tres datos que encontrasteis antes. Todos introducen los mismos tres.",
+      "revealed": "Revelado por el director del juego",
+      "wrong": "Esa no es la llave. Compruébalo con tu equipo.",
+      "checking": "Comprobando…",
+      "submit": "Introducir la llave"
+    },
+    "scorecard": {
+      "stepLabel": "Resultados",
+      "unlockedEyebrow": "Recompensa desbloqueada",
+      "unlockedTitle": "Lo habéis conseguido",
+      "unlockedNote": "Repartida entre los {n} según lo que hizo cada uno. Todos tienen un mínimo garantizado.",
+      "yourShareEyebrow": "Tu parte",
+      "yourShareBody": "Has quedado {rank} de {total}. Ayudar contó un 60 % y resolver un 40 %.",
+      "highlights": {
+        "helper": "Top ayudante",
+        "solver": "Top resolviendo",
+        "rescuer": "Top rescate",
+        "memory": "Top memoria",
+        "mvp": "MVP"
+      },
+      "boardTitle": "Cómo se repartió la bolsa",
+      "boardNote": "Toca un nombre para ver el desglose.",
+      "components": {
+        "dataTransfer": "Compartir",
+        "teamwork": "Trabajo en equipo",
+        "problemSolving": "Resolución",
+        "focus": "Atención",
+        "memory": "Memoria"
+      },
+      "verdictTitle": "El reto final",
+      "verdictScore": "Puntuación del equipo: {score} de 100. Esto era por diversión y no cambia el reparto.",
+      "thanks": "Gracias por jugar. Vuestro anfitrión {host} ya puede cerrar la pestaña.",
+      "podiumTitle": "Podio",
+      "placeLabel": "Puesto {rank}"
+    },
+    "payout": {
+      "title": "¿Dónde te enviamos tus {amount}?",
+      "intro": "Transferencia bancaria en 5 días laborables. Tus datos se cifran y se borran tras el pago.",
+      "holderName": "Nombre del titular de la cuenta",
+      "country": "País del banco",
+      "iban": "IBAN",
+      "ibanHint": "Puedes usar espacios. Comprobamos el número antes de guardarlo.",
+      "taxNote": "La recompensa puede contar como retribución en especie donde vives. Tu empresa puede informarte.",
+      "saving": "Guardando…",
+      "submit": "Guardar datos bancarios",
+      "cancel": "Cancelar",
+      "laterNote": "También puedes hacerlo más tarde: el enlace de tu correo te trae de vuelta aquí.",
+      "paid": "{amount} se han enviado a tu cuenta terminada en {last4}.",
+      "received": "Recibido. {amount} irán a tu cuenta terminada en {last4}.",
+      "timing": "Las transferencias salen en 5 días laborables.",
+      "change": "Cambiar datos bancarios",
+      "errors": {
+        "iban": "Ese IBAN no parece correcto.",
+        "name": "Introduce el nombre del titular de la cuenta.",
+        "generic": "Algo ha fallado. Vuelve a intentarlo."
+      }
+    },
+    "finished": {
+      "title": "Este juego ha terminado",
+      "body": "Gracias por jugar. Este enlace ya ha cumplido su función y no abre el juego. Si tienes preguntas sobre tu recompensa, responde a tu correo de resultados."
+    },
+    "sound": {
+      "on": "Sonido activado",
+      "off": "Sonido desactivado"
+    }
+  },
+  "admin": {
+    "login": {
+      "metaTitle": "Admin sign-in | WelloWork",
+      "eyebrow": "WelloWork admin",
+      "title": "Payouts admin",
+      "label": "Admin secret",
+      "submit": "Sign in",
+      "signingIn": "Signing in…",
+      "invalid": "That secret isn't right.",
+      "tooMany": "Too many attempts. Try again in 15 minutes."
+    },
+    "payouts": {
+      "metaTitle": "Payouts | WelloWork admin",
+      "eyebrow": "Cognitive Rewards",
+      "title": "Player payouts",
+      "summary": "{count} ready to pay · {total}",
+      "logout": "Sign out",
+      "filterLabel": "Filter by status",
+      "filters": {
+        "ready": "Ready to pay",
+        "awaiting_details": "Awaiting details",
+        "paid": "Paid",
+        "all": "All"
+      },
+      "purged": "{n} bank details older than 30 days were wiped.",
+      "empty": "Nothing here.",
+      "cols": {
+        "player": "Player",
+        "company": "Company · game",
+        "amount": "Amount",
+        "account": "Bank account",
+        "status": "Status",
+        "action": "Action"
+      },
+      "noDetails": "No bank details yet",
+      "reveal": "Show IBAN",
+      "status": {
+        "awaiting_details": "Awaiting details",
+        "ready": "Ready to pay",
+        "paid": "Paid"
+      },
+      "referencePlaceholder": "Bank reference (optional)",
+      "markPaid": "Mark as paid",
+      "confirmPaid": "Mark this payout as paid and email the player?",
+      "error": "Something went wrong. Reload and try again."
     }
   }
 }

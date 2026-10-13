@@ -3268,7 +3268,7 @@
           "heading": "Kas bus toliau",
           "pay": "Saugiai sumokėkite per Stripe.",
           "invoice": "Gaukite kvitą ir PVM sąskaitą faktūrą el. paštu.",
-          "email": "Tolesnius žingsnius atsiųsime el. paštu."
+          "email": "Kiekvienas žaidėjas el. paštu gaus asmeninę nuorodą į žaidimą."
         }
       },
       "errors": {
@@ -3329,7 +3329,7 @@
         "total": "Iš viso sumokėta"
       },
       "paidHeading": "Mokėjimas gautas",
-      "paidBody": "Mokėjimas gautas — kvietimai jūsų komandai bus išsiųsti netrukus.",
+      "paidBody": "Mokėjimas gautas. Kiekvienam žaidėjui siunčiame asmeninę nuorodą į žaidimą, o jūs gausite patvirtinimą, kai visi bus pakviesti.",
       "processingHeading": "Užbaigiama…",
       "processingBody": "Patvirtiname jūsų mokėjimą su Stripe — tai paprastai užtrunka vos kelias sekundes. Atnaujinkite puslapį po akimirkos, jei jis neatsinaujina.",
       "refresh": "Atnaujinti būseną",
@@ -3458,6 +3458,402 @@
       "body": "Pradėkite 3 dienų nemokamą bandomąjį laikotarpį day-23.com arba pasiūlykite TwentyThird savo komandai kaip darbo vietos naudą.",
       "primaryCta": "Pradėti nemokamą bandomąjį laikotarpį day-23.com",
       "secondaryCta": "Susisiekite dėl TwentyThird"
+    }
+  },
+  "emails": {
+    "eyebrow": "Cognitive Rewards",
+    "playerInvite": {
+      "subject": "{name}, jūs pakviesti į {company} komandinį žaidimą",
+      "preheader": "{buyer} įtraukė jus į {n} žaidėjų komandinį žaidimą su {pool} atlygio fondu. Prisijunkite per asmeninę nuorodą.",
+      "heading": "{name}, jūs komandoje",
+      "intro": "{buyer} iš {company} kviečia jus į Cognitive Rewards – realaus laiko komandinį žaidimą {n} žaidėjams. Žaidžiate kartu, kiekvienas savo įrenginyje, ir dalijatės {pool} atlygio fondu.",
+      "factTeam": "Komanda",
+      "factTeamValue": "{n} žaidėjai",
+      "factPool": "Atlygio fondas",
+      "factMin": "Jūsų garantuotas minimumas",
+      "factMinValue": "{min}",
+      "howHeading": "Kaip tai veikia",
+      "step1": "Atidarykite asmeninę nuorodą ir prisijunkite prie laukiamojo. Matysite, kaip jungiasi komandos nariai.",
+      "step2": "Žaidimas prasideda, kai prisijungia visi {n} žaidėjai.",
+      "step3": "Komanda pasidalija {pool} pagal tai, kaip žaidžiate. Kiekvienas gauna bent {min}, o savo dalies gavimo būdą pasirenkate patys.",
+      "cta": "Prisijungti prie žaidimo",
+      "personal": "Ši nuoroda skirta tik jums, todėl nereikia nei paskyros, nei slaptažodžio. Prašome jos nepersiųsti.",
+      "fallback": "Mygtukas neveikia? Nukopijuokite šią nuorodą į naršyklę:",
+      "questions": "Klausimų? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes {buyer} iš {company} įtraukė jus į Cognitive Rewards žaidimą WelloWork platformoje.",
+      "validUntil": "Naudokite ją, kad prisijungtumėte prie laukiamojo prieš žaidimo pradžią. Kai komanda sužais ir atlygis bus išmokėtas, nuoroda nustos veikti."
+    },
+    "buyerConfirmation": {
+      "subject": "Jūsų komanda pakviesta: Cognitive Rewards įmonei {company}",
+      "preheader": "Mokėjimas gautas. Kiekvienam žaidėjui išsiuntėme asmeninę nuorodą į žaidimą.",
+      "heading": "Ačiū, {name}. Jūsų komanda pakviesta",
+      "intro": "Mokėjimas sėkmingas, ir kiekvienam iš {n} žaidėjų išsiuntėme asmeninę nuorodą į žaidimą.",
+      "factPlayers": "Žaidėjai",
+      "factPool": "Atlygio fondas",
+      "nextHeading": "Kas bus toliau",
+      "step1": "Kiekvienas žaidėjas atidaro asmeninę nuorodą ir prisijungia prie laukiamojo. Paskyros nereikia.",
+      "step2": "Žaidimas prasideda, kai tik visi prisijungia.",
+      "step3": "Atlygio fondas padalijamas pagal tai, kaip žaidžia komanda, o kiekvienam žaidėjui garantuojama minimali dalis.",
+      "receipt": "Kvitą ir PVM sąskaitą faktūrą atskirai atsiųs Stripe.",
+      "questions": "Klausimų dėl užsakymo? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes WelloWork platformoje užsakėte Cognitive Rewards įmonei {company}."
+    },
+    "gameResult": {
+      "subject": "{name}, jūsų atlygio dalis: {share}",
+      "preheader": "Žaidimas baigtas. Užėmėte {rank} vietą iš {n}. Pridėkite banko duomenis, kad gautumėte {share}.",
+      "heading": "Puikiai sužaista, {name}",
+      "intro": "Jūsų komanda iš {company} baigė Cognitive Rewards, o fondas padalytas pagal tai, ką kiekvienas padarė.",
+      "factShare": "Jūsų dalis",
+      "factRank": "Vieta",
+      "factRankValue": "{rank} iš {n}",
+      "factHighlights": "Pasižymėjimai",
+      "highlights": {
+        "helper": "Geriausias pagalbininkas",
+        "solver": "Geriausias sprendėjas",
+        "rescuer": "Geriausias gelbėtojas",
+        "memory": "Geriausia atmintis",
+        "mvp": "MVP"
+      },
+      "nextHeading": "Kaip ją gauti",
+      "step1": "Atidarykite asmeninę nuorodą žemiau.",
+      "step2": "Įveskite sąskaitos savininko vardą, pavardę ir IBAN. Prieš išsaugodami numerį patikriname.",
+      "step3": "Pinigus pervedame per 5 darbo dienas ir parašome el. laišką, kai išsiunčiame.",
+      "cta": "Pridėti banko duomenis",
+      "taxNote": "Ten, kur gyvenate, atlygis gali būti laikomas apmokestinama nauda. Darbdavys gali tai paaiškinti.",
+      "questions": "Klausimų? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes žaidėte Cognitive Rewards žaidimą įmonei {company} WelloWork platformoje."
+    },
+    "payoutReceived": {
+      "subject": "Gauti banko duomenys jūsų {amount}",
+      "preheader": "{amount} pervesime per 5 darbo dienas.",
+      "heading": "Ačiū, {name}. Duomenys gauti",
+      "intro": "Turime jūsų banko duomenis ir atlygį išsiųsime banko pavedimu.",
+      "factAmount": "Suma",
+      "factAccount": "Sąskaita",
+      "timing": "Pavedimai atliekami per 5 darbo dienas. Kai išsiųsime, gausite dar vieną laišką. Jei kas nors atrodo ne taip, iš karto atsakykite į šį laišką.",
+      "questions": "Klausimų? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes pridėjote banko duomenis Cognitive Rewards išmokai WelloWork platformoje."
+    },
+    "payoutSent": {
+      "subject": "{amount} jau keliauja",
+      "preheader": "Jūsų Cognitive Rewards dalis pervesta.",
+      "heading": "Išsiųsta: {amount}",
+      "intro": "Pervedėme jūsų atlygį. Priklausomai nuo banko, jis gali atsirasti per 1–2 darbo dienas.",
+      "factAmount": "Suma",
+      "factAccount": "Sąskaita",
+      "timing": "Jūsų banko duomenys iš mūsų sistemų ištrinami praėjus 30 dienų po išmokėjimo.",
+      "questions": "Klausimų? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes gavote Cognitive Rewards išmoką iš WelloWork."
+    },
+    "buyerSummary": {
+      "subject": "Jūsų komanda baigė: Cognitive Rewards įmonei {company}",
+      "preheader": "Žaidimas baigtas, {pool} fondas padalytas. Štai komandos santrauka.",
+      "heading": "{name}, jūsų komanda baigė",
+      "intro": "{pool} atlygio fondas padalytas pagal tai, ką padarė kiekvienas žaidėjas. Visi gavo garantuotą minimumą, o kiekvieno žaidėjo paprašyta banko duomenų.",
+      "splitHeading": "Padalijimas",
+      "diagnosticHeading": "Komandos diagnostika",
+      "diagnostic": "Stiprybė: {strength}. Tobulintina sritis: {growth}. Pagal tai, kaip komanda dalijosi informacija, padėjo vieni kitiems ir sprendė raundus.",
+      "rubric": "Komandos įvertinimas finalinėje užduotyje: {score} iš 100.",
+      "privacy": "Žaidėjų atsakymai ir žaidimo vedėjo reakcijos lieka komandos viduje. Su jumis dalijamasi tik įvertinimais ir šia diagnostika.",
+      "questions": "Klausimų? Atsakykite į šį laišką arba rašykite {email}.",
+      "footer": "Gavote šį laišką, nes WelloWork platformoje užsakėte Cognitive Rewards įmonei {company}.",
+      "skills": {
+        "dataTransfer": "aiškus informacijos perdavimas",
+        "teamwork": "pagalba vieni kitiems",
+        "problemSolving": "problemų sprendimas",
+        "focus": "detalių pastebėjimas",
+        "memory": "įsiminti, ką sakė komandos nariai"
+      }
+    }
+  },
+  "play": {
+    "metaTitle": "Prisijunkite prie komandos | WelloWork",
+    "eyebrow": "Cognitive Rewards",
+    "welcomeLead": "Sveiki, ",
+    "intro": "{buyer} iš {company} kviečia jus į realaus laiko komandinį žaidimą {n} žaidėjams. Visi žaidžia kartu, kiekvienas savo įrenginyje.",
+    "facts": {
+      "team": "Komanda",
+      "teamValue": "{n} žaidėjai",
+      "pool": "Atlygio fondas",
+      "min": "Jūsų garantuotas minimumas"
+    },
+    "board": {
+      "title": "Jūsų komanda",
+      "count": "Prisijungė {joined} iš {total}",
+      "you": "Jūs",
+      "joined": "Prisijungė",
+      "waiting": "Dar neprisijungė",
+      "host": "Vedėjas",
+      "missingHint": "Kažko trūksta? Paskambinkite. Kvietimo laiške yra jų asmeninė nuoroda."
+    },
+    "actions": {
+      "join": "Prisijungti prie žaidimo",
+      "joining": "Jungiamasi…",
+      "joinNote": "Prisijungus komandos nariai matys, kad esate čia.",
+      "waitingFor": "Laukiama: {names}…",
+      "start": "Pradėti žaidimą",
+      "allHere": "Visi čia. Galite pradėti!",
+      "keepOpen": "Neuždarykite šio puslapio. Jis atsinaujins automatiškai, kai prisijungs komandos nariai.",
+      "allHereHost": "Visi čia. Jūs esate vedėjas: pasirinkite žaidimo kalbą ir pradėkite, kai komanda pasiruošusi.",
+      "starting": "Pradedama…",
+      "startIn": "Pradėti žaidimą ({language})",
+      "callHint": "Pirmiausia susiskambinkite arba susėskite vienoje patalpoje. Daug kalbėsitės.",
+      "waitingForHost": "Laukiama, kol {host}, jūsų vedėjas, pradės žaidimą…"
+    },
+    "errors": {
+      "join": "Nepavyko jūsų prijungti prie žaidimo. Bandykite dar kartą.",
+      "network": "Ryšio problema. Patikrinkite interneto ryšį ir bandykite dar kartą.",
+      "generic": "Kažkas nepavyko. Bandykite dar kartą."
+    },
+    "how": {
+      "title": "Kaip tai veikia",
+      "step1": "Kiekvienas jungiasi per savo asmeninę nuorodą. Žaidimas prasideda, kai susirenka visa komanda.",
+      "step2": "Komanda pasidalija atlygio fondą pagal tai, kaip žaidžiate. Jums garantuota bent {min}.",
+      "step3": "Po žaidimo patys pasirenkate, kaip gauti savo dalį."
+    },
+    "privacy": "Komandos nariai mato jūsų vardą ir ar prisijungėte. Niekuo kitu nesidalijama.",
+    "invalid": {
+      "title": "Ši nuoroda neveikia",
+      "body": "Nuoroda gali būti neišsami arba ją pakeitė naujesnis kvietimas. Ieškokite naujausio kvietimo savo el. pašte.",
+      "help": "Reikia pagalbos? Rašykite <link>{email}</link>."
+    },
+    "gameMaster": "Žaidimo vedėjas",
+    "loading": "Kraunama…",
+    "offline": "Ryšys nutrūko. Bandoma iš naujo…",
+    "language": {
+      "label": "Žaidimo kalba",
+      "hostHint": "Visų galvosūkiai ir žaidimo vedėjas naudoja šią kalbą. Kiekvienas žaidėjas savo mygtukų ir nurodymų kalbą vis tiek gali pakeisti viršuje.",
+      "guestHint": "Ją renkasi {host}. Jūsų mygtukai ir nurodymai seka viršuje esantį pasirinkimą.",
+      "fallbackNote": ""
+    },
+    "generating": {
+      "title": "Kuriamas jūsų biuras…",
+      "body": "Žaidimo vedėjas skaito jūsų atsakymus ir ruošia raundus. Tai užtrunka apie pusę minutės."
+    },
+    "team": {
+      "aria": "Jūsų komanda",
+      "host": "Vedėjas",
+      "solving": "Sprendžia",
+      "online": "prisijungęs",
+      "offline": "atsijungęs"
+    },
+    "intake": {
+      "stepLabel": "Prieš pradedant",
+      "title": "Šeši trumpi klausimai",
+      "intro": "Žaidimas kuriamas iš jūsų atsakymų. Rašykite lengvai, apie kasdienį biuro gyvenimą. Komandos nariai nemato, ką rašote, o įmonė nemato niekada.",
+      "timeLeft": "Liko {m}:{s}",
+      "thanks": "Ačiū. Jūsų atsakymai gauti.",
+      "waiting": "Laukiama: {names}…",
+      "building": "Visi baigė. Kuriamas žaidimas…",
+      "privateNote": "Atsakymai lieka žaidime ir ištrinami praėjus 30 dienų po jo pabaigos.",
+      "questions": {
+        "q1": "Frazė, kurią kažkas iš jūsų komandos nuolat kartoja",
+        "q2": "Užkandis ar gėrimas, kuriuo gyvena jūsų komanda",
+        "q3": "Susitikimas, kurį atšauktumėte visiems laikams (jo pavadinimas, ne žmonės)",
+        "q4": "Pravardė, kurią jūsų komanda naudoja įrankiui, kabinetui, procesui ar spausdintuvui",
+        "q5": "Maža nelaimė, kurią jūsų komanda išgyveno kartu",
+        "q6": "Jei pinigai nebūtų problema: nuostabiai nereikalinga privilegija, kurią pridėtumėte biure"
+      },
+      "placeholders": {
+        "q1": "grįšime prie to",
+        "q2": "avižų latė",
+        "q3": "pirmadienio sinchronizacija",
+        "q4": "pabaisa (mūsų CRM)",
+        "q5": "atsakyti visiems incidentas",
+        "q6": "miego kambarys su apsaugininku"
+      },
+      "optional": "(neprivaloma)",
+      "required": "Atsakykite į šį klausimą.",
+      "safetyNote": "Jokių tikrų vardų, jokių skundų dėl tikrų žmonių. Tik bendras biuro gyvenimas.",
+      "submitting": "Siunčiama…",
+      "submit": "Siųsti atsakymus",
+      "tip": "Geriausia trumpai ir konkrečiai: nuo dviejų iki šešių žodžių. Rašybos klaidos – sveikintinos."
+    },
+    "briefing": {
+      "stepLabel": "Instruktažas",
+      "title": "Sveiki atvykę į biurą",
+      "rulesTitle": "Trys taisyklės",
+      "rule1": "Kiekviename raunde vienas iš jūsų sprendžia. Visi kiti turi dalį, kurią mato tik jie.",
+      "rule2": "Kalbėkitės. Nieko neįmanoma išspręsti vienam, ir niekas negali žvilgtelėti per petį.",
+      "rule3": "Padėti verta tiek pat, kiek spręsti. Fondas dalijamas pagal tai, ką kiekvienas padarė.",
+      "begin": "Pradėti 1 raundą",
+      "beginning": "Pradedama…",
+      "hostNote": "Jūs esate vedėjas. Pradėkite, kai visi pasakys, kad pasiruošę.",
+      "waitingHost": "Laukiama, kol {host} pradės…"
+    },
+    "round": {
+      "progress": "{n} raundas iš {total}",
+      "youSolve": "Sprendžiate jūs",
+      "solverIs": "Sprendžia {name}",
+      "promptLabel": "Užduotis",
+      "detailMeta": "Išnyks po {s} s. Įsiminkite.",
+      "yourPieceSolver": "Jūsų dalis",
+      "yourPiece": "Jūsų dalis. Ją matote tik jūs. Pasakykite {name}.",
+      "callbackSource": "Šiame raunde dalies nėra. Tai atminties patikrinimas sprendėjui, o jūs galbūt prisimenate, ko reikia.",
+      "revealedLabel": "Komandos narys atsijungęs. Jo dalis rodoma jums.",
+      "revealedFrom": "Nuo {name}",
+      "answerLabel": "Jūsų atsakymas",
+      "checking": "Tikrinama…",
+      "submit": "Pateikti",
+      "digitsHelp": "Tik skaitmenys",
+      "textHelp": "Raidės ir skaitmenys, be tarpų",
+      "attemptsLeft": "Liko bandymų: {n}",
+      "wrong": "Ne tai. Bandykite dar kartą.",
+      "hintIn": "Užuomina po {s} s",
+      "hint": "Naudoti užuominą",
+      "stuck": "Įstrigau",
+      "stuckSent": "Komanda informuota (atsakė {n}).",
+      "stuckBanner": "{name} įstrigo. Dar kartą lėtai perskaitykite savo dalį garsiai.",
+      "acknowledged": "Ačiū, pažymėta.",
+      "acknowledge": "Dar kartą pasidalijau savo dalimi",
+      "sourceWaiting": "{name} sprendžia. Kalbėkitės toliau.",
+      "solved": "Išspręsta",
+      "failed": "Laikas baigėsi",
+      "answerWas": "Atsakymas buvo {answer}.",
+      "nextIn": "Kitas raundas po {s} s",
+      "finaleIn": "Finalinė užduotis po {s} s",
+      "pieces": {
+        "busy": "Užimta",
+        "free": "Laisva",
+        "expired": "Pasibaigęs galiojimas",
+        "yourMessages": "Jūsų žinutės ({n})",
+        "rule": "{n} taisyklė",
+        "clue": "Jūsų užuominos ({n})"
+      },
+      "introLevel": "{n} raundas",
+      "introReady": "Pasiruoškite",
+      "introGo": "Pirmyn!"
+    },
+    "challenge": {
+      "stepLabel": "Finalinė užduotis",
+      "title": "Visi kartu",
+      "timeLeft": "Liko {m}:{s}",
+      "judging": "Žaidimo vedėjas skaito jūsų atsakymą…",
+      "editorLabel": "Komandos atsakymas",
+      "hostHint": "Rašote už komandą. Visi mato tiesiogiai.",
+      "submitting": "Siunčiama…",
+      "submit": "Pateikti komandos atsakymą",
+      "liveLabel": "{host} rašo už komandą",
+      "liveEmpty": "Kol kas nieko. Pasakykite garsiai ir leiskite vedėjui rašyti.",
+      "guestHint": "Ši dalis vertinama visai komandai ir nekeičia padalijimo."
+    },
+    "key": {
+      "stepLabel": "Raktas",
+      "title": "Atrakinkite atlygį",
+      "entered": "Raktą įvedė {n} iš {total}",
+      "yours": "Jūsų raktas teisingas.",
+      "waiting": "Laukiama: {names}…",
+      "help": "Trys faktai, kuriuos radote anksčiau. Visi įveda tuos pačius tris.",
+      "revealed": "Atskleidė žaidimo vedėjas",
+      "wrong": "Tai ne raktas. Pasitikrinkite su komanda.",
+      "checking": "Tikrinama…",
+      "submit": "Įvesti raktą"
+    },
+    "scorecard": {
+      "stepLabel": "Rezultatai",
+      "unlockedEyebrow": "Atlygis atrakintas",
+      "unlockedTitle": "Jums pavyko",
+      "unlockedNote": "Padalyta tarp jūsų {n} pagal tai, ką kiekvienas padarė. Visiems garantuotas minimumas.",
+      "yourShareEyebrow": "Jūsų dalis",
+      "yourShareBody": "Užėmėte {rank} vietą iš {total}. Pagalba sudarė 60 %, sprendimas – 40 %.",
+      "highlights": {
+        "helper": "Geriausias pagalbininkas",
+        "solver": "Geriausias sprendėjas",
+        "rescuer": "Geriausias gelbėtojas",
+        "memory": "Geriausia atmintis",
+        "mvp": "MVP"
+      },
+      "boardTitle": "Kaip padalytas fondas",
+      "boardNote": "Paspauskite vardą, kad pamatytumėte detales.",
+      "components": {
+        "dataTransfer": "Dalijimasis",
+        "teamwork": "Komandinis darbas",
+        "problemSolving": "Sprendimas",
+        "focus": "Dėmesys",
+        "memory": "Atmintis"
+      },
+      "verdictTitle": "Finalinė užduotis",
+      "verdictScore": "Komandos įvertinimas {score} iš 100. Tai buvo dėl smagumo ir padalijimo nekeičia.",
+      "thanks": "Ačiū, kad žaidėte. Jūsų vedėjas {host} dabar gali uždaryti skirtuką.",
+      "podiumTitle": "Pakyla",
+      "placeLabel": "{rank} vieta"
+    },
+    "payout": {
+      "title": "Kur siųsti jūsų {amount}?",
+      "intro": "Banko pavedimas per 5 darbo dienas. Jūsų duomenys užšifruojami ir po išmokėjimo ištrinami.",
+      "holderName": "Sąskaitos savininko vardas ir pavardė",
+      "country": "Banko šalis",
+      "iban": "IBAN",
+      "ibanHint": "Tarpai leidžiami. Prieš išsaugodami numerį patikriname.",
+      "taxNote": "Ten, kur gyvenate, atlygis gali būti laikomas apmokestinama nauda. Darbdavys gali tai paaiškinti.",
+      "saving": "Saugoma…",
+      "submit": "Išsaugoti banko duomenis",
+      "cancel": "Atšaukti",
+      "laterNote": "Tai galite padaryti ir vėliau: nuoroda el. laiške sugrąžins jus čia.",
+      "paid": "{amount} išsiųsta į jūsų sąskaitą, kurios pabaiga {last4}.",
+      "received": "Gavome. {amount} bus pervesta į sąskaitą, kurios pabaiga {last4}.",
+      "timing": "Pavedimai atliekami per 5 darbo dienas.",
+      "change": "Keisti banko duomenis",
+      "errors": {
+        "iban": "Šis IBAN atrodo neteisingas.",
+        "name": "Įveskite sąskaitos savininko vardą ir pavardę.",
+        "generic": "Kažkas nepavyko. Bandykite dar kartą."
+      }
+    },
+    "finished": {
+      "title": "Šis žaidimas baigtas",
+      "body": "Ačiū, kad žaidėte. Ši nuoroda atliko savo darbą ir žaidimo nebeatidaro. Jei turite klausimų dėl atlygio, atsakykite į rezultatų laišką."
+    },
+    "sound": {
+      "on": "Garsas įjungtas",
+      "off": "Garsas išjungtas"
+    }
+  },
+  "admin": {
+    "login": {
+      "metaTitle": "Admin sign-in | WelloWork",
+      "eyebrow": "WelloWork admin",
+      "title": "Payouts admin",
+      "label": "Admin secret",
+      "submit": "Sign in",
+      "signingIn": "Signing in…",
+      "invalid": "That secret isn't right.",
+      "tooMany": "Too many attempts. Try again in 15 minutes."
+    },
+    "payouts": {
+      "metaTitle": "Payouts | WelloWork admin",
+      "eyebrow": "Cognitive Rewards",
+      "title": "Player payouts",
+      "summary": "{count} ready to pay · {total}",
+      "logout": "Sign out",
+      "filterLabel": "Filter by status",
+      "filters": {
+        "ready": "Ready to pay",
+        "awaiting_details": "Awaiting details",
+        "paid": "Paid",
+        "all": "All"
+      },
+      "purged": "{n} bank details older than 30 days were wiped.",
+      "empty": "Nothing here.",
+      "cols": {
+        "player": "Player",
+        "company": "Company · game",
+        "amount": "Amount",
+        "account": "Bank account",
+        "status": "Status",
+        "action": "Action"
+      },
+      "noDetails": "No bank details yet",
+      "reveal": "Show IBAN",
+      "status": {
+        "awaiting_details": "Awaiting details",
+        "ready": "Ready to pay",
+        "paid": "Paid"
+      },
+      "referencePlaceholder": "Bank reference (optional)",
+      "markPaid": "Mark as paid",
+      "confirmPaid": "Mark this payout as paid and email the player?",
+      "error": "Something went wrong. Reload and try again."
     }
   }
 }

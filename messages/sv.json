@@ -3268,7 +3268,7 @@
           "heading": "Vad händer sedan",
           "pay": "Betala säkert via Stripe.",
           "invoice": "Få kvitto och momsfaktura via e-post.",
-          "email": "Vi mejlar er nästa steg."
+          "email": "Varje spelare får sin personliga spellänk via e-post."
         }
       },
       "errors": {
@@ -3329,7 +3329,7 @@
         "total": "Totalt betalt"
       },
       "paidHeading": "Betalning mottagen",
-      "paidBody": "Betalning mottagen — inbjudningar till ert team skickas ut inom kort.",
+      "paidBody": "Betalningen är mottagen. Vi mejlar varje spelare deras personliga länk till spelet, och du får en bekräftelse när alla är inbjudna.",
       "processingHeading": "Slutför…",
       "processingBody": "Vi bekräftar din betalning med Stripe — det tar oftast bara några sekunder. Uppdatera sidan om den inte har uppdaterats än.",
       "refresh": "Uppdatera status",
@@ -3458,6 +3458,402 @@
       "body": "Starta en kostnadsfri 3-dagars provperiod på day-23.com, eller ge TwentyThird till ditt team som en arbetsplatsförmån.",
       "primaryCta": "Starta kostnadsfri provperiod på day-23.com",
       "secondaryCta": "Prata med oss om TwentyThird"
+    }
+  },
+  "emails": {
+    "eyebrow": "Cognitive Rewards",
+    "playerInvite": {
+      "subject": "{name}, du är inbjuden till {company}s lagspel",
+      "preheader": "{buyer} har lagt till dig i ett lagspel för {n} spelare med en belöningspott på {pool}. Gå med via din personliga länk.",
+      "heading": "{name}, du är med i laget",
+      "intro": "{buyer} på {company} har bjudit in dig till Cognitive Rewards, ett lagspel i realtid för {n} spelare. Ni spelar tillsammans, var och en på sin egen enhet, och delar på en belöningspott på {pool}.",
+      "factTeam": "Lag",
+      "factTeamValue": "{n} spelare",
+      "factPool": "Belöningspott",
+      "factMin": "Din garanterade minsta andel",
+      "factMinValue": "{min}",
+      "howHeading": "Så fungerar det",
+      "step1": "Öppna din personliga länk och gå med i lobbyn. Du ser dina lagkamrater när de ansluter.",
+      "step2": "Spelet startar när alla {n} spelare har gått med.",
+      "step3": "Laget delar på {pool} utifrån hur ni spelar. Alla får minst {min}, och du väljer själv hur du vill ta emot din del.",
+      "cta": "Gå med i spelet",
+      "personal": "Länken är bara till dig, så du behöver inget konto eller lösenord. Vidarebefordra den inte.",
+      "fallback": "Fungerar inte knappen? Kopiera länken till din webbläsare:",
+      "questions": "Frågor? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom {buyer} på {company} har lagt till dig i ett Cognitive Rewards-spel på WelloWork.",
+      "validUntil": "Använd den för att gå med i lobbyn innan spelet startar. När ert lag har spelat och din belöning är utbetald slutar länken att fungera."
+    },
+    "buyerConfirmation": {
+      "subject": "Ert lag är inbjudet: Cognitive Rewards för {company}",
+      "preheader": "Betalningen är mottagen. Vi har mejlat varje spelare deras personliga länk till spelet.",
+      "heading": "Tack, {name}. Ert lag är inbjudet",
+      "intro": "Betalningen gick igenom, och vi har mejlat var och en av de {n} spelarna en egen länk till spelet.",
+      "factPlayers": "Spelare",
+      "factPool": "Belöningspott",
+      "nextHeading": "Vad händer sedan",
+      "step1": "Varje spelare öppnar sin personliga länk och går med i lobbyn. Inget konto behövs.",
+      "step2": "Spelet startar så snart alla har gått med.",
+      "step3": "Belöningspotten fördelas efter hur laget spelar, med en garanterad minsta andel för varje spelare.",
+      "receipt": "Kvitto och momsfaktura skickas separat från Stripe.",
+      "questions": "Frågor om er beställning? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom du beställde Cognitive Rewards för {company} på WelloWork."
+    },
+    "gameResult": {
+      "subject": "{name}, din andel av belöningen: {share}",
+      "preheader": "Spelet är slut. Du kom på plats {rank} av {n}. Lägg till dina bankuppgifter för att få {share}.",
+      "heading": "Bra spelat, {name}",
+      "intro": "Ert lag på {company} har spelat klart Cognitive Rewards, och potten har fördelats efter vad var och en gjorde.",
+      "factShare": "Din andel",
+      "factRank": "Plats",
+      "factRankValue": "{rank} av {n}",
+      "factHighlights": "Utmärkelser",
+      "highlights": {
+        "helper": "Bästa hjälpare",
+        "solver": "Bästa lösare",
+        "rescuer": "Bästa räddare",
+        "memory": "Bästa minne",
+        "mvp": "MVP"
+      },
+      "nextHeading": "Så får du den",
+      "step1": "Öppna din personliga länk nedan.",
+      "step2": "Ange kontoinnehavarens namn och IBAN. Vi kontrollerar numret innan det sparas.",
+      "step3": "Vi för över pengarna inom 5 arbetsdagar och mejlar dig när de är skickade.",
+      "cta": "Lägg till mina bankuppgifter",
+      "taxNote": "Belöningen kan räknas som en skattepliktig förmån där du bor. Din arbetsgivare kan svara på det.",
+      "questions": "Frågor? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom du spelade ett Cognitive Rewards-spel för {company} på WelloWork."
+    },
+    "payoutReceived": {
+      "subject": "Bankuppgifter mottagna för dina {amount}",
+      "preheader": "Vi för över {amount} inom 5 arbetsdagar.",
+      "heading": "Tack, {name}. Uppgifterna är mottagna",
+      "intro": "Vi har dina bankuppgifter och skickar din belöning via banköverföring.",
+      "factAmount": "Belopp",
+      "factAccount": "Konto",
+      "timing": "Överföringar görs inom 5 arbetsdagar. Du får ett nytt mejl när pengarna är skickade. Om något ser fel ut, svara på det här mejlet direkt.",
+      "questions": "Frågor? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom du lagt till bankuppgifter för en Cognitive Rewards-utbetalning på WelloWork."
+    },
+    "payoutSent": {
+      "subject": "{amount} är på väg",
+      "preheader": "Din andel från Cognitive Rewards har förts över.",
+      "heading": "Skickat: {amount}",
+      "intro": "Vi har fört över din belöning. Beroende på bank kan det ta 1–2 arbetsdagar innan den syns.",
+      "factAmount": "Belopp",
+      "factAccount": "Konto",
+      "timing": "Dina bankuppgifter raderas från våra system 30 dagar efter utbetalningen.",
+      "questions": "Frågor? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom du fått en Cognitive Rewards-utbetalning från WelloWork."
+    },
+    "buyerSummary": {
+      "subject": "Ert lag är klart: Cognitive Rewards för {company}",
+      "preheader": "Spelet är slut och potten på {pool} har fördelats. Här är lagets sammanfattning.",
+      "heading": "{name}, ert lag är klart",
+      "intro": "Belöningspotten på {pool} fördelades efter vad varje spelare gjorde. Alla fick sin garanterade minsta andel, och varje spelare har ombetts ange sina bankuppgifter.",
+      "splitHeading": "Fördelningen",
+      "diagnosticHeading": "Lagets diagnos",
+      "diagnostic": "Styrka: {strength}. Utvecklingsområde: {growth}. Baserat på hur laget delade information, hjälpte varandra och löste rundorna.",
+      "rubric": "Lagpoäng i slututmaningen: {score} av 100.",
+      "privacy": "Spelarnas svar och spelledarens reaktioner stannar hos laget. Bara poäng och den här diagnosen delas med dig.",
+      "questions": "Frågor? Svara på det här mejlet eller skriv till {email}.",
+      "footer": "Du får det här mejlet eftersom du beställde Cognitive Rewards för {company} på WelloWork.",
+      "skills": {
+        "dataTransfer": "tydliga överlämningar",
+        "teamwork": "att hjälpa varandra",
+        "problemSolving": "problemlösning",
+        "focus": "att fånga detaljer",
+        "memory": "att minnas vad lagkamraterna sa"
+      }
+    }
+  },
+  "play": {
+    "metaTitle": "Gå med i ditt lag | WelloWork",
+    "eyebrow": "Cognitive Rewards",
+    "welcomeLead": "Välkommen, ",
+    "intro": "{buyer} på {company} har bjudit in dig till ett lagspel i realtid för {n} spelare. Alla spelar tillsammans, var och en på sin egen enhet.",
+    "facts": {
+      "team": "Lag",
+      "teamValue": "{n} spelare",
+      "pool": "Belöningspott",
+      "min": "Din garanterade minsta andel"
+    },
+    "board": {
+      "title": "Ditt lag",
+      "count": "{joined} av {total} har gått med",
+      "you": "Du",
+      "joined": "Med",
+      "waiting": "Inte med än",
+      "host": "Värd",
+      "missingHint": "Saknas någon? Ring dem. Deras inbjudningsmejl innehåller deras egen länk."
+    },
+    "actions": {
+      "join": "Gå med i spelet",
+      "joining": "Går med…",
+      "joinNote": "När du går med ser dina lagkamrater att du är här.",
+      "waitingFor": "Väntar på att {names} ska gå med…",
+      "start": "Starta spelet",
+      "allHere": "Alla är här. Ni är redo att starta!",
+      "keepOpen": "Ha sidan öppen. Den uppdateras automatiskt när dina lagkamrater går med.",
+      "allHereHost": "Alla är här. Du är värd: välj spelspråk och starta när laget är redo.",
+      "starting": "Startar…",
+      "startIn": "Starta spelet på {language}",
+      "callHint": "Ring upp varandra eller sätt er i samma rum först. Ni kommer prata mycket.",
+      "waitingForHost": "Väntar på att {host}, er värd, ska starta spelet…"
+    },
+    "errors": {
+      "join": "Vi kunde inte lägga till dig i spelet. Försök igen.",
+      "network": "Anslutningsproblem. Kontrollera att du är uppkopplad och försök igen.",
+      "generic": "Något gick fel. Försök igen."
+    },
+    "how": {
+      "title": "Så fungerar det",
+      "step1": "Alla går med via sin egen personliga länk. Spelet startar när hela laget är här.",
+      "step2": "Laget delar på belöningspotten utifrån hur ni spelar. Du är garanterad minst {min}.",
+      "step3": "Efter spelet väljer du själv hur du vill ta emot din del."
+    },
+    "privacy": "Dina lagkamrater ser ditt namn och om du har gått med. Inget annat delas.",
+    "invalid": {
+      "title": "Länken fungerar inte",
+      "body": "Länken kan vara ofullständig, eller så har en nyare inbjudan ersatt den. Leta efter den senaste inbjudan i din inkorg.",
+      "help": "Behöver du hjälp? Skriv till <link>{email}</link>."
+    },
+    "gameMaster": "Spelledaren",
+    "loading": "Laddar…",
+    "offline": "Anslutningen bröts. Försöker igen…",
+    "language": {
+      "label": "Spelspråk",
+      "hostHint": "Allas pussel och spelledaren använder det här språket. Varje spelare kan ändå byta språk på knappar och instruktioner med väljaren högst upp.",
+      "guestHint": "{host} väljer detta. Dina knappar och instruktioner följer väljaren högst upp.",
+      "fallbackNote": ""
+    },
+    "generating": {
+      "title": "Bygger ert kontor…",
+      "body": "Spelledaren läser era svar och sätter upp rundorna. Det tar ungefär en halv minut."
+    },
+    "team": {
+      "aria": "Ditt lag",
+      "host": "Värd",
+      "solving": "Löser",
+      "online": "online",
+      "offline": "offline"
+    },
+    "intake": {
+      "stepLabel": "Innan vi börjar",
+      "title": "Sex snabba frågor",
+      "intro": "Spelet byggs av era svar. Håll det lätt och vardagligt. Dina lagkamrater ser inte vad du skriver, och företaget ser det aldrig.",
+      "timeLeft": "{m}:{s} kvar",
+      "thanks": "Tack. Dina svar är inne.",
+      "waiting": "Väntar på {names}…",
+      "building": "Alla är klara. Bygger spelet…",
+      "privateNote": "Svaren stannar i spelet och raderas 30 dagar efter att det avslutats.",
+      "questions": {
+        "q1": "En fras som någon i ert lag säger hela tiden",
+        "q2": "Snackset eller drycken ert lag drivs av",
+        "q3": "Mötet ni skulle ställa in för alltid (namnet, inte personerna)",
+        "q4": "Ett smeknamn ert lag använder för ett verktyg, rum, process eller skrivaren",
+        "q5": "En liten katastrof ert lag överlevde tillsammans",
+        "q6": "Om pengar inte spelade någon roll: den härligt onödiga förmånen ni skulle lägga till på kontoret"
+      },
+      "placeholders": {
+        "q1": "vi tar det sen",
+        "q2": "havrelatte",
+        "q3": "måndagsavstämningen",
+        "q4": "monstret (vårt CRM)",
+        "q5": "svara-alla-incidenten",
+        "q6": "ett vilrum med dörrvakt"
+      },
+      "optional": "(valfritt)",
+      "required": "Svara på den här.",
+      "safetyNote": "Inga riktiga namn, inga klagomål på verkliga personer. Bara allmänt kontorsliv.",
+      "submitting": "Skickar…",
+      "submit": "Skicka mina svar",
+      "tip": "Kort och specifikt fungerar bäst: två till sex ord per svar. Stavfel är välkomna."
+    },
+    "briefing": {
+      "stepLabel": "Genomgång",
+      "title": "Välkomna till kontoret",
+      "rulesTitle": "Tre regler",
+      "rule1": "Varje runda är en av er lösare. Alla andra har en bit som bara de kan se.",
+      "rule2": "Prata. Inget kan lösas ensam, och ingen kan kika över axeln.",
+      "rule3": "Att hjälpa lönar sig lika mycket som att lösa. Potten fördelas efter vad var och en gjorde.",
+      "begin": "Starta runda 1",
+      "beginning": "Startar…",
+      "hostNote": "Du är värd. Starta när alla säger att de är redo.",
+      "waitingHost": "Väntar på att {host} ska börja…"
+    },
+    "round": {
+      "progress": "Runda {n} av {total}",
+      "youSolve": "Du löser",
+      "solverIs": "{name} löser",
+      "promptLabel": "Uppgiften",
+      "detailMeta": "Försvinner om {s} s. Kom ihåg den.",
+      "yourPieceSolver": "Din bit",
+      "yourPiece": "Din bit. Bara du kan se den. Berätta för {name}.",
+      "callbackSource": "Ingen bit den här rundan. Det är ett minnestest för lösaren, och du kanske minns det som behövs.",
+      "revealedLabel": "Lagkamrat offline. Deras bit visas för dig.",
+      "revealedFrom": "Från {name}",
+      "answerLabel": "Ditt svar",
+      "checking": "Kontrollerar…",
+      "submit": "Skicka",
+      "digitsHelp": "Bara siffror",
+      "textHelp": "Bokstäver och siffror, inga mellanslag",
+      "attemptsLeft": "{n} försök kvar",
+      "wrong": "Inte rätt. Försök igen.",
+      "hintIn": "Ledtråd om {s} s",
+      "hint": "Använd en ledtråd",
+      "stuck": "Jag har fastnat",
+      "stuckSent": "Ditt lag har fått veta ({n} har svarat).",
+      "stuckBanner": "{name} har fastnat. Läs upp din bit igen, långsamt.",
+      "acknowledged": "Tack, noterat.",
+      "acknowledge": "Jag har delat min bit igen",
+      "sourceWaiting": "{name} jobbar på det. Fortsätt prata.",
+      "solved": "Löst",
+      "failed": "Tiden är ute",
+      "answerWas": "Svaret var {answer}.",
+      "nextIn": "Nästa runda om {s} s",
+      "finaleIn": "Slututmaningen om {s} s",
+      "pieces": {
+        "busy": "Upptagen",
+        "free": "Ledig",
+        "expired": "Utgången",
+        "yourMessages": "Dina meddelanden ({n})",
+        "rule": "Regel {n}",
+        "clue": "Dina ledtrådar ({n})"
+      },
+      "introLevel": "Runda {n}",
+      "introReady": "Gör er redo",
+      "introGo": "Kör!"
+    },
+    "challenge": {
+      "stepLabel": "Slututmaning",
+      "title": "Alla ni, tillsammans",
+      "timeLeft": "{m}:{s} kvar",
+      "judging": "Spelledaren läser ert svar…",
+      "editorLabel": "Lagets svar",
+      "hostHint": "Du skriver för laget. Alla ser det live.",
+      "submitting": "Skickar…",
+      "submit": "Skicka lagets svar",
+      "liveLabel": "{host} skriver för laget",
+      "liveEmpty": "Inget än. Säg det högt och låt er värd skriva.",
+      "guestHint": "Den här delen poängsätts för hela laget och påverkar inte fördelningen."
+    },
+    "key": {
+      "stepLabel": "Nyckeln",
+      "title": "Lås upp belöningen",
+      "entered": "{n} av {total} har skrivit in nyckeln",
+      "yours": "Din nyckel stämmer.",
+      "waiting": "Väntar på {names}…",
+      "help": "Tre fakta ni hittade tidigare. Alla skriver in samma tre.",
+      "revealed": "Avslöjad av spelledaren",
+      "wrong": "Det är inte nyckeln. Stäm av med laget.",
+      "checking": "Kontrollerar…",
+      "submit": "Skriv in nyckeln"
+    },
+    "scorecard": {
+      "stepLabel": "Resultat",
+      "unlockedEyebrow": "Belöningen upplåst",
+      "unlockedTitle": "Ni klarade det",
+      "unlockedNote": "Fördelas mellan er {n} efter vad var och en gjorde. Alla har en garanterad minsta andel.",
+      "yourShareEyebrow": "Din andel",
+      "yourShareBody": "Du kom på plats {rank} av {total}. Att hjälpa räknades till 60 %, att lösa till 40 %.",
+      "highlights": {
+        "helper": "Bästa hjälpare",
+        "solver": "Bästa lösare",
+        "rescuer": "Bästa räddare",
+        "memory": "Bästa minne",
+        "mvp": "MVP"
+      },
+      "boardTitle": "Så fördelades potten",
+      "boardNote": "Tryck på ett namn för att se detaljerna.",
+      "components": {
+        "dataTransfer": "Delning",
+        "teamwork": "Lagarbete",
+        "problemSolving": "Lösning",
+        "focus": "Fokus",
+        "memory": "Minne"
+      },
+      "verdictTitle": "Slututmaningen",
+      "verdictScore": "Lagpoäng {score} av 100. Den här var för skojs skull och påverkar inte fördelningen.",
+      "thanks": "Tack för att ni spelade. Er värd {host} kan stänga fliken nu.",
+      "podiumTitle": "Prispallen",
+      "placeLabel": "Plats {rank}"
+    },
+    "payout": {
+      "title": "Vart ska vi skicka dina {amount}?",
+      "intro": "Banköverföring inom 5 arbetsdagar. Dina uppgifter krypteras och raderas efter utbetalningen.",
+      "holderName": "Kontoinnehavarens namn",
+      "country": "Bankens land",
+      "iban": "IBAN",
+      "ibanHint": "Mellanslag går bra. Vi kontrollerar numret innan det sparas.",
+      "taxNote": "Belöningen kan räknas som en skattepliktig förmån där du bor. Din arbetsgivare kan svara på det.",
+      "saving": "Sparar…",
+      "submit": "Spara bankuppgifter",
+      "cancel": "Avbryt",
+      "laterNote": "Du kan också göra det senare: länken i ditt mejl tar dig tillbaka hit.",
+      "paid": "{amount} har skickats till ditt konto som slutar på {last4}.",
+      "received": "Uppfattat. {amount} går till ditt konto som slutar på {last4}.",
+      "timing": "Överföringar görs inom 5 arbetsdagar.",
+      "change": "Ändra bankuppgifter",
+      "errors": {
+        "iban": "Det IBAN-numret ser inte rätt ut.",
+        "name": "Ange kontoinnehavarens namn.",
+        "generic": "Något gick fel. Försök igen."
+      }
+    },
+    "finished": {
+      "title": "Det här spelet är avslutat",
+      "body": "Tack för att du spelade. Länken har gjort sitt och öppnar inte längre spelet. Har du frågor om din belöning, svara på ditt resultatmejl."
+    },
+    "sound": {
+      "on": "Ljud på",
+      "off": "Ljud av"
+    }
+  },
+  "admin": {
+    "login": {
+      "metaTitle": "Admin sign-in | WelloWork",
+      "eyebrow": "WelloWork admin",
+      "title": "Payouts admin",
+      "label": "Admin secret",
+      "submit": "Sign in",
+      "signingIn": "Signing in…",
+      "invalid": "That secret isn't right.",
+      "tooMany": "Too many attempts. Try again in 15 minutes."
+    },
+    "payouts": {
+      "metaTitle": "Payouts | WelloWork admin",
+      "eyebrow": "Cognitive Rewards",
+      "title": "Player payouts",
+      "summary": "{count} ready to pay · {total}",
+      "logout": "Sign out",
+      "filterLabel": "Filter by status",
+      "filters": {
+        "ready": "Ready to pay",
+        "awaiting_details": "Awaiting details",
+        "paid": "Paid",
+        "all": "All"
+      },
+      "purged": "{n} bank details older than 30 days were wiped.",
+      "empty": "Nothing here.",
+      "cols": {
+        "player": "Player",
+        "company": "Company · game",
+        "amount": "Amount",
+        "account": "Bank account",
+        "status": "Status",
+        "action": "Action"
+      },
+      "noDetails": "No bank details yet",
+      "reveal": "Show IBAN",
+      "status": {
+        "awaiting_details": "Awaiting details",
+        "ready": "Ready to pay",
+        "paid": "Paid"
+      },
+      "referencePlaceholder": "Bank reference (optional)",
+      "markPaid": "Mark as paid",
+      "confirmPaid": "Mark this payout as paid and email the player?",
+      "error": "Something went wrong. Reload and try again."
     }
   }
 }

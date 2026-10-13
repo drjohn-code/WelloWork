@@ -7,8 +7,8 @@ import { rateLimit, getClientIp } from "@/app/lib/rate-limit";
 import { GAME_FEE_EUR, CURRENCY, type TeamSize } from "@/app/lib/cognitive-rewards-order";
 import { SITE_URL } from "@/app/lib/site";
 // TEMPORARY - MOCK PAYMENT, REMOVE BEFORE PROD
-import { sendCognitiveRewardsMockInvite } from "@/app/lib/email";
-import type { CognitiveRewardsOrderRow, CognitiveRewardsOrderPlayerRow } from "@/app/types/database";
+import { onOrderPaid } from "@/app/lib/order-fulfillment";
+import type { CognitiveRewardsOrderRow } from "@/app/types/database";
 
 export const runtime = "nodejs";
 export const dynamic = "force-dynamic";
@@ -67,13 +67,6 @@ function generateMockOrderReference(): string {
   return `CR-${suffix}`;
 }
 
-// TODO: this token is a plain, non-expiring reference — fine for an internal
-// demo, but replace with a signed, time-limited join token before any real
-// (non-demo/test) player ever receives this link.
-function buildMockJoinUrl(reference: string): string {
-  return `https://puzzify-platform.web.app/join?order=${encodeURIComponent(reference)}`;
-}
-
 function mockSuccessUrl(order: Pick<CognitiveRewardsOrderRow, "id" | "locale">): string {
   const localePrefix = order.locale && order.locale !== "en" ? `/${order.locale}` : "";
   return `${SITE_URL}${localePrefix}/cognitive-rewards/order/success?mock_order=${order.id}`;
@@ -82,7 +75,7 @@ function mockSuccessUrl(order: Pick<CognitiveRewardsOrderRow, "id" | "locale">):
 // Fakes a successful payment for a pending order: skips Stripe, marks the
 // order 'mock_paid' (never 'paid', so it can never be mistaken for real
 // revenue in reporting) with payment_provider 'mock', and emails every
-// player captured in step 2 a temporary Puzzify join link. Only ever called
+// player captured in step 2 their personal lobby link (same as real payments). Only ever called
 // when PAYMENT_MOCK_MODE is true.
 async function handleMockCheckout(orderId: string): Promise<NextResponse> {
   const supabase = getSupabaseServerClient();
@@ -140,30 +133,12 @@ async function handleMockCheckout(orderId: string): Promise<NextResponse> {
     return NextResponse.json({ ok: false, code: CHECKOUT_ERROR.REQUEST_FAILED }, { status: 500 });
   }
 
-  const { data: players, error: playersError } = await supabase
-    .from("cognitive_rewards_order_players")
-    .select("*")
-    .eq("order_id", order.id);
-
-  if (playersError) {
-    console.error("[checkout:mock] failed to load players for invite emails", order.id, playersError);
-  } else {
-    const joinUrl = buildMockJoinUrl(reference);
-    await Promise.allSettled(
-      (players ?? []).map((player: CognitiveRewardsOrderPlayerRow) =>
-        sendCognitiveRewardsMockInvite({
-          to: player.email,
-          playerName: player.name,
-          buyerName: order.buyer_name,
-          companyName: order.company_name,
-          teamSize: order.team_size,
-          rewardPoolEur: Number(order.reward_pool),
-          orderReference: reference,
-          joinUrl,
-          locale: order.locale || "en",
-        })
-      )
-    );
+  // Same invitation emails + lobby links as the real Stripe flow. A failure
+  // here doesn't block the demo redirect; it's logged by onOrderPaid.
+  try {
+    await onOrderPaid(updated.id);
+  } catch (err) {
+    console.error("[checkout:mock] invitations incomplete", updated.id, err);
   }
 
   return NextResponse.json({ ok: true, url: mockSuccessUrl(updated) });

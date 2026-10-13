@@ -2,7 +2,7 @@ import { NextResponse, type NextRequest } from "next/server";
 import type Stripe from "stripe";
 import { getSupabaseServerClient } from "@/app/lib/supabase";
 import { getStripeClient, getStripeWebhookSecret } from "@/app/lib/stripe";
-import { onOrderPaid } from "@/app/lib/order-fulfillment";
+import { InviteDeliveryError, onOrderPaid } from "@/app/lib/order-fulfillment";
 import type { CognitiveRewardsOrderStatus } from "@/app/types/database";
 
 export const runtime = "nodejs";
@@ -42,7 +42,12 @@ async function handleCheckoutSessionCompleted(
   }
 
   // Idempotent: Stripe may resend this event; a second delivery is a no-op.
-  if (order.status === "paid") return;
+  // Redelivery of an already-processed event: re-run fulfillment, which only
+  // emails players whose invitation hasn't gone out yet.
+  if (order.status === "paid") {
+    await onOrderPaid(order.id);
+    return;
+  }
 
   if (session.payment_status !== "paid") {
     console.warn("[stripe-webhook] checkout.session.completed but payment_status !== paid", {
@@ -151,6 +156,12 @@ export async function POST(request: NextRequest) {
         break;
     }
   } catch (err) {
+    if (err instanceof InviteDeliveryError) {
+      // The order is safely marked paid; only emails failed. A 5xx makes
+      // Stripe redeliver this event later, which retries just the failed sends.
+      console.error("[stripe-webhook] invitation delivery incomplete — asking Stripe to retry", err.message);
+      return NextResponse.json({ error: "Invitation delivery incomplete" }, { status: 500 });
+    }
     console.error("[stripe-webhook] handler error", event.type, err);
     // Still return 200 — Stripe would otherwise retry indefinitely on a bug
     // in our handler, and these events are read again from the Dashboard if

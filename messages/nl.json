@@ -3268,7 +3268,7 @@
           "heading": "Wat gebeurt er hierna",
           "pay": "Betaal veilig via Stripe.",
           "invoice": "Ontvang uw betaalbewijs en btw-factuur per e-mail.",
-          "email": "We mailen u de volgende stappen."
+          "email": "Elke speler ontvangt een persoonlijke spellink per e-mail."
         }
       },
       "errors": {
@@ -3329,7 +3329,7 @@
         "total": "Totaal betaald"
       },
       "paidHeading": "Betaling ontvangen",
-      "paidBody": "Betaling ontvangen — de uitnodigingen voor uw team volgen binnenkort.",
+      "paidBody": "Betaling ontvangen. We mailen elke speler een persoonlijke link naar het spel, en u krijgt een bevestiging zodra iedereen is uitgenodigd.",
       "processingHeading": "Even geduld…",
       "processingBody": "We bevestigen uw betaling bij Stripe — dit duurt meestal maar een paar seconden. Vernieuw de pagina zo nodig.",
       "refresh": "Status vernieuwen",
@@ -3458,6 +3458,402 @@
       "body": "Start een gratis proefperiode van 3 dagen op day-23.com, of breng TwentyThird naar je team als werkgerelateerd voordeel.",
       "primaryCta": "Start gratis proefperiode op day-23.com",
       "secondaryCta": "Praat met ons over TwentyThird"
+    }
+  },
+  "emails": {
+    "eyebrow": "Cognitive Rewards",
+    "playerInvite": {
+      "subject": "{name}, je bent uitgenodigd voor het teamspel van {company}",
+      "preheader": "{buyer} heeft je toegevoegd aan een teamspel voor {n} spelers met een beloningspot van {pool}. Doe mee via je persoonlijke link.",
+      "heading": "{name}, je zit in het team",
+      "intro": "{buyer} van {company} heeft je uitgenodigd voor Cognitive Rewards, een realtime teamspel voor {n} spelers. Jullie spelen samen, elk op een eigen apparaat, en delen een beloningspot van {pool}.",
+      "factTeam": "Team",
+      "factTeamValue": "{n} spelers",
+      "factPool": "Beloningspot",
+      "factMin": "Jouw gegarandeerde minimum",
+      "factMinValue": "{min}",
+      "howHeading": "Zo werkt het",
+      "step1": "Open je persoonlijke link en ga naar de lobby. Je ziet je teamgenoten binnenkomen.",
+      "step2": "Het spel begint zodra alle {n} spelers erbij zijn.",
+      "step3": "Het team verdeelt {pool} op basis van hoe jullie spelen. Iedereen krijgt minstens {min}, en je kiest zelf hoe je jouw deel ontvangt.",
+      "cta": "Doe mee met het spel",
+      "personal": "Deze link is alleen voor jou, dus je hebt geen account of wachtwoord nodig. Stuur hem niet door.",
+      "fallback": "Werkt de knop niet? Kopieer deze link naar je browser:",
+      "questions": "Vragen? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "Je ontvangt deze e-mail omdat {buyer} van {company} je heeft toegevoegd aan een Cognitive Rewards-spel op WelloWork.",
+      "validUntil": "Gebruik hem om de lobby binnen te gaan voordat het spel begint. Zodra je team heeft gespeeld en je beloning is uitbetaald, werkt de link niet meer."
+    },
+    "buyerConfirmation": {
+      "subject": "Uw team is uitgenodigd: Cognitive Rewards voor {company}",
+      "preheader": "Betaling ontvangen. We hebben elke speler een persoonlijke link naar het spel gemaild.",
+      "heading": "Bedankt, {name}. Uw team is uitgenodigd",
+      "intro": "Uw betaling is gelukt en we hebben elk van de {n} spelers een eigen link naar het spel gemaild.",
+      "factPlayers": "Spelers",
+      "factPool": "Beloningspot",
+      "nextHeading": "Wat gebeurt er hierna",
+      "step1": "Elke speler opent de persoonlijke link en gaat naar de lobby. Geen account nodig.",
+      "step2": "Het spel begint zodra iedereen erbij is.",
+      "step3": "De beloningspot wordt verdeeld op basis van hoe het team speelt, met een gegarandeerd minimumaandeel per speler.",
+      "receipt": "Uw betaalbewijs en btw-factuur komen apart van Stripe.",
+      "questions": "Vragen over uw bestelling? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "U ontvangt deze e-mail omdat u Cognitive Rewards voor {company} hebt besteld op WelloWork."
+    },
+    "gameResult": {
+      "subject": "{name}, jouw deel van de beloning: {share}",
+      "preheader": "Het spel is voorbij. Je werd {rank} van {n}. Voeg je bankgegevens toe om {share} te ontvangen.",
+      "heading": "Goed gespeeld, {name}",
+      "intro": "Je team bij {company} heeft Cognitive Rewards uitgespeeld en de pot is verdeeld op basis van wat ieder van jullie deed.",
+      "factShare": "Jouw deel",
+      "factRank": "Plaats",
+      "factRankValue": "{rank} van {n}",
+      "factHighlights": "Hoogtepunten",
+      "highlights": {
+        "helper": "Topheler",
+        "solver": "Topoplosser",
+        "rescuer": "Topredder",
+        "memory": "Topgeheugen",
+        "mvp": "MVP"
+      },
+      "nextHeading": "Zo ontvang je het",
+      "step1": "Open hieronder je persoonlijke link.",
+      "step2": "Vul de naam van de rekeninghouder en het IBAN in. We controleren het nummer voordat we het opslaan.",
+      "step3": "We maken het geld binnen 5 werkdagen over en mailen je zodra het verstuurd is.",
+      "cta": "Mijn bankgegevens toevoegen",
+      "taxNote": "De beloning kan waar je woont als belastbaar voordeel gelden. Je werkgever kan je dat vertellen.",
+      "questions": "Vragen? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "Je ontvangt deze e-mail omdat je een Cognitive Rewards-spel voor {company} hebt gespeeld op WelloWork."
+    },
+    "payoutReceived": {
+      "subject": "Bankgegevens ontvangen voor je {amount}",
+      "preheader": "We maken {amount} binnen 5 werkdagen over.",
+      "heading": "Bedankt, {name}. Gegevens ontvangen",
+      "intro": "We hebben je bankgegevens en sturen je beloning per bankoverschrijving.",
+      "factAmount": "Bedrag",
+      "factAccount": "Rekening",
+      "timing": "Overschrijvingen gaan binnen 5 werkdagen de deur uit. Je krijgt nog een e-mail zodra het verstuurd is. Klopt er iets niet? Beantwoord deze e-mail dan meteen.",
+      "questions": "Vragen? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "Je ontvangt deze e-mail omdat je bankgegevens hebt toegevoegd voor een Cognitive Rewards-uitbetaling op WelloWork."
+    },
+    "payoutSent": {
+      "subject": "{amount} is onderweg",
+      "preheader": "Je Cognitive Rewards-deel is overgemaakt.",
+      "heading": "Verstuurd: {amount}",
+      "intro": "We hebben je beloning overgemaakt. Afhankelijk van je bank kan het 1–2 werkdagen duren voordat het zichtbaar is.",
+      "factAmount": "Bedrag",
+      "factAccount": "Rekening",
+      "timing": "Je bankgegevens worden 30 dagen na betaling uit onze systemen verwijderd.",
+      "questions": "Vragen? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "Je ontvangt deze e-mail omdat je een Cognitive Rewards-uitbetaling van WelloWork hebt ontvangen."
+    },
+    "buyerSummary": {
+      "subject": "Uw team is klaar: Cognitive Rewards voor {company}",
+      "preheader": "Het spel is voorbij en de pot van {pool} is verdeeld. Hier is de teamsamenvatting.",
+      "heading": "{name}, uw team is klaar",
+      "intro": "De beloningspot van {pool} is verdeeld op basis van wat elke speler deed. Iedereen kreeg het gegarandeerde minimum en elke speler is gevraagd om bankgegevens.",
+      "splitHeading": "De verdeling",
+      "diagnosticHeading": "Teamdiagnose",
+      "diagnostic": "Sterk punt: {strength}. Groeipunt: {growth}. Gebaseerd op hoe het team informatie deelde, elkaar hielp en de rondes oploste.",
+      "rubric": "Teamscore eindopdracht: {score} van 100.",
+      "privacy": "De antwoorden van de spelers en de reacties van de spelleider blijven binnen het team. Alleen scores en deze diagnose worden met u gedeeld.",
+      "questions": "Vragen? Beantwoord deze e-mail of schrijf naar {email}.",
+      "footer": "U ontvangt deze e-mail omdat u Cognitive Rewards voor {company} hebt besteld op WelloWork.",
+      "skills": {
+        "dataTransfer": "duidelijke overdrachten",
+        "teamwork": "elkaar helpen",
+        "problemSolving": "probleemoplossing",
+        "focus": "details opmerken",
+        "memory": "onthouden wat teamgenoten zeiden"
+      }
+    }
+  },
+  "play": {
+    "metaTitle": "Doe mee met je team | WelloWork",
+    "eyebrow": "Cognitive Rewards",
+    "welcomeLead": "Welkom, ",
+    "intro": "{buyer} van {company} heeft je uitgenodigd voor een realtime teamspel voor {n} spelers. Iedereen speelt samen, elk op een eigen apparaat.",
+    "facts": {
+      "team": "Team",
+      "teamValue": "{n} spelers",
+      "pool": "Beloningspot",
+      "min": "Jouw gegarandeerde minimum"
+    },
+    "board": {
+      "title": "Jouw team",
+      "count": "{joined} van {total} doen mee",
+      "you": "Jij",
+      "joined": "Doet mee",
+      "waiting": "Nog niet binnen",
+      "host": "Host",
+      "missingHint": "Mist er iemand? Bel diegene even. De uitnodigingsmail bevat een eigen link."
+    },
+    "actions": {
+      "join": "Doe mee met het spel",
+      "joining": "Bezig…",
+      "joinNote": "Als je meedoet, zien je teamgenoten dat je er bent.",
+      "waitingFor": "Wachten tot {names} meedoet…",
+      "start": "Start het spel",
+      "allHere": "Iedereen is er. Jullie kunnen beginnen!",
+      "keepOpen": "Houd deze pagina open. Hij werkt automatisch bij als je teamgenoten meedoen.",
+      "allHereHost": "Iedereen is er. Jij bent de host: kies de speltaal en start als het team klaar is.",
+      "starting": "Starten…",
+      "startIn": "Start het spel in het {language}",
+      "callHint": "Bel elkaar eerst of ga in één ruimte zitten. Jullie gaan veel praten.",
+      "waitingForHost": "Wachten tot {host}, jullie host, het spel start…"
+    },
+    "errors": {
+      "join": "We konden je niet aan het spel toevoegen. Probeer het opnieuw.",
+      "network": "Verbindingsprobleem. Controleer of je online bent en probeer het opnieuw.",
+      "generic": "Er ging iets mis. Probeer het opnieuw."
+    },
+    "how": {
+      "title": "Zo werkt het",
+      "step1": "Iedereen doet mee via een eigen persoonlijke link. Het spel begint als het hele team er is.",
+      "step2": "Het team verdeelt de beloningspot op basis van hoe jullie spelen. Je krijgt gegarandeerd minstens {min}.",
+      "step3": "Na het spel kies je zelf hoe je jouw deel ontvangt."
+    },
+    "privacy": "Je teamgenoten zien je naam en of je meedoet. Verder wordt niets gedeeld.",
+    "invalid": {
+      "title": "Deze link werkt niet",
+      "body": "De link is mogelijk onvolledig, of een nieuwere uitnodiging heeft hem vervangen. Zoek de nieuwste uitnodiging in je e-mail.",
+      "help": "Hulp nodig? Schrijf naar <link>{email}</link>."
+    },
+    "gameMaster": "Spelleider",
+    "loading": "Laden…",
+    "offline": "Verbinding verbroken. Opnieuw proberen…",
+    "language": {
+      "label": "Speltaal",
+      "hostHint": "De puzzels van iedereen en de spelleider gebruiken deze taal. Elke speler kan de eigen knoppen en instructies nog aanpassen met de schakelaar bovenaan.",
+      "guestHint": "{host} kiest dit. Je knoppen en instructies volgen de schakelaar bovenaan.",
+      "fallbackNote": ""
+    },
+    "generating": {
+      "title": "Jullie kantoor wordt gebouwd…",
+      "body": "De spelleider leest jullie antwoorden en zet de rondes klaar. Dit duurt ongeveer een halve minuut."
+    },
+    "team": {
+      "aria": "Jouw team",
+      "host": "Host",
+      "solving": "Lost op",
+      "online": "online",
+      "offline": "offline"
+    },
+    "intake": {
+      "stepLabel": "Voordat we beginnen",
+      "title": "Zes korte vragen",
+      "intro": "Het spel wordt gebouwd uit jullie antwoorden. Houd het luchtig en over het gewone kantoorleven. Je teamgenoten zien niet wat je schrijft, en het bedrijf nooit.",
+      "timeLeft": "{m}:{s} over",
+      "thanks": "Bedankt. Je antwoorden zijn binnen.",
+      "waiting": "Wachten op {names}…",
+      "building": "Iedereen is klaar. Het spel wordt gebouwd…",
+      "privateNote": "Antwoorden blijven binnen het spel en worden 30 dagen na afloop verwijderd.",
+      "questions": {
+        "q1": "Een zin die iemand in je team constant zegt",
+        "q2": "De snack of het drankje waar je team op draait",
+        "q3": "De vergadering die je voor altijd zou afzeggen (de naam, niet de mensen)",
+        "q4": "Een bijnaam die je team gebruikt voor een tool, ruimte, proces of de printer",
+        "q5": "Een kleine ramp die je team samen heeft overleefd",
+        "q6": "Als geld geen rol speelde: de heerlijk nutteloze extra die jullie aan het kantoor zouden toevoegen"
+      },
+      "placeholders": {
+        "q1": "even terugkoppelen",
+        "q2": "havermelk-latte",
+        "q3": "de maandag-sync",
+        "q4": "het beest (ons CRM)",
+        "q5": "het reply-all-incident",
+        "q6": "een dutjeskamer met portier"
+      },
+      "optional": "(optioneel)",
+      "required": "Beantwoord deze vraag.",
+      "safetyNote": "Geen echte namen, geen klachten over echte mensen. Alleen algemeen kantoorleven.",
+      "submitting": "Versturen…",
+      "submit": "Mijn antwoorden versturen",
+      "tip": "Kort en concreet werkt het best: twee tot zes woorden per antwoord. Typfouten zijn welkom."
+    },
+    "briefing": {
+      "stepLabel": "Briefing",
+      "title": "Welkom op kantoor",
+      "rulesTitle": "Drie regels",
+      "rule1": "Elke ronde is één van jullie de oplosser. Alle anderen hebben een stukje dat alleen zij kunnen zien.",
+      "rule2": "Praat. Niets kan alleen worden opgelost, en niemand kan over je schouder meekijken.",
+      "rule3": "Helpen loont net zo veel als oplossen. De pot wordt verdeeld op basis van wat ieder van jullie deed.",
+      "begin": "Start ronde 1",
+      "beginning": "Starten…",
+      "hostNote": "Jij bent de host. Start als iedereen zegt dat hij klaar is.",
+      "waitingHost": "Wachten tot {host} begint…"
+    },
+    "round": {
+      "progress": "Ronde {n} van {total}",
+      "youSolve": "Jij lost op",
+      "solverIs": "{name} lost op",
+      "promptLabel": "De opdracht",
+      "detailMeta": "Verdwijnt over {s} s. Onthoud het.",
+      "yourPieceSolver": "Jouw stukje",
+      "yourPiece": "Jouw stukje. Alleen jij kunt dit zien. Vertel het aan {name}.",
+      "callbackSource": "Geen stukje deze ronde. Het is een geheugentest voor de oplosser, en misschien weet jij nog wat nodig is.",
+      "revealedLabel": "Teamgenoot offline. Zijn of haar stukje wordt aan jou getoond.",
+      "revealedFrom": "Van {name}",
+      "answerLabel": "Jouw antwoord",
+      "checking": "Controleren…",
+      "submit": "Versturen",
+      "digitsHelp": "Alleen cijfers",
+      "textHelp": "Letters en cijfers, geen spaties",
+      "attemptsLeft": "{n} pogingen over",
+      "wrong": "Dat is het niet. Probeer opnieuw.",
+      "hintIn": "Hint over {s} s",
+      "hint": "Gebruik een hint",
+      "stuck": "Ik zit vast",
+      "stuckSent": "Je team is op de hoogte ({n} reageerden).",
+      "stuckBanner": "{name} zit vast. Lees je stukje nog eens langzaam voor.",
+      "acknowledged": "Bedankt, genoteerd.",
+      "acknowledge": "Ik heb mijn stukje opnieuw gedeeld",
+      "sourceWaiting": "{name} is ermee bezig. Blijf praten.",
+      "solved": "Opgelost",
+      "failed": "Tijd is om",
+      "answerWas": "Het antwoord was {answer}.",
+      "nextIn": "Volgende ronde over {s} s",
+      "finaleIn": "Eindopdracht over {s} s",
+      "pieces": {
+        "busy": "Bezet",
+        "free": "Vrij",
+        "expired": "Over datum",
+        "yourMessages": "Jouw berichten ({n})",
+        "rule": "Regel {n}",
+        "clue": "Jouw aanwijzingen ({n})"
+      },
+      "introLevel": "Ronde {n}",
+      "introReady": "Maak je klaar",
+      "introGo": "Start!"
+    },
+    "challenge": {
+      "stepLabel": "Eindopdracht",
+      "title": "Jullie allemaal, samen",
+      "timeLeft": "{m}:{s} over",
+      "judging": "De spelleider leest jullie antwoord…",
+      "editorLabel": "Het antwoord van je team",
+      "hostHint": "Jij typt voor het team. Iedereen ziet het live.",
+      "submitting": "Versturen…",
+      "submit": "Teamantwoord versturen",
+      "liveLabel": "{host} typt voor het team",
+      "liveEmpty": "Nog niets. Zeg het hardop en laat je host typen.",
+      "guestHint": "Dit onderdeel wordt voor het hele team beoordeeld en verandert de verdeling niet."
+    },
+    "key": {
+      "stepLabel": "De sleutel",
+      "title": "Ontgrendel de beloning",
+      "entered": "{n} van {total} hebben de sleutel ingevoerd",
+      "yours": "Jouw sleutel klopt.",
+      "waiting": "Wachten op {names}…",
+      "help": "Drie feiten die jullie eerder vonden. Iedereen voert dezelfde drie in.",
+      "revealed": "Onthuld door de spelleider",
+      "wrong": "Dat is niet de sleutel. Overleg met je team.",
+      "checking": "Controleren…",
+      "submit": "Sleutel invoeren"
+    },
+    "scorecard": {
+      "stepLabel": "Scorebord",
+      "unlockedEyebrow": "Beloning ontgrendeld",
+      "unlockedTitle": "Gelukt",
+      "unlockedNote": "Verdeeld over jullie {n} op basis van wat ieder deed. Iedereen heeft een gegarandeerd minimum.",
+      "yourShareEyebrow": "Jouw deel",
+      "yourShareBody": "Je werd {rank} van {total}. Helpen telde voor 60%, oplossen voor 40%.",
+      "highlights": {
+        "helper": "Topheler",
+        "solver": "Topoplosser",
+        "rescuer": "Topredder",
+        "memory": "Topgeheugen",
+        "mvp": "MVP"
+      },
+      "boardTitle": "Zo is de pot verdeeld",
+      "boardNote": "Tik op een naam voor de details.",
+      "components": {
+        "dataTransfer": "Delen",
+        "teamwork": "Teamwerk",
+        "problemSolving": "Oplossen",
+        "focus": "Focus",
+        "memory": "Geheugen"
+      },
+      "verdictTitle": "De eindopdracht",
+      "verdictScore": "Teamscore {score} van 100. Dit was voor de lol en verandert de verdeling niet.",
+      "thanks": "Bedankt voor het spelen. Jullie host {host} kan het tabblad nu sluiten.",
+      "podiumTitle": "Podium",
+      "placeLabel": "Plaats {rank}"
+    },
+    "payout": {
+      "title": "Waar mogen we je {amount} naartoe sturen?",
+      "intro": "Bankoverschrijving binnen 5 werkdagen. Je gegevens worden versleuteld en na betaling verwijderd.",
+      "holderName": "Naam rekeninghouder",
+      "country": "Land van de bank",
+      "iban": "IBAN",
+      "ibanHint": "Spaties zijn prima. We controleren het nummer voordat we het opslaan.",
+      "taxNote": "De beloning kan waar je woont als belastbaar voordeel gelden. Je werkgever kan je dat vertellen.",
+      "saving": "Opslaan…",
+      "submit": "Bankgegevens opslaan",
+      "cancel": "Annuleren",
+      "laterNote": "Je kunt dit ook later doen: de link in je e-mail brengt je hier terug.",
+      "paid": "{amount} is overgemaakt naar je rekening eindigend op {last4}.",
+      "received": "Ontvangen. {amount} gaat naar je rekening eindigend op {last4}.",
+      "timing": "Overschrijvingen gaan binnen 5 werkdagen de deur uit.",
+      "change": "Bankgegevens wijzigen",
+      "errors": {
+        "iban": "Dat IBAN ziet er niet goed uit.",
+        "name": "Vul de naam van de rekeninghouder in.",
+        "generic": "Er ging iets mis. Probeer het opnieuw."
+      }
+    },
+    "finished": {
+      "title": "Dit spel is afgelopen",
+      "body": "Bedankt voor het spelen. Deze link heeft zijn werk gedaan en opent het spel niet meer. Vragen over je beloning? Beantwoord dan je resultaatmail."
+    },
+    "sound": {
+      "on": "Geluid aan",
+      "off": "Geluid uit"
+    }
+  },
+  "admin": {
+    "login": {
+      "metaTitle": "Admin sign-in | WelloWork",
+      "eyebrow": "WelloWork admin",
+      "title": "Payouts admin",
+      "label": "Admin secret",
+      "submit": "Sign in",
+      "signingIn": "Signing in…",
+      "invalid": "That secret isn't right.",
+      "tooMany": "Too many attempts. Try again in 15 minutes."
+    },
+    "payouts": {
+      "metaTitle": "Payouts | WelloWork admin",
+      "eyebrow": "Cognitive Rewards",
+      "title": "Player payouts",
+      "summary": "{count} ready to pay · {total}",
+      "logout": "Sign out",
+      "filterLabel": "Filter by status",
+      "filters": {
+        "ready": "Ready to pay",
+        "awaiting_details": "Awaiting details",
+        "paid": "Paid",
+        "all": "All"
+      },
+      "purged": "{n} bank details older than 30 days were wiped.",
+      "empty": "Nothing here.",
+      "cols": {
+        "player": "Player",
+        "company": "Company · game",
+        "amount": "Amount",
+        "account": "Bank account",
+        "status": "Status",
+        "action": "Action"
+      },
+      "noDetails": "No bank details yet",
+      "reveal": "Show IBAN",
+      "status": {
+        "awaiting_details": "Awaiting details",
+        "ready": "Ready to pay",
+        "paid": "Paid"
+      },
+      "referencePlaceholder": "Bank reference (optional)",
+      "markPaid": "Mark as paid",
+      "confirmPaid": "Mark this payout as paid and email the player?",
+      "error": "Something went wrong. Reload and try again."
     }
   }
 }
