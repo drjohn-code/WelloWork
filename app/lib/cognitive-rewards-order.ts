@@ -15,12 +15,23 @@ export const GAME_FEE_EUR: Record<TeamSize, number> = {
   5: 40,
 };
 
+/**
+ * Guaranteed minimum share of the reward pool per player, by team size.
+ * Single source of truth for the order wizard's "how it splits" preview and
+ * the future scoring/payout engine — never duplicate these numbers elsewhere.
+ */
+export const MIN_SHARE_BY_TEAM_SIZE: Record<TeamSize, number> = {
+  3: 0.2,
+  4: 0.15,
+  5: 0.1,
+};
+
 export const MIN_REWARD_POOL_EUR = 100;
 /** Fat-finger guard, not a product limit — raise if buyers legitimately need more. */
 export const MAX_REWARD_POOL_EUR = 10_000;
 export const REWARD_POOL_QUICK_PICKS = [100, 250, 500, 1000, 2000] as const;
-/** Highlighted as "most popular" among the quick-pick presets — presentation only. */
-export const REWARD_POOL_MOST_POPULAR = 500;
+/** Marked "Suggested" among the quick-pick presets — presentation only, not a popularity claim. */
+export const REWARD_POOL_SUGGESTED = 500;
 
 /**
  * TODO: replace with Stripe Tax, which computes the correct per-country VAT
@@ -72,6 +83,19 @@ export function computeOrderPricing(teamSize: TeamSize, rewardPoolEur: number): 
   const vatAmount = round2(gameFee * vatRate);
   const total = round2(gameFee + vatAmount + rewardPoolEur);
   return { currency: CURRENCY, gameFee, vatRate, vatAmount, rewardPool: rewardPoolEur, total };
+}
+
+export type PoolSplit = {
+  /** Whole euros each player is guaranteed: floor(pool × minShare). */
+  minPerPlayer: number;
+  /** Remainder shared by performance: pool − players × minPerPlayer. */
+  performancePart: number;
+};
+
+export function computePoolSplit(teamSize: TeamSize, rewardPoolEur: number): PoolSplit {
+  // Round before flooring so float noise (e.g. 0.15 × 700 = 104.999…) can't cost a euro.
+  const minPerPlayer = Math.floor(Math.round(rewardPoolEur * MIN_SHARE_BY_TEAM_SIZE[teamSize] * 1e6) / 1e6);
+  return { minPerPlayer, performancePart: rewardPoolEur - teamSize * minPerPlayer };
 }
 
 export type PlayerInput = { name: string; email: string; role: string };

@@ -1094,7 +1094,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Order Cognitive Rewards | WelloWork",
-      "description": "Configure your team's Cognitive Rewards game — choose a team size, add players and fund the reward pool in a few guided steps."
+      "description": "Order a Cognitive Rewards team game: choose 3–5 players, fund the reward pool and pay securely with Stripe."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Order confirmed | Cognitive Rewards | WelloWork",
@@ -3178,12 +3178,14 @@
       "current": "Order",
       "success": "Confirmation"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Set up your team's ",
+    "titleLead": "Order your team's ",
     "titleAccent": "reward game",
-    "lede": "Choose your team size, add your players and fund the reward pool — four short steps to checkout.",
+    "titleTail": "",
+    "lede": "Four short steps. You'll see every price before you pay.",
     "wizard": {
       "stepLabel": "Step {current} of {total}",
+      "stepCompact": "Step {current} of {total} · {name}",
+      "goToStep": "Go to step {n}: {name}",
       "steps": {
         "teamSize": "Team size",
         "players": "Players",
@@ -3193,61 +3195,73 @@
       "nav": {
         "back": "Back",
         "next": "Continue",
-        "submit": "Continue to payment",
-        "submitting": "Processing…"
+        "submit": "Continue to secure payment",
+        "submitting": "Preparing secure payment…",
+        "submitNote": "You'll pay on Stripe's secure page and see the final total, including VAT, before you pay."
       },
+      "cancelled": "Payment cancelled. Your order details are saved.",
+      "cancelledNoDraft": "Payment cancelled. No charge was made.",
       "step1": {
         "heading": "Choose your team size",
-        "intro": "Cognitive Rewards is played in teams — there's no individual option.",
+        "intro": "Cognitive Rewards is played as one team of 3, 4 or 5 players.",
         "playersCount": "{n} players",
-        "vatSuffix": "+ VAT",
-        "helper": "Your team size sets the game fee and creates one player row in the next step."
+        "feePlusVat": "{price} + VAT",
+        "perPerson": "≈ {price} per person",
+        "helper": "One game for one team. Everyone plays together, each on their own device."
       },
       "step2": {
         "heading": "Add your players",
-        "intro": "One row per player. Each teammate gets their own invitation by email after checkout — including you, if you're playing.",
+        "intro": "Add everyone who'll play, including yourself if you're joining. We only use these details to invite your team to this game.",
         "playerLabel": "Player {n}",
         "fields": {
           "name": "Full name",
           "email": "Email",
           "role": "Role"
         },
-        "rolePlaceholder": "Select a role",
         "roles": {
           "staff": "Staff",
           "manager": "Manager",
           "clevel": "C-level"
         },
-        "roleHint": "Used only as a tone and safety signal for the game — never shown as a ranking."
+        "roleHint": "Helps the game keep the humor right for the group. Not used for scoring or ranking."
       },
       "step3": {
         "heading": "Fund the reward pool",
-        "intro": "This pool is the gift. Your team splits it based on how they play, with a guaranteed minimum share for everyone — the winner chooses how to receive it later.",
-        "quickPickLabel": "Popular amounts",
-        "mostPopular": "Most popular",
-        "customLabel": "Custom amount (€)",
-        "minHint": "Minimum €100, whole euros only.",
-        "noVat": "The reward pool carries no VAT — it's paid out directly to your team."
+        "intro": "This is the gift. The team splits it based on how they play, and everyone is guaranteed a minimum share. Each player chooses how to receive their own part.",
+        "presetsLabel": "Choose an amount",
+        "suggested": "Suggested",
+        "customLabel": "Or enter your own amount",
+        "customHint": "Whole euros, from {min} to {max}.",
+        "splitHeading": "How it splits",
+        "split": "With {pool} for {n} players, everyone gets at least {min}. The other {rest} is shared by performance.",
+        "splitEmpty": "Choose an amount to see how the pool splits.",
+        "noVat": "The reward pool has no VAT. It's paid out in full to your team."
       },
       "step4": {
         "heading": "Your details & review",
+        "buyerHeading": "Your details",
         "fields": {
           "buyerName": "Your name",
           "buyerEmail": "Work email",
           "buyerCompany": "Company name"
         },
-        "billingNote": "Billing address and VAT ID are collected securely at the payment step.",
-        "summary": {
-          "heading": "Order summary",
-          "gameFee": "Game fee ({size} players)",
-          "vatEstimate": "VAT (estimated — final tax calculated at checkout)",
-          "rewardPool": "Reward pool (paid out to your team, no VAT)",
-          "total": "Total",
-          "vatExplainer": "VAT applies to the game fee only — the reward pool is a gift to your team and carries no VAT."
-        },
+        "billingNote": "Billing address and VAT ID are collected on Stripe's secure payment page.",
+        "reviewHeading": "Review your order",
+        "reviewTeam": "Team",
+        "reviewTeamValue": "{names} ({n} players)",
+        "reviewPool": "Reward pool",
+        "edit": "Edit",
+        "editLabel": "Edit {section}",
+        "errorSummary": "Please check the following before you continue:",
         "consent": {
           "terms": "I accept the <termsLink>Terms</termsLink> and <privacyLink>Privacy Policy</privacyLink>.",
-          "gdpr": "I confirm I have a basis to share my colleagues' names and email addresses with WelloWork for this activity. (GDPR)"
+          "gdpr": "I confirm I'm allowed to share my colleagues' names and email addresses with WelloWork so they can be invited to this game."
+        },
+        "next": {
+          "heading": "What happens next",
+          "pay": "Pay securely on Stripe.",
+          "invoice": "Receive your receipt and VAT invoice by email.",
+          "email": "We'll email you the next steps."
         }
       },
       "errors": {
@@ -3255,30 +3269,43 @@
         "PLAYER_COUNT_MISMATCH": "The number of players doesn't match your team size.",
         "REQUIRED_PLAYER_NAME": "Enter this player's full name.",
         "INVALID_PLAYER_EMAIL": "Enter a valid email address.",
-        "DUPLICATE_PLAYER_EMAIL": "Each player needs a unique email address.",
+        "DUPLICATE_PLAYER_EMAIL": "This email is already used by another player.",
         "REQUIRED_PLAYER_ROLE": "Select a role.",
-        "INVALID_REWARD_POOL": "Enter a whole euro amount between €100 and €10,000.",
+        "INVALID_REWARD_POOL": "Enter a whole euro amount between {min} and {max}.",
         "REQUIRED_BUYER_NAME": "Enter your full name.",
         "INVALID_BUYER_EMAIL": "Enter a valid work email address.",
         "REQUIRED_BUYER_COMPANY": "Enter your company name.",
         "REQUIRED_CONSENT_TERMS": "Please accept the Terms and Privacy Policy.",
-        "REQUIRED_CONSENT_GDPR": "Please confirm you have a basis to share this information.",
-        "RATE_LIMITED": "Too many attempts — please wait a moment and try again.",
+        "REQUIRED_CONSENT_GDPR": "Please confirm you're allowed to share these details.",
+        "RATE_LIMITED": "Too many attempts. Please wait a moment and try again.",
         "SUBMIT_FAILED": "We couldn't submit your order. Please try again.",
         "REQUEST_FAILED": "Something went wrong on our end. Please try again.",
-        "NETWORK": "Connection problem — please check you're online and try again.",
-        "GENERIC": "Something went wrong. Please try again."
+        "NETWORK": "Connection problem. Please check you're online and try again.",
+        "GENERIC": "Something went wrong. Please try again.",
+        "supportHint": "Your details are saved. If this keeps happening, email us at {email}."
       }
+    },
+    "summary": {
+      "heading": "Your order",
+      "teamGame": "Team game · {n} players",
+      "chooseTeam": "Choose team size",
+      "rewardPool": "Reward pool",
+      "notSet": "Not set yet",
+      "vat": "VAT",
+      "vatAtPayment": "Calculated at payment",
+      "vatHelper": "VAT applies to the game fee only, based on your country and VAT ID.",
+      "total": "Total before VAT",
+      "toggle": "Show order details",
+      "secure": "Secure payment by Stripe. We never see or store your card details.",
+      "invoice": "VAT invoice by email after payment.",
+      "questions": "Questions? <link>{email}</link>",
+      "terms": "Terms",
+      "privacy": "Privacy",
+      "soldBy": "Sold by {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Running this for a large team or multiple groups?",
-      "body": "For bulk orders, large-scale competitions across many teams, or custom volume pricing, WelloWork will set it up directly — no need to place multiple individual orders.",
+      "body": "Ordering for a large team or several groups? We'll set it up with you directly.",
       "cta": "Book a consultation"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Payment was cancelled — no charge was made. Review your order below and try again when you're ready."
-      }
     },
     "success": {
       "eyebrow": "Cognitive Rewards",

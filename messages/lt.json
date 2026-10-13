@@ -1101,7 +1101,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Užsisakyti Cognitive Rewards | WelloWork",
-      "description": "Sukonfigūruokite savo komandos Cognitive Rewards žaidimą — pasirinkite komandos dydį, pridėkite žaidėjus ir finansuokite atlygio fondą per kelis paprastus žingsnius."
+      "description": "Užsisakykite Cognitive Rewards komandinį žaidimą: pasirinkite 3–5 žaidėjus, finansuokite atlygio fondą ir saugiai sumokėkite per Stripe."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Užsakymas patvirtintas | Cognitive Rewards | WelloWork",
@@ -3185,12 +3185,14 @@
       "current": "Užsakymas",
       "success": "Patvirtinimas"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Sukurkite savo komandos ",
+    "titleLead": "Užsisakykite savo komandos ",
     "titleAccent": "atlygio žaidimą",
-    "lede": "Pasirinkite komandos dydį, pridėkite žaidėjus ir finansuokite atlygio fondą — keturi trumpi žingsniai iki apmokėjimo.",
+    "titleTail": "",
+    "lede": "Keturi trumpi žingsniai. Visas kainas matysite prieš mokėdami.",
     "wizard": {
       "stepLabel": "{current} žingsnis iš {total}",
+      "stepCompact": "{current} žingsnis iš {total} · {name}",
+      "goToStep": "Eiti į {n} žingsnį: {name}",
       "steps": {
         "teamSize": "Komandos dydis",
         "players": "Žaidėjai",
@@ -3199,62 +3201,74 @@
       },
       "nav": {
         "back": "Atgal",
-        "next": "Toliau",
-        "submit": "Tęsti prie apmokėjimo",
-        "submitting": "Apdorojama…"
+        "next": "Tęsti",
+        "submit": "Tęsti į saugų apmokėjimą",
+        "submitting": "Ruošiamas saugus apmokėjimas…",
+        "submitNote": "Mokėsite saugiame Stripe puslapyje ir prieš mokėdami matysite galutinę sumą su PVM."
       },
+      "cancelled": "Mokėjimas atšauktas. Jūsų užsakymo duomenys išsaugoti.",
+      "cancelledNoDraft": "Mokėjimas atšauktas. Pinigai nenuskaičiuoti.",
       "step1": {
-        "heading": "Pasirinkite savo komandos dydį",
-        "intro": "Cognitive Rewards žaidžiamas komandomis — individualaus varianto nėra.",
+        "heading": "Pasirinkite komandos dydį",
+        "intro": "Cognitive Rewards žaidžiama viena 3, 4 arba 5 žaidėjų komanda.",
         "playersCount": "{n} žaidėjai",
-        "vatSuffix": "+ PVM",
-        "helper": "Jūsų komandos dydis nustato žaidimo mokestį ir kitame žingsnyje sukuria po vieną eilutę kiekvienam žaidėjui."
+        "feePlusVat": "{price} + PVM",
+        "perPerson": "≈ {price} vienam asmeniui",
+        "helper": "Vienas žaidimas vienai komandai. Visi žaidžia kartu, kiekvienas savo įrenginyje."
       },
       "step2": {
-        "heading": "Pridėkite savo žaidėjus",
-        "intro": "Po vieną eilutę kiekvienam žaidėjui. Kiekvienas komandos narys po apmokėjimo el. paštu gauna savo asmeninį kvietimą — įskaitant jus, jei žaisite ir jūs.",
+        "heading": "Pridėkite žaidėjus",
+        "intro": "Pridėkite visus, kurie žais, taip pat ir save, jei dalyvaujate. Šiuos duomenis naudojame tik tam, kad pakviestume jūsų komandą į šį žaidimą.",
         "playerLabel": "Žaidėjas {n}",
         "fields": {
           "name": "Vardas ir pavardė",
           "email": "El. paštas",
           "role": "Pareigos"
         },
-        "rolePlaceholder": "Pasirinkite pareigas",
         "roles": {
           "staff": "Darbuotojas",
           "manager": "Vadovas",
           "clevel": "Aukščiausioji vadovybė"
         },
-        "roleHint": "Naudojama tik kaip žaidimo tono ir saugumo signalas — niekada nerodoma kaip reitingas."
+        "roleHint": "Padeda žaidimui išlaikyti grupei tinkamą humoro toną. Nenaudojama taškams ar reitingams."
       },
       "step3": {
         "heading": "Finansuokite atlygio fondą",
-        "intro": "Šis fondas yra dovana. Jūsų komanda jį pasidalija pagal tai, kaip žaidžia, kiekvienam garantuojant minimalią dalį — laimėtojas vėliau pasirenka, kaip ją gauti.",
-        "quickPickLabel": "Populiarios sumos",
-        "mostPopular": "Populiariausia",
-        "customLabel": "Kita suma (€)",
-        "minHint": "Minimali suma — 100 €, tik sveikais eurais.",
-        "noVat": "Atlygio fondui PVM netaikomas — jis išmokamas tiesiogiai jūsų komandai."
+        "intro": "Tai dovana. Komanda pasidalija ją pagal tai, kaip žaidžia, o kiekvienam garantuojama minimali dalis. Kiekvienas žaidėjas pats pasirenka, kaip gauti savo dalį.",
+        "presetsLabel": "Pasirinkite sumą",
+        "suggested": "Siūloma",
+        "customLabel": "Arba įveskite savo sumą",
+        "customHint": "Sveikais eurais, nuo {min} iki {max}.",
+        "splitHeading": "Kaip padalijama",
+        "split": "Su {pool} {n} žaidėjams kiekvienas gauna bent {min}. Likę {rest} padalijami pagal rezultatus.",
+        "splitEmpty": "Pasirinkite sumą ir pamatysite, kaip fondas padalijamas.",
+        "noVat": "Atlygio fondui PVM netaikomas. Jis visas išmokamas jūsų komandai."
       },
       "step4": {
         "heading": "Jūsų duomenys ir peržiūra",
+        "buyerHeading": "Jūsų duomenys",
         "fields": {
           "buyerName": "Jūsų vardas ir pavardė",
           "buyerEmail": "Darbo el. paštas",
           "buyerCompany": "Įmonės pavadinimas"
         },
-        "billingNote": "Atsiskaitymo adresas ir PVM mokėtojo kodas saugiai surenkami apmokėjimo žingsnyje.",
-        "summary": {
-          "heading": "Užsakymo santrauka",
-          "gameFee": "Žaidimo mokestis ({size} žaidėjų)",
-          "vatEstimate": "PVM (numatomas — galutinis mokestis apskaičiuojamas apmokėjimo metu)",
-          "rewardPool": "Atlygio fondas (išmokamas jūsų komandai, be PVM)",
-          "total": "Iš viso",
-          "vatExplainer": "PVM taikomas tik žaidimo mokesčiui — atlygio fondas yra dovana jūsų komandai ir jam PVM netaikomas."
-        },
+        "billingNote": "Atsiskaitymo adresas ir PVM mokėtojo kodas nurodomi saugiame Stripe mokėjimo puslapyje.",
+        "reviewHeading": "Peržiūrėkite užsakymą",
+        "reviewTeam": "Komanda",
+        "reviewTeamValue": "{names} ({n} žaidėjai)",
+        "reviewPool": "Atlygio fondas",
+        "edit": "Keisti",
+        "editLabel": "Keisti: {section}",
+        "errorSummary": "Prieš tęsdami patikrinkite:",
         "consent": {
           "terms": "Sutinku su <termsLink>Paslaugų teikimo sąlygomis</termsLink> ir <privacyLink>Privatumo politika</privacyLink>.",
-          "gdpr": "Patvirtinu, kad turiu teisinį pagrindą dalytis savo kolegų vardais, pavardėmis ir el. pašto adresais su „WelloWork“ šiai veiklai. (BDAR)"
+          "gdpr": "Patvirtinu, kad galiu pateikti WelloWork savo kolegų vardus ir el. pašto adresus, kad jie būtų pakviesti į šį žaidimą."
+        },
+        "next": {
+          "heading": "Kas bus toliau",
+          "pay": "Saugiai sumokėkite per Stripe.",
+          "invoice": "Gaukite kvitą ir PVM sąskaitą faktūrą el. paštu.",
+          "email": "Tolesnius žingsnius atsiųsime el. paštu."
         }
       },
       "errors": {
@@ -3262,30 +3276,43 @@
         "PLAYER_COUNT_MISMATCH": "Žaidėjų skaičius neatitinka jūsų komandos dydžio.",
         "REQUIRED_PLAYER_NAME": "Įveskite šio žaidėjo vardą ir pavardę.",
         "INVALID_PLAYER_EMAIL": "Įveskite galiojantį el. pašto adresą.",
-        "DUPLICATE_PLAYER_EMAIL": "Kiekvienam žaidėjui reikalingas unikalus el. pašto adresas.",
+        "DUPLICATE_PLAYER_EMAIL": "Šį el. pašto adresą jau naudoja kitas žaidėjas.",
         "REQUIRED_PLAYER_ROLE": "Pasirinkite pareigas.",
-        "INVALID_REWARD_POOL": "Įveskite sveiką sumą eurais nuo 100 € iki 10 000 €.",
+        "INVALID_REWARD_POOL": "Įveskite sveiką sumą eurais nuo {min} iki {max}.",
         "REQUIRED_BUYER_NAME": "Įveskite savo vardą ir pavardę.",
         "INVALID_BUYER_EMAIL": "Įveskite galiojantį darbo el. pašto adresą.",
         "REQUIRED_BUYER_COMPANY": "Įveskite savo įmonės pavadinimą.",
         "REQUIRED_CONSENT_TERMS": "Sutikite su Paslaugų teikimo sąlygomis ir Privatumo politika.",
-        "REQUIRED_CONSENT_GDPR": "Patvirtinkite, kad turite pagrindą dalytis šia informacija.",
-        "RATE_LIMITED": "Per daug bandymų — palaukite akimirką ir bandykite dar kartą.",
+        "REQUIRED_CONSENT_GDPR": "Patvirtinkite, kad galite pateikti šiuos duomenis.",
+        "RATE_LIMITED": "Per daug bandymų. Palaukite akimirką ir bandykite dar kartą.",
         "SUBMIT_FAILED": "Nepavyko pateikti jūsų užsakymo. Bandykite dar kartą.",
         "REQUEST_FAILED": "Įvyko klaida mūsų pusėje. Bandykite dar kartą.",
-        "NETWORK": "Ryšio problema — patikrinkite, ar esate prisijungę prie interneto, ir bandykite dar kartą.",
-        "GENERIC": "Kažkas nepavyko. Bandykite dar kartą."
+        "NETWORK": "Ryšio problema. Patikrinkite interneto ryšį ir bandykite dar kartą.",
+        "GENERIC": "Kažkas nepavyko. Bandykite dar kartą.",
+        "supportHint": "Jūsų duomenys išsaugoti. Jei klaida kartojasi, rašykite mums {email}."
       }
+    },
+    "summary": {
+      "heading": "Jūsų užsakymas",
+      "teamGame": "Komandinis žaidimas · {n} žaidėjai",
+      "chooseTeam": "Pasirinkite komandos dydį",
+      "rewardPool": "Atlygio fondas",
+      "notSet": "Dar nepasirinkta",
+      "vat": "PVM",
+      "vatAtPayment": "Apskaičiuojamas mokant",
+      "vatHelper": "PVM taikomas tik žaidimo mokesčiui, pagal jūsų šalį ir PVM mokėtojo kodą.",
+      "total": "Iš viso be PVM",
+      "toggle": "Rodyti užsakymo informaciją",
+      "secure": "Saugus mokėjimas per Stripe. Mes niekada nematome ir nesaugome jūsų kortelės duomenų.",
+      "invoice": "PVM sąskaita faktūra el. paštu po apmokėjimo.",
+      "questions": "Klausimų? <link>{email}</link>",
+      "terms": "Sąlygos",
+      "privacy": "Privatumas",
+      "soldBy": "Pardavėjas: {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Organizuojate tai didelei komandai ar kelioms grupėms?",
-      "body": "Dideliems užsakymams, plataus masto varžyboms tarp daugelio komandų arba individualiai apskaičiuotoms kainoms „WelloWork“ viską sutvarko tiesiogiai — nereikia pateikti kelių atskirų užsakymų.",
+      "body": "Užsakote didelei komandai ar kelioms grupėms? Viską suderinsime tiesiogiai su jumis.",
       "cta": "Užsisakyti konsultaciją"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Mokėjimas atšauktas — lėšos nenuskaičiuotos. Peržiūrėkite savo užsakymą žemiau ir bandykite dar kartą, kai būsite pasiruošę."
-      }
     },
     "success": {
       "eyebrow": "Cognitive Rewards",

@@ -1101,7 +1101,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Cognitive Rewards bestellen | WelloWork",
-      "description": "Konfigurieren Sie das Cognitive-Rewards-Spiel Ihres Teams — wählen Sie eine Teamgröße, fügen Sie Spieler hinzu und finanzieren Sie den Belohnungstopf in wenigen geführten Schritten."
+      "description": "Bestellen Sie ein Cognitive-Rewards-Teamspiel: 3–5 Spieler wählen, Belohnungstopf festlegen und sicher mit Stripe bezahlen."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Bestellung bestätigt | Cognitive Rewards | WelloWork",
@@ -3185,12 +3185,14 @@
       "current": "Bestellung",
       "success": "Bestätigung"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Richten Sie das ",
-    "titleAccent": "Belohnungsspiel Ihres Teams ein",
-    "lede": "Wählen Sie Ihre Teamgröße, fügen Sie Ihre Spieler hinzu und finanzieren Sie den Belohnungstopf — vier kurze Schritte bis zur Kasse.",
+    "titleLead": "Bestellen Sie das ",
+    "titleAccent": "Belohnungsspiel",
+    "titleTail": " Ihres Teams",
+    "lede": "Vier kurze Schritte. Sie sehen jeden Preis, bevor Sie bezahlen.",
     "wizard": {
       "stepLabel": "Schritt {current} von {total}",
+      "stepCompact": "Schritt {current} von {total} · {name}",
+      "goToStep": "Zu Schritt {n}: {name}",
       "steps": {
         "teamSize": "Teamgröße",
         "players": "Spieler",
@@ -3200,92 +3202,117 @@
       "nav": {
         "back": "Zurück",
         "next": "Weiter",
-        "submit": "Weiter zur Zahlung",
-        "submitting": "Wird verarbeitet…"
+        "submit": "Weiter zur sicheren Zahlung",
+        "submitting": "Sichere Zahlung wird vorbereitet…",
+        "submitNote": "Sie bezahlen auf der sicheren Seite von Stripe und sehen den Endbetrag inklusive MwSt., bevor Sie zahlen."
       },
+      "cancelled": "Zahlung abgebrochen. Ihre Bestelldaten sind gespeichert.",
+      "cancelledNoDraft": "Zahlung abgebrochen. Es wurde nichts abgebucht.",
       "step1": {
         "heading": "Wählen Sie Ihre Teamgröße",
-        "intro": "Cognitive Rewards wird im Team gespielt — eine Einzeloption gibt es nicht.",
+        "intro": "Cognitive Rewards wird als ein Team mit 3, 4 oder 5 Spielern gespielt.",
         "playersCount": "{n} Spieler",
-        "vatSuffix": "zzgl. MwSt.",
-        "helper": "Ihre Teamgröße bestimmt die Spielgebühr und erzeugt im nächsten Schritt eine Zeile pro Spieler."
+        "feePlusVat": "{price} + MwSt.",
+        "perPerson": "≈ {price} pro Person",
+        "helper": "Ein Spiel für ein Team. Alle spielen gemeinsam, jede Person auf ihrem eigenen Gerät."
       },
       "step2": {
-        "heading": "Fügen Sie Ihre Spieler hinzu",
-        "intro": "Eine Zeile pro Spieler. Jedes Teammitglied erhält nach der Kasse eine eigene Einladung per E-Mail — auch Sie, falls Sie mitspielen.",
+        "heading": "Spieler hinzufügen",
+        "intro": "Fügen Sie alle hinzu, die mitspielen, auch sich selbst, wenn Sie dabei sind. Wir verwenden diese Angaben nur, um Ihr Team zu diesem Spiel einzuladen.",
         "playerLabel": "Spieler {n}",
         "fields": {
           "name": "Vollständiger Name",
           "email": "E-Mail",
           "role": "Rolle"
         },
-        "rolePlaceholder": "Rolle auswählen",
         "roles": {
           "staff": "Mitarbeitende",
           "manager": "Führungskraft",
           "clevel": "Geschäftsführung"
         },
-        "roleHint": "Dient nur als Ton- und Sicherheitssignal für das Spiel — wird niemals als Rangliste angezeigt."
+        "roleHint": "Hilft dem Spiel, den passenden Ton für die Gruppe zu treffen. Wird nicht für Punkte oder Rankings verwendet."
       },
       "step3": {
-        "heading": "Belohnungstopf finanzieren",
-        "intro": "Dieser Topf ist das Geschenk. Ihr Team teilt ihn danach auf, wie es spielt, mit einem garantierten Mindestanteil für alle — der Gewinner entscheidet später, wie er ausgezahlt wird.",
-        "quickPickLabel": "Beliebte Beträge",
-        "mostPopular": "Am beliebtesten",
-        "customLabel": "Eigener Betrag (€)",
-        "minHint": "Mindestens 100 €, nur ganze Euro.",
-        "noVat": "Auf den Belohnungstopf fällt keine Mehrwertsteuer an — er wird direkt an Ihr Team ausgezahlt."
+        "heading": "Belohnungstopf festlegen",
+        "intro": "Das ist das Geschenk. Das Team teilt es danach auf, wie gespielt wird, und alle erhalten garantiert einen Mindestanteil. Jede Person wählt selbst, wie sie ihren Anteil erhält.",
+        "presetsLabel": "Betrag wählen",
+        "suggested": "Vorschlag",
+        "customLabel": "Oder eigenen Betrag eingeben",
+        "customHint": "Ganze Euro, von {min} bis {max}.",
+        "splitHeading": "So wird aufgeteilt",
+        "split": "Bei {pool} für {n} Spieler erhält jede Person mindestens {min}. Die übrigen {rest} werden nach Leistung verteilt.",
+        "splitEmpty": "Wählen Sie einen Betrag, um die Aufteilung zu sehen.",
+        "noVat": "Auf den Belohnungstopf fällt keine MwSt. an. Er wird vollständig an Ihr Team ausgezahlt."
       },
       "step4": {
-        "heading": "Ihre Angaben & Überprüfung",
+        "heading": "Ihre Angaben & Übersicht",
+        "buyerHeading": "Ihre Angaben",
         "fields": {
           "buyerName": "Ihr Name",
           "buyerEmail": "Geschäftliche E-Mail",
           "buyerCompany": "Firmenname"
         },
-        "billingNote": "Rechnungsadresse und USt-IdNr. werden sicher im Zahlungsschritt erfasst.",
-        "summary": {
-          "heading": "Bestellübersicht",
-          "gameFee": "Spielgebühr ({size} Spieler)",
-          "vatEstimate": "MwSt. (geschätzt — die endgültige Steuer wird an der Kasse berechnet)",
-          "rewardPool": "Belohnungstopf (wird an Ihr Team ausgezahlt, keine MwSt.)",
-          "total": "Gesamt",
-          "vatExplainer": "Die MwSt. gilt nur für die Spielgebühr — der Belohnungstopf ist ein Geschenk an Ihr Team und unterliegt keiner MwSt."
-        },
+        "billingNote": "Rechnungsadresse und USt-IdNr. werden auf der sicheren Zahlungsseite von Stripe abgefragt.",
+        "reviewHeading": "Bestellung prüfen",
+        "reviewTeam": "Team",
+        "reviewTeamValue": "{names} ({n} Spieler)",
+        "reviewPool": "Belohnungstopf",
+        "edit": "Ändern",
+        "editLabel": "{section} ändern",
+        "errorSummary": "Bitte prüfen Sie Folgendes, bevor Sie fortfahren:",
         "consent": {
           "terms": "Ich akzeptiere die <termsLink>Nutzungsbedingungen</termsLink> und die <privacyLink>Datenschutzerklärung</privacyLink>.",
-          "gdpr": "Ich bestätige, dass ich eine Rechtsgrundlage habe, die Namen und E-Mail-Adressen meiner Kolleginnen und Kollegen für diese Aktivität an WelloWork weiterzugeben. (DSGVO)"
+          "gdpr": "Ich bestätige, dass ich die Namen und E-Mail-Adressen meiner Kolleginnen und Kollegen an WelloWork weitergeben darf, damit sie zu diesem Spiel eingeladen werden können."
+        },
+        "next": {
+          "heading": "So geht es weiter",
+          "pay": "Sicher über Stripe bezahlen.",
+          "invoice": "Beleg und MwSt.-Rechnung per E-Mail erhalten.",
+          "email": "Wir senden Ihnen die nächsten Schritte per E-Mail."
         }
       },
       "errors": {
         "INVALID_TEAM_SIZE": "Wählen Sie eine Teamgröße, um fortzufahren.",
         "PLAYER_COUNT_MISMATCH": "Die Anzahl der Spieler stimmt nicht mit Ihrer Teamgröße überein.",
-        "REQUIRED_PLAYER_NAME": "Geben Sie den vollständigen Namen dieses Spielers ein.",
+        "REQUIRED_PLAYER_NAME": "Geben Sie den vollständigen Namen dieser Person ein.",
         "INVALID_PLAYER_EMAIL": "Geben Sie eine gültige E-Mail-Adresse ein.",
-        "DUPLICATE_PLAYER_EMAIL": "Jeder Spieler benötigt eine eindeutige E-Mail-Adresse.",
+        "DUPLICATE_PLAYER_EMAIL": "Diese E-Mail-Adresse wird bereits für eine andere Person verwendet.",
         "REQUIRED_PLAYER_ROLE": "Wählen Sie eine Rolle aus.",
-        "INVALID_REWARD_POOL": "Geben Sie einen ganzzahligen Eurobetrag zwischen 100 € und 10.000 € ein.",
+        "INVALID_REWARD_POOL": "Geben Sie einen ganzen Eurobetrag zwischen {min} und {max} ein.",
         "REQUIRED_BUYER_NAME": "Geben Sie Ihren vollständigen Namen ein.",
         "INVALID_BUYER_EMAIL": "Geben Sie eine gültige geschäftliche E-Mail-Adresse ein.",
         "REQUIRED_BUYER_COMPANY": "Geben Sie Ihren Firmennamen ein.",
         "REQUIRED_CONSENT_TERMS": "Bitte akzeptieren Sie die Nutzungsbedingungen und die Datenschutzerklärung.",
-        "REQUIRED_CONSENT_GDPR": "Bitte bestätigen Sie, dass Sie eine Grundlage haben, diese Informationen weiterzugeben.",
-        "RATE_LIMITED": "Zu viele Versuche — bitte warten Sie einen Moment und versuchen Sie es erneut.",
+        "REQUIRED_CONSENT_GDPR": "Bitte bestätigen Sie, dass Sie diese Angaben weitergeben dürfen.",
+        "RATE_LIMITED": "Zu viele Versuche. Bitte warten Sie einen Moment und versuchen Sie es erneut.",
         "SUBMIT_FAILED": "Ihre Bestellung konnte nicht übermittelt werden. Bitte versuchen Sie es erneut.",
         "REQUEST_FAILED": "Bei uns ist etwas schiefgelaufen. Bitte versuchen Sie es erneut.",
-        "NETWORK": "Verbindungsproblem — bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
-        "GENERIC": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut."
+        "NETWORK": "Verbindungsproblem. Bitte prüfen Sie Ihre Internetverbindung und versuchen Sie es erneut.",
+        "GENERIC": "Etwas ist schiefgelaufen. Bitte versuchen Sie es erneut.",
+        "supportHint": "Ihre Angaben sind gespeichert. Wenn das Problem bleibt, schreiben Sie uns an {email}."
       }
+    },
+    "summary": {
+      "heading": "Ihre Bestellung",
+      "teamGame": "Teamspiel · {n} Spieler",
+      "chooseTeam": "Teamgröße wählen",
+      "rewardPool": "Belohnungstopf",
+      "notSet": "Noch nicht gewählt",
+      "vat": "MwSt.",
+      "vatAtPayment": "Wird bei der Zahlung berechnet",
+      "vatHelper": "MwSt. fällt nur auf die Spielgebühr an, abhängig von Ihrem Land und Ihrer USt-IdNr.",
+      "total": "Gesamt zzgl. MwSt.",
+      "toggle": "Bestelldetails anzeigen",
+      "secure": "Sichere Zahlung über Stripe. Wir sehen oder speichern Ihre Kartendaten nie.",
+      "invoice": "MwSt.-Rechnung per E-Mail nach der Zahlung.",
+      "questions": "Fragen? <link>{email}</link>",
+      "terms": "Bedingungen",
+      "privacy": "Datenschutz",
+      "soldBy": "Verkauf durch {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Planen Sie dies für ein großes Team oder mehrere Gruppen?",
-      "body": "Für Sammelbestellungen, groß angelegte Wettbewerbe über viele Teams hinweg oder individuelle Mengenpreise richtet WelloWork dies direkt für Sie ein — ohne mehrere Einzelbestellungen aufgeben zu müssen.",
+      "body": "Sie bestellen für ein großes Team oder mehrere Gruppen? Wir richten es direkt mit Ihnen ein.",
       "cta": "Beratungstermin buchen"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Die Zahlung wurde abgebrochen — es wurde nichts berechnet. Überprüfen Sie unten Ihre Bestellung und versuchen Sie es erneut, wenn Sie bereit sind."
-      }
     },
     "success": {
       "eyebrow": "Cognitive Rewards",

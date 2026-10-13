@@ -2,7 +2,7 @@ import { useTranslations } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import type { Crumb } from "../lib/site";
 
-export function Breadcrumbs({ items }: { items: Crumb[] }) {
+export function Breadcrumbs({ items, separator = "/" }: { items: Crumb[]; separator?: string }) {
   const t = useTranslations("common");
   return (
     <nav aria-label={t("breadcrumb.aria")} className="crumbs">
@@ -15,7 +15,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
             ) : (
               <Link href={c.href}>{c.name}</Link>
             )}
-            {!last && <span className="crumb-sep" aria-hidden="true">/</span>}
+            {!last && <span className="crumb-sep" aria-hidden="true">{separator}</span>}
           </span>
         );
       })}

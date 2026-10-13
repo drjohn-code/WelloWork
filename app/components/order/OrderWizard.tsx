@@ -1,58 +1,38 @@
 "use client";
 
-import { useEffect, useMemo, useState, type FormEvent } from "react";
-import { useSearchParams } from "next/navigation";
+import { useEffect, useMemo, useRef, useState, type FormEvent } from "react";
 import { useLocale, useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
 import { ArrowRight } from "../Icons";
 import { orderErrorKey } from "./orderErrors";
 import { initiateCheckout } from "@/app/lib/checkout";
-import { formatEur } from "@/app/lib/format";
+import { formatEurShort } from "@/app/lib/format";
+import { ORG_EMAIL } from "@/app/lib/site";
 import {
-  computeOrderPricing,
-  GAME_FEE_EUR,
   MAX_REWARD_POOL_EUR,
   MIN_REWARD_POOL_EUR,
-  PLAYER_ROLES,
-  REWARD_POOL_MOST_POPULAR,
-  REWARD_POOL_QUICK_PICKS,
-  TEAM_SIZES,
   validateOrderInput,
+  type OrderErrorCode,
   type OrderErrors,
   type OrderInput,
   type PlayerInput,
-  type TeamSize,
 } from "@/app/lib/cognitive-rewards-order";
+import { ORDER_DRAFT_STORAGE_KEY, initialDraft, type DraftState, type OrderStep } from "./orderDraft";
+import { OrderStepper } from "./OrderStepper";
+import { OrderSummaryBar, OrderSummaryCard } from "./OrderSummary";
+import {
+  StepPlayers,
+  StepReview,
+  StepRewardPool,
+  StepTeamSize,
+  WhatHappensNext,
+  type ErrorSummaryItem,
+} from "./OrderSteps";
+import { AlertIcon, LockIcon, Spinner } from "./OrderIcons";
 
-const STORAGE_KEY = "wellowork:cr-order-draft:v1";
 const TOTAL_STEPS = 4;
 const EMPTY_PLAYER: PlayerInput = { name: "", email: "", role: "" };
-
-type DraftState = {
-  step: 1 | 2 | 3 | 4;
-  teamSize: TeamSize | null;
-  players: PlayerInput[];
-  rewardPool: number | "";
-  buyerName: string;
-  buyerWorkEmail: string;
-  buyerCompany: string;
-  consentTerms: boolean;
-  consentGdpr: boolean;
-};
-
-function initialDraft(): DraftState {
-  return {
-    step: 1,
-    teamSize: null,
-    players: [],
-    rewardPool: "",
-    buyerName: "",
-    buyerWorkEmail: "",
-    buyerCompany: "",
-    consentTerms: false,
-    consentGdpr: false,
-  };
-}
+/** Gap kept between the sticky site header and the wizard top when scrolling to it. */
+const SCROLL_GAP = 24;
 
 function draftToOrderInput(draft: DraftState): OrderInput {
   return {
@@ -67,22 +47,33 @@ function draftToOrderInput(draft: DraftState): OrderInput {
   };
 }
 
-/** Runs full validation, but returns only the slice of errors relevant to `step` — so a mistake on a later step never blocks earlier navigation. */
-function validateStep(step: number, draft: DraftState): OrderErrors {
-  const all = validateOrderInput(draftToOrderInput(draft));
-  if (step === 1) return all.teamSize ? { teamSize: all.teamSize } : {};
-  if (step === 2) return all.players ? { players: all.players } : {};
-  if (step === 3) return all.rewardPool ? { rewardPool: all.rewardPool } : {};
-  const e: OrderErrors = {};
-  if (all.buyerName) e.buyerName = all.buyerName;
-  if (all.buyerEmail) e.buyerEmail = all.buyerEmail;
-  if (all.buyerCompany) e.buyerCompany = all.buyerCompany;
-  if (all.consentTerms) e.consentTerms = all.consentTerms;
-  if (all.consentGdpr) e.consentGdpr = all.consentGdpr;
-  return e;
+/** Field keys per step, in display order, with the DOM id that receives focus for each. */
+function stepFields(step: OrderStep, draft: DraftState): Array<{ key: string; targetId: string }> {
+  if (step === 1) return [{ key: "teamSize", targetId: "team-size-3" }];
+  if (step === 2) {
+    return draft.players.flatMap((_, i) => [
+      { key: `p${i}.name`, targetId: `player-${i}-name` },
+      { key: `p${i}.email`, targetId: `player-${i}-email` },
+      { key: `p${i}.role`, targetId: `player-${i}-role-staff` },
+    ]);
+  }
+  if (step === 3) return [{ key: "rewardPool", targetId: draft.customPool ? "pool-custom" : "pool-100" }];
+  return [
+    { key: "buyerName", targetId: "buyer-name" },
+    { key: "buyerEmail", targetId: "buyer-email" },
+    { key: "buyerCompany", targetId: "buyer-company" },
+    { key: "consentTerms", targetId: "consent-terms" },
+    { key: "consentGdpr", targetId: "consent-gdpr" },
+  ];
 }
 
-function earliestErrorStep(errors: OrderErrors): 1 | 2 | 3 | 4 | null {
+function errorCodeFor(errors: OrderErrors, key: string): OrderErrorCode | undefined {
+  const player = /^p(\d+)\.(name|email|role)$/.exec(key);
+  if (player) return errors.players?.[Number(player[1])]?.[player[2] as "name" | "email" | "role"];
+  return errors[key as Exclude<keyof OrderErrors, "players">];
+}
+
+function earliestErrorStep(errors: OrderErrors): OrderStep | null {
   if (errors.teamSize) return 1;
   if (errors.players?.some(Boolean)) return 2;
   if (errors.rewardPool) return 3;
@@ -92,94 +83,146 @@ function earliestErrorStep(errors: OrderErrors): 1 | 2 | 3 | 4 | null {
   return null;
 }
 
-export function OrderWizard() {
-  const t = useTranslations("cognitiveRewardsOrder");
+function prefersReducedMotion() {
+  return typeof window !== "undefined" && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+}
+
+export function OrderWizard({ checkoutCancelled }: { checkoutCancelled: boolean }) {
+  const t = useTranslations("cognitiveRewardsOrder.wizard");
   const locale = useLocale();
-  const searchParams = useSearchParams();
-  const checkoutCancelled = searchParams.get("checkout") === "cancelled";
 
   const [draft, setDraft] = useState<DraftState>(initialDraft);
   const [hydrated, setHydrated] = useState(false);
-  const [errors, setErrors] = useState<OrderErrors>({});
+  const [restored, setRestored] = useState(false);
+  /** Fields the user has left (blur) — their errors may show. */
+  const [touched, setTouched] = useState<Record<string, boolean>>({});
+  /** Steps where Continue / Pay was pressed — all their errors may show. */
+  const [attempted, setAttempted] = useState<Partial<Record<OrderStep, boolean>>>({});
   const [globalError, setGlobalError] = useState<string | null>(null);
   const [submitting, setSubmitting] = useState(false);
+  const wizardRef = useRef<HTMLDivElement>(null);
+  const stepChangedByUser = useRef(false);
 
   // Client-only restore of an in-progress draft (sessionStorage is unavailable
-  // during SSR), so setting state here is intentional and runs at most once on mount.
+  // during SSR), so setting state here is intentional and runs once on mount.
   useEffect(() => {
     try {
-      const raw = window.sessionStorage.getItem(STORAGE_KEY);
-      // eslint-disable-next-line react-hooks/set-state-in-effect
-      if (raw) setDraft((d) => ({ ...d, ...(JSON.parse(raw) as Partial<DraftState>) }));
+      const raw = window.sessionStorage.getItem(ORDER_DRAFT_STORAGE_KEY);
+      if (raw) {
+        const saved = { ...initialDraft(), ...(JSON.parse(raw) as Partial<DraftState>) };
+        // Back from a cancelled Stripe Checkout: land on the review step.
+        if (checkoutCancelled && saved.teamSize) saved.step = saved.maxStep = 4;
+        // eslint-disable-next-line react-hooks/set-state-in-effect
+        setDraft(saved);
+        setRestored(Boolean(saved.teamSize));
+      }
     } catch {
       // corrupt or unavailable storage — start fresh
     } finally {
       setHydrated(true);
     }
-  }, []);
+  }, [checkoutCancelled]);
 
   useEffect(() => {
     if (!hydrated) return;
     try {
-      window.sessionStorage.setItem(STORAGE_KEY, JSON.stringify(draft));
+      window.sessionStorage.setItem(ORDER_DRAFT_STORAGE_KEY, JSON.stringify(draft));
     } catch {
       // ignore
     }
   }, [draft, hydrated]);
 
-  const pricing = useMemo(
-    () => (draft.teamSize ? computeOrderPricing(draft.teamSize, Number(draft.rewardPool) || 0) : null),
-    [draft.teamSize, draft.rewardPool]
+  // On a user-driven step change: bring the wizard top into view below the
+  // sticky header, then move focus to the new step heading.
+  useEffect(() => {
+    if (!stepChangedByUser.current) return;
+    stepChangedByUser.current = false;
+    const el = wizardRef.current;
+    if (el) {
+      const header = document.querySelector("header");
+      const offset = (header?.getBoundingClientRect().bottom ?? 0) + SCROLL_GAP;
+      const top = el.getBoundingClientRect().top;
+      if (top < offset || top > window.innerHeight * 0.5) {
+        window.scrollTo({ top: window.scrollY + top - offset, behavior: prefersReducedMotion() ? "auto" : "smooth" });
+      }
+    }
+    document.getElementById("order-step-heading")?.focus({ preventScroll: true });
+  }, [draft.step]);
+
+  const allErrors = useMemo(() => validateOrderInput(draftToOrderInput(draft)), [draft]);
+
+  const errorParams = useMemo(
+    () => ({ min: formatEurShort(MIN_REWARD_POOL_EUR, locale), max: formatEurShort(MAX_REWARD_POOL_EUR, locale) }),
+    [locale]
   );
 
-  function goToStep(step: DraftState["step"]) {
-    setErrors({});
+  function messageFor(code: string) {
+    return t(`errors.${orderErrorKey(code)}`, errorParams);
+  }
+
+  function errorFor(key: string): string | undefined {
+    if (!touched[key] && !attempted[draft.step]) return undefined;
+    const code = errorCodeFor(allErrors, key);
+    return code ? messageFor(code) : undefined;
+  }
+
+  function touch(key: string) {
+    setTouched((s) => (s[key] ? s : { ...s, [key]: true }));
+  }
+
+  function invalidFields(step: OrderStep) {
+    return stepFields(step, draft).filter((f) => errorCodeFor(allErrors, f.key));
+  }
+
+  function focusFirstInvalid(step: OrderStep) {
+    const first = invalidFields(step)[0];
+    if (first) requestAnimationFrame(() => document.getElementById(first.targetId)?.focus());
+  }
+
+  function goToStep(target: OrderStep) {
+    // Moving forward via the stepper still has to pass every step in between.
+    for (let s = draft.step; s < target; s++) {
+      if (invalidFields(s as OrderStep).length > 0) {
+        target = s as OrderStep;
+        setAttempted((a) => ({ ...a, [s]: true }));
+        break;
+      }
+    }
+    if (target === draft.step) {
+      focusFirstInvalid(target);
+      return;
+    }
     setGlobalError(null);
-    setDraft((d) => ({ ...d, step }));
-    window.scrollTo({ top: 0, behavior: "smooth" });
+    stepChangedByUser.current = true;
+    setDraft((d) => ({ ...d, step: target, maxStep: Math.max(d.maxStep, target) as OrderStep }));
   }
 
   function handleNext() {
-    const stepErrors = validateStep(draft.step, draft);
-    if (Object.keys(stepErrors).length > 0) {
-      setErrors(stepErrors);
+    if (invalidFields(draft.step).length > 0) {
+      setAttempted((a) => ({ ...a, [draft.step]: true }));
+      focusFirstInvalid(draft.step);
       return;
     }
-    setErrors({});
-    if (draft.step < TOTAL_STEPS) goToStep((draft.step + 1) as DraftState["step"]);
-  }
-
-  function handleBack() {
-    if (draft.step > 1) goToStep((draft.step - 1) as DraftState["step"]);
-  }
-
-  function handleTeamSizeSelect(size: TeamSize) {
-    setDraft((d) => ({
-      ...d,
-      teamSize: size,
-      players: Array.from({ length: size }, (_, i) => d.players[i] ?? { ...EMPTY_PLAYER }),
-    }));
-  }
-
-  function updatePlayer(index: number, patch: Partial<PlayerInput>) {
-    setDraft((d) => {
-      const players = d.players.slice();
-      players[index] = { ...players[index], ...patch };
-      return { ...d, players };
-    });
+    if (draft.step < TOTAL_STEPS) goToStep((draft.step + 1) as OrderStep);
   }
 
   async function handleSubmit(e: FormEvent) {
     e.preventDefault();
-    const stepErrors = validateStep(4, draft);
-    if (Object.keys(stepErrors).length > 0) {
-      setErrors(stepErrors);
+    if (submitting) return;
+    if (draft.step !== TOTAL_STEPS) {
+      handleNext();
       return;
     }
-    setSubmitting(true);
-    setErrors({});
-    setGlobalError(null);
+    const firstBadStep = earliestErrorStep(allErrors);
+    if (firstBadStep) {
+      setAttempted((a) => ({ ...a, [firstBadStep]: true }));
+      if (firstBadStep === draft.step) focusFirstInvalid(draft.step);
+      else goToStep(firstBadStep);
+      return;
+    }
 
+    setSubmitting(true);
+    setGlobalError(null);
     try {
       const res = await fetch("/api/orders", {
         method: "POST",
@@ -197,477 +240,112 @@ export function OrderWizard() {
       const data = (await res.json().catch(() => ({}))) as {
         ok?: boolean;
         orderId?: string;
-        pricing?: ReturnType<typeof computeOrderPricing>;
         errors?: OrderErrors;
         code?: string;
       };
 
-      if (res.ok && data.ok && data.orderId && data.pricing) {
+      if (res.ok && data.ok && data.orderId) {
         const checkout = await initiateCheckout(data.orderId, locale);
         if (checkout.ok) {
-          try {
-            window.sessionStorage.removeItem(STORAGE_KEY);
-          } catch {
-            // ignore
-          }
+          // The draft is kept until the success page confirms payment, so a
+          // cancelled Checkout returns here with everything still filled in.
           window.location.href = checkout.url;
           return;
         }
         setGlobalError(checkout.code);
+        setSubmitting(false);
         return;
       }
 
       if (data.errors) {
-        setErrors(data.errors);
         const jumpStep = earliestErrorStep(data.errors);
-        if (jumpStep) setDraft((d) => ({ ...d, step: jumpStep }));
+        if (jumpStep) {
+          setAttempted((a) => ({ ...a, [jumpStep]: true }));
+          if (jumpStep !== draft.step) {
+            stepChangedByUser.current = true;
+            setDraft((d) => ({ ...d, step: jumpStep }));
+          }
+        }
       }
       setGlobalError(data.code ?? "GENERIC");
     } catch {
       setGlobalError("NETWORK");
-    } finally {
-      setSubmitting(false);
     }
+    setSubmitting(false);
   }
 
-  const steps: Array<{ key: "teamSize" | "players" | "pool" | "review" }> = [
-    { key: "teamSize" },
-    { key: "players" },
-    { key: "pool" },
-    { key: "review" },
-  ];
+  const summaryItems: ErrorSummaryItem[] = attempted[4]
+    ? invalidFields(4).map((f) => ({ ...f, message: messageFor(errorCodeFor(allErrors, f.key)!) }))
+    : [];
+
+  const stepProps = { draft, setDraft, errorFor, touch };
+  const continueDisabled = draft.step === 1 && !draft.teamSize;
 
   return (
-    <div
-      className="glass-strong"
-      style={{ padding: "32px 28px", display: "flex", flexDirection: "column", gap: 28 }}
-    >
-      <nav aria-label={t("wizard.stepLabel", { current: draft.step, total: TOTAL_STEPS })} className="order-progress">
-        <span className="sr-only">{t("wizard.stepLabel", { current: draft.step, total: TOTAL_STEPS })}</span>
-        {steps.map((s, i) => {
-          const stepNum = i + 1;
-          const status = stepNum === draft.step ? "active" : stepNum < draft.step ? "done" : "";
-          return (
-            <div key={s.key} style={{ display: "flex", alignItems: "center", flex: i < steps.length - 1 ? 1 : undefined }}>
-              <div className={`order-progress-step ${status}`} aria-current={stepNum === draft.step ? "step" : undefined}>
-                <span className="order-progress-dot" aria-hidden="true">
-                  {stepNum < draft.step ? "✓" : stepNum}
-                </span>
-                <span className="order-progress-label">{t(`wizard.steps.${s.key}`)}</span>
-              </div>
-              {i < steps.length - 1 && <span className={`order-progress-line ${stepNum < draft.step ? "done" : ""}`} />}
-            </div>
-          );
-        })}
-      </nav>
+    <div className="order-layout">
+      <div className="order-main" ref={wizardRef}>
+        <OrderSummaryBar teamSize={draft.teamSize} rewardPool={draft.rewardPool} />
 
-      {checkoutCancelled && (
-        <div
-          role="status"
-          style={{
-            padding: "14px 18px",
-            borderRadius: 14,
-            background: "rgba(92,115,251,0.10)",
-            border: "1px solid rgba(92,115,251,0.28)",
-            fontSize: 13.5,
-            color: "var(--ink-2)",
-          }}
-        >
-          {t("payment.cancelled.body")}
-        </div>
-      )}
+        <div className="order-panel glass-strong">
+          <OrderStepper step={draft.step} maxStep={draft.maxStep} onSelect={goToStep} />
 
-      <form onSubmit={handleSubmit} noValidate>
-        {draft.step === 1 && (
-          <fieldset style={{ border: 0, padding: 0, margin: 0 }}>
-            <legend style={{ padding: 0, marginBottom: 8 }}>
-              <h2 className="h-card" style={{ margin: 0, fontSize: 22 }}>
-                {t("wizard.step1.heading")}
-              </h2>
-            </legend>
-            <p className="body" style={{ margin: "0 0 20px" }}>
-              {t("wizard.step1.intro")}
+          {checkoutCancelled && hydrated && (
+            <p role="status" className="order-notice">
+              {restored ? t("cancelled") : t("cancelledNoDraft")}
             </p>
-            <div className="grid grid-3" role="radiogroup" aria-label={t("wizard.step1.heading")}>
-              {TEAM_SIZES.map((size) => {
-                const selected = draft.teamSize === size;
-                return (
-                  <label key={size} className={`order-choice-card ${selected ? "selected" : ""}`}>
-                    <input
-                      type="radio"
-                      name="teamSize"
-                      value={size}
-                      checked={selected}
-                      onChange={() => handleTeamSizeSelect(size)}
-                    />
-                    <span style={{ fontFamily: "var(--font-display)", fontWeight: 700, fontSize: 22, color: "var(--ink-1)" }}>
-                      {t("wizard.step1.playersCount", { n: size })}
-                    </span>
-                    <span style={{ fontSize: 19, fontWeight: 700, color: "var(--primary)" }}>
-                      €{GAME_FEE_EUR[size]}{" "}
-                      <span style={{ fontSize: 12.5, fontWeight: 600, color: "var(--ink-3)" }}>
-                        {t("wizard.step1.vatSuffix")}
-                      </span>
-                    </span>
-                  </label>
-                );
-              })}
-            </div>
-            {errors.teamSize && (
-              <p className="err" role="alert" style={{ marginTop: 10 }}>
-                {t(`wizard.errors.${orderErrorKey(errors.teamSize)}`)}
-              </p>
-            )}
-            <p className="small" style={{ marginTop: 16 }}>
-              {t("wizard.step1.helper")}
-            </p>
-          </fieldset>
-        )}
-
-        {draft.step === 2 && (
-          <div>
-            <h2 className="h-card" style={{ margin: "0 0 8px", fontSize: 22 }}>
-              {t("wizard.step2.heading")}
-            </h2>
-            <p className="body" style={{ margin: "0 0 20px" }}>
-              {t("wizard.step2.intro")}
-            </p>
-            <div style={{ display: "flex", flexDirection: "column", gap: 14 }}>
-              {draft.players.map((player, i) => {
-                const rowErrors = errors.players?.[i];
-                return (
-                  <div key={i} className="order-player-row">
-                    <div className="field">
-                      <label htmlFor={`player-${i}-name`}>
-                        {t("wizard.step2.playerLabel", { n: i + 1 })} — {t("wizard.step2.fields.name")}
-                      </label>
-                      <input
-                        id={`player-${i}-name`}
-                        type="text"
-                        value={player.name}
-                        autoComplete="name"
-                        aria-required="true"
-                        aria-invalid={Boolean(rowErrors?.name)}
-                        onChange={(e) => updatePlayer(i, { name: e.target.value })}
-                      />
-                      {rowErrors?.name && (
-                        <span className="err" role="alert">
-                          {t(`wizard.errors.${orderErrorKey(rowErrors.name)}`)}
-                        </span>
-                      )}
-                    </div>
-                    <div className="field">
-                      <label htmlFor={`player-${i}-email`}>{t("wizard.step2.fields.email")}</label>
-                      <input
-                        id={`player-${i}-email`}
-                        type="email"
-                        value={player.email}
-                        autoComplete="email"
-                        aria-required="true"
-                        aria-invalid={Boolean(rowErrors?.email)}
-                        onChange={(e) => updatePlayer(i, { email: e.target.value })}
-                      />
-                      {rowErrors?.email && (
-                        <span className="err" role="alert">
-                          {t(`wizard.errors.${orderErrorKey(rowErrors.email)}`)}
-                        </span>
-                      )}
-                    </div>
-                    <div className="field">
-                      <label htmlFor={`player-${i}-role`}>{t("wizard.step2.fields.role")}</label>
-                      <select
-                        id={`player-${i}-role`}
-                        value={player.role}
-                        aria-required="true"
-                        aria-invalid={Boolean(rowErrors?.role)}
-                        onChange={(e) => updatePlayer(i, { role: e.target.value })}
-                      >
-                        <option value="" disabled>
-                          {t("wizard.step2.rolePlaceholder")}
-                        </option>
-                        {PLAYER_ROLES.map((role) => (
-                          <option key={role} value={role}>
-                            {t(`wizard.step2.roles.${role}`)}
-                          </option>
-                        ))}
-                      </select>
-                      {rowErrors?.role && (
-                        <span className="err" role="alert">
-                          {t(`wizard.errors.${orderErrorKey(rowErrors.role)}`)}
-                        </span>
-                      )}
-                    </div>
-                  </div>
-                );
-              })}
-            </div>
-            <p className="small" style={{ marginTop: 14 }}>
-              {t("wizard.step2.roleHint")}
-            </p>
-          </div>
-        )}
-
-        {draft.step === 3 && (
-          <div>
-            <h2 className="h-card" style={{ margin: "0 0 8px", fontSize: 22 }}>
-              {t("wizard.step3.heading")}
-            </h2>
-            <p className="body" style={{ margin: "0 0 24px" }}>
-              {t("wizard.step3.intro")}
-            </p>
-            <span
-              style={{
-                display: "block",
-                fontSize: 12.5,
-                fontWeight: 700,
-                letterSpacing: "0.04em",
-                textTransform: "uppercase",
-                color: "var(--ink-3)",
-                marginBottom: 10,
-              }}
-            >
-              {t("wizard.step3.quickPickLabel")}
-            </span>
-            <div
-              role="radiogroup"
-              aria-label={t("wizard.step3.quickPickLabel")}
-              className="order-pool-grid"
-              style={{ marginBottom: 20 }}
-            >
-              {REWARD_POOL_QUICK_PICKS.map((amount) => {
-                const selected = draft.rewardPool === amount;
-                return (
-                  <label key={amount} className={`order-choice-card order-pool-card ${selected ? "selected" : ""}`}>
-                    {amount === REWARD_POOL_MOST_POPULAR && (
-                      <span className="order-pool-badge">{t("wizard.step3.mostPopular")}</span>
-                    )}
-                    <input
-                      type="radio"
-                      name="rewardPoolPreset"
-                      value={amount}
-                      checked={selected}
-                      onChange={() => setDraft((d) => ({ ...d, rewardPool: amount }))}
-                    />
-                    <span className="order-pool-card-amount">€{amount}</span>
-                  </label>
-                );
-              })}
-            </div>
-            <div className="field" style={{ maxWidth: 260 }}>
-              <label htmlFor="reward-pool">{t("wizard.step3.customLabel")}</label>
-              <input
-                id="reward-pool"
-                type="number"
-                inputMode="numeric"
-                min={MIN_REWARD_POOL_EUR}
-                max={MAX_REWARD_POOL_EUR}
-                step={1}
-                value={draft.rewardPool}
-                aria-required="true"
-                aria-invalid={Boolean(errors.rewardPool)}
-                onChange={(e) => {
-                  const v = e.target.value;
-                  setDraft((d) => ({ ...d, rewardPool: v === "" ? "" : Math.round(Number(v)) }));
-                }}
-              />
-              <span className="hint">{t("wizard.step3.minHint")}</span>
-              {errors.rewardPool && (
-                <span className="err" role="alert">
-                  {t(`wizard.errors.${orderErrorKey(errors.rewardPool)}`)}
-                </span>
-              )}
-            </div>
-            <p className="small" style={{ marginTop: 16 }}>
-              {t("wizard.step3.noVat")}
-            </p>
-          </div>
-        )}
-
-        {draft.step === 4 && (
-          <div>
-            <h2 className="h-card" style={{ margin: "0 0 8px", fontSize: 22 }}>
-              {t("wizard.step4.heading")}
-            </h2>
-            <div className="form-grid" style={{ marginBottom: 8 }}>
-              <div className="field">
-                <label htmlFor="buyer-name">{t("wizard.step4.fields.buyerName")}</label>
-                <input
-                  id="buyer-name"
-                  type="text"
-                  autoComplete="name"
-                  required
-                  aria-required="true"
-                  aria-invalid={Boolean(errors.buyerName)}
-                  value={draft.buyerName}
-                  onChange={(e) => setDraft((d) => ({ ...d, buyerName: e.target.value }))}
-                />
-                {errors.buyerName && (
-                  <span className="err" role="alert">
-                    {t(`wizard.errors.${orderErrorKey(errors.buyerName)}`)}
-                  </span>
-                )}
-              </div>
-              <div className="field">
-                <label htmlFor="buyer-email">{t("wizard.step4.fields.buyerEmail")}</label>
-                <input
-                  id="buyer-email"
-                  type="email"
-                  autoComplete="email"
-                  required
-                  aria-required="true"
-                  aria-invalid={Boolean(errors.buyerEmail)}
-                  value={draft.buyerWorkEmail}
-                  onChange={(e) => setDraft((d) => ({ ...d, buyerWorkEmail: e.target.value }))}
-                />
-                {errors.buyerEmail && (
-                  <span className="err" role="alert">
-                    {t(`wizard.errors.${orderErrorKey(errors.buyerEmail)}`)}
-                  </span>
-                )}
-              </div>
-              <div className="field col-2">
-                <label htmlFor="buyer-company">{t("wizard.step4.fields.buyerCompany")}</label>
-                <input
-                  id="buyer-company"
-                  type="text"
-                  autoComplete="organization"
-                  required
-                  aria-required="true"
-                  aria-invalid={Boolean(errors.buyerCompany)}
-                  value={draft.buyerCompany}
-                  onChange={(e) => setDraft((d) => ({ ...d, buyerCompany: e.target.value }))}
-                />
-                {errors.buyerCompany && (
-                  <span className="err" role="alert">
-                    {t(`wizard.errors.${orderErrorKey(errors.buyerCompany)}`)}
-                  </span>
-                )}
-              </div>
-            </div>
-            <p className="small" style={{ margin: "0 0 20px" }}>
-              {t("wizard.step4.billingNote")}
-            </p>
-
-            {pricing && draft.teamSize && (
-              <div
-                style={{
-                  padding: 20,
-                  borderRadius: 16,
-                  background: "rgba(255,255,255,0.55)",
-                  border: "1px solid rgba(15,29,69,0.08)",
-                  marginBottom: 20,
-                }}
-              >
-                <h3 className="h-card" style={{ margin: "0 0 12px", fontSize: 16 }}>
-                  {t("wizard.step4.summary.heading")}
-                </h3>
-                <div className="order-summary-row">
-                  <span>{t("wizard.step4.summary.gameFee", { size: draft.teamSize })}</span>
-                  <span>{formatEur(pricing.gameFee, locale)}</span>
-                </div>
-                <div className="order-summary-row">
-                  <span>{t("wizard.step4.summary.vatEstimate")}</span>
-                  <span>{formatEur(pricing.vatAmount, locale)}</span>
-                </div>
-                <div className="order-summary-row">
-                  <span>{t("wizard.step4.summary.rewardPool")}</span>
-                  <span>{formatEur(pricing.rewardPool, locale)}</span>
-                </div>
-                <div className="order-summary-row total">
-                  <span>{t("wizard.step4.summary.total")}</span>
-                  <span>{formatEur(pricing.total, locale)}</span>
-                </div>
-                <p className="small" style={{ marginTop: 12, marginBottom: 0 }}>
-                  {t("wizard.step4.summary.vatExplainer")}
-                </p>
-              </div>
-            )}
-
-            <div className="field" style={{ marginBottom: 10 }}>
-              <label className="checkbox-row" htmlFor="consent-terms">
-                <input
-                  id="consent-terms"
-                  type="checkbox"
-                  required
-                  aria-required="true"
-                  checked={draft.consentTerms}
-                  onChange={(e) => setDraft((d) => ({ ...d, consentTerms: e.target.checked }))}
-                />
-                <span style={{ fontSize: 13.5, color: "var(--ink-2)", lineHeight: 1.5 }}>
-                  {t.rich("wizard.step4.consent.terms", {
-                    termsLink: (chunks) => (
-                      <Link href="/legal#terms" style={{ color: "var(--primary)", textDecoration: "underline" }}>
-                        {chunks}
-                      </Link>
-                    ),
-                    privacyLink: (chunks) => (
-                      <Link href="/legal#privacy" style={{ color: "var(--primary)", textDecoration: "underline" }}>
-                        {chunks}
-                      </Link>
-                    ),
-                  })}
-                </span>
-              </label>
-              {errors.consentTerms && (
-                <span className="err" role="alert">
-                  {t(`wizard.errors.${orderErrorKey(errors.consentTerms)}`)}
-                </span>
-              )}
-            </div>
-            <div className="field">
-              <label className="checkbox-row" htmlFor="consent-gdpr">
-                <input
-                  id="consent-gdpr"
-                  type="checkbox"
-                  required
-                  aria-required="true"
-                  checked={draft.consentGdpr}
-                  onChange={(e) => setDraft((d) => ({ ...d, consentGdpr: e.target.checked }))}
-                />
-                <span style={{ fontSize: 13.5, color: "var(--ink-2)", lineHeight: 1.5 }}>
-                  {t("wizard.step4.consent.gdpr")}
-                </span>
-              </label>
-              {errors.consentGdpr && (
-                <span className="err" role="alert">
-                  {t(`wizard.errors.${orderErrorKey(errors.consentGdpr)}`)}
-                </span>
-              )}
-            </div>
-          </div>
-        )}
-
-        {globalError && (
-          <p role="alert" style={{ marginTop: 18, fontSize: 13.5, color: "#b91c1c" }}>
-            {t(`wizard.errors.${orderErrorKey(globalError)}`)}
-          </p>
-        )}
-
-        <div style={{ marginTop: 28, display: "flex", gap: 12, justifyContent: "space-between", flexWrap: "wrap" }}>
-          <div>
-            {draft.step > 1 && (
-              <button type="button" className="btn btn-glass" onClick={handleBack} disabled={submitting}>
-                {t("wizard.nav.back")}
-              </button>
-            )}
-          </div>
-          {draft.step < TOTAL_STEPS ? (
-            <button type="button" className="btn btn-primary" style={{ background: "var(--navy)" }} onClick={handleNext}>
-              {t("wizard.nav.next")} <ArrowRight size={14} />
-            </button>
-          ) : (
-            <button
-              type="submit"
-              className="btn btn-primary"
-              style={{ background: "var(--navy)", opacity: submitting ? 0.7 : 1, cursor: submitting ? "wait" : "pointer" }}
-              disabled={submitting}
-              aria-disabled={submitting}
-            >
-              {submitting ? t("wizard.nav.submitting") : t("wizard.nav.submit")} <ArrowRight size={14} />
-            </button>
           )}
+
+          <form onSubmit={handleSubmit} noValidate aria-busy={submitting}>
+            <div key={draft.step} className="order-step">
+              {draft.step === 1 && <StepTeamSize {...stepProps} />}
+              {draft.step === 2 && <StepPlayers {...stepProps} />}
+              {draft.step === 3 && <StepRewardPool {...stepProps} />}
+              {draft.step === 4 && <StepReview {...stepProps} onEdit={goToStep} summaryItems={summaryItems} />}
+            </div>
+
+            <div aria-live="assertive">
+              {globalError && (
+                <div className="order-global-error" role="alert">
+                  <AlertIcon size={18} />
+                  <p>
+                    {messageFor(globalError)} {t("errors.supportHint", { email: ORG_EMAIL })}
+                  </p>
+                </div>
+              )}
+            </div>
+
+            <div className={`order-actions ${draft.step === 1 ? "first" : ""}`}>
+              {draft.step < TOTAL_STEPS ? (
+                <button type="submit" className="btn btn-primary order-primary" disabled={continueDisabled}>
+                  {t("nav.next")} <ArrowRight size={14} />
+                </button>
+              ) : (
+                <button type="submit" className="btn btn-primary order-primary" disabled={submitting}>
+                  {submitting ? <Spinner /> : <LockIcon />}
+                  {submitting ? t("nav.submitting") : t("nav.submit")}
+                </button>
+              )}
+              {draft.step > 1 && (
+                <button
+                  type="button"
+                  className="btn btn-ghost order-back"
+                  onClick={() => goToStep((draft.step - 1) as OrderStep)}
+                  disabled={submitting}
+                >
+                  {t("nav.back")}
+                </button>
+              )}
+            </div>
+            {draft.step === TOTAL_STEPS && <p className="order-submit-note">{t("nav.submitNote")}</p>}
+          </form>
+
+          {draft.step === TOTAL_STEPS && <WhatHappensNext />}
         </div>
-      </form>
+      </div>
+
+      <aside className="order-aside">
+        <OrderSummaryCard teamSize={draft.teamSize} rewardPool={draft.rewardPool} />
+      </aside>
     </div>
   );
 }

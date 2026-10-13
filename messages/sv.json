@@ -1101,7 +1101,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Beställ Cognitive Rewards | WelloWork",
-      "description": "Konfigurera ert lags Cognitive Rewards-spel — välj teamstorlek, lägg till spelare och finansiera belöningspotten i några enkla steg."
+      "description": "Beställ ett Cognitive Rewards-lagspel: välj 3–5 spelare, finansiera belöningspotten och betala säkert med Stripe."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Order bekräftad | Cognitive Rewards | WelloWork",
@@ -3185,12 +3185,14 @@
       "current": "Beställning",
       "success": "Bekräftelse"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Skapa ditt lags ",
+    "titleLead": "Beställ ert lags ",
     "titleAccent": "belöningsspel",
-    "lede": "Välj teamstorlek, lägg till era spelare och finansiera belöningspotten — fyra korta steg till kassan.",
+    "titleTail": "",
+    "lede": "Fyra korta steg. Ni ser alla priser innan ni betalar.",
     "wizard": {
       "stepLabel": "Steg {current} av {total}",
+      "stepCompact": "Steg {current} av {total} · {name}",
+      "goToStep": "Gå till steg {n}: {name}",
       "steps": {
         "teamSize": "Teamstorlek",
         "players": "Spelare",
@@ -3200,61 +3202,73 @@
       "nav": {
         "back": "Tillbaka",
         "next": "Fortsätt",
-        "submit": "Fortsätt till betalning",
-        "submitting": "Bearbetar…"
+        "submit": "Fortsätt till säker betalning",
+        "submitting": "Förbereder säker betalning…",
+        "submitNote": "Ni betalar på Stripes säkra sida och ser det slutliga beloppet, inklusive moms, innan ni betalar."
       },
+      "cancelled": "Betalningen avbröts. Era orderuppgifter är sparade.",
+      "cancelledNoDraft": "Betalningen avbröts. Inget belopp har dragits.",
       "step1": {
         "heading": "Välj er teamstorlek",
-        "intro": "Cognitive Rewards spelas i team — det finns inget individuellt alternativ.",
+        "intro": "Cognitive Rewards spelas som ett lag med 3, 4 eller 5 spelare.",
         "playersCount": "{n} spelare",
-        "vatSuffix": "+ moms",
-        "helper": "Er teamstorlek avgör spelavgiften och skapar en spelarrad i nästa steg."
+        "feePlusVat": "{price} + moms",
+        "perPerson": "≈ {price} per person",
+        "helper": "Ett spel för ett lag. Alla spelar tillsammans, var och en på sin egen enhet."
       },
       "step2": {
         "heading": "Lägg till era spelare",
-        "intro": "En rad per spelare. Varje lagmedlem får sin egen inbjudan via e-post efter kassan — inklusive dig, om du spelar.",
+        "intro": "Lägg till alla som ska spela, även dig själv om du är med. Vi använder uppgifterna endast för att bjuda in ert lag till det här spelet.",
         "playerLabel": "Spelare {n}",
         "fields": {
           "name": "Fullständigt namn",
           "email": "E-post",
           "role": "Roll"
         },
-        "rolePlaceholder": "Välj en roll",
         "roles": {
           "staff": "Medarbetare",
           "manager": "Chef",
           "clevel": "Ledningsgrupp"
         },
-        "roleHint": "Används endast som en ton- och trygghetssignal för spelet — visas aldrig som en rankning."
+        "roleHint": "Hjälper spelet att hålla rätt ton för gruppen. Används inte för poäng eller rangordning."
       },
       "step3": {
         "heading": "Finansiera belöningspotten",
-        "intro": "Den här potten är gåvan. Ert team delar den utifrån hur de spelar, med en garanterad minsta andel för alla — vinnaren väljer senare hur den ska mottas.",
-        "quickPickLabel": "Populära belopp",
-        "mostPopular": "Mest populär",
-        "customLabel": "Eget belopp (€)",
-        "minHint": "Minst 100 €, endast hela euro.",
-        "noVat": "Belöningspotten har ingen moms — den betalas ut direkt till ert team."
+        "intro": "Det här är gåvan. Laget delar på den utifrån hur de spelar, och alla är garanterade en minsta andel. Varje spelare väljer själv hur de vill ta emot sin del.",
+        "presetsLabel": "Välj ett belopp",
+        "suggested": "Förslag",
+        "customLabel": "Eller ange ett eget belopp",
+        "customHint": "Hela euro, från {min} till {max}.",
+        "splitHeading": "Så fördelas potten",
+        "split": "Med {pool} för {n} spelare får alla minst {min}. Resterande {rest} fördelas efter prestation.",
+        "splitEmpty": "Välj ett belopp för att se hur potten fördelas.",
+        "noVat": "Belöningspotten är momsfri. Den betalas ut i sin helhet till ert lag."
       },
       "step4": {
-        "heading": "Dina uppgifter & granskning",
+        "heading": "Era uppgifter & granskning",
+        "buyerHeading": "Dina uppgifter",
         "fields": {
           "buyerName": "Ditt namn",
           "buyerEmail": "Jobb-e-post",
           "buyerCompany": "Företagsnamn"
         },
-        "billingNote": "Faktureringsadress och momsregistreringsnummer samlas in säkert i betalningssteget.",
-        "summary": {
-          "heading": "Ordersammanfattning",
-          "gameFee": "Spelavgift ({size} spelare)",
-          "vatEstimate": "Moms (uppskattad — slutlig skatt beräknas vid kassan)",
-          "rewardPool": "Belöningspott (betalas ut till ert team, ingen moms)",
-          "total": "Totalt",
-          "vatExplainer": "Moms gäller endast spelavgiften — belöningspotten är en gåva till ert team och har ingen moms."
-        },
+        "billingNote": "Faktureringsadress och momsregistreringsnummer anges på Stripes säkra betalsida.",
+        "reviewHeading": "Granska er beställning",
+        "reviewTeam": "Lag",
+        "reviewTeamValue": "{names} ({n} spelare)",
+        "reviewPool": "Belöningspott",
+        "edit": "Ändra",
+        "editLabel": "Ändra {section}",
+        "errorSummary": "Kontrollera följande innan du fortsätter:",
         "consent": {
           "terms": "Jag godkänner <termsLink>användarvillkoren</termsLink> och <privacyLink>integritetspolicyn</privacyLink>.",
-          "gdpr": "Jag bekräftar att jag har rättslig grund att dela mina kollegors namn och e-postadresser med WelloWork för denna aktivitet. (GDPR)"
+          "gdpr": "Jag bekräftar att jag får dela mina kollegors namn och e-postadresser med WelloWork så att de kan bjudas in till det här spelet."
+        },
+        "next": {
+          "heading": "Vad händer sedan",
+          "pay": "Betala säkert via Stripe.",
+          "invoice": "Få kvitto och momsfaktura via e-post.",
+          "email": "Vi mejlar er nästa steg."
         }
       },
       "errors": {
@@ -3262,30 +3276,43 @@
         "PLAYER_COUNT_MISMATCH": "Antalet spelare matchar inte er teamstorlek.",
         "REQUIRED_PLAYER_NAME": "Ange den här spelarens fullständiga namn.",
         "INVALID_PLAYER_EMAIL": "Ange en giltig e-postadress.",
-        "DUPLICATE_PLAYER_EMAIL": "Varje spelare behöver en unik e-postadress.",
+        "DUPLICATE_PLAYER_EMAIL": "Den här e-postadressen används redan av en annan spelare.",
         "REQUIRED_PLAYER_ROLE": "Välj en roll.",
-        "INVALID_REWARD_POOL": "Ange ett helt eurobelopp mellan 100 € och 10 000 €.",
+        "INVALID_REWARD_POOL": "Ange ett helt eurobelopp mellan {min} och {max}.",
         "REQUIRED_BUYER_NAME": "Ange ditt fullständiga namn.",
         "INVALID_BUYER_EMAIL": "Ange en giltig jobb-e-postadress.",
         "REQUIRED_BUYER_COMPANY": "Ange ditt företagsnamn.",
         "REQUIRED_CONSENT_TERMS": "Godkänn användarvillkoren och integritetspolicyn.",
-        "REQUIRED_CONSENT_GDPR": "Bekräfta att du har grund att dela denna information.",
-        "RATE_LIMITED": "För många försök — vänta en stund och försök igen.",
-        "SUBMIT_FAILED": "Vi kunde inte skicka din order. Försök igen.",
+        "REQUIRED_CONSENT_GDPR": "Bekräfta att du får dela dessa uppgifter.",
+        "RATE_LIMITED": "För många försök. Vänta en stund och försök igen.",
+        "SUBMIT_FAILED": "Vi kunde inte skicka er beställning. Försök igen.",
         "REQUEST_FAILED": "Något gick fel hos oss. Försök igen.",
-        "NETWORK": "Anslutningsproblem — kontrollera att du är uppkopplad och försök igen.",
-        "GENERIC": "Något gick fel. Försök igen."
+        "NETWORK": "Anslutningsproblem. Kontrollera att du är uppkopplad och försök igen.",
+        "GENERIC": "Något gick fel. Försök igen.",
+        "supportHint": "Era uppgifter är sparade. Om felet kvarstår, mejla oss på {email}."
       }
+    },
+    "summary": {
+      "heading": "Er beställning",
+      "teamGame": "Lagspel · {n} spelare",
+      "chooseTeam": "Välj teamstorlek",
+      "rewardPool": "Belöningspott",
+      "notSet": "Inte vald än",
+      "vat": "Moms",
+      "vatAtPayment": "Beräknas vid betalning",
+      "vatHelper": "Moms tillkommer endast på spelavgiften, baserat på ert land och momsregistreringsnummer.",
+      "total": "Totalt exkl. moms",
+      "toggle": "Visa orderdetaljer",
+      "secure": "Säker betalning via Stripe. Vi ser eller sparar aldrig era kortuppgifter.",
+      "invoice": "Momsfaktura via e-post efter betalning.",
+      "questions": "Frågor? <link>{email}</link>",
+      "terms": "Villkor",
+      "privacy": "Integritet",
+      "soldBy": "Säljs av {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Kör ni detta för ett stort team eller flera grupper?",
-      "body": "För större beställningar, storskaliga tävlingar mellan många team eller anpassad volymprissättning ordnar WelloWork det direkt — inga flera enskilda beställningar behövs.",
+      "body": "Beställer ni för ett stort team eller flera grupper? Vi sätter upp det direkt med er.",
       "cta": "Boka en konsultation"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Betalningen avbröts — ingen betalning har gjorts. Granska din beställning nedan och försök igen när du är redo."
-      }
     },
     "success": {
       "eyebrow": "Cognitive Rewards",

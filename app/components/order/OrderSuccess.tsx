@@ -4,6 +4,7 @@ import { ArrowRight, Icon } from "../Icons";
 import { getStripeClient } from "@/app/lib/stripe";
 import { getSupabaseServerClient } from "@/app/lib/supabase";
 import { formatEur } from "@/app/lib/format";
+import { ClearOrderDraft } from "./ClearOrderDraft";
 
 /**
  * Renders the post-Checkout confirmation. This is DISPLAY ONLY: fulfillment
@@ -136,6 +137,7 @@ function PaidState({
 }) {
   return (
     <>
+      <ClearOrderDraft />
       <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
         <Icon name="check" size={22} />
         <h2 className="h-card" style={{ margin: 0, fontSize: 20 }}>

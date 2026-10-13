@@ -1101,7 +1101,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Ordina Cognitive Rewards | WelloWork",
-      "description": "Configura il gioco Cognitive Rewards della tua squadra — scegli una dimensione della squadra, aggiungi i giocatori e finanzia il montepremi in pochi passaggi guidati."
+      "description": "Ordina un gioco di squadra Cognitive Rewards: scegli da 3 a 5 giocatori, finanzia il montepremi e paga in sicurezza con Stripe."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Ordine confermato | Cognitive Rewards | WelloWork",
@@ -3185,107 +3185,134 @@
       "current": "Ordine",
       "success": "Conferma"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Configura il ",
-    "titleAccent": "gioco a premi della tua squadra",
-    "lede": "Scegli la dimensione della tua squadra, aggiungi i giocatori e finanzia il montepremi — quattro brevi passaggi fino al pagamento.",
+    "titleLead": "Ordina il ",
+    "titleAccent": "gioco a premi",
+    "titleTail": " della tua squadra",
+    "lede": "Quattro brevi passaggi. Vedi ogni prezzo prima di pagare.",
     "wizard": {
       "stepLabel": "Passaggio {current} di {total}",
+      "stepCompact": "Passaggio {current} di {total} · {name}",
+      "goToStep": "Vai al passaggio {n}: {name}",
       "steps": {
-        "teamSize": "Dimensione della squadra",
+        "teamSize": "Dimensione squadra",
         "players": "Giocatori",
         "pool": "Montepremi",
-        "review": "Verifica e pagamento"
+        "review": "Controlla e paga"
       },
       "nav": {
         "back": "Indietro",
         "next": "Continua",
-        "submit": "Continua al pagamento",
-        "submitting": "Elaborazione in corso…"
+        "submit": "Continua al pagamento sicuro",
+        "submitting": "Preparazione del pagamento sicuro…",
+        "submitNote": "Pagherai sulla pagina sicura di Stripe e vedrai il totale finale, IVA inclusa, prima di pagare."
       },
+      "cancelled": "Pagamento annullato. I dati del tuo ordine sono salvati.",
+      "cancelledNoDraft": "Pagamento annullato. Non è stato addebitato nulla.",
       "step1": {
-        "heading": "Scegli la dimensione della tua squadra",
-        "intro": "Cognitive Rewards si gioca in squadra — non è prevista un'opzione individuale.",
+        "heading": "Scegli la dimensione della squadra",
+        "intro": "Cognitive Rewards si gioca come un'unica squadra di 3, 4 o 5 giocatori.",
         "playersCount": "{n} giocatori",
-        "vatSuffix": "+ IVA",
-        "helper": "La dimensione della tua squadra determina la quota di gioco e crea una riga per giocatore nel passaggio successivo."
+        "feePlusVat": "{price} + IVA",
+        "perPerson": "≈ {price} a persona",
+        "helper": "Un gioco per una squadra. Tutti giocano insieme, ciascuno sul proprio dispositivo."
       },
       "step2": {
-        "heading": "Aggiungi i tuoi giocatori",
-        "intro": "Una riga per giocatore. Ogni compagno di squadra riceve il proprio invito via e-mail dopo il pagamento — incluso te, se giochi anche tu.",
+        "heading": "Aggiungi i giocatori",
+        "intro": "Aggiungi tutte le persone che giocheranno, compreso te se partecipi. Usiamo questi dati solo per invitare la tua squadra a questo gioco.",
         "playerLabel": "Giocatore {n}",
         "fields": {
           "name": "Nome completo",
           "email": "E-mail",
           "role": "Ruolo"
         },
-        "rolePlaceholder": "Seleziona un ruolo",
         "roles": {
           "staff": "Dipendente",
           "manager": "Manager",
-          "clevel": "Dirigenza"
+          "clevel": "Top management"
         },
-        "roleHint": "Usato solo come segnale di tono e sicurezza per il gioco — non viene mai mostrato come una classifica."
+        "roleHint": "Aiuta il gioco a mantenere il tono giusto per il gruppo. Non è usato per punteggi o classifiche."
       },
       "step3": {
         "heading": "Finanzia il montepremi",
-        "intro": "Questo montepremi è il regalo. La tua squadra lo suddivide in base a come gioca, con una quota minima garantita per tutti — il vincitore sceglierà in seguito come riceverla.",
-        "quickPickLabel": "Importi più scelti",
-        "mostPopular": "Il più scelto",
-        "customLabel": "Importo personalizzato (€)",
-        "minHint": "Minimo 100 €, solo euro interi.",
-        "noVat": "Il montepremi non è soggetto a IVA — viene versato direttamente alla tua squadra."
+        "intro": "Questo è il regalo. La squadra lo divide in base a come gioca, e a tutti è garantita una quota minima. Ogni giocatore sceglie come ricevere la propria parte.",
+        "presetsLabel": "Scegli un importo",
+        "suggested": "Suggerito",
+        "customLabel": "Oppure inserisci un importo",
+        "customHint": "Euro interi, da {min} a {max}.",
+        "splitHeading": "Come viene diviso",
+        "split": "Con {pool} per {n} giocatori, ognuno riceve almeno {min}. I restanti {rest} sono divisi in base alla prestazione.",
+        "splitEmpty": "Scegli un importo per vedere come viene diviso il montepremi.",
+        "noVat": "Il montepremi non è soggetto a IVA. Viene versato interamente alla tua squadra."
       },
       "step4": {
-        "heading": "I tuoi dati e verifica",
+        "heading": "I tuoi dati e riepilogo",
+        "buyerHeading": "I tuoi dati",
         "fields": {
           "buyerName": "Il tuo nome",
-          "buyerEmail": "E-mail aziendale",
+          "buyerEmail": "E-mail di lavoro",
           "buyerCompany": "Nome dell'azienda"
         },
-        "billingNote": "L'indirizzo di fatturazione e la partita IVA vengono raccolti in modo sicuro al momento del pagamento.",
-        "summary": {
-          "heading": "Riepilogo dell'ordine",
-          "gameFee": "Quota di gioco ({size} giocatori)",
-          "vatEstimate": "IVA (stimata — l'imposta definitiva viene calcolata al pagamento)",
-          "rewardPool": "Montepremi (versato alla tua squadra, senza IVA)",
-          "total": "Totale",
-          "vatExplainer": "L'IVA si applica solo alla quota di gioco — il montepremi è un regalo per la tua squadra e non è soggetto a IVA."
-        },
+        "billingNote": "Indirizzo di fatturazione e partita IVA vengono richiesti sulla pagina di pagamento sicura di Stripe.",
+        "reviewHeading": "Controlla il tuo ordine",
+        "reviewTeam": "Squadra",
+        "reviewTeamValue": "{names} ({n} giocatori)",
+        "reviewPool": "Montepremi",
+        "edit": "Modifica",
+        "editLabel": "Modifica {section}",
+        "errorSummary": "Controlla quanto segue prima di continuare:",
         "consent": {
-          "terms": "Accetto i <termsLink>Termini di servizio</termsLink> e l'<privacyLink>Informativa sulla privacy</privacyLink>.",
-          "gdpr": "Confermo di avere una base giuridica per condividere nomi e indirizzi e-mail dei miei colleghi con WelloWork per questa attività. (GDPR)"
+          "terms": "Accetto i <termsLink>Termini</termsLink> e l'<privacyLink>Informativa sulla privacy</privacyLink>.",
+          "gdpr": "Confermo di poter condividere con WelloWork i nomi e gli indirizzi e-mail dei miei colleghi affinché possano essere invitati a questo gioco."
+        },
+        "next": {
+          "heading": "Cosa succede dopo",
+          "pay": "Paga in sicurezza su Stripe.",
+          "invoice": "Ricevi la ricevuta e la fattura con IVA via e-mail.",
+          "email": "Ti invieremo via e-mail i prossimi passi."
         }
       },
       "errors": {
         "INVALID_TEAM_SIZE": "Scegli una dimensione della squadra per continuare.",
-        "PLAYER_COUNT_MISMATCH": "Il numero di giocatori non corrisponde alla dimensione della tua squadra.",
+        "PLAYER_COUNT_MISMATCH": "Il numero di giocatori non corrisponde alla dimensione della squadra.",
         "REQUIRED_PLAYER_NAME": "Inserisci il nome completo di questo giocatore.",
         "INVALID_PLAYER_EMAIL": "Inserisci un indirizzo e-mail valido.",
-        "DUPLICATE_PLAYER_EMAIL": "Ogni giocatore deve avere un indirizzo e-mail univoco.",
+        "DUPLICATE_PLAYER_EMAIL": "Questa e-mail è già usata da un altro giocatore.",
         "REQUIRED_PLAYER_ROLE": "Seleziona un ruolo.",
-        "INVALID_REWARD_POOL": "Inserisci un importo intero in euro compreso tra 100 € e 10.000 €.",
+        "INVALID_REWARD_POOL": "Inserisci un importo in euro interi tra {min} e {max}.",
         "REQUIRED_BUYER_NAME": "Inserisci il tuo nome completo.",
-        "INVALID_BUYER_EMAIL": "Inserisci un indirizzo e-mail aziendale valido.",
+        "INVALID_BUYER_EMAIL": "Inserisci un indirizzo e-mail di lavoro valido.",
         "REQUIRED_BUYER_COMPANY": "Inserisci il nome della tua azienda.",
-        "REQUIRED_CONSENT_TERMS": "Accetta i Termini di servizio e l'Informativa sulla privacy.",
-        "REQUIRED_CONSENT_GDPR": "Conferma di avere una base per condividere queste informazioni.",
-        "RATE_LIMITED": "Troppi tentativi — attendi un momento e riprova.",
+        "REQUIRED_CONSENT_TERMS": "Accetta i Termini e l'Informativa sulla privacy.",
+        "REQUIRED_CONSENT_GDPR": "Conferma di poter condividere questi dati.",
+        "RATE_LIMITED": "Troppi tentativi. Attendi un momento e riprova.",
         "SUBMIT_FAILED": "Non siamo riusciti a inviare il tuo ordine. Riprova.",
         "REQUEST_FAILED": "Si è verificato un problema da parte nostra. Riprova.",
-        "NETWORK": "Problema di connessione — verifica di essere online e riprova.",
-        "GENERIC": "Qualcosa è andato storto. Riprova."
+        "NETWORK": "Problema di connessione. Verifica di essere online e riprova.",
+        "GENERIC": "Si è verificato un problema. Riprova.",
+        "supportHint": "I tuoi dati sono salvati. Se il problema persiste, scrivici a {email}."
       }
+    },
+    "summary": {
+      "heading": "Il tuo ordine",
+      "teamGame": "Gioco di squadra · {n} giocatori",
+      "chooseTeam": "Scegli la dimensione della squadra",
+      "rewardPool": "Montepremi",
+      "notSet": "Non ancora scelto",
+      "vat": "IVA",
+      "vatAtPayment": "Calcolata al pagamento",
+      "vatHelper": "L'IVA si applica solo alla quota del gioco, in base al tuo Paese e alla tua partita IVA.",
+      "total": "Totale IVA esclusa",
+      "toggle": "Mostra i dettagli dell'ordine",
+      "secure": "Pagamento sicuro con Stripe. Non vediamo né conserviamo mai i dati della tua carta.",
+      "invoice": "Fattura con IVA via e-mail dopo il pagamento.",
+      "questions": "Domande? <link>{email}</link>",
+      "terms": "Termini",
+      "privacy": "Privacy",
+      "soldBy": "Venduto da {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Lo stai organizzando per una grande squadra o più gruppi?",
-      "body": "Per ordini di grandi quantità, competizioni su larga scala tra molte squadre o prezzi personalizzati per volumi, WelloWork lo organizza direttamente — senza bisogno di effettuare più ordini singoli.",
+      "body": "Ordini per una squadra numerosa o più gruppi? Lo organizziamo direttamente con te.",
       "cta": "Prenota una consulenza"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Il pagamento è stato annullato — non è stato addebitato alcun importo. Rivedi il tuo ordine qui sotto e riprova quando sei pronto."
-      }
     },
     "success": {
       "eyebrow": "Cognitive Rewards",

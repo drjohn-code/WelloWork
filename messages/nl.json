@@ -1101,7 +1101,7 @@
     },
     "cognitiveRewardsOrder": {
       "title": "Cognitive Rewards bestellen | WelloWork",
-      "description": "Configureer het Cognitive Rewards-spel van uw team — kies een teamgrootte, voeg spelers toe en financier de beloningspot in een paar begeleide stappen."
+      "description": "Bestel een Cognitive Rewards-teamspel: kies 3–5 spelers, financier de beloningspot en betaal veilig met Stripe."
     },
     "cognitiveRewardsOrderSuccess": {
       "title": "Bestelling bevestigd | Cognitive Rewards | WelloWork",
@@ -3185,12 +3185,14 @@
       "current": "Bestelling",
       "success": "Bevestiging"
     },
-    "eyebrow": "Cognitive Rewards",
-    "titleLead": "Stel het ",
-    "titleAccent": "beloningsspel van uw team samen",
-    "lede": "Kies uw teamgrootte, voeg uw spelers toe en financier de beloningspot — vier korte stappen naar de kassa.",
+    "titleLead": "Bestel het ",
+    "titleAccent": "beloningsspel",
+    "titleTail": " voor uw team",
+    "lede": "Vier korte stappen. U ziet elke prijs voordat u betaalt.",
     "wizard": {
       "stepLabel": "Stap {current} van {total}",
+      "stepCompact": "Stap {current} van {total} · {name}",
+      "goToStep": "Ga naar stap {n}: {name}",
       "steps": {
         "teamSize": "Teamgrootte",
         "players": "Spelers",
@@ -3200,92 +3202,117 @@
       "nav": {
         "back": "Terug",
         "next": "Doorgaan",
-        "submit": "Doorgaan naar betaling",
-        "submitting": "Bezig met verwerken…"
+        "submit": "Doorgaan naar veilige betaling",
+        "submitting": "Veilige betaling voorbereiden…",
+        "submitNote": "U betaalt op de beveiligde pagina van Stripe en ziet het eindbedrag, inclusief btw, voordat u betaalt."
       },
+      "cancelled": "Betaling geannuleerd. Uw bestelgegevens zijn bewaard.",
+      "cancelledNoDraft": "Betaling geannuleerd. Er is niets afgeschreven.",
       "step1": {
         "heading": "Kies uw teamgrootte",
-        "intro": "Cognitive Rewards wordt in teamverband gespeeld — er is geen individuele optie.",
+        "intro": "Cognitive Rewards wordt gespeeld als één team van 3, 4 of 5 spelers.",
         "playersCount": "{n} spelers",
-        "vatSuffix": "excl. btw",
-        "helper": "Uw teamgrootte bepaalt de spelkosten en maakt in de volgende stap één rij per speler aan."
+        "feePlusVat": "{price} + btw",
+        "perPerson": "≈ {price} per persoon",
+        "helper": "Eén spel voor één team. Iedereen speelt samen, elk op een eigen apparaat."
       },
       "step2": {
         "heading": "Voeg uw spelers toe",
-        "intro": "Eén rij per speler. Elk teamlid ontvangt na de kassa een eigen uitnodiging per e-mail — inclusief uzelf, als u meespeelt.",
+        "intro": "Voeg iedereen toe die meespeelt, ook uzelf als u meedoet. We gebruiken deze gegevens alleen om uw team voor dit spel uit te nodigen.",
         "playerLabel": "Speler {n}",
         "fields": {
           "name": "Volledige naam",
           "email": "E-mail",
           "role": "Rol"
         },
-        "rolePlaceholder": "Selecteer een rol",
         "roles": {
           "staff": "Medewerker",
           "manager": "Manager",
-          "clevel": "Directie"
+          "clevel": "C-level"
         },
-        "roleHint": "Wordt alleen gebruikt als toon- en veiligheidssignaal voor het spel — nooit getoond als ranglijst."
+        "roleHint": "Helpt het spel de juiste toon voor de groep te houden. Niet gebruikt voor scores of ranglijsten."
       },
       "step3": {
         "heading": "Financier de beloningspot",
-        "intro": "Deze pot is het cadeau. Uw team verdeelt hem op basis van hoe er gespeeld wordt, met een gegarandeerd minimumaandeel voor iedereen — de winnaar kiest later hoe deze wordt uitbetaald.",
-        "quickPickLabel": "Populaire bedragen",
-        "mostPopular": "Meest gekozen",
-        "customLabel": "Aangepast bedrag (€)",
-        "minHint": "Minimaal € 100, alleen hele euro's.",
-        "noVat": "Over de beloningspot wordt geen btw geheven — deze wordt rechtstreeks uitbetaald aan uw team."
+        "intro": "Dit is het cadeau. Het team verdeelt het op basis van hoe ze spelen, en iedereen krijgt gegarandeerd een minimumaandeel. Elke speler kiest zelf hoe hij of zij het eigen deel ontvangt.",
+        "presetsLabel": "Kies een bedrag",
+        "suggested": "Voorgesteld",
+        "customLabel": "Of vul zelf een bedrag in",
+        "customHint": "Hele euro's, van {min} tot {max}.",
+        "splitHeading": "Zo wordt het verdeeld",
+        "split": "Met {pool} voor {n} spelers krijgt iedereen minstens {min}. De overige {rest} wordt verdeeld op basis van prestaties.",
+        "splitEmpty": "Kies een bedrag om te zien hoe de pot wordt verdeeld.",
+        "noVat": "Over de beloningspot wordt geen btw geheven. Hij wordt volledig aan uw team uitbetaald."
       },
       "step4": {
-        "heading": "Uw gegevens & controle",
+        "heading": "Uw gegevens & overzicht",
+        "buyerHeading": "Uw gegevens",
         "fields": {
           "buyerName": "Uw naam",
-          "buyerEmail": "Werk-e-mailadres",
+          "buyerEmail": "Zakelijk e-mailadres",
           "buyerCompany": "Bedrijfsnaam"
         },
-        "billingNote": "Factuuradres en btw-nummer worden veilig verzameld bij de betaalstap.",
-        "summary": {
-          "heading": "Besteloverzicht",
-          "gameFee": "Spelkosten ({size} spelers)",
-          "vatEstimate": "Btw (geschat — definitieve belasting wordt berekend bij het afrekenen)",
-          "rewardPool": "Beloningspot (uitbetaald aan uw team, geen btw)",
-          "total": "Totaal",
-          "vatExplainer": "Btw geldt alleen voor de spelkosten — de beloningspot is een cadeau aan uw team en is btw-vrij."
-        },
+        "billingNote": "Factuuradres en btw-nummer worden op de beveiligde betaalpagina van Stripe gevraagd.",
+        "reviewHeading": "Controleer uw bestelling",
+        "reviewTeam": "Team",
+        "reviewTeamValue": "{names} ({n} spelers)",
+        "reviewPool": "Beloningspot",
+        "edit": "Wijzigen",
+        "editLabel": "{section} wijzigen",
+        "errorSummary": "Controleer het volgende voordat u doorgaat:",
         "consent": {
-          "terms": "Ik ga akkoord met de <termsLink>gebruiksvoorwaarden</termsLink> en het <privacyLink>privacybeleid</privacyLink>.",
-          "gdpr": "Ik bevestig dat ik een grondslag heb om de namen en e-mailadressen van mijn collega's voor deze activiteit met WelloWork te delen. (AVG)"
+          "terms": "Ik ga akkoord met de <termsLink>Voorwaarden</termsLink> en het <privacyLink>Privacybeleid</privacyLink>.",
+          "gdpr": "Ik bevestig dat ik de namen en e-mailadressen van mijn collega's met WelloWork mag delen, zodat zij voor dit spel kunnen worden uitgenodigd."
+        },
+        "next": {
+          "heading": "Wat gebeurt er hierna",
+          "pay": "Betaal veilig via Stripe.",
+          "invoice": "Ontvang uw betaalbewijs en btw-factuur per e-mail.",
+          "email": "We mailen u de volgende stappen."
         }
       },
       "errors": {
         "INVALID_TEAM_SIZE": "Kies een teamgrootte om door te gaan.",
         "PLAYER_COUNT_MISMATCH": "Het aantal spelers komt niet overeen met uw teamgrootte.",
-        "REQUIRED_PLAYER_NAME": "Voer de volledige naam van deze speler in.",
-        "INVALID_PLAYER_EMAIL": "Voer een geldig e-mailadres in.",
-        "DUPLICATE_PLAYER_EMAIL": "Elke speler heeft een uniek e-mailadres nodig.",
-        "REQUIRED_PLAYER_ROLE": "Selecteer een rol.",
-        "INVALID_REWARD_POOL": "Voer een heel eurobedrag in tussen € 100 en € 10.000.",
-        "REQUIRED_BUYER_NAME": "Voer uw volledige naam in.",
-        "INVALID_BUYER_EMAIL": "Voer een geldig werk-e-mailadres in.",
-        "REQUIRED_BUYER_COMPANY": "Voer uw bedrijfsnaam in.",
-        "REQUIRED_CONSENT_TERMS": "Accepteer de gebruiksvoorwaarden en het privacybeleid.",
-        "REQUIRED_CONSENT_GDPR": "Bevestig dat u een grondslag heeft om deze informatie te delen.",
-        "RATE_LIMITED": "Te veel pogingen — wacht even en probeer het opnieuw.",
-        "SUBMIT_FAILED": "We konden uw bestelling niet verzenden. Probeer het opnieuw.",
-        "REQUEST_FAILED": "Er is iets misgegaan aan onze kant. Probeer het opnieuw.",
-        "NETWORK": "Verbindingsprobleem — controleer of u online bent en probeer het opnieuw.",
-        "GENERIC": "Er is iets misgegaan. Probeer het opnieuw."
+        "REQUIRED_PLAYER_NAME": "Vul de volledige naam van deze speler in.",
+        "INVALID_PLAYER_EMAIL": "Vul een geldig e-mailadres in.",
+        "DUPLICATE_PLAYER_EMAIL": "Dit e-mailadres wordt al door een andere speler gebruikt.",
+        "REQUIRED_PLAYER_ROLE": "Kies een rol.",
+        "INVALID_REWARD_POOL": "Vul een heel bedrag in euro's in tussen {min} en {max}.",
+        "REQUIRED_BUYER_NAME": "Vul uw volledige naam in.",
+        "INVALID_BUYER_EMAIL": "Vul een geldig zakelijk e-mailadres in.",
+        "REQUIRED_BUYER_COMPANY": "Vul uw bedrijfsnaam in.",
+        "REQUIRED_CONSENT_TERMS": "Ga akkoord met de Voorwaarden en het Privacybeleid.",
+        "REQUIRED_CONSENT_GDPR": "Bevestig dat u deze gegevens mag delen.",
+        "RATE_LIMITED": "Te veel pogingen. Wacht even en probeer het opnieuw.",
+        "SUBMIT_FAILED": "We konden uw bestelling niet versturen. Probeer het opnieuw.",
+        "REQUEST_FAILED": "Er ging iets mis aan onze kant. Probeer het opnieuw.",
+        "NETWORK": "Verbindingsprobleem. Controleer of u online bent en probeer het opnieuw.",
+        "GENERIC": "Er ging iets mis. Probeer het opnieuw.",
+        "supportHint": "Uw gegevens zijn bewaard. Blijft dit gebeuren? Mail ons op {email}."
       }
+    },
+    "summary": {
+      "heading": "Uw bestelling",
+      "teamGame": "Teamspel · {n} spelers",
+      "chooseTeam": "Kies teamgrootte",
+      "rewardPool": "Beloningspot",
+      "notSet": "Nog niet gekozen",
+      "vat": "Btw",
+      "vatAtPayment": "Berekend bij betaling",
+      "vatHelper": "Btw geldt alleen voor de spelkosten, op basis van uw land en btw-nummer.",
+      "total": "Totaal excl. btw",
+      "toggle": "Bestelgegevens tonen",
+      "secure": "Veilig betalen via Stripe. Wij zien of bewaren uw kaartgegevens nooit.",
+      "invoice": "Btw-factuur per e-mail na betaling.",
+      "questions": "Vragen? <link>{email}</link>",
+      "terms": "Voorwaarden",
+      "privacy": "Privacy",
+      "soldBy": "Verkocht door {legalName}, {country}"
     },
     "bulk": {
-      "heading": "Doet u dit voor een groot team of meerdere groepen?",
-      "body": "Voor bulkbestellingen, grootschalige competities tussen meerdere teams, of aangepaste volumeprijzen regelt WelloWork dit rechtstreeks voor u — u hoeft geen meerdere losse bestellingen te plaatsen.",
-      "cta": "Boek een adviesgesprek"
-    },
-    "payment": {
-      "cancelled": {
-        "body": "Betaling geannuleerd — er is niets in rekening gebracht. Bekijk uw bestelling hieronder en probeer het opnieuw wanneer u klaar bent."
-      }
+      "body": "Bestelt u voor een groot team of meerdere groepen? We regelen het rechtstreeks met u.",
+      "cta": "Plan een gesprek"
     },
     "success": {
       "eyebrow": "Cognitive Rewards",
