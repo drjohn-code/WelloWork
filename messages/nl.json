@@ -4,7 +4,7 @@
     "locale": "nl",
     "language": "Dutch",
     "method": "LLM machine translation of en.json",
-    "instructions": "Unreviewed machine translation. Have a native Dutch speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize kept verbatim."
+    "instructions": "Unreviewed machine translation. Have a native Dutch speaker review before treating as production-quality. Brand name WelloWork kept verbatim."
   },
   "about": {
     "based": {
@@ -30,13 +30,13 @@
         "desc": "WelloWork's psychodynamische AI voor zelfontdekking van medewerkers.",
         "label": "TwentyThird"
       },
-      "welloRise": {
+      "growth": {
         "desc": "Cognitieve training",
-        "label": "WelloRise"
+        "label": "Groei"
       },
-      "welloWize": {
+      "assessment": {
         "desc": "Werving en assessments",
-        "label": "WelloWize"
+        "label": "Assessment"
       },
       "workshops": {
         "desc": "Live groepssessies",
@@ -111,7 +111,7 @@
       "location": "Uppsala, Zweden · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork is een platform voor werkplekprestaties dat dagelijkse cognitieve training (WelloRise), werving en interne assessments (WelloWize), longitudinale prestatietrends, live gezondheidsworkshops, biomarkertesten en een teamgebaseerd beloningsspel (Cognitive Rewards) combineert. Medewerkers zijn eigenaar van hun gegevens; managers zien alleen geanonimiseerde, geaggregeerde inzichten.",
+      "body": "WelloWork is een platform voor werkplekprestaties dat dagelijkse cognitieve training, werving en interne assessments, longitudinale prestatietrends, live gezondheidsworkshops, biomarkertesten en een teamgebaseerd beloningsspel (Cognitive Rewards) combineert. Medewerkers zijn eigenaar van hun gegevens; managers zien alleen geanonimiseerde, geaggregeerde inzichten.",
       "title": "Wat doet WelloWork?"
     },
     "who": {
@@ -521,8 +521,8 @@
         "items": [
           "Spel & beloning",
           "TwentyThird",
-          "WelloRise [Groei]",
-          "WelloWize [Assessment]",
+          "Groei",
+          "Assessment",
           "Prestatietrends",
           "Workshops",
           "Proactieve zorg"
@@ -1060,12 +1060,12 @@
       "description": "Privacybeleid, servicevoorwaarden, cookiebeleid en samenvatting gegevensverwerking voor WelloWork — Zweedse en EU-markten, GDPR-native."
     },
     "platformGrowth": {
-      "title": "WelloRise — dagelijkse cognitieve training voor teams | WelloWork",
-      "description": "WelloRise is dagelijkse cognitieve training op het gebied van werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gebouwd voor drukke werkweken."
+      "title": "Groei — dagelijkse cognitieve training voor teams | WelloWork",
+      "description": "WelloWork Groei is dagelijkse cognitieve training op het gebied van werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gebouwd voor drukke werkweken."
     },
     "platformAssessment": {
-      "title": "WelloWize — cognitieve en technische assessments | WelloWork",
-      "description": "WelloWize is één assessmentkader voor selectiepanels en interne benchmarking. Cognitief en technisch, beoordeeld op functie en anciënniteit — verdedigbaar bij het uitbrengen van een aanbod en daarna."
+      "title": "Assessment — cognitieve en technische assessments | WelloWork",
+      "description": "WelloWork Assessment is één kader voor selectiepanels en interne benchmarking. Cognitief en technisch, beoordeeld op functie en anciënniteit — verdedigbaar bij het uitbrengen van een aanbod en daarna."
     },
     "platformMeasure": {
       "title": "Meten — langlopende cognitieve prestatietrends | WelloWork",
@@ -1132,7 +1132,7 @@
   "platformAssessment": {
     "answer": {
       "body": "Het assessmentproduct van WelloWork. Het beoordeelt kandidaten en huidige medewerkers binnen hetzelfde cognitieve en technische kader, levert binnen enkele minuten resultaten die klaar zijn voor de selectiecommissie, en produceert interne benchmarks ten opzichte van functie en dienstjaren die elk kwartaal opnieuw kunnen worden uitgevoerd.",
-      "label": "Wat is WelloWize?"
+      "label": "Wat is WelloWork Assessment?"
     },
     "benchmarkChart": {
       "eyebrow": "Kwartaalherhalingen",
@@ -1144,12 +1144,12 @@
       "title": "Ontwikkeling versus functiebenchmark"
     },
     "benchmarkSection": {
-      "body": "Intern kan WelloWize volgens een vast schema opnieuw worden uitgevoerd. De resultaten voeden de longitudinale trend die het Measure-product zichtbaar maakt — zodat beslissingen over promotiegereedheid worden onderbouwd door een trend over het jaar, in plaats van door de score die iemand toevallig op de assessmentdag neerzette.",
+      "body": "Intern kunnen assessments volgens een vast schema opnieuw worden uitgevoerd. De resultaten voeden de longitudinale trend die het Measure-product zichtbaar maakt — zodat beslissingen over promotiegereedheid worden onderbouwd door een trend over het jaar, in plaats van door de score die iemand toevallig op de assessmentdag neerzette.",
       "headingAccent": "functie + dienstjaren.",
       "headingLead": "Interne benchmarks ten opzichte van"
     },
     "crumbs": {
-      "current": "Assessment — WelloWize",
+      "current": "Assessment — Cognitief & technisch",
       "home": "Home",
       "platform": "Platform"
     },
@@ -1157,12 +1157,12 @@
       "body": "Een rondleiding van 30 minuten met voorbeeldprofielen van kandidaten en een open gesprek over een pilot.",
       "primary": "Plan een demo",
       "secondary": "Lees het onderzoek",
-      "title": "Zie WelloWize in echte selectiecommissies."
+      "title": "Zie Assessment in echte selectiecommissies."
     },
     "differSection": {
       "headingAccent": "assessmenttool voor werving?",
-      "headingLead": "Hoe verschilt WelloWize van een",
-      "intro": "De meeste tools houden op zodra een kandidaat tekent. WelloWize gebruikt hetzelfde kader voor en na de aanstellingsbrief.",
+      "headingLead": "Hoe verschilt WelloWork van een",
+      "intro": "De meeste tools houden op zodra een kandidaat tekent. WelloWork gebruikt hetzelfde kader voor en na de aanstellingsbrief.",
       "standardLabel": "Standaardtool"
     },
     "features": {
@@ -1191,11 +1191,11 @@
         "body": "Genormaliseerd profiel ten opzichte van de functiebenchmark, klaar om te bespreken aan de hand van de functieomschrijving.",
         "title": "Rapporten voor de selectiecommissie binnen minuten"
       },
-      "title": "Wat zit er bij WelloWize inbegrepen?"
+      "title": "Wat zit er bij Assessment inbegrepen?"
     },
     "hero": {
-      "eyebrow": "WelloWize — Assessment",
-      "lede": "WelloWize geeft selectiecommissies en people-leaders hetzelfde assessmentvocabulaire, zodat het werk niet stopt bij de aanstellingsbrief. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren.",
+      "eyebrow": "Assessment — Cognitief & technisch",
+      "lede": "WelloWork Assessment geeft selectiecommissies en people-leaders hetzelfde assessmentvocabulaire, zodat het werk niet stopt bij de aanstellingsbrief. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren.",
       "titleAccent": "en erna.",
       "titleLead": "Eén assessmentkader — werving"
     },
@@ -1219,8 +1219,8 @@
       "intro": "Drie lagen van signaal, samen teruggegeven als één enkel profiel."
     },
     "meta": {
-      "description": "WelloWize is één assessmentkader voor selectiecommissies en interne benchmarking. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren — verdedigbaar in de aanstellingsfase en erna.",
-      "title": "WelloWize — cognitieve & technische assessments | WelloWork"
+      "description": "WelloWork Assessment is één kader voor selectiecommissies en interne benchmarking. Cognitief en technisch, gescoord ten opzichte van functie en dienstjaren — verdedigbaar in de aanstellingsfase en erna.",
+      "title": "Assessment — cognitieve & technische assessments | WelloWork"
     },
     "panelSection": {
       "body": "Zodra een kandidaat het assessment heeft afgerond, ziet de selectiecommissie een genormaliseerd profiel ten opzichte van de functiebenchmark. Dit is bewust een profiel en geen enkel getal — verdedigbaar in de aanstellingsfase en eenvoudiger te bespreken aan de hand van de functieomschrijving.",
@@ -1245,7 +1245,7 @@
       "scaleBenchmark": "· · · functiebenchmark",
       "scaleHigh": "Hoog",
       "scaleLow": "Laag",
-      "windowLabel": "wellowize · kandidaatprofiel"
+      "windowLabel": "assessment · kandidaatprofiel"
     },
     "standardPoints": {
       "endsAtOffer": "Eindigt bij ondertekening aanbod",
@@ -1271,7 +1271,7 @@
       "eyebrow": "Tijd tot commissie",
       "footnote": "De commissie krijgt een genormaliseerd profiel, geen ruwe transcriptie. Voorbeeldtijden."
     },
-    "welloWizePoints": {
+    "welloWorkPoints": {
       "continuous": {
         "label": "Continu, herhaalbaar",
         "why": "Kwartaalherhalingen voeden een longitudinale trend die het Measure-product zichtbaar maakt."
@@ -1289,7 +1289,7 @@
   "platformGrowth": {
     "answer": {
       "body": "De dagelijkse cognitieve-trainingslaag van het WelloWork-platform — adaptieve sessies over vijf gevalideerde constructen, betaald in tokens, die dezelfde langetermijntrend voeden die managers geaggregeerd zien.",
-      "label": "Wat is WelloRise?"
+      "label": "Wat is WelloWork Groei?"
     },
     "comparison": {
       "consumerLabel": "Consumentenapp",
@@ -1331,7 +1331,7 @@
       "standaloneScore": "Losstaande score"
     },
     "crumbs": {
-      "current": "Groei — WelloRise",
+      "current": "Groei — Cognitieve training",
       "home": "Home",
       "platform": "Platform"
     },
@@ -1340,7 +1340,7 @@
       "primary": "Plan een demo",
       "secondary": "Vergelijk platformniveaus",
       "titleAccent": "managerdashboard.",
-      "titleLead": "Bekijk WelloRise in het"
+      "titleLead": "Bekijk Groei in het"
     },
     "employeeCards": {
       "adaptive": {
@@ -1390,7 +1390,7 @@
         "body": "Beveelt optimale teamsamenstellingen per project aan, op basis van geaggregeerde cognitieve profielen en eerdere prestaties.",
         "title": "Team Composition-engine"
       },
-      "titleAccent": "WelloRise",
+      "titleAccent": "Groei",
       "titleLead": "Wat biedt",
       "titleTrail": "standaard?",
       "tokens": {
@@ -1399,8 +1399,8 @@
       }
     },
     "hero": {
-      "eyebrow": "WelloRise — Groei",
-      "lede": "WelloRise is een dagelijks cognitief trainingsproduct, ontworpen voor werkweken, niet voor laboratoriumomstandigheden. Vijf tot tien minuten per dag over vijf gevalideerde cognitieve constructen — met een token-economie die het leren financiert.",
+      "eyebrow": "Groei — Cognitieve training",
+      "lede": "WelloWork Groei is een dagelijks cognitief trainingsproduct, ontworpen voor werkweken, niet voor laboratoriumomstandigheden. Vijf tot tien minuten per dag over vijf gevalideerde cognitieve constructen — met een token-economie die het leren financiert.",
       "titleAccent": "koffiepauze past.",
       "titleLead": "Dagelijkse cognitieve training die in een"
     },
@@ -1431,8 +1431,8 @@
       "headingLead": "Wat levert het op voor de"
     },
     "meta": {
-      "description": "WelloRise is dagelijkse cognitieve training over werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gemaakt voor drukke werkweken.",
-      "title": "WelloRise — dagelijkse cognitieve training voor teams | WelloWork"
+      "description": "WelloWork Groei is dagelijkse cognitieve training over werkgeheugen, verwerkingssnelheid, aandacht, probleemoplossing en cognitieve flexibiliteit — gemaakt voor drukke werkweken.",
+      "title": "Groei — dagelijkse cognitieve training voor teams | WelloWork"
     },
     "sessionCard": {
       "chip": {
@@ -1455,7 +1455,7 @@
       "tokensEarned": "+12 tokens verdiend vandaag",
       "tokensRedeem": "Inwisselen voor cursussen, boeken of hulp van collega's"
     },
-    "welloRisePoints": {
+    "welloWorkPoints": {
       "annotated": {
         "label": "Gekoppeld aan werkgebeurtenissen",
         "why": "Sprints, releases en wachtdiensten worden gemarkeerd op de trendlijn."
@@ -1816,7 +1816,7 @@
           "Resultaten voor het aanwervingspanel in enkele minuten",
           "Interne benchmarks op basis van functie + anciënniteit"
         ],
-        "eyebrow": "WelloWize",
+        "eyebrow": "Cognitief & technisch",
         "label": "Assessment",
         "title": "Werving en interne assessments — cognitief en technisch."
       },
@@ -1830,7 +1830,7 @@
           "Tokens inwisselbaar voor cursussen en groeitrajecten",
           "Team Composition-engine beveelt optimale teams per project aan"
         ],
-        "eyebrow": "WelloRise",
+        "eyebrow": "Cognitieve training",
         "label": "Groei",
         "title": "Dagelijkse cognitieve training die in een koffiepauze past."
       },
@@ -2160,7 +2160,7 @@
     },
     "features": {
       "aligned": {
-        "body": "Curriculum afgestemd op hetzelfde constructraamwerk dat WelloRise en Measure aandrijft — niet een aparte zienswijze.",
+        "body": "Curriculum afgestemd op hetzelfde constructraamwerk dat Groei en Measure aandrijft — niet een aparte zienswijze.",
         "title": "Cognitief- en longevity-afgestemd"
       },
       "bookings": {
@@ -2255,10 +2255,10 @@
     "plans": {
       "platform": {
         "cta": "Neem contact op met sales",
-        "desc": "SaaS-toegang per medewerker tot WelloRise en WelloWize.",
+        "desc": "SaaS-toegang per medewerker tot Groei en Assessment.",
         "features": [
-          "Dagelijkse cognitieve training (WelloRise)",
-          "Assessments voor werving & interne beoordeling (WelloWize)",
+          "Dagelijkse cognitieve training",
+          "Assessments voor werving & interne beoordeling",
           "Managerdashboards & trendanalyses",
           "GDPR-native dataresidentie"
         ],
@@ -2399,7 +2399,7 @@
     },
     "hero": {
       "eyebrow": "Cognitieve constructen",
-      "lede": "De constructen achter WelloRise en WelloWize — elk met het paradigma dat we gebruiken, wat de literatuur vaststelt en de operationele voorbehouden die we onszelf opleggen.",
+      "lede": "De constructen achter Groei en Assessment — elk met het paradigma dat we gebruiken, wat de literatuur vaststelt en de operationele voorbehouden die we onszelf opleggen.",
       "titleAccent": "uitgebreide literatuur.",
       "titleLead": "Vijf domeinen, elk met een"
     },
@@ -2430,7 +2430,7 @@
       "wm": "Werkgeheugen"
     },
     "prob": {
-      "body": "Non-verbaal redeneren onder beperkingen. We gebruiken Raven-achtige progressieve matrices en problemen in de stijl van de Tower of Hanoi, met expliciete registratie van de tijd-op-taak. Probleemoplossing is het construct dat het sterkst wordt beïnvloed door domeinkennis, en daarom rapporteren we het samen met de rolspecifieke technische screenings in WelloWize.",
+      "body": "Non-verbaal redeneren onder beperkingen. We gebruiken Raven-achtige progressieve matrices en problemen in de stijl van de Tower of Hanoi, met expliciete registratie van de tijd-op-taak. Probleemoplossing is het construct dat het sterkst wordt beïnvloed door domeinkennis, en daarom rapporteren we het samen met de rolspecifieke technische screenings in Assessment.",
       "heading": "Wat is probleemoplossing en hoe meten we die?"
     },
     "ps": {
@@ -3104,7 +3104,7 @@
       "intro": "Cognitive Rewards staat naast WelloWork's bredere platform voor werkplekprestaties.",
       "links": {
         "growth": {
-          "label": "Dagelijkse cognitieve training met WelloRise",
+          "label": "Dagelijkse cognitieve training",
           "desc": "Adaptieve oefeningen over vijf gevalideerde cognitieve domeinen."
         },
         "workshops": {
@@ -3113,7 +3113,7 @@
         },
         "assessment": {
           "label": "Cognitieve en teambeoordelingen",
-          "desc": "Begrijp sterktes en teamsamenstelling met WelloWize."
+          "desc": "Begrijp sterktes en teamsamenstelling."
         },
         "measure": {
           "label": "Longitudinale prestatietrends",

@@ -120,7 +120,7 @@ const CONSUMER_POINT_KEYS = [
   "noWorkContext",
 ] as const;
 
-const WELLORISE_POINT_KEYS = [
+const WELLOWORK_POINT_KEYS = [
   "stableSignal",
   "longitudinal",
   "workplaceLayer",
@@ -238,7 +238,7 @@ export default async function GrowthPage({ params }: PageProps) {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "WelloRise — Daily cognitive training",
+      name: "WelloWork Growth — Daily cognitive training",
       provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
       serviceType: "Cognitive training",
       areaServed: ["EU", "UK"],
@@ -530,14 +530,14 @@ export default async function GrowthPage({ params }: PageProps) {
                 </ul>
               </div>
 
-              {/* WelloRise side */}
+              {/* WelloWork side */}
               <div
                 style={{
                   padding: "32px 32px",
                   background:
                     "linear-gradient(160deg, color-mix(in oklch, var(--accent) 10%, white), white)",
                 }}
-                className="cmp-col cmp-col-wellorise"
+                className="cmp-col cmp-col-wellowork"
               >
                 <div
                   style={{
@@ -561,7 +561,7 @@ export default async function GrowthPage({ params }: PageProps) {
                     className="italic-serif"
                     style={{ textTransform: "none", letterSpacing: 0, fontSize: 14 }}
                   >
-                    WelloRise
+                    WelloWork
                   </span>
                 </div>
                 <ul
@@ -574,7 +574,7 @@ export default async function GrowthPage({ params }: PageProps) {
                     gap: 18,
                   }}
                 >
-                  {WELLORISE_POINT_KEYS.map((pKey) => (
+                  {WELLOWORK_POINT_KEYS.map((pKey) => (
                     <li
                       key={pKey}
                       style={{
@@ -618,7 +618,7 @@ export default async function GrowthPage({ params }: PageProps) {
                             lineHeight: 1.35,
                           }}
                         >
-                          {t(`welloRisePoints.${pKey}.label`)}
+                          {t(`welloWorkPoints.${pKey}.label`)}
                         </span>
                         <span
                           style={{
@@ -627,7 +627,7 @@ export default async function GrowthPage({ params }: PageProps) {
                             lineHeight: 1.5,
                           }}
                         >
-                          {t(`welloRisePoints.${pKey}.why`)}
+                          {t(`welloWorkPoints.${pKey}.why`)}
                         </span>
                       </span>
                     </li>

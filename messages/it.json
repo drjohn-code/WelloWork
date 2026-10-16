@@ -4,7 +4,7 @@
     "locale": "it",
     "language": "Italian",
     "method": "LLM machine translation of en.json",
-    "instructions": "Unreviewed machine translation. Have a native Italian speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize kept verbatim."
+    "instructions": "Unreviewed machine translation. Have a native Italian speaker review before treating as production-quality. Brand name WelloWork kept verbatim."
   },
   "about": {
     "based": {
@@ -30,13 +30,13 @@
         "desc": "L'IA psicodinamica di WelloWork per l'auto-scoperta dei dipendenti.",
         "label": "TwentyThird"
       },
-      "welloRise": {
+      "growth": {
         "desc": "Allenamento cognitivo",
-        "label": "WelloRise"
+        "label": "Crescita"
       },
-      "welloWize": {
+      "assessment": {
         "desc": "Selezione e valutazioni",
-        "label": "WelloWize"
+        "label": "Valutazione"
       },
       "workshops": {
         "desc": "Sessioni di gruppo dal vivo",
@@ -111,7 +111,7 @@
       "location": "Uppsala, Svezia · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork è una piattaforma per le prestazioni sul lavoro che unisce allenamento cognitivo quotidiano (WelloRise), selezione e valutazioni interne (WelloWize), trend longitudinali delle prestazioni, workshop dal vivo sulla salute, test dei biomarcatori e un gioco a premi in team (Cognitive Rewards). I dipendenti sono proprietari dei propri dati; i manager vedono solo insight anonimizzati e aggregati.",
+      "body": "WelloWork è una piattaforma per le prestazioni sul lavoro che unisce allenamento cognitivo quotidiano, selezione e valutazioni interne, trend longitudinali delle prestazioni, workshop dal vivo sulla salute, test dei biomarcatori e un gioco a premi in team (Cognitive Rewards). I dipendenti sono proprietari dei propri dati; i manager vedono solo insight anonimizzati e aggregati.",
       "title": "Cosa fa WelloWork?"
     },
     "who": {
@@ -521,8 +521,8 @@
         "items": [
           "Gioco & premio",
           "TwentyThird",
-          "WelloRise [Crescita]",
-          "WelloWize [Valutazione]",
+          "Crescita",
+          "Valutazione",
           "Andamento delle prestazioni",
           "Workshop",
           "Assistenza proattiva"
@@ -1060,12 +1060,12 @@
       "description": "Informativa sulla privacy, termini di servizio, cookie policy e sintesi sul trattamento dei dati per WelloWork — mercati svedese e UE, conforme al GDPR."
     },
     "platformGrowth": {
-      "title": "WelloRise — allenamento cognitivo quotidiano per i team | WelloWork",
-      "description": "WelloRise è allenamento cognitivo quotidiano su memoria di lavoro, velocità di elaborazione, attenzione, problem solving e flessibilità cognitiva, pensato per settimane lavorative impegnative."
+      "title": "Crescita — allenamento cognitivo quotidiano per i team | WelloWork",
+      "description": "WelloWork Crescita è allenamento cognitivo quotidiano su memoria di lavoro, velocità di elaborazione, attenzione, problem solving e flessibilità cognitiva, pensato per settimane lavorative impegnative."
     },
     "platformAssessment": {
-      "title": "WelloWize — valutazioni cognitive e tecniche | WelloWork",
-      "description": "WelloWize è un unico framework di valutazione per le commissioni di selezione e il benchmarking interno. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità — difendibile in fase di offerta e dopo."
+      "title": "Valutazione — valutazioni cognitive e tecniche | WelloWork",
+      "description": "WelloWork Valutazione è un unico framework per le commissioni di selezione e il benchmarking interno. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità — difendibile in fase di offerta e dopo."
     },
     "platformMeasure": {
       "title": "Measure — andamenti longitudinali delle performance cognitive | WelloWork",
@@ -1132,7 +1132,7 @@
   "platformAssessment": {
     "answer": {
       "body": "Il prodotto di valutazione di WelloWork. Valuta candidati e dipendenti attuali con lo stesso framework cognitivo e tecnico, restituisce risultati pronti per il comitato di selezione in pochi minuti e genera benchmark interni rispetto al ruolo e all'anzianità, ripetibili ogni trimestre.",
-      "label": "Cos'è WelloWize?"
+      "label": "Cos'è WelloWork Valutazione?"
     },
     "benchmarkChart": {
       "eyebrow": "Ripetizioni trimestrali",
@@ -1144,12 +1144,12 @@
       "title": "Traiettoria vs benchmark di ruolo"
     },
     "benchmarkSection": {
-      "body": "Internamente, WelloWize può essere ripetuto a cadenza programmata. I risultati alimentano il trend longitudinale evidenziato dal prodotto Measure, così le decisioni sulla prontezza alla promozione si basano su un andamento nel corso dell'anno, anziché sul punteggio ottenuto per caso il giorno della valutazione.",
+      "body": "Internamente, le valutazioni possono essere ripetute a cadenza programmata. I risultati alimentano il trend longitudinale evidenziato dal prodotto Measure, così le decisioni sulla prontezza alla promozione si basano su un andamento nel corso dell'anno, anziché sul punteggio ottenuto per caso il giorno della valutazione.",
       "headingAccent": "ruolo + anzianità.",
       "headingLead": "Benchmark interni rispetto a"
     },
     "crumbs": {
-      "current": "Valutazione — WelloWize",
+      "current": "Valutazione — Cognitiva e tecnica",
       "home": "Home",
       "platform": "Piattaforma"
     },
@@ -1157,12 +1157,12 @@
       "body": "Una panoramica di 30 minuti con profili di candidati di esempio e una conversazione franca sul progetto pilota.",
       "primary": "Prenota una demo",
       "secondary": "Leggi la ricerca",
-      "title": "Scopri WelloWize sui comitati di selezione reali."
+      "title": "Scopri Valutazione sui comitati di selezione reali."
     },
     "differSection": {
       "headingAccent": "valutazione per le assunzioni?",
-      "headingLead": "In cosa si distingue WelloWize da uno strumento di",
-      "intro": "La maggior parte degli strumenti si ferma nel momento in cui un candidato firma. WelloWize usa lo stesso framework prima e dopo la lettera di offerta.",
+      "headingLead": "In cosa si distingue WelloWork da uno strumento di",
+      "intro": "La maggior parte degli strumenti si ferma nel momento in cui un candidato firma. WelloWork usa lo stesso framework prima e dopo la lettera di offerta.",
       "standardLabel": "Strumento standard"
     },
     "features": {
@@ -1191,11 +1191,11 @@
         "body": "Profilo normalizzato rispetto al benchmark di ruolo, pronto da discutere rispetto alla descrizione della posizione.",
         "title": "Report per il comitato di selezione in pochi minuti"
       },
-      "title": "Cosa offre WelloWize?"
+      "title": "Cosa offre Valutazione?"
     },
     "hero": {
-      "eyebrow": "WelloWize — Valutazione",
-      "lede": "WelloWize offre ai comitati di selezione e ai responsabili delle persone lo stesso linguaggio di valutazione, così il lavoro non si ferma alla lettera di offerta. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità.",
+      "eyebrow": "Valutazione — Cognitiva e tecnica",
+      "lede": "WelloWork Valutazione offre ai comitati di selezione e ai responsabili delle persone lo stesso linguaggio di valutazione, così il lavoro non si ferma alla lettera di offerta. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità.",
       "titleAccent": "e dopo.",
       "titleLead": "Un unico framework di valutazione — assunzione"
     },
@@ -1219,8 +1219,8 @@
       "intro": "Tre livelli di segnale, restituiti insieme come un unico profilo."
     },
     "meta": {
-      "description": "WelloWize è un unico framework di valutazione per i comitati di selezione e il benchmarking interno. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità — difendibile in fase di offerta e oltre.",
-      "title": "WelloWize — valutazioni cognitive e tecniche | WelloWork"
+      "description": "WelloWork Valutazione è un unico framework per i comitati di selezione e il benchmarking interno. Cognitivo e tecnico, valutato rispetto al ruolo e all'anzianità — difendibile in fase di offerta e oltre.",
+      "title": "Valutazione — valutazioni cognitive e tecniche | WelloWork"
     },
     "panelSection": {
       "body": "Una volta che un candidato completa la valutazione, il comitato di selezione vede un profilo normalizzato rispetto al benchmark di ruolo. È intenzionalmente un profilo, non un singolo numero — difendibile in fase di offerta e più facile da discutere rispetto alla descrizione della posizione.",
@@ -1245,7 +1245,7 @@
       "scaleBenchmark": "· · · benchmark di ruolo",
       "scaleHigh": "Alto",
       "scaleLow": "Basso",
-      "windowLabel": "wellowize · profilo candidato"
+      "windowLabel": "valutazione · profilo candidato"
     },
     "standardPoints": {
       "endsAtOffer": "Si conclude alla firma dell'offerta",
@@ -1271,7 +1271,7 @@
       "eyebrow": "Tempo per il comitato",
       "footnote": "Il comitato riceve un profilo normalizzato, non una trascrizione grezza. Tempi di esempio."
     },
-    "welloWizePoints": {
+    "welloWorkPoints": {
       "continuous": {
         "label": "Continuo, ripetibile",
         "why": "Le ripetizioni trimestrali alimentano un trend longitudinale evidenziato dal prodotto Measure."
@@ -1289,7 +1289,7 @@
   "platformGrowth": {
     "answer": {
       "body": "Il livello di allenamento cognitivo quotidiano della piattaforma WelloWork — sessioni adattive su cinque costrutti validati, retribuite in token, che alimentano lo stesso trend longitudinale che i manager vedono in forma aggregata.",
-      "label": "Che cos'è WelloRise?"
+      "label": "Che cos'è WelloWork Crescita?"
     },
     "comparison": {
       "consumerLabel": "App consumer",
@@ -1331,7 +1331,7 @@
       "standaloneScore": "Punteggio a sé stante"
     },
     "crumbs": {
-      "current": "Crescita — WelloRise",
+      "current": "Crescita — Allenamento cognitivo",
       "home": "Home",
       "platform": "Piattaforma"
     },
@@ -1340,7 +1340,7 @@
       "primary": "Prenota una demo",
       "secondary": "Confronta i livelli della piattaforma",
       "titleAccent": "dashboard del manager.",
-      "titleLead": "Scopri WelloRise all'interno della"
+      "titleLead": "Scopri Crescita all'interno della"
     },
     "employeeCards": {
       "adaptive": {
@@ -1390,7 +1390,7 @@
         "body": "Consiglia le combinazioni ottimali di team per progetto, in base ai profili cognitivi aggregati e alle performance precedenti.",
         "title": "Motore di Team Composition"
       },
-      "titleAccent": "WelloRise",
+      "titleAccent": "Crescita",
       "titleLead": "Cosa offre",
       "titleTrail": "di serie?",
       "tokens": {
@@ -1399,8 +1399,8 @@
       }
     },
     "hero": {
-      "eyebrow": "WelloRise — Crescita",
-      "lede": "WelloRise è un prodotto di allenamento cognitivo quotidiano progettato per le settimane lavorative, non per le condizioni di laboratorio. Da cinque a dieci minuti al giorno su cinque costrutti cognitivi validati — con un'economia dei token che finanzia l'apprendimento.",
+      "eyebrow": "Crescita — Allenamento cognitivo",
+      "lede": "WelloWork Crescita è un prodotto di allenamento cognitivo quotidiano progettato per le settimane lavorative, non per le condizioni di laboratorio. Da cinque a dieci minuti al giorno su cinque costrutti cognitivi validati — con un'economia dei token che finanzia l'apprendimento.",
       "titleAccent": "pausa caffè.",
       "titleLead": "Allenamento cognitivo quotidiano che entra in una"
     },
@@ -1431,8 +1431,8 @@
       "headingLead": "Cosa ci guadagna il"
     },
     "meta": {
-      "description": "WelloRise è l'allenamento cognitivo quotidiano su memoria di lavoro, velocità di elaborazione, attenzione, problem solving e flessibilità cognitiva — pensato per le settimane lavorative intense.",
-      "title": "WelloRise — allenamento cognitivo quotidiano per i team | WelloWork"
+      "description": "WelloWork Crescita è l'allenamento cognitivo quotidiano su memoria di lavoro, velocità di elaborazione, attenzione, problem solving e flessibilità cognitiva — pensato per le settimane lavorative intense.",
+      "title": "Crescita — allenamento cognitivo quotidiano per i team | WelloWork"
     },
     "sessionCard": {
       "chip": {
@@ -1455,7 +1455,7 @@
       "tokensEarned": "+12 token guadagnati oggi",
       "tokensRedeem": "Riscatta per corsi, libri o aiuto tra colleghi"
     },
-    "welloRisePoints": {
+    "welloWorkPoints": {
       "annotated": {
         "label": "Annotato sugli eventi di lavoro",
         "why": "Sprint, release e turni di reperibilità vengono contrassegnati sulla linea del trend."
@@ -1816,7 +1816,7 @@
           "Risultati per il panel di selezione in pochi minuti",
           "Benchmark interni per ruolo + anzianità"
         ],
-        "eyebrow": "WelloWize",
+        "eyebrow": "Cognitiva e tecnica",
         "label": "Valutazione",
         "title": "Selezione e valutazioni interne — cognitive e tecniche."
       },
@@ -1830,7 +1830,7 @@
           "I token si convertono in corsi e percorsi di crescita",
           "Il motore di Composizione dei Team consiglia i team ottimali per ogni progetto"
         ],
-        "eyebrow": "WelloRise",
+        "eyebrow": "Allenamento cognitivo",
         "label": "Crescita",
         "title": "Allenamento cognitivo quotidiano che entra in una pausa caffè."
       },
@@ -2160,7 +2160,7 @@
     },
     "features": {
       "aligned": {
-        "body": "Programma allineato allo stesso framework di costrutti che guida WelloRise e Measure — non una visione separata.",
+        "body": "Programma allineato allo stesso framework di costrutti che guida Crescita e Measure — non una visione separata.",
         "title": "Allineato a cognizione e longevità"
       },
       "bookings": {
@@ -2255,10 +2255,10 @@
     "plans": {
       "platform": {
         "cta": "Parla con il team commerciale",
-        "desc": "Accesso SaaS per dipendente a WelloRise e WelloWize.",
+        "desc": "Accesso SaaS per dipendente a Crescita e Valutazione.",
         "features": [
-          "Allenamento cognitivo quotidiano (WelloRise)",
-          "Valutazioni per selezione e interne (WelloWize)",
+          "Allenamento cognitivo quotidiano",
+          "Valutazioni per selezione e interne",
           "Dashboard per i manager e analisi delle tendenze",
           "Residenza dei dati conforme al GDPR"
         ],
@@ -2399,7 +2399,7 @@
     },
     "hero": {
       "eyebrow": "Costrutti cognitivi",
-      "lede": "I costrutti alla base di WelloRise e WelloWize — ciascuno con il paradigma che utilizziamo, ciò che la letteratura stabilisce e i limiti operativi a cui ci atteniamo.",
+      "lede": "I costrutti alla base di Crescita e Valutazione — ciascuno con il paradigma che utilizziamo, ciò che la letteratura stabilisce e i limiti operativi a cui ci atteniamo.",
       "titleAccent": "lunga letteratura.",
       "titleLead": "Cinque domini, ciascuno con una"
     },
@@ -2430,7 +2430,7 @@
       "wm": "Memoria di lavoro"
     },
     "prob": {
-      "body": "Ragionamento non verbale sotto vincoli. Utilizziamo matrici progressive in stile Raven e problemi in stile torre di Hanoi, con un monitoraggio esplicito del tempo dedicato al compito. Il problem solving è il costrutto più influenzato dalle conoscenze di dominio, motivo per cui lo riportiamo insieme alle valutazioni tecniche specifiche per ruolo in WelloWize.",
+      "body": "Ragionamento non verbale sotto vincoli. Utilizziamo matrici progressive in stile Raven e problemi in stile torre di Hanoi, con un monitoraggio esplicito del tempo dedicato al compito. Il problem solving è il costrutto più influenzato dalle conoscenze di dominio, motivo per cui lo riportiamo insieme alle valutazioni tecniche specifiche per ruolo in Valutazione.",
       "heading": "Cos'è il problem solving e come lo misuriamo?"
     },
     "ps": {
@@ -3104,7 +3104,7 @@
       "intro": "Cognitive Rewards si affianca alla piattaforma più ampia di performance sul lavoro di WelloWork.",
       "links": {
         "growth": {
-          "label": "Allenamento cognitivo quotidiano con WelloRise",
+          "label": "Allenamento cognitivo quotidiano",
           "desc": "Esercizi adattivi su cinque costrutti cognitivi validati."
         },
         "workshops": {
@@ -3113,7 +3113,7 @@
         },
         "assessment": {
           "label": "Valutazioni cognitive e di squadra",
-          "desc": "Comprendi punti di forza e composizione del team con WelloWize."
+          "desc": "Comprendi punti di forza e composizione del team."
         },
         "measure": {
           "label": "Andamento delle prestazioni nel tempo",

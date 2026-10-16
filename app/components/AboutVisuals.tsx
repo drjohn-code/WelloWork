@@ -161,8 +161,8 @@ export function UppsalaCard() {
 export function FeatureIconGrid() {
   const t = useTranslations("about");
   const items = [
-    { icon: "chart", key: "welloRise" },
-    { icon: "brain", key: "welloWize" },
+    { icon: "chart", key: "growth" },
+    { icon: "brain", key: "assessment" },
     { icon: "pulse", key: "trends" },
     { icon: "spark", key: "workshops" },
     // TODO: confirm final positioning copy for about.featureGrid.twentyThird.desc

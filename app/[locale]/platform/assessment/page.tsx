@@ -96,10 +96,10 @@ const STANDARD_POINTS = [
   "standardPoints.singleScore",
 ] as const;
 
-const WELLOWIZE_POINTS = [
-  { labelKey: "welloWizePoints.prePost.label", whyKey: "welloWizePoints.prePost.why" },
-  { labelKey: "welloWizePoints.continuous.label", whyKey: "welloWizePoints.continuous.why" },
-  { labelKey: "welloWizePoints.profile.label", whyKey: "welloWizePoints.profile.why" },
+const WELLOWORK_POINTS = [
+  { labelKey: "welloWorkPoints.prePost.label", whyKey: "welloWorkPoints.prePost.why" },
+  { labelKey: "welloWorkPoints.continuous.label", whyKey: "welloWorkPoints.continuous.why" },
+  { labelKey: "welloWorkPoints.profile.label", whyKey: "welloWorkPoints.profile.why" },
 ] as const;
 
 export default async function AssessmentPage({ params }: PageProps) {
@@ -120,7 +120,7 @@ export default async function AssessmentPage({ params }: PageProps) {
     {
       "@context": "https://schema.org",
       "@type": "Service",
-      name: "WelloWize — Cognitive & technical assessments",
+      name: "WelloWork Assessment — Cognitive & technical assessments",
       provider: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
       serviceType: "Hiring and internal assessment",
       areaServed: ["EU", "UK"],
@@ -397,7 +397,7 @@ export default async function AssessmentPage({ params }: PageProps) {
         </div>
       </section>
 
-      {/* 4. How does WelloWize differ — comparison split */}
+      {/* 4. How does WelloWork differ — comparison split */}
       <section style={{ padding: "48px 0" }}>
         <div className="container">
           <Reveal>
@@ -508,14 +508,14 @@ export default async function AssessmentPage({ params }: PageProps) {
                 </ul>
               </div>
 
-              {/* WelloWize side */}
+              {/* WelloWork side */}
               <div
                 style={{
                   padding: "32px 32px",
                   background:
                     "linear-gradient(160deg, color-mix(in oklch, var(--accent) 10%, white), white)",
                 }}
-                className="cmp-col cmp-col-wellorise"
+                className="cmp-col cmp-col-wellowork"
               >
                 <div
                   style={{
@@ -539,7 +539,7 @@ export default async function AssessmentPage({ params }: PageProps) {
                     className="italic-serif"
                     style={{ textTransform: "none", letterSpacing: 0, fontSize: 14 }}
                   >
-                    WelloWize
+                    WelloWork
                   </span>
                 </div>
                 <ul
@@ -552,7 +552,7 @@ export default async function AssessmentPage({ params }: PageProps) {
                     gap: 18,
                   }}
                 >
-                  {WELLOWIZE_POINTS.map((p) => (
+                  {WELLOWORK_POINTS.map((p) => (
                     <li
                       key={p.labelKey}
                       style={{

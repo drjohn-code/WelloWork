@@ -799,7 +799,7 @@ button.order-stepper-btn:hover .order-stepper-label { color: var(--primary); tex
   .cta-row > div:last-child { justify-content: flex-start !important; }
 }
 
-/* WelloRise page — 5-construct grid + 2-col comparison responsive */
+/* Growth page — 5-construct grid + 2-col comparison responsive */
 @media (max-width: 1020px) {
   .construct-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; }
 }

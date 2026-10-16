@@ -4,7 +4,7 @@
     "locale": "sv",
     "language": "Swedish",
     "method": "LLM machine translation of en.json",
-    "instructions": "Unreviewed machine translation. Have a native Swedish speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize kept verbatim."
+    "instructions": "Unreviewed machine translation. Have a native Swedish speaker review before treating as production-quality. Brand name WelloWork kept verbatim."
   },
   "about": {
     "based": {
@@ -30,13 +30,13 @@
         "desc": "WelloWorks psykodynamiska AI för medarbetares självinsikt.",
         "label": "TwentyThird"
       },
-      "welloRise": {
+      "growth": {
         "desc": "Kognitiv träning",
-        "label": "WelloRise"
+        "label": "Utveckling"
       },
-      "welloWize": {
+      "assessment": {
         "desc": "Rekrytering och bedömningar",
-        "label": "WelloWize"
+        "label": "Bedömning"
       },
       "workshops": {
         "desc": "Live-gruppsessioner",
@@ -111,7 +111,7 @@
       "location": "Uppsala, Sverige · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork är en plattform för arbetsplatsprestation som kombinerar daglig kognitiv träning (WelloRise), rekrytering och interna bedömningar (WelloWize), longitudinella prestationstrender, liveworkshops om hälsa, biomarkörtestning och ett lagbaserat belöningsspel (Cognitive Rewards). Medarbetarna äger sin data; chefer ser endast anonymiserade, aggregerade insikter.",
+      "body": "WelloWork är en plattform för arbetsplatsprestation som kombinerar daglig kognitiv träning, rekrytering och interna bedömningar, longitudinella prestationstrender, liveworkshops om hälsa, biomarkörtestning och ett lagbaserat belöningsspel (Cognitive Rewards). Medarbetarna äger sin data; chefer ser endast anonymiserade, aggregerade insikter.",
       "title": "Vad gör WelloWork?"
     },
     "who": {
@@ -521,8 +521,8 @@
         "items": [
           "Spel & belöning",
           "TwentyThird",
-          "WelloRise [Utveckling]",
-          "WelloWize [Bedömning]",
+          "Utveckling",
+          "Bedömning",
           "Prestationstrender",
           "Workshops",
           "Proaktiv hälsa"
@@ -1060,12 +1060,12 @@
       "description": "Integritetspolicy, användarvillkor, cookiepolicy och sammanfattning av personuppgiftsbehandling för WelloWork — svenska och europeiska marknader, GDPR-anpassad."
     },
     "platformGrowth": {
-      "title": "WelloRise — daglig kognitiv träning för team | WelloWork",
-      "description": "WelloRise är daglig kognitiv träning inom arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för hektiska arbetsveckor."
+      "title": "Utveckling — daglig kognitiv träning för team | WelloWork",
+      "description": "WelloWork Utveckling är daglig kognitiv träning inom arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för hektiska arbetsveckor."
     },
     "platformAssessment": {
-      "title": "WelloWize — kognitiva och tekniska bedömningar | WelloWork",
-      "description": "WelloWize är ett bedömningsramverk för rekryteringspaneler och intern benchmarking. Kognitivt och tekniskt, poängsatt mot roll och tjänstetid — hållbart vid erbjudandestadiet och därefter."
+      "title": "Bedömning — kognitiva och tekniska bedömningar | WelloWork",
+      "description": "WelloWork Bedömning är ett ramverk för rekryteringspaneler och intern benchmarking. Kognitivt och tekniskt, poängsatt mot roll och tjänstetid — hållbart vid erbjudandestadiet och därefter."
     },
     "platformMeasure": {
       "title": "Mät — longitudinella trender för kognitiv prestation | WelloWork",
@@ -1132,7 +1132,7 @@
   "platformAssessment": {
     "answer": {
       "body": "WelloWorks bedömningsprodukt. Den utvärderar kandidater och befintliga medarbetare utifrån samma kognitiva och tekniska ramverk, levererar resultat redo för rekryteringspanelen på några minuter och tar fram interna jämförelsetal mot roll och anställningstid som kan köras om varje kvartal.",
-      "label": "Vad är WelloWize?"
+      "label": "Vad är WelloWork Bedömning?"
     },
     "benchmarkChart": {
       "eyebrow": "Kvartalsvisa omkörningar",
@@ -1144,12 +1144,12 @@
       "title": "Utveckling mot rolljämförelse"
     },
     "benchmarkSection": {
-      "body": "Internt kan WelloWize köras om enligt ett schema. Resultaten matar den longitudinella trend som Measure-produkten synliggör – så att beslut om befordringsmognad grundas i en trend över hela året, snarare än det resultat någon råkade prestera på bedömningsdagen.",
+      "body": "Internt kan bedömningar köras om enligt ett schema. Resultaten matar den longitudinella trend som Measure-produkten synliggör – så att beslut om befordringsmognad grundas i en trend över hela året, snarare än det resultat någon råkade prestera på bedömningsdagen.",
       "headingAccent": "roll + anställningstid.",
       "headingLead": "Interna jämförelsetal mot"
     },
     "crumbs": {
-      "current": "Bedömning — WelloWize",
+      "current": "Bedömning — Kognitivt och tekniskt",
       "home": "Hem",
       "platform": "Plattform"
     },
@@ -1157,12 +1157,12 @@
       "body": "En 30-minuters genomgång med exempel på kandidatprofiler och ett uppriktigt samtal om ett pilotprojekt.",
       "primary": "Boka en demo",
       "secondary": "Läs forskningen",
-      "title": "Se WelloWize i verkliga rekryteringspaneler."
+      "title": "Se Bedömning i verkliga rekryteringspaneler."
     },
     "differSection": {
       "headingAccent": "rekryteringsverktyg för bedömning?",
-      "headingLead": "Hur skiljer sig WelloWize från ett",
-      "intro": "De flesta verktyg slutar i samma ögonblick som en kandidat skriver på. WelloWize använder samma ramverk före och efter erbjudandebrevet.",
+      "headingLead": "Hur skiljer sig WelloWork från ett",
+      "intro": "De flesta verktyg slutar i samma ögonblick som en kandidat skriver på. WelloWork använder samma ramverk före och efter erbjudandebrevet.",
       "standardLabel": "Standardverktyg"
     },
     "features": {
@@ -1191,11 +1191,11 @@
         "body": "Normaliserad profil mot rolljämförelsen, redo att diskuteras mot kravprofilen.",
         "title": "Rapporter för rekryteringspanelen på några minuter"
       },
-      "title": "Vad levereras med WelloWize?"
+      "title": "Vad levereras med Bedömning?"
     },
     "hero": {
-      "eyebrow": "WelloWize — Bedömning",
-      "lede": "WelloWize ger rekryteringspaneler och personalledare samma bedömningsvokabulär, så att arbetet inte slutar vid erbjudandebrevet. Kognitivt och tekniskt, poängsatt mot roll och anställningstid.",
+      "eyebrow": "Bedömning — Kognitivt och tekniskt",
+      "lede": "WelloWork Bedömning ger rekryteringspaneler och personalledare samma bedömningsvokabulär, så att arbetet inte slutar vid erbjudandebrevet. Kognitivt och tekniskt, poängsatt mot roll och anställningstid.",
       "titleAccent": "och efter.",
       "titleLead": "Ett bedömningsramverk — rekrytering"
     },
@@ -1219,8 +1219,8 @@
       "intro": "Tre lager av signaler, levererade tillsammans som en enda profil."
     },
     "meta": {
-      "description": "WelloWize är ett bedömningsramverk för rekryteringspaneler och interna jämförelsetal. Kognitivt och tekniskt, poängsatt mot roll och anställningstid – försvarbart i erbjudandeskedet och efteråt.",
-      "title": "WelloWize — kognitiva och tekniska bedömningar | WelloWork"
+      "description": "WelloWork Bedömning är ett ramverk för rekryteringspaneler och interna jämförelsetal. Kognitivt och tekniskt, poängsatt mot roll och anställningstid – försvarbart i erbjudandeskedet och efteråt.",
+      "title": "Bedömning — kognitiva och tekniska bedömningar | WelloWork"
     },
     "panelSection": {
       "body": "När en kandidat har slutfört bedömningen ser rekryteringspanelen en normaliserad profil mot rolljämförelsen. Detta är medvetet en profil, inte en enda siffra – försvarbar i erbjudandeskedet och lättare att diskutera mot kravprofilen.",
@@ -1245,7 +1245,7 @@
       "scaleBenchmark": "· · · rolljämförelse",
       "scaleHigh": "Hög",
       "scaleLow": "Låg",
-      "windowLabel": "wellowize · kandidatprofil"
+      "windowLabel": "bedömning · kandidatprofil"
     },
     "standardPoints": {
       "endsAtOffer": "Slutar vid påskrift av erbjudande",
@@ -1271,7 +1271,7 @@
       "eyebrow": "Tid till panelen",
       "footnote": "Panelen får en normaliserad profil, inte ett rått protokoll. Exempeltider."
     },
-    "welloWizePoints": {
+    "welloWorkPoints": {
       "continuous": {
         "label": "Kontinuerlig, går att köra om",
         "why": "Kvartalsvisa omkörningar matar en longitudinell trend som Measure-produkten synliggör."
@@ -1289,7 +1289,7 @@
   "platformGrowth": {
     "answer": {
       "body": "Det dagliga kognitiva träningslagret i WelloWork-plattformen — adaptiva pass över fem validerade konstrukt, betalda i tokens, som matar samma longitudinella trend som chefer ser i aggregerad form.",
-      "label": "Vad är WelloRise?"
+      "label": "Vad är WelloWork Utveckling?"
     },
     "comparison": {
       "consumerLabel": "Konsumentapp",
@@ -1331,7 +1331,7 @@
       "standaloneScore": "Fristående poäng"
     },
     "crumbs": {
-      "current": "Tillväxt — WelloRise",
+      "current": "Utveckling — Kognitiv träning",
       "home": "Hem",
       "platform": "Plattform"
     },
@@ -1340,7 +1340,7 @@
       "primary": "Boka en demo",
       "secondary": "Jämför plattformsnivåer",
       "titleAccent": "i chefsdashboarden.",
-      "titleLead": "Se WelloRise"
+      "titleLead": "Se Utveckling"
     },
     "employeeCards": {
       "adaptive": {
@@ -1390,17 +1390,17 @@
         "body": "Rekommenderar optimala teamsammansättningar per projekt, baserat på aggregerade kognitiva profiler och tidigare prestation.",
         "title": "Motor för teamsammansättning"
       },
-      "titleAccent": "WelloRise",
-      "titleLead": "Vad ingår i",
-      "titleTrail": "?",
+      "titleAccent": "Utveckling",
+      "titleLead": "Vad kommer",
+      "titleTrail": "med?",
       "tokens": {
         "body": "Pass ger tokens som kan lösas in mot kurser, utvecklingsspår eller kollegahjälp — finansierar lärande som teamet redan vill ha.",
         "title": "Tokenekonomi"
       }
     },
     "hero": {
-      "eyebrow": "WelloRise — Tillväxt",
-      "lede": "WelloRise är en daglig kognitiv träningsprodukt utformad för arbetsveckor, inte för laboratorieförhållanden. Fem till tio minuter om dagen över fem validerade kognitiva konstrukt — med en tokenekonomi som finansierar lärande.",
+      "eyebrow": "Utveckling — Kognitiv träning",
+      "lede": "WelloWork Utveckling är en daglig kognitiv träningsprodukt utformad för arbetsveckor, inte för laboratorieförhållanden. Fem till tio minuter om dagen över fem validerade kognitiva konstrukt — med en tokenekonomi som finansierar lärande.",
       "titleAccent": "en kafferast.",
       "titleLead": "Daglig kognitiv träning som ryms på"
     },
@@ -1431,8 +1431,8 @@
       "headingLead": "Vad får"
     },
     "meta": {
-      "description": "WelloRise är daglig kognitiv träning över arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för pressade arbetsveckor.",
-      "title": "WelloRise — daglig kognitiv träning för team | WelloWork"
+      "description": "WelloWork Utveckling är daglig kognitiv träning över arbetsminne, bearbetningshastighet, uppmärksamhet, problemlösning och kognitiv flexibilitet — byggd för pressade arbetsveckor.",
+      "title": "Utveckling — daglig kognitiv träning för team | WelloWork"
     },
     "sessionCard": {
       "chip": {
@@ -1455,7 +1455,7 @@
       "tokensEarned": "+12 tokens intjänade idag",
       "tokensRedeem": "Lös in mot kurser, böcker eller kollegahjälp"
     },
-    "welloRisePoints": {
+    "welloWorkPoints": {
       "annotated": {
         "label": "Kopplad till arbetshändelser",
         "why": "Sprintar, releaser och jourpass taggas på trendlinjen."
@@ -1816,7 +1816,7 @@
           "Resultat till rekryteringspanelen på minuter",
           "Interna jämförelser mot roll + anställningstid"
         ],
-        "eyebrow": "WelloWize",
+        "eyebrow": "Kognitivt och tekniskt",
         "label": "Bedömning",
         "title": "Rekrytering och interna bedömningar – kognitivt och tekniskt."
       },
@@ -1830,7 +1830,7 @@
           "Tokens växlas in mot kurser och utvecklingsspår",
           "Team Composition-motorn rekommenderar optimala team per projekt"
         ],
-        "eyebrow": "WelloRise",
+        "eyebrow": "Kognitiv träning",
         "label": "Utveckling",
         "title": "Daglig kognitiv träning som ryms på en kaffepaus."
       },
@@ -2160,7 +2160,7 @@
     },
     "features": {
       "aligned": {
-        "body": "Läroplanen är i linje med samma konstruktramverk som driver WelloRise och Mät – inte en separat världsbild.",
+        "body": "Läroplanen är i linje med samma konstruktramverk som driver Utveckling och Mät – inte en separat världsbild.",
         "title": "Kognitivt och livslängdsanpassat"
       },
       "bookings": {
@@ -2255,10 +2255,10 @@
     "plans": {
       "platform": {
         "cta": "Prata med säljteamet",
-        "desc": "SaaS-åtkomst per anställd till WelloRise och WelloWize.",
+        "desc": "SaaS-åtkomst per anställd till Utveckling och Bedömning.",
         "features": [
-          "Daglig kognitiv träning (WelloRise)",
-          "Rekryterings- och internbedömningar (WelloWize)",
+          "Daglig kognitiv träning",
+          "Rekryterings- och internbedömningar",
           "Chefsdashboards och trendanalys",
           "GDPR-anpassad datalagring"
         ],
@@ -2399,7 +2399,7 @@
     },
     "hero": {
       "eyebrow": "Kognitiva konstrukt",
-      "lede": "Konstrukten bakom WelloRise och WelloWize — var och en med det paradigm vi använder, vad litteraturen fastställer och de operationella förbehåll vi håller oss till.",
+      "lede": "Konstrukten bakom Utveckling och Bedömning — var och en med det paradigm vi använder, vad litteraturen fastställer och de operationella förbehåll vi håller oss till.",
       "titleAccent": "lång litteratur.",
       "titleLead": "Fem domäner, var och en med en"
     },
@@ -2430,7 +2430,7 @@
       "wm": "Arbetsminne"
     },
     "prob": {
-      "body": "Icke-verbalt resonemang under begränsningar. Vi använder Raven-liknande progressiva matriser och problem av Tower of Hanoi-typ, med explicit registrering av tid på uppgift. Problemlösning är det konstrukt som mest påverkas av domänkunskap, vilket är skälet till att vi redovisar det tillsammans med de rollspecifika tekniska screeningarna i WelloWize.",
+      "body": "Icke-verbalt resonemang under begränsningar. Vi använder Raven-liknande progressiva matriser och problem av Tower of Hanoi-typ, med explicit registrering av tid på uppgift. Problemlösning är det konstrukt som mest påverkas av domänkunskap, vilket är skälet till att vi redovisar det tillsammans med de rollspecifika tekniska screeningarna i Bedömning.",
       "heading": "Vad är problemlösning och hur mäter vi den?"
     },
     "ps": {
@@ -3104,7 +3104,7 @@
       "intro": "Cognitive Rewards finns vid sidan av WelloWorks bredare plattform för arbetsplatsprestanda.",
       "links": {
         "growth": {
-          "label": "Daglig kognitiv träning med WelloRise",
+          "label": "Daglig kognitiv träning",
           "desc": "Adaptiva övningar över fem validerade kognitiva förmågor."
         },
         "workshops": {
@@ -3113,7 +3113,7 @@
         },
         "assessment": {
           "label": "Kognitiva bedömningar och teambedömningar",
-          "desc": "Förstå styrkor och teamsammansättning med WelloWize."
+          "desc": "Förstå styrkor och teamsammansättning."
         },
         "measure": {
           "label": "Longitudinella prestationstrender",

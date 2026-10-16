@@ -9,9 +9,8 @@
  *  §9 international SEO).
  * ──────────────────────────────────────────────────────────────────────────
  *
- *  Brand rule (SEO_GUIDELINES §2.1): "WelloWork" (and the product sub-brands
- *  "WelloRise" / "WelloWize") are NEVER translated or transliterated in any
- *  locale. They live in the message catalogs verbatim.
+ *  Brand rule (SEO_GUIDELINES §2.1): "WelloWork" is NEVER translated or
+ *  transliterated in any locale. It lives in the message catalogs verbatim.
  */
 
 /**

@@ -23,13 +23,13 @@
         "desc": "WelloWork's psychodynamic AI for employee self-discovery.",
         "label": "TwentyThird"
       },
-      "welloRise": {
+      "growth": {
         "desc": "Cognitive training",
-        "label": "WelloRise"
+        "label": "Growth"
       },
-      "welloWize": {
+      "assessment": {
         "desc": "Hiring & assessments",
-        "label": "WelloWize"
+        "label": "Assessment"
       },
       "workshops": {
         "desc": "Live group sessions",
@@ -104,7 +104,7 @@
       "location": "Uppsala, Sweden · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork is a workplace performance platform that combines daily cognitive training (WelloRise), hiring and internal assessments (WelloWize), longitudinal performance trends, live health workshops, biomarker sample testing, and a team-based reward game (Cognitive Rewards). Employees own their data; managers see anonymised, aggregated insights only.",
+      "body": "WelloWork is a workplace performance platform that combines daily cognitive training, hiring and internal assessments, longitudinal performance trends, live health workshops, biomarker sample testing, and a team-based reward game (Cognitive Rewards). Employees own their data; managers see anonymised, aggregated insights only.",
       "title": "What does WelloWork do?"
     },
     "who": {
@@ -514,8 +514,8 @@
         "items": [
           "Game & Reward",
           "TwentyThird",
-          "WelloRise [Growth]",
-          "WelloWize [Assessment]",
+          "Growth",
+          "Assessment",
           "Performance trends",
           "Workshops",
           "Proactive Care"
@@ -1053,12 +1053,12 @@
       "description": "Privacy policy, terms of service, cookie policy, and data processing summary for WelloWork — Swedish and EU markets, GDPR-native."
     },
     "platformGrowth": {
-      "title": "WelloRise — daily cognitive training for teams | WelloWork",
-      "description": "WelloRise is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks."
+      "title": "Growth — daily cognitive training for teams | WelloWork",
+      "description": "WelloWork Growth is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks."
     },
     "platformAssessment": {
-      "title": "WelloWize — cognitive & technical assessments | WelloWork",
-      "description": "WelloWize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after."
+      "title": "Assessment — cognitive & technical assessments | WelloWork",
+      "description": "WelloWork Assessment is one framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after."
     },
     "platformMeasure": {
       "title": "Measure — longitudinal cognitive performance trends | WelloWork",
@@ -1125,7 +1125,7 @@
   "platformAssessment": {
     "answer": {
       "body": "WelloWork's assessment product. It evaluates candidates and existing employees across the same cognitive and technical framework, returns hiring-panel-ready results in minutes, and produces internal benchmarks against role and tenure that can be re-run quarterly.",
-      "label": "What is WelloWize?"
+      "label": "What is WelloWork Assessment?"
     },
     "benchmarkChart": {
       "eyebrow": "Quarterly re-runs",
@@ -1137,12 +1137,12 @@
       "title": "Trajectory vs role benchmark"
     },
     "benchmarkSection": {
-      "body": "Internally, WelloWize can be re-run on a schedule. Results feed the longitudinal trend the Measure product surfaces — so promotion-readiness decisions are grounded in a trend across the year, rather than the score someone happened to post on assessment day.",
+      "body": "Internally, assessments can be re-run on a schedule. Results feed the longitudinal trend the Measure product surfaces — so promotion-readiness decisions are grounded in a trend across the year, rather than the score someone happened to post on assessment day.",
       "headingAccent": "role + tenure.",
       "headingLead": "Internal benchmarks against"
     },
     "crumbs": {
-      "current": "Assessment — WelloWize",
+      "current": "Assessment — Cognitive & technical",
       "home": "Home",
       "platform": "Platform"
     },
@@ -1150,12 +1150,12 @@
       "body": "A 30-minute walkthrough with sample candidate profiles and a candid pilot conversation.",
       "primary": "Book a demo",
       "secondary": "Read the research",
-      "title": "See WelloWize on real hiring panels."
+      "title": "See Assessment on real hiring panels."
     },
     "differSection": {
       "headingAccent": "hiring assessment tool?",
-      "headingLead": "How does WelloWize differ from a",
-      "intro": "Most tools end the moment a candidate signs. WelloWize uses the same framework before and after the offer letter.",
+      "headingLead": "How does WelloWork differ from a",
+      "intro": "Most tools end the moment a candidate signs. WelloWork uses the same framework before and after the offer letter.",
       "standardLabel": "Standard tool"
     },
     "features": {
@@ -1184,11 +1184,11 @@
         "body": "Normalised profile against the role benchmark, ready to discuss against the job spec.",
         "title": "Hiring panel reports in minutes"
       },
-      "title": "What does WelloWize ship with?"
+      "title": "What does Assessment ship with?"
     },
     "hero": {
-      "eyebrow": "WelloWize — Assessment",
-      "lede": "WelloWize gives hiring panels and people-leaders the same assessment vocabulary, so the work doesn't stop at the offer letter. Cognitive and technical, scored against role and tenure.",
+      "eyebrow": "Assessment — Cognitive & technical",
+      "lede": "WelloWork Assessment gives hiring panels and people-leaders the same assessment vocabulary, so the work doesn't stop at the offer letter. Cognitive and technical, scored against role and tenure.",
       "titleAccent": "and after.",
       "titleLead": "One assessment framework — hiring"
     },
@@ -1212,8 +1212,8 @@
       "intro": "Three layers of signal, returned together as a single profile."
     },
     "meta": {
-      "description": "WelloWize is one assessment framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after.",
-      "title": "WelloWize — cognitive & technical assessments | WelloWork"
+      "description": "WelloWork Assessment is one framework for hiring panels and internal benchmarking. Cognitive and technical, scored against role and tenure — defensible at the offer stage and after.",
+      "title": "Assessment — cognitive & technical assessments | WelloWork"
     },
     "panelSection": {
       "body": "Once a candidate completes the assessment, the hiring panel sees a normalised profile against the role benchmark. This is intentionally a profile, not a single number — defensible at the offer stage and easier to discuss against the job spec.",
@@ -1238,7 +1238,7 @@
       "scaleBenchmark": "· · · role benchmark",
       "scaleHigh": "High",
       "scaleLow": "Low",
-      "windowLabel": "wellowize · candidate profile"
+      "windowLabel": "assessment · candidate profile"
     },
     "standardPoints": {
       "endsAtOffer": "Ends at offer signing",
@@ -1264,7 +1264,7 @@
       "eyebrow": "Time to panel",
       "footnote": "Panel gets a normalised profile, not a raw transcript. Sample timings."
     },
-    "welloWizePoints": {
+    "welloWorkPoints": {
       "continuous": {
         "label": "Continuous, re-runnable",
         "why": "Quarterly re-runs feed a longitudinal trend the Measure product surfaces."
@@ -1282,7 +1282,7 @@
   "platformGrowth": {
     "answer": {
       "body": "The daily cognitive-training layer of the WelloWork platform — adaptive sessions across five validated constructs, paid in tokens, feeding the same longitudinal trend that managers see in aggregate.",
-      "label": "What is WelloRise?"
+      "label": "What is WelloWork Growth?"
     },
     "comparison": {
       "consumerLabel": "Consumer app",
@@ -1324,7 +1324,7 @@
       "standaloneScore": "Standalone score"
     },
     "crumbs": {
-      "current": "Growth — WelloRise",
+      "current": "Growth — Cognitive training",
       "home": "Home",
       "platform": "Platform"
     },
@@ -1333,7 +1333,7 @@
       "primary": "Book a demo",
       "secondary": "Compare platform tiers",
       "titleAccent": "manager dashboard.",
-      "titleLead": "See WelloRise inside the"
+      "titleLead": "See Growth inside the"
     },
     "employeeCards": {
       "adaptive": {
@@ -1383,7 +1383,7 @@
         "body": "Recommends optimal team blends per project, based on aggregated cognitive profiles and prior performance.",
         "title": "Team Composition engine"
       },
-      "titleAccent": "WelloRise",
+      "titleAccent": "Growth",
       "titleLead": "What does",
       "titleTrail": "ship with?",
       "tokens": {
@@ -1392,8 +1392,8 @@
       }
     },
     "hero": {
-      "eyebrow": "WelloRise — Growth",
-      "lede": "WelloRise is a daily cognitive training product designed for working weeks, not lab conditions. Five to ten minutes a day across five validated cognitive constructs — with a token economy that funds learning.",
+      "eyebrow": "Growth — Cognitive training",
+      "lede": "WelloWork Growth is a daily cognitive training product designed for working weeks, not lab conditions. Five to ten minutes a day across five validated cognitive constructs — with a token economy that funds learning.",
       "titleAccent": "coffee break.",
       "titleLead": "Daily cognitive training that fits in a"
     },
@@ -1424,8 +1424,8 @@
       "headingLead": "What's in it for the"
     },
     "meta": {
-      "description": "WelloRise is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks.",
-      "title": "WelloRise — daily cognitive training for teams | WelloWork"
+      "description": "WelloWork Growth is daily cognitive training across working memory, processing speed, attention, problem solving, and cognitive flexibility — built for busy work weeks.",
+      "title": "Growth — daily cognitive training for teams | WelloWork"
     },
     "sessionCard": {
       "chip": {
@@ -1448,7 +1448,7 @@
       "tokensEarned": "+12 tokens earned today",
       "tokensRedeem": "Redeem for courses, books, or peer help"
     },
-    "welloRisePoints": {
+    "welloWorkPoints": {
       "annotated": {
         "label": "Annotated to work events",
         "why": "Sprints, releases, and on-call shifts get tagged on the trend line."
@@ -1809,7 +1809,7 @@
           "Hiring panel results in minutes",
           "Internal benchmarks against role + tenure"
         ],
-        "eyebrow": "WelloWize",
+        "eyebrow": "Cognitive & technical",
         "label": "Assessment",
         "title": "Hiring and internal assessments — cognitive and technical."
       },
@@ -1823,7 +1823,7 @@
           "Tokens redeem for courses & growth tracks",
           "Team Composition engine recommends optimal teams per project"
         ],
-        "eyebrow": "WelloRise",
+        "eyebrow": "Cognitive training",
         "label": "Growth",
         "title": "Daily cognitive training that fits in a coffee break."
       },
@@ -2153,7 +2153,7 @@
     },
     "features": {
       "aligned": {
-        "body": "Curriculum aligned with the same construct framework that drives WelloRise and Measure — not a separate worldview.",
+        "body": "Curriculum aligned with the same construct framework that drives Growth and Measure — not a separate worldview.",
         "title": "Cognitive- and longevity-aligned"
       },
       "bookings": {
@@ -2248,10 +2248,10 @@
     "plans": {
       "platform": {
         "cta": "Talk to sales",
-        "desc": "Per-employee SaaS access to WelloRise and WelloWize.",
+        "desc": "Per-employee SaaS access to Growth and Assessment.",
         "features": [
-          "Daily cognitive training (WelloRise)",
-          "Hiring & internal assessments (WelloWize)",
+          "Daily cognitive training",
+          "Hiring & internal assessments",
           "Manager dashboards & trend analytics",
           "GDPR-native data residency"
         ],
@@ -2392,7 +2392,7 @@
     },
     "hero": {
       "eyebrow": "Cognitive constructs",
-      "lede": "The constructs behind WelloRise and WelloWize — each with the paradigm we use, what the literature establishes, and the operational caveats we hold ourselves to.",
+      "lede": "The constructs behind Growth and Assessment — each with the paradigm we use, what the literature establishes, and the operational caveats we hold ourselves to.",
       "titleAccent": "long literature.",
       "titleLead": "Five domains, each with a"
     },
@@ -2423,7 +2423,7 @@
       "wm": "Working Memory"
     },
     "prob": {
-      "body": "Non-verbal reasoning under constraints. We use Raven-style progressive matrices and tower-of-Hanoi-style problems, with explicit time-on-task tracking. Problem solving is the construct most influenced by domain knowledge, which is why we report it alongside the role-specific technical screens in WelloWize.",
+      "body": "Non-verbal reasoning under constraints. We use Raven-style progressive matrices and tower-of-Hanoi-style problems, with explicit time-on-task tracking. Problem solving is the construct most influenced by domain knowledge, which is why we report it alongside the role-specific technical screens in Assessment.",
       "heading": "What is problem solving and how do we measure it?"
     },
     "ps": {
@@ -3097,7 +3097,7 @@
       "intro": "Cognitive Rewards sits alongside WelloWork's wider workplace performance platform.",
       "links": {
         "growth": {
-          "label": "Daily cognitive training with WelloRise",
+          "label": "Daily cognitive training",
           "desc": "Adaptive exercises across five validated cognitive constructs."
         },
         "workshops": {
@@ -3106,7 +3106,7 @@
         },
         "assessment": {
           "label": "Cognitive and team assessments",
-          "desc": "Understand strengths and team composition with WelloWize."
+          "desc": "Understand strengths and team composition."
         },
         "measure": {
           "label": "Longitudinal performance trends",

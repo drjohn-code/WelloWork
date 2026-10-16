@@ -6,7 +6,7 @@ This version has breaking changes — APIs, conventions, and file structure may 
 
 # WelloWork marketing site
 
-Single-page marketing site for **WelloWork** — a Swedish B2B workplace performance platform combining cognitive training (WelloRise), assessments (WelloWize), longitudinal trend monitoring, live health workshops, and biomarker sample testing.
+Single-page marketing site for **WelloWork** — a Swedish B2B workplace performance platform combining cognitive training (Growth), assessments (Assessment), longitudinal trend monitoring, live health workshops, and biomarker sample testing.
 
 ## Stack
 
@@ -40,6 +40,7 @@ The hero originally invented metrics, customer logos, and a clinician/CBT vocabu
 3. **Employee-first privacy framing.** Anywhere employee data appears, frame it as "employees own their data; managers see aggregated, anonymised insights." Use the `<PrivacyChip>` primitive.
 4. **Hero must communicate the unique combination** in under 3 seconds: daily cognitive training + team composition intelligence + biomarker health data + longitudinal performance trends.
 5. **Swedish identity is subtle, not kitsch.** `<SwedenChip>` ("Built in Stockholm") and the "Made in Stockholm · GDPR-native · ISO 27001 in progress" footnote — no flags, no fika clichés.
+6. **No product sub-brands.** The old names "WelloRise" and "WelloWize" were retired (Oct 2026). Refer to the products as Growth and Assessment (like Measure), or "WelloWork Growth" / "WelloWork Assessment" where a full name is needed.
 
 ## Section order (don't reorder without checking the chat history)
 

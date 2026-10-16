@@ -4,7 +4,7 @@
     "locale": "lt",
     "language": "Lithuanian",
     "method": "LLM machine translation of en.json",
-    "instructions": "Unreviewed machine translation. Have a native Lithuanian speaker review before treating as production-quality. Brand names WelloWork / WelloRise / WelloWize are kept verbatim."
+    "instructions": "Unreviewed machine translation. Have a native Lithuanian speaker review before treating as production-quality. Brand name WelloWork kept verbatim."
   },
   "about": {
     "based": {
@@ -30,13 +30,13 @@
         "desc": "WelloWork psichodinaminis DI, skirtas darbuotojų savęs pažinimui.",
         "label": "TwentyThird"
       },
-      "welloRise": {
+      "growth": {
         "desc": "Kognityvinis lavinimas",
-        "label": "WelloRise"
+        "label": "Tobulėjimas"
       },
-      "welloWize": {
+      "assessment": {
         "desc": "Įdarbinimas ir vertinimai",
-        "label": "WelloWize"
+        "label": "Vertinimas"
       },
       "workshops": {
         "desc": "Tiesioginės grupinės sesijos",
@@ -111,7 +111,7 @@
       "location": "Upsala, Švedija · 59°51′N"
     },
     "whatWeDo": {
-      "body": "WelloWork yra darbo vietos veiklos platforma, jungianti kasdienį kognityvinį lavinimą (WelloRise), įdarbinimo ir vidinius vertinimus (WelloWize), ilgalaikes veiklos tendencijas, tiesiogines sveikatos dirbtuves, biožymenų mėginių tyrimus ir komandinį atlygio žaidimą (Cognitive Rewards). Darbuotojai valdo savo duomenis; vadovai mato tik anonimizuotas, apibendrintas įžvalgas.",
+      "body": "WelloWork yra darbo vietos veiklos platforma, jungianti kasdienį kognityvinį lavinimą, įdarbinimo ir vidinius vertinimus, ilgalaikes veiklos tendencijas, tiesiogines sveikatos dirbtuves, biožymenų mėginių tyrimus ir komandinį atlygio žaidimą (Cognitive Rewards). Darbuotojai valdo savo duomenis; vadovai mato tik anonimizuotas, apibendrintas įžvalgas.",
       "title": "Ką daro WelloWork?"
     },
     "who": {
@@ -521,8 +521,8 @@
         "items": [
           "Žaidimas ir atlygis",
           "TwentyThird",
-          "WelloRise [Augimas]",
-          "WelloWize [Vertinimas]",
+          "Tobulėjimas",
+          "Vertinimas",
           "Veiklos tendencijos",
           "Seminarai",
           "Proaktyvi priežiūra"
@@ -1060,12 +1060,12 @@
       "description": "WelloWork privatumo politika, naudojimosi sąlygos, slapukų politika ir duomenų tvarkymo santrauka — Švedijos ir ES rinkoms, atitinkanti GDPR."
     },
     "platformGrowth": {
-      "title": "WelloRise — kasdienis kognityvinis lavinimas komandoms | WelloWork",
-      "description": "WelloRise — kasdienis kognityvinis lavinimas apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas įtemptoms darbo savaitėms."
+      "title": "Tobulėjimas — kasdienis kognityvinis lavinimas komandoms | WelloWork",
+      "description": "WelloWork Tobulėjimas — kasdienis kognityvinis lavinimas, apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas įtemptoms darbo savaitėms."
     },
     "platformAssessment": {
-      "title": "WelloWize — kognityviniai ir techniniai vertinimai | WelloWork",
-      "description": "WelloWize — viena vertinimo sistema atrankos komisijoms ir vidiniam lyginamajam vertinimui. Kognityvinė ir techninė, vertinama pagal pareigybę ir darbo stažą — pagrįsta tiek pasiūlymo etape, tiek vėliau."
+      "title": "Vertinimas — kognityviniai ir techniniai vertinimai | WelloWork",
+      "description": "WelloWork Vertinimas — viena sistema atrankos komisijoms ir vidiniam lyginamajam vertinimui. Kognityvinė ir techninė, vertinama pagal pareigybę ir darbo stažą — pagrįsta tiek pasiūlymo etape, tiek vėliau."
     },
     "platformMeasure": {
       "title": "Matavimas — ilgalaikės kognityvinio našumo tendencijos | WelloWork",
@@ -1132,7 +1132,7 @@
   "platformAssessment": {
     "answer": {
       "body": "WelloWork vertinimo produktas. Jis vertina kandidatus ir esamus darbuotojus pagal tą pačią pažinimo ir techninių gebėjimų sistemą, per kelias minutes pateikia atrankos komisijai parengtus rezultatus ir sukuria vidinius lyginamuosius rodiklius pagal pareigybę ir darbo stažą, kuriuos galima atnaujinti kas ketvirtį.",
-      "label": "Kas yra WelloWize?"
+      "label": "Kas yra WelloWork Vertinimas?"
     },
     "benchmarkChart": {
       "eyebrow": "Ketvirtiniai pakartojimai",
@@ -1144,12 +1144,12 @@
       "title": "Trajektorija ir pareigybės lyginamasis rodiklis"
     },
     "benchmarkSection": {
-      "body": "Viduje WelloWize galima pakartoti pagal grafiką. Rezultatai maitina ilgalaikę tendenciją, kurią atskleidžia Measure produktas, todėl sprendimai dėl pasirengimo paaukštinimui grindžiami metų tendencija, o ne rezultatu, kurį žmogus atsitiktinai pasiekė vertinimo dieną.",
+      "body": "Viduje vertinimus galima pakartoti pagal grafiką. Rezultatai maitina ilgalaikę tendenciją, kurią atskleidžia Measure produktas, todėl sprendimai dėl pasirengimo paaukštinimui grindžiami metų tendencija, o ne rezultatu, kurį žmogus atsitiktinai pasiekė vertinimo dieną.",
       "headingAccent": "pareigybę ir stažą.",
       "headingLead": "Vidiniai lyginamieji rodikliai pagal"
     },
     "crumbs": {
-      "current": "Vertinimas — WelloWize",
+      "current": "Vertinimas — Kognityvinis ir techninis",
       "home": "Pradžia",
       "platform": "Platforma"
     },
@@ -1157,12 +1157,12 @@
       "body": "30 minučių pristatymas su pavyzdiniais kandidatų profiliais ir atviras pokalbis apie bandomąjį etapą.",
       "primary": "Užsisakyti demonstraciją",
       "secondary": "Skaityti tyrimus",
-      "title": "Pamatykite WelloWize realiose atrankos komisijose."
+      "title": "Pamatykite Vertinimą realiose atrankos komisijose."
     },
     "differSection": {
       "headingAccent": "atrankos vertinimo įrankio?",
-      "headingLead": "Kuo WelloWize skiriasi nuo",
-      "intro": "Dauguma įrankių baigia veikti vos kandidatui pasirašius. WelloWize naudoja tą pačią sistemą prieš pasiūlymo laišką ir po jo.",
+      "headingLead": "Kuo WelloWork skiriasi nuo",
+      "intro": "Dauguma įrankių baigia veikti vos kandidatui pasirašius. WelloWork naudoja tą pačią sistemą prieš pasiūlymo laišką ir po jo.",
       "standardLabel": "Standartinis įrankis"
     },
     "features": {
@@ -1191,11 +1191,11 @@
         "body": "Normalizuotas profilis pagal pareigybės lyginamąjį rodiklį, parengtas aptarti pagal pareigybės aprašymą.",
         "title": "Atrankos komisijos ataskaitos per kelias minutes"
       },
-      "title": "Su kuo WelloWize pateikiamas?"
+      "title": "Su kuo Vertinimas pateikiamas?"
     },
     "hero": {
-      "eyebrow": "WelloWize — Vertinimas",
-      "lede": "WelloWize suteikia atrankos komisijoms ir žmonių vadovams tą pačią vertinimo terminiją, todėl darbas nesibaigia ties pasiūlymo laišku. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą.",
+      "eyebrow": "Vertinimas — Kognityvinis ir techninis",
+      "lede": "WelloWork Vertinimas suteikia atrankos komisijoms ir žmonių vadovams tą pačią vertinimo terminiją, todėl darbas nesibaigia ties pasiūlymo laišku. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą.",
       "titleAccent": "ir po jo.",
       "titleLead": "Viena vertinimo sistema — įdarbinimui"
     },
@@ -1219,8 +1219,8 @@
       "intro": "Trys signalo sluoksniai, pateikiami kartu kaip vienas profilis."
     },
     "meta": {
-      "description": "WelloWize yra viena vertinimo sistema atrankos komisijoms ir vidiniam lyginimui. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą — pagrįstas pasiūlymo etape ir po jo.",
-      "title": "WelloWize — pažinimo ir techniniai vertinimai | WelloWork"
+      "description": "WelloWork Vertinimas yra viena sistema atrankos komisijoms ir vidiniam lyginimui. Pažinimo ir techninis vertinimas pagal pareigybę ir stažą — pagrįstas pasiūlymo etape ir po jo.",
+      "title": "Vertinimas — pažinimo ir techniniai vertinimai | WelloWork"
     },
     "panelSection": {
       "body": "Kandidatui atlikus vertinimą, atrankos komisija mato normalizuotą profilį pagal pareigybės lyginamąjį rodiklį. Tai sąmoningai yra profilis, o ne vienas skaičius — pagrįstas pasiūlymo etape ir lengviau aptariamas pagal pareigybės aprašymą.",
@@ -1245,7 +1245,7 @@
       "scaleBenchmark": "· · · pareigybės lyginamasis rodiklis",
       "scaleHigh": "Aukštas",
       "scaleLow": "Žemas",
-      "windowLabel": "wellowize · kandidato profilis"
+      "windowLabel": "vertinimas · kandidato profilis"
     },
     "standardPoints": {
       "endsAtOffer": "Baigiasi pasirašius pasiūlymą",
@@ -1271,7 +1271,7 @@
       "eyebrow": "Laikas iki komisijos",
       "footnote": "Komisija gauna normalizuotą profilį, o ne neapdorotą įrašą. Pavyzdiniai laikai."
     },
-    "welloWizePoints": {
+    "welloWorkPoints": {
       "continuous": {
         "label": "Nepertraukiamas, pakartojamas",
         "why": "Ketvirtiniai pakartojimai maitina ilgalaikę tendenciją, kurią atskleidžia Measure produktas."
@@ -1289,7 +1289,7 @@
   "platformGrowth": {
     "answer": {
       "body": "Kasdienio kognityvinio lavinimo sluoksnis WelloWork platformoje — adaptyvios sesijos, apimančios penkis patvirtintus konstruktus, apmokamos žetonais ir maitinančios tą pačią ilgalaikę tendenciją, kurią vadovai mato apibendrintą.",
-      "label": "Kas yra WelloRise?"
+      "label": "Kas yra WelloWork Tobulėjimas?"
     },
     "comparison": {
       "consumerLabel": "Vartotojiška programėlė",
@@ -1331,7 +1331,7 @@
       "standaloneScore": "Atskiras balas"
     },
     "crumbs": {
-      "current": "Augimas — WelloRise",
+      "current": "Tobulėjimas — Kognityvinis lavinimas",
       "home": "Pradžia",
       "platform": "Platforma"
     },
@@ -1340,7 +1340,7 @@
       "primary": "Užsisakyti demonstraciją",
       "secondary": "Palyginti platformos planus",
       "titleAccent": "vadovo skydelyje.",
-      "titleLead": "Pamatykite WelloRise"
+      "titleLead": "Pamatykite Tobulėjimą"
     },
     "employeeCards": {
       "adaptive": {
@@ -1390,17 +1390,17 @@
         "body": "Rekomenduoja optimalų komandos sudėties derinį kiekvienam projektui, remiantis apibendrintais kognityviniais profiliais ir ankstesniais rezultatais.",
         "title": "Komandos sudėties variklis"
       },
-      "titleAccent": "WelloRise",
-      "titleLead": "Ką siūlo",
-      "titleTrail": "?",
+      "titleAccent": "Tobulėjimas",
+      "titleLead": "Ką",
+      "titleTrail": "siūlo?",
       "tokens": {
         "body": "Sesijos uždirba žetonus, kuriuos galima iškeisti į kursus, tobulinimo programas ar kolegų pagalbą — finansuojant mokymąsi, kurio komanda jau nori.",
         "title": "Žetonų ekonomika"
       }
     },
     "hero": {
-      "eyebrow": "WelloRise — Augimas",
-      "lede": "WelloRise yra kasdienio kognityvinio lavinimo produktas, sukurtas darbo savaitėms, o ne laboratorijos sąlygoms. Penkios–dešimt minučių per dieną penkiuose patvirtintuose kognityviniuose konstruktuose — su žetonų ekonomika, finansuojančia mokymąsi.",
+      "eyebrow": "Tobulėjimas — Kognityvinis lavinimas",
+      "lede": "WelloWork Tobulėjimas yra kasdienio kognityvinio lavinimo produktas, sukurtas darbo savaitėms, o ne laboratorijos sąlygoms. Penkios–dešimt minučių per dieną penkiuose patvirtintuose kognityviniuose konstruktuose — su žetonų ekonomika, finansuojančia mokymąsi.",
       "titleAccent": "kavos pertraukėlę.",
       "titleLead": "Kasdienis kognityvinis lavinimas, telpantis į"
     },
@@ -1431,8 +1431,8 @@
       "headingLead": "Kuo tai naudinga"
     },
     "meta": {
-      "description": "WelloRise yra kasdienis kognityvinis lavinimas, apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas užimtoms darbo savaitėms.",
-      "title": "WelloRise — kasdienis kognityvinis lavinimas komandoms | WelloWork"
+      "description": "WelloWork Tobulėjimas yra kasdienis kognityvinis lavinimas, apimantis darbinę atmintį, apdorojimo greitį, dėmesį, problemų sprendimą ir kognityvinį lankstumą — sukurtas užimtoms darbo savaitėms.",
+      "title": "Tobulėjimas — kasdienis kognityvinis lavinimas komandoms | WelloWork"
     },
     "sessionCard": {
       "chip": {
@@ -1455,7 +1455,7 @@
       "tokensEarned": "+12 žetonų uždirbta šiandien",
       "tokensRedeem": "Iškeiskite į kursus, knygas ar kolegų pagalbą"
     },
-    "welloRisePoints": {
+    "welloWorkPoints": {
       "annotated": {
         "label": "Pažymėta prie darbo įvykių",
         "why": "Sprintai, leidimai ir budėjimo pamainos pažymimi tendencijų linijoje."
@@ -1816,7 +1816,7 @@
           "Atrankos komisijos rezultatai per kelias minutes",
           "Vidiniai etalonai pagal vaidmenį ir stažą"
         ],
-        "eyebrow": "WelloWize",
+        "eyebrow": "Kognityvinis ir techninis",
         "label": "Vertinimas",
         "title": "Įdarbinimo ir vidiniai vertinimai — kognityviniai ir techniniai."
       },
@@ -1830,7 +1830,7 @@
           "Žetonai keičiami į kursus ir tobulėjimo kryptis",
           "Komandos sudarymo varikliukas rekomenduoja optimalias komandas kiekvienam projektui"
         ],
-        "eyebrow": "WelloRise",
+        "eyebrow": "Kognityvinis lavinimas",
         "label": "Tobulėjimas",
         "title": "Kasdienės kognityvinės treniruotės, telpančios į kavos pertraukėlę."
       },
@@ -2160,7 +2160,7 @@
     },
     "features": {
       "aligned": {
-        "body": "Programa suderinta su ta pačia konstruktų sistema, kuri valdo WelloRise ir Measure – tai nėra atskira pasaulėžiūra.",
+        "body": "Programa suderinta su ta pačia konstruktų sistema, kuri valdo Tobulėjimą ir Measure – tai nėra atskira pasaulėžiūra.",
         "title": "Suderinta su kognityvinėmis ir ilgaamžiškumo nuostatomis"
       },
       "bookings": {
@@ -2255,10 +2255,10 @@
     "plans": {
       "platform": {
         "cta": "Susisiekite su pardavimų komanda",
-        "desc": "SaaS prieiga vienam darbuotojui prie WelloRise ir WelloWize.",
+        "desc": "SaaS prieiga vienam darbuotojui prie Tobulėjimo ir Vertinimo.",
         "features": [
-          "Kasdienės kognityvinės treniruotės (WelloRise)",
-          "Įdarbinimo ir vidiniai vertinimai (WelloWize)",
+          "Kasdienės kognityvinės treniruotės",
+          "Įdarbinimo ir vidiniai vertinimai",
           "Vadovų ataskaitų skydeliai ir tendencijų analitika",
           "GDPR atitinkanti duomenų saugojimo vieta"
         ],
@@ -2399,7 +2399,7 @@
     },
     "hero": {
       "eyebrow": "Kognityviniai konstruktai",
-      "lede": "Konstruktai, kuriais grindžiami WelloRise ir WelloWize — kiekvienas su naudojama paradigma, tuo, ką nustato literatūra, ir veiklos atsargumo nuostatomis, kurių patys laikomės.",
+      "lede": "Konstruktai, kuriais grindžiami Tobulėjimas ir Vertinimas — kiekvienas su naudojama paradigma, tuo, ką nustato literatūra, ir veiklos atsargumo nuostatomis, kurių patys laikomės.",
       "titleAccent": "ilga literatūra.",
       "titleLead": "Penki domenai, kiekvienas turintis"
     },
@@ -2430,7 +2430,7 @@
       "wm": "Darbinė atmintis"
     },
     "prob": {
-      "body": "Neverbalinis samprotavimas esant apribojimams. Naudojame Raveno tipo progresuojančias matricas ir Hanojaus bokšto tipo užduotis su aiškiu užduočiai skirto laiko stebėjimu. Problemų sprendimas yra konstruktas, kuriam labiausiai įtaką daro srities žinios, todėl jį pateikiame kartu su konkrečiai rolei skirtais techniniais patikrinimais WelloWize.",
+      "body": "Neverbalinis samprotavimas esant apribojimams. Naudojame Raveno tipo progresuojančias matricas ir Hanojaus bokšto tipo užduotis su aiškiu užduočiai skirto laiko stebėjimu. Problemų sprendimas yra konstruktas, kuriam labiausiai įtaką daro srities žinios, todėl jį pateikiame kartu su konkrečiai rolei skirtais techniniais patikrinimais Vertinime.",
       "heading": "Kas yra problemų sprendimas ir kaip jį matuojame?"
     },
     "ps": {
@@ -3104,7 +3104,7 @@
       "intro": "Cognitive Rewards papildo platesnę WelloWork darbo vietos efektyvumo platformą.",
       "links": {
         "growth": {
-          "label": "Kasdienis kognityvinis mokymas su WelloRise",
+          "label": "Kasdienis kognityvinis mokymas",
           "desc": "Adaptyvūs pratimai penkiose patvirtintose kognityvinėse srityse."
         },
         "workshops": {
@@ -3113,7 +3113,7 @@
         },
         "assessment": {
           "label": "Kognityviniai ir komandos vertinimai",
-          "desc": "Supraskite stipriąsias puses ir komandos sudėtį su WelloWize."
+          "desc": "Supraskite stipriąsias puses ir komandos sudėtį."
         },
         "measure": {
           "label": "Ilgalaikės veiklos tendencijos",
