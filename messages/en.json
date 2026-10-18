@@ -3924,7 +3924,8 @@
       "submit": "Sign in",
       "signingIn": "Signing in…",
       "invalid": "That secret isn't right.",
-      "tooMany": "Too many attempts. Try again in 15 minutes."
+      "tooMany": "Too many attempts. Try again in 15 minutes.",
+      "notConfigured": "Admin sign-in isn't set up on this server: ADMIN_SECRET is missing. Add it to the environment and redeploy."
     },
     "payouts": {
       "metaTitle": "Payouts | WelloWork admin",

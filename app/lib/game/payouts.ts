@@ -50,6 +50,11 @@ function adminSecret(): string | null {
   return process.env.ADMIN_SECRET?.trim() || null;
 }
 
+/** Whether this server has an admin secret at all (so sign-in can say "not set up" instead of "wrong secret"). */
+export function isAdminConfigured(): boolean {
+  return adminSecret() !== null;
+}
+
 /** Stateless signed session: HMAC(expiry) under ADMIN_SECRET. */
 export function createAdminSession(secret: string): string | null {
   const expected = adminSecret();

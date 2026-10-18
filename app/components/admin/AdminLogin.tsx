@@ -17,7 +17,7 @@ export function AdminLogin() {
     setError(null);
     const res = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ secret }) });
     if (res.ok) router.push("/admin/payouts");
-    else setError(res.status === 429 ? t("tooMany") : t("invalid"));
+    else setError(res.status === 429 ? t("tooMany") : res.status === 503 ? t("notConfigured") : t("invalid"));
     setBusy(false);
   }
 
