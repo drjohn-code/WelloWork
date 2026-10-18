@@ -3873,7 +3873,8 @@
       "verdictTitle": "De eindopdracht",
       "verdictScore": "Teamscore {score} van 100. Dit was voor de lol en verandert de verdeling niet.",
       "thanks": "Bedankt voor het spelen. Jullie host {host} kan het tabblad nu sluiten.",
-      "episodeWrap": "{world} · Aflevering {n}:"
+      "episodeWrap": "{world} · Aflevering {n}:",
+      "testGameNote": "Dit was een testspel, dus er wordt geen geld uitbetaald en er zijn geen bankgegevens nodig. De bedragen laten zien hoe de verdeling zou zijn uitgevallen."
     },
     "payout": {
       "title": "Waar mogen we je {amount} naartoe sturen?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Iedereen mag stemmen. Bij gelijkspel telt de keuze van {host}.",
       "startWith": "Aan kop: {world}",
       "startSurprise": "Nog geen stemmen: de spelleider kiest."
-    }
+    },
+    "testGame": "Testspel: er wordt niets uitbetaald."
   },
   "admin": {
     "login": {

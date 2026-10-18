@@ -3873,7 +3873,8 @@
       "verdictTitle": "El reto final",
       "verdictScore": "Puntuación del equipo: {score} de 100. Esto era por diversión y no cambia el reparto.",
       "thanks": "Gracias por jugar. Vuestro anfitrión {host} ya puede cerrar la pestaña.",
-      "episodeWrap": "{world} · Episodio {n}:"
+      "episodeWrap": "{world} · Episodio {n}:",
+      "testGameNote": "Esta fue una partida de prueba, así que no se paga dinero ni hacen falta datos bancarios. Los importes muestran cómo habría quedado el reparto."
     },
     "payout": {
       "title": "¿Dónde te enviamos tus {amount}?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Todos pueden votar. En caso de empate, gana la elección de {host}.",
       "startWith": "En cabeza: {world}",
       "startSurprise": "Aún no hay votos: elegirá el máster del juego."
-    }
+    },
+    "testGame": "Partida de prueba: no se paga nada."
   },
   "admin": {
     "login": {

@@ -5470,3 +5470,7 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
   .ep-dot { transition: none; }
   .streak-plus, .clean-confetti, .burst-ring { display: none; }
 }
+
+/* Test games (mock-paid playtests) */
+.test-game-badge { display: inline-block; margin: 0 0 10px; padding: 5px 12px; border-radius: var(--r-pill); background: #FFF6C7; border: 1px solid #F0DE8E; color: #7A5B00; font-size: 13px; font-weight: 800; }
+.test-game-note { margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; background: #FFF6C7; border: 1px solid #F0DE8E; color: #5C4600; font-size: 14px; line-height: 1.5; }

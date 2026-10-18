@@ -69,6 +69,10 @@ export async function finalizeGame(ctx: GameContext): Promise<void> {
     })),
     { onConflict: "game_id,player_id" }
   );
+  // Test games (mock-paid orders, used for playtests) end here: no payout rows,
+  // so nothing can reach the admin payout list, and no result emails asking for bank details.
+  if (order.status === "mock_paid") return;
+
   await db.from("cognitive_rewards_payouts").upsert(
     scores.map((s) => ({ game_id: game.id, player_id: s.playerId, amount_eur: s.shareEur })),
     { onConflict: "game_id,player_id", ignoreDuplicates: true }

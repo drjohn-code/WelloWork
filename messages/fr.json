@@ -3873,7 +3873,8 @@
       "verdictTitle": "Le défi final",
       "verdictScore": "Score d’équipe {score} sur 100. C’était pour le plaisir, sans effet sur la répartition.",
       "thanks": "Merci d’avoir joué. Votre hôte {host} peut fermer l’onglet.",
-      "episodeWrap": "{world} · Épisode {n} :"
+      "episodeWrap": "{world} · Épisode {n} :",
+      "testGameNote": "C’était une partie test : aucun argent n’est versé et aucune coordonnée bancaire n’est nécessaire. Les montants montrent comment la répartition se serait faite."
     },
     "payout": {
       "title": "Où envoyer vos {amount} ?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Tout le monde peut voter. En cas d’égalité, le choix de {host} l’emporte.",
       "startWith": "En tête : {world}",
       "startSurprise": "Pas encore de vote : le maître du jeu choisira."
-    }
+    },
+    "testGame": "Partie test : rien n’est versé."
   },
   "admin": {
     "login": {

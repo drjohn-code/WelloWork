@@ -3873,7 +3873,8 @@
       "verdictTitle": "Slututmaningen",
       "verdictScore": "Lagpoäng {score} av 100. Den här var för skojs skull och påverkar inte fördelningen.",
       "thanks": "Tack för att ni spelade. Er värd {host} kan stänga fliken nu.",
-      "episodeWrap": "{world} · Avsnitt {n}:"
+      "episodeWrap": "{world} · Avsnitt {n}:",
+      "testGameNote": "Det här var ett testspel, så inga pengar betalas ut och inga bankuppgifter behövs. Beloppen visar hur fördelningen hade blivit."
     },
     "payout": {
       "title": "Vart ska vi skicka dina {amount}?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Alla kan rösta. Vid lika vinner {host}s val.",
       "startWith": "Leder: {world}",
       "startSurprise": "Inga röster än: spelledaren väljer."
-    }
+    },
+    "testGame": "Testspel: inget betalas ut."
   },
   "admin": {
     "login": {

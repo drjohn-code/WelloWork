@@ -209,7 +209,7 @@ export function Scorecard({ view, act }: { view: GameView; act: (b: { action: st
                 ))}
               </dl>
               <p className="play-small">{t("privacyNote")}</p>
-              <PayoutForm view={view} act={act} />
+              {view.testGame ? <p className="test-game-note">{t("testGameNote")}</p> : <PayoutForm view={view} act={act} />}
             </section>
           )}
 

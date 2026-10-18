@@ -76,6 +76,7 @@ export function Lobby({ view, act, join, sound }: { view: GameView; act: (b: { a
           </div>
         )}
         <p className="play-eyebrow">{t("eyebrow")}</p>
+        {view.testGame && <p className="test-game-badge">{t("testGame")}</p>}
         <h1 id="play-welcome" className="play-title">
           {t("welcomeLead")}
           <span className="italic-serif" style={{ color: "var(--accent)" }}>

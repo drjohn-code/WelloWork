@@ -3873,7 +3873,8 @@
       "verdictTitle": "Finalinė užduotis",
       "verdictScore": "Komandos įvertinimas {score} iš 100. Tai buvo dėl smagumo ir padalijimo nekeičia.",
       "thanks": "Ačiū, kad žaidėte. Jūsų vedėjas {host} dabar gali uždaryti skirtuką.",
-      "episodeWrap": "{world} · {n} serija:"
+      "episodeWrap": "{world} · {n} serija:",
+      "testGameNote": "Tai buvo bandomasis žaidimas, todėl pinigai neišmokami ir banko duomenų nereikia. Sumos rodo, kaip būtų pasidalyta."
     },
     "payout": {
       "title": "Kur siųsti jūsų {amount}?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Balsuoti gali visi. Esant lygiosioms, lemia {host} pasirinkimas.",
       "startWith": "Pirmauja: {world}",
       "startSurprise": "Balsų dar nėra: rinksis žaidimo vedėjas."
-    }
+    },
+    "testGame": "Bandomasis žaidimas: niekas neišmokama."
   },
   "admin": {
     "login": {

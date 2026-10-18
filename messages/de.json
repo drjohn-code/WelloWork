@@ -3873,7 +3873,8 @@
       "verdictTitle": "Die finale Aufgabe",
       "verdictScore": "Teamwertung {score} von 100. Die war zum Spaß und ändert die Aufteilung nicht.",
       "thanks": "Danke fürs Spielen. Euer Host {host} kann den Tab jetzt schließen.",
-      "episodeWrap": "{world} · Folge {n}:"
+      "episodeWrap": "{world} · Folge {n}:",
+      "testGameNote": "Das war ein Testspiel, daher wird kein Geld ausgezahlt und es werden keine Bankdaten benötigt. Die Beträge zeigen, wie die Aufteilung ausgefallen wäre."
     },
     "payout": {
       "title": "Wohin sollen wir deine {amount} schicken?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Alle können abstimmen. Bei Gleichstand zählt die Wahl von {host}.",
       "startWith": "Vorne: {world}",
       "startSurprise": "Noch keine Stimmen: Die Spielleitung wählt."
-    }
+    },
+    "testGame": "Testspiel: Es wird nichts ausgezahlt."
   },
   "admin": {
     "login": {

@@ -10,6 +10,7 @@ import { GameError, type GameContext } from "./service";
 export async function submitPayoutDetails(ctx: GameContext, input: { holderName: string; iban: string; country: string }): Promise<void> {
   const { db, game, me, order } = ctx;
   if (game.phase !== "scorecard" && game.phase !== "done") throw new GameError("WRONG_PHASE");
+  if (order.status === "mock_paid") throw new GameError("TEST_GAME");
   const holderName = input.holderName.trim().slice(0, 120);
   const country = input.country.trim().toUpperCase().slice(0, 2);
   const iban = normalizeIban(input.iban);

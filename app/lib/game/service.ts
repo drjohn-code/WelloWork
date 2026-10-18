@@ -744,6 +744,7 @@ export async function getView(ctx: GameContext): Promise<GameView> {
   const view: GameView = {
     phase: game.phase,
     finished: false,
+    testGame: order.status === "mock_paid",
     language: game.language,
     teamSize: order.team_size,
     pool: order.reward_pool,

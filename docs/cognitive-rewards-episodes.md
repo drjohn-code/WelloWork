@@ -82,5 +82,6 @@ Communication first: sharing 35%, teamwork 35%, solving 15%, focus 7.5%, memory 
 
 - Four worlds (office, station, heist, studio). A team that plays a fifth time sees a world again, with a new premise and round sequence.
 - The witness and line-up pictures have generic screen-reader labels; card and tile names are read out.
-- All new strings in sv, nl, de, fr, es, it and lt were written without native review, like the rest of the game.
+- All new strings in sv, nl, de, fr, es, it and lt were written without native review, like the rest of the game. Review sheet with every string changed on 18 October, all languages side by side: `docs/translation-review/cognitive-rewards-2026-10-18.csv`.
+- Playtests without money: `docs/cognitive-rewards-playtest.md` (`npm run playtest`, `npm run playtest:cleanup`). Mock-paid games are test games: no bank details, no payout rows, no result emails.
 - The model sometimes describes the setup loosely (for example "three partial memories" when two people hold rows). Setups are flavour only; the task text under them is exact.

@@ -3873,7 +3873,8 @@
       "verdictTitle": "La sfida finale",
       "verdictScore": "Punteggio di squadra {score} su 100. Questa era per divertimento e non cambia la divisione.",
       "thanks": "Grazie per aver giocato. Il vostro host {host} può chiudere la scheda.",
-      "episodeWrap": "{world} · Episodio {n}:"
+      "episodeWrap": "{world} · Episodio {n}:",
+      "testGameNote": "Questa era una partita di prova: nessun pagamento e nessun dato bancario necessario. Gli importi mostrano come sarebbe stata la suddivisione."
     },
     "payout": {
       "title": "Dove inviamo i tuoi {amount}?",
@@ -3918,7 +3919,8 @@
       "guestHint": "Tutti possono votare. In caso di parità vince la scelta di {host}.",
       "startWith": "In testa: {world}",
       "startSurprise": "Ancora nessun voto: sceglierà il game master."
-    }
+    },
+    "testGame": "Partita di prova: non viene pagato nulla."
   },
   "admin": {
     "login": {

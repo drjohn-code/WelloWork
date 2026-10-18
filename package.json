@@ -7,6 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "eslint",
+    "playtest": "node scripts/playtest-server.mjs",
+    "playtest:cleanup": "node --env-file=.env.local --import tsx scripts/playtest-cleanup.ts",
     "test": "node --import tsx --test \"i18n/**/*.test.ts\" \"app/**/*.test.ts\""
   },
   "dependencies": {

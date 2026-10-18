@@ -217,6 +217,8 @@ export type GameView = {
   phase: CognitiveRewardsGamePhase;
   /** The link has done its job (payout paid, or 30 days after the game): show only a "finished" page. */
   finished: boolean;
+  /** A mock-paid order (playtests): scores and split are shown, but nothing is paid and no bank details are taken. */
+  testGame: boolean;
   language: string;
   teamSize: number;
   pool: number;

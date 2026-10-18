@@ -3866,7 +3866,8 @@
       "verdictTitle": "The final challenge",
       "verdictScore": "Team score {score} of 100. This one was for fun and doesn't change the split.",
       "thanks": "Thanks for playing. Your host {host} can close the tab now.",
-      "episodeWrap": "{world} · Episode {n}:"
+      "episodeWrap": "{world} · Episode {n}:",
+      "testGameNote": "This was a test game, so no money is paid out and no bank details are needed. The amounts show how the split would have worked."
     },
     "payout": {
       "title": "Where should we send your {amount}?",
@@ -3911,7 +3912,8 @@
       "guestHint": "Everyone can vote. A tie goes to {host}'s pick.",
       "startWith": "Leading: {world}",
       "startSurprise": "No votes yet: the Game Master will pick."
-    }
+    },
+    "testGame": "Test game: nothing is paid out."
   },
   "admin": {
     "login": {
