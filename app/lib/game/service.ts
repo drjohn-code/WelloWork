@@ -8,6 +8,7 @@ import { DETAIL_ROUND_INDEX, SURPRISE, TWIST, offerWorlds, planEpisode, tallyVot
 import { WORLDS, isWorldId, worldLabel, type WorldId } from "./worlds";
 import { TALK_TEMPLATES, talkReveal, type TalkTemplate } from "./talk";
 import { buildContent, cleanIntake, judgeChallenge } from "./game-master";
+import { GAME_MASTER_BRIDGE_DIR } from "./openrouter";
 import { TEXTS } from "./texts";
 import { seededRng } from "./rng";
 import { finalizeGame } from "./finalize";
@@ -56,8 +57,9 @@ export const TIMING = {
   reactionMs: 7000,
   challengeSec: 240,
   disconnectSec: 120,
-  generatingRetrySec: 100,
-  judgingRetrySec: 60,
+  // A local Game Master bridge answers by hand, so don't re-run a generation that is still waiting for it.
+  generatingRetrySec: GAME_MASTER_BRIDGE_DIR ? 1800 : 100,
+  judgingRetrySec: GAME_MASTER_BRIDGE_DIR ? 1800 : 60,
   maxWrongAttempts: 5,
   rescueWindowSec: 60,
   presenceWriteSec: 15,

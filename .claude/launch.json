@@ -18,6 +18,18 @@
         "playtest"
       ],
       "port": 3000
+    },
+    {
+      "name": "qa-bridge",
+      "runtimeExecutable": "env",
+      "runtimeArgs": [
+        "GAME_MASTER_BRIDGE_DIR=.gm-bridge",
+        "PAYMENT_MOCK_MODE=true",
+        "npm",
+        "run",
+        "dev"
+      ],
+      "port": 3000
     }
   ]
 }
