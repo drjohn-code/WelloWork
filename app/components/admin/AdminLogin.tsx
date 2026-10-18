@@ -13,6 +13,11 @@ export function AdminLogin() {
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
+    if (busy) return;
+    if (!secret.trim()) {
+      setError(t("empty"));
+      return;
+    }
     setBusy(true);
     setError(null);
     const res = await fetch("/api/admin/login", { method: "POST", headers: { "Content-Type": "application/json" }, body: JSON.stringify({ secret }) });
@@ -31,14 +36,14 @@ export function AdminLogin() {
         <div className="order-field">
           <label htmlFor="admin-secret">{t("label")}</label>
           <div className={`order-input ${error ? "invalid" : ""}`}>
-            <input id="admin-secret" type="password" autoComplete="current-password" value={secret} onChange={(e) => setSecret(e.target.value)} />
+            <input id="admin-secret" type="password" autoComplete="current-password" autoFocus value={secret} onChange={(e) => setSecret(e.target.value)} />
           </div>
           <span className="order-error" role="alert">
             {error ?? ""}
           </span>
         </div>
         <div className="play-action">
-          <button type="submit" className="btn btn-primary play-primary" disabled={busy || !secret}>
+          <button type="submit" className="btn btn-primary play-primary" disabled={busy}>
             {busy ? t("signingIn") : t("submit")}
           </button>
         </div>
