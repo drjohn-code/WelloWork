@@ -81,3 +81,21 @@ Fixes 1, 2, 3, 6 and 7 are small changes to the episode planner and the key-fact
 
 - **Local Game Master bridge** (`GAME_MASTER_BRIDGE_DIR`, launch entry `qa-bridge`): local tests without API credit. Never active on Vercel.
 - **Test orders** from this cycle were deleted with `npm run playtest:cleanup -- --yes`.
+
+## Applied (18 October, same day)
+
+All eight fixes are in, with tests in `app/lib/game/episode.test.ts` (24 tests pass) and a live check on a local game without AI calls.
+
+| # | What changed | How it was checked |
+|---|---|---|
+| 1 | The second solver pass never starts with the player who ended the first. | 0 back-to-back solvers in 3,000 games per team size; test over 1,000 per size. |
+| 2 | Key ceremony: free hour, one counted or rebuilt answer (snack, code or desks), and the sticky-note number read out in the memory round. Never a line-up position. | Test over every generated episode; live key ceremony showed hour, code and note. |
+| 3 | No repeated mechanic in 6- and 8-round episodes. 10-round episodes: at most two repeats (not one: four talk mechanics cannot fill six talk slots with one repeat), different mechanics, at least three rounds apart. | Test over 1,000 plans per size; 0% repeats for 3 and 4 players. |
+| 4 | Snack: items carry best-before days; only the solver's shelf shows today, so everyone reads out items and dates. Line-up: two details per witness in 3-player teams. | Live: a teammate's shelf showed two batches of the snack, best before the 12th and 23rd, without today's date; the witness screen showed two details. |
+| 5 | Line-up has eight faces; in card rounds the solver holds the 32-card board instead of a hand. Blind success: 1 in 4 and 1 in 16 (was 1 in 3). | Test checks sizes; live board and 8-face line-up rendered, no overflow. |
+| 6 | Flash only on line-up and card rounds. If flash fits nowhere, rush is used. | Test over 1,000 plans per size; live flash on a line-up hid the pieces after 30 s. |
+| 7 | No rush on a 5-player card round. | Test over 1,000 plans. |
+| 8 | Fixed bonus line under every final-challenge prompt, in all eight languages; the judge sees it too. | Test; the judge request in the live game carried the line. |
+
+New strings (snack dates, card board, prompts, key labels, bonus line) are in all eight languages and in the regenerated translation sheet.
+

@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Occupé",
         "free": "Libre",
-        "expired": "Périmé",
         "yourMessages": "Vos messages ({n})",
         "rule": "Règle {n}",
         "clue": "Vos indices ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Vous seul l’avez vu. Décrivez-le, ne vous contentez pas de le nommer.",
         "lineup": "La séance d’identification",
         "tiles": "Votre partie du motif",
-        "row": "Ligne {n}"
+        "row": "Ligne {n}",
+        "bestBefore": "À consommer avant le : {d}",
+        "today": "Date du jour : {d}. Tout ce qui a une date antérieure est périmé."
       },
       "introLevel": "Manche {n}",
       "introReady": "Préparez-vous",
@@ -3744,7 +3745,8 @@
         "eraser": "Gomme",
         "row": "Ligne {n}",
         "sendGrid": "Envoyer la grille",
-        "clear": "Effacer"
+        "clear": "Effacer",
+        "pickBoard": "Trouvez la carte que tout le monde a"
       },
       "twist": {
         "flash": "Flash",
@@ -3770,7 +3772,7 @@
         "lineup": "Dites ce que vous voyez : ce que c’est, sa couleur, où c’est placé.",
         "blueprint": "Ligne par ligne, de gauche à droite : une couleur ou vide.",
         "slot": "Lisez vos heures occupées, la plus tôt d’abord.",
-        "snack": "Annoncez séparément les bons et les périmés.",
+        "snack": "Lisez chaque article avec sa quantité et sa date. Seule la personne qui résout connaît la date du jour.",
         "replyall": "Lisez chaque message avec son heure.",
         "wifi": "Lisez votre règle mot pour mot, avec son numéro.",
         "desks": "Lisez votre indice exactement tel qu’il est écrit.",

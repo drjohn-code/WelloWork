@@ -1,6 +1,6 @@
 import { seededRng, shuffle } from "./rng";
 import { WORLDS, WORLD_IDS, type WorldId } from "./worlds";
-import type { RoundSpec, TemplateId, Twist } from "./types";
+import type { Fact, RoundSpec, TemplateId, Twist } from "./types";
 
 /**
  * The episode engine. Every game is one episode of a series: a world (chosen
@@ -75,10 +75,15 @@ export const DETAIL_ROUND_INDEX = 1;
 
 /** Talk rounds carry the episode: describing and listening, not arithmetic. */
 const TALK: ReadonlySet<TemplateId> = new Set<TemplateId>(["common", "lineup", "blueprint", "replyall"]);
-/** Rounds that produce a fact the key ceremony can ask for. */
-const FACT_ROUNDS: ReadonlySet<TemplateId> = new Set<TemplateId>(["snack", "wifi", "desks", "lineup"]);
+/**
+ * Rounds whose answer the whole team hears and can bring to the key ceremony.
+ * (A line-up answer is a position only the solver saw, so it never counts.)
+ */
+export const KEY_FACT_ROUNDS: ReadonlySet<TemplateId> = new Set<TemplateId>(["snack", "wifi", "desks"]);
 const WEIGHTS: Partial<Record<TemplateId, number>> = { common: 3, lineup: 3, blueprint: 3, replyall: 2, snack: 2, wifi: 1, desks: 1 };
-const MAX_USES: Partial<Record<TemplateId, number>> = { common: 2, lineup: 2, blueprint: 2, replyall: 1, snack: 1, wifi: 1, desks: 1 };
+/** 10-round episodes have more talk slots than there are talk mechanics, so a few may repeat. */
+const MAX_REPEATS_LONG = 2;
+const MIN_REPEAT_GAP = 3;
 /** Rounds 2..n-1 where a sticky note can be planted without getting in the way. */
 const DETAIL_HOSTS: TemplateId[] = ["snack", "common", "replyall"];
 
@@ -98,17 +103,23 @@ export function planEpisode(args: { gameId: string; playerIds: string[]; worldId
 
   const templates = sampleSequence(rng, total) ?? FALLBACK[n];
 
-  // Solvers: everyone twice, in two shuffled passes.
-  const order = [...shuffle(rng, playerIds), ...shuffle(rng, playerIds)];
+  // Solvers: everyone twice, in two shuffled passes, never the same person twice in a row.
+  const first = shuffle(rng, playerIds);
+  const second = shuffle(rng, playerIds);
+  if (second[0] === first[first.length - 1]) [second[0], second[1]] = [second[1], second[0]];
+  const order = [...first, ...second];
   const schedule: RoundSpec[] = templates.map((template, index) => ({ index, template, solverPlayerId: order[index], detail: index === DETAIL_ROUND_INDEX }));
 
   // Twists: one in a 6-round episode, two (one of each) in longer ones. Never
   // on the opener, the sticky-note round or the memory round.
   const eligible = schedule.filter((r) => r.index > DETAIL_ROUND_INDEX && r.index < total - 1);
-  const twists: Twist[] = total <= 6 ? [rng() < 0.5 ? "flash" : "rush"] : shuffle(rng, ["flash", "rush"] as Twist[]);
+  // If the preferred kind has no round it fits (flash needs a line-up or card round), use the other.
+  const twists = shuffle(rng, ["flash", "rush"] as Twist[]);
+  const wanted = total <= 6 ? 1 : 2;
   const used = new Set<number>();
   for (const twist of twists) {
-    const fits = eligible.filter((r) => !used.has(r.index) && (twist !== "flash" || FLASHABLE.has(r.template)));
+    if (used.size >= wanted) break;
+    const fits = eligible.filter((r) => !used.has(r.index) && twistFits(twist, r.template, n));
     if (!fits.length) continue;
     const r = fits[Math.floor(rng() * fits.length)];
     r.twist = twist;
@@ -135,8 +146,16 @@ export function planEpisode(args: { gameId: string; playerIds: string[]; worldId
   return { worldId, premise, number, previous, schedule, detailHolderId };
 }
 
-/** Rounds whose pieces are pictures you can memorise and then describe (the flash twist hides them). */
-const FLASHABLE: ReadonlySet<TemplateId> = new Set<TemplateId>(["common", "lineup", "blueprint", "snack"]);
+/**
+ * Flash only where a piece is a picture you can take in at a glance (a hand of
+ * cards, one face detail); a grid of tiles from memory frustrates more than it
+ * thrills. Rush never on a 5-player card round: about thirty cards to compare.
+ */
+const FLASHABLE: ReadonlySet<TemplateId> = new Set<TemplateId>(["common", "lineup"]);
+export function twistFits(twist: Twist, template: TemplateId, teamSize: number): boolean {
+  if (twist === "flash") return FLASHABLE.has(template);
+  return !(template === "common" && teamSize >= 5);
+}
 
 /**
  * slot first (its hour feeds the memory round and the key), a light round
@@ -144,18 +163,26 @@ const FLASHABLE: ReadonlySet<TemplateId> = new Set<TemplateId>(["common", "lineu
  */
 function sampleSequence(rng: () => number, total: number): TemplateId[] | null {
   const middleCount = total - 3;
-  for (let attempt = 0; attempt < 200; attempt++) {
+  // 6 and 8 rounds: every mechanic at most once. 10 rounds: a talk mechanic may come back, spaced out.
+  const maxUses = (t: TemplateId) => (total > 8 && TALK.has(t) ? 2 : 1);
+  for (let attempt = 0; attempt < 2000; attempt++) {
     const uses = new Map<TemplateId, number>();
-    const bump = (t: TemplateId) => uses.set(t, (uses.get(t) ?? 0) + 1);
+    const lastAt = new Map<TemplateId, number>();
     const seq: TemplateId[] = ["slot"];
-    const second = DETAIL_HOSTS[Math.floor(rng() * DETAIL_HOSTS.length)];
-    seq.push(second);
-    bump(second);
+    const push = (t: TemplateId) => {
+      uses.set(t, (uses.get(t) ?? 0) + 1);
+      lastAt.set(t, seq.length);
+      seq.push(t);
+    };
+    push(DETAIL_HOSTS[Math.floor(rng() * DETAIL_HOSTS.length)]);
     let ok = true;
     for (let i = 0; i < middleCount; i++) {
-      const prev = seq[seq.length - 1];
+      const at = seq.length;
       const options = (Object.keys(WEIGHTS) as TemplateId[]).filter(
-        (t) => t !== prev && (uses.get(t) ?? 0) < (MAX_USES[t] ?? 1) && !(t === "desks" && total < 8)
+        (t) =>
+          (uses.get(t) ?? 0) < maxUses(t) &&
+          (!lastAt.has(t) || at - lastAt.get(t)! >= MIN_REPEAT_GAP) &&
+          !(t === "desks" && total < 8)
       );
       if (!options.length) {
         ok = false;
@@ -171,20 +198,35 @@ function sampleSequence(rng: () => number, total: number): TemplateId[] | null {
           break;
         }
       }
-      seq.push(chosen);
-      bump(chosen);
+      push(chosen);
     }
     if (!ok) continue;
     seq.push("callback");
     const middle = seq.slice(1, -1);
     const talkShare = middle.filter((t) => TALK.has(t)).length / middle.length;
-    const facts = new Set(seq.filter((t) => FACT_ROUNDS.has(t)));
-    // At least two-thirds talk, at least two distinct key facts besides the hour,
-    // and at least two different talk mechanics so episodes don't feel samey.
+    const repeats = middle.length - new Set(middle).size;
     const talkKinds = new Set(middle.filter((t) => TALK.has(t))).size;
-    if (talkShare >= 2 / 3 && facts.size >= 2 && talkKinds >= 2) return seq;
+    // At least two-thirds talk, at least two different talk mechanics, a round the
+    // whole team can bring to the key ceremony, and few, well-spaced repeats.
+    if (talkShare >= 2 / 3 && talkKinds >= 2 && middle.some((t) => KEY_FACT_ROUNDS.has(t)) && repeats <= (total > 8 ? MAX_REPEATS_LONG : 0)) return seq;
   }
   return null;
+}
+
+/**
+ * The three key-ceremony facts, in the order the blanks are shown: the free
+ * hour (round 1), one counted or rebuilt answer the team heard, and the
+ * sticky-note number read out in the memory round. A line-up position is never
+ * used: only the solver ever saw those numbers.
+ */
+export function buildKeyFacts(priorFacts: Fact[], memoryLabel: string): Fact[] {
+  const find = (key: string) => priorFacts.find((f) => f.key === key);
+  const hour = find("hour");
+  const note = find("note");
+  const middle =
+    ["snackTotal", "wifi", "desks"].map(find).find((f): f is Fact => Boolean(f)) ??
+    (hour && note ? { key: "memory", label: memoryLabel, value: String(Number(hour.value) + Number(note.value)) } : undefined);
+  return [hour, middle, note].filter((f): f is Fact => Boolean(f));
 }
 
 /** Twist timings (seconds). */

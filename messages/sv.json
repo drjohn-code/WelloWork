@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Upptagen",
         "free": "Ledig",
-        "expired": "Utgången",
         "yourMessages": "Dina meddelanden ({n})",
         "rule": "Regel {n}",
         "clue": "Dina ledtrådar ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Bara du såg det här. Beskriv det, säg inte bara vad det är.",
         "lineup": "Uppställningen",
         "tiles": "Din del av mönstret",
-        "row": "Rad {n}"
+        "row": "Rad {n}",
+        "bestBefore": "Bäst före: {d}",
+        "today": "Dagens datum: {d}. Allt med ett tidigare bäst före-datum har gått ut."
       },
       "introLevel": "Runda {n}",
       "introReady": "Gör er redo",
@@ -3744,7 +3745,8 @@
         "eraser": "Sudd",
         "row": "Rad {n}",
         "sendGrid": "Skicka rutnätet",
-        "clear": "Rensa"
+        "clear": "Rensa",
+        "pickBoard": "Hitta kortet som alla har"
       },
       "twist": {
         "flash": "Blixt",
@@ -3770,7 +3772,7 @@
         "lineup": "Säg vad du ser: vad det är, färgen och var det sitter.",
         "blueprint": "Ta rad för rad, från vänster till höger: en färg eller tom.",
         "slot": "Läs upp dina upptagna timmar, den tidigaste först.",
-        "snack": "Säg de bra och de utgångna var för sig.",
+        "snack": "Läs upp varje vara med antal och datum. Bara lösaren vet dagens datum.",
         "replyall": "Läs varje meddelande med tiden.",
         "wifi": "Läs din regel ordagrant, med numret.",
         "desks": "Läs din ledtråd exakt som den står.",

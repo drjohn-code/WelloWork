@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Ocupado",
         "free": "Libre",
-        "expired": "Caducado",
         "yourMessages": "Tus mensajes ({n})",
         "rule": "Regla {n}",
         "clue": "Tus pistas ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Solo tú lo viste. Descríbelo; no te limites a nombrarlo.",
         "lineup": "La rueda de reconocimiento",
         "tiles": "Tu parte del patrón",
-        "row": "Fila {n}"
+        "row": "Fila {n}",
+        "bestBefore": "Consumir preferentemente antes del: {d}",
+        "today": "Fecha de hoy: {d}. Todo lo que tenga una fecha anterior ha caducado."
       },
       "introLevel": "Ronda {n}",
       "introReady": "Preparaos",
@@ -3744,7 +3745,8 @@
         "eraser": "Goma",
         "row": "Fila {n}",
         "sendGrid": "Enviar la cuadrícula",
-        "clear": "Borrar"
+        "clear": "Borrar",
+        "pickBoard": "Encuentra la carta que todos tienen"
       },
       "twist": {
         "flash": "Flash",
@@ -3770,7 +3772,7 @@
         "lineup": "Di lo que ves: qué es, de qué color, dónde está.",
         "blueprint": "Fila a fila, de izquierda a derecha: un color o vacía.",
         "slot": "Lee tus horas ocupadas, empezando por la más temprana.",
-        "snack": "Di por separado los buenos y los caducados.",
+        "snack": "Lee cada producto con su cantidad y su fecha. Solo quien resuelve sabe la fecha de hoy.",
         "replyall": "Lee cada mensaje con su hora.",
         "wifi": "Lee tu regla palabra por palabra, con su número.",
         "desks": "Lee tu pista tal como está escrita.",

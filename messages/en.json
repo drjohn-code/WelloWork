@@ -3711,7 +3711,6 @@
       "pieces": {
         "busy": "Busy",
         "free": "Free",
-        "expired": "Expired",
         "yourMessages": "Your messages ({n})",
         "rule": "Rule {n}",
         "clue": "Your clues ({n})",
@@ -3720,7 +3719,9 @@
         "witnessNote": "Only you saw this. Describe it; don't just name it.",
         "lineup": "The line-up",
         "tiles": "Your part of the pattern",
-        "row": "Row {n}"
+        "row": "Row {n}",
+        "bestBefore": "Best before: {d}",
+        "today": "Today's date: {d}. Anything with an earlier best-before date has expired."
       },
       "introLevel": "Round {n}",
       "introReady": "Get ready",
@@ -3737,7 +3738,8 @@
         "eraser": "Eraser",
         "row": "Row {n}",
         "sendGrid": "Send the grid",
-        "clear": "Clear"
+        "clear": "Clear",
+        "pickBoard": "Find the card they all hold"
       },
       "twist": {
         "flash": "Flash",
@@ -3763,7 +3765,7 @@
         "lineup": "Say what you see: what it is, its colour, where it sits.",
         "blueprint": "Go row by row, left to right: a colour or empty.",
         "slot": "Read your busy hours out loud, earliest first.",
-        "snack": "Say the good ones and the expired ones separately.",
+        "snack": "Read every item with its count and date. Only the solver knows today's date.",
         "replyall": "Read each message with its time.",
         "wifi": "Read your rule word for word, with its number.",
         "desks": "Read your clue exactly as written.",

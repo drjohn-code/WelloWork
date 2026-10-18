@@ -38,16 +38,22 @@ export type TalkCtx = {
 export const CHOICE_MAX_WRONG = 2;
 
 const HAND_SIZE = 6;
-const LINEUP_SIZE = 6;
+/** Eight faces: with two tries, a blind guess lands one time in four, not one in three. */
+export const LINEUP_SIZE = 8;
 
 /* ── Common ground: one card is in every hand ───────────────────────────── */
 
+/**
+ * Everyone except the solver holds six picture cards; exactly one card is in
+ * every hand. The solver holds the whole board (every object of this world in
+ * every colour) and has to find that card on it while the others compare hands,
+ * so a blind tap succeeds one time in sixteen, not one in three.
+ */
 function common(ctx: TalkCtx, rng: () => number): GeneratedRound {
   const T = TEXTS[ctx.language];
-  const all = shuffle(
-    rng,
-    ctx.deck.flatMap((o) => COLORS.map((c) => cardId(c, o)))
-  );
+  const sources = ctx.players.filter((p) => p.id !== ctx.solverId);
+  const board = ctx.deck.flatMap((o) => COLORS.map((c) => cardId(c, o)));
+  const all = shuffle(rng, board);
   const shared = all[0];
   const [sharedColor, sharedObject] = shared.split("-");
   // Near misses (same object or same colour as the shared card) first, so a
@@ -57,13 +63,13 @@ function common(ctx: TalkCtx, rng: () => number): GeneratedRound {
   const far = rest.filter((c) => !near.includes(c));
   const pool = [...near.slice(0, Math.ceil(near.length / 2)), ...shuffle(rng, [...near.slice(Math.ceil(near.length / 2)), ...far])];
 
-  // For every player p, one card that everybody EXCEPT p holds. Without p's
+  // For every source p, one card that every OTHER source holds. Without p's
   // hand, that card and the shared card are both "in every hand" → ambiguous.
   const missingFor = new Map<string, CardId>();
-  for (const p of ctx.players) missingFor.set(p.id, pool.shift()!);
-  const pieces: Record<string, Piece> = {};
-  for (const p of ctx.players) {
-    const decoys = ctx.players.filter((q) => q.id !== p.id).map((q) => missingFor.get(q.id)!);
+  for (const p of sources) missingFor.set(p.id, pool.shift()!);
+  const pieces: Record<string, Piece> = { [ctx.solverId]: { kind: "board", cards: board, cols: COLORS.length } };
+  for (const p of sources) {
+    const decoys = sources.filter((q) => q.id !== p.id).map((q) => missingFor.get(q.id)!);
     const fillers = pool.splice(0, HAND_SIZE - 1 - decoys.length); // unique to this hand
     pieces[p.id] = { kind: "cards", cards: shuffle(rng, [shared, ...decoys, ...fillers]) };
   }
@@ -85,7 +91,9 @@ const faceKey = (f: Face) => FACE_FEATURE_KEYS.map((k) => f[k]).join("|");
 function lineup(ctx: TalkCtx, rng: () => number): GeneratedRound {
   const T = TEXTS[ctx.language];
   const sources = shuffle(rng, ctx.players.filter((p) => p.id !== ctx.solverId));
-  const features = shuffle(rng, FACE_FEATURE_KEYS).slice(0, sources.length) as FaceFeature[];
+  // With two witnesses, each remembers two details, so nobody says a single word and stops.
+  const perWitness = sources.length === 2 ? 2 : 1;
+  const features = shuffle(rng, FACE_FEATURE_KEYS).slice(0, sources.length * perWitness) as FaceFeature[];
   const target = randomFace(rng);
   // Witnessed features are never "none": "a green beanie" is more fun to describe than "no hat".
   for (const f of features) {
@@ -94,7 +102,7 @@ function lineup(ctx: TalkCtx, rng: () => number): GeneratedRound {
   }
   const faces: Face[] = [target];
   const seen = new Set([faceKey(target)]);
-  // One decoy per witness: identical on every witnessed feature except theirs.
+  // One decoy per witnessed feature: identical on every witnessed feature except that one.
   for (const f of features) {
     for (let tries = 0; tries < 50; tries++) {
       const d = randomFace(rng);
@@ -122,8 +130,8 @@ function lineup(ctx: TalkCtx, rng: () => number): GeneratedRound {
 
   const pieces: Record<string, Piece> = { [ctx.solverId]: { kind: "lineup", faces: order } };
   sources.forEach((p, i) => {
-    const f = features[i];
-    pieces[p.id] = { kind: "witness", feature: f, value: target[f] };
+    const mine = features.slice(i * perWitness, (i + 1) * perWitness);
+    pieces[p.id] = { kind: "witness", features: mine.map((f) => ({ feature: f, value: target[f] })) };
   });
   return {
     params: { facts: [{ key: "lineup", label: T.facts.lineup, value: answer }], witnessed: features },
@@ -174,27 +182,30 @@ export function validateTalk(template: TalkTemplate, round: GeneratedRound, ctx:
   for (const id of ids) if (!round.pieces[id]) return false;
   switch (template) {
     case "common": {
-      const hands = ids.map((id) => round.pieces[id]).map((p) => (p.kind === "cards" ? p.cards : []));
-      if (hands.some((h) => h.length !== HAND_SIZE || new Set(h).size !== HAND_SIZE)) return false;
+      const board = round.pieces[ctx.solverId];
+      if (board.kind !== "board" || !board.cards.includes(round.answer) || new Set(board.cards).size !== board.cards.length) return false;
+      const sourceIds = ids.filter((id) => id !== ctx.solverId);
+      const hands = sourceIds.map((id) => round.pieces[id]).map((p) => (p.kind === "cards" ? p.cards : []));
+      if (hands.some((h) => h.length !== HAND_SIZE || new Set(h).size !== HAND_SIZE || h.some((c) => !board.cards.includes(c)))) return false;
       const inAll = (hs: string[][]) => hs[0].filter((c) => hs.every((h) => h.includes(c)));
       const full = inAll(hands);
       if (full.length !== 1 || full[0] !== round.answer) return false;
-      return ids.every((_, i) => inAll(hands.filter((__, j) => j !== i)).length >= 2);
+      return hands.every((_, i) => inAll(hands.filter((__, j) => j !== i)).length >= 2);
     }
     case "lineup": {
       const lp = round.pieces[ctx.solverId];
       if (lp.kind !== "lineup" || lp.faces.length !== LINEUP_SIZE) return false;
       if (new Set(lp.faces.map(faceKey)).size !== LINEUP_SIZE) return false;
-      const clues = ids
+      const witnesses = ids
         .filter((id) => id !== ctx.solverId)
         .map((id) => round.pieces[id])
-        .flatMap((p) => (p.kind === "witness" ? [p] : []));
-      if (clues.length !== ids.length - 1) return false;
-      const candidates = (cs: typeof clues) =>
-        lp.faces.map((f, i) => ({ f, i })).filter(({ f }) => cs.every((c) => (f as Record<string, string>)[c.feature] === c.value));
-      const full = candidates(clues);
+        .flatMap((p) => (p.kind === "witness" ? [p.features] : []));
+      if (witnesses.length !== ids.length - 1 || witnesses.some((w) => !w.length)) return false;
+      const candidates = (ws: typeof witnesses) =>
+        lp.faces.map((f, i) => ({ f, i })).filter(({ f }) => ws.flat().every((c) => (f as Record<string, string>)[c.feature] === c.value));
+      const full = candidates(witnesses);
       if (full.length !== 1 || String(full[0].i + 1) !== round.answer) return false;
-      return clues.every((_, i) => candidates(clues.filter((__, j) => j !== i)).length >= 2);
+      return witnesses.every((_, i) => candidates(witnesses.filter((__, j) => j !== i)).length >= 2);
     }
     case "blueprint": {
       const cv = round.pieces[ctx.solverId];
@@ -222,7 +233,7 @@ export function talkHint(template: TalkTemplate, language: ContentLanguage, para
     case "lineup": {
       // Rule out two wrong faces, deterministically.
       const right = Number(answer);
-      const wrong = [1, 2, 3, 4, 5, 6].filter((n) => n !== right).slice(0, 2);
+      const wrong = Array.from({ length: LINEUP_SIZE }, (_, i) => i + 1).filter((n) => n !== right).slice(0, 2);
       return T.talk.hints.lineup.replace("{a}", String(wrong[0])).replace("{b}", String(wrong[1]));
     }
     case "blueprint": {

@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Užimta",
         "free": "Laisva",
-        "expired": "Pasibaigęs galiojimas",
         "yourMessages": "Jūsų žinutės ({n})",
         "rule": "{n} taisyklė",
         "clue": "Jūsų užuominos ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Tai matėte tik jūs. Apibūdinkite, o ne tik įvardykite.",
         "lineup": "Atpažinimo eilė",
         "tiles": "Jūsų rašto dalis",
-        "row": "{n} eilutė"
+        "row": "{n} eilutė",
+        "bestBefore": "Geriausia iki: {d}",
+        "today": "Šiandienos data: {d}. Viskas su ankstesne data jau nebetinka."
       },
       "introLevel": "{n} raundas",
       "introReady": "Pasiruoškite",
@@ -3744,7 +3745,8 @@
         "eraser": "Trintukas",
         "row": "{n} eilutė",
         "sendGrid": "Siųsti tinklelį",
-        "clear": "Išvalyti"
+        "clear": "Išvalyti",
+        "pickBoard": "Raskite kortelę, kurią turi visi"
       },
       "twist": {
         "flash": "Blyksnis",
@@ -3770,7 +3772,7 @@
         "lineup": "Sakykite, ką matote: kas tai, kokia spalva, kur yra.",
         "blueprint": "Eilutė po eilutės, iš kairės į dešinę: spalva arba tuščia.",
         "slot": "Perskaitykite savo užimtas valandas, nuo ankstyviausios.",
-        "snack": "Gerus ir pasibaigusius pasakykite atskirai.",
+        "snack": "Perskaitykite kiekvieną prekę su kiekiu ir data. Šiandienos datą žino tik sprendėjas.",
         "replyall": "Perskaitykite kiekvieną žinutę su laiku.",
         "wifi": "Perskaitykite savo taisyklę pažodžiui, su numeriu.",
         "desks": "Perskaitykite užuominą tiksliai taip, kaip parašyta.",

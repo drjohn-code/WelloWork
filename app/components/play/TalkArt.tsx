@@ -152,8 +152,9 @@ export function CardArt({ object, color, size = 56 }: { object: CardObject; colo
  * A line-up face. `only` draws a single feature on a blank silhouette: what a
  * witness remembers, with nothing else that could give away another feature.
  */
-export function FaceArt({ face, only, size = 88 }: { face: Partial<Face>; only?: FaceFeature; size?: number }) {
-  const show = (f: FaceFeature) => (only ? only === f : face[f] !== undefined);
+export function FaceArt({ face, only, size = 88 }: { face: Partial<Face>; only?: FaceFeature | FaceFeature[]; size?: number }) {
+  const shown = only === undefined ? null : Array.isArray(only) ? only : [only];
+  const show = (f: FaceFeature) => (shown ? shown.includes(f) : face[f] !== undefined);
   const line = { stroke: NAVY, strokeWidth: 2.2, strokeLinejoin: "round" as const, strokeLinecap: "round" as const };
   const top = face.top ? COLOR_HEX[face.top as ColorId] : "#C9D2E3";
   const hair = face.hair ? HAIR_HEX[face.hair] : null;

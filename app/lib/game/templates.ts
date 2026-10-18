@@ -200,18 +200,22 @@ const GENERATORS: Record<ClassicTemplate, Generator> = {
     const shelves = shuffle(rng, ctx.skin?.shelves && ctx.skin.shelves.length >= ctx.players.length ? ctx.skin.shelves : T.shelves);
     const decoys = ctx.skin?.decoys?.length ? ctx.skin.decoys : T.snackDecoys;
     const pieces: Record<string, Piece> = {};
+    // Only the solver knows today's date, so everyone has to read out their
+    // best-before dates and the solver decides what is still good.
+    const today = randInt(rng, 12, 20);
+    const expiredCounts: number[] = ctx.players.map(() => randInt(rng, 0, 4));
+    if (!expiredCounts.some((c) => c > 0)) expiredCounts[ctx.players.findIndex((p) => p.id !== ctx.solverId)] = randInt(rng, 1, 3);
     let total = 0;
     ctx.players.forEach((p, i) => {
       const good = randInt(rng, 2, 9);
-      const expired = randInt(rng, 0, 4);
       total += good;
       const decoy = pick(rng, decoys);
       const items = shuffle(rng, [
-        { name: snack, count: good, expired: false },
-        { name: snack, count: expired, expired: true },
-        { name: decoy, count: randInt(rng, 1, 6), expired: false },
+        { name: snack, count: good, bestBefore: today + randInt(rng, 0, 9) },
+        { name: snack, count: expiredCounts[i], bestBefore: today - randInt(rng, 1, 7) },
+        { name: decoy, count: randInt(rng, 1, 6), bestBefore: today + randInt(rng, -5, 9) },
       ]).filter((it) => it.count > 0);
-      pieces[p.id] = { kind: "shelf", label: shelves[i % shelves.length], items };
+      pieces[p.id] = { kind: "shelf", label: shelves[i % shelves.length], items, ...(p.id === ctx.solverId ? { today } : {}) };
     });
     const facts: Fact[] = [{ key: "snackTotal", label: T.facts.snackTotal, value: String(total) }];
     const params: GeneratedRound["params"] = { facts };

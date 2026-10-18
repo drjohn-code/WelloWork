@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Belegt",
         "free": "Frei",
-        "expired": "Abgelaufen",
         "yourMessages": "Deine Nachrichten ({n})",
         "rule": "Regel {n}",
         "clue": "Deine Hinweise ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Nur du hast das gesehen. Beschreib es, statt es nur zu benennen.",
         "lineup": "Die Gegenüberstellung",
         "tiles": "Dein Teil des Musters",
-        "row": "Reihe {n}"
+        "row": "Reihe {n}",
+        "bestBefore": "Mindestens haltbar bis: {d}",
+        "today": "Heutiges Datum: {d}. Alles mit einem früheren Datum ist abgelaufen."
       },
       "introLevel": "Runde {n}",
       "introReady": "Macht euch bereit",
@@ -3744,7 +3745,8 @@
         "eraser": "Radierer",
         "row": "Reihe {n}",
         "sendGrid": "Raster senden",
-        "clear": "Leeren"
+        "clear": "Leeren",
+        "pickBoard": "Finde die Karte, die alle haben"
       },
       "twist": {
         "flash": "Blitz",
@@ -3770,7 +3772,7 @@
         "lineup": "Sag, was du siehst: was es ist, welche Farbe, wo es sitzt.",
         "blueprint": "Reihe für Reihe, von links nach rechts: eine Farbe oder leer.",
         "slot": "Lies deine belegten Stunden vor, die früheste zuerst.",
-        "snack": "Nenne die guten und die abgelaufenen getrennt.",
+        "snack": "Lies jeden Artikel mit Anzahl und Datum vor. Nur die lösende Person kennt das heutige Datum.",
         "replyall": "Lies jede Nachricht mit Uhrzeit vor.",
         "wifi": "Lies deine Regel wörtlich vor, mit Nummer.",
         "desks": "Lies deinen Hinweis genau so vor, wie er dasteht.",

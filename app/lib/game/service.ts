@@ -4,7 +4,7 @@ import { hashJoinToken, isWellFormedJoinToken } from "../join-token";
 import { PLAYABLE_ORDER_STATUSES } from "../player-invites";
 import { isTeamSize } from "../cognitive-rewards-order";
 import { generateRound, hintFor as templateHint, normalizeAnswer } from "./templates";
-import { DETAIL_ROUND_INDEX, SURPRISE, TWIST, offerWorlds, planEpisode, tallyVotes, type PastEpisode, type WorldVote } from "./episode";
+import { DETAIL_ROUND_INDEX, SURPRISE, TWIST, buildKeyFacts, offerWorlds, planEpisode, tallyVotes, type PastEpisode, type WorldVote } from "./episode";
 import { WORLDS, isWorldId, worldLabel, type WorldId } from "./worlds";
 import { TALK_TEMPLATES, talkReveal, type TalkTemplate } from "./talk";
 import { buildContent, cleanIntake, judgeChallenge } from "./game-master";
@@ -386,14 +386,14 @@ async function generate(ctx: GameContext): Promise<void> {
     generated.push({ spec, round });
     for (const f of round.params.facts) if (!priorFacts.some((pf) => pf.key === f.key)) priorFacts.push({ ...f, roundIndex: spec.index });
     if (round.params.detail) {
-      priorFacts.push({ key: "note", label: "note", value: String(round.params.detail.value), roundIndex: spec.index, holderId: round.params.detail.playerId });
+      priorFacts.push({ key: "note", label: T.facts.note, value: String(round.params.detail.value), roundIndex: spec.index, holderId: round.params.detail.playerId });
     }
   }
 
-  // Key ceremony = three facts the team found; the hour is always one (round 1 is always the calendar).
-  const keyFacts = KEY_FACT_ORDER.map((k) => priorFacts.find((f) => f.key === k))
-    .filter((f): f is NonNullable<typeof f> => Boolean(f))
-    .slice(0, 3);
+  // Key ceremony = three facts the whole team heard: the free hour (round 1),
+  // one counted or rebuilt answer, and the sticky-note number that was read
+  // out in the memory round. Never a line-up position: only the solver saw those.
+  const keyFacts = buildKeyFacts(priorFacts, T.facts.memory);
   const keyHash = hashAnswer(game.id, keyFacts.map((f) => normalizeAnswer(f.value)).join("|"));
 
   await db.from("cognitive_rewards_game_rounds").delete().eq("game_id", game.id);
@@ -429,7 +429,10 @@ async function generate(ctx: GameContext): Promise<void> {
   });
 }
 
-const KEY_FACT_ORDER = ["hour", "snackTotal", "wifi", "lineup", "desks"];
+/** The final challenge as shown to the team and to the judge: the episode's prompt plus the fixed bonus line. */
+function challengeText(content: GameContent, language: ContentLanguage): string {
+  return `${content.challengePrompt} ${TEXTS[language].challengeBonus}`;
+}
 
 /** Round timing, adjusted by the round's twist. */
 function timingFor(spec: RoundSpec | undefined): { capSec: number; hintSec: number } {
@@ -688,7 +691,7 @@ async function judge(ctx: GameContext) {
   const all = Object.fromEntries(INTAKE_QUESTIONS.map((k) => [k, [] as string[]])) as Record<IntakeKey, string[]>;
   for (const r of rows ?? []) if ((INTAKE_QUESTIONS as readonly string[]).includes(r.question_key)) all[r.question_key as IntakeKey].push(r.answer);
   const canonical = Object.fromEntries(INTAKE_QUESTIONS.map((k) => [k, all[k][0] ?? TEXTS[language].intakeDefaults[k]])) as Record<IntakeKey, string>;
-  const verdict = await judgeChallenge({ language, prompt: content.challengePrompt, text: fresh?.challenge_text ?? "", intake: { canonical, all } });
+  const verdict = await judgeChallenge({ language, prompt: challengeText(content, language), text: fresh?.challenge_text ?? "", intake: { canonical, all } });
   await db
     .from("cognitive_rewards_games")
     .update({ challenge_verdict: verdict as unknown as Json, phase: "key", phase_started_at: new Date().toISOString() })
@@ -805,7 +808,7 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     if (round) view.round = buildRoundView(ctx, round, content, language, now, round.stuck_at ? await stuckNeed(db, game.id, round.round_index) : [], summary ?? []);
   } else if (game.phase === "challenge" || game.phase === "judging") {
     view.challenge = {
-      prompt: content.challengePrompt,
+      prompt: challengeText(content, language),
       text: game.challenge_text ?? "",
       isHost: view.me.isHost,
       deadlineAt: new Date(Date.parse(game.phase_started_at) + TIMING.challengeSec * 1000).toISOString(),

@@ -17,16 +17,22 @@ type Submit = (answer: string) => void;
 export function ChoiceAnswer({ piece, busy, wrong, attemptsLeft, labels, onSubmit }: { piece: Piece; busy: boolean; wrong: boolean; attemptsLeft: number; labels?: TalkLabels | null; onSubmit: Submit }) {
   const t = useTranslations("play.round.talk");
   const [picked, setPicked] = useState<string | null>(null);
+  const heading = piece.kind === "board" ? t("pickBoard") : piece.kind === "cards" ? t("pickCard") : t("pickFace");
   const options =
-    piece.kind === "cards"
+    piece.kind === "cards" || piece.kind === "board"
       ? piece.cards.map((id) => ({ value: id, node: cardNode(id), label: cardLabel(id, labels) }))
       : piece.kind === "lineup"
         ? piece.faces.map((f, i) => ({ value: String(i + 1), node: <FaceArt face={f} size={72} />, label: t("faceLabel", { n: i + 1 }) }))
         : [];
   return (
     <div className={`talk-answer ${wrong ? "shake" : ""}`}>
-      <p className="round-piece-label">{piece.kind === "cards" ? t("pickCard") : t("pickFace")}</p>
-      <ul className={piece.kind === "cards" ? "card-hand pickable" : "lineup pickable"} role="radiogroup" aria-label={piece.kind === "cards" ? t("pickCard") : t("pickFace")}>
+      <p className="round-piece-label">{heading}</p>
+      <ul
+        className={piece.kind === "board" ? "card-board pickable" : piece.kind === "cards" ? "card-hand pickable" : "lineup pickable"}
+        style={piece.kind === "board" ? { gridTemplateColumns: `repeat(${piece.cols}, minmax(0, 1fr))` } : undefined}
+        role="radiogroup"
+        aria-label={heading}
+      >
         {options.map((o, i) => (
           <li key={o.value}>
             <button
@@ -34,7 +40,7 @@ export function ChoiceAnswer({ piece, busy, wrong, attemptsLeft, labels, onSubmi
               role="radio"
               aria-checked={picked === o.value}
               aria-label={o.label}
-              className={`${piece.kind === "cards" ? "talk-card" : "lineup-face"} pick ${picked === o.value ? "picked" : ""}`}
+              className={`${piece.kind === "lineup" ? "lineup-face" : "talk-card"} pick ${picked === o.value ? "picked" : ""}`}
               onClick={() => setPicked(o.value)}
             >
               {o.node}

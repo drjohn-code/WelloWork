@@ -30,12 +30,13 @@ export function PieceView({ piece, labels }: { piece: Piece; labels?: TalkLabels
       return (
         <div className="piece piece-shelf">
           <p className="piece-title">{piece.label}</p>
+          {piece.today !== undefined && <p className="shelf-today">{t("today", { d: piece.today })}</p>}
           <ul className="shelf">
             {piece.items.map((it, i) => (
-              <li key={i} className={it.expired ? "expired" : ""}>
+              <li key={i}>
                 <span className="shelf-count">{it.count}×</span>
                 <span className="shelf-name">{it.name}</span>
-                {it.expired && <span className="shelf-badge">{t("expired")}</span>}
+                <span className="shelf-date">{t("bestBefore", { d: it.bestBefore })}</span>
               </li>
             ))}
           </ul>
@@ -98,7 +99,7 @@ export function PieceView({ piece, labels }: { piece: Piece; labels?: TalkLabels
         <div className="piece piece-witness">
           <p className="piece-title">{t("witness")}</p>
           <div className="witness-frame">
-            <FaceArt face={{ [piece.feature]: piece.value }} only={piece.feature} size={112} />
+            <FaceArt face={Object.fromEntries(piece.features.map((f) => [f.feature, f.value]))} only={piece.features.map((f) => f.feature)} size={112} />
           </div>
           <p className="play-small">{t("witnessNote")}</p>
         </div>
@@ -134,7 +135,8 @@ export function PieceView({ piece, labels }: { piece: Piece; labels?: TalkLabels
         </div>
       );
     case "canvas":
-      return null; // the solver's empty grid is the answer control (TalkAnswer)
+    case "board":
+      return null; // the solver's empty grid or card board is the answer control (TalkAnswer)
     case "none":
       return null;
   }

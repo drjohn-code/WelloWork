@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Bezet",
         "free": "Vrij",
-        "expired": "Over datum",
         "yourMessages": "Jouw berichten ({n})",
         "rule": "Regel {n}",
         "clue": "Jouw aanwijzingen ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Alleen jij zag dit. Beschrijf het; noem het niet alleen.",
         "lineup": "De line-up",
         "tiles": "Jouw deel van het patroon",
-        "row": "Rij {n}"
+        "row": "Rij {n}",
+        "bestBefore": "Ten minste houdbaar tot: {d}",
+        "today": "Datum van vandaag: {d}. Alles met een eerdere datum is verlopen."
       },
       "introLevel": "Ronde {n}",
       "introReady": "Maak je klaar",
@@ -3744,7 +3745,8 @@
         "eraser": "Gum",
         "row": "Rij {n}",
         "sendGrid": "Raster versturen",
-        "clear": "Wissen"
+        "clear": "Wissen",
+        "pickBoard": "Zoek de kaart die iedereen heeft"
       },
       "twist": {
         "flash": "Flits",
@@ -3770,7 +3772,7 @@
         "lineup": "Zeg wat je ziet: wat het is, de kleur en waar het zit.",
         "blueprint": "Rij voor rij, van links naar rechts: een kleur of leeg.",
         "slot": "Lees je bezette uren voor, het vroegste eerst.",
-        "snack": "Noem de goede en de verlopen apart.",
+        "snack": "Lees elk product voor met aantal en datum. Alleen de oplosser kent de datum van vandaag.",
         "replyall": "Lees elk bericht voor met de tijd erbij.",
         "wifi": "Lees je regel woord voor woord voor, met het nummer.",
         "desks": "Lees je aanwijzing precies zoals hij er staat.",

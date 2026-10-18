@@ -30,13 +30,20 @@ export type IntakeSummary = {
 
 export type Piece =
   | { kind: "calendar"; owner: string; hours: number[]; busy: number[] }
-  | { kind: "shelf"; label: string; items: Array<{ name: string; count: number; expired: boolean }> }
+  /**
+   * A shelf of items with best-before days. Only the solver's shelf carries
+   * `today`, so the others have to read out their dates and the solver decides
+   * what is still good.
+   */
+  | { kind: "shelf"; label: string; items: Array<{ name: string; count: number; bestBefore: number }>; today?: number }
   | { kind: "messages"; items: Array<{ from: string; time: string; text: string }> }
   | { kind: "rule"; order: number; text: string }
   | { kind: "clue"; texts: string[] }
   /* talk rounds (talk.ts): pictures, drawn by the UI */
   | { kind: "cards"; cards: string[] }
-  | { kind: "witness"; feature: FaceFeature; value: string }
+  | { kind: "witness"; features: Array<{ feature: FaceFeature; value: string }> }
+  /** The solver's side of a common-ground round: every card of the world, objects in rows, colours in columns. */
+  | { kind: "board"; cards: string[]; cols: number }
   | { kind: "lineup"; faces: Face[] }
   | { kind: "tiles"; cols: number; rows: Array<{ row: number; tiles: number[] }> }
   | { kind: "canvas"; rows: number; cols: number }

@@ -3718,7 +3718,6 @@
       "pieces": {
         "busy": "Occupato",
         "free": "Libero",
-        "expired": "Scaduto",
         "yourMessages": "I tuoi messaggi ({n})",
         "rule": "Regola {n}",
         "clue": "I tuoi indizi ({n})",
@@ -3727,7 +3726,9 @@
         "witnessNote": "Solo tu l’hai visto. Descrivilo, non limitarti a nominarlo.",
         "lineup": "Il confronto all’americana",
         "tiles": "La tua parte dello schema",
-        "row": "Riga {n}"
+        "row": "Riga {n}",
+        "bestBefore": "Da consumarsi entro il: {d}",
+        "today": "Data di oggi: {d}. Tutto ciò che ha una data precedente è scaduto."
       },
       "introLevel": "Round {n}",
       "introReady": "Preparatevi",
@@ -3744,7 +3745,8 @@
         "eraser": "Gomma",
         "row": "Riga {n}",
         "sendGrid": "Invia la griglia",
-        "clear": "Cancella"
+        "clear": "Cancella",
+        "pickBoard": "Trova la carta che hanno tutti"
       },
       "twist": {
         "flash": "Flash",
@@ -3770,7 +3772,7 @@
         "lineup": "Di’ cosa vedi: cos’è, di che colore, dove si trova.",
         "blueprint": "Riga per riga, da sinistra a destra: un colore o vuota.",
         "slot": "Leggi le tue ore occupate, dalla più presto.",
-        "snack": "Di’ separatamente quelli buoni e quelli scaduti.",
+        "snack": "Leggete ogni prodotto con quantità e data. Solo chi risolve conosce la data di oggi.",
         "replyall": "Leggi ogni messaggio con l’orario.",
         "wifi": "Leggi la tua regola parola per parola, con il numero.",
         "desks": "Leggi il tuo indizio esattamente com’è scritto.",

@@ -33,7 +33,9 @@ type Texts = {
   calendarOwner: (name: string) => string;
   stickyNote: (room: number) => string;
   hint: (firstChar: string) => string;
-  facts: { hour: string; snackTotal: string; wifi: string; desks: string; lineup: string };
+  facts: { hour: string; snackTotal: string; wifi: string; desks: string; lineup: string; note: string; memory: string };
+  /** Added under every final-challenge prompt: the judge gives points for callbacks to the episode. */
+  challengeBonus: string;
   /** Code round in a world whose "wifi password" has another name (from the episode skin). */
   codePrompt: (codeName: string) => string;
   /** Talk rounds (talk.ts). Everything a player sees in them is a picture; these are the instructions around it. */
@@ -57,7 +59,7 @@ const en: Texts = {
   slotPrompt: (meeting) =>
     `Everyone's calendar is different. Find the one hour today when all of you are free for "${meeting}". Enter the hour (24h, e.g. 14).`,
   snackPrompt: (snack) =>
-    `Each of you can see one shelf. How many ${snack} are still fine to eat across all shelves? Don't count the ones past their date.`,
+    `Each of you can see one shelf. How many ${snack} are still fine to eat across all shelves? Only the solver knows today's date, so read out the best-before dates on your shelf.`,
   wifiPrompt: (tool) =>
     `The guest wifi password got changed again. Each of you holds one rule. Put the pieces together in rule order to get the password for "${tool}".`,
   replyAllPrompt:
@@ -91,11 +93,12 @@ const en: Texts = {
   calendarOwner: (name) => `${name}'s calendar`,
   stickyNote: (room) => `Sticky note on the monitor: "Projector remote is in room ${room}."`,
   hint: (firstChar) => `The answer starts with "${firstChar}".`,
+  challengeBonus: "Bonus points for mentioning something from today's episode.",
   codePrompt: (codeName) =>
     `The code for "${codeName}" got changed again. Each of you holds one rule. Put the pieces together in rule order to rebuild it.`,
   talk: {
-    commonPrompt: "Each of you holds six cards. Exactly one card is in every hand: same object, same colour. Describe your cards to each other. The solver taps the shared card in their own hand.",
-    lineupPrompt: "Six faces, one person to find. Each witness remembers one detail, but only as a picture. Describe it out loud. The solver taps the right face.",
+    commonPrompt: "Everyone except the solver holds six cards. Exactly one card is in every hand: same object, same colour. Compare your cards out loud. The solver finds that card on the board and taps it.",
+    lineupPrompt: "Eight faces, one person to find. Each witness remembers a detail or two, but only as a picture. Describe it out loud. The solver taps the right face.",
     blueprintPrompt: "The solver has an empty grid. Each of you holds part of the pattern. Describe your tiles one by one, left to right. The solver rebuilds the whole grid and sends it.",
     hints: { common: "The shared card is {color}.", lineup: "It's not face {a}, and it's not face {b}.", blueprint: "Top-left tile: {tile}." },
     colors: { red: "red", blue: "blue", yellow: "yellow", black: "black" },
@@ -104,7 +107,7 @@ const en: Texts = {
     cardName: (o, c) => `${c} ${o}`,
     faceNumber: (n) => `face ${n}`,
   },
-  facts: { hour: "The free hour", snackTotal: "Snacks still edible", wifi: "Guest wifi password" , desks: "Desk order", lineup: "The face you picked" },
+  facts: { hour: "The free hour", snackTotal: "Snacks still edible", wifi: "Guest wifi password" , desks: "Desk order", lineup: "The face you picked", note: "The number on the note", memory: "The memory-check answer" },
   words: { snack: "your team's snack", meeting: "your pointless meeting", tool: "your tool's nickname" },
   intakeDefaults: {
     q1: "let's circle back",
@@ -139,7 +142,7 @@ const sv: Texts = {
   slotPrompt: (meeting) =>
     `Alla har olika kalendrar. Hitta den enda timmen i dag när ni alla är lediga för "${meeting}". Ange timmen (24h, t.ex. 14).`,
   snackPrompt: (snack) =>
-    `Var och en av er ser en hylla. Hur många ${snack} går fortfarande att äta, räknat över alla hyllor? Räkna inte dem som passerat bäst före-datum.`,
+    `Var och en av er ser en hylla. Hur många ${snack} går fortfarande att äta, räknat över alla hyllor? Bara lösaren vet dagens datum, så läs upp bäst före-datumen på er hylla.`,
   wifiPrompt: (tool) =>
     `Gästnätverkets lösenord har ändrats igen. Var och en av er har en regel. Sätt ihop bitarna i regelordning för att få lösenordet till "${tool}".`,
   replyAllPrompt:
@@ -173,11 +176,12 @@ const sv: Texts = {
   calendarOwner: (name) => `${name}s kalender`,
   stickyNote: (room) => `Post-it på skärmen: "Projektorns fjärrkontroll finns i rum ${room}."`,
   hint: (firstChar) => `Svaret börjar med "${firstChar}".`,
+  challengeBonus: "Bonuspoäng om ni nämner något från dagens avsnitt.",
   codePrompt: (codeName) =>
     `Koden till "${codeName}" har ändrats igen. Var och en av er har en regel. Sätt ihop bitarna i regelordning för att få fram den.`,
   talk: {
-    commonPrompt: "Var och en av er har sex kort. Exakt ett kort finns i allas händer: samma föremål, samma färg. Beskriv era kort för varandra. Lösaren trycker på det gemensamma kortet i sin egen hand.",
-    lineupPrompt: "Sex ansikten, en person att hitta. Varje vittne minns en detalj, men bara som en bild. Beskriv den högt. Lösaren trycker på rätt ansikte.",
+    commonPrompt: "Alla utom lösaren har sex kort. Exakt ett kort finns i allas händer: samma föremål, samma färg. Jämför era kort högt. Lösaren hittar kortet på tavlan och trycker på det.",
+    lineupPrompt: "Åtta ansikten, en person att hitta. Varje vittne minns en eller två detaljer, men bara som en bild. Beskriv dem högt. Lösaren trycker på rätt ansikte.",
     blueprintPrompt: "Lösaren har ett tomt rutnät. Var och en av er har en del av mönstret. Beskriv era rutor en i taget, från vänster till höger. Lösaren bygger upp hela rutnätet och skickar det.",
     hints: { common: "Det gemensamma kortets färg: {color}.", lineup: "Det är inte ansikte {a}, och inte ansikte {b}.", blueprint: "Rutan längst upp till vänster: {tile}." },
     colors: { red: "röd", blue: "blå", yellow: "gul", black: "svart" },
@@ -186,7 +190,7 @@ const sv: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `ansikte ${n}`,
   },
-  facts: { hour: "Den lediga timmen", snackTotal: "Ätbara snacks", wifi: "Gästnätverkets lösenord" , desks: "Bordsordning", lineup: "Ansiktet ni valde" },
+  facts: { hour: "Den lediga timmen", snackTotal: "Ätbara snacks", wifi: "Gästnätverkets lösenord" , desks: "Bordsordning", lineup: "Ansiktet ni valde", note: "Numret på lappen", memory: "Svaret på minnestestet" },
   words: { snack: "ert lags snacks", meeting: "ert meningslösa möte", tool: "ert verktygs smeknamn" },
   intakeDefaults: {
     q1: "vi tar det sen",
@@ -219,7 +223,8 @@ const sv: Texts = {
 
 const nl: Texts = {
   slotPrompt: (meeting) => `Iedereen heeft een andere agenda. Vind het ene uur vandaag waarop jullie allemaal vrij zijn voor "${meeting}". Voer het uur in (24u, bijv. 14).`,
-  snackPrompt: (snack) => `Ieder van jullie ziet één plank. Hoeveel ${snack} zijn nog goed om te eten, over alle planken samen? Tel de verlopen niet mee.`,
+  snackPrompt: (snack) =>
+    `Ieder van jullie ziet één plank. Hoeveel ${snack} zijn nog goed om te eten, over alle planken samen? Alleen de oplosser kent de datum van vandaag, dus lees de houdbaarheidsdata op je plank voor.`,
   wifiPrompt: (tool) => `Het wachtwoord van de gastenwifi is wéér veranderd. Ieder van jullie heeft één regel. Zet de stukjes in regelvolgorde achter elkaar voor het wachtwoord van "${tool}".`,
   replyAllPrompt:
     "Een reply-all-thread is door elkaar geraakt en ieder van jullie heeft een paar berichten. Zet ze op tijdsvolgorde en voer de minuten van het EERSTE en het LAATSTE bericht in (bijv. 09:12 … 10:04 → 1204).",
@@ -252,11 +257,12 @@ const nl: Texts = {
   calendarOwner: (name) => `Agenda van ${name}`,
   stickyNote: (room) => `Plakbriefje op het scherm: "De afstandsbediening van de beamer ligt in kamer ${room}."`,
   hint: (firstChar) => `Het antwoord begint met "${firstChar}".`,
+  challengeBonus: "Bonuspunten als jullie iets uit de aflevering van vandaag noemen.",
   codePrompt: (codeName) =>
     `De code van "${codeName}" is wéér veranderd. Ieder van jullie heeft één regel. Zet de stukjes in regelvolgorde achter elkaar om hem terug te vinden.`,
   talk: {
-    commonPrompt: "Ieder van jullie heeft zes kaarten. Precies één kaart zit in ieders hand: hetzelfde voorwerp, dezelfde kleur. Beschrijf je kaarten aan elkaar. De oplosser tikt op de gedeelde kaart in de eigen hand.",
-    lineupPrompt: "Zes gezichten, één persoon om te vinden. Elke getuige herinnert zich één detail, maar alleen als plaatje. Beschrijf het hardop. De oplosser tikt op het juiste gezicht.",
+    commonPrompt: "Iedereen behalve de oplosser heeft zes kaarten. Precies één kaart zit in ieders hand: hetzelfde voorwerp, dezelfde kleur. Vergelijk je kaarten hardop. De oplosser zoekt die kaart op het bord en tikt erop.",
+    lineupPrompt: "Acht gezichten, één persoon om te vinden. Elke getuige herinnert zich een of twee details, maar alleen als plaatje. Beschrijf ze hardop. De oplosser tikt op het juiste gezicht.",
     blueprintPrompt: "De oplosser heeft een leeg raster. Ieder van jullie heeft een deel van het patroon. Beschrijf je tegels één voor één, van links naar rechts. De oplosser bouwt het hele raster na en verstuurt het.",
     hints: { common: "Kleur van de gedeelde kaart: {color}.", lineup: "Het is niet gezicht {a} en ook niet gezicht {b}.", blueprint: "Tegel linksboven: {tile}." },
     colors: { red: "rood", blue: "blauw", yellow: "geel", black: "zwart" },
@@ -265,7 +271,7 @@ const nl: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `gezicht ${n}`,
   },
-  facts: { hour: "Het vrije uur", snackTotal: "Nog eetbare snacks", wifi: "Wachtwoord gastenwifi" , desks: "Bureauvolgorde", lineup: "Het gekozen gezicht" },
+  facts: { hour: "Het vrije uur", snackTotal: "Nog eetbare snacks", wifi: "Wachtwoord gastenwifi" , desks: "Bureauvolgorde", lineup: "Het gekozen gezicht", note: "Het nummer op het briefje", memory: "Het antwoord van de geheugentest" },
   words: { snack: "de snack van je team", meeting: "jullie zinloze vergadering", tool: "de bijnaam van jullie tool" },
   intakeDefaults: { q1: "even terugkoppelen", q2: "koffie", q3: "de maandag-sync", q4: "het beest", q5: "het reply-all-incident", q6: "een dutjeskamer" },
   fallback: {
@@ -285,7 +291,8 @@ const nl: Texts = {
 
 const de: Texts = {
   slotPrompt: (meeting) => `Alle haben einen anderen Kalender. Findet die eine Stunde heute, in der ihr alle frei seid für "${meeting}". Gebt die Stunde ein (24h, z. B. 14).`,
-  snackPrompt: (snack) => `Jede Person sieht ein Regal. Wie viele ${snack} sind über alle Regale hinweg noch essbar? Abgelaufene zählen nicht.`,
+  snackPrompt: (snack) =>
+    `Jede Person sieht ein Regal. Wie viele ${snack} sind über alle Regale hinweg noch essbar? Nur die lösende Person kennt das heutige Datum, also lest die Mindesthaltbarkeitsdaten in eurem Regal vor.`,
   wifiPrompt: (tool) => `Das Gäste-WLAN-Passwort wurde schon wieder geändert. Jede Person hält eine Regel. Setzt die Teile in Regelreihenfolge zusammen, um das Passwort für "${tool}" zu erhalten.`,
   replyAllPrompt:
     "Ein Allen-antworten-Thread ist durcheinandergeraten und jede Person hält ein paar Nachrichten. Bringt sie in zeitliche Reihenfolge und gebt die Minuten der ERSTEN und der LETZTEN Nachricht ein (z. B. 09:12 … 10:04 → 1204).",
@@ -318,11 +325,12 @@ const de: Texts = {
   calendarOwner: (name) => `Kalender von ${name}`,
   stickyNote: (room) => `Klebezettel am Monitor: "Die Beamer-Fernbedienung ist in Raum ${room}."`,
   hint: (firstChar) => `Die Antwort beginnt mit "${firstChar}".`,
+  challengeBonus: "Bonuspunkte, wenn ihr etwas aus der heutigen Folge erwähnt.",
   codePrompt: (codeName) =>
     `Der Code für "${codeName}" wurde schon wieder geändert. Jede Person hält eine Regel. Setzt die Teile in Regelreihenfolge zusammen, um ihn wiederherzustellen.`,
   talk: {
-    commonPrompt: "Jede Person hat sechs Karten. Genau eine Karte ist in allen Händen: gleicher Gegenstand, gleiche Farbe. Beschreibt euch gegenseitig eure Karten. Die lösende Person tippt die gemeinsame Karte in der eigenen Hand an.",
-    lineupPrompt: "Sechs Gesichter, eine Person, die gefunden werden muss. Jede Zeugin und jeder Zeuge erinnert sich an ein Detail, aber nur als Bild. Beschreibt es laut. Die lösende Person tippt das richtige Gesicht an.",
+    commonPrompt: "Alle außer der lösenden Person haben sechs Karten. Genau eine Karte ist in allen Händen: gleicher Gegenstand, gleiche Farbe. Vergleicht eure Karten laut. Die lösende Person findet diese Karte auf der Tafel und tippt sie an.",
+    lineupPrompt: "Acht Gesichter, eine Person, die gefunden werden muss. Jede Zeugin und jeder Zeuge erinnert sich an ein oder zwei Details, aber nur als Bild. Beschreibt sie laut. Die lösende Person tippt das richtige Gesicht an.",
     blueprintPrompt: "Die lösende Person hat ein leeres Raster. Alle anderen halten einen Teil des Musters. Beschreibt eure Felder einzeln, von links nach rechts. Die lösende Person baut das ganze Raster nach und schickt es ab.",
     hints: { common: "Farbe der gemeinsamen Karte: {color}.", lineup: "Es ist nicht Gesicht {a} und auch nicht Gesicht {b}.", blueprint: "Feld oben links: {tile}." },
     colors: { red: "rot", blue: "blau", yellow: "gelb", black: "schwarz" },
@@ -331,7 +339,7 @@ const de: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `Gesicht ${n}`,
   },
-  facts: { hour: "Die freie Stunde", snackTotal: "Noch essbare Snacks", wifi: "Gäste-WLAN-Passwort" , desks: "Tischreihenfolge", lineup: "Das gewählte Gesicht" },
+  facts: { hour: "Die freie Stunde", snackTotal: "Noch essbare Snacks", wifi: "Gäste-WLAN-Passwort" , desks: "Tischreihenfolge", lineup: "Das gewählte Gesicht", note: "Die Zahl auf dem Zettel", memory: "Die Antwort im Gedächtnistest" },
   words: { snack: "dem Snack eures Teams", meeting: "eurem sinnlosen Meeting", tool: "dem Spitznamen eures Tools" },
   intakeDefaults: { q1: "lass uns das nochmal aufgreifen", q2: "Kaffee", q3: "der Montags-Sync", q4: "das Biest", q5: "der Allen-antworten-Vorfall", q6: "ein Nickerchenraum" },
   fallback: {
@@ -351,7 +359,8 @@ const de: Texts = {
 
 const fr: Texts = {
   slotPrompt: (meeting) => `Chacun a un agenda différent. Trouvez la seule heure aujourd’hui où vous êtes tous libres pour « ${meeting} ». Saisissez l’heure (24h, ex. 14).`,
-  snackPrompt: (snack) => `Chacun de vous voit une étagère. Combien de ${snack} sont encore bons à manger sur toutes les étagères ? Ne comptez pas ceux qui sont périmés.`,
+  snackPrompt: (snack) =>
+    `Chacun de vous voit une étagère. Combien de ${snack} sont encore bons à manger sur toutes les étagères ? Seule la personne qui résout connaît la date du jour : lisez à voix haute les dates de péremption de votre étagère.`,
   wifiPrompt: (tool) => `Le mot de passe du wifi invités a encore changé. Chacun de vous détient une règle. Assemblez les morceaux dans l’ordre des règles pour obtenir le mot de passe de « ${tool} ».`,
   replyAllPrompt:
     "Un fil « répondre à tous » s’est mélangé et chacun de vous détient quelques messages. Remettez-les dans l’ordre chronologique, puis saisissez les minutes du PREMIER et du DERNIER message (ex. 09:12 … 10:04 → 1204).",
@@ -384,11 +393,12 @@ const fr: Texts = {
   calendarOwner: (name) => `Agenda de ${name}`,
   stickyNote: (room) => `Post-it sur l’écran : « La télécommande du projecteur est en salle ${room}. »`,
   hint: (firstChar) => `La réponse commence par « ${firstChar} ».`,
+  challengeBonus: "Points bonus si vous mentionnez quelque chose de l’épisode du jour.",
   codePrompt: (codeName) =>
     `Le code de « ${codeName} » a encore changé. Chacun de vous détient une règle. Assemblez les morceaux dans l’ordre des règles pour le reconstituer.`,
   talk: {
-    commonPrompt: "Chacun de vous a six cartes. Une seule carte se trouve dans toutes les mains : même objet, même couleur. Décrivez-vous vos cartes. La personne qui résout touche la carte commune dans sa propre main.",
-    lineupPrompt: "Six visages, une personne à retrouver. Chaque témoin se souvient d’un détail, mais seulement en image. Décrivez-le à voix haute. La personne qui résout touche le bon visage.",
+    commonPrompt: "Tout le monde sauf la personne qui résout a six cartes. Une seule carte se trouve dans toutes les mains : même objet, même couleur. Comparez vos cartes à voix haute. La personne qui résout trouve cette carte sur le tableau et la touche.",
+    lineupPrompt: "Huit visages, une personne à retrouver. Chaque témoin se souvient d’un ou deux détails, mais seulement en image. Décrivez-les à voix haute. La personne qui résout touche le bon visage.",
     blueprintPrompt: "La personne qui résout a une grille vide. Chacun de vous détient une partie du motif. Décrivez vos cases une par une, de gauche à droite. La personne qui résout reconstruit toute la grille et l’envoie.",
     hints: { common: "Couleur de la carte commune : {color}.", lineup: "Ce n’est ni le visage {a} ni le visage {b}.", blueprint: "Case en haut à gauche : {tile}." },
     colors: { red: "rouge", blue: "bleu", yellow: "jaune", black: "noir" },
@@ -397,7 +407,7 @@ const fr: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `visage ${n}`,
   },
-  facts: { hour: "L’heure libre", snackTotal: "En-cas encore mangeables", wifi: "Mot de passe wifi invités" , desks: "Ordre des bureaux", lineup: "Le visage choisi" },
+  facts: { hour: "L’heure libre", snackTotal: "En-cas encore mangeables", wifi: "Mot de passe wifi invités" , desks: "Ordre des bureaux", lineup: "Le visage choisi", note: "Le nombre sur la note", memory: "La réponse du test de mémoire" },
   words: { snack: "l’en-cas de votre équipe", meeting: "votre réunion inutile", tool: "le surnom de votre outil" },
   intakeDefaults: { q1: "on en reparle", q2: "café", q3: "le point du lundi", q4: "la bête", q5: "l’incident répondre à tous", q6: "une salle de sieste" },
   fallback: {
@@ -417,7 +427,8 @@ const fr: Texts = {
 
 const es: Texts = {
   slotPrompt: (meeting) => `Cada uno tiene una agenda distinta. Encontrad la única hora de hoy en la que todos estáis libres para "${meeting}". Introduce la hora (24h, p. ej. 14).`,
-  snackPrompt: (snack) => `Cada uno ve una balda. ¿Cuántos ${snack} siguen en buen estado contando todas las baldas? No cuentes los caducados.`,
+  snackPrompt: (snack) =>
+    `Cada uno ve una balda. ¿Cuántos ${snack} siguen en buen estado contando todas las baldas? Solo quien resuelve sabe la fecha de hoy, así que leed en voz alta las fechas de consumo preferente de vuestra balda.`,
   wifiPrompt: (tool) => `Han vuelto a cambiar la contraseña del wifi de invitados. Cada uno tiene una regla. Juntad las piezas en orden de regla para obtener la contraseña de "${tool}".`,
   replyAllPrompt:
     "Un hilo de responder a todos se ha desordenado y cada uno tiene algunos mensajes. Ponedlos en orden de hora e introduce los minutos del PRIMER y del ÚLTIMO mensaje (p. ej. 09:12 … 10:04 → 1204).",
@@ -450,11 +461,12 @@ const es: Texts = {
   calendarOwner: (name) => `Agenda de ${name}`,
   stickyNote: (room) => `Nota en la pantalla: "El mando del proyector está en la sala ${room}."`,
   hint: (firstChar) => `La respuesta empieza por "${firstChar}".`,
+  challengeBonus: "Puntos extra si mencionáis algo del episodio de hoy.",
   codePrompt: (codeName) =>
     `Han vuelto a cambiar el código de "${codeName}". Cada uno tiene una regla. Juntad las piezas en orden de regla para reconstruirlo.`,
   talk: {
-    commonPrompt: "Cada uno tiene seis cartas. Exactamente una carta está en todas las manos: mismo objeto, mismo color. Describid vuestras cartas entre vosotros. Quien resuelve toca la carta compartida en su propia mano.",
-    lineupPrompt: "Seis caras, una persona que encontrar. Cada testigo recuerda un detalle, pero solo como imagen. Describidlo en voz alta. Quien resuelve toca la cara correcta.",
+    commonPrompt: "Todos menos quien resuelve tienen seis cartas. Exactamente una carta está en todas las manos: mismo objeto, mismo color. Comparad vuestras cartas en voz alta. Quien resuelve encuentra esa carta en el tablero y la toca.",
+    lineupPrompt: "Ocho caras, una persona que encontrar. Cada testigo recuerda uno o dos detalles, pero solo como imagen. Describidlos en voz alta. Quien resuelve toca la cara correcta.",
     blueprintPrompt: "Quien resuelve tiene una cuadrícula vacía. Cada uno tiene una parte del patrón. Describid vuestras casillas una a una, de izquierda a derecha. Quien resuelve reconstruye toda la cuadrícula y la envía.",
     hints: { common: "Color de la carta compartida: {color}.", lineup: "No es la cara {a} ni la cara {b}.", blueprint: "Casilla de arriba a la izquierda: {tile}." },
     colors: { red: "rojo", blue: "azul", yellow: "amarillo", black: "negro" },
@@ -463,7 +475,7 @@ const es: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `cara ${n}`,
   },
-  facts: { hour: "La hora libre", snackTotal: "Snacks aún comestibles", wifi: "Contraseña del wifi de invitados" , desks: "Orden de mesas", lineup: "La cara elegida" },
+  facts: { hour: "La hora libre", snackTotal: "Snacks aún comestibles", wifi: "Contraseña del wifi de invitados" , desks: "Orden de mesas", lineup: "La cara elegida", note: "El número de la nota", memory: "La respuesta de la prueba de memoria" },
   words: { snack: "el snack de tu equipo", meeting: "vuestra reunión inútil", tool: "el apodo de vuestra herramienta" },
   intakeDefaults: { q1: "lo retomamos luego", q2: "café", q3: "la sincro del lunes", q4: "la bestia", q5: "el incidente de responder a todos", q6: "una sala de siesta" },
   fallback: {
@@ -483,7 +495,8 @@ const es: Texts = {
 
 const it: Texts = {
   slotPrompt: (meeting) => `Ognuno ha un calendario diverso. Trovate l’unica ora di oggi in cui siete tutti liberi per "${meeting}". Inserisci l’ora (24h, es. 14).`,
-  snackPrompt: (snack) => `Ognuno di voi vede uno scaffale. Quanti ${snack} sono ancora buoni da mangiare su tutti gli scaffali? Non contare quelli scaduti.`,
+  snackPrompt: (snack) =>
+    `Ognuno di voi vede uno scaffale. Quanti ${snack} sono ancora buoni da mangiare su tutti gli scaffali? Solo chi risolve conosce la data di oggi, quindi leggete ad alta voce le date di scadenza del vostro scaffale.`,
   wifiPrompt: (tool) => `La password del wifi ospiti è cambiata di nuovo. Ognuno di voi ha una regola. Mettete insieme i pezzi in ordine di regola per ottenere la password di "${tool}".`,
   replyAllPrompt:
     "Un thread rispondi-a-tutti si è mescolato e ognuno di voi ha qualche messaggio. Rimetteteli in ordine di orario, poi inserisci i minuti del PRIMO e dell’ULTIMO messaggio (es. 09:12 … 10:04 → 1204).",
@@ -516,11 +529,12 @@ const it: Texts = {
   calendarOwner: (name) => `Calendario di ${name}`,
   stickyNote: (room) => `Post-it sul monitor: "Il telecomando del proiettore è nella stanza ${room}."`,
   hint: (firstChar) => `La risposta inizia con "${firstChar}".`,
+  challengeBonus: "Punti bonus se citate qualcosa dall’episodio di oggi.",
   codePrompt: (codeName) =>
     `Il codice di "${codeName}" è cambiato di nuovo. Ognuno di voi ha una regola. Mettete insieme i pezzi in ordine di regola per ricostruirlo.`,
   talk: {
-    commonPrompt: "Ognuno di voi ha sei carte. Esattamente una carta è in tutte le mani: stesso oggetto, stesso colore. Descrivetevi le carte a vicenda. Chi risolve tocca la carta comune nella propria mano.",
-    lineupPrompt: "Sei volti, una persona da trovare. Ogni testimone ricorda un dettaglio, ma solo come immagine. Descrivetelo ad alta voce. Chi risolve tocca il volto giusto.",
+    commonPrompt: "Tutti tranne chi risolve hanno sei carte. Esattamente una carta è in tutte le mani: stesso oggetto, stesso colore. Confrontate le carte ad alta voce. Chi risolve trova quella carta sul tabellone e la tocca.",
+    lineupPrompt: "Otto volti, una persona da trovare. Ogni testimone ricorda uno o due dettagli, ma solo come immagine. Descriveteli ad alta voce. Chi risolve tocca il volto giusto.",
     blueprintPrompt: "Chi risolve ha una griglia vuota. Ognuno di voi ha una parte dello schema. Descrivete le vostre caselle una alla volta, da sinistra a destra. Chi risolve ricostruisce tutta la griglia e la invia.",
     hints: { common: "Colore della carta comune: {color}.", lineup: "Non è il volto {a} e non è il volto {b}.", blueprint: "Casella in alto a sinistra: {tile}." },
     colors: { red: "rosso", blue: "blu", yellow: "giallo", black: "nero" },
@@ -529,7 +543,7 @@ const it: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `volto ${n}`,
   },
-  facts: { hour: "L’ora libera", snackTotal: "Snack ancora commestibili", wifi: "Password wifi ospiti" , desks: "Ordine delle scrivanie", lineup: "Il volto scelto" },
+  facts: { hour: "L’ora libera", snackTotal: "Snack ancora commestibili", wifi: "Password wifi ospiti" , desks: "Ordine delle scrivanie", lineup: "Il volto scelto", note: "Il numero sul biglietto", memory: "La risposta della prova di memoria" },
   words: { snack: "lo snack della vostra squadra", meeting: "la vostra riunione inutile", tool: "il soprannome del vostro strumento" },
   intakeDefaults: { q1: "ne riparliamo", q2: "caffè", q3: "l’allineamento del lunedì", q4: "la bestia", q5: "l’incidente del rispondi a tutti", q6: "una stanza per il pisolino" },
   fallback: {
@@ -549,7 +563,8 @@ const it: Texts = {
 
 const lt: Texts = {
   slotPrompt: (meeting) => `Visų kalendoriai skirtingi. Raskite vienintelę šios dienos valandą, kai visi esate laisvi dėl „${meeting}“. Įveskite valandą (24 val., pvz., 14).`,
-  snackPrompt: (snack) => `Kiekvienas iš jūsų mato vieną lentyną. Kiek ${snack} dar tinka valgyti visose lentynose kartu? Pasibaigusio galiojimo neskaičiuokite.`,
+  snackPrompt: (snack) =>
+    `Kiekvienas iš jūsų mato vieną lentyną. Kiek ${snack} dar tinka valgyti visose lentynose kartu? Šiandienos datą žino tik sprendėjas, todėl garsiai perskaitykite tinkamumo datas savo lentynoje.`,
   wifiPrompt: (tool) => `Svečių wifi slaptažodis vėl pakeistas. Kiekvienas iš jūsų turi po vieną taisyklę. Sudėkite dalis taisyklių eilės tvarka ir gausite „${tool}“ slaptažodį.`,
   replyAllPrompt:
     "Laiškų gija „atsakyti visiems“ susimaišė, ir kiekvienas iš jūsų turi po kelias žinutes. Sudėliokite jas laiko tvarka ir įveskite PIRMOS ir PASKUTINĖS žinutės minutes (pvz., 09:12 … 10:04 → 1204).",
@@ -582,11 +597,12 @@ const lt: Texts = {
   calendarOwner: (name) => `${name} kalendorius`,
   stickyNote: (room) => `Lipnus lapelis ant ekrano: „Projektoriaus pultelis yra ${room} kambaryje.“`,
   hint: (firstChar) => `Atsakymas prasideda „${firstChar}“.`,
+  challengeBonus: "Papildomi taškai, jei paminėsite ką nors iš šiandienos serijos.",
   codePrompt: (codeName) =>
     `„${codeName}“ kodas vėl pakeistas. Kiekvienas iš jūsų turi po vieną taisyklę. Sudėkite dalis taisyklių eilės tvarka ir atkurkite jį.`,
   talk: {
-    commonPrompt: "Kiekvienas iš jūsų turi šešias korteles. Lygiai viena kortelė yra visų rankose: tas pats daiktas, ta pati spalva. Apibūdinkite savo korteles vieni kitiems. Sprendėjas paliečia bendrą kortelę savo rankoje.",
-    lineupPrompt: "Šeši veidai, vienas žmogus, kurį reikia rasti. Kiekvienas liudininkas prisimena vieną detalę, bet tik kaip paveikslėlį. Apibūdinkite ją garsiai. Sprendėjas paliečia teisingą veidą.",
+    commonPrompt: "Visi, išskyrus sprendėją, turi po šešias korteles. Lygiai viena kortelė yra visų rankose: tas pats daiktas, ta pati spalva. Garsiai palyginkite savo korteles. Sprendėjas suranda tą kortelę lentoje ir ją paliečia.",
+    lineupPrompt: "Aštuoni veidai, vienas žmogus, kurį reikia rasti. Kiekvienas liudininkas prisimena vieną ar dvi detales, bet tik kaip paveikslėlį. Apibūdinkite jas garsiai. Sprendėjas paliečia teisingą veidą.",
     blueprintPrompt: "Sprendėjas turi tuščią tinklelį. Kiekvienas iš jūsų turi dalį rašto. Apibūdinkite savo langelius po vieną, iš kairės į dešinę. Sprendėjas atkuria visą tinklelį ir jį išsiunčia.",
     hints: { common: "Bendros kortelės spalva: {color}.", lineup: "Tai ne veidas nr. {a} ir ne veidas nr. {b}.", blueprint: "Viršutinis kairysis langelis: {tile}." },
     colors: { red: "raudona", blue: "mėlyna", yellow: "geltona", black: "juoda" },
@@ -595,7 +611,7 @@ const lt: Texts = {
     cardName: (o, c) => `${o} (${c})`,
     faceNumber: (n) => `veidas nr. ${n}`,
   },
-  facts: { hour: "Laisva valanda", snackTotal: "Dar valgomi užkandžiai", wifi: "Svečių wifi slaptažodis" , desks: "Stalų tvarka", lineup: "Pasirinktas veidas" },
+  facts: { hour: "Laisva valanda", snackTotal: "Dar valgomi užkandžiai", wifi: "Svečių wifi slaptažodis" , desks: "Stalų tvarka", lineup: "Pasirinktas veidas", note: "Skaičius ant lapelio", memory: "Atminties patikrinimo atsakymas" },
   words: { snack: "jūsų komandos užkandžio", meeting: "jūsų beprasmio susitikimo", tool: "jūsų įrankio pravardės" },
   intakeDefaults: { q1: "grįšime prie to", q2: "kava", q3: "pirmadienio sinchronizacija", q4: "pabaisa", q5: "atsakyti visiems incidentas", q6: "miego kambarys" },
   fallback: {

@@ -5474,3 +5474,17 @@ details[open] > summary::after { transform: rotate(-135deg); margin-top: -2px; }
 /* Test games (mock-paid playtests) */
 .test-game-badge { display: inline-block; margin: 0 0 10px; padding: 5px 12px; border-radius: var(--r-pill); background: #FFF6C7; border: 1px solid #F0DE8E; color: #7A5B00; font-size: 13px; font-weight: 800; }
 .test-game-note { margin: 16px 0 0; padding: 12px 14px; border-radius: 12px; background: #FFF6C7; border: 1px solid #F0DE8E; color: #5C4600; font-size: 14px; line-height: 1.5; }
+
+/* Snack shelves with dates; the solver's shelf carries today's date */
+.shelf-date { margin-left: auto; padding: 2px 8px; border-radius: var(--r-pill); background: #EEF3FC; color: var(--ink-2); font-size: 12px; font-weight: 700; white-space: nowrap; }
+.shelf-today { margin: 0 0 8px; padding: 8px 12px; border-radius: 10px; background: #FFF6C7; border: 1px solid #F0DE8E; color: #5C4600; font-size: 13.5px; font-weight: 700; }
+
+/* The solver's card board: every object of the world in every colour */
+.card-board { list-style: none; margin: 0 0 12px; padding: 0; display: grid; gap: 6px; max-width: 340px; }
+.card-board > li { display: flex; }
+.card-board .talk-card { aspect-ratio: 1; border-radius: 10px; animation: none; }
+.card-board .talk-card svg { width: 70%; }
+
+/* Eight-face line-ups: two rows of four */
+.lineup { grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 8px; }
+.lineup-face svg { width: 88%; }

@@ -30,11 +30,16 @@ User feedback after the first playtests:
 
 ### Plan constraints (`episode.test.ts`)
 
-- 2 × team size rounds; everyone solves exactly twice; no template twice in a row.
+- 2 × team size rounds; everyone solves exactly twice; **never the same solver twice in a row**.
 - At least two-thirds of the middle rounds are talk rounds, using at least two different talk mechanics.
+- **No mechanic repeats in 6- and 8-round episodes.** 10-round episodes have more talk slots than there are talk mechanics, so at most two talk mechanics come back, each at least three rounds after its first use.
 - At most one deduction round (desks), and only in 8- and 10-round episodes.
-- At least two different fact rounds, so the key ceremony always has three facts.
-- Twists never on round 1, the sticky-note round or the memory round. Flash only on picture rounds.
+- At least one snack, code or desks round, so the key ceremony has a fact the whole team heard.
+- Twists never on round 1, the sticky-note round or the memory round. **Flash only on line-up and card rounds; no rush on a 5-player card round.** If the preferred twist fits nowhere, the other kind is used.
+
+### Key ceremony
+
+Three facts the whole team heard, in this order: the free hour (round 1), one counted or rebuilt answer (snack total, code or desk order), and the number on the sticky note, which its holder reads out in the memory round. A line-up answer is never used: it is a position only the solver saw. The final challenge prompt always ends with a fixed line saying that mentioning something from today's episode earns bonus points, because the judge's rubric rewards it.
 
 ## Talk rounds (new, `talk.ts`)
 
@@ -42,15 +47,17 @@ All pieces are pictures drawn by the UI, so they have to be described, not read 
 
 | Round | Sources see | Solver | Answer |
 |---|---|---|---|
-| **Common ground** | Six picture cards (object + colour). Exactly one card is in every hand, including the solver's. Near misses (same object, other colour) force precise description. | Taps the shared card in their own hand | Card id |
-| **Line-up** | One feature of a face, drawn alone on a blank head (hat, glasses, facial hair, hair colour or shirt colour) | Six faces; taps the one that matches | Face number |
+| **Common ground** | Six picture cards (object + colour). Exactly one card is in every source's hand. Near misses (same object, other colour) force precise description. | Holds the board: every object of the world in every colour (32 cards, objects in rows). Finds the shared card on it while the others compare. | Card id |
+| **Line-up** | Details of one face, drawn alone on a blank head (hat, glasses, facial hair, hair colour or shirt colour). Two details each in 3-player teams, one otherwise. | Eight faces; taps the one that matches | Face number |
 | **Blueprint** | One or two rows of a coloured tile pattern | Paints an empty grid | The grid |
 
-Tap-to-answer rounds allow two misses instead of five, because the options are visible. Faces use a neutral, non-skin tone on purpose: no round asks anyone to describe skin. Colours (red, blue, yellow, black) differ in lightness as well as hue for colour-vision deficiencies.
+Tap-to-answer rounds allow two misses instead of five, because the options are visible. With eight faces and a 32-card board, a blind guess succeeds one time in four (line-up) or one in sixteen (cards).
+
+The classic **snack** round also needs talk now: shelf items carry best-before days and only the solver's shelf shows today's date, so everyone reads out their items and dates and the solver decides what has expired. Faces use a neutral, non-skin tone on purpose: no round asks anyone to describe skin. Colours (red, blue, yellow, black) differ in lightness as well as hue for colour-vision deficiencies.
 
 ## Twists
 
-- **Flash:** sources see their piece for 30 seconds, then the server stops sending it. They describe it from memory.
+- **Flash:** sources see their piece for 30 seconds, then the server stops sending it. They describe it from memory. Only on line-up and card rounds.
 - **Rush:** 150-second cap and the hint at 50 seconds, instead of 270 and 90.
 
 ## Team memory
