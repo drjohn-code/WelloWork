@@ -1,19 +1,21 @@
 "use client";
 
-import { useRef, useState } from "react";
+import { useRef, useState, useSyncExternalStore } from "react";
+import { createPortal } from "react-dom";
 import { useTranslations } from "next-intl";
 import type { GameView } from "@/app/lib/game/types";
 import { GameMasterSays } from "./GameMaster";
 import { PieceView } from "./Pieces";
 import { TeamBar } from "./TeamBar";
-import { CheckBurstIcon, TemplateIcon } from "./PlayIcons";
-import { Burst, Scene, Stamp } from "./PlayArt";
+import { CheckBurstIcon, Confetti, FlameIcon, TemplateIcon } from "./PlayIcons";
+import { Burst, GameMasterFace, Scene, Stamp, type GameMasterMood } from "./PlayArt";
 import { ChoiceAnswer, GridAnswer } from "./TalkAnswer";
-import { firstName, useCountdown, type ActResult } from "./usePlay";
+import { RoundHud } from "./RoundHud";
+import { firstName, useCountdown, usePulse, type ActResult } from "./usePlay";
 
 const DETAIL_VISIBLE_SEC = 8;
 
-export function Round({ view, act, sound }: { view: GameView; act: (b: { action: string } & Record<string, unknown>) => Promise<ActResult>; sound?: { enabled: boolean; toggle: () => void; play: (n: "wrong" | "correct") => void } }) {
+export function Round({ view, act, sound, introPlaying = false }: { view: GameView; act: (b: { action: string } & Record<string, unknown>) => Promise<ActResult>; sound?: { enabled: boolean; toggle: () => void; play: (n: "wrong" | "correct") => void }; introPlaying?: boolean }) {
   const t = useTranslations("play.round");
   const tp = useTranslations("play");
   const r = view.round!;
@@ -31,6 +33,10 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
   // Flash twist: the server stops sending the piece once its time is up; hide it locally on the beat too.
   const pieceGone = r.pieceHidden || (r.pieceHidesAt !== null && hideIn <= 0);
   const talkAnswer = r.prompt.answerType === "choice" || r.prompt.answerType === "grid";
+  // The owl jumps at every wrong attempt (seen by the whole team through the poll), and thinks while the solver works.
+  const surprised = usePulse(r.wrongAttempts, 2500);
+  const setupMood: GameMasterMood = r.status !== "active" ? "default" : surprised ? "surprised" : "thinking";
+  const clean = r.status === "solved" && r.path[r.index]?.clean === true;
 
   async function submit(e: React.FormEvent) {
     e.preventDefault();
@@ -69,7 +75,9 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
 
   return (
     <div className="play-stack">
-      <TeamBar view={view} solverId={r.solver.id} label={label} progress={{ current: r.index, total: r.total }} sound={sound} />
+      <TeamBar view={view} solverId={r.solver.id} />
+      <RoundHud r={r} sound={sound} />
+      {clean && <ScreenConfetti />}
 
       <section className="play-card glass-strong round-card deal-in scene-card" aria-labelledby="round-title">
         <Scene kind={r.template} />
@@ -96,7 +104,9 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
             {r.isSolver ? <span className="round-role-chip solver">{t("youSolve")}</span> : <span className="round-role-chip">{t("solverIs", { name: firstName(r.solver.name) })}</span>}
           </div>
         </div>
-        <GameMasterSays>{r.setup}</GameMasterSays>
+        <GameMasterSays mood={setupMood} paused={introPlaying}>
+          {r.setup}
+        </GameMasterSays>
 
         {r.status === "active" && (
           <div className="round-timer" aria-hidden="true">
@@ -158,7 +168,7 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
               <ChoiceAnswer piece={r.myPiece} busy={busy === "attempt"} wrong={feedback === "wrong"} attemptsLeft={r.attemptsLeft} labels={r.labels} onSubmit={send} />
             )}
             <p className="order-error" role="alert">
-              {feedback === "wrong" ? t("wrong") : error ?? ""}
+              {feedback === "wrong" ? <WrongNote text={t("wrong")} /> : error ?? ""}
             </p>
             {r.hint && <p className="round-hint">{r.hint}</p>}
             <SolverTools r={r} view={view} hintIn={hintIn} busy={busy} onAction={simple} />
@@ -198,7 +208,7 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
               {r.prompt.answerType === "digits" ? t("digitsHelp") : t("textHelp")} · {t("attemptsLeft", { n: r.attemptsLeft })}
             </p>
             <p className="order-error" role="alert">
-              {feedback === "wrong" ? t("wrong") : error ?? ""}
+              {feedback === "wrong" ? <WrongNote text={t("wrong")} /> : error ?? ""}
             </p>
             {r.hint && <p className="round-hint">{r.hint}</p>}
             <SolverTools r={r} view={view} hintIn={hintIn} busy={busy} onAction={simple} />
@@ -227,10 +237,19 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
                 )}
               </div>
             ) : (
-              <p className="play-waiting">
-                <span className="play-pulse" aria-hidden="true" />
-                {t("sourceWaiting", { name: firstName(r.solver.name) })}
-              </p>
+              <>
+                {surprised && r.wrongAttempts > 0 && (
+                  <p className="round-wrong-note">
+                    <WrongNote text={t("wrongTeam", { n: r.attemptsLeft })} />
+                  </p>
+                )}
+                <p className="play-waiting">
+                  <span className="gm-mini" aria-hidden="true">
+                    <GameMasterFace size={26} mood="thinking" />
+                  </span>
+                  {t("sourceWaiting", { name: firstName(r.solver.name) })}
+                </p>
+              </>
             )}
             {error && (
               <p className="play-error" role="alert">
@@ -241,7 +260,8 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
         )}
 
         {r.status !== "active" && (
-          <div className={`round-result ${r.status}`} role="status">
+          <div className={`round-result ${r.status}${clean ? " clean" : ""}`} role="status">
+            {clean && <Burst tone="success" big />}
             <Stamp tone={r.status === "solved" ? "success" : "fail"}>{r.status === "solved" ? t("solved") : t("failed")}</Stamp>
             <p className="round-result-title">
               {r.status === "solved" && (
@@ -251,13 +271,58 @@ export function Round({ view, act, sound }: { view: GameView; act: (b: { action:
               )}
               {r.status === "solved" ? t("solved") : t("failed")}
             </p>
+            {(clean || (r.status === "solved" && r.streak >= 2)) && (
+              <p className="round-result-chips">
+                {clean && <span className="result-chip clean">{t("clean")}</span>}
+                {r.status === "solved" && r.streak >= 2 && (
+                  <span className="result-chip streak-chip">
+                    <FlameIcon size={14} />
+                    {t("streakChip", { n: r.streak })}
+                  </span>
+                )}
+              </p>
+            )}
             {r.revealedAnswer && <p className="round-result-answer">{t("answerWas", { answer: r.revealedAnswer })}</p>}
-            {r.reaction && <GameMasterSays tone={r.status === "solved" ? "success" : "fail"}>{r.reaction}</GameMasterSays>}
+            {r.reaction && (
+              <GameMasterSays tone={r.status === "solved" ? "success" : "fail"} mood={clean ? "celebrating" : undefined}>
+                {r.reaction}
+              </GameMasterSays>
+            )}
             <p className="play-small">{r.index + 1 < r.total ? t("nextIn", { s: nextIn }) : t("finaleIn", { s: nextIn })}</p>
           </div>
         )}
       </section>
     </div>
+  );
+}
+
+const noSubscribe = () => () => {};
+
+/**
+ * Confetti over the whole screen for a clean solve. Portalled to <body>: the
+ * phase wrapper's entrance animation would otherwise pin a fixed overlay to the
+ * page column. Client only (there is no <body> to portal into on the server).
+ */
+function ScreenConfetti() {
+  const client = useSyncExternalStore(noSubscribe, () => true, () => false);
+  if (!client) return null;
+  return createPortal(
+    <div className="clean-confetti">
+      <Confetti count={36} />
+    </div>,
+    document.body
+  );
+}
+
+/** The owl's surprised face next to a "not it" line. */
+function WrongNote({ text }: { text: string }) {
+  return (
+    <>
+      <span className="gm-mini" aria-hidden="true">
+        <GameMasterFace size={26} mood="surprised" />
+      </span>
+      {text}
+    </>
   );
 }
 

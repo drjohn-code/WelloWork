@@ -3775,7 +3775,24 @@
         "wifi": "Lisez votre règle mot pour mot, avec son numéro.",
         "desks": "Lisez votre indice exactement tel qu’il est écrit.",
         "default": "Relisez lentement, dans un autre ordre."
-      }
+      },
+      "wrongTeam": "Ce n’est pas ça. Essais restants : {n}",
+      "clean": "Sans faute : aucune erreur, aucun indice",
+      "streakChip": "{n} d’affilée"
+    },
+    "hud": {
+      "aria": "Progression de l’épisode",
+      "path": "Parcours de l’épisode",
+      "round": "Manche {n}",
+      "status": {
+        "pending": "à venir",
+        "current": "en cours",
+        "solved": "résolue",
+        "clean": "résolue sans erreur",
+        "failed": "manquée"
+      },
+      "twist": "Rebondissement : {name}",
+      "streak": "Série de l’équipe : {n} d’affilée"
     },
     "challenge": {
       "stepLabel": "Défi final",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Son activé",
-      "off": "Son coupé"
+      "off": "Son coupé",
+      "label": "Son"
     },
     "vote": {
       "title": "Choisissez l’univers de cet épisode",

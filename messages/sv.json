@@ -3775,7 +3775,24 @@
         "wifi": "Läs din regel ordagrant, med numret.",
         "desks": "Läs din ledtråd exakt som den står.",
         "default": "Läs den igen långsamt, i en annan ordning."
-      }
+      },
+      "wrongTeam": "Inte den. Försök kvar: {n}",
+      "clean": "Rent löst: inga missar, ingen ledtråd",
+      "streakChip": "{n} i rad"
+    },
+    "hud": {
+      "aria": "Avsnittets framsteg",
+      "path": "Avsnittets rundor",
+      "round": "Runda {n}",
+      "status": {
+        "pending": "kommer snart",
+        "current": "spelas nu",
+        "solved": "löst",
+        "clean": "löst utan miss",
+        "failed": "missad"
+      },
+      "twist": "Twist: {name}",
+      "streak": "Lagets svit: {n} i rad"
     },
     "challenge": {
       "stepLabel": "Slututmaning",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Ljud på",
-      "off": "Ljud av"
+      "off": "Ljud av",
+      "label": "Ljud"
     },
     "vote": {
       "title": "Välj det här avsnittets värld",

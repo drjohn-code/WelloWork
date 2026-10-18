@@ -3768,7 +3768,24 @@
         "wifi": "Read your rule word for word, with its number.",
         "desks": "Read your clue exactly as written.",
         "default": "Read it again slowly, in a different order."
-      }
+      },
+      "wrongTeam": "Not that one. Tries left: {n}",
+      "clean": "Clean solve: no misses, no hint",
+      "streakChip": "{n} in a row"
+    },
+    "hud": {
+      "aria": "Episode progress",
+      "path": "Episode path",
+      "round": "Round {n}",
+      "status": {
+        "pending": "coming up",
+        "current": "now playing",
+        "solved": "solved",
+        "clean": "solved with no misses",
+        "failed": "missed"
+      },
+      "twist": "Twist: {name}",
+      "streak": "Team streak: {n} in a row"
     },
     "challenge": {
       "stepLabel": "Final challenge",
@@ -3879,7 +3896,8 @@
     },
     "sound": {
       "on": "Sound on",
-      "off": "Sound off"
+      "off": "Sound off",
+      "label": "Sound"
     },
     "vote": {
       "title": "Pick this episode's world",

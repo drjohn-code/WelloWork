@@ -31,6 +31,7 @@ import {
   type TemplateId,
 } from "./types";
 import { buildScorecardResult } from "./scorecard-view";
+import { buildEpisodePath, teamStreak, type RoundSummaryRow } from "./path";
 import type { Database, Json } from "@/app/types/database";
 
 /**
@@ -794,8 +795,11 @@ export async function getView(ctx: GameContext): Promise<GameView> {
   } else if (game.phase === "briefing") {
     view.briefing = { text: content.briefing, isHost: view.me.isHost };
   } else if (game.phase === "round") {
-    const round = await currentRound(db, game);
-    if (round) view.round = buildRoundView(ctx, round, content, language, now, round.stuck_at ? await stuckNeed(db, game.id, round.round_index) : []);
+    const [round, { data: summary }] = await Promise.all([
+      currentRound(db, game),
+      db.from("cognitive_rewards_game_rounds").select("round_index, status, wrong_attempts, hint_used").eq("game_id", game.id),
+    ]);
+    if (round) view.round = buildRoundView(ctx, round, content, language, now, round.stuck_at ? await stuckNeed(db, game.id, round.round_index) : [], summary ?? []);
   } else if (game.phase === "challenge" || game.phase === "judging") {
     view.challenge = {
       prompt: content.challengePrompt,
@@ -843,7 +847,7 @@ export async function getView(ctx: GameContext): Promise<GameView> {
   return view;
 }
 
-function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent, language: ContentLanguage, now: number, need: string[]): RoundView {
+function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent, language: ContentLanguage, now: number, need: string[], summary: RoundSummaryRow[]): RoundView {
   const { game, me, players } = ctx;
   const schedule = game.schedule as unknown as RoundSpec[];
   const rc = content.rounds[round.round_index] ?? TEXTS[language].fallback.rounds[round.round_index];
@@ -877,6 +881,7 @@ function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent,
 
   const detail = params.detail && params.detail.playerId === me.id && status === "active" ? { text: params.detail.text, shownAt: startedAt } : null;
   const prompt = round.public_prompt as unknown as PublicPrompt;
+  const path = buildEpisodePath(schedule, summary);
 
   return {
     index: round.round_index,
@@ -909,6 +914,8 @@ function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent,
     reaction,
     revealedAnswer,
     nextAt: round.ended_at ? new Date(Date.parse(round.ended_at) + TIMING.reactionMs).toISOString() : null,
+    path,
+    streak: teamStreak(path),
   };
 }
 

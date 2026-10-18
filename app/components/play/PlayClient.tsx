@@ -94,7 +94,7 @@ export function PlayClient({ token, initial, page }: { token: string; initial: G
       break;
     case "round":
       // Keyed by round so input state resets when the next round starts.
-      body = view.round ? <Round key={view.round.index} view={view} act={act} sound={sound} /> : <Waiting view={view} title={t("loading")} text="" />;
+      body = view.round ? <Round key={view.round.index} view={view} act={act} sound={sound} introPlaying={introFor !== null} /> : <Waiting view={view} title={t("loading")} text="" />;
       break;
     case "challenge":
     case "judging":

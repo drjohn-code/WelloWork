@@ -214,6 +214,45 @@ export function CheckBurstIcon({ size = 28 }: P) {
   );
 }
 
+/** Team streak flame; the inner flame is a separate shape so CSS can flicker it. */
+export function FlameIcon({ size = 20 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false" className="flame-icon">
+      <path className="flame-outer" d="M12 2.5c.6 3-1.6 4.6-3.2 6.5C7.3 10.8 6 12.7 6 15.2 6 18.7 8.7 21.5 12 21.5s6-2.8 6-6.3c0-2.6-1.2-4.6-2.6-6.2-.3 1.5-1 2.6-2 3.1.4-3.6-.4-6.6-1.4-8.6z" />
+      <path className="flame-inner" d="M12 12.5c-1.4 1.4-2.6 2.6-2.6 4.3a2.6 2.6 0 0 0 5.2 0c0-1.5-1-2.9-2.6-4.3z" />
+    </svg>
+  );
+}
+
+/** Flash twist marker. */
+export function BoltIcon({ size = 12 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+      <path d="M13.5 2 4.5 13.5H11L9.5 22l10-12.5H13z" fill="currentColor" />
+    </svg>
+  );
+}
+
+/** Rush twist marker. */
+export function StopwatchIcon({ size = 12 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base} strokeWidth={3}>
+      <circle cx="12" cy="13.5" r="7.5" />
+      <path d="M12 13.5V10M10 2.5h4" />
+    </svg>
+  );
+}
+
+/** Speaker, with waves when on and a cross when off. */
+export function SpeakerIcon({ size = 18, on }: P & { on: boolean }) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base} strokeWidth={2}>
+      <path d="M4 10v4h4l5 4V6l-5 4z" />
+      {on ? <path d="M16 9a4 4 0 0 1 0 6M18.5 6.5a8 8 0 0 1 0 11" /> : <path d="m17 9 4 6M21 9l-4 6" />}
+    </svg>
+  );
+}
+
 /** Padlock whose shackle lifts when `open`. */
 export function LockIcon({ size = 40, open = false }: P & { open?: boolean }) {
   return (
@@ -240,7 +279,7 @@ export function Confetti({ count = 48 }: { count?: number }) {
           <span
             key={i}
             className={`confetti-p s${shape}`}
-            style={{ left: `${left}%`, background: colors[i % colors.length], animationDelay: `${delay}s`, animationDuration: `${dur}s`, ["--rot" as string]: `${rot}deg` }}
+            style={{ left: `${left}%`, background: colors[i % colors.length], animationDelay: `${delay}s`, animationDuration: `${dur}s`, ["--rot" as string]: `${rot}deg`, ["--dx" as string]: `${Math.round(rot / 12 - 15)}px` }}
           />
         );
       })}

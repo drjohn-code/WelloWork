@@ -18,26 +18,91 @@ const hidden = { "aria-hidden": true, focusable: false } as const;
 
 /* ── Game Master: a deadpan office owl with reading glasses ─────────────── */
 
-export function GameMasterFace({ size = 44, mood = "default" }: { size?: number; mood?: "default" | "success" | "fail" }) {
+export type GameMasterMood = "default" | "success" | "fail" | "thinking" | "surprised" | "celebrating";
+
+type Pt = [number, number];
+/** Per-mood geometry. Brows are drawn light so they read against the navy head. */
+const OWL: Record<GameMasterMood, { brows: [string, string]; pupils: Pt[] | null; pupilR: number; eyeR: number; lid: number; open: boolean; blush: boolean }> = {
+  default: { brows: ["M15 19 Q22 16 29 19", "M35 19 Q42 16 49 19"], pupils: [[23, 31], [43, 31]], pupilR: 3.4, eyeR: 8.5, lid: 0, open: false, blush: false },
+  success: { brows: ["M15 17.5 Q22 14.5 29 17.5", "M35 17.5 Q42 14.5 49 17.5"], pupils: [[23, 30], [43, 30]], pupilR: 3.4, eyeR: 8.5, lid: 0, open: false, blush: true },
+  fail: { brows: ["M15 19.5 Q22 19 29 21.5", "M35 21.5 Q42 19 49 19.5"], pupils: [[22, 33], [42, 33]], pupilR: 3.2, eyeR: 8.5, lid: 9, open: false, blush: false },
+  thinking: { brows: ["M15 16 Q22 12.5 29 16", "M35 20 Q42 19 49 20"], pupils: [[25.5, 26.5], [45.5, 26.5]], pupilR: 3.2, eyeR: 8.5, lid: 5, open: false, blush: false },
+  surprised: { brows: ["M15 14.5 Q22 11 29 14.5", "M35 14.5 Q42 11 49 14.5"], pupils: [[22, 30], [42, 30]], pupilR: 2.2, eyeR: 9.6, lid: 0, open: true, blush: false },
+  celebrating: { brows: ["M15 15.5 Q22 12.5 29 15.5", "M35 15.5 Q42 12.5 49 15.5"], pupils: null, pupilR: 0, eyeR: 8.5, lid: 0, open: true, blush: true },
+};
+
+const SPARK = "l1.2 2.8 2.8 1.2 -2.8 1.2 -1.2 2.8 -1.2 -2.8 -2.8 -1.2 2.8 -1.2z";
+
+/**
+ * The owl's face. Keyed by mood, so every change of expression replays that
+ * mood's entrance (a jolt for surprised, hops for celebrating, a slow head tilt
+ * while thinking). The lower jaw also flaps while a speech bubble types.
+ */
+export function GameMasterFace({ size = 44, mood = "default" }: { size?: number; mood?: GameMasterMood }) {
+  const m = OWL[mood];
   return (
-    <svg width={size} height={size} viewBox="0 0 64 64" className={`gm-face mood-${mood}`} {...hidden}>
+    <svg key={mood} width={size} height={size} viewBox="0 0 64 64" className={`gm-face mood-${mood}`} overflow="visible" {...hidden}>
       <circle cx="32" cy="34" r="26" fill={NAVY} />
       <path d="M14 22 L22 8 L28 20 Z M50 22 L42 8 L36 20 Z" fill={NAVY} />
       <ellipse cx="32" cy="42" rx="14" ry="12" fill="#23407f" />
+      {m.blush && (
+        <g fill={CORAL} opacity="0.55">
+          <circle cx="13.5" cy="39" r="3.2" />
+          <circle cx="50.5" cy="39" r="3.2" />
+        </g>
+      )}
       <g className="gm-eyes">
-        <circle cx="22" cy="30" r="8.5" fill="white" />
-        <circle cx="42" cy="30" r="8.5" fill="white" />
-        <circle className="gm-pupil" cx="23" cy="31" r="3.4" fill={NAVY} />
-        <circle className="gm-pupil" cx="43" cy="31" r="3.4" fill={NAVY} />
+        <circle cx="22" cy="30" r={m.eyeR} fill="white" />
+        <circle cx="42" cy="30" r={m.eyeR} fill="white" />
+        {m.pupils ? (
+          m.pupils.map(([x, y]) => <circle key={x} className="gm-pupil" cx={x} cy={y} r={m.pupilR} fill={NAVY} />)
+        ) : (
+          <g stroke={NAVY} strokeWidth="2.6" fill="none" strokeLinecap="round">
+            <path d="M16.5 32 Q22 25 27.5 32" />
+            <path d="M36.5 32 Q42 25 47.5 32" />
+          </g>
+        )}
+        {m.lid > 0 && (
+          <g fill={NAVY}>
+            <rect x="12" y="19" width="20" height={m.lid} />
+            <rect x="32" y="19" width="20" height={m.lid} />
+          </g>
+        )}
         <circle cx="22" cy="30" r="10" fill="none" stroke={ACCENT} strokeWidth="2" />
         <circle cx="42" cy="30" r="10" fill="none" stroke={ACCENT} strokeWidth="2" />
         <path d="M32 30h0" stroke={ACCENT} strokeWidth="2" />
-        <rect className="gm-lid" x="12" y="19" width="20" height="0" fill={NAVY} rx="2" />
-        <rect className="gm-lid" x="32" y="19" width="20" height="0" fill={NAVY} rx="2" />
+        {m.pupils && (
+          <>
+            <rect className="gm-lid" x="12" y="19" width="20" height="0" fill={NAVY} rx="2" />
+            <rect className="gm-lid" x="32" y="19" width="20" height="0" fill={NAVY} rx="2" />
+          </>
+        )}
       </g>
-      <path d="M29 38 L32 43 L35 38 Z" fill={AMBER} />
-      <path className="gm-brow" d="M15 20 Q22 17 29 20" stroke={NAVY} strokeWidth="2.4" fill="none" strokeLinecap="round" />
-      <path className="gm-brow" d="M35 20 Q42 17 49 20" stroke={NAVY} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <path className="gm-jaw" d="M29.5 42.5 L32 46.5 L34.5 42.5 Z" fill="#c47d00" opacity={m.open ? 1 : 0} />
+      <path d={m.open ? "M28.5 37.5 L32 41 L35.5 37.5 Z" : "M29 38 L32 43 L35 38 Z"} fill={AMBER} />
+      <path className="gm-brow" d={m.brows[0]} stroke={SOFT} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      <path className="gm-brow" d={m.brows[1]} stroke={SOFT} strokeWidth="2.4" fill="none" strokeLinecap="round" />
+      {mood === "thinking" && (
+        <g className="gm-thought" fill={SOFT}>
+          <circle className="d1" cx="52" cy="13" r="1.6" />
+          <circle className="d2" cx="56" cy="8.5" r="2.2" />
+          <circle className="d3" cx="60.5" cy="3.5" r="2.8" />
+        </g>
+      )}
+      {mood === "surprised" && (
+        <g className="gm-bang" fill={CORAL}>
+          <rect x="56" y="1" width="3.6" height="9.5" rx="1.8" />
+          <circle cx="57.8" cy="14" r="2" />
+        </g>
+      )}
+      {mood === "celebrating" && (
+        <g className="gm-sparks">
+          <path className="k1" d={`M4 5 ${SPARK}`} fill={AMBER} />
+          <path className="k2" d={`M59 4 ${SPARK}`} fill={MINT} />
+          <path className="k3" d={`M58 50 ${SPARK}`} fill={ACCENT} />
+          <path className="k4" d={`M2 48 ${SPARK}`} fill={CORAL} />
+        </g>
+      )}
     </svg>
   );
 }
@@ -394,12 +459,20 @@ export function Fireworks({ count = 9 }: { count?: number }) {
   );
 }
 
-export function Burst({ tone }: { tone: "success" | "fail" }) {
+/** Particle burst from the centre of its parent. `big` is the clean-solve version: more, farther, with two rings. */
+export function Burst({ tone, big = false }: { tone: "success" | "fail"; big?: boolean }) {
   const colors = tone === "success" ? [MINT, AMBER, ACCENT, "#FFF6C7"] : [CORAL, "#F3D9D0"];
+  const n = big ? 24 : 12;
   return (
-    <span className={`burst burst-${tone}`} aria-hidden="true">
-      {Array.from({ length: 12 }, (_, i) => (
-        <i key={i} style={{ ["--a" as string]: `${i * 30}deg`, background: colors[i % colors.length], animationDelay: `${(i % 4) * 25}ms` }} />
+    <span className={`burst burst-${tone}${big ? " burst-big" : ""}`} aria-hidden="true">
+      {big && (
+        <>
+          <b className="burst-ring" />
+          <b className="burst-ring r2" />
+        </>
+      )}
+      {Array.from({ length: n }, (_, i) => (
+        <i key={i} style={{ ["--a" as string]: `${(i * 360) / n}deg`, background: colors[i % colors.length], animationDelay: `${(i % 4) * 25}ms` }} />
       ))}
     </span>
   );

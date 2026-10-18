@@ -162,6 +162,15 @@ export type ScorecardResult = {
 
 export type PlayerPublic = { id: string; name: string; joined: boolean; online: boolean; isHost: boolean };
 
+/** One stop on the episode path: the round's type and twist, and how it went. Never a piece or an answer. */
+export type PathNode = {
+  template: TemplateId;
+  twist: Twist | null;
+  status: "pending" | "active" | "solved" | "failed";
+  /** Solved with no wrong attempt and no hint. */
+  clean: boolean;
+};
+
 export type RoundView = {
   index: number;
   total: number;
@@ -198,6 +207,10 @@ export type RoundView = {
   reaction: string | null;
   revealedAnswer: string | null;
   nextAt: string | null;
+  /** Every round of the episode, in order, for the path above the round card. */
+  path: PathNode[];
+  /** Solved rounds in a row, counted back from the latest finished round. */
+  streak: number;
 };
 
 export type GameView = {

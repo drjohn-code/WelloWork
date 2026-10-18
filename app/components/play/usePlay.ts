@@ -137,6 +137,25 @@ export function useCountdown(until: string | null | undefined, serverNow: string
   return Math.max(0, Math.round((Date.parse(until) - serverTick) / 1000));
 }
 
+/**
+ * True for `ms` after `count` goes up (a wrong attempt, a streak step), so a
+ * reaction can play once. Going down, or the first render, does not trigger it.
+ */
+export function usePulse(count: number, ms: number): boolean {
+  const [seen, setSeen] = useState(count);
+  const [on, setOn] = useState(false);
+  if (count !== seen) {
+    setSeen(count);
+    if (count > seen) setOn(true);
+  }
+  useEffect(() => {
+    if (!on) return;
+    const id = window.setTimeout(() => setOn(false), ms);
+    return () => window.clearTimeout(id);
+  }, [on, seen, ms]);
+  return on;
+}
+
 export function firstName(name: string): string {
   return name.trim().split(/\s+/)[0] || name;
 }

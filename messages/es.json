@@ -3775,7 +3775,24 @@
         "wifi": "Lee tu regla palabra por palabra, con su número.",
         "desks": "Lee tu pista tal como está escrita.",
         "default": "Vuelve a leerlo despacio, en otro orden."
-      }
+      },
+      "wrongTeam": "No es esa. Intentos restantes: {n}",
+      "clean": "Sin fallos: ni errores ni pistas",
+      "streakChip": "{n} seguidas"
+    },
+    "hud": {
+      "aria": "Progreso del episodio",
+      "path": "Recorrido del episodio",
+      "round": "Ronda {n}",
+      "status": {
+        "pending": "por jugar",
+        "current": "en juego",
+        "solved": "resuelta",
+        "clean": "resuelta sin fallos",
+        "failed": "fallida"
+      },
+      "twist": "Giro: {name}",
+      "streak": "Racha del equipo: {n} seguidas"
     },
     "challenge": {
       "stepLabel": "Reto final",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Sonido activado",
-      "off": "Sonido desactivado"
+      "off": "Sonido desactivado",
+      "label": "Sonido"
     },
     "vote": {
       "title": "Elegid el mundo de este episodio",

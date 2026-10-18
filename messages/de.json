@@ -3775,7 +3775,24 @@
         "wifi": "Lies deine Regel wörtlich vor, mit Nummer.",
         "desks": "Lies deinen Hinweis genau so vor, wie er dasteht.",
         "default": "Lies es noch einmal langsam, in anderer Reihenfolge."
-      }
+      },
+      "wrongTeam": "Das war es nicht. Verbleibende Versuche: {n}",
+      "clean": "Fehlerfrei: kein Fehlversuch, kein Hinweis",
+      "streakChip": "{n} hintereinander"
+    },
+    "hud": {
+      "aria": "Fortschritt der Folge",
+      "path": "Weg durch die Folge",
+      "round": "Runde {n}",
+      "status": {
+        "pending": "kommt noch",
+        "current": "läuft gerade",
+        "solved": "gelöst",
+        "clean": "fehlerfrei gelöst",
+        "failed": "verpasst"
+      },
+      "twist": "Twist: {name}",
+      "streak": "Team-Serie: {n} hintereinander"
     },
     "challenge": {
       "stepLabel": "Finale Aufgabe",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Ton an",
-      "off": "Ton aus"
+      "off": "Ton aus",
+      "label": "Ton"
     },
     "vote": {
       "title": "Wählt die Welt dieser Folge",

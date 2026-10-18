@@ -3775,7 +3775,24 @@
         "wifi": "Leggi la tua regola parola per parola, con il numero.",
         "desks": "Leggi il tuo indizio esattamente com’è scritto.",
         "default": "Rileggilo piano, in un ordine diverso."
-      }
+      },
+      "wrongTeam": "Non è questa. Tentativi rimasti: {n}",
+      "clean": "Perfetto: nessun errore, nessun indizio",
+      "streakChip": "{n} di fila"
+    },
+    "hud": {
+      "aria": "Avanzamento dell’episodio",
+      "path": "Percorso dell’episodio",
+      "round": "Round {n}",
+      "status": {
+        "pending": "in arrivo",
+        "current": "in corso",
+        "solved": "risolto",
+        "clean": "risolto senza errori",
+        "failed": "mancato"
+      },
+      "twist": "Colpo di scena: {name}",
+      "streak": "Serie della squadra: {n} di fila"
     },
     "challenge": {
       "stepLabel": "Sfida finale",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Audio attivo",
-      "off": "Audio disattivato"
+      "off": "Audio disattivato",
+      "label": "Audio"
     },
     "vote": {
       "title": "Scegliete il mondo di questo episodio",

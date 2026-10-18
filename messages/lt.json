@@ -3775,7 +3775,24 @@
         "wifi": "Perskaitykite savo taisyklę pažodžiui, su numeriu.",
         "desks": "Perskaitykite užuominą tiksliai taip, kaip parašyta.",
         "default": "Perskaitykite dar kartą lėtai, kita tvarka."
-      }
+      },
+      "wrongTeam": "Ne tas. Liko bandymų: {n}",
+      "clean": "Švariai: be klaidų ir be užuominos",
+      "streakChip": "{n} iš eilės"
+    },
+    "hud": {
+      "aria": "Serijos eiga",
+      "path": "Serijos raundai",
+      "round": "{n} raundas",
+      "status": {
+        "pending": "dar laukia",
+        "current": "vyksta dabar",
+        "solved": "išspręsta",
+        "clean": "išspręsta be klaidų",
+        "failed": "neišspręsta"
+      },
+      "twist": "Posūkis: {name}",
+      "streak": "Iš eilės išspręsta raundų: {n}"
     },
     "challenge": {
       "stepLabel": "Finalinė užduotis",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Garsas įjungtas",
-      "off": "Garsas išjungtas"
+      "off": "Garsas išjungtas",
+      "label": "Garsas"
     },
     "vote": {
       "title": "Išsirinkite šios serijos pasaulį",

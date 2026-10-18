@@ -3775,7 +3775,24 @@
         "wifi": "Lees je regel woord voor woord voor, met het nummer.",
         "desks": "Lees je aanwijzing precies zoals hij er staat.",
         "default": "Lees het nog eens langzaam, in een andere volgorde."
-      }
+      },
+      "wrongTeam": "Die is het niet. Pogingen over: {n}",
+      "clean": "Foutloos: geen missers, geen hint",
+      "streakChip": "{n} op rij"
+    },
+    "hud": {
+      "aria": "Voortgang van de aflevering",
+      "path": "Route van de aflevering",
+      "round": "Ronde {n}",
+      "status": {
+        "pending": "komt nog",
+        "current": "nu bezig",
+        "solved": "opgelost",
+        "clean": "opgelost zonder missers",
+        "failed": "gemist"
+      },
+      "twist": "Twist: {name}",
+      "streak": "Teamreeks: {n} op rij"
     },
     "challenge": {
       "stepLabel": "Eindopdracht",
@@ -3886,7 +3903,8 @@
     },
     "sound": {
       "on": "Geluid aan",
-      "off": "Geluid uit"
+      "off": "Geluid uit",
+      "label": "Geluid"
     },
     "vote": {
       "title": "Kies de wereld van deze aflevering",
