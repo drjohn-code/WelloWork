@@ -1,6 +1,7 @@
 import { computePoolSplit, type TeamSize } from "../cognitive-rewards-order";
 import { ROUND_DIFFICULTY } from "./templates";
-import type { PlayerScore, ScoreComponents, TemplateId } from "./types";
+import { seededRng } from "./rng";
+import { TITLE_IDS, type PlayerScore, type ScoreComponents, type TemplateId, type TitleId } from "./types";
 
 /**
  * Scoring (design §6). Inputs are the round outcomes and the contribution
@@ -26,7 +27,12 @@ export type RoundOutcome = {
 
 export type Contribution = { roundIndex: number; playerId: string; solverPlayerId: string; kind: "assist" | "rescue" | "callback_source" | "detail" };
 
-const WEIGHTS: ScoreComponents = { dataTransfer: 0.3, teamwork: 0.3, problemSolving: 0.2, focus: 0.1, memory: 0.1 };
+/**
+ * Communication first: sharing your piece and helping the team carry 70% of a
+ * score, solving and recall 30%. Companies buy this game for how people talk
+ * and work together; the cognitive part only serves that.
+ */
+const WEIGHTS: ScoreComponents = { dataTransfer: 0.35, teamwork: 0.35, problemSolving: 0.15, focus: 0.075, memory: 0.075 };
 
 export function computeScores(args: {
   playerIds: string[];
@@ -34,6 +40,8 @@ export function computeScores(args: {
   contributions: Contribution[];
   keyAttempts: number;
   poolEur: number;
+  /** The game id: seeds the title tie-breaks so they differ between games. */
+  seed: string;
 }): PlayerScore[] {
   const { playerIds, rounds, contributions } = args;
   const n = playerIds.length;
@@ -121,7 +129,7 @@ export function computeScores(args: {
         components.focus * WEIGHTS.focus +
         components.memory * WEIGHTS.memory
     );
-    return { playerId: id, components, total, shareEur: 0, rank: 0, highlights: [] };
+    return { playerId: id, components, total, shareEur: 0, rank: 0, title: TITLE_IDS[0] };
   });
 
   // ── Ranks ──
@@ -140,16 +148,44 @@ export function computeScores(args: {
   const leftover = split.performancePart - distributed;
   if (leftover > 0) sorted[0].shareEur += leftover;
 
-  // ── Highlights ──
-  // First place always gets the MVP crown; category medals go to the top raw count (ties → higher total).
-  sorted[0].highlights.push("mvp");
-  const most = (key: (s: PlayerScore) => number) => sorted.slice().sort((a, b) => key(b) - key(a))[0];
-  most((s) => assists[s.playerId]).highlights.push("helper");
-  most((s) => s.components.problemSolving).highlights.push("solver");
-  const rescuer = most((s) => rescues[s.playerId]);
-  if (rescues[rescuer.playerId] > 0) rescuer.highlights.push("rescuer");
-  const rememberer = most((s) => memory[s.playerId]);
-  if (memory[rememberer.playerId] >= 1) rememberer.highlights.push("memory");
+  // ── Titles: exactly one per player, none used twice ──
+  // Each signal is normalised within this game (÷ the team's best), and every
+  // player takes the title where they stand out most against the team mean.
+  // Titles a player has some evidence for come before ones they have none for.
+  // Ties are broken by a draw seeded with the game id, so no seat always wins.
+  const solveTimes = by(() => [] as number[]);
+  for (const r of rounds) if (r.solved && !r.solvedByReveal) solveTimes[r.solverPlayerId].push(Math.max(1, r.durationSec));
+  const ratio = (v: number, max: number) => (max > 0 ? v / max : 0);
+  const signals: Record<TitleId, (id: string) => number> = {
+    connector: (id) => ratio(assists[id], sourceRounds[id]),
+    clarity: (id) => ratio(clear[id], sourceRounds[id]),
+    bridge: (id) => ratio(reach[id].size, Math.min(n - 1, sourceRounds[id])),
+    rescuer: (id) => rescues[id] + acks[id],
+    solver: (id) => ratio(solveScore[id], solveMax[id]),
+    pace: (id) => ratio(solveTimes[id].length, solveTimes[id].reduce((a, b) => a + b, 0)), // 1 / mean solve time
+    eagleEye: (id) => detail[id],
+    memory: (id) => memory[id],
+    glue: (id) => (assists[id] + received[id] > 0 ? 1 - Math.abs(assists[id] - received[id]) / (assists[id] + received[id]) : 0), // give/take balance
+  };
+  const rng = seededRng(`${args.seed}:titles`);
+  const pairs: Array<{ playerId: string; title: TitleId; evidence: boolean; margin: number; draw: number }> = [];
+  for (const title of TITLE_IDS) {
+    const raw = playerIds.map((id) => Math.max(0, signals[title](id)));
+    const best = Math.max(...raw);
+    const norm = raw.map((v) => ratio(v, best));
+    const mean = norm.reduce((a, b) => a + b, 0) / n;
+    // Rounded so float noise doesn't decide what should be a seeded tie-break.
+    playerIds.forEach((playerId, i) => pairs.push({ playerId, title, evidence: raw[i] > 0, margin: Math.round((norm[i] - mean) * 1e6), draw: rng() }));
+  }
+  pairs.sort((a, b) => Number(b.evidence) - Number(a.evidence) || b.margin - a.margin || a.draw - b.draw);
+  const titled = new Set<string>();
+  const used = new Set<TitleId>();
+  for (const p of pairs) {
+    if (titled.has(p.playerId) || used.has(p.title)) continue;
+    scores.find((s) => s.playerId === p.playerId)!.title = p.title;
+    titled.add(p.playerId);
+    used.add(p.title);
+  }
 
   return scores;
 }

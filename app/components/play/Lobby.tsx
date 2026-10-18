@@ -8,6 +8,8 @@ import { enabledLocaleMetas } from "@/i18n/locales";
 import type { ActResult } from "./usePlay";
 import { avatarStyle, firstName, initials } from "./usePlay";
 import { LobbyTable } from "./PlayArt";
+import { WorldScene } from "./WorldArt";
+import type { WorldId } from "@/app/lib/game/worlds";
 import { computePoolSplit, type TeamSize } from "@/app/lib/cognitive-rewards-order";
 
 export function Lobby({ view, act, join, sound }: { view: GameView; act: (b: { action: string } & Record<string, unknown>) => Promise<ActResult>; join: () => Promise<boolean>; sound?: { enabled: boolean; toggle: () => void; play: (n: "join") => void } }) {
@@ -52,6 +54,14 @@ export function Lobby({ view, act, join, sound }: { view: GameView; act: (b: { a
     const res = await act({ action: "language", language: code });
     if (!res.ok) setError(t("errors.generic"));
   }
+  async function onVote(world: string) {
+    setError(null);
+    const res = await act({ action: "vote", world });
+    if (!res.ok) setError(t("errors.generic"));
+  }
+  const vote = view.lobby;
+  const myVote = vote?.votes[view.me.id] ?? null;
+  const leadingName = vote?.leading ? vote.offer.find((w) => w.id === vote.leading)?.name ?? null : null;
 
   return (
     <div className="play-stack">
@@ -143,6 +153,47 @@ export function Lobby({ view, act, join, sound }: { view: GameView; act: (b: { a
           </div>
         )}
 
+        {allJoined && view.host && vote && (
+          <div className="world-vote" aria-labelledby="world-vote-title">
+            <h2 id="world-vote-title" className="play-subtitle">
+              {vote.episodeNumber > 1 ? t("vote.titleNext", { n: vote.episodeNumber }) : t("vote.title")}
+            </h2>
+            <p className="play-small">{vote.previousTitle ? t("vote.previously", { title: vote.previousTitle }) : t("vote.intro")}</p>
+            <ul className="world-options" role="radiogroup" aria-labelledby="world-vote-title">
+              {[...vote.offer, { id: "surprise", name: t("vote.surprise"), tagline: t("vote.surpriseTagline") }].map((w) => {
+                const voters = view.players.filter((p) => vote.votes[p.id] === w.id);
+                return (
+                  <li key={w.id}>
+                    <button
+                      type="button"
+                      role="radio"
+                      aria-checked={myVote === w.id}
+                      className={`world-option world-${w.id} ${myVote === w.id ? "picked" : ""} ${vote.leading === w.id ? "leading" : ""}`}
+                      onClick={() => onVote(w.id)}
+                    >
+                      {w.id === "surprise" ? (
+                        <span className="world-surprise-art" aria-hidden="true">?</span>
+                      ) : (
+                        <WorldScene world={w.id as WorldId} className="world-option-scene" />
+                      )}
+                      <span className="world-option-name">{w.name}</span>
+                      <span className="world-option-tagline">{w.tagline}</span>
+                      <span className="world-option-voters" aria-label={t("vote.voters", { count: voters.length })}>
+                        {voters.map((p) => (
+                          <span key={p.id} className="play-avatar tiny" style={avatarStyle(view.players.findIndex((x) => x.id === p.id))} aria-hidden="true">
+                            {initials(p.name)}
+                          </span>
+                        ))}
+                      </span>
+                    </button>
+                  </li>
+                );
+              })}
+            </ul>
+            <p className="play-small">{view.me.isHost ? t("vote.hostHint") : t("vote.guestHint", { host: firstName(view.host.name) })}</p>
+          </div>
+        )}
+
         <div className="play-action" aria-live="polite">
           {!me.joined ? (
             <>
@@ -168,6 +219,7 @@ export function Lobby({ view, act, join, sound }: { view: GameView; act: (b: { a
               <button type="button" className="btn btn-primary play-primary" onClick={onStart} disabled={busy === "start"}>
                 {busy === "start" ? t("actions.starting") : t("actions.startIn", { language: languageName })}
               </button>
+              {vote && <p className="play-small">{leadingName ? t("vote.startWith", { world: leadingName }) : t("vote.startSurprise")}</p>}
               <p className="play-small">{t("actions.callHint")}</p>
             </>
           ) : (

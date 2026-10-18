@@ -3493,19 +3493,21 @@
     },
     "gameResult": {
       "subject": "{name}, your share of the reward: {share}",
-      "preheader": "The game is over. You finished {rank} of {n}. Add your bank details to receive {share}.",
+      "preheader": "The game is over. Add your bank details to receive {share}.",
       "heading": "Well played, {name}",
       "intro": "Your team at {company} finished Cognitive Rewards, and the pool has been split by what each of you did.",
       "factShare": "Your share",
-      "factRank": "Place",
-      "factRankValue": "{rank} of {n}",
-      "factHighlights": "Highlights",
+      "factTitle": "Your title",
       "highlights": {
-        "helper": "Top Helper",
-        "solver": "Top Solver",
-        "rescuer": "Top Rescuer",
-        "memory": "Top Memory",
-        "mvp": "MVP"
+        "connector": "Connector",
+        "clarity": "Clarity",
+        "bridge": "Bridge",
+        "rescuer": "Rescuer",
+        "solver": "Solver",
+        "pace": "Pace",
+        "eagleEye": "Eagle Eye",
+        "memory": "Memory",
+        "glue": "Glue"
       },
       "nextHeading": "To receive it",
       "step1": "Open your personal link below.",
@@ -3668,11 +3670,12 @@
       "rulesTitle": "Three rules",
       "rule1": "Every round, one of you is the solver. Everyone else holds a piece only they can see.",
       "rule2": "Talk. Nothing can be solved alone, and nobody can look over your shoulder.",
-      "rule3": "Helping pays as much as solving. The pool is split by what each of you did.",
+      "rule3": "Helping pays more than solving. The pool is split by what each of you did.",
       "begin": "Begin round 1",
       "beginning": "Starting…",
       "hostNote": "You're the host. Start when everyone says they're ready.",
-      "waitingHost": "Waiting for {host} to begin…"
+      "waitingHost": "Waiting for {host} to begin…",
+      "episodeLabel": "Episode {n}"
     },
     "round": {
       "progress": "Round {n} of {total}",
@@ -3711,11 +3714,61 @@
         "expired": "Expired",
         "yourMessages": "Your messages ({n})",
         "rule": "Rule {n}",
-        "clue": "Your clues ({n})"
+        "clue": "Your clues ({n})",
+        "hand": "Your hand ({n} cards)",
+        "witness": "What you remember",
+        "witnessNote": "Only you saw this. Describe it; don't just name it.",
+        "lineup": "The line-up",
+        "tiles": "Your part of the pattern",
+        "row": "Row {n}"
       },
       "introLevel": "Round {n}",
       "introReady": "Get ready",
-      "introGo": "Go!"
+      "introGo": "Go!",
+      "talk": {
+        "pickCard": "Tap the card that's in every hand",
+        "pickFace": "Tap the face they describe",
+        "faceLabel": "Face {n}",
+        "lockIn": "Lock it in",
+        "checking": "Checking…",
+        "attemptsLeft": "Tries left: {n}",
+        "paintHelp": "Pick a colour, then tap tiles. Tap a tile again to clear it.",
+        "brushes": "Colours",
+        "eraser": "Eraser",
+        "row": "Row {n}",
+        "sendGrid": "Send the grid",
+        "clear": "Clear"
+      },
+      "twist": {
+        "flash": "Flash",
+        "rush": "Rush"
+      },
+      "twistNote": {
+        "flash": "Flash round: your piece disappears in {s}s. Look hard.",
+        "rush": "Rush round: much less time than usual.",
+        "gone": "Your piece is gone. Describe it to {name} from memory."
+      },
+      "twistIntro": {
+        "flash": "Twist: pieces vanish after 30 seconds",
+        "rush": "Twist: half the time"
+      },
+      "stuckPick": "Whose piece do you need again?",
+      "stuckEveryone": "Ask everyone",
+      "stuckSend": "Ask them",
+      "stuckCancel": "Cancel",
+      "stuckBannerYou": "{name} needs your piece again. Describe it a different way.",
+      "stuckBannerOthers": "{name} asked {names} to describe their piece again. Chip in if you can.",
+      "stuckTip": {
+        "common": "Say object and colour for every card, one at a time.",
+        "lineup": "Say what you see: what it is, its colour, where it sits.",
+        "blueprint": "Go row by row, left to right: a colour or empty.",
+        "slot": "Read your busy hours out loud, earliest first.",
+        "snack": "Say the good ones and the expired ones separately.",
+        "replyall": "Read each message with its time.",
+        "wifi": "Read your rule word for word, with its number.",
+        "desks": "Read your clue exactly as written.",
+        "default": "Read it again slowly, in a different order."
+      }
     },
     "challenge": {
       "stepLabel": "Final challenge",
@@ -3747,17 +3800,34 @@
       "unlockedEyebrow": "Reward unlocked",
       "unlockedTitle": "You did it",
       "unlockedNote": "Split between {n} of you by what each of you did. Everyone has a guaranteed minimum.",
-      "yourShareEyebrow": "Your share",
-      "yourShareBody": "You finished {rank} of {total}. Helping counted for 60%, solving for 40%.",
+      "teamEyebrow": "Team result",
+      "titlesTitle": "One title each",
+      "titlesNote": "Picked from what the game measured: where each of you stood out most against the rest of the team. No two are the same.",
+      "you": "You",
       "highlights": {
-        "helper": "Top Helper",
-        "solver": "Top Solver",
-        "rescuer": "Top Rescuer",
-        "memory": "Top Memory",
-        "mvp": "MVP"
+        "connector": "Connector",
+        "clarity": "Clarity",
+        "bridge": "Bridge",
+        "rescuer": "Rescuer",
+        "solver": "Solver",
+        "pace": "Pace",
+        "eagleEye": "Eagle Eye",
+        "memory": "Memory",
+        "glue": "Glue"
       },
-      "boardTitle": "How the pool was split",
-      "boardNote": "Tap a name to see the breakdown.",
+      "titleNotes": {
+        "connector": "Passing pieces to the solver",
+        "clarity": "Pieces that landed first time",
+        "bridge": "Helping every solver, not just one",
+        "rescuer": "Answering “I'm stuck”",
+        "solver": "Entering the right answers",
+        "pace": "Quick solves",
+        "eagleEye": "Spotting the small details",
+        "memory": "Remembering what mattered later",
+        "glue": "Giving and taking in equal measure"
+      },
+      "profileTitle": "Team profile",
+      "profileNote": "Averages for the whole team, 0 to 100.",
       "components": {
         "dataTransfer": "Sharing",
         "teamwork": "Teamwork",
@@ -3765,11 +3835,21 @@
         "focus": "Focus",
         "memory": "Memory"
       },
+      "privateEyebrow": "Only you see this",
+      "yourShareEyebrow": "Your share",
+      "shareMinimum": "Guaranteed minimum",
+      "sharePerformance": "From what you did",
+      "shareNote": "Everyone gets the same minimum. The rest of the pool was split by what each of you did: helping counted for 70%, solving for 30%.",
+      "yourTitle": "Your title",
+      "compareTitle": "You and the team",
+      "legendYou": "You",
+      "legendTeam": "Team average",
+      "compareValue": "You {you}, team average {team}",
+      "privacyNote": "Your teammates see everyone's titles, not who got how much.",
       "verdictTitle": "The final challenge",
       "verdictScore": "Team score {score} of 100. This one was for fun and doesn't change the split.",
       "thanks": "Thanks for playing. Your host {host} can close the tab now.",
-      "podiumTitle": "Podium",
-      "placeLabel": "Place {rank}"
+      "episodeWrap": "{world} · Episode {n}:"
     },
     "payout": {
       "title": "Where should we send your {amount}?",
@@ -3800,6 +3880,19 @@
     "sound": {
       "on": "Sound on",
       "off": "Sound off"
+    },
+    "vote": {
+      "title": "Pick this episode's world",
+      "titleNext": "Episode {n}: pick the world",
+      "intro": "Every game is a new episode with its own world and story. Tap the one you'd like; most votes wins.",
+      "previously": "Last time: \"{title}\". This one is new.",
+      "surprise": "Surprise us",
+      "surpriseTagline": "Let the Game Master pick.",
+      "voters": "Votes: {count}",
+      "hostHint": "Everyone can vote. A tie goes to your pick.",
+      "guestHint": "Everyone can vote. A tie goes to {host}'s pick.",
+      "startWith": "Leading: {world}",
+      "startSurprise": "No votes yet: the Game Master will pick."
     }
   },
   "admin": {

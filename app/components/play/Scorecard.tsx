@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { formatEurShort } from "@/app/lib/format";
+import { computePoolSplit, isTeamSize } from "@/app/lib/cognitive-rewards-order";
 import type { GameView, ScoreComponents } from "@/app/lib/game/types";
 import { GameMasterSays } from "./GameMaster";
 import { TeamBar } from "./TeamBar";
@@ -14,7 +15,16 @@ import { avatarStyle, firstName, initials, type ActResult } from "./usePlay";
 const COMPONENTS: Array<keyof ScoreComponents> = ["dataTransfer", "teamwork", "problemSolving", "focus", "memory"];
 /** Ceremony beats (ms): lock opens → amount counts up → confetti → cards cascade in. */
 const BEAT = { unlock: 500, count: 1900, settle: 3200 } as const;
+/** Title ceremony (ms after the cards appear): one title card per player, in seat order. */
+const TITLES = { first: 250, each: 400 } as const;
+/** Card entrance delay; `--delay` lets the bars inside start growing when their card appears. */
+const delay = (ms: number) => ({ animationDelay: `${ms}ms`, "--delay": `${ms}ms` }) as React.CSSProperties;
 
+/**
+ * End of the game. Everything above the personal card is the same for every
+ * player (pool, titles, team averages, verdict); the personal card holds the
+ * only amount this player ever sees, which is their own.
+ */
 export function Scorecard({ view, act }: { view: GameView; act: (b: { action: string } & Record<string, unknown>) => Promise<ActResult> }) {
   const t = useTranslations("play.scorecard");
   const tp = useTranslations("play");
@@ -23,9 +33,11 @@ export function Scorecard({ view, act }: { view: GameView; act: (b: { action: st
   const eur = (n: number) => formatEurShort(n, locale);
   const [stage, setStage] = useState<"locked" | "open" | "settled">("locked");
   const [shown, setShown] = useState(0);
-  const [expanded, setExpanded] = useState<string | null>(null);
-  const mine = s.players.find((p) => p.id === view.me.id);
-  const podium = s.players.slice(0, 3);
+  const mine = s.mine;
+  const split = isTeamSize(view.teamSize) ? computePoolSplit(view.teamSize, view.pool) : null;
+  const seat = (id: string) => view.players.findIndex((x) => x.id === id);
+  // Later cards wait for the last title card to land.
+  const after = TITLES.first + s.team.length * TITLES.each;
 
   useEffect(() => {
     const reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -83,107 +95,126 @@ export function Scorecard({ view, act }: { view: GameView; act: (b: { action: st
 
       {settled && (
         <>
-          <section className="play-card glass-strong podium-card cascade" style={{ animationDelay: "0ms" }} aria-labelledby="podium-title">
-            <h2 id="podium-title" className="play-subtitle">
-              {t("podiumTitle")}
+          <section className="play-card glass-strong cascade" aria-labelledby="titles-title">
+            <p className="play-eyebrow">{t("teamEyebrow")}</p>
+            <h2 id="titles-title" className="play-subtitle">
+              {t("titlesTitle")}
             </h2>
-            <ol className="podium">
-              {[podium[1], podium[0], podium[2]].filter(Boolean).map((p) => (
-                <li key={p.id} className={`podium-place place-${p.rank} ${p.id === view.me.id ? "me" : ""}`} style={{ animationDelay: `${p.rank * 180}ms` }}>
-                  {p.rank === 1 && <span className="podium-crown" aria-hidden="true" />}
-                  <span className="podium-avatar" style={avatarStyle(view.players.findIndex((x) => x.id === p.id))} aria-hidden="true">
-                    {initials(p.name)}
-                  </span>
-                  <span className="podium-name">{firstName(p.name)}</span>
-                  <span className="podium-share">{eur(p.shareEur)}</span>
-                  <span className="podium-bar">
-                    <span className="podium-rank" aria-hidden="true">
-                      {p.rank}
+            <p className="play-small titles-note">{t("titlesNote")}</p>
+            <ul className={`title-grid n-${s.team.length}`}>
+              {s.team.map((p, i) => (
+                <li key={p.id} className={`title-card ${p.id === view.me.id ? "me" : ""}`} style={delay(TITLES.first + i * TITLES.each)}>
+                  <span className="title-who">
+                    <span className="play-avatar small" style={avatarStyle(seat(p.id))} aria-hidden="true">
+                      {initials(p.name)}
                     </span>
+                    <span className="title-player">{firstName(p.name)}</span>
+                    {p.id === view.me.id && <span className="title-you">{t("you")}</span>}
                   </span>
-                  <span className="sr-only">{t("placeLabel", { rank: p.rank })}</span>
+                  {p.title && (
+                    <>
+                      <Medal kind={p.title} size={56}>
+                        <BadgeIcon kind={p.title} size={22} />
+                      </Medal>
+                      <span className="title-label">{t(`highlights.${p.title}`)}</span>
+                      <span className="title-desc">{t(`titleNotes.${p.title}`)}</span>
+                    </>
+                  )}
                 </li>
               ))}
-            </ol>
+            </ul>
+          </section>
+
+          <section className="play-card glass-strong cascade" style={delay(after)} aria-labelledby="profile-title">
+            <h2 id="profile-title" className="play-subtitle">
+              {t("profileTitle")}
+            </h2>
+            <p className="play-small profile-note">{t("profileNote")}</p>
+            <dl className="profile">
+              {COMPONENTS.map((c) => (
+                <div key={c} className="profile-row">
+                  <dt>{t(`components.${c}`)}</dt>
+                  <dd>
+                    <span className="profile-bar" aria-hidden="true">
+                      <span className="profile-fill team" style={{ width: `${s.teamAverage[c]}%` }} />
+                    </span>
+                    <span className="profile-value">{Math.round(s.teamAverage[c])}</span>
+                  </dd>
+                </div>
+              ))}
+            </dl>
           </section>
 
           {mine && (
-            <section className="play-card glass-strong share-card cascade" style={{ animationDelay: "250ms" }} aria-labelledby="share-title">
-              <p className="play-eyebrow">{t("yourShareEyebrow")}</p>
-              <h2 id="share-title" className="share-amount">
-                {eur(mine.shareEur)}
+            <section className="play-card glass-strong share-card cascade" style={delay(after + 200)} aria-labelledby="share-title">
+              <p className="play-eyebrow private-eyebrow">
+                <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.2" strokeLinecap="round" strokeLinejoin="round" aria-hidden="true">
+                  <rect x="4.5" y="10.5" width="15" height="10" rx="2.5" />
+                  <path d="M8 10.5V7.5a4 4 0 0 1 8 0v3" />
+                </svg>
+                {t("privateEyebrow")}
+              </p>
+              <h2 id="share-title" className="play-subtitle">
+                {t("yourShareEyebrow")}
               </h2>
-              <p className="play-intro">{t("yourShareBody", { rank: mine.rank, total: view.teamSize })}</p>
-              {mine.highlights.length > 0 && (
-                <ul className="medals">
-                  {mine.highlights.map((h, i) => (
-                    <li key={h} className="medal-item pop" style={{ animationDelay: `${600 + i * 200}ms` }}>
-                      <Medal kind={h} size={64}>
-                        <BadgeIcon kind={h} size={24} />
-                      </Medal>
-                      <span className="medal-label">{t(`highlights.${h}` as "highlights.helper")}</span>
-                    </li>
-                  ))}
-                </ul>
+              <p className="share-amount">{eur(mine.shareEur)}</p>
+              {split && (
+                <dl className="share-split">
+                  <div>
+                    <dt>{t("shareMinimum")}</dt>
+                    <dd>{eur(split.minPerPlayer)}</dd>
+                  </div>
+                  <div>
+                    <dt>{t("sharePerformance")}</dt>
+                    <dd>{eur(Math.max(0, mine.shareEur - split.minPerPlayer))}</dd>
+                  </div>
+                </dl>
               )}
+              <p className="play-small">{t("shareNote")}</p>
+
+              {mine.title && (
+                <div className="my-title">
+                  <Medal kind={mine.title} size={48}>
+                    <BadgeIcon kind={mine.title} size={20} />
+                  </Medal>
+                  <p>
+                    <span className="my-title-eyebrow">{t("yourTitle")}</span>
+                    <span className="title-label">{t(`highlights.${mine.title}`)}</span>
+                    <span className="title-desc">{t(`titleNotes.${mine.title}`)}</span>
+                  </p>
+                </div>
+              )}
+
+              <h3 className="play-subtitle compare-title">{t("compareTitle")}</h3>
+              <p className="profile-legend" aria-hidden="true">
+                <span className="legend-you">{t("legendYou")}</span>
+                <span className="legend-team">{t("legendTeam")}</span>
+              </p>
+              <dl className="profile compare">
+                {COMPONENTS.map((c) => (
+                  <div key={c} className="profile-row">
+                    <dt>{t(`components.${c}`)}</dt>
+                    <dd>
+                      <span className="profile-bar" aria-hidden="true">
+                        <span className="profile-fill" style={{ width: `${mine.components[c]}%` }} />
+                        <span className="profile-mark" style={{ left: `${s.teamAverage[c]}%` }} />
+                      </span>
+                      <span className="profile-value" aria-hidden="true">
+                        {Math.round(mine.components[c])}
+                        <span className="profile-team">{Math.round(s.teamAverage[c])}</span>
+                      </span>
+                      <span className="sr-only">{t("compareValue", { you: Math.round(mine.components[c]), team: Math.round(s.teamAverage[c]) })}</span>
+                    </dd>
+                  </div>
+                ))}
+              </dl>
+              <p className="play-small">{t("privacyNote")}</p>
               <PayoutForm view={view} act={act} />
             </section>
           )}
 
-          <section className="play-card glass-strong cascade" style={{ animationDelay: "450ms" }} aria-labelledby="board-title">
-            <h2 id="board-title" className="play-subtitle">
-              {t("boardTitle")}
-            </h2>
-            <p className="play-small" style={{ marginTop: 4, marginBottom: 16 }}>
-              {t("boardNote")}
-            </p>
-            <ol className="score-list">
-              {s.players.map((p) => (
-                <li key={p.id} className={`score-row ${p.id === view.me.id ? "me" : ""}`}>
-                  <button type="button" className="score-row-main" aria-expanded={expanded === p.id} onClick={() => setExpanded((e) => (e === p.id ? null : p.id))}>
-                    <span className={`score-rank rank-${p.rank}`} aria-hidden="true">
-                      {p.rank}
-                    </span>
-                    <span className="play-avatar small" style={avatarStyle(view.players.findIndex((x) => x.id === p.id))} aria-hidden="true">
-                      {initials(p.name)}
-                    </span>
-                    <span className="score-name">
-                      {p.name}
-                      {p.highlights.length > 0 && (
-                        <span className="score-badges">
-                          {p.highlights.map((h) => (
-                            <span key={h} className={`badge small badge-${h}`}>
-                              <BadgeIcon kind={h} size={13} />
-                              {t(`highlights.${h}` as "highlights.helper")}
-                            </span>
-                          ))}
-                        </span>
-                      )}
-                    </span>
-                    <span className="score-share">{eur(p.shareEur)}</span>
-                  </button>
-                  {expanded === p.id && (
-                    <dl className="score-components">
-                      {COMPONENTS.map((c) => (
-                        <div key={c}>
-                          <dt>{t(`components.${c}`)}</dt>
-                          <dd>
-                            <span className="score-bar" aria-hidden="true">
-                              <span style={{ width: `${p.components[c]}%` }} />
-                            </span>
-                            <span className="score-value">{Math.round(p.components[c])}</span>
-                          </dd>
-                        </div>
-                      ))}
-                    </dl>
-                  )}
-                </li>
-              ))}
-            </ol>
-          </section>
-
           {s.verdict && (
-            <section className="play-card glass cascade" style={{ animationDelay: "600ms" }} aria-labelledby="verdict-title">
+            <section className="play-card glass cascade" style={delay(after + 400)} aria-labelledby="verdict-title">
               <h2 id="verdict-title" className="play-subtitle">
                 {t("verdictTitle")}
               </h2>
@@ -192,11 +223,19 @@ export function Scorecard({ view, act }: { view: GameView; act: (b: { action: st
             </section>
           )}
 
-          <section className="play-card glass cascade" style={{ animationDelay: "750ms" }} aria-labelledby="outro-title">
+          <section className="play-card glass cascade" style={delay(after + 550)} aria-labelledby="outro-title">
             <h2 id="outro-title" className="sr-only">
               {tp("gameMaster")}
             </h2>
+            {view.episode && (
+              <p className="episode-wrap">
+                <span className="episode-wrap-label">{t("episodeWrap", { world: view.episode.worldName, n: view.episode.number })}</span> {view.episode.title}
+              </p>
+            )}
             <GameMasterSays>{s.outro}</GameMasterSays>
+            {view.episode?.teaser && (
+              <p className="episode-teaser">{view.episode.teaser}</p>
+            )}
             <p className="play-small">{t("thanks", { host: firstName(view.host?.name ?? "") })}</p>
           </section>
         </>

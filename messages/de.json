@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, dein Anteil an der Belohnung: {share}",
-      "preheader": "Das Spiel ist vorbei. Du bist auf Platz {rank} von {n}. Gib deine Bankdaten an, um {share} zu erhalten.",
+      "preheader": "Das Spiel ist vorbei. Gib deine Bankdaten an, um {share} zu erhalten.",
       "heading": "Gut gespielt, {name}",
       "intro": "Euer Team bei {company} hat Cognitive Rewards beendet, und der Topf wurde danach aufgeteilt, was jede Person getan hat.",
       "factShare": "Dein Anteil",
-      "factRank": "Platz",
-      "factRankValue": "{rank} von {n}",
-      "factHighlights": "Highlights",
+      "factTitle": "Dein Titel",
       "highlights": {
-        "helper": "Top-Helfer",
-        "solver": "Top-Löser",
-        "rescuer": "Top-Retter",
-        "memory": "Top-Gedächtnis",
-        "mvp": "MVP"
+        "connector": "Verbinder",
+        "clarity": "Klarheit",
+        "bridge": "Brücke",
+        "rescuer": "Retter",
+        "solver": "Löser",
+        "pace": "Tempo",
+        "eagleEye": "Adlerauge",
+        "memory": "Gedächtnis",
+        "glue": "Kitt"
       },
       "nextHeading": "So bekommst du ihn",
       "step1": "Öffne unten deinen persönlichen Link.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Drei Regeln",
       "rule1": "In jeder Runde löst eine Person. Alle anderen halten ein Teil, das nur sie sehen können.",
       "rule2": "Redet. Nichts lässt sich allein lösen, und niemand kann über die Schulter schauen.",
-      "rule3": "Helfen zahlt sich genauso aus wie Lösen. Der Topf wird danach aufgeteilt, was jede Person getan hat.",
+      "rule3": "Helfen zahlt sich mehr aus als Lösen. Der Topf wird danach aufgeteilt, was jede Person getan hat.",
       "begin": "Runde 1 starten",
       "beginning": "Startet…",
       "hostNote": "Du bist Host. Starte, wenn alle sagen, dass sie bereit sind.",
-      "waitingHost": "Warten, bis {host} beginnt…"
+      "waitingHost": "Warten, bis {host} beginnt…",
+      "episodeLabel": "Folge {n}"
     },
     "round": {
       "progress": "Runde {n} von {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Abgelaufen",
         "yourMessages": "Deine Nachrichten ({n})",
         "rule": "Regel {n}",
-        "clue": "Deine Hinweise ({n})"
+        "clue": "Deine Hinweise ({n})",
+        "hand": "Deine Hand ({n} Karten)",
+        "witness": "Woran du dich erinnerst",
+        "witnessNote": "Nur du hast das gesehen. Beschreib es, statt es nur zu benennen.",
+        "lineup": "Die Gegenüberstellung",
+        "tiles": "Dein Teil des Musters",
+        "row": "Reihe {n}"
       },
       "introLevel": "Runde {n}",
       "introReady": "Macht euch bereit",
-      "introGo": "Los!"
+      "introGo": "Los!",
+      "talk": {
+        "pickCard": "Tippe die Karte an, die in allen Händen ist",
+        "pickFace": "Tippe das beschriebene Gesicht an",
+        "faceLabel": "Gesicht {n}",
+        "lockIn": "Festlegen",
+        "checking": "Wird geprüft…",
+        "attemptsLeft": "Verbleibende Versuche: {n}",
+        "paintHelp": "Wähle eine Farbe und tippe Felder an. Nochmal tippen löscht.",
+        "brushes": "Farben",
+        "eraser": "Radierer",
+        "row": "Reihe {n}",
+        "sendGrid": "Raster senden",
+        "clear": "Leeren"
+      },
+      "twist": {
+        "flash": "Blitz",
+        "rush": "Eile"
+      },
+      "twistNote": {
+        "flash": "Blitzrunde: Dein Teil verschwindet in {s} s. Schau genau hin.",
+        "rush": "Eilrunde: viel weniger Zeit als sonst.",
+        "gone": "Dein Teil ist weg. Beschreib es {name} aus dem Gedächtnis."
+      },
+      "twistIntro": {
+        "flash": "Twist: Die Teile verschwinden nach 30 Sekunden",
+        "rush": "Twist: die halbe Zeit"
+      },
+      "stuckPick": "Wessen Teil brauchst du noch einmal?",
+      "stuckEveryone": "Alle fragen",
+      "stuckSend": "Sie fragen",
+      "stuckCancel": "Abbrechen",
+      "stuckBannerYou": "{name} braucht dein Teil noch einmal. Beschreib es anders.",
+      "stuckBannerOthers": "{name} hat {names} gebeten, ihr Teil noch einmal zu beschreiben. Hilf mit, wenn du kannst.",
+      "stuckTip": {
+        "common": "Nenne bei jeder Karte Gegenstand und Farbe, eine nach der anderen.",
+        "lineup": "Sag, was du siehst: was es ist, welche Farbe, wo es sitzt.",
+        "blueprint": "Reihe für Reihe, von links nach rechts: eine Farbe oder leer.",
+        "slot": "Lies deine belegten Stunden vor, die früheste zuerst.",
+        "snack": "Nenne die guten und die abgelaufenen getrennt.",
+        "replyall": "Lies jede Nachricht mit Uhrzeit vor.",
+        "wifi": "Lies deine Regel wörtlich vor, mit Nummer.",
+        "desks": "Lies deinen Hinweis genau so vor, wie er dasteht.",
+        "default": "Lies es noch einmal langsam, in anderer Reihenfolge."
+      }
     },
     "challenge": {
       "stepLabel": "Finale Aufgabe",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Belohnung freigeschaltet",
       "unlockedTitle": "Geschafft",
       "unlockedNote": "Aufgeteilt unter euch {n} danach, was jede Person getan hat. Alle haben ein garantiertes Minimum.",
-      "yourShareEyebrow": "Dein Anteil",
-      "yourShareBody": "Du bist auf Platz {rank} von {total}. Helfen zählte 60 %, Lösen 40 %.",
+      "teamEyebrow": "Team-Ergebnis",
+      "titlesTitle": "Ein Titel pro Person",
+      "titlesNote": "Ausgewählt aus dem, was das Spiel gemessen hat: wo jede Person im Vergleich zum restlichen Team am meisten herausstach. Keine zwei sind gleich.",
+      "you": "Du",
       "highlights": {
-        "helper": "Top-Helfer",
-        "solver": "Top-Löser",
-        "rescuer": "Top-Retter",
-        "memory": "Top-Gedächtnis",
-        "mvp": "MVP"
+        "connector": "Verbinder",
+        "clarity": "Klarheit",
+        "bridge": "Brücke",
+        "rescuer": "Retter",
+        "solver": "Löser",
+        "pace": "Tempo",
+        "eagleEye": "Adlerauge",
+        "memory": "Gedächtnis",
+        "glue": "Kitt"
       },
-      "boardTitle": "So wurde der Topf aufgeteilt",
-      "boardNote": "Tippe auf einen Namen für die Details.",
+      "titleNotes": {
+        "connector": "Teile an die lösende Person weitergeben",
+        "clarity": "Teile, die sofort saßen",
+        "bridge": "Jeder lösenden Person helfen, nicht nur einer",
+        "rescuer": "Auf „Ich komme nicht weiter“ reagieren",
+        "solver": "Die richtigen Antworten eingeben",
+        "pace": "Schnelle Lösungen",
+        "eagleEye": "Die kleinen Details sehen",
+        "memory": "Sich merken, was später zählte",
+        "glue": "Geben und Nehmen im Gleichgewicht"
+      },
+      "profileTitle": "Team-Profil",
+      "profileNote": "Durchschnitt des ganzen Teams, 0 bis 100.",
       "components": {
         "dataTransfer": "Teilen",
         "teamwork": "Teamarbeit",
@@ -3772,11 +3842,21 @@
         "focus": "Fokus",
         "memory": "Gedächtnis"
       },
+      "privateEyebrow": "Nur du siehst das",
+      "yourShareEyebrow": "Dein Anteil",
+      "shareMinimum": "Garantiertes Minimum",
+      "sharePerformance": "Aus dem, was du getan hast",
+      "shareNote": "Alle bekommen dasselbe Minimum. Der Rest des Topfs wurde danach aufgeteilt, was jede Person getan hat: Helfen zählte 70 %, Lösen 30 %.",
+      "yourTitle": "Dein Titel",
+      "compareTitle": "Du und das Team",
+      "legendYou": "Du",
+      "legendTeam": "Team-Durchschnitt",
+      "compareValue": "Du {you}, Team-Durchschnitt {team}",
+      "privacyNote": "Dein Team sieht alle Titel, aber nicht, wer wie viel bekommen hat.",
       "verdictTitle": "Die finale Aufgabe",
       "verdictScore": "Teamwertung {score} von 100. Die war zum Spaß und ändert die Aufteilung nicht.",
       "thanks": "Danke fürs Spielen. Euer Host {host} kann den Tab jetzt schließen.",
-      "podiumTitle": "Podium",
-      "placeLabel": "Platz {rank}"
+      "episodeWrap": "{world} · Folge {n}:"
     },
     "payout": {
       "title": "Wohin sollen wir deine {amount} schicken?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Ton an",
       "off": "Ton aus"
+    },
+    "vote": {
+      "title": "Wählt die Welt dieser Folge",
+      "titleNext": "Folge {n}: Wählt die Welt",
+      "intro": "Jedes Spiel ist eine neue Folge mit eigener Welt und Geschichte. Tippt auf euren Favoriten; die meisten Stimmen gewinnen.",
+      "previously": "Letztes Mal: \"{title}\". Diese Folge ist neu.",
+      "surprise": "Überrascht uns",
+      "surpriseTagline": "Die Spielleitung wählt.",
+      "voters": "Stimmen: {count}",
+      "hostHint": "Alle können abstimmen. Bei Gleichstand zählt deine Wahl.",
+      "guestHint": "Alle können abstimmen. Bei Gleichstand zählt die Wahl von {host}.",
+      "startWith": "Vorne: {world}",
+      "startSurprise": "Noch keine Stimmen: Die Spielleitung wählt."
     }
   },
   "admin": {

@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, la tua quota della ricompensa: {share}",
-      "preheader": "Il gioco è finito. Sei arrivato {rank} su {n}. Aggiungi i tuoi dati bancari per ricevere {share}.",
+      "preheader": "Il gioco è finito. Aggiungi i tuoi dati bancari per ricevere {share}.",
       "heading": "Ben giocato, {name}",
       "intro": "La tua squadra di {company} ha completato Cognitive Rewards e il montepremi è stato diviso in base a ciò che ognuno ha fatto.",
       "factShare": "La tua quota",
-      "factRank": "Posizione",
-      "factRankValue": "{rank} su {n}",
-      "factHighlights": "Riconoscimenti",
+      "factTitle": "Il tuo titolo",
       "highlights": {
-        "helper": "Top aiuto",
-        "solver": "Top risolutore",
-        "rescuer": "Top soccorso",
-        "memory": "Top memoria",
-        "mvp": "MVP"
+        "connector": "Connettore",
+        "clarity": "Chiarezza",
+        "bridge": "Ponte",
+        "rescuer": "Soccorso",
+        "solver": "Risolutore",
+        "pace": "Ritmo",
+        "eagleEye": "Occhio di falco",
+        "memory": "Memoria",
+        "glue": "Collante"
       },
       "nextHeading": "Per riceverla",
       "step1": "Apri il tuo link personale qui sotto.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Tre regole",
       "rule1": "A ogni round, uno di voi risolve. Tutti gli altri hanno un pezzo che solo loro possono vedere.",
       "rule2": "Parlate. Niente si risolve da soli, e nessuno può sbirciare da dietro le spalle.",
-      "rule3": "Aiutare vale quanto risolvere. Il montepremi viene diviso in base a ciò che ognuno ha fatto.",
+      "rule3": "Aiutare vale più che risolvere. Il montepremi viene diviso in base a ciò che ognuno ha fatto.",
       "begin": "Inizia il round 1",
       "beginning": "Avvio…",
       "hostNote": "Sei l’host. Inizia quando tutti dicono di essere pronti.",
-      "waitingHost": "In attesa che {host} inizi…"
+      "waitingHost": "In attesa che {host} inizi…",
+      "episodeLabel": "Episodio {n}"
     },
     "round": {
       "progress": "Round {n} di {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Scaduto",
         "yourMessages": "I tuoi messaggi ({n})",
         "rule": "Regola {n}",
-        "clue": "I tuoi indizi ({n})"
+        "clue": "I tuoi indizi ({n})",
+        "hand": "La tua mano ({n} carte)",
+        "witness": "Quello che ricordi",
+        "witnessNote": "Solo tu l’hai visto. Descrivilo, non limitarti a nominarlo.",
+        "lineup": "Il confronto all’americana",
+        "tiles": "La tua parte dello schema",
+        "row": "Riga {n}"
       },
       "introLevel": "Round {n}",
       "introReady": "Preparatevi",
-      "introGo": "Via!"
+      "introGo": "Via!",
+      "talk": {
+        "pickCard": "Tocca la carta che è in tutte le mani",
+        "pickFace": "Tocca il volto che descrivono",
+        "faceLabel": "Volto {n}",
+        "lockIn": "Conferma",
+        "checking": "Verifica…",
+        "attemptsLeft": "Tentativi rimasti: {n}",
+        "paintHelp": "Scegli un colore e tocca le caselle. Toccale di nuovo per cancellare.",
+        "brushes": "Colori",
+        "eraser": "Gomma",
+        "row": "Riga {n}",
+        "sendGrid": "Invia la griglia",
+        "clear": "Cancella"
+      },
+      "twist": {
+        "flash": "Flash",
+        "rush": "Corsa"
+      },
+      "twistNote": {
+        "flash": "Round flash: il tuo pezzo sparisce tra {s} s. Guarda bene.",
+        "rush": "Round di corsa: molto meno tempo del solito.",
+        "gone": "Il tuo pezzo è sparito. Descrivilo a memoria a {name}."
+      },
+      "twistIntro": {
+        "flash": "Colpo di scena: i pezzi spariscono dopo 30 secondi",
+        "rush": "Colpo di scena: metà del tempo"
+      },
+      "stuckPick": "Di chi ti serve di nuovo il pezzo?",
+      "stuckEveryone": "Chiedi a tutti",
+      "stuckSend": "Chiedi a loro",
+      "stuckCancel": "Annulla",
+      "stuckBannerYou": "{name} ha di nuovo bisogno del tuo pezzo. Descrivilo in un altro modo.",
+      "stuckBannerOthers": "{name} ha chiesto a {names} di descrivere di nuovo il loro pezzo. Dai una mano se puoi.",
+      "stuckTip": {
+        "common": "Di’ oggetto e colore di ogni carta, una alla volta.",
+        "lineup": "Di’ cosa vedi: cos’è, di che colore, dove si trova.",
+        "blueprint": "Riga per riga, da sinistra a destra: un colore o vuota.",
+        "slot": "Leggi le tue ore occupate, dalla più presto.",
+        "snack": "Di’ separatamente quelli buoni e quelli scaduti.",
+        "replyall": "Leggi ogni messaggio con l’orario.",
+        "wifi": "Leggi la tua regola parola per parola, con il numero.",
+        "desks": "Leggi il tuo indizio esattamente com’è scritto.",
+        "default": "Rileggilo piano, in un ordine diverso."
+      }
     },
     "challenge": {
       "stepLabel": "Sfida finale",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Ricompensa sbloccata",
       "unlockedTitle": "Ce l’avete fatta",
       "unlockedNote": "Divisa tra voi {n} in base a ciò che ognuno ha fatto. Tutti hanno un minimo garantito.",
-      "yourShareEyebrow": "La tua quota",
-      "yourShareBody": "Sei arrivato {rank} su {total}. Aiutare contava il 60 %, risolvere il 40 %.",
+      "teamEyebrow": "Risultato della squadra",
+      "titlesTitle": "Un titolo a testa",
+      "titlesNote": "Scelto in base a ciò che il gioco ha misurato: dove ognuno di voi si è distinto di più rispetto al resto della squadra. Nessuno si ripete.",
+      "you": "Tu",
       "highlights": {
-        "helper": "Top aiuto",
-        "solver": "Top risolutore",
-        "rescuer": "Top soccorso",
-        "memory": "Top memoria",
-        "mvp": "MVP"
+        "connector": "Connettore",
+        "clarity": "Chiarezza",
+        "bridge": "Ponte",
+        "rescuer": "Soccorso",
+        "solver": "Risolutore",
+        "pace": "Ritmo",
+        "eagleEye": "Occhio di falco",
+        "memory": "Memoria",
+        "glue": "Collante"
       },
-      "boardTitle": "Come è stato diviso il montepremi",
-      "boardNote": "Tocca un nome per i dettagli.",
+      "titleNotes": {
+        "connector": "Passare pezzi a chi risolve",
+        "clarity": "Pezzi capiti al primo colpo",
+        "bridge": "Aiutare ogni persona che risolve, non solo una",
+        "rescuer": "Rispondere a «Sono bloccato»",
+        "solver": "Inserire le risposte giuste",
+        "pace": "Soluzioni rapide",
+        "eagleEye": "Notare i piccoli dettagli",
+        "memory": "Ricordare ciò che serviva dopo",
+        "glue": "Dare e ricevere in egual misura"
+      },
+      "profileTitle": "Profilo della squadra",
+      "profileNote": "Medie di tutta la squadra, da 0 a 100.",
       "components": {
         "dataTransfer": "Condivisione",
         "teamwork": "Gioco di squadra",
@@ -3772,11 +3842,21 @@
         "focus": "Attenzione",
         "memory": "Memoria"
       },
+      "privateEyebrow": "Lo vedi solo tu",
+      "yourShareEyebrow": "La tua quota",
+      "shareMinimum": "Minimo garantito",
+      "sharePerformance": "Da ciò che hai fatto",
+      "shareNote": "Tutti ricevono lo stesso minimo. Il resto del montepremi è stato diviso in base a ciò che ognuno ha fatto: aiutare contava il 70 %, risolvere il 30 %.",
+      "yourTitle": "Il tuo titolo",
+      "compareTitle": "Tu e la squadra",
+      "legendYou": "Tu",
+      "legendTeam": "Media della squadra",
+      "compareValue": "Tu {you}, media della squadra {team}",
+      "privacyNote": "I tuoi colleghi vedono i titoli di tutti, non chi ha ricevuto quanto.",
       "verdictTitle": "La sfida finale",
       "verdictScore": "Punteggio di squadra {score} su 100. Questa era per divertimento e non cambia la divisione.",
       "thanks": "Grazie per aver giocato. Il vostro host {host} può chiudere la scheda.",
-      "podiumTitle": "Podio",
-      "placeLabel": "Posto {rank}"
+      "episodeWrap": "{world} · Episodio {n}:"
     },
     "payout": {
       "title": "Dove inviamo i tuoi {amount}?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Audio attivo",
       "off": "Audio disattivato"
+    },
+    "vote": {
+      "title": "Scegliete il mondo di questo episodio",
+      "titleNext": "Episodio {n}: scegliete il mondo",
+      "intro": "Ogni partita è un nuovo episodio con il suo mondo e la sua storia. Toccate quello che preferite; vince il più votato.",
+      "previously": "L’ultima volta: \"{title}\". Questo è nuovo.",
+      "surprise": "Sorprendeteci",
+      "surpriseTagline": "Sceglie il game master.",
+      "voters": "Voti: {count}",
+      "hostHint": "Tutti possono votare. In caso di parità vince la tua scelta.",
+      "guestHint": "Tutti possono votare. In caso di parità vince la scelta di {host}.",
+      "startWith": "In testa: {world}",
+      "startSurprise": "Ancora nessun voto: sceglierà il game master."
     }
   },
   "admin": {

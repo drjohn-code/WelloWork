@@ -117,10 +117,10 @@ export function PlayClient({ token, initial, page }: { token: string; initial: G
         </p>
       )}
       {introFor !== null && view.round && view.round.index === introFor && (
-        <RoundIntro index={view.round.index} title={view.round.title} template={view.round.template} onDone={() => setIntroFor(null)} />
+        <RoundIntro index={view.round.index} title={view.round.title} template={view.round.template} twist={view.round.twist} onDone={() => setIntroFor(null)} />
       )}
       {/* Keyed by phase so each step enters with a short fade/slide; the phase class tints the page. */}
-      <div key={view.phase} className={`phase-enter phase-${view.phase}`}>
+      <div key={view.phase} className={`phase-enter phase-${view.phase}${view.episode ? ` world-${view.episode.worldId}` : ""}`}>
         {body}
       </div>
     </>

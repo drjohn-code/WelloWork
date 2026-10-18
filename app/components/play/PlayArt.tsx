@@ -44,7 +44,7 @@ export function GameMasterFace({ size = 44, mood = "default" }: { size?: number;
 
 /* ── Scenes ─────────────────────────────────────────────────────────────── */
 
-export type SceneKind = "lobby" | "intake" | "briefing" | "slot" | "snack" | "wifi" | "replyall" | "desks" | "callback" | "challenge" | "key" | "generating";
+export type SceneKind = "lobby" | "intake" | "briefing" | "slot" | "snack" | "wifi" | "replyall" | "desks" | "callback" | "common" | "lineup" | "blueprint" | "challenge" | "key" | "generating";
 
 export function Scene({ kind }: { kind: SceneKind }) {
   switch (kind) {
@@ -170,6 +170,50 @@ export function Scene({ kind }: { kind: SceneKind }) {
           <g className="float"><rect x="150" y="48" width="30" height="22" rx="2" fill={CREAM} transform="rotate(8 165 59)" /></g>
         </svg>
       );
+    case "common":
+      return (
+        <svg viewBox="0 0 240 120" className="scene" {...hidden}>
+          <ellipse cx="120" cy="104" rx="90" ry="9" fill={SKY} />
+          {[-24, -8, 8, 24].map((rot, i) => (
+            <g key={rot} className={i % 2 ? "float" : "float-slow"}>
+              <rect x={84 + i * 18} y="26" width="40" height="58" rx="6" fill="white" stroke={NAVY} strokeWidth="2.5" transform={`rotate(${rot} ${104 + i * 18} 84)`} />
+            </g>
+          ))}
+          <g className="pulse-ring"><circle cx="160" cy="52" r="9" fill={AMBER} stroke={NAVY} strokeWidth="2.5" /></g>
+          <g className="float"><path d="M40 40l3 6 6 3-6 3-3 6-3-6-6-3 6-3z" fill={CORAL} /></g>
+          <g className="float-slow"><circle cx="204" cy="34" r="7" fill={MINT} /></g>
+        </svg>
+      );
+    case "lineup":
+      return (
+        <svg viewBox="0 0 240 120" className="scene" {...hidden}>
+          <rect x="40" y="16" width="160" height="80" rx="6" fill={SKY} />
+          {[30, 50, 70].map((y) => (
+            <rect key={y} x="40" y={y} width="160" height="2" fill={SOFT} />
+          ))}
+          {[0, 1, 2].map((i) => (
+            <g key={i} className={i === 1 ? "float" : "float-slow"}>
+              <circle cx={78 + i * 42} cy="46" r="12" fill="white" stroke={NAVY} strokeWidth="2.5" />
+              <path d={`M${60 + i * 42} 96c0-16 8-24 18-24s18 8 18 24`} fill={[CORAL, ACCENT, AMBER][i]} stroke={NAVY} strokeWidth="2.5" />
+            </g>
+          ))}
+          <g className="wobble"><circle cx="196" cy="38" r="13" fill="white" stroke={NAVY} strokeWidth="3" /><path d="M205 48l12 12" stroke={NAVY} strokeWidth="5" strokeLinecap="round" /></g>
+        </svg>
+      );
+    case "blueprint":
+      return (
+        <svg viewBox="0 0 240 120" className="scene" {...hidden}>
+          <ellipse cx="120" cy="104" rx="90" ry="9" fill={SKY} />
+          <rect x="70" y="16" width="100" height="80" rx="8" fill="white" stroke={NAVY} strokeWidth="2.5" />
+          {[0, 1, 2].map((r) =>
+            [0, 1, 2, 3].map((c) => {
+              const v = (r * 5 + c * 3) % 5;
+              return <rect key={`${r}${c}`} x={80 + c * 22} y={26 + r * 22} width="18" height="18" rx="4" fill={[SKY, CORAL, ACCENT, AMBER, NAVY][v]} className={v ? "pop-tile" : ""} style={{ animationDelay: `${(r * 4 + c) * 0.12}s` }} />;
+            })
+          )}
+          <g className="pen"><rect x="176" y="40" width="8" height="40" rx="2" fill={AMBER} transform="rotate(30 180 60)" /><path d="M173 78l5 8 5-8z" fill={NAVY} transform="rotate(30 180 60)" /></g>
+        </svg>
+      );
     case "challenge":
       return (
         <svg viewBox="0 0 240 120" className="scene" {...hidden}>
@@ -199,11 +243,15 @@ export function Scene({ kind }: { kind: SceneKind }) {
 /* ── Medal (badge) ──────────────────────────────────────────────────────── */
 
 const MEDAL_COLORS: Record<string, [string, string]> = {
-  mvp: ["#FFD66B", "#b08900"],
-  helper: [AMBER, "#c47d00"],
-  solver: ["#FFE68A", "#b08900"],
+  connector: [SOFT, ACCENT],
+  clarity: ["#7DD3FC", "#0b7fae"],
+  bridge: ["#6EE7B7", "#0f8a63"],
   rescuer: [CORAL, "#c0392b"],
+  solver: ["#FFE68A", "#b08900"],
+  pace: ["#FDBA74", "#c2570c"],
+  eagleEye: ["#94A9D6", "#23407f"],
   memory: ["#C4B5FD", LILAC],
+  glue: [AMBER, "#c47d00"],
 };
 
 export function Medal({ kind, size = 56, children }: { kind: string; size?: number; children?: React.ReactNode }) {

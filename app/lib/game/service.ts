@@ -4,7 +4,9 @@ import { hashJoinToken, isWellFormedJoinToken } from "../join-token";
 import { PLAYABLE_ORDER_STATUSES } from "../player-invites";
 import { isTeamSize } from "../cognitive-rewards-order";
 import { generateRound, hintFor as templateHint, normalizeAnswer } from "./templates";
-import { buildSchedule } from "./schedule";
+import { DETAIL_ROUND_INDEX, SURPRISE, TWIST, offerWorlds, planEpisode, tallyVotes, type PastEpisode, type WorldVote } from "./episode";
+import { WORLDS, isWorldId, worldLabel, type WorldId } from "./worlds";
+import { TALK_TEMPLATES, talkReveal, type TalkTemplate } from "./talk";
 import { buildContent, cleanIntake, judgeChallenge } from "./game-master";
 import { TEXTS } from "./texts";
 import { seededRng } from "./rng";
@@ -25,9 +27,10 @@ import {
   type PublicPrompt,
   type RoundSpec,
   type RoundView,
-  type ScoreComponents,
+  type TalkLabels,
   type TemplateId,
 } from "./types";
+import { buildScorecardResult } from "./scorecard-view";
 import type { Database, Json } from "@/app/types/database";
 
 /**
@@ -198,6 +201,84 @@ export async function startGame(ctx: GameContext): Promise<void> {
   if (won) await logEvent(ctx.db, ctx.game.id, "game_started", { playerId: ctx.me.id });
 }
 
+/* ── Episode: team history, world offer and vote ────────────────────────── */
+
+/**
+ * Finished games that share players with this one, newest first. Same set of
+ * players = the same series (episode numbers continue); any overlap = worlds
+ * to avoid offering again. Matched on the player emails the orders already
+ * store; nothing new is collected.
+ */
+async function teamHistory(db: DB, orderId: string): Promise<PastEpisode[]> {
+  const { data: mine } = await db.from("cognitive_rewards_order_players").select("email").eq("order_id", orderId);
+  const emails = Array.from(new Set((mine ?? []).map((r) => r.email.trim().toLowerCase()).filter(Boolean)));
+  if (!emails.length) return [];
+  const { data: overlap } = await db.from("cognitive_rewards_order_players").select("order_id").in("email", emails).neq("order_id", orderId).limit(200);
+  const orderIds = Array.from(new Set((overlap ?? []).map((r) => r.order_id)));
+  if (!orderIds.length) return [];
+  const [{ data: members }, { data: games }] = await Promise.all([
+    db.from("cognitive_rewards_order_players").select("order_id, email").in("order_id", orderIds),
+    db.from("cognitive_rewards_games").select("order_id, content, ended_at, phase").in("order_id", orderIds).in("phase", ["scorecard", "done"]),
+  ]);
+  const mineKey = emails.slice().sort().join("|");
+  const keyOf = (id: string) =>
+    Array.from(new Set((members ?? []).filter((m) => m.order_id === id).map((m) => m.email.trim().toLowerCase())))
+      .sort()
+      .join("|");
+  return (games ?? [])
+    .map((g): PastEpisode => {
+      const ep = (g.content as unknown as GameContent | null)?.episode;
+      // Games from before the episode engine count as an office episode.
+      return {
+        worldId: ep && isWorldId(ep.worldId) ? ep.worldId : "office",
+        premise: ep?.premise ?? -1,
+        title: ep?.title ?? WORLDS.office.label.en.name,
+        number: ep?.number ?? 1,
+        endedAt: g.ended_at ?? new Date(0).toISOString(),
+        sameTeam: keyOf(g.order_id) === mineKey,
+      };
+    })
+    .sort((a, b) => Date.parse(b.endedAt) - Date.parse(a.endedAt));
+}
+
+type OfferPayload = { offer: WorldId[]; episodeNumber: number; previousTitle: string | null };
+
+/** The offer is computed once per game (when everyone has joined) and kept in the event log with the votes. */
+async function lobbyEpisodeState(ctx: GameContext, create: boolean): Promise<{ offer: OfferPayload | null; votes: Record<string, WorldVote> }> {
+  const { db, game } = ctx;
+  const { data: events } = await db
+    .from("cognitive_rewards_game_events")
+    .select("type, player_id, payload, created_at")
+    .eq("game_id", game.id)
+    .in("type", ["episode_offer", "world_vote"])
+    .order("created_at", { ascending: true });
+  let offer = (events ?? []).find((e) => e.type === "episode_offer")?.payload as unknown as OfferPayload | undefined;
+  if (!offer && create) {
+    const history = await teamHistory(db, ctx.order.id);
+    const series = history.filter((h) => h.sameTeam);
+    offer = {
+      offer: offerWorlds(game.id, history),
+      episodeNumber: series.reduce((m, h) => Math.max(m, h.number), 0) + 1,
+      previousTitle: series[0]?.title ?? null,
+    };
+    await logEvent(db, game.id, "episode_offer", { payload: offer as unknown as Json });
+  }
+  const votes: Record<string, WorldVote> = {};
+  for (const e of events ?? []) {
+    const w = (e.payload as { world?: string } | null)?.world;
+    if (e.type === "world_vote" && e.player_id && (w === SURPRISE || isWorldId(w))) votes[e.player_id] = w as WorldVote;
+  }
+  return { offer: offer ?? null, votes };
+}
+
+export async function castVote(ctx: GameContext, world: string): Promise<void> {
+  if (ctx.game.phase !== "lobby") throw new GameError("WRONG_PHASE");
+  if (!ctx.players.every((p) => p.joined_at)) throw new GameError("NOT_ALL_JOINED");
+  const { offer } = await lobbyEpisodeState(ctx, true);
+  if (world !== SURPRISE && !(offer?.offer ?? []).includes(world as WorldId)) throw new GameError("BAD_WORLD");
+  await logEvent(ctx.db, ctx.game.id, "world_vote", { playerId: ctx.me.id, payload: { world } });
+}
+
 /* ── Intake ─────────────────────────────────────────────────────────────── */
 
 export async function submitIntake(ctx: GameContext, answers: Partial<Record<IntakeKey, string>>): Promise<void> {
@@ -261,9 +342,29 @@ async function generate(ctx: GameContext): Promise<void> {
     all: cleaned,
   };
 
-  // Schedule + all rounds (deterministic, validated).
+  // Episode: world from the team's vote, premise, round plan with twists (deterministic).
   const playerList = players.map((p) => ({ id: p.id, name: p.name.trim().split(/\s+/)[0] || p.name }));
-  const { schedule, detailHolderId } = buildSchedule(game.id, players.map((p) => p.id));
+  const history = await teamHistory(db, order.id);
+  const lobby = await lobbyEpisodeState(ctx, false);
+  const offer = lobby.offer?.offer ?? offerWorlds(game.id, history);
+  const chosenWorld = tallyVotes(game.id, offer, lobby.votes, game.host_player_id);
+  const plan = planEpisode({ gameId: game.id, playerIds: players.map((p) => p.id), worldId: chosenWorld, history });
+  const { schedule, detailHolderId } = plan;
+
+  // Game Master content first: the rounds use its in-world names (skin).
+  const hasManagers = players.some((p) => p.role !== "staff");
+  const { content, source, error } = await buildContent({
+    language,
+    intake,
+    playerNames: playerList.map((p) => p.name),
+    schedule,
+    hasManagers,
+    episode: { worldId: plan.worldId, premise: plan.premise, number: plan.number, previous: plan.previous },
+  });
+  if (error) console.warn("[game] content generation fell back", game.id, error);
+  const worldId = content.episode?.worldId ?? "office";
+
+  // All rounds (deterministic, validated).
   const priorFacts: Array<Fact & { roundIndex: number; holderId?: string }> = [];
   const generated: Array<{ spec: RoundSpec; round: GeneratedRound }> = [];
   for (const spec of schedule) {
@@ -276,6 +377,8 @@ async function generate(ctx: GameContext): Promise<void> {
       intake,
       priorFacts,
       detailHolderId: spec.detail ? detailHolderId : undefined,
+      worldId,
+      skin: content.skin,
     });
     generated.push({ spec, round });
     for (const f of round.params.facts) if (!priorFacts.some((pf) => pf.key === f.key)) priorFacts.push({ ...f, roundIndex: spec.index });
@@ -284,13 +387,10 @@ async function generate(ctx: GameContext): Promise<void> {
     }
   }
 
-  // Game Master content (model, with fallback).
-  const hasManagers = players.some((p) => p.role !== "staff");
-  const { content, source, error } = await buildContent({ language, intake, playerNames: playerList.map((p) => p.name), schedule, hasManagers });
-  if (error) console.warn("[game] content generation fell back", game.id, error);
-
-  // Key ceremony = three facts the team found (hour, snack total, wifi).
-  const keyFacts = ["hour", "snackTotal", "wifi"].map((k) => priorFacts.find((f) => f.key === k)).filter((f): f is NonNullable<typeof f> => Boolean(f));
+  // Key ceremony = three facts the team found; the hour is always one (round 1 is always the calendar).
+  const keyFacts = KEY_FACT_ORDER.map((k) => priorFacts.find((f) => f.key === k))
+    .filter((f): f is NonNullable<typeof f> => Boolean(f))
+    .slice(0, 3);
   const keyHash = hashAnswer(game.id, keyFacts.map((f) => normalizeAnswer(f.value)).join("|"));
 
   await db.from("cognitive_rewards_game_rounds").delete().eq("game_id", game.id);
@@ -321,7 +421,23 @@ async function generate(ctx: GameContext): Promise<void> {
     })
     .eq("id", game.id)
     .eq("phase", "generating");
-  await logEvent(db, game.id, "content_generated", { payload: { source, players: order.team_size } });
+  await logEvent(db, game.id, "content_generated", {
+    payload: { source, players: order.team_size, world: worldId, voted: chosenWorld, episode: plan.number, templates: schedule.map((s) => s.template), twists: schedule.filter((s) => s.twist).map((s) => `${s.index}:${s.twist}`) },
+  });
+}
+
+const KEY_FACT_ORDER = ["hour", "snackTotal", "wifi", "lineup", "desks"];
+
+/** Round timing, adjusted by the round's twist. */
+function timingFor(spec: RoundSpec | undefined): { capSec: number; hintSec: number } {
+  if (spec?.twist === "rush") return { capSec: TWIST.rushCapSec, hintSec: TWIST.rushHintSec };
+  return { capSec: TIMING.roundCapSec, hintSec: TIMING.hintAfterSec };
+}
+function specFor(game: GameRow, index: number): RoundSpec | undefined {
+  return (game.schedule as unknown as RoundSpec[]).find((s) => s.index === index);
+}
+function maxWrongFor(round: RoundRow): number {
+  return (round.public_prompt as unknown as PublicPrompt).maxWrong ?? TIMING.maxWrongAttempts;
 }
 
 function hashAnswer(gameId: string, answer: string): string {
@@ -370,7 +486,7 @@ export async function attempt(ctx: GameContext, rawAnswer: string): Promise<{ co
       .from("cognitive_rewards_game_rounds")
       .update({ attempts: round.attempts + 1, wrong_attempts: wrong })
       .eq("id", round.id);
-    if (wrong >= TIMING.maxWrongAttempts) await failRound(ctx, round, "attempts");
+    if (wrong >= maxWrongFor(round)) await failRound(ctx, round, "attempts");
     return { correct: false };
   }
 
@@ -400,7 +516,7 @@ export async function attempt(ctx: GameContext, rawAnswer: string): Promise<{ co
       .from("cognitive_rewards_game_rounds")
       .select("params")
       .eq("game_id", game.id)
-      .eq("round_index", 1)
+      .eq("round_index", DETAIL_ROUND_INDEX)
       .maybeSingle();
     const holder = (detailRound?.params as unknown as GeneratedRound["params"] | null)?.detail?.playerId;
     if (holder && holder !== me.id) ledger.push({ player_id: holder, kind: "detail" });
@@ -449,19 +565,36 @@ export async function requestHint(ctx: GameContext): Promise<void> {
   const round = await currentRound(ctx.db, ctx.game);
   if (!round || round.status !== "active" || ctx.game.phase !== "round") throw new GameError("ROUND_NOT_ACTIVE");
   if (round.solver_player_id !== ctx.me.id) throw new GameError("NOT_SOLVER", 403);
-  if (!round.started_at || Date.now() - Date.parse(round.started_at) < TIMING.hintAfterSec * 1000) throw new GameError("HINT_NOT_YET");
+  if (!round.started_at || Date.now() - Date.parse(round.started_at) < timingFor(specFor(ctx.game, round.round_index)).hintSec * 1000) throw new GameError("HINT_NOT_YET");
   if (round.hint_used) return;
   await ctx.db.from("cognitive_rewards_game_rounds").update({ hint_used: true }).eq("id", round.id);
   await logEvent(ctx.db, ctx.game.id, "hint_used", { roundIndex: round.round_index, playerId: ctx.me.id });
 }
 
-export async function pressStuck(ctx: GameContext): Promise<void> {
+/** "I'm stuck": the solver can say whose piece they need again (empty = everyone). */
+export async function pressStuck(ctx: GameContext, need: string[] = []): Promise<void> {
   const round = await currentRound(ctx.db, ctx.game);
   if (!round || round.status !== "active" || ctx.game.phase !== "round") throw new GameError("ROUND_NOT_ACTIVE");
   if (round.solver_player_id !== ctx.me.id) throw new GameError("NOT_SOLVER", 403);
   if (round.stuck_at) return;
+  const others = new Set(ctx.players.filter((p) => p.id !== ctx.me.id).map((p) => p.id));
+  const targets = Array.from(new Set(need.filter((id) => others.has(id))));
   await ctx.db.from("cognitive_rewards_game_rounds").update({ stuck_at: new Date().toISOString() }).eq("id", round.id);
-  await logEvent(ctx.db, ctx.game.id, "stuck_pressed", { roundIndex: round.round_index, playerId: ctx.me.id });
+  await logEvent(ctx.db, ctx.game.id, "stuck_pressed", { roundIndex: round.round_index, playerId: ctx.me.id, payload: { need: targets } });
+}
+
+async function stuckNeed(db: DB, gameId: string, roundIndex: number): Promise<string[]> {
+  const { data } = await db
+    .from("cognitive_rewards_game_events")
+    .select("payload")
+    .eq("game_id", gameId)
+    .eq("round_index", roundIndex)
+    .eq("type", "stuck_pressed")
+    .order("created_at", { ascending: false })
+    .limit(1)
+    .maybeSingle();
+  const need = (data?.payload as { need?: unknown } | null)?.need;
+  return Array.isArray(need) ? need.filter((x): x is string => typeof x === "string") : [];
 }
 
 export async function acknowledgeStuck(ctx: GameContext): Promise<void> {
@@ -483,7 +616,7 @@ async function advanceRounds(ctx: GameContext): Promise<void> {
   const round = await currentRound(db, game);
   if (!round) return;
   const now = Date.now();
-  if (round.status === "active" && round.started_at && now - Date.parse(round.started_at) > TIMING.roundCapSec * 1000) {
+  if (round.status === "active" && round.started_at && now - Date.parse(round.started_at) > timingFor(specFor(game, round.round_index)).capSec * 1000) {
     await failRound(ctx, round, "timeout");
     return;
   }
@@ -619,6 +752,8 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     host: host ? { id: host.id, name: host.name } : null,
     players: players.map((p) => ({ id: p.id, name: p.name, joined: Boolean(p.joined_at), online: isOnline(p, now), isHost: p.id === game.host_player_id })),
     serverNow: new Date(now).toISOString(),
+    lobby: null,
+    episode: null,
     intake: null,
     briefing: null,
     round: null,
@@ -626,6 +761,25 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     key: null,
     scorecard: null,
   };
+
+  if (game.phase === "lobby" && host && players.every((p) => p.joined_at)) {
+    const { offer, votes } = await lobbyEpisodeState(ctx, true);
+    if (offer) {
+      const ids = offer.offer.filter(isWorldId);
+      const leading = Object.values(votes).some((v) => v !== SURPRISE) ? tallyVotes(game.id, ids, votes, game.host_player_id) : null;
+      view.lobby = {
+        offer: ids.map((id) => ({ id, ...worldLabel(id, language) })),
+        votes,
+        leading,
+        episodeNumber: offer.episodeNumber,
+        previousTitle: offer.previousTitle,
+      };
+    }
+  }
+  const ep = content.episode;
+  if (ep && game.phase !== "lobby" && game.phase !== "intake" && game.phase !== "generating") {
+    view.episode = { worldId: ep.worldId, worldName: worldLabel(ep.worldId, language).name, number: ep.number, title: ep.title, previously: ep.previously, teaser: ep.teaser };
+  }
 
   if (game.phase === "intake") {
     const [submitted, { data: mine }] = await Promise.all([
@@ -641,7 +795,7 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     view.briefing = { text: content.briefing, isHost: view.me.isHost };
   } else if (game.phase === "round") {
     const round = await currentRound(db, game);
-    if (round) view.round = buildRoundView(ctx, round, content, language, now);
+    if (round) view.round = buildRoundView(ctx, round, content, language, now, round.stuck_at ? await stuckNeed(db, game.id, round.round_index) : []);
   } else if (game.phase === "challenge" || game.phase === "judging") {
     view.challenge = {
       prompt: content.challengePrompt,
@@ -670,7 +824,7 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     };
   } else if (game.phase === "scorecard" || game.phase === "done") {
     const [{ data: scores }, { data: payout }] = await Promise.all([
-      db.from("cognitive_rewards_game_scores").select("*").eq("game_id", game.id),
+      db.from("cognitive_rewards_game_scores").select("player_id, share_eur, components, highlights").eq("game_id", game.id),
       db.from("cognitive_rewards_payouts").select("amount_eur, status, iban_last4").eq("game_id", game.id).eq("player_id", me.id).maybeSingle(),
     ]);
     // Link lifetime: once the player has been paid, or 30 days after the game, the link only says "finished".
@@ -682,24 +836,14 @@ export async function getView(ctx: GameContext): Promise<GameView> {
     view.scorecard = {
       outro: content.outro,
       verdict: (game.challenge_verdict as unknown as ChallengeVerdict | null) ?? null,
-      players: (scores ?? [])
-        .map((s) => ({
-          id: s.player_id,
-          name: players.find((p) => p.id === s.player_id)?.name ?? "",
-          total: Number(s.total),
-          shareEur: s.share_eur,
-          rank: s.rank,
-          components: s.components as unknown as ScoreComponents,
-          highlights: (s.highlights as unknown as string[]) ?? [],
-        }))
-        .sort((a, b) => a.rank - b.rank),
+      ...buildScorecardResult({ meId: me.id, players, scores: scores ?? [] }),
       payout: payout ? { amountEur: payout.amount_eur, status: payout.status, last4: payout.iban_last4 } : null,
     };
   }
   return view;
 }
 
-function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent, language: ContentLanguage, now: number): RoundView {
+function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent, language: ContentLanguage, now: number, need: string[]): RoundView {
   const { game, me, players } = ctx;
   const schedule = game.schedule as unknown as RoundSpec[];
   const rc = content.rounds[round.round_index] ?? TEXTS[language].fallback.rounds[round.round_index];
@@ -710,14 +854,20 @@ function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent,
   const startedAt = round.started_at ?? new Date(now).toISOString();
   const startedMs = Date.parse(startedAt);
   const status = round.status === "solved" ? "solved" : round.status === "failed" ? "failed" : "active";
+  const spec = schedule.find((s) => s.index === round.round_index);
+  const timing = timingFor(spec);
+  const twist = spec?.twist ?? null;
+  // Flash twist: sources see their piece for a few seconds, then describe it from memory.
+  const hidesAtMs = twist === "flash" && !isSolver ? startedMs + TWIST.flashSec * 1000 : null;
+  const pieceHidden = hidesAtMs !== null && status === "active" && now >= hidesAtMs;
 
   let reaction: string | null = null;
   let revealedAnswer: string | null = null;
   if (status === "failed") {
     reaction = rc.reactions.failed;
-    revealedAnswer = revealAnswer(round);
+    revealedAnswer = revealAnswer(round, language);
   } else if (status === "solved" && round.ended_at) {
-    const fast = Date.parse(round.ended_at) - startedMs <= TIMING.hintAfterSec * 1000 && !round.hint_used;
+    const fast = Date.parse(round.ended_at) - startedMs <= timing.hintSec * 1000 && !round.hint_used;
     reaction = fast ? rc.reactions.fast : rc.reactions.slow;
   }
 
@@ -737,18 +887,24 @@ function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent,
     solver: { id: solver.id, name: solver.name },
     isSolver,
     prompt,
-    myPiece: pieces[me.id] ?? null,
+    myPiece: pieceHidden ? null : pieces[me.id] ?? null,
     revealedPieces,
     detail,
+    twist,
+    pieceHidesAt: hidesAtMs !== null && status === "active" ? new Date(hidesAtMs).toISOString() : null,
+    pieceHidden,
+    labels: isTalkTemplate(round.template) ? talkLabels(language) : null,
     status,
     startedAt,
-    hintAvailableAt: new Date(startedMs + TIMING.hintAfterSec * 1000).toISOString(),
-    capAt: new Date(startedMs + TIMING.roundCapSec * 1000).toISOString(),
+    hintAvailableAt: new Date(startedMs + timing.hintSec * 1000).toISOString(),
+    capAt: new Date(startedMs + timing.capSec * 1000).toISOString(),
     hint: round.hint_used ? hintFor(round, language) : null,
     stuck: Boolean(round.stuck_at),
+    stuckNeed: need,
+    stuckNudge: round.stuck_at && status === "active" ? rc.stuck : null,
     acknowledgedByMe: ((round.acknowledged as unknown as string[]) ?? []).includes(me.id),
     acknowledgedCount: ((round.acknowledged as unknown as string[]) ?? []).length,
-    attemptsLeft: Math.max(0, TIMING.maxWrongAttempts - round.wrong_attempts),
+    attemptsLeft: Math.max(0, maxWrongFor(round) - round.wrong_attempts),
     wrongAttempts: round.wrong_attempts,
     reaction,
     revealedAnswer,
@@ -756,13 +912,30 @@ function buildRoundView(ctx: GameContext, round: RoundRow, content: GameContent,
   };
 }
 
+function isTalkTemplate(t: string): t is TalkTemplate {
+  return (TALK_TEMPLATES as readonly string[]).includes(t);
+}
+
+function talkLabels(language: ContentLanguage): TalkLabels {
+  const T = TEXTS[language].talk;
+  return { colors: T.colors, cards: T.cards, emptyTile: T.emptyTile };
+}
+
+/** What the failure screen shows: the plain answer, or for talk rounds a readable version of it. */
+function revealAnswer(round: RoundRow, language: ContentLanguage): string {
+  if (isTalkTemplate(round.template)) return talkReveal(round.template, language, round.params as Record<string, unknown>, plainAnswer(round));
+  return plainAnswer(round);
+}
+
 /**
  * The plain answer is never stored, but it is fully determined by the stored
  * params/pieces, so it can be recomputed for hints and the failure reveal.
  */
-function revealAnswer(round: RoundRow): string {
+function plainAnswer(round: RoundRow): string {
   const pieces = round.pieces as unknown as Record<string, Piece>;
-  const params = round.params as unknown as GeneratedRound["params"] & { hours?: number[]; referencedValues?: number[] };
+  const params = round.params as unknown as GeneratedRound["params"] & { hours?: number[]; referencedValues?: number[]; revealCard?: string; grid?: number[][] };
+  if (round.template === "common") return String(params.revealCard ?? "");
+  if (round.template === "blueprint") return (params.grid ?? []).flat().join("");
   if (params.facts?.length) return params.facts[0].value;
   switch (round.template as TemplateId) {
     case "slot": {
@@ -784,5 +957,5 @@ function revealAnswer(round: RoundRow): string {
 }
 
 function hintFor(round: RoundRow, language: ContentLanguage): string {
-  return templateHint(round.template as TemplateId, language, revealAnswer(round), round.params as Record<string, unknown>);
+  return templateHint(round.template as TemplateId, language, plainAnswer(round), round.params as Record<string, unknown>);
 }

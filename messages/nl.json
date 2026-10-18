@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, jouw deel van de beloning: {share}",
-      "preheader": "Het spel is voorbij. Je werd {rank} van {n}. Voeg je bankgegevens toe om {share} te ontvangen.",
+      "preheader": "Het spel is voorbij. Voeg je bankgegevens toe om {share} te ontvangen.",
       "heading": "Goed gespeeld, {name}",
       "intro": "Je team bij {company} heeft Cognitive Rewards uitgespeeld en de pot is verdeeld op basis van wat ieder van jullie deed.",
       "factShare": "Jouw deel",
-      "factRank": "Plaats",
-      "factRankValue": "{rank} van {n}",
-      "factHighlights": "Hoogtepunten",
+      "factTitle": "Jouw titel",
       "highlights": {
-        "helper": "Topheler",
-        "solver": "Topoplosser",
-        "rescuer": "Topredder",
-        "memory": "Topgeheugen",
-        "mvp": "MVP"
+        "connector": "Verbinder",
+        "clarity": "Helderheid",
+        "bridge": "Brug",
+        "rescuer": "Redder",
+        "solver": "Oplosser",
+        "pace": "Tempo",
+        "eagleEye": "Arendsoog",
+        "memory": "Geheugen",
+        "glue": "Lijm"
       },
       "nextHeading": "Zo ontvang je het",
       "step1": "Open hieronder je persoonlijke link.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Drie regels",
       "rule1": "Elke ronde is één van jullie de oplosser. Alle anderen hebben een stukje dat alleen zij kunnen zien.",
       "rule2": "Praat. Niets kan alleen worden opgelost, en niemand kan over je schouder meekijken.",
-      "rule3": "Helpen loont net zo veel als oplossen. De pot wordt verdeeld op basis van wat ieder van jullie deed.",
+      "rule3": "Helpen levert meer op dan oplossen. De pot wordt verdeeld op basis van wat ieder van jullie deed.",
       "begin": "Start ronde 1",
       "beginning": "Starten…",
       "hostNote": "Jij bent de host. Start als iedereen zegt dat hij klaar is.",
-      "waitingHost": "Wachten tot {host} begint…"
+      "waitingHost": "Wachten tot {host} begint…",
+      "episodeLabel": "Aflevering {n}"
     },
     "round": {
       "progress": "Ronde {n} van {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Over datum",
         "yourMessages": "Jouw berichten ({n})",
         "rule": "Regel {n}",
-        "clue": "Jouw aanwijzingen ({n})"
+        "clue": "Jouw aanwijzingen ({n})",
+        "hand": "Je hand ({n} kaarten)",
+        "witness": "Wat je je herinnert",
+        "witnessNote": "Alleen jij zag dit. Beschrijf het; noem het niet alleen.",
+        "lineup": "De line-up",
+        "tiles": "Jouw deel van het patroon",
+        "row": "Rij {n}"
       },
       "introLevel": "Ronde {n}",
       "introReady": "Maak je klaar",
-      "introGo": "Start!"
+      "introGo": "Start!",
+      "talk": {
+        "pickCard": "Tik op de kaart die in ieders hand zit",
+        "pickFace": "Tik op het gezicht dat ze beschrijven",
+        "faceLabel": "Gezicht {n}",
+        "lockIn": "Vastleggen",
+        "checking": "Controleren…",
+        "attemptsLeft": "Pogingen over: {n}",
+        "paintHelp": "Kies een kleur en tik op tegels. Tik nog eens om te wissen.",
+        "brushes": "Kleuren",
+        "eraser": "Gum",
+        "row": "Rij {n}",
+        "sendGrid": "Raster versturen",
+        "clear": "Wissen"
+      },
+      "twist": {
+        "flash": "Flits",
+        "rush": "Haast"
+      },
+      "twistNote": {
+        "flash": "Flitsronde: je stukje verdwijnt over {s} s. Kijk goed.",
+        "rush": "Haastronde: veel minder tijd dan normaal.",
+        "gone": "Je stukje is weg. Beschrijf het uit je hoofd aan {name}."
+      },
+      "twistIntro": {
+        "flash": "Twist: stukjes verdwijnen na 30 seconden",
+        "rush": "Twist: de helft van de tijd"
+      },
+      "stuckPick": "Wiens stukje heb je opnieuw nodig?",
+      "stuckEveryone": "Vraag iedereen",
+      "stuckSend": "Vraag het hen",
+      "stuckCancel": "Annuleren",
+      "stuckBannerYou": "{name} heeft je stukje opnieuw nodig. Beschrijf het op een andere manier.",
+      "stuckBannerOthers": "{name} vroeg {names} hun stukje opnieuw te beschrijven. Help mee als je kunt.",
+      "stuckTip": {
+        "common": "Noem bij elke kaart voorwerp en kleur, één voor één.",
+        "lineup": "Zeg wat je ziet: wat het is, de kleur en waar het zit.",
+        "blueprint": "Rij voor rij, van links naar rechts: een kleur of leeg.",
+        "slot": "Lees je bezette uren voor, het vroegste eerst.",
+        "snack": "Noem de goede en de verlopen apart.",
+        "replyall": "Lees elk bericht voor met de tijd erbij.",
+        "wifi": "Lees je regel woord voor woord voor, met het nummer.",
+        "desks": "Lees je aanwijzing precies zoals hij er staat.",
+        "default": "Lees het nog eens langzaam, in een andere volgorde."
+      }
     },
     "challenge": {
       "stepLabel": "Eindopdracht",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Beloning ontgrendeld",
       "unlockedTitle": "Gelukt",
       "unlockedNote": "Verdeeld over jullie {n} op basis van wat ieder deed. Iedereen heeft een gegarandeerd minimum.",
-      "yourShareEyebrow": "Jouw deel",
-      "yourShareBody": "Je werd {rank} van {total}. Helpen telde voor 60%, oplossen voor 40%.",
+      "teamEyebrow": "Teamresultaat",
+      "titlesTitle": "Eén titel per persoon",
+      "titlesNote": "Gekozen uit wat het spel heeft gemeten: waar ieder van jullie het meest opviel ten opzichte van de rest van het team. Geen twee zijn hetzelfde.",
+      "you": "Jij",
       "highlights": {
-        "helper": "Topheler",
-        "solver": "Topoplosser",
-        "rescuer": "Topredder",
-        "memory": "Topgeheugen",
-        "mvp": "MVP"
+        "connector": "Verbinder",
+        "clarity": "Helderheid",
+        "bridge": "Brug",
+        "rescuer": "Redder",
+        "solver": "Oplosser",
+        "pace": "Tempo",
+        "eagleEye": "Arendsoog",
+        "memory": "Geheugen",
+        "glue": "Lijm"
       },
-      "boardTitle": "Zo is de pot verdeeld",
-      "boardNote": "Tik op een naam voor de details.",
+      "titleNotes": {
+        "connector": "Stukjes doorgeven aan de oplosser",
+        "clarity": "Stukjes die meteen goed vielen",
+        "bridge": "Elke oplosser helpen, niet maar één",
+        "rescuer": "Reageren op ‘Ik zit vast’",
+        "solver": "De juiste antwoorden invoeren",
+        "pace": "Snelle oplossingen",
+        "eagleEye": "De kleine details zien",
+        "memory": "Onthouden wat later nodig was",
+        "glue": "Evenveel geven als nemen"
+      },
+      "profileTitle": "Teamprofiel",
+      "profileNote": "Gemiddelden voor het hele team, 0 tot 100.",
       "components": {
         "dataTransfer": "Delen",
         "teamwork": "Teamwerk",
@@ -3772,11 +3842,21 @@
         "focus": "Focus",
         "memory": "Geheugen"
       },
+      "privateEyebrow": "Alleen jij ziet dit",
+      "yourShareEyebrow": "Jouw deel",
+      "shareMinimum": "Gegarandeerd minimum",
+      "sharePerformance": "Op basis van wat jij deed",
+      "shareNote": "Iedereen krijgt hetzelfde minimum. De rest van de pot is verdeeld naar wat ieder van jullie deed: helpen telde voor 70%, oplossen voor 30%.",
+      "yourTitle": "Jouw titel",
+      "compareTitle": "Jij en het team",
+      "legendYou": "Jij",
+      "legendTeam": "Teamgemiddelde",
+      "compareValue": "Jij {you}, teamgemiddelde {team}",
+      "privacyNote": "Je teamgenoten zien ieders titel, niet wie hoeveel kreeg.",
       "verdictTitle": "De eindopdracht",
       "verdictScore": "Teamscore {score} van 100. Dit was voor de lol en verandert de verdeling niet.",
       "thanks": "Bedankt voor het spelen. Jullie host {host} kan het tabblad nu sluiten.",
-      "podiumTitle": "Podium",
-      "placeLabel": "Plaats {rank}"
+      "episodeWrap": "{world} · Aflevering {n}:"
     },
     "payout": {
       "title": "Waar mogen we je {amount} naartoe sturen?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Geluid aan",
       "off": "Geluid uit"
+    },
+    "vote": {
+      "title": "Kies de wereld van deze aflevering",
+      "titleNext": "Aflevering {n}: kies de wereld",
+      "intro": "Elk spel is een nieuwe aflevering met een eigen wereld en verhaal. Tik op je favoriet; de meeste stemmen winnen.",
+      "previously": "Vorige keer: \"{title}\". Deze is nieuw.",
+      "surprise": "Verras ons",
+      "surpriseTagline": "Laat de spelleider kiezen.",
+      "voters": "Stemmen: {count}",
+      "hostHint": "Iedereen mag stemmen. Bij gelijkspel telt jouw keuze.",
+      "guestHint": "Iedereen mag stemmen. Bij gelijkspel telt de keuze van {host}.",
+      "startWith": "Aan kop: {world}",
+      "startSurprise": "Nog geen stemmen: de spelleider kiest."
     }
   },
   "admin": {

@@ -7,11 +7,13 @@ import { GameMasterSays } from "./GameMaster";
 import { TeamBar } from "./TeamBar";
 import { firstName, type ActResult } from "./usePlay";
 import { Scene } from "./PlayArt";
+import { EpisodeCard } from "./WorldArt";
 
 export function Briefing({ view, act }: { view: GameView; act: (b: { action: string } & Record<string, unknown>) => Promise<ActResult> }) {
   const t = useTranslations("play.briefing");
   const tp = useTranslations("play");
   const [busy, setBusy] = useState(false);
+  const ep = view.episode;
   const [error, setError] = useState<string | null>(null);
 
   async function begin() {
@@ -26,11 +28,25 @@ export function Briefing({ view, act }: { view: GameView; act: (b: { action: str
     <div className="play-stack">
       <TeamBar view={view} label={t("stepLabel")} />
       <section className="play-card glass-strong scene-card" aria-labelledby="briefing-title">
-        <Scene kind="briefing" />
-        <p className="play-eyebrow">{tp("eyebrow")}</p>
-        <h1 id="briefing-title" className="play-title">
-          {t("title")}
-        </h1>
+        {ep ? (
+          <>
+            <EpisodeCard world={ep.worldId} worldName={ep.worldName} title={ep.title} episodeLabel={t("episodeLabel", { n: ep.number })} />
+            <h1 id="briefing-title" className="sr-only">
+              {ep.title}
+            </h1>
+            {ep.previously && (
+              <p className="episode-previously">{ep.previously}</p>
+            )}
+          </>
+        ) : (
+          <>
+            <Scene kind="briefing" />
+            <p className="play-eyebrow">{tp("eyebrow")}</p>
+            <h1 id="briefing-title" className="play-title">
+              {t("title")}
+            </h1>
+          </>
+        )}
         <GameMasterSays>{view.briefing!.text}</GameMasterSays>
         <h2 className="play-subtitle" style={{ marginTop: 24 }}>
           {t("rulesTitle")}

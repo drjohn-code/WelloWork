@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, votre part de la récompense : {share}",
-      "preheader": "Le jeu est terminé. Vous terminez {rank} sur {n}. Ajoutez vos coordonnées bancaires pour recevoir {share}.",
+      "preheader": "Le jeu est terminé. Ajoutez vos coordonnées bancaires pour recevoir {share}.",
       "heading": "Bien joué, {name}",
       "intro": "Votre équipe chez {company} a terminé Cognitive Rewards, et la cagnotte a été répartie selon ce que chacun a fait.",
       "factShare": "Votre part",
-      "factRank": "Place",
-      "factRankValue": "{rank} sur {n}",
-      "factHighlights": "Faits marquants",
+      "factTitle": "Votre titre",
       "highlights": {
-        "helper": "Top entraide",
-        "solver": "Top résolution",
-        "rescuer": "Top sauvetage",
-        "memory": "Top mémoire",
-        "mvp": "MVP"
+        "connector": "Connecteur",
+        "clarity": "Clarté",
+        "bridge": "Passerelle",
+        "rescuer": "Sauvetage",
+        "solver": "Résolution",
+        "pace": "Rythme",
+        "eagleEye": "Œil de lynx",
+        "memory": "Mémoire",
+        "glue": "Ciment"
       },
       "nextHeading": "Pour la recevoir",
       "step1": "Ouvrez votre lien personnel ci-dessous.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Trois règles",
       "rule1": "À chaque manche, l’un de vous résout. Tous les autres détiennent une pièce qu’eux seuls peuvent voir.",
       "rule2": "Parlez. Rien ne se résout seul, et personne ne peut regarder par-dessus votre épaule.",
-      "rule3": "Aider rapporte autant que résoudre. La cagnotte est répartie selon ce que chacun a fait.",
+      "rule3": "Aider rapporte plus que résoudre. La cagnotte est répartie selon ce que chacun a fait.",
       "begin": "Lancer la manche 1",
       "beginning": "Lancement…",
       "hostNote": "Vous êtes l’hôte. Lancez quand tout le monde se dit prêt.",
-      "waitingHost": "En attente de {host} pour commencer…"
+      "waitingHost": "En attente de {host} pour commencer…",
+      "episodeLabel": "Épisode {n}"
     },
     "round": {
       "progress": "Manche {n} sur {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Périmé",
         "yourMessages": "Vos messages ({n})",
         "rule": "Règle {n}",
-        "clue": "Vos indices ({n})"
+        "clue": "Vos indices ({n})",
+        "hand": "Votre main ({n} cartes)",
+        "witness": "Ce dont vous vous souvenez",
+        "witnessNote": "Vous seul l’avez vu. Décrivez-le, ne vous contentez pas de le nommer.",
+        "lineup": "La séance d’identification",
+        "tiles": "Votre partie du motif",
+        "row": "Ligne {n}"
       },
       "introLevel": "Manche {n}",
       "introReady": "Préparez-vous",
-      "introGo": "C’est parti !"
+      "introGo": "C’est parti !",
+      "talk": {
+        "pickCard": "Touchez la carte présente dans toutes les mains",
+        "pickFace": "Touchez le visage décrit",
+        "faceLabel": "Visage {n}",
+        "lockIn": "Valider",
+        "checking": "Vérification…",
+        "attemptsLeft": "Essais restants : {n}",
+        "paintHelp": "Choisissez une couleur, puis touchez les cases. Touchez à nouveau pour effacer.",
+        "brushes": "Couleurs",
+        "eraser": "Gomme",
+        "row": "Ligne {n}",
+        "sendGrid": "Envoyer la grille",
+        "clear": "Effacer"
+      },
+      "twist": {
+        "flash": "Flash",
+        "rush": "Rush"
+      },
+      "twistNote": {
+        "flash": "Manche flash : votre pièce disparaît dans {s} s. Regardez bien.",
+        "rush": "Manche rush : beaucoup moins de temps que d’habitude.",
+        "gone": "Votre pièce a disparu. Décrivez-la de mémoire à {name}."
+      },
+      "twistIntro": {
+        "flash": "Rebondissement : les pièces disparaissent après 30 secondes",
+        "rush": "Rebondissement : moitié moins de temps"
+      },
+      "stuckPick": "De quelle pièce avez-vous de nouveau besoin ?",
+      "stuckEveryone": "Demander à tous",
+      "stuckSend": "Leur demander",
+      "stuckCancel": "Annuler",
+      "stuckBannerYou": "{name} a de nouveau besoin de votre pièce. Décrivez-la autrement.",
+      "stuckBannerOthers": "{name} a demandé à {names} de redécrire leur pièce. Aidez si vous pouvez.",
+      "stuckTip": {
+        "common": "Pour chaque carte, dites l’objet et la couleur, une par une.",
+        "lineup": "Dites ce que vous voyez : ce que c’est, sa couleur, où c’est placé.",
+        "blueprint": "Ligne par ligne, de gauche à droite : une couleur ou vide.",
+        "slot": "Lisez vos heures occupées, la plus tôt d’abord.",
+        "snack": "Annoncez séparément les bons et les périmés.",
+        "replyall": "Lisez chaque message avec son heure.",
+        "wifi": "Lisez votre règle mot pour mot, avec son numéro.",
+        "desks": "Lisez votre indice exactement tel qu’il est écrit.",
+        "default": "Relisez lentement, dans un autre ordre."
+      }
     },
     "challenge": {
       "stepLabel": "Défi final",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Récompense débloquée",
       "unlockedTitle": "Vous l’avez fait",
       "unlockedNote": "Répartie entre vous {n} selon ce que chacun a fait. Tout le monde a un minimum garanti.",
-      "yourShareEyebrow": "Votre part",
-      "yourShareBody": "Vous terminez {rank} sur {total}. Aider comptait pour 60 %, résoudre pour 40 %.",
+      "teamEyebrow": "Résultat de l'équipe",
+      "titlesTitle": "Un titre chacun",
+      "titlesNote": "Choisi à partir de ce que le jeu a mesuré : là où chacun de vous s'est le plus distingué par rapport au reste de l'équipe. Aucun n'est attribué deux fois.",
+      "you": "Vous",
       "highlights": {
-        "helper": "Top entraide",
-        "solver": "Top résolution",
-        "rescuer": "Top sauvetage",
-        "memory": "Top mémoire",
-        "mvp": "MVP"
+        "connector": "Connecteur",
+        "clarity": "Clarté",
+        "bridge": "Passerelle",
+        "rescuer": "Sauvetage",
+        "solver": "Résolution",
+        "pace": "Rythme",
+        "eagleEye": "Œil de lynx",
+        "memory": "Mémoire",
+        "glue": "Ciment"
       },
-      "boardTitle": "Comment la cagnotte a été répartie",
-      "boardNote": "Touchez un nom pour voir le détail.",
+      "titleNotes": {
+        "connector": "Transmettre des pièces à la personne qui résout",
+        "clarity": "Des pièces comprises du premier coup",
+        "bridge": "Aider chaque personne qui résout, pas une seule",
+        "rescuer": "Répondre aux « Je bloque »",
+        "solver": "Saisir les bonnes réponses",
+        "pace": "Des résolutions rapides",
+        "eagleEye": "Repérer les petits détails",
+        "memory": "Retenir ce qui servait plus tard",
+        "glue": "Donner et recevoir à parts égales"
+      },
+      "profileTitle": "Profil de l'équipe",
+      "profileNote": "Moyennes de toute l'équipe, de 0 à 100.",
       "components": {
         "dataTransfer": "Partage",
         "teamwork": "Esprit d’équipe",
@@ -3772,11 +3842,21 @@
         "focus": "Attention",
         "memory": "Mémoire"
       },
+      "privateEyebrow": "Visible par vous uniquement",
+      "yourShareEyebrow": "Votre part",
+      "shareMinimum": "Minimum garanti",
+      "sharePerformance": "Selon ce que vous avez fait",
+      "shareNote": "Tout le monde reçoit le même minimum. Le reste de la cagnotte a été réparti selon ce que chacun a fait : aider comptait pour 70 %, résoudre pour 30 %.",
+      "yourTitle": "Votre titre",
+      "compareTitle": "Vous et l'équipe",
+      "legendYou": "Vous",
+      "legendTeam": "Moyenne de l'équipe",
+      "compareValue": "Vous {you}, moyenne de l'équipe {team}",
+      "privacyNote": "Vos collègues voient les titres de chacun, pas qui a reçu combien.",
       "verdictTitle": "Le défi final",
       "verdictScore": "Score d’équipe {score} sur 100. C’était pour le plaisir, sans effet sur la répartition.",
       "thanks": "Merci d’avoir joué. Votre hôte {host} peut fermer l’onglet.",
-      "podiumTitle": "Podium",
-      "placeLabel": "Place {rank}"
+      "episodeWrap": "{world} · Épisode {n} :"
     },
     "payout": {
       "title": "Où envoyer vos {amount} ?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Son activé",
       "off": "Son coupé"
+    },
+    "vote": {
+      "title": "Choisissez l’univers de cet épisode",
+      "titleNext": "Épisode {n} : choisissez l’univers",
+      "intro": "Chaque partie est un nouvel épisode, avec son univers et son histoire. Touchez celui qui vous tente ; le plus de voix l’emporte.",
+      "previously": "La dernière fois : « {title} ». Celui-ci est nouveau.",
+      "surprise": "Surprenez-nous",
+      "surpriseTagline": "Le maître du jeu choisit.",
+      "voters": "Voix : {count}",
+      "hostHint": "Tout le monde peut voter. En cas d’égalité, votre choix l’emporte.",
+      "guestHint": "Tout le monde peut voter. En cas d’égalité, le choix de {host} l’emporte.",
+      "startWith": "En tête : {world}",
+      "startSurprise": "Pas encore de vote : le maître du jeu choisira."
     }
   },
   "admin": {

@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, tu parte de la recompensa: {share}",
-      "preheader": "El juego ha terminado. Has quedado {rank} de {n}. Añade tus datos bancarios para recibir {share}.",
+      "preheader": "El juego ha terminado. Añade tus datos bancarios para recibir {share}.",
       "heading": "Bien jugado, {name}",
       "intro": "Tu equipo en {company} ha terminado Cognitive Rewards y la bolsa se ha repartido según lo que hizo cada uno.",
       "factShare": "Tu parte",
-      "factRank": "Puesto",
-      "factRankValue": "{rank} de {n}",
-      "factHighlights": "Destacados",
+      "factTitle": "Tu título",
       "highlights": {
-        "helper": "Top ayudante",
-        "solver": "Top resolviendo",
-        "rescuer": "Top rescate",
-        "memory": "Top memoria",
-        "mvp": "MVP"
+        "connector": "Conector",
+        "clarity": "Claridad",
+        "bridge": "Puente",
+        "rescuer": "Rescate",
+        "solver": "Resolución",
+        "pace": "Ritmo",
+        "eagleEye": "Ojo de águila",
+        "memory": "Memoria",
+        "glue": "Pegamento"
       },
       "nextHeading": "Para recibirla",
       "step1": "Abre tu enlace personal, abajo.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Tres reglas",
       "rule1": "En cada ronda, uno de vosotros resuelve. Los demás tienen una pieza que solo ellos pueden ver.",
       "rule2": "Hablad. Nada se resuelve en solitario, y nadie puede mirar por encima del hombro.",
-      "rule3": "Ayudar cuenta tanto como resolver. La bolsa se reparte según lo que hizo cada uno.",
+      "rule3": "Ayudar cuenta más que resolver. La bolsa se reparte según lo que hizo cada uno.",
       "begin": "Empezar la ronda 1",
       "beginning": "Empezando…",
       "hostNote": "Eres el anfitrión. Empieza cuando todos digan que están listos.",
-      "waitingHost": "Esperando a que {host} empiece…"
+      "waitingHost": "Esperando a que {host} empiece…",
+      "episodeLabel": "Episodio {n}"
     },
     "round": {
       "progress": "Ronda {n} de {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Caducado",
         "yourMessages": "Tus mensajes ({n})",
         "rule": "Regla {n}",
-        "clue": "Tus pistas ({n})"
+        "clue": "Tus pistas ({n})",
+        "hand": "Tu mano ({n} cartas)",
+        "witness": "Lo que recuerdas",
+        "witnessNote": "Solo tú lo viste. Descríbelo; no te limites a nombrarlo.",
+        "lineup": "La rueda de reconocimiento",
+        "tiles": "Tu parte del patrón",
+        "row": "Fila {n}"
       },
       "introLevel": "Ronda {n}",
       "introReady": "Preparaos",
-      "introGo": "¡Vamos!"
+      "introGo": "¡Vamos!",
+      "talk": {
+        "pickCard": "Toca la carta que está en todas las manos",
+        "pickFace": "Toca la cara que describen",
+        "faceLabel": "Cara {n}",
+        "lockIn": "Confirmar",
+        "checking": "Comprobando…",
+        "attemptsLeft": "Intentos restantes: {n}",
+        "paintHelp": "Elige un color y toca casillas. Tócalas otra vez para borrar.",
+        "brushes": "Colores",
+        "eraser": "Goma",
+        "row": "Fila {n}",
+        "sendGrid": "Enviar la cuadrícula",
+        "clear": "Borrar"
+      },
+      "twist": {
+        "flash": "Flash",
+        "rush": "Prisa"
+      },
+      "twistNote": {
+        "flash": "Ronda flash: tu pieza desaparece en {s} s. Mira bien.",
+        "rush": "Ronda con prisa: mucho menos tiempo de lo habitual.",
+        "gone": "Tu pieza ha desaparecido. Descríbesela de memoria a {name}."
+      },
+      "twistIntro": {
+        "flash": "Giro: las piezas desaparecen a los 30 segundos",
+        "rush": "Giro: la mitad de tiempo"
+      },
+      "stuckPick": "¿De quién necesitas otra vez la pieza?",
+      "stuckEveryone": "Preguntar a todos",
+      "stuckSend": "Preguntarles",
+      "stuckCancel": "Cancelar",
+      "stuckBannerYou": "{name} necesita otra vez tu pieza. Descríbela de otra manera.",
+      "stuckBannerOthers": "{name} pidió a {names} que describan otra vez su pieza. Echa una mano si puedes.",
+      "stuckTip": {
+        "common": "Di objeto y color de cada carta, una a una.",
+        "lineup": "Di lo que ves: qué es, de qué color, dónde está.",
+        "blueprint": "Fila a fila, de izquierda a derecha: un color o vacía.",
+        "slot": "Lee tus horas ocupadas, empezando por la más temprana.",
+        "snack": "Di por separado los buenos y los caducados.",
+        "replyall": "Lee cada mensaje con su hora.",
+        "wifi": "Lee tu regla palabra por palabra, con su número.",
+        "desks": "Lee tu pista tal como está escrita.",
+        "default": "Vuelve a leerlo despacio, en otro orden."
+      }
     },
     "challenge": {
       "stepLabel": "Reto final",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Recompensa desbloqueada",
       "unlockedTitle": "Lo habéis conseguido",
       "unlockedNote": "Repartida entre los {n} según lo que hizo cada uno. Todos tienen un mínimo garantizado.",
-      "yourShareEyebrow": "Tu parte",
-      "yourShareBody": "Has quedado {rank} de {total}. Ayudar contó un 60 % y resolver un 40 %.",
+      "teamEyebrow": "Resultado del equipo",
+      "titlesTitle": "Un título para cada uno",
+      "titlesNote": "Elegido a partir de lo que midió el juego: donde cada uno destacó más frente al resto del equipo. No se repite ninguno.",
+      "you": "Tú",
       "highlights": {
-        "helper": "Top ayudante",
-        "solver": "Top resolviendo",
-        "rescuer": "Top rescate",
-        "memory": "Top memoria",
-        "mvp": "MVP"
+        "connector": "Conector",
+        "clarity": "Claridad",
+        "bridge": "Puente",
+        "rescuer": "Rescate",
+        "solver": "Resolución",
+        "pace": "Ritmo",
+        "eagleEye": "Ojo de águila",
+        "memory": "Memoria",
+        "glue": "Pegamento"
       },
-      "boardTitle": "Cómo se repartió la bolsa",
-      "boardNote": "Toca un nombre para ver el desglose.",
+      "titleNotes": {
+        "connector": "Pasar piezas a quien resuelve",
+        "clarity": "Piezas que se entendieron a la primera",
+        "bridge": "Ayudar a cada persona que resuelve, no solo a una",
+        "rescuer": "Responder a «Estoy atascado»",
+        "solver": "Introducir las respuestas correctas",
+        "pace": "Resoluciones rápidas",
+        "eagleEye": "Ver los pequeños detalles",
+        "memory": "Recordar lo que hacía falta después",
+        "glue": "Dar y recibir a partes iguales"
+      },
+      "profileTitle": "Perfil del equipo",
+      "profileNote": "Medias de todo el equipo, de 0 a 100.",
       "components": {
         "dataTransfer": "Compartir",
         "teamwork": "Trabajo en equipo",
@@ -3772,11 +3842,21 @@
         "focus": "Atención",
         "memory": "Memoria"
       },
+      "privateEyebrow": "Solo tú ves esto",
+      "yourShareEyebrow": "Tu parte",
+      "shareMinimum": "Mínimo garantizado",
+      "sharePerformance": "Por lo que hiciste",
+      "shareNote": "Todos reciben el mismo mínimo. El resto del fondo se repartió según lo que hizo cada uno: ayudar contó un 70 % y resolver un 30 %.",
+      "yourTitle": "Tu título",
+      "compareTitle": "Tú y el equipo",
+      "legendYou": "Tú",
+      "legendTeam": "Media del equipo",
+      "compareValue": "Tú {you}, media del equipo {team}",
+      "privacyNote": "Tus compañeros ven los títulos de todos, no quién recibió cuánto.",
       "verdictTitle": "El reto final",
       "verdictScore": "Puntuación del equipo: {score} de 100. Esto era por diversión y no cambia el reparto.",
       "thanks": "Gracias por jugar. Vuestro anfitrión {host} ya puede cerrar la pestaña.",
-      "podiumTitle": "Podio",
-      "placeLabel": "Puesto {rank}"
+      "episodeWrap": "{world} · Episodio {n}:"
     },
     "payout": {
       "title": "¿Dónde te enviamos tus {amount}?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Sonido activado",
       "off": "Sonido desactivado"
+    },
+    "vote": {
+      "title": "Elegid el mundo de este episodio",
+      "titleNext": "Episodio {n}: elegid el mundo",
+      "intro": "Cada partida es un episodio nuevo con su propio mundo e historia. Tocad el que os apetezca; gana el más votado.",
+      "previously": "La última vez: \"{title}\". Este es nuevo.",
+      "surprise": "Sorpréndenos",
+      "surpriseTagline": "Que elija el máster del juego.",
+      "voters": "Votos: {count}",
+      "hostHint": "Todos pueden votar. En caso de empate, gana tu elección.",
+      "guestHint": "Todos pueden votar. En caso de empate, gana la elección de {host}.",
+      "startWith": "En cabeza: {world}",
+      "startSurprise": "Aún no hay votos: elegirá el máster del juego."
     }
   },
   "admin": {

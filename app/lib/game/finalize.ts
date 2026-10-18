@@ -54,6 +54,7 @@ export async function finalizeGame(ctx: GameContext): Promise<void> {
     contributions,
     keyAttempts: game.key_attempts,
     poolEur: order.reward_pool,
+    seed: game.id,
   });
 
   await db.from("cognitive_rewards_game_scores").upsert(
@@ -64,7 +65,7 @@ export async function finalizeGame(ctx: GameContext): Promise<void> {
       total: s.total,
       share_eur: s.shareEur,
       rank: s.rank,
-      highlights: s.highlights as unknown as Json,
+      highlights: [s.title] as unknown as Json,
     })),
     { onConflict: "game_id,player_id" }
   );
@@ -103,9 +104,7 @@ export async function finalizeGame(ctx: GameContext): Promise<void> {
         playerName: p.name,
         companyName: order.company_name,
         shareEur: score.shareEur,
-        rank: score.rank,
-        teamSize: players.length,
-        highlights: score.highlights,
+        title: score.title,
         link,
       });
       await sendTransactionalEmail({ to: p.email, ...email, idempotencyKey: `cr-result/${game.id}/${p.id}` });

@@ -1,6 +1,8 @@
 import { pick, randInt, seededRng, shuffle } from "./rng";
 import { TEXTS } from "./texts";
-import type { ContentLanguage, DetailCatch, Fact, GeneratedRound, IntakeSummary, Piece, TemplateId } from "./types";
+import { TALK_GENERATORS, TALK_TEMPLATES, talkHint, validateTalk, type TalkTemplate } from "./talk";
+import { WORLDS, type WorldId } from "./worlds";
+import type { ContentLanguage, DetailCatch, EpisodeSkin, Fact, GeneratedRound, IntakeSummary, Piece, TemplateId } from "./types";
 
 /**
  * Round templates. Every template produces structured pieces (one per player),
@@ -19,24 +21,58 @@ export type TemplateContext = {
   /** Facts produced by earlier rounds, for callbacks and the key ceremony. */
   priorFacts: Array<Fact & { roundIndex: number; holderId?: string }>;
   detailHolderId?: string;
+  /** The episode's world (card deck for talk rounds). */
+  worldId?: WorldId;
+  /** In-world names written by the Game Master for this episode; any missing field uses the office text. */
+  skin?: EpisodeSkin;
 };
 
-export const ROUND_DIFFICULTY: Record<TemplateId, number> = { slot: 1, snack: 1, replyall: 1.1, wifi: 1.3, desks: 1.5, callback: 1.1 };
+export const ROUND_DIFFICULTY: Record<TemplateId, number> = { slot: 1, snack: 1, replyall: 1.1, wifi: 1.3, desks: 1.5, callback: 1.1, common: 1, lineup: 1.1, blueprint: 1.2 };
+
+/** The original deterministic templates (numbers, letters, deduction, memory). */
+type ClassicTemplate = Exclude<TemplateId, TalkTemplate>;
+
+function isTalk(t: TemplateId): t is TalkTemplate {
+  return (TALK_TEMPLATES as readonly string[]).includes(t);
+}
 
 const MAX_TRIES = 25;
 
 export function generateRound(template: TemplateId, ctx: TemplateContext): GeneratedRound {
   for (let attempt = 0; attempt < MAX_TRIES; attempt++) {
     const rng = seededRng(`${ctx.gameId}:${ctx.roundIndex}:${attempt}`);
-    const round = GENERATORS[template](ctx, rng);
-    if (validate(template, round, ctx)) return round;
+    let round: GeneratedRound;
+    let valid: boolean;
+    if (isTalk(template)) {
+      const talkCtx = { language: ctx.language, players: ctx.players, solverId: ctx.solverId, deck: WORLDS[ctx.worldId ?? "office"].deck };
+      round = TALK_GENERATORS[template](talkCtx, rng);
+      valid = validateTalk(template, round, talkCtx);
+    } else {
+      round = GENERATORS[template](ctx, rng);
+      valid = validate(template, round, ctx);
+    }
+    if (valid) return withDetail(round, ctx);
   }
   throw new Error(`Could not generate a valid "${template}" round after ${MAX_TRIES} tries`);
 }
 
+/**
+ * The sticky-note detail catch: a number shown briefly on one source's screen
+ * in this round and needed in the memory round. Works on any round type.
+ */
+function withDetail(round: GeneratedRound, ctx: TemplateContext): GeneratedRound {
+  if (!ctx.detailHolderId || round.params.detail) return round;
+  const T = TEXTS[ctx.language];
+  const rng = seededRng(`${ctx.gameId}:${ctx.roundIndex}:detail`);
+  const room = randInt(rng, 101, 499);
+  const note = ctx.skin?.note ? ctx.skin.note.replace("{n}", String(room)) : T.stickyNote(room);
+  const detail: DetailCatch = { playerId: ctx.detailHolderId, text: note, value: room };
+  return { ...round, params: { ...round.params, detail } };
+}
+
 /* ── Validator ──────────────────────────────────────────────────────────── */
 
-function validate(template: TemplateId, round: GeneratedRound, ctx: TemplateContext): boolean {
+function validate(template: ClassicTemplate, round: GeneratedRound, ctx: TemplateContext): boolean {
   if (!round.answer || /\s/.test(round.answer)) return false;
   if (template === "callback") return true; // no pieces; necessity is by construction (facts held by others)
   // Every player must hold a real piece, and removing any one piece must leave the answer ambiguous.
@@ -49,7 +85,7 @@ function validate(template: TemplateId, round: GeneratedRound, ctx: TemplateCont
 }
 
 /** True if, without `playerId`'s piece, at least two answers remain possible. */
-function ambiguousWithout(template: TemplateId, round: GeneratedRound, playerId: string): boolean {
+function ambiguousWithout(template: ClassicTemplate, round: GeneratedRound, playerId: string): boolean {
   const others = Object.entries(round.pieces).filter(([id]) => id !== playerId).map(([, p]) => p);
   switch (template) {
     case "slot": {
@@ -127,7 +163,7 @@ function clueText(T: (typeof TEXTS)[ContentLanguage], items: string[], c: ClueSp
 
 type Generator = (ctx: TemplateContext, rng: () => number) => GeneratedRound;
 
-const GENERATORS: Record<TemplateId, Generator> = {
+const GENERATORS: Record<ClassicTemplate, Generator> = {
   slot(ctx, rng) {
     const T = TEXTS[ctx.language];
     const hours = [9, 10, 11, 12, 13, 14, 15, 16];
@@ -161,14 +197,15 @@ const GENERATORS: Record<TemplateId, Generator> = {
   snack(ctx, rng) {
     const T = TEXTS[ctx.language];
     const snack = ctx.intake.canonical.q2;
-    const shelves = shuffle(rng, T.shelves);
+    const shelves = shuffle(rng, ctx.skin?.shelves && ctx.skin.shelves.length >= ctx.players.length ? ctx.skin.shelves : T.shelves);
+    const decoys = ctx.skin?.decoys?.length ? ctx.skin.decoys : T.snackDecoys;
     const pieces: Record<string, Piece> = {};
     let total = 0;
     ctx.players.forEach((p, i) => {
       const good = randInt(rng, 2, 9);
       const expired = randInt(rng, 0, 4);
       total += good;
-      const decoy = pick(rng, T.snackDecoys);
+      const decoy = pick(rng, decoys);
       const items = shuffle(rng, [
         { name: snack, count: good, expired: false },
         { name: snack, count: expired, expired: true },
@@ -178,11 +215,6 @@ const GENERATORS: Record<TemplateId, Generator> = {
     });
     const facts: Fact[] = [{ key: "snackTotal", label: T.facts.snackTotal, value: String(total) }];
     const params: GeneratedRound["params"] = { facts };
-    if (ctx.detailHolderId) {
-      const room = randInt(rng, 101, 499);
-      const detail: DetailCatch = { playerId: ctx.detailHolderId, text: T.stickyNote(room), value: room };
-      params.detail = detail;
-    }
     return {
       params,
       pieces,
@@ -240,12 +272,13 @@ const GENERATORS: Record<TemplateId, Generator> = {
       answer += segment;
       pieces[p.id] = { kind: "rule", order: i + 1, text };
     });
-    const facts: Fact[] = [{ key: "wifi", label: T.facts.wifi, value: answer }];
+    const codeName = ctx.skin?.codeName;
+    const facts: Fact[] = [{ key: "wifi", label: codeName ? capitalize(codeName) : T.facts.wifi, value: answer }];
     return {
       params: { facts, words },
       pieces,
       publicPrompt: {
-        text: `${T.wifiPrompt(ctx.intake.canonical.q4)} ${T.wifiWords(ctx.intake.canonical.q2, ctx.intake.canonical.q3, ctx.intake.canonical.q4)} ${T.ruleOrderHint}`,
+        text: `${codeName ? T.codePrompt(codeName) : T.wifiPrompt(ctx.intake.canonical.q4)} ${T.wifiWords(ctx.intake.canonical.q2, ctx.intake.canonical.q3, ctx.intake.canonical.q4)} ${T.ruleOrderHint}`,
         answerType: "text",
         answerLength: answer.length,
       },
@@ -255,7 +288,8 @@ const GENERATORS: Record<TemplateId, Generator> = {
 
   replyall(ctx, rng) {
     const T = TEXTS[ctx.language];
-    const lines = shuffle(rng, T.thread(ctx.intake.canonical.q2, ctx.intake.canonical.q3, ctx.intake.canonical.q4));
+    const skinLines = ctx.skin?.thread && ctx.skin.thread.length >= ctx.players.length + 2 ? ctx.skin.thread : null;
+    const lines = shuffle(rng, skinLines ?? T.thread(ctx.intake.canonical.q2, ctx.intake.canonical.q3, ctx.intake.canonical.q4));
     const n = Math.min(lines.length, ctx.players.length + 2); // n messages, every player holds ≥1
     // Distinct minute values so the ordering is unambiguous.
     let minute = randInt(rng, 0, 20);
@@ -355,6 +389,10 @@ const GENERATORS: Record<TemplateId, Generator> = {
   },
 };
 
+function capitalize(s: string): string {
+  return s.replace(/^\p{Ll}/u, (m) => m.toUpperCase());
+}
+
 /** Uppercase letters/digits only, so letter-position rules are unambiguous. Falls back to a safe word. */
 function clean(word: string): string {
   const w = word.toUpperCase().replace(/[^A-Z0-9ÅÄÖÆØÜ]/g, "");
@@ -363,6 +401,7 @@ function clean(word: string): string {
 
 /** Template-specific hint for the solver (after the hint delay). */
 export function hintFor(template: TemplateId, language: ContentLanguage, answer: string, params: Record<string, unknown>): string {
+  if (isTalk(template)) return talkHint(template, language, params, answer);
   const T = TEXTS[language];
   const fill = (tpl: string, vars: Record<string, string>) => tpl.replace(/\{(\w+)\}/g, (_, k) => vars[k] ?? "");
   switch (template) {

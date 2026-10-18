@@ -4,6 +4,7 @@ import {
   acknowledgeStuck,
   attempt,
   beginRounds,
+  castVote,
   getView,
   keyAttempt,
   loadContext,
@@ -26,12 +27,13 @@ export const maxDuration = 60;
 
 type Body =
   | { action: "language"; language: string }
+  | { action: "vote"; world: string }
   | { action: "start" }
   | { action: "intake"; answers: Partial<Record<IntakeKey, string>> }
   | { action: "begin" }
   | { action: "attempt"; answer: string }
   | { action: "hint" }
-  | { action: "stuck" }
+  | { action: "stuck"; need?: string[] }
   | { action: "acknowledge" }
   | { action: "challenge"; text: string }
   | { action: "submitChallenge"; text?: string }
@@ -61,6 +63,9 @@ export async function POST(request: NextRequest, context: { params: Promise<{ to
       case "language":
         await setLanguage(ctx, String(body.language ?? ""));
         break;
+      case "vote":
+        await castVote(ctx, String(body.world ?? ""));
+        break;
       case "start":
         await startGame(ctx);
         break;
@@ -77,7 +82,7 @@ export async function POST(request: NextRequest, context: { params: Promise<{ to
         await requestHint(ctx);
         break;
       case "stuck":
-        await pressStuck(ctx);
+        await pressStuck(ctx, Array.isArray(body.need) ? body.need.map(String).slice(0, 5) : []);
         break;
       case "acknowledge":
         await acknowledgeStuck(ctx);

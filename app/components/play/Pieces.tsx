@@ -1,10 +1,12 @@
 "use client";
 
 import { useTranslations } from "next-intl";
-import type { Piece } from "@/app/lib/game/types";
+import type { Piece, TalkLabels } from "@/app/lib/game/types";
+import { TILE_COLORS, parseCard } from "@/app/lib/game/visual";
+import { CardArt, FaceArt, Tile } from "./TalkArt";
 
 /** Renders a player's private piece. Data comes from the server; labels from the player's UI language. */
-export function PieceView({ piece }: { piece: Piece }) {
+export function PieceView({ piece, labels }: { piece: Piece; labels?: TalkLabels | null }) {
   const t = useTranslations("play.round.pieces");
   switch (piece.kind) {
     case "calendar":
@@ -74,6 +76,65 @@ export function PieceView({ piece }: { piece: Piece }) {
           ))}
         </div>
       );
+    case "cards":
+      return (
+        <div className="piece piece-cards">
+          <p className="piece-title">{t("hand", { n: piece.cards.length })}</p>
+          <ul className="card-hand">
+            {piece.cards.map((id) => {
+              const c = parseCard(id);
+              if (!c) return null;
+              return (
+                <li key={id} className="talk-card" aria-label={labels ? `${labels.cards[c.object]}, ${labels.colors[c.color]}` : undefined}>
+                  <CardArt object={c.object} color={c.color} />
+                </li>
+              );
+            })}
+          </ul>
+        </div>
+      );
+    case "witness":
+      return (
+        <div className="piece piece-witness">
+          <p className="piece-title">{t("witness")}</p>
+          <div className="witness-frame">
+            <FaceArt face={{ [piece.feature]: piece.value }} only={piece.feature} size={112} />
+          </div>
+          <p className="play-small">{t("witnessNote")}</p>
+        </div>
+      );
+    case "lineup":
+      return (
+        <div className="piece piece-lineup">
+          <p className="piece-title">{t("lineup")}</p>
+          <ol className="lineup">
+            {piece.faces.map((f, i) => (
+              <li key={i} className="lineup-face">
+                <FaceArt face={f} size={72} />
+                <span className="lineup-number">{i + 1}</span>
+              </li>
+            ))}
+          </ol>
+        </div>
+      );
+    case "tiles":
+      return (
+        <div className="piece piece-tiles">
+          <p className="piece-title">{t("tiles")}</p>
+          {piece.rows.map((r) => (
+            <div key={r.row} className="tile-row">
+              <span className="tile-row-label">{t("row", { n: r.row })}</span>
+              <span className="tile-row-cells" aria-label={labels ? r.tiles.map((v) => (v ? labels.colors[TILE_COLORS[v - 1]] : labels.emptyTile)).join(", ") : undefined}>
+                {r.tiles.map((v, i) => (
+                  <Tile key={i} value={v} colors={TILE_COLORS} />
+                ))}
+              </span>
+            </div>
+          ))}
+        </div>
+      );
+    case "canvas":
+      return null; // the solver's empty grid is the answer control (TalkAnswer)
     case "none":
       return null;
   }

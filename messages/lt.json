@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, jūsų atlygio dalis: {share}",
-      "preheader": "Žaidimas baigtas. Užėmėte {rank} vietą iš {n}. Pridėkite banko duomenis, kad gautumėte {share}.",
+      "preheader": "Žaidimas baigtas. Pridėkite banko duomenis, kad gautumėte {share}.",
       "heading": "Puikiai sužaista, {name}",
       "intro": "Jūsų komanda iš {company} baigė Cognitive Rewards, o fondas padalytas pagal tai, ką kiekvienas padarė.",
       "factShare": "Jūsų dalis",
-      "factRank": "Vieta",
-      "factRankValue": "{rank} iš {n}",
-      "factHighlights": "Pasižymėjimai",
+      "factTitle": "Jūsų titulas",
       "highlights": {
-        "helper": "Geriausias pagalbininkas",
-        "solver": "Geriausias sprendėjas",
-        "rescuer": "Geriausias gelbėtojas",
-        "memory": "Geriausia atmintis",
-        "mvp": "MVP"
+        "connector": "Jungtis",
+        "clarity": "Aiškumas",
+        "bridge": "Tiltas",
+        "rescuer": "Gelbėtojas",
+        "solver": "Sprendėjas",
+        "pace": "Tempas",
+        "eagleEye": "Erelio akis",
+        "memory": "Atmintis",
+        "glue": "Klijai"
       },
       "nextHeading": "Kaip ją gauti",
       "step1": "Atidarykite asmeninę nuorodą žemiau.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Trys taisyklės",
       "rule1": "Kiekviename raunde vienas iš jūsų sprendžia. Visi kiti turi dalį, kurią mato tik jie.",
       "rule2": "Kalbėkitės. Nieko neįmanoma išspręsti vienam, ir niekas negali žvilgtelėti per petį.",
-      "rule3": "Padėti verta tiek pat, kiek spręsti. Fondas dalijamas pagal tai, ką kiekvienas padarė.",
+      "rule3": "Padėti verta daugiau nei spręsti. Fondas dalijamas pagal tai, ką kiekvienas padarė.",
       "begin": "Pradėti 1 raundą",
       "beginning": "Pradedama…",
       "hostNote": "Jūs esate vedėjas. Pradėkite, kai visi pasakys, kad pasiruošę.",
-      "waitingHost": "Laukiama, kol {host} pradės…"
+      "waitingHost": "Laukiama, kol {host} pradės…",
+      "episodeLabel": "{n} serija"
     },
     "round": {
       "progress": "{n} raundas iš {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Pasibaigęs galiojimas",
         "yourMessages": "Jūsų žinutės ({n})",
         "rule": "{n} taisyklė",
-        "clue": "Jūsų užuominos ({n})"
+        "clue": "Jūsų užuominos ({n})",
+        "hand": "Jūsų kortelės ({n})",
+        "witness": "Ką prisimenate",
+        "witnessNote": "Tai matėte tik jūs. Apibūdinkite, o ne tik įvardykite.",
+        "lineup": "Atpažinimo eilė",
+        "tiles": "Jūsų rašto dalis",
+        "row": "{n} eilutė"
       },
       "introLevel": "{n} raundas",
       "introReady": "Pasiruoškite",
-      "introGo": "Pirmyn!"
+      "introGo": "Pirmyn!",
+      "talk": {
+        "pickCard": "Palieskite kortelę, kuri yra visų rankose",
+        "pickFace": "Palieskite apibūdinamą veidą",
+        "faceLabel": "Veidas nr. {n}",
+        "lockIn": "Patvirtinti",
+        "checking": "Tikrinama…",
+        "attemptsLeft": "Liko bandymų: {n}",
+        "paintHelp": "Pasirinkite spalvą ir lieskite langelius. Palieskite dar kartą, kad išvalytumėte.",
+        "brushes": "Spalvos",
+        "eraser": "Trintukas",
+        "row": "{n} eilutė",
+        "sendGrid": "Siųsti tinklelį",
+        "clear": "Išvalyti"
+      },
+      "twist": {
+        "flash": "Blyksnis",
+        "rush": "Skuba"
+      },
+      "twistNote": {
+        "flash": "Blyksnio raundas: jūsų dalis dings po {s} s. Gerai įsižiūrėkite.",
+        "rush": "Skubos raundas: daug mažiau laiko nei įprastai.",
+        "gone": "Jūsų dalis dingo. Apibūdinkite ją {name} iš atminties."
+      },
+      "twistIntro": {
+        "flash": "Posūkis: dalys dingsta po 30 sekundžių",
+        "rush": "Posūkis: perpus mažiau laiko"
+      },
+      "stuckPick": "Kieno dalies jums vėl reikia?",
+      "stuckEveryone": "Klausti visų",
+      "stuckSend": "Paklausti jų",
+      "stuckCancel": "Atšaukti",
+      "stuckBannerYou": "{name} vėl reikia jūsų dalies. Apibūdinkite ją kitaip.",
+      "stuckBannerOthers": "{name} paprašė {names} dar kartą apibūdinti savo dalį. Padėkite, jei galite.",
+      "stuckTip": {
+        "common": "Kiekvienos kortelės daiktą ir spalvą sakykite po vieną.",
+        "lineup": "Sakykite, ką matote: kas tai, kokia spalva, kur yra.",
+        "blueprint": "Eilutė po eilutės, iš kairės į dešinę: spalva arba tuščia.",
+        "slot": "Perskaitykite savo užimtas valandas, nuo ankstyviausios.",
+        "snack": "Gerus ir pasibaigusius pasakykite atskirai.",
+        "replyall": "Perskaitykite kiekvieną žinutę su laiku.",
+        "wifi": "Perskaitykite savo taisyklę pažodžiui, su numeriu.",
+        "desks": "Perskaitykite užuominą tiksliai taip, kaip parašyta.",
+        "default": "Perskaitykite dar kartą lėtai, kita tvarka."
+      }
     },
     "challenge": {
       "stepLabel": "Finalinė užduotis",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Atlygis atrakintas",
       "unlockedTitle": "Jums pavyko",
       "unlockedNote": "Padalyta tarp jūsų {n} pagal tai, ką kiekvienas padarė. Visiems garantuotas minimumas.",
-      "yourShareEyebrow": "Jūsų dalis",
-      "yourShareBody": "Užėmėte {rank} vietą iš {total}. Pagalba sudarė 60 %, sprendimas – 40 %.",
+      "teamEyebrow": "Komandos rezultatas",
+      "titlesTitle": "Kiekvienam po titulą",
+      "titlesNote": "Parinkta pagal tai, ką žaidimas išmatavo: kur kiekvienas iš jūsų labiausiai išsiskyrė, palyginti su likusia komanda. Nė vienas nesikartoja.",
+      "you": "Jūs",
       "highlights": {
-        "helper": "Geriausias pagalbininkas",
-        "solver": "Geriausias sprendėjas",
-        "rescuer": "Geriausias gelbėtojas",
-        "memory": "Geriausia atmintis",
-        "mvp": "MVP"
+        "connector": "Jungtis",
+        "clarity": "Aiškumas",
+        "bridge": "Tiltas",
+        "rescuer": "Gelbėtojas",
+        "solver": "Sprendėjas",
+        "pace": "Tempas",
+        "eagleEye": "Erelio akis",
+        "memory": "Atmintis",
+        "glue": "Klijai"
       },
-      "boardTitle": "Kaip padalytas fondas",
-      "boardNote": "Paspauskite vardą, kad pamatytumėte detales.",
+      "titleNotes": {
+        "connector": "Dalių perdavimas sprendėjui",
+        "clarity": "Dalys, suprastos iš pirmo karto",
+        "bridge": "Pagalba kiekvienam sprendėjui, ne vienam",
+        "rescuer": "Atsiliepimas į „Įstrigau“",
+        "solver": "Teisingų atsakymų įvedimas",
+        "pace": "Greiti sprendimai",
+        "eagleEye": "Smulkių detalių pastebėjimas",
+        "memory": "Įsiminimas to, ko prireikė vėliau",
+        "glue": "Duoti ir gauti po lygiai"
+      },
+      "profileTitle": "Komandos profilis",
+      "profileNote": "Visos komandos vidurkiai, nuo 0 iki 100.",
       "components": {
         "dataTransfer": "Dalijimasis",
         "teamwork": "Komandinis darbas",
@@ -3772,11 +3842,21 @@
         "focus": "Dėmesys",
         "memory": "Atmintis"
       },
+      "privateEyebrow": "Tai matote tik jūs",
+      "yourShareEyebrow": "Jūsų dalis",
+      "shareMinimum": "Garantuotas minimumas",
+      "sharePerformance": "Pagal tai, ką padarėte",
+      "shareNote": "Visi gauna tą patį minimumą. Likęs fondas padalytas pagal tai, ką kiekvienas padarė: pagalba sudarė 70 %, sprendimas – 30 %.",
+      "yourTitle": "Jūsų titulas",
+      "compareTitle": "Jūs ir komanda",
+      "legendYou": "Jūs",
+      "legendTeam": "Komandos vidurkis",
+      "compareValue": "Jūs {you}, komandos vidurkis {team}",
+      "privacyNote": "Komandos nariai mato visų titulus, bet ne tai, kas kiek gavo.",
       "verdictTitle": "Finalinė užduotis",
       "verdictScore": "Komandos įvertinimas {score} iš 100. Tai buvo dėl smagumo ir padalijimo nekeičia.",
       "thanks": "Ačiū, kad žaidėte. Jūsų vedėjas {host} dabar gali uždaryti skirtuką.",
-      "podiumTitle": "Pakyla",
-      "placeLabel": "{rank} vieta"
+      "episodeWrap": "{world} · {n} serija:"
     },
     "payout": {
       "title": "Kur siųsti jūsų {amount}?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Garsas įjungtas",
       "off": "Garsas išjungtas"
+    },
+    "vote": {
+      "title": "Išsirinkite šios serijos pasaulį",
+      "titleNext": "{n} serija: išsirinkite pasaulį",
+      "intro": "Kiekvienas žaidimas – nauja serija su savo pasauliu ir istorija. Palieskite norimą; laimi daugiausia balsų surinkęs.",
+      "previously": "Praėjusį kartą: „{title}“. Ši serija nauja.",
+      "surprise": "Nustebinkite mus",
+      "surpriseTagline": "Tegul renkasi žaidimo vedėjas.",
+      "voters": "Balsai: {count}",
+      "hostHint": "Balsuoti gali visi. Esant lygiosioms, lemia jūsų pasirinkimas.",
+      "guestHint": "Balsuoti gali visi. Esant lygiosioms, lemia {host} pasirinkimas.",
+      "startWith": "Pirmauja: {world}",
+      "startSurprise": "Balsų dar nėra: rinksis žaidimo vedėjas."
     }
   },
   "admin": {

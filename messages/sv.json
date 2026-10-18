@@ -3500,19 +3500,21 @@
     },
     "gameResult": {
       "subject": "{name}, din andel av belöningen: {share}",
-      "preheader": "Spelet är slut. Du kom på plats {rank} av {n}. Lägg till dina bankuppgifter för att få {share}.",
+      "preheader": "Spelet är slut. Lägg till dina bankuppgifter för att få {share}.",
       "heading": "Bra spelat, {name}",
       "intro": "Ert lag på {company} har spelat klart Cognitive Rewards, och potten har fördelats efter vad var och en gjorde.",
       "factShare": "Din andel",
-      "factRank": "Plats",
-      "factRankValue": "{rank} av {n}",
-      "factHighlights": "Utmärkelser",
+      "factTitle": "Din titel",
       "highlights": {
-        "helper": "Bästa hjälpare",
-        "solver": "Bästa lösare",
-        "rescuer": "Bästa räddare",
-        "memory": "Bästa minne",
-        "mvp": "MVP"
+        "connector": "Länken",
+        "clarity": "Klarheten",
+        "bridge": "Bron",
+        "rescuer": "Räddaren",
+        "solver": "Lösaren",
+        "pace": "Tempot",
+        "eagleEye": "Örnögat",
+        "memory": "Minnet",
+        "glue": "Limmet"
       },
       "nextHeading": "Så får du den",
       "step1": "Öppna din personliga länk nedan.",
@@ -3675,11 +3677,12 @@
       "rulesTitle": "Tre regler",
       "rule1": "Varje runda är en av er lösare. Alla andra har en bit som bara de kan se.",
       "rule2": "Prata. Inget kan lösas ensam, och ingen kan kika över axeln.",
-      "rule3": "Att hjälpa lönar sig lika mycket som att lösa. Potten fördelas efter vad var och en gjorde.",
+      "rule3": "Att hjälpa lönar sig mer än att lösa. Potten fördelas efter vad var och en gjorde.",
       "begin": "Starta runda 1",
       "beginning": "Startar…",
       "hostNote": "Du är värd. Starta när alla säger att de är redo.",
-      "waitingHost": "Väntar på att {host} ska börja…"
+      "waitingHost": "Väntar på att {host} ska börja…",
+      "episodeLabel": "Avsnitt {n}"
     },
     "round": {
       "progress": "Runda {n} av {total}",
@@ -3718,11 +3721,61 @@
         "expired": "Utgången",
         "yourMessages": "Dina meddelanden ({n})",
         "rule": "Regel {n}",
-        "clue": "Dina ledtrådar ({n})"
+        "clue": "Dina ledtrådar ({n})",
+        "hand": "Din hand ({n} kort)",
+        "witness": "Det du minns",
+        "witnessNote": "Bara du såg det här. Beskriv det, säg inte bara vad det är.",
+        "lineup": "Uppställningen",
+        "tiles": "Din del av mönstret",
+        "row": "Rad {n}"
       },
       "introLevel": "Runda {n}",
       "introReady": "Gör er redo",
-      "introGo": "Kör!"
+      "introGo": "Kör!",
+      "talk": {
+        "pickCard": "Tryck på kortet som finns i allas händer",
+        "pickFace": "Tryck på ansiktet de beskriver",
+        "faceLabel": "Ansikte {n}",
+        "lockIn": "Lås svaret",
+        "checking": "Kontrollerar…",
+        "attemptsLeft": "Försök kvar: {n}",
+        "paintHelp": "Välj en färg och tryck på rutor. Tryck igen för att rensa.",
+        "brushes": "Färger",
+        "eraser": "Sudd",
+        "row": "Rad {n}",
+        "sendGrid": "Skicka rutnätet",
+        "clear": "Rensa"
+      },
+      "twist": {
+        "flash": "Blixt",
+        "rush": "Rusning"
+      },
+      "twistNote": {
+        "flash": "Blixtrunda: din bit försvinner om {s} s. Titta noga.",
+        "rush": "Rusningsrunda: mycket kortare tid än vanligt.",
+        "gone": "Din bit är borta. Beskriv den för {name} ur minnet."
+      },
+      "twistIntro": {
+        "flash": "Twist: bitarna försvinner efter 30 sekunder",
+        "rush": "Twist: halva tiden"
+      },
+      "stuckPick": "Vems bit behöver du igen?",
+      "stuckEveryone": "Fråga alla",
+      "stuckSend": "Fråga dem",
+      "stuckCancel": "Avbryt",
+      "stuckBannerYou": "{name} behöver din bit igen. Beskriv den på ett annat sätt.",
+      "stuckBannerOthers": "{name} bad {names} att beskriva sin bit igen. Hjälp till om du kan.",
+      "stuckTip": {
+        "common": "Säg föremål och färg för varje kort, ett i taget.",
+        "lineup": "Säg vad du ser: vad det är, färgen och var det sitter.",
+        "blueprint": "Ta rad för rad, från vänster till höger: en färg eller tom.",
+        "slot": "Läs upp dina upptagna timmar, den tidigaste först.",
+        "snack": "Säg de bra och de utgångna var för sig.",
+        "replyall": "Läs varje meddelande med tiden.",
+        "wifi": "Läs din regel ordagrant, med numret.",
+        "desks": "Läs din ledtråd exakt som den står.",
+        "default": "Läs den igen långsamt, i en annan ordning."
+      }
     },
     "challenge": {
       "stepLabel": "Slututmaning",
@@ -3754,17 +3807,34 @@
       "unlockedEyebrow": "Belöningen upplåst",
       "unlockedTitle": "Ni klarade det",
       "unlockedNote": "Fördelas mellan er {n} efter vad var och en gjorde. Alla har en garanterad minsta andel.",
-      "yourShareEyebrow": "Din andel",
-      "yourShareBody": "Du kom på plats {rank} av {total}. Att hjälpa räknades till 60 %, att lösa till 40 %.",
+      "teamEyebrow": "Lagets resultat",
+      "titlesTitle": "En titel var",
+      "titlesNote": "Utvalda från det spelet mätte: där var och en av er stack ut mest jämfört med resten av laget. Inga två är likadana.",
+      "you": "Du",
       "highlights": {
-        "helper": "Bästa hjälpare",
-        "solver": "Bästa lösare",
-        "rescuer": "Bästa räddare",
-        "memory": "Bästa minne",
-        "mvp": "MVP"
+        "connector": "Länken",
+        "clarity": "Klarheten",
+        "bridge": "Bron",
+        "rescuer": "Räddaren",
+        "solver": "Lösaren",
+        "pace": "Tempot",
+        "eagleEye": "Örnögat",
+        "memory": "Minnet",
+        "glue": "Limmet"
       },
-      "boardTitle": "Så fördelades potten",
-      "boardNote": "Tryck på ett namn för att se detaljerna.",
+      "titleNotes": {
+        "connector": "Att skicka bitar till lösaren",
+        "clarity": "Bitar som gick fram direkt",
+        "bridge": "Att hjälpa alla lösare, inte bara en",
+        "rescuer": "Att svara på ”Jag har fastnat”",
+        "solver": "Att skriva in rätt svar",
+        "pace": "Snabba lösningar",
+        "eagleEye": "Att se de små detaljerna",
+        "memory": "Att minnas det som behövdes senare",
+        "glue": "Att ge och ta lika mycket"
+      },
+      "profileTitle": "Lagets profil",
+      "profileNote": "Snitt för hela laget, 0 till 100.",
       "components": {
         "dataTransfer": "Delning",
         "teamwork": "Lagarbete",
@@ -3772,11 +3842,21 @@
         "focus": "Fokus",
         "memory": "Minne"
       },
+      "privateEyebrow": "Bara du ser det här",
+      "yourShareEyebrow": "Din andel",
+      "shareMinimum": "Garanterat minimum",
+      "sharePerformance": "Från det du gjorde",
+      "shareNote": "Alla får samma minimum. Resten av potten fördelades efter vad var och en gjorde: att hjälpa räknades till 70 %, att lösa till 30 %.",
+      "yourTitle": "Din titel",
+      "compareTitle": "Du och laget",
+      "legendYou": "Du",
+      "legendTeam": "Lagets snitt",
+      "compareValue": "Du {you}, lagets snitt {team}",
+      "privacyNote": "Dina lagkamrater ser allas titlar, inte vem som fick hur mycket.",
       "verdictTitle": "Slututmaningen",
       "verdictScore": "Lagpoäng {score} av 100. Den här var för skojs skull och påverkar inte fördelningen.",
       "thanks": "Tack för att ni spelade. Er värd {host} kan stänga fliken nu.",
-      "podiumTitle": "Prispallen",
-      "placeLabel": "Plats {rank}"
+      "episodeWrap": "{world} · Avsnitt {n}:"
     },
     "payout": {
       "title": "Vart ska vi skicka dina {amount}?",
@@ -3807,6 +3887,19 @@
     "sound": {
       "on": "Ljud på",
       "off": "Ljud av"
+    },
+    "vote": {
+      "title": "Välj det här avsnittets värld",
+      "titleNext": "Avsnitt {n}: välj värld",
+      "intro": "Varje spel är ett nytt avsnitt med en egen värld och historia. Tryck på den ni vill ha; flest röster vinner.",
+      "previously": "Förra gången: \"{title}\". Det här är nytt.",
+      "surprise": "Överraska oss",
+      "surpriseTagline": "Låt spelledaren välja.",
+      "voters": "Röster: {count}",
+      "hostHint": "Alla kan rösta. Vid lika vinner ditt val.",
+      "guestHint": "Alla kan rösta. Vid lika vinner {host}s val.",
+      "startWith": "Leder: {world}",
+      "startSurprise": "Inga röster än: spelledaren väljer."
     }
   },
   "admin": {

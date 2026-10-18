@@ -5,6 +5,8 @@
 **Repo:** `drjohn-code/WelloWork`, branch `main`, last commit `ba09737` ("Cognitive Rewards game: engine, lobby, scoring, payouts, admin, emails")
 **Purpose:** everything needed to resume this project from a new chat with no memory. Upload this file first.
 
+> **Update 18 Oct 2026:** the game is now an episode engine (worlds, a lobby vote, talk rounds, twists, team memory, 70/30 communication-first scoring) and the result screen gives every player one title with money shown only privately. Read `docs/cognitive-rewards-episodes.md` first; where it disagrees with sections 4 and 5 below, it wins. `schedule.ts` was replaced by `episode.ts`.
+
 > **How to resume:** upload this file, then say which section you want to continue. Section 2 (Current state) and section 9 (Open items) are the source of truth. The older brainstorm document (`cognitive-rewards-project-handoff.md`) is superseded by this one where they differ.
 
 ---

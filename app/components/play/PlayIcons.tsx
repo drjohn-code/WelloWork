@@ -7,7 +7,7 @@ type P = { size?: number };
 /* ── Badges ─────────────────────────────────────────────────────────────── */
 
 export function HelperIcon({ size = 18 }: P) {
-  // Two hands meeting: the helper.
+  // Two hands meeting: the glue.
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
       <path d="M3 12.5 7.5 8a2 2 0 0 1 2.8 0L12 9.7l1.7-1.7a2 2 0 0 1 2.8 0L21 12.5" />
@@ -49,15 +49,66 @@ export function MemoryIcon({ size = 18 }: P) {
   );
 }
 
-export function CrownIcon({ size = 18 }: P) {
+export function LinkIcon({ size = 18 }: P) {
+  // Two chain links: the connector.
   return (
     <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
-      <path d="M3 18h18M4 17 3 7l5 4 4-6 4 6 5-4-1 10z" />
+      <path d="M10 14a4 4 0 0 0 5.7 0l3.1-3.1a4 4 0 0 0-5.7-5.7L11.6 6.7" />
+      <path d="M14 10a4 4 0 0 0-5.7 0l-3.1 3.1a4 4 0 0 0 5.7 5.7l1.5-1.5" />
     </svg>
   );
 }
 
-export const BADGE_ICONS = { mvp: CrownIcon, helper: HelperIcon, solver: SolverIcon, rescuer: RescuerIcon, memory: MemoryIcon } as const;
+export function ClarityIcon({ size = 18 }: P) {
+  // Speech bubble with a tick: said once, understood.
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <path d="M4 5.5h16v10H11l-4.5 4v-4H4z" />
+      <path d="m8.5 10.5 2.2 2.2 4.8-4.7" />
+    </svg>
+  );
+}
+
+export function BridgeIcon({ size = 18 }: P) {
+  // An arch bridge: helped every solver.
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <path d="M2.5 9h19M2.5 17h3v-2.5a6.5 6.5 0 0 1 13 0V17h3" />
+      <path d="M6 9v5M10 9v2.5M14 9v2.5M18 9v5" />
+    </svg>
+  );
+}
+
+export function PaceIcon({ size = 18 }: P) {
+  // Stopwatch.
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <circle cx="12" cy="13.5" r="7.5" />
+      <path d="M12 13.5V9.5M10 2.5h4M18.5 6.5l1.5-1.5" />
+    </svg>
+  );
+}
+
+export function EyeIcon({ size = 18 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <path d="M2.5 12S6 5.5 12 5.5 21.5 12 21.5 12 18 18.5 12 18.5 2.5 12 2.5 12z" />
+      <circle cx="12" cy="12" r="3" />
+    </svg>
+  );
+}
+
+export const BADGE_ICONS = {
+  connector: LinkIcon,
+  clarity: ClarityIcon,
+  bridge: BridgeIcon,
+  rescuer: RescuerIcon,
+  solver: SolverIcon,
+  pace: PaceIcon,
+  eagleEye: EyeIcon,
+  memory: MemoryIcon,
+  glue: HelperIcon,
+} as const;
 
 export function BadgeIcon({ kind, size = 16 }: { kind: string; size?: number }) {
   const Icon = (BADGE_ICONS as Record<string, (p: P) => React.JSX.Element>)[kind];
@@ -114,7 +165,39 @@ export function DeskIcon({ size = 22 }: P) {
   );
 }
 
-export const TEMPLATE_ICONS = { slot: CalendarIcon, snack: ShelfIcon, wifi: WifiIcon, replyall: MailIcon, desks: DeskIcon, callback: MemoryIcon } as const;
+/* Talk rounds */
+export function CardsIcon({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <rect x="3" y="6" width="10" height="14" rx="2" transform="rotate(-10 8 13)" />
+      <rect x="11" y="4" width="10" height="14" rx="2" transform="rotate(8 16 11)" />
+      <circle cx="16.2" cy="11" r="2" />
+    </svg>
+  );
+}
+export function LineupIcon({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <circle cx="6" cy="8" r="2.5" />
+      <circle cx="12" cy="7" r="2.5" />
+      <circle cx="18" cy="8" r="2.5" />
+      <path d="M2.5 17c.5-3 2-4.5 3.5-4.5S9 14 9.5 17M8.5 16c.5-3.2 2-5 3.5-5s3 1.8 3.5 5M14.5 17c.5-3 2-4.5 3.5-4.5s3 1.5 3.5 4.5" />
+      <path d="M3 20.5h18" />
+    </svg>
+  );
+}
+export function GridIcon({ size = 22 }: P) {
+  return (
+    <svg width={size} height={size} viewBox="0 0 24 24" {...base}>
+      <rect x="3.5" y="3.5" width="7" height="7" rx="1.5" fill="currentColor" />
+      <rect x="13.5" y="3.5" width="7" height="7" rx="1.5" />
+      <rect x="3.5" y="13.5" width="7" height="7" rx="1.5" />
+      <rect x="13.5" y="13.5" width="7" height="7" rx="1.5" fill="currentColor" />
+    </svg>
+  );
+}
+
+export const TEMPLATE_ICONS = { slot: CalendarIcon, snack: ShelfIcon, wifi: WifiIcon, replyall: MailIcon, desks: DeskIcon, callback: MemoryIcon, common: CardsIcon, lineup: LineupIcon, blueprint: GridIcon } as const;
 
 export function TemplateIcon({ template, size = 22 }: { template: string; size?: number }) {
   const Icon = (TEMPLATE_ICONS as Record<string, (p: P) => React.JSX.Element>)[template];

@@ -4,6 +4,7 @@ import { ORG_EMAIL } from "../site";
 import { formatEurShort } from "../format";
 import { button, divider, esc, factsBox, heading, paragraph, renderLayout, steps, subheading } from "./email-shell";
 import type { RenderedEmail } from "./cognitive-rewards";
+import type { TitleId } from "../game/types";
 
 /** Emails sent around the end of a game: result + payout request, payout received, payout sent, buyer summary. */
 
@@ -23,21 +24,15 @@ export async function renderGameResult(args: {
   playerName: string;
   companyName: string;
   shareEur: number;
-  rank: number;
-  teamSize: number;
-  highlights: string[];
+  title: TitleId | null;
   link: string | null;
 }): Promise<RenderedEmail> {
   const locale = emailLocale(args.locale);
   const t = await translator(locale);
-  const vars = { name: firstName(args.playerName), company: args.companyName, share: formatEurShort(args.shareEur, locale), rank: args.rank, n: args.teamSize };
+  const vars = { name: firstName(args.playerName), company: args.companyName, share: formatEurShort(args.shareEur, locale) };
   const subject = t("gameResult.subject", vars);
-  const highlightLines = args.highlights.map((h) => t(`gameResult.highlights.${h}` as "gameResult.highlights.helper"));
-  const facts: Array<[string, string]> = [
-    [t("gameResult.factShare"), vars.share],
-    [t("gameResult.factRank"), t("gameResult.factRankValue", vars)],
-  ];
-  if (highlightLines.length) facts.push([t("gameResult.factHighlights"), highlightLines.join(" · ")]);
+  const facts: Array<[string, string]> = [[t("gameResult.factShare"), vars.share]];
+  if (args.title) facts.push([t("gameResult.factTitle"), t(`gameResult.highlights.${args.title}`)]);
   const stepItems = [t("gameResult.step1"), t("gameResult.step2"), t("gameResult.step3")];
 
   const bodyHtml = [
